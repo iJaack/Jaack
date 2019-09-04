@@ -11,7 +11,7 @@ Credo che non sapersi descrivere, alla mia età, sia un modo per poter dire di s
 
 Sento di non essere nato nel 1994, mio anagrafico anno di nascita, ma nel 2014, precisamente il 27 gennaio. Quello è il giorno in cui ho dato vita, insieme a dei colleghi in università, tweaknology.org, la mia prima creatura sul web.
 
-Ora [http://tweaknology.org]Tweaknology non esiste più, ma tutto quello che ho imparato sul web lo devo a quella esperienza.
+Ora [Tweaknology](http://tweaknology.org) non esiste più, ma tutto quello che ho imparato sul web lo devo a quella esperienza.
 
 Ed è per questo che oggi ho bisogno di uno spazio mio, sul web. Ho un bisogno di esprimere i miei pensieri, molto egoisticamente.
 
