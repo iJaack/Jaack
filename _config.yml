@@ -34,7 +34,7 @@ disqus:
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: giacomobarbieri94
+facebook: ijaack94
 twitter: ijaack94
 # google: mygoogle
 instagram: ijaack94
@@ -42,7 +42,7 @@ instagram: ijaack94
 linkedin: giacomobarbieri94
 youtube: myyoutube
 spotify: myspotify
-github: ijaack94
+github: ijaack
 # gitlab: mygitlab
 lastfm: ijaack94
 # stackoverflow: 7044681/mystackoverflow
