@@ -13,19 +13,19 @@
                 </li>
             {% endif %}
         {% endif %}
+        
+        {% if site.about == true %}
+            {% if page.title != "Chi sono" %}
+                <li class="item">
+                    <a class="link" href="{{ site.url }}/chisono">Io</a>
+                </li>
+            {% endif %}
+        {% endif %}
 
         {% if site.projects == true %}
             {% if page.title != "Ricerca" %}
                 <li class="item">
                     <a class="link" href="{{ site.url }}/ricerca">Ricerca</a>
-                </li>
-            {% endif %}
-        {% endif %}
-
-        {% if site.about == true %}
-            {% if page.title != "Chi sono" %}
-                <li class="item">
-                    <a class="link" href="{{ site.url }}/chisono">Io</a>
                 </li>
             {% endif %}
         {% endif %}
