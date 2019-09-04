@@ -15,3 +15,9 @@ layout: page
 <p>Da qualche anno ho intensificato i miei sforzi nella ricerca su AI, blockchain e soprattutto 5G, di cui parlo periodicamente su Webnews.it, la testata per cui scrivo dal 2015.</p>
 
 <p>Qui ci sono i miei pensieri, unlocked.</p>
+
+<h2>A cosa sto lavorando</h2>
+<ul>
+  <li><a href="https://italia.campus-party.org/community/">Campus Party Italia 2020 (CPIT4)</a></li>
+  <li><a href="https://www.webnews.it/author/g-barbieri/">Recensioni e approfondimenti su Webnews.it</a></li>
+</ul>
