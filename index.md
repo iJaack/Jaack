@@ -1,5 +1,7 @@
-# Jaack
-## Community, Crypto e Tech
+---
+layout: page
+title: Home
+---
 
 Ciao, sono Giacomo. Questo è il mio spazio,
 hostato gratuitamente su Github Pages.

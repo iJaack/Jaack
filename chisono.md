@@ -1,9 +1,10 @@
 ---
-layout: default
-title: "Chi sono"
+title: Chi sono
+layout: page
 ---
+![Profile Image]({{ site.url }}/{{ site.picture }})
 
-Ho sempre avuto difficoltà a definire la mia persona.
+<p>Ho sempre avuto difficoltà a definire la mia persona.
 
 Credo questo sia un grosso problema, ma mi piace pensare che voglio rimanere con questo problema fino ai 30 anni.
 
@@ -19,4 +20,4 @@ Spesso trovo che i miei pensieri sono accolti positivamente dal pubblico che mi 
 
 Da qualche anno ho intensificato i miei sforzi nella ricerca su AI, blockchain e soprattutto 5G, di cui parlo periodicamente su Webnews.it, la testata per cui scrivo dal 2015.
 
-Qui ci sono i miei pensieri, unlocked.
+Qui ci sono i miei pensieri, unlocked.</p>
