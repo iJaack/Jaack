@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Chi sono
+title: "Chi sono"
 ---
 
 Ho sempre avuto difficoltà a definire la mia persona.
