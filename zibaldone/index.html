@@ -9,7 +9,7 @@ title: Zibaldone
 		<p class="text-center">Nessun post per ora :)</p>
 	{% elsif site.paginate %}
 		{% for post in paginator.posts %}
-			{% if post.category == 'blog' %}
+			{% if post.category == 'zibaldone' %}
 				{% if post.hidden != true %}
 					{% include blog-post.html %}
 				{% endif %}
@@ -19,7 +19,7 @@ title: Zibaldone
 		{% include pagination.html%}
 	{% else %}
 		{% for post in site.posts %}
-			{% if post.category == 'blog' %}
+			{% if post.category == 'zibaldone' %}
 				{% if post.hidden != true %}
 					{% include blog-post.html %}
 				{% endif %}

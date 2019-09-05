@@ -9,7 +9,7 @@ tag:
 category: zibaldone
 author: jaack
 description: Quasi ogni gioco prepara il multiplayer per un secondo momento:
-è un modo per 'allungare l'attesa''?
+è un modo per 'allungare l'attesa?
 published: true
 ---
 
