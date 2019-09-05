@@ -1,37 +1,18 @@
-## Welcome to GitHub Pages
+<h1>Chi sono</p>
+<p>Ho sempre avuto difficoltà a definire la mia persona.</p>
 
-You can use the [editor on GitHub](https://github.com/iJaack/zibaldone/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+<p>Credo questo sia un grosso problema, ma mi piace pensare che voglio rimanere con questo problema fino ai 30 anni. Credo che non sapersi descrivere, alla mia età, sia un modo per poter dire di saper fare un po' di tutto. Di essere in grado di adattarsi velocemente.</p>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<p>Sento di non essere nato nel 1994, mio anagrafico anno di nascita, ma nel 2014, precisamente il 27 gennaio. Quello è il giorno in cui ho dato vita, insieme a dei colleghi in università, tweaknology.org, la mia prima creatura sul web.</p>
 
-### Markdown
+<p>Ora Tweaknology non esiste più, ma tutto quello che ho imparato sul web lo devo a quella esperienza. Ed è per questo che oggi ho bisogno di uno spazio mio, sul web. Ho un bisogno di esprimere i miei pensieri, molto egoisticamente. Spesso trovo che i miei pensieri sono accolti positivamente dal pubblico che mi segue, che è molto piccolo.</p>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+<p>Da qualche anno ho intensificato i miei sforzi nella ricerca su AI, blockchain e soprattutto 5G, di cui parlo periodicamente su Webnews.it, la testata per cui scrivo dal 2015.</p>
 
-```markdown
-Syntax highlighted code block
+<p>Qui ci sono i miei pensieri, unlocked.</p>
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/iJaack/zibaldone/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<h2>A cosa sto lavorando</h2>
+<ul>
+  <li><a href="https://italia.campus-party.org/community/">Campus Party Italia 2020 (CPIT4)</a></li>
+  <li><a href="https://www.webnews.it/author/g-barbieri/">Recensioni e approfondimenti su Webnews.it</a></li>
+</ul>
