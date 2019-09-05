@@ -6,7 +6,7 @@ image: /assets/images/cyberpunk-2077.jpg
 headerImage: true
 tag:
 - giochi
-category: zibaldone
+category: blog
 author: jaack
 description: Quasi ogni gioco prepara il multiplayer per un secondo momento:
 è un modo per 'allungare l'attesa?
