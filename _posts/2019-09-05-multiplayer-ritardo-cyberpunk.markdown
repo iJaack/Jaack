@@ -1,12 +1,12 @@
 ---
 title: "L'economia del multiplayer ritardato"
 layout: post
-date: 2019-09-05 10:40
+date: 2019-09-05 11:40
 image: assets/images/cyberpunk-2077.jpg
 headerImage: true
-tag:
-- giochi
-category: [blog]
+# tag:
+# - giochi
+category: blog
 author: jaack
 description: Quasi ogni gioco prepara il multiplayer per un secondo momento:
 è un modo per 'allungare l'attesa?
