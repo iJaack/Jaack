@@ -2,7 +2,7 @@
 title: "L'economia del multiplayer ritardato"
 layout: post
 date: 2019-09-05 10:40
-image: /assets/images/cyberpunk-2077.jpg
+image: assets/images/cyberpunk-2077.jpg
 headerImage: true
 tag:
 - giochi
