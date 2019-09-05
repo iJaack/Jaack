@@ -66,8 +66,8 @@ authors:
 width: normal
 
 # if you don't need pagination, comment the *paginate* configs below
-# paginate: 5
-# paginate_path: "blog/:num/"
+paginate: 5
+paginate_path: "zibaldone/:num/"
 
 # if you don't need projects, comment the *projects* configs below
 projects: true
@@ -80,7 +80,7 @@ blog: true
 read-time: true
 
 # do you want to show the "tags" inside the posts?
-show-tags: false
+show-tags: true
 
 # related posts inside a post?
 related: true
