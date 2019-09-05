@@ -12,8 +12,6 @@ description: Un modo per allungare l'attesa
 published: true
 ---
 
-# L'economia del multiplayer ritardato
-
 [The Verge](https://www.theverge.com/2019/9/4/20849235/cyberpunk-2077-multiplayer-launch)
 riporta che anche **Cyberpunk 2077**, l'open world sviluppato
 da CD Projekt, riceverà un update successivamente al primo DLC per l'abilitazione
