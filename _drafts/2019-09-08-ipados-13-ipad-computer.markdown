@@ -1,12 +1,15 @@
 ---
-title: ""
+title: "iPadOS 13"
 layout: post
 date: TBD
 image: /assets/TBD
 tag:
-- web
+- tech
 category: blog
 author: jaack
-description: Brave Browser dopo 9 mesi di utilizzo
+description: Come sono riuscito a sopravvivere con l'iPad quando mi serviva il
+computer
 published: false
 ---
+
+Quando ho visto Apple annunciare iPadOS 13, ero eccitato 'neutralmente':

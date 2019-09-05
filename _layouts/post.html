@@ -17,6 +17,12 @@ layout: page
 
 {{content}}
 
+{% if page.tags = review}
+  {% include review-final.html %}
+{% endif %}
+
+{% include tinyletter.html %}
+
 {% if site.post-advance-links contains page.category %}
     <div class="blog-navigation">
         {% if page.previous.hidden == false and page.previous.url %}
