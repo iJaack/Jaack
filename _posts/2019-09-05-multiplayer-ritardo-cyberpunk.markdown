@@ -39,5 +39,5 @@ per evitare di rimanere senza nulla di nuovo da proporre improvvisamente.
 Il multiplayer in un videogioco come Cyberpunk 2077 è l'aggiornamento **definitivo**:
 incorona la riuscita del gioco come piattaforma di intrattenimento globale. GTA 5, all'epoca,
 è riuscito nell'intento. No Man's Sky no.
-Ma ci piacerebbe, fors,e gustare tutte le funzionalità del gioco tutte insieme fin dal primo
+Ma ci piacerebbe, forse, gustare tutte le funzionalità del gioco tutte insieme fin dal primo
 giorno, per una volta.
