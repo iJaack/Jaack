@@ -8,10 +8,10 @@ tag:
 - markdown
 - components
 - extra
-category: zibaldone
+category: blog
 author: jaack
 description: Markdown summary with different options
-published: false
+published: true
 ---
 
 ## Summary:
