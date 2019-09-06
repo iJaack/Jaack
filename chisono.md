@@ -12,7 +12,7 @@ layout: page
 
 <p>Ora Tweaknology non esiste più, ma tutto quello che ho imparato sul web lo devo a quella esperienza. Ed è per questo che oggi ho bisogno di uno spazio mio, sul web. Ho un bisogno di esprimere i miei pensieri, molto egoisticamente. Spesso trovo che i miei pensieri sono accolti positivamente dal pubblico che mi segue, che è molto piccolo.</p>
 
-<p>Da qualche anno ho intensificato i miei sforzi nella ricerca su AI, blockchain e soprattutto 5G, di cui parlo periodicamente su Webnews.it, la testata per cui scrivo dal 2015.</p>
+<p>Da qualche anno ho intensificato i miei sforzi nella ricerca su <strong>AI, blockchain e soprattutto 5G, </strong>di cui parlo periodicamente su Webnews.it, la testata per cui scrivo dal 2015.</p>
 
 <p>Qui ci sono i miei pensieri, unlocked.</p>
 
