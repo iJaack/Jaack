@@ -1,11 +1,11 @@
 <span class="reading-time" title="Estimated read time">
     {% assign words = content | number_of_words %}
 
-    {% if words < 240 %}
+    {% if words < 200 %}
         Tempo di lettura: meno di 1 minuto!
-    {% else if words > 240 && words < 360 %}
+    {% else if words > 200 and words < 300 %}
         Tempo di lettura: solo 1 minuto!
     {% else %}
-        Tempo di lettura: {{ words | divided_by:180 }} minuti
+        Tempo di lettura: {{ words | divided_by:200 }} minuti
     {% endif %}
 </span>

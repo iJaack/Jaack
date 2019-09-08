@@ -1,5 +1,5 @@
 ---
-title: "Economia del multiplayer ritardato"
+title: "Economia del multiplayer in ritardo"
 layout: post
 date: 2019-09-05 11:40
 image: /assets/images/cyberpunk-2077.jpg
