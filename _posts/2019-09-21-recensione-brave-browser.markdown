@@ -1,14 +1,15 @@
 ---
-title: "Brave Browser e la sovranità dell’identità digitale"
-layout: review
-date: TBD
-image: /assets/TBD
+title: "Brave Browser, sovranità dell’identità digitale"
+layout: post
+date: 2019-09-01 10:00
+image: /assets/images/profilo.jpg
+headerImage: false
 tag:
 - web
 category: blog
 author: jaack
 description: Brave Browser dopo 9 mesi di utilizzo
-published: false
+published: true
 ---
 
 Tempo fa, ho letto un [lungo e approfondito articolo di Darren Loucaides su WIRED US](https://www.wired.com/story/italy-five-star-movement-techno-utopians/), che racconta della nascita del Movimento 5 Stelle ma soprattutto della piattaforma Rousseau, che oggi è utilizzata dagli attivisti del Movimento 5 Stelle come strumento di democrazia diretta.
@@ -68,7 +69,30 @@ Il modulo centrale che rende davvero Brave il browser indipendente che ho scelto
 Fortunatamente, è possibile disattivare Shield sui singoli domini e la scelta rimarrà salvata anche nelle navigazioni successive.
 Se da una parte Shields permette di usufruire di contenuti senza fronzoli, dall'altra parte rimane comunque la necessità da parte dei gestori di siti web di monetizzare i propri contenuti.
 
-È questo lo scopo di Brave Payments, la funzionalità di Brave che integra la cryptovaluta Basic Attention Token per instaurare un'economia dei contenuti tra gli utenti (usufruitori) e i gestori di pagine web (creatori).
+È questo lo scopo di Brave Payments, la funzionalità di Brave che integra la cryptovaluta Basic Attention Token (BAT) per instaurare un'economia dei contenuti tra gli utenti (usufruitori) e i gestori di pagine web (creatori).
 Per poter usufruire della monetizzazione tramite Brave Payments, i creatori di contenuti sono tenuti a registrare un account tramite la piattaforma Uphold e collegare i propri siti web alla piattaforma Brave Rewards, che sarebbe la funzionalità Payments dalla parte dei publisher. Il riconoscimento del compenso per la navigazione degli utenti avviene in modo automatico dopo l'installazione di un plugin dedicato che è disponibile per la piattaforma WordPress. In generale, è possibile integrare il tracciamento anche se si utilizzano Content Management Systems diversi.
 
-Dall'altra parte, è disponibile un sistema di monetizzazione nei confronti degli utenti. Si chiama Brave Ads e consiste nella remunerazione tramite visualizzazione di banner dedicati: l'utente visualizza il banner e riceve una ricompensa, che può poi riutilizzare
+Dall'altra parte, è disponibile un sistema di monetizzazione nei confronti degli utenti. Si chiama Brave Ads e consiste nella remunerazione tramite visualizzazione di banner dedicati: l'utente visualizza il banner e riceve una ricompensa, che può poi riutilizzare per inviare donazioni ricorrenti ai publisher o per la visualizzazione dello specifico sito web.
+
+Sempre più editori stanno applicando per diventare Brave Certified e quindi usufruire dei ricavi dai token. Tuttavia, Brave Browser come piattaforma, sebbene non sia più acerba, ha comunque ancora molta strada da fare. Ci sono dei punti critici che devono essere indicati, alla fine di tutte queste belle parole:
+
+1. Il
+
+{% highlight html %}
+<div class="side-by-side">
+    <h3>Voto: 8</h3>
+      <div class="toleft">
+        <ul><h4>Pro</h4>
+          <li>Decentralised-first
+          <li>Cresciuto moltissimo in un anno
+        </ul>
+      </div>
+
+      <div class="toright">
+        <ul><h4>Contro</h4>
+          <li>Sync via blockchain non ottimale
+          <li>App iOS poco ottimizzata
+        </ul>
+      </div>
+    </div>
+{% endhighlight %}
