@@ -9,7 +9,7 @@ tag:
 category: blog
 author: jaack
 description: Brave Browser dopo 9 mesi di utilizzo
-published: true
+published: false
 ---
 
 Tempo fa, ho letto un [lungo e approfondito articolo di Darren Loucaides su WIRED US](https://www.wired.com/story/italy-five-star-movement-techno-utopians/), che racconta della nascita del Movimento 5 Stelle ma soprattutto della piattaforma Rousseau, che oggi è utilizzata dagli attivisti del Movimento 5 Stelle come strumento di democrazia diretta.
