@@ -78,18 +78,19 @@ Sempre più editori stanno applicando per diventare Brave Certified e quindi usu
 
 1. Il
 
+
 <div class="side-by-side">
     <div class="toleft">
       <ul><h4>Pro</h4>
-        <li>Decentralised-first
-        <li>Cresciuto moltissimo in un anno
+        <li>Decentralised-first</li>
+        <li>Cresciuto moltissimo in un anno</li>
       </ul>
     </div>
 
     <div class="toright">
       <ul><h4>Contro</h4>
-        <li>Sync via blockchain non ottimale
-        <li>App iOS poco ottimizzata
+        <li>Sync via blockchain non ottimale</li>
+        <li>App iOS poco ottimizzata</li>
       </ul>
     </div>
   </div>
