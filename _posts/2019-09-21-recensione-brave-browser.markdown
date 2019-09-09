@@ -1,7 +1,7 @@
 ---
 title: "Brave Browser, sovranità dell’identità digitale"
 layout: post
-date: 2019-09-01 10:00
+date: 2019-09-21 10:00
 image: /assets/images/profilo.jpg
 headerImage: false
 tag:
