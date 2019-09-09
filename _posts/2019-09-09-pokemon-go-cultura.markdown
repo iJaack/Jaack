@@ -8,8 +8,7 @@ tag:
 - giochi
 category: blog
 author: jaack
-description: Una piattaforma in cui pokémon ed esseri umani possono davvero
-coesistere
+description: Una piattaforma in cui pokémon ed esseri umani possono davvero coesistere
 published: true
 ---
 Ho giocato a Pokémon per tutta la mia infanzia.
