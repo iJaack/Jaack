@@ -78,21 +78,18 @@ Sempre più editori stanno applicando per diventare Brave Certified e quindi usu
 
 1. Il
 
-{% highlight html %}
 <div class="side-by-side">
-    <h3>Voto: 8</h3>
-      <div class="toleft">
-        <ul><h4>Pro</h4>
-          <li>Decentralised-first
-          <li>Cresciuto moltissimo in un anno
-        </ul>
-      </div>
-
-      <div class="toright">
-        <ul><h4>Contro</h4>
-          <li>Sync via blockchain non ottimale
-          <li>App iOS poco ottimizzata
-        </ul>
-      </div>
+    <div class="toleft">
+      <ul><h4>Pro</h4>
+        <li>Decentralised-first
+        <li>Cresciuto moltissimo in un anno
+      </ul>
     </div>
-{% endhighlight %}
+
+    <div class="toright">
+      <ul><h4>Contro</h4>
+        <li>Sync via blockchain non ottimale
+        <li>App iOS poco ottimizzata
+      </ul>
+    </div>
+  </div>
