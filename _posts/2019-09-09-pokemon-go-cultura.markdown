@@ -3,7 +3,7 @@ title: "Come Pokémon Go sta influenzando la cultura"
 layout: post
 date: 2019-09-09 22:40
 image: /assets/images/pokemon-go-cultura.jpg
-headerImage: true
+headerImage: false
 tag:
 - giochi
 category: blog
