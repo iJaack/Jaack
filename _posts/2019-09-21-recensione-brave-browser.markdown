@@ -79,7 +79,7 @@ Sempre più editori stanno applicando per diventare Brave Certified e quindi usu
 1. Il
 
 
-<div class="side-by-side">
+<div class="review">
     <div class="toleft">
       <ul><h4>Pro</h4>
         <li>Decentralised-first</li>
