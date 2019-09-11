@@ -8,7 +8,7 @@ description: Community, Tech e Crypto
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/profilo.webp
+picture: assets/images/profilo.jpg
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
@@ -57,7 +57,7 @@ authors:
         name: Giacomo Barbieri
         bio: Millennial blogger, community manager
         external-image: false
-        picture: assets/images/profilo.webp
+        picture: assets/images/profilo.jpg
         twitter: ijaack94
 
 # do you want a larger site? change the option below

@@ -9,5 +9,5 @@ tag:
 category: blog
 author: jaack
 description: L'airdrop è dedicato agli utenti di Keybase
-published: true
+published: false
 ---
