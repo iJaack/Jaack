@@ -25,7 +25,7 @@ Nel keynote, quindi, Apple:
 * Ha voluto sfidare Google sul machine learning quando il capo degli ingegneri è salito sul palco ed ha spiegato come funzionasse l'A13 Bionic con un certo livello di dettaglio;
 * Vuole così tanto che usiamo l'iPhone 11 Pro e Pro Max per le foto che ci fa vedere tutti i tipi di foto che si possono fare;
 
-<img src="{{site.url}}/assets/images/apple-keynote-2019.png" alt"Apple Keynote 2019">
+<img class="image" src="{{site.url}}/assets/images/apple-keynote-2019.png" alt="Apple Keynote 2019">
 
 Ci sono alcune cose che vorrei far notare:
 * **Tutti** quelli che sono saliti sul palco hanno ringraziato Tim con la stessa frase ("Thanks Tim"), tranne una sola persona che lo ha ringraziato con "Thank you Tim", mentre l'unico a guardare nella direzione di Tim mentre lo ringraziava è stato Phil Schiller. Coincidenza?
