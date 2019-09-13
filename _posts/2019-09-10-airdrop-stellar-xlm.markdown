@@ -60,7 +60,7 @@ sono state tantissime.
 
 Non ho approfondito la natura tecnologica di Stellar, sono sincero. Non voglio sembrare
 presuntuoso in materia. Si può comprendere la blockchain ma esistono decine, se non
-centiaia, di varianti con nature leggermente diverse.
+centinaia, di varianti di natura leggermente diversa.
 
 Ma lo sforzo, tramite questo airdrop che andrà a rilasciare sul mercato circa 100 milioni
 di dollari (teorici) in due anni, è concreto. Tolgono un potenziale dalle loro tasche per
