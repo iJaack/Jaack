@@ -1,7 +1,7 @@
 ---
 title: "Considerazioni sul September Event 2019 di Apple"
 layout: post
-date: 2016-09-13 16:30
+date: 2019-09-13 16:30
 image: /assets/images/apple-keynote-2019.jpg
 headerImage: false
 tag:
