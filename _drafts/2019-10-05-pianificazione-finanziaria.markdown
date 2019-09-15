@@ -48,7 +48,7 @@ Ho fatto acquisti con la mia American Express
 
 N26 è dappertutto ormai. Hanno fatto una campagna 'Dalla A alla Z' che si vede in ogni comunicazione esterna e online in tutta Italia.
 
-[Scarica N26]
+**Scarica N26:** [Android]() | [iOS]()
 
 # Conto 'Tasse': Oval Money
 Ho una partita IVA, quindi devo pianificare la divisione delle mie entrate per
@@ -62,7 +62,7 @@ Per Spese Fondamentali io intendo:
 * Saldo e acconto gestione separata INPS
 * Commercialista
 
-[Scarica Oval Money]()
+**Scarica Oval Money:** [Android]() | [iOS]()
 
 # Aggregazione conti: Yolt
 
@@ -71,7 +71,7 @@ delle varie banche, online e tradizionali, per avere una visione di quello che s
 
 L'app si basa sull'assunto che oggi un utente ha più di un conto, e più di una banca di riferimento.
 
-[Scarica Yolt]()
+**Scarica Yolt:** [Android]() | [iOS]()
 
 # EXTRA: Conto pensione: cryptovalute
 
