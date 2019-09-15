@@ -9,15 +9,17 @@ decentralizzazione e di informazione libera.</p>
 
 <p>Questa pagina è una raccolta, periodicamente aggiornata, di ricerche che ho eseguito da solo o insieme
 ad altri, opportunamente menzionati.</p>
+
 <section class="list">
-    {% for post in site.posts %}
-        {% if post.projects %}
-            <div class="item {% if post.star %}star{% endif %}">
-                <a class="url" href="{% if post.externalLink %}{{ post.externalLink }}{% else %}{{ site.url }}{{ post.url }}{% endif %}">
-                    <aside><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside>
-                    <h3 class="title">{{ post.title }}</h3>
-                </a>
-            </div>
-        {% endif %}
-    {% endfor %}
+	{% if site.posts.size == 0 %}
+		<p class="text-center">Nessun post per ora :)</p>
+	{% else %}
+		{% for post in site.posts %}
+			{% if post.category == 'projects' %}
+				{% if post.hidden != true %}
+					{% include blog-post.html %}
+				{% endif %}
+			{% endif %}
+		{% endfor %}
+	{% endif %}
 </section>

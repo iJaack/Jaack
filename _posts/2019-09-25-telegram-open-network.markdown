@@ -1,14 +1,15 @@
 ---
 title: "Telegram Open Network"
 layout: post
-date: 2019-09-10 8:00
-image: /assets/images/profile.webp
+date: 2019-09-15 20:00
+# image: /assets/images/
 headerImage: false
 tag:
-- community
+- tech
 category: projects
 author: jaack
 description: Guide, commenti, aggiornamenti
+published: true
 ---
 **Telegram** è la mia app preferita di **messaggistica**.
 
