@@ -34,4 +34,4 @@ Ci sono alcune cose che vorrei far notare:
 * Potrebbe arrivare una rimodulazione dell'abbonamento a Apple Music a 4,99€, o sarebbe davvero troppo?
 * Avevano tutti una fretta allucinante nel parlare, ma che si corrono?
 * La fotocamera principale dell'iPhone 11 non ha i sensore telephoto, quindi tutta la gamma guadagna l'ultra wide in più, quindi Apple pensa che il telephoto è un sensore che merita un prezzo più alto;
-* La tecnologia Deep Fusion sarà interessante, quando sarà rilasciata nei prossimi mesi;
+* La tecnologia Deep Fusion sarà interessante, quando sarà rilasciata nei prossimi mesi.
