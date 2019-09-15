@@ -16,7 +16,6 @@ layout: page
 </span>
 
 {{content}}
-
 {% if site.post-advance-links contains page.category %}
     <div class="blog-navigation">
         {% if page.previous.hidden == false and page.previous.url %}
@@ -29,7 +28,6 @@ layout: page
         {% endif %}
     </div>
 {% endif %}
-
 {% include tinyletter.html %}
 
 {% if site.related %}

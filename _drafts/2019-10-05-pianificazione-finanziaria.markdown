@@ -1,15 +1,15 @@
 ---
 title: "Pianificazione finanziaria senza costi"
 layout: post
-date: 2019-09-30 11:00
+date: 2019-09-10 11:00
 image: /assets/TBD.jpg
 headerImage: false
 tag:
 - tech
-category: project
+category: projects
 author: jaack
 description: Come risparmierò fino a 2200€ in 6 mesi senza rinunciare a nulla
-published: false
+published: true
 ---
 Mi rendo conto che sto diventando un tipo sempre più pragmatico. Che la vita mi da spesso pugni in faccia, quindi meglio se mi difendo bene. Soprattutto quando si tratta di soldi.
 
@@ -58,7 +58,7 @@ di spese:
 Questa carta è collegata al mio Conto Principale (FINECO).
 L'abbonamento annuale costa circa **160€**, ma facendo tante spese si accumula un numero di punti tale da poter riscattare l'abbonamento annuale a costo zero. E il primo anno, con tantissime promozioni, costa circa 60€ (tipo usando il link qui in basso).
 
-[Prendi una carta American Express Oro](www.americanexpress.it/amico/gIACOBUKnp?XLINK=MYCP)
+[**Prendi una carta American Express Oro**](www.americanexpress.it/amico/gIACOBUKnp?XLINK=MYCP)
 
 ## Conto per l'estero: Revolut
 
@@ -96,7 +96,7 @@ Non è un vero e proprio conto, ma quei soldi io li considero la mia pensione. M
 
 Non dimenticherò mai quella cena, che nel novembre del 2017 ho pagato 33 euro, che un anno dopo aveva il valore di circa 300€ (nel frattempo la cryptovaluta che avevo usato per il pagamento, ZCash, aveva fatto +900%).
 
-Oggi, dopo aver 
+Oggi, dopo aver
 
 # Como vedo quanto spendo: Yolt
 
