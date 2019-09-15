@@ -94,7 +94,9 @@ Per Spese Fondamentali io intendo:
 
 Non è un vero e proprio conto, ma quei soldi io li considero la mia pensione. Mi ritengo, da circa un anno, un HODLER. Uno di quelli che le cryptovalute non le spende, ma le accumula. Perché un giorno potrebbero comunque valere di più.
 
-Non dimenticherò mai quella cena, che nel novembre del 2017 ho pagato 33 euro, che un anno dopo aveva il valore di circa 300€ (nel frattempo la cryptovaluta che avevo usato per il pagamento, ZCash, aveva fatto +900%)
+Non dimenticherò mai quella cena, che nel novembre del 2017 ho pagato 33 euro, che un anno dopo aveva il valore di circa 300€ (nel frattempo la cryptovaluta che avevo usato per il pagamento, ZCash, aveva fatto +900%).
+
+Oggi, dopo aver 
 
 # Como vedo quanto spendo: Yolt
 
