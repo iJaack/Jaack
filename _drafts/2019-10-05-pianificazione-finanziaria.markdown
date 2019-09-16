@@ -1,7 +1,7 @@
 ---
 title: "Pianificazione finanziaria senza costi"
 layout: post
-date: 2019-09-10 11:00
+date: 2019-09-18 11:00
 image: /assets/TBD.jpg
 headerImage: false
 tag:
@@ -85,12 +85,22 @@ evitare di non avere i soldi per pagare le tasse l'anno successivo.
 La partita IVA, in special modo quella forfettaria, è una brutta bestia,
 perché se guadagni 1000€ non stai guadagnando veramente 1000€, ma solo circa il
 73% di quello, perché togliendo le Spese Fondamentali, ti rimane solo quello.
-Per Spese Fondamentali io intendo:
+Per Spese Fondamentali, che ammontano a circa il 27% delle entrate, io intendo:
 * Saldo e acconto imposta sostitutiva
 * Saldo e acconto gestione separata INPS
 * Commercialista
 
-**Scarica Oval Money**: [Android]() | [iOS]()
+Oval Money mi piace perché è un'app a parte. Si collega a moltissimi conti correnti
+e banche online (ma non a Revolut, purtroppo) e fa i conti ad ogni transazione in base
+a delle regole che ho impostato: per esempio, "ogni 10€ di spesa in ristorazione, metti da parte 10€".
+Io avevo impostato tante regole, ma poi risparmiavo così tanto che non mi rimanevano più soldi sul Conto Principale.
+Alla fine ho scelto di mantenere le cose semplici: "metti da parte il 27% di tutte le entrate". Alcune entrate sono rimborsi, ma le singole transazioni si possono escludere dal conteggio. Ogni lunedì, Oval prende i soldi dal mio Conto Principale e ci mette circa 2-3 giorni a trasferirli nel conto dell'app.
+
+Avere Oval è utile perché è un'**app separata**: l'ho nascosta in una cartella dello smartphone, così non mi viene troppo in mente di aprirla.
+Così, magicamente, nel momento del bisogno ho i soldi che mi servono. Ovviamente Oval Money può essere utilizzata in tantissimi modi diversi, ed ha anche una sezione riservata agli investimenti, che utilizza i soldi risparmiati investendoli in ETF selezionati dall'azienda.
+L'unica volta che ho messo 50€ su un ETF ci ho rimesso il 3%, quindi ho lasciato perdere. Ma in generale, per investire lasciando la somma vincolata per almeno un anno, potrebbe essere ottimo.
+
+[**Scarica Oval Money**](https://m.onelink.me/b2d2a73d)
 
 ## EXTRA: Conto pensione: cryptovalute
 
@@ -118,4 +128,6 @@ L'app si basa sull'assunto che oggi un utente ha più di un conto, e più di una
 
 Nessuna app particolare sviluppata da me, nessun algoritmo particolare.
 
-Per capire come spostare i soldi, raggruppare tutti le spese ricorrenti (che potrebbero anche essere effettuate in contanti e quindi non tracciabili singolarmente)
+Per capire come spostare i soldi, raggruppare tutti le spese ricorrenti (che potrebbero anche essere effettuate in contanti e quindi non tracciabili singolarmente), uso un Foglio Google in cui scrivo tutte le mie Spese Ricorrenti ed anche le eventuali spese una-tantum per progetti personali o simile (tipo viaggi, acquisto di un nuovo pc o altro).
+
+Il Foglio è molto semplice.
