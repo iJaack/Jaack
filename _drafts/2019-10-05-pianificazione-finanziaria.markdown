@@ -46,7 +46,7 @@ al mese per i mesi in cui supero questo importo. In realtà, FINECO mi addebita 
 Su FINECO faccio confluire tutti i miei guadagni: è il conto di entrata, da cui
 poi smisto i soldi negli altri servizi/banche.
 
-[Apri un conto FINECO](https://finecobank.com/it/apriconto/scelta-online-cp)
+[**Apri un conto FINECO**](https://finecobank.com/it/apriconto/scelta-online-cp)
 
 ## Carta di credito American Express Oro
 
@@ -65,7 +65,9 @@ L'abbonamento annuale costa circa **160€**, ma facendo tante spese si accumula
 Qualche mese fa sono andato a San Francisco e ho avuto diverse spese lì: alcune
 erano rimborsate, quindi l'importo non era rilevante (erano già coperte), mentre
 altre erano mie spese personali, per esempio quando sono andato all'Apple Store dell'Apple Park e ho comprato regali per la mia famiglia e la mia ragazza.
-Ho fatto acquisti con la mia American Express
+Ho fatto acquisti con la mia American Express e ho scoperto di aver sostenuto anche delle importanti spese di commissione, del tipo che ho pagato circa 4$ per 100$ di acquisto. Dato che viaggio spesso e in generale mi capita spesso di acquistare attraverso internet su siti che accettano solo dollari, le commissioni si impilano e mi sono accorto che avrei potuto risparmiare molti soldi se avessi trovato un modo per non pagarle, queste commissioni.
+
+Ho scoperto Revolut quasì per caso, non ricordo nemmeno quando, né come: Revolut è una startup che è una banca solo online, ed ha fatto del suo punto di forza l'azzeramento delle commissioni per spese all'estero. Il loro business model si basa su degli abbonamenti da 7,99€ e 13,99€ per avere funzioni aggiuntive come prelievi gratuiti illimitati, accesso alle lounge aeroportuali a prezzi convenienti, e cosi via.
 
 [**Scarica Revolut**](https://revolut.com/referral/giacomozf!G10D21)
 
@@ -94,17 +96,26 @@ Per Spese Fondamentali io intendo:
 
 Non è un vero e proprio conto, ma quei soldi io li considero la mia pensione. Mi ritengo, da circa un anno, un HODLER. Uno di quelli che le cryptovalute non le spende, ma le accumula. Perché un giorno potrebbero comunque valere di più.
 
-Non dimenticherò mai quella cena, che nel novembre del 2017 ho pagato 33 euro, che un anno dopo aveva il valore di circa 300€ (nel frattempo la cryptovaluta che avevo usato per il pagamento, ZCash, aveva fatto +900%).
+Non dimenticherò mai quella cena, che nel novembre del 2017 ho pagato **33 euro**, che un anno dopo aveva il valore di circa **250 euro** (nel frattempo la cryptovaluta che avevo usato per il pagamento, ZCash, aveva fatto +700%).
 
-Oggi, dopo aver
+Oggi, dopo aver imparato che tenere le mie crypto sugli exchange non è una buona idea (una storia molto lunga che può essere capita cercando
+  su Google '*QuadrigaCX*'), le ho spostate tutte su wallet a cui posso accedere con chiave privata-pubblica, chiave di recupero o simile. Per completezza, riporto anche le crypto che posseggo (ma non le quantità, ovviamente), se qualcuno volesse prendere spunto: **BTC, ETH, BCH, IOTA, NEO, BNB, BAT, ADA, LTC, CPAY, ETC, ZEC, DASH, BEAM, FDZ, LPT, NANO, WAVES, SC, RHT, GAS, ZCL, ONT, XLM**.
 
-# Como vedo quanto spendo: Yolt
+Ma non potevo controllare tutti i wallet uno per uno ogni volta che avessi avuto bisogno di avere una visione d'insieme. Per trovare **CoinStats** ci ho messo un bel po' di tempo, ma alla fine ne sono rimasto soddisfatto: basta inserire le chiavi pubbliche dei wallet e le chiavi API degli exchange utilizzati per avere tutto insieme. Ora CoinStats fornisce anche un wallet che supporta oltre 220 monete, ma bisognerebbe trasferire tutto, incorrendo in commissioni.
+
+  [Guarda il mio portafoglio crpyto](https://coinstats.app/p/shoYj8) | [Scarica CoinStats](https://coinstats.app)
+
+# Come vedo entrate ed uscite: Yolt
 
 Yolt è l'app di ING Direct (non me lo immaginavo davvero) per collegare tutti i conti
 delle varie banche, online e tradizionali, per avere una visione di quello che sta succedendo alle proprie finanze.
 
-L'app si basa sull'assunto che oggi un utente ha più di un conto, e più di una banca di riferimento.
+L'app si basa sull'assunto che oggi un utente ha più di un conto, e più di una banca di riferimento. La lista delle banche supportate è lunga ma, così come con Oval Money, nemmeno Yolt supporta Revolut, quindi non mi è possibile controllare le spese da lì, che però vincolo solo agli acquisti all'estero con valuta diversa dall'euro, quindi una situazione che si verifica non molto spesso (sebbene più di qualche volta).
 
-**Scarica Yolt:** [Android]() | [iOS]()
+[**Scarica Yolt**](https://www.yolt.com/it/)
 
 # Come pianifico con successo: Google Sheet
+
+Nessuna app particolare sviluppata da me, nessun algoritmo particolare.
+
+Per capire come spostare i soldi, raggruppare tutti le spese ricorrenti (che potrebbero anche essere effettuate in contanti e quindi non tracciabili singolarmente)
