@@ -1,7 +1,7 @@
 ---
 title: "Pianificazione finanziaria senza costi"
 layout: post
-date: 2019-09-18 11:00
+date: 2019-09-17 15:00
 image: assets/images/projects/pianificazione-finanziaria/mappa.png
 headerImage: false
 tag:
