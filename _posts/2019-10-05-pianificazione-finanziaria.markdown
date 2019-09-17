@@ -2,13 +2,13 @@
 title: "Pianificazione finanziaria senza costi"
 layout: post
 date: 2019-09-18 11:00
-image: /assets/TBD.jpg
+image: assets/images/projects/pianificazione-finanziaria/mappa.png
 headerImage: false
 tag:
 - tech
 category: projects
 author: jaack
-description: Come risparmierò fino a 2200€ in 6 mesi senza rinunciare a nulla
+description: Come risparmierò senza rinunciare a nulla
 published: true
 ---
 Mi rendo conto che sto diventando un tipo sempre più pragmatico. Che la vita mi da spesso pugni in faccia, quindi meglio se mi difendo bene. Soprattutto quando si tratta di soldi.
@@ -28,6 +28,8 @@ aggiornata se trovo dei servizi sostitutivi o aggiuntivi.
 La seguente è la lista, divisa per paragrafi, di tutti i servizi/banche che utilizzo
 e il metodo che utilizzo per tenere traccia di spese e guadagni. Sono sempre accetti
 feedback e proposte di modifiche.
+
+<img class="image" src="{{site.url}}/assets/images/projects/pianificazione-finanziaria/mappa.png"
 
 # Dove tengo i soldi
 
@@ -56,7 +58,7 @@ di spese:
 * **Spese Mensili** e **Spese Annuali Ricorrenti**;
 
 Questa carta è collegata al mio Conto Principale (FINECO).
-L'abbonamento annuale costa circa **160€**, ma facendo tante spese si accumula un numero di punti tale da poter riscattare l'abbonamento annuale a costo zero. E il primo anno, con tantissime promozioni, costa circa 60€ (tipo usando il link qui in basso).
+L'abbonamento annuale costa circa **160€**, ma facendo tante spese si accumula un numero di punti tale da poter riscattare l'abbonamento annuale a costo zero o estremamente ridotto. E il primo anno, con tantissime promozioni, costa circa 60€ (tipo usando il link qui in basso).
 
 [**Prendi una carta American Express Oro**](www.americanexpress.it/amico/gIACOBUKnp?XLINK=MYCP)
 
@@ -69,11 +71,22 @@ Ho fatto acquisti con la mia American Express e ho scoperto di aver sostenuto an
 
 Ho scoperto Revolut quasì per caso, non ricordo nemmeno quando, né come: Revolut è una startup che è una banca solo online, ed ha fatto del suo punto di forza l'azzeramento delle commissioni per spese all'estero. Il loro business model si basa su degli abbonamenti da 7,99€ e 13,99€ per avere funzioni aggiuntive come prelievi gratuiti illimitati, accesso alle lounge aeroportuali a prezzi convenienti, e cosi via.
 
+Io non ho fatto alcun abbonamento perché non ho bisogno delle funzionalità aggiuntive, ma sono situazioni che vanno analizzate caso per caso.
+In ogni caso, sposto i soldi dal Conto Principale in base alle necessità, e se rimangono li lascio lì ed eventualmente li recupero sul Conto Principale a fine anno. Il vantaggio di Revolut è che si può ricaricare tramite Apple Pay o carta di credito, quindi l'accredito dei soldi è immediato, a differenza del bonifico che impiega 1-2 giorni lavorativi.
+
 [**Scarica Revolut**](https://revolut.com/referral/giacomozf!G10D21)
 
-## Conto 'sfizi': N26
+## Conto 'Sfizi': N26
 
 N26 è dappertutto ormai. Hanno fatto una campagna 'Dalla A alla Z' che si vede in ogni comunicazione esterna e online in tutta Italia.
+N26 è una banca online che offre una carta di debito trasparente molto bella, collegata ad un conto personale che è creato in Germania.
+Su N26 sposto mensilmente solo un budget imprevisti, che ho definito 'Sfizi': videogiochi, libri, biglietti per il cinema, cene e così via.
+Non sono una persona mondana, nonostante viaggi molto, quindi, in base a dei calcoli eseguiti tramite Google Sheets (dettagli nell'ultimo paragrafo) ho capito che mediamente spendo circa 200€ per questo genere di cose. Quindi, ogni mese sposto 200€ dal Conto Principale a quello N26.
+Dentro l'app, poi, ho creato due Spazi: uno spazio è un insieme di transazioni collegate ad un obiettivo. L'obiettivo può essere indefinito, oppure definito. Ho creato i due Spazi come segue:
+* Spazio 'Sfizi', che utilizzo sempre per pagare, senza obiettivo;
+* Spazio 'Extra', che ha un obiettivo di 1.200€ (quanto voglio mettere da parte in 12 mesi), da cui ogni mese prelevo la cifra che non ho speso in 'Sfizi'.
+
+Per esempio, se arrivo alla fine del mese che dei 200€ su 'Sfizi' ne ho spesi solo 50, gli altri 150 li sposterò su 'Extra': il primo di ogni mese, avrò sempre 0€ nello Spazio 'Sfizi', che poi alimenterò di nuovo con un bonifico dal Conto Principale.
 
 [**Scarica N26**](https://n26.com/r/giacomob9188)
 
@@ -122,12 +135,22 @@ delle varie banche, online e tradizionali, per avere una visione di quello che s
 
 L'app si basa sull'assunto che oggi un utente ha più di un conto, e più di una banca di riferimento. La lista delle banche supportate è lunga ma, così come con Oval Money, nemmeno Yolt supporta Revolut, quindi non mi è possibile controllare le spese da lì, che però vincolo solo agli acquisti all'estero con valuta diversa dall'euro, quindi una situazione che si verifica non molto spesso (sebbene più di qualche volta).
 
+Yolt è utile perché mi permette di categorizzare facilmente dei pagamenti come *abbonamenti ricorrenti*, facendo quindi una previsione intelligente delle uscite e facendo la somma dei conti correnti e delle carte collegate, facendomi subito capire quale sia la mia effettiva liquidità.
+
 [**Scarica Yolt**](https://www.yolt.com/it/)
 
 # Come pianifico con successo: Google Sheet
 
-Nessuna app particolare sviluppata da me, nessun algoritmo particolare.
+Nessuna app particolare sviluppata da me, nessun algoritmo segreto.
 
 Per capire come spostare i soldi, raggruppare tutti le spese ricorrenti (che potrebbero anche essere effettuate in contanti e quindi non tracciabili singolarmente), uso un Foglio Google in cui scrivo tutte le mie Spese Ricorrenti ed anche le eventuali spese una-tantum per progetti personali o simile (tipo viaggi, acquisto di un nuovo pc o altro).
 
-Il Foglio è molto semplice.
+Il Foglio è molto semplice, ha 3 schede:
+* **Overview**: in Overview, si ha la panoramica di entrate ed uscite totali, di quanto bisogna mettere da parte per le tasse e di quanto si potrebbe potenzialmente risparmiare alla fine dell'anno. Si può anche immettere la propria percentuale di tasse sulle entrate;
+* **Entrate**: Si inseriscono le proprie Entrate Ricorrenti ed Entrate Una Tantum, con i relativi importi;
+* **Uscite**: Si inseriscono le proprie Uscite Ricorrenti ed Uscite Una Tantum, con i relativi importi;
+Tutte le celle con i caratteri in rosso sono le variabili da modificare. Tutto molto semplice.
+
+[**Crea una copia del Template Pianificazione Finanziaria da Google Sheets**](https://docs.google.com/spreadsheets/d/1CKOfSzOspkYhrh7m9QZNKhjCEM6s07JwkyyfkoEQqJM/edit?usp=sharing)
+
+Spero di essere stato sufficientemente esaustivo. Questo modello non è definitivo, potrebbe cambiare ed aggiornarsi spesso. Ma è un buon punto di partenza per pianificare con successo ed impegno la propria vita finanziaria, senza incorrere in costi nascosti e senza rischiere di spendere più del dovuto. Con me, per ora, sta funzionando.
