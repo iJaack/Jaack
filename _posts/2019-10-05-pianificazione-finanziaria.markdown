@@ -29,7 +29,7 @@ La seguente è la lista, divisa per paragrafi, di tutti i servizi/banche che uti
 e il metodo che utilizzo per tenere traccia di spese e guadagni. Sono sempre accetti
 feedback e proposte di modifiche.
 
-<img class="image" src="{{site.url}}/assets/images/projects/pianificazione-finanziaria/mappa.png"
+<img class="image" src="{{site.url}}/assets/images/projects/pianificazione-finanziaria/mappa.png">
 
 # Dove tengo i soldi
 
