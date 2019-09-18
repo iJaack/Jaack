@@ -6,6 +6,7 @@ image: /assets/images/profilo.jpg
 headerImage: false
 tag:
 - web
+- review
 category: blog
 author: jaack
 description: Brave Browser dopo 9 mesi di utilizzo
@@ -69,14 +70,22 @@ Il modulo centrale che rende davvero Brave il browser indipendente che ho scelto
 Fortunatamente, è possibile disattivare Shield sui singoli domini e la scelta rimarrà salvata anche nelle navigazioni successive.
 Se da una parte Shields permette di usufruire di contenuti senza fronzoli, dall'altra parte rimane comunque la necessità da parte dei gestori di siti web di monetizzare i propri contenuti.
 
-È questo lo scopo di Brave Payments, la funzionalità di Brave che integra la cryptovaluta Basic Attention Token (BAT) per instaurare un'economia dei contenuti tra gli utenti (usufruitori) e i gestori di pagine web (creatori).
+È questo lo scopo di **Brave Payments**, la funzionalità di Brave che integra la cryptovaluta Basic Attention Token (BAT) per instaurare un'economia dei contenuti tra gli utenti (usufruitori) e i gestori di pagine web (creatori).
 Per poter usufruire della monetizzazione tramite Brave Payments, i creatori di contenuti sono tenuti a registrare un account tramite la piattaforma Uphold e collegare i propri siti web alla piattaforma Brave Rewards, che sarebbe la funzionalità Payments dalla parte dei publisher. Il riconoscimento del compenso per la navigazione degli utenti avviene in modo automatico dopo l'installazione di un plugin dedicato che è disponibile per la piattaforma WordPress. In generale, è possibile integrare il tracciamento anche se si utilizzano Content Management Systems diversi.
 
 Dall'altra parte, è disponibile un sistema di monetizzazione nei confronti degli utenti. Si chiama Brave Ads e consiste nella remunerazione tramite visualizzazione di banner dedicati: l'utente visualizza il banner e riceve una ricompensa, che può poi riutilizzare per inviare donazioni ricorrenti ai publisher o per la visualizzazione dello specifico sito web.
 
 Sempre più editori stanno applicando per diventare Brave Certified e quindi usufruire dei ricavi dai token. Tuttavia, Brave Browser come piattaforma, sebbene non sia più acerba, ha comunque ancora molta strada da fare. Ci sono dei punti critici che devono essere indicati, alla fine di tutte queste belle parole:
 
-1. Il
+1. La funzionalità Brave Sync, per sincronizzare le schede aperte e la cronologia, funziona tramite blockchain ma ancora ha problemi di sync, non funziona bene su ogni piattaforma;
+2. Il plugin Widevine, che serve per guardare contenuti protetti da DRM come quelli su Netflix, non funziona su Linux;
+3. Su iOS, Brave non utilizza il motore di rendering di Safari, ma nemmeno il WebKit a quanto sembra: l'app va spesso in crash, non è molto veloce né fluida - Chrome funziona meglio;
+
+Brave Browser è di sicuro un pilastro dell'internet libero contemporaneo, ma ancora deve trovare una propria raison d'être sull'elettronica di consumo. Se rimane un'ottima scelta su Windows e macOS, su mobile ci sarebbe bisogno di una maggiore integrazione con i sistemi operativi. Mi immagino un accordo con dei produttori per pre-installare l'app sugli smartphone.
+
+E poi ancora il mainstream non è abituato a questa idea del 'pagare per navigare': fino ai primi anni 2000 pagavamo tantissimo la connessione internet con il modem a 56K, ma oggi che internet è quasi un bene primario per tutto il mondo (negli Stati Uniti lo è per legge) ed è molto economico avere una connessione ad internet, dovremmo iniziare ad abituarci che, per avere contenuti di qualità, dovremmo pagare (sebbene solo una cifra infinitesima). Siamo troppo abituati ad avere tutto gratis, e in questo periodo ne stiamo pagando le conseguenze, con scandali sulla privacy che non finiscono più.
+
+Forse è ora di riprendere in mano la nostra identità e tenerla al sicuro sui nostri dispositivi, invece che in rete.
 
 
 <div class="review">
@@ -93,4 +102,4 @@ Sempre più editori stanno applicando per diventare Brave Certified e quindi usu
         <li>App iOS poco ottimizzata</li>
       </ul>
     </div>
-  </div>
+</div>
