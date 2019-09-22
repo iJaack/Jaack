@@ -24,3 +24,4 @@ Durante l'annuncio di Apple, ho subito voluto provare la più interessante novit
 Scrivo una parte di questo articolo utilizzando Working Copy per iPad su un tavolino piccolissimo di una compagnia area low-cost. Se avessi dovuto tirare fuori il laptop, sarebbe stata una faccenda ingombrante. Ed invece sto comodo, con la Smart Keyboard e le cuffie mentre ascolto la musica.
 Quando viaggio in treno, per cui posso avere una connessione ad internet più o meno funzionante, ricevo messaggi su Telegram, mail su Airmail: guardo la notifica sull'Apple Watch e apro l'app con lo Slide Over su iPad, e poi la ributto fuori. Ormai mi viene naturale.
 Ovviamente, ogni dispositivo deve rientrare in una strategia ben precisa del nostro utilizzo della tecnologia, altrimenti non se ne fa un utilizzo intelligente e quindi efficace.
+L'iPad può essere un sostituto del computer, ma in molti casi è un eccellente dispositivo aggiuntivo.
