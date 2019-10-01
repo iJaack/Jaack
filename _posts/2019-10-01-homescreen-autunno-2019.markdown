@@ -16,7 +16,7 @@ E così siamo arrivati ad Ottobre.
 
 Mi sono preso un mese di tempo per eseguire una transizione ragionata sul mio workflow quotidiano passando per la homescreen del mio iPhone.
 
-<img src="https://jaack.me/assets/images/homescreen-estate-autunno-2019-jpg" alt="Homescreen Estate - Autunno 2019" />
+<img src="https://jaack.me/assets/images/homescreen-estate-autunno-2019.jpg" alt="Homescreen Estate - Autunno 2019" />
 
 A sinistra, la disposizione delle app fino a ieri, che era la disposizione 'estiva'. A destra, quella 'invernale', che tiene conto di ragionamenti del tutto diversi, ma che non cambia drasticamente la pelle del mio iPhone.
 
