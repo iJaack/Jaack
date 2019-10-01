@@ -34,4 +34,10 @@ Durante l'aggiornamento di questo trimestre, ci sono stati i seguenti annunci, c
 
 Filecoin è un progetto enorme, con una community di sviluppatori sempre crescente ed un hype costruito nel tempo che ha creato un'attesa come pochi progetti blockchain finora. Vedremo se riusciranno a soddisfare le aspettative.
 
+Altre cose interessanti che ho trovato:
+- 🖥 strumento da linea di comando per distribuire un sito statico su IPFS (proverò ad usarlo su questo sito!):[ipfs-deploy] (https://github.com/ipfs-shipyard/ipfs-deploy)
+- 👨🏽‍💻 app web per la collaborazione in tempo reale su documenti markdown tramite protocollo p2p (sempre IPFS): [PeerPad](http://peerpad.net)
+- 💻 motore di ricerca basato su IPFS (ma indicizza siti normali): [IPSE](https://www.ipse.io)
+- 💾 Come far girare la dua DApp su IPFS con un Ethereum Name Service: [tutorial](https://medium.com/the-ethereum-name-service/how-to-host-your-dapp-with-ipfs-ens-and-access-it-via-ethdns-c96046059d87)
+
 Per maggiori informazioni sull'aggiornamento, si può fare riferimento al [blog post sul sito ufficiale](https://filecoin.io/blog/update-2019-q2-q3/).
