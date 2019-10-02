@@ -20,4 +20,5 @@ layout: page
 <ul>
   <li><a href="https://italia.campus-party.org/community/">Campus Party Italia 2020 (CPIT4)</a></li>
   <li><a href="https://www.webnews.it/author/g-barbieri/">Recensioni e approfondimenti su Webnews.it</a></li>
+  <li><a href="https://www.iab.it/eventi/iab-forum/iab-forum-2019/">Content Curation per Innovation Arena di IAB Forum 2019</a></li>
 </ul>

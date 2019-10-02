@@ -28,6 +28,8 @@ su iOS ci sono app che non ci sono su Android, o che su Android hanno un'interfa
 meno intuitiva e, di conseguenza, meno usabile con facilità durante le operazioni
 quotidiane.
 
+[L'homescreen attuale del mio iPhone](https://jaack.me/homescreen-estate-autunno-2019)
+
 ## iPad
 
 ## Apple Watch
