@@ -1,4 +1,56 @@
----
-layout: page
-title: Keybase Verification Page
----
+==================================================================
+https://keybase.io/jaack
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jaack.me
+  * I am jaack (https://keybase.io/jaack) on keybase.
+  * I have a public key ASD1xpVj9Hm-sAUzNGk7xefhMuiAfAwK-drikm1e5DWvLwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012020b2b3703a3367be220acf01a3cfe21aa4567119b2df746fd670f2c9c42173670a",
+      "host": "keybase.io",
+      "kid": "0120f5c69563f479beb0053334693bc5e7e132e8807c0c0af9dae2926d5ee435af2f0a",
+      "uid": "410b5d12d528d84eddaf7be130ee7819",
+      "username": "jaack"
+    },
+    "merkle_root": {
+      "ctime": 1570300388,
+      "hash": "843c3a5ef7b7ca67a2e2fdad3873603c3eae5e2c1b193934b2e76e7cff2899e0a22d189c3ec2f9207aafec500540b63d03834d546c922c4f494f9100b2165315",
+      "hash_meta": "0d56e88726753dedd83bb1f38b53c4c4d05b8b4604b76e1e3d2c653eb1258d4a",
+      "seqno": 7876887
+    },
+    "service": {
+      "entropy": "ZLauCPP4q1zoqUoK9STyeFdF",
+      "hostname": "jaack.me",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.5.0"
+  },
+  "ctime": 1570300472,
+  "expire_in": 504576000,
+  "prev": "68fc85a04f0a350db7bb52c43d146ae3880156e1fafaa0fd54d55051af901366",
+  "seqno": 30,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg9caVY/R5vrAFMzRpO8Xn4TLogHwMCvna4pJtXuQ1ry8Kp3BheWxvYWTESpcCHsQgaPyFoE8KNQ23u1LEPRRq44gBVuH6+qD9VNVQUa+QE2bEIJ/XmDgYb43cVJ8iHMx66q/cB4nouVaBWWoloioCDMz/AgHCo3NpZ8RAoOT6hUbR+qwnIfkmWNVKtx/uH6QCYe9bqx7+UJUyRgs+gXpXslhPOHTNthufBzWO75QYLKc6pEUczjoYzWfRBqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEID6JL2fPnCKwyI1plxvkKd2JZDSAPoYmvIVHh6C5dSaQo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jaack
+
+==================================================================
