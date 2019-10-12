@@ -5,7 +5,7 @@ date: 2019-10-11 10:00
 image: assets/images/Blockchain-201_IPFS-e-token-non-fungibili_2019-10-10_cover.png
 headerImage: false
 tag:
-- tech
+- blockchain
 category: projects
 author: jaack
 description: Un approfondimento su due casi d'uso blockchain che ho particolarmente a cuore
