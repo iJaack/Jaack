@@ -1,5 +1,5 @@
 ---
-title: "Odissea tra iPadOS, MacBook Pro e sconti per l'università"
+title: "Commenti sull'aggiornamento di Ottobre di Steemit"
 layout: post
 date: 2019-09-30 11:00
 image: /assets/TBD.jpg
