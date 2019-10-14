@@ -108,19 +108,24 @@ Nel frattempo, la spesa pubblica e privata nel settore AI aumenta a dismisura.
  
 ### 5G
 
-5G sta per ‘connessione di rete mobile di quinta generazione’. E’ lo standard di connessioni di rete mobili che sarà disponibile a partire dal 2019 in un numero limitato di città in Italia e nel mondo.
-La Next Generation Mobile Networks Alliance definisce i seguenti requisiti per le reti 5G (semplificati per chiarezza):
+5G sta per *‘connessione di rete mobile di quinta generazione’*. È lo standard di connessioni di rete mobili che sarà disponibile a partire dal 2019 in un numero limitato di città in Italia e nel mondo.
+La **Next Generation Mobile Networks Alliance** definisce i seguenti requisiti per le reti 5G (semplificati per chiarezza):
+
 * velocità di decine di megabit al secondo per decine di migliaia di utenti in contemporanea;
 * velocità di connessioni non inferiore ad 1 Gbps;
 * copertura migliorata;
 * efficienza dei segnali potenziata;
 * latenza significativamente ridotta in confronto alla connessione LTE.
 
-La realtà in cui siamo costantemente connessi mostra che entro il 2021, in Europa, il 4G non sarà sufficiente per sostenere la richiesta di traffico dati dell città. Le stime identificano una crescita della domanda pari al 40% annui almeno fino al 2025. Insomma la quantità degli oggetti connessi crescerà esponenzialmente e ciò avverrà a causa, o meglio per merito, della diffusione del 5G.
+<img class="image" src="{{site.url}}/assets/images/projects/celle_5G_2022.jpg" alt="Numero di celle 5G, entro il 2022, Statista.com">
+
+La realtà in cui siamo costantemente connessi mostra che entro il 2021, in Europa, il 4G non sarà sufficiente per sostenere la richiesta di traffico dati delle città. Le stime identificano una crescita della domanda pari al 40% annui almeno fino al 2025. Insomma la quantità degli oggetti connessi crescerà esponenzialmente e ciò avverrà a causa, o meglio per merito, della diffusione del 5G.
+
+<img class="image" src="{{site.url}}/assets/images/projects/previsione_5G_2025" alt="Previsione indotto 5G, entro il 2025, Statista.com">
 
 Le future reti 5G mirano a fornire servizi locali wireless di alta qualità per soddisfare le esigenze specifiche dei singoli settori verticali oltre le tradizionali offerte di banda larga mobile. Il 5G ha il potenziale di rivoluzionare l'ecosistema aziendale di comunicazione mobile e di aprire il mercato a nuovi modelli di operatori locali verticali specifici.
-Insomma, il 5G non è l’evoluzione del 4G, è un nuovo modo di pensare la comunicazione tra dispositivi.
 
+Insomma, il 5G non è l’evoluzione del 4G, è un nuovo modo di pensare la comunicazione tra dispositivi.
 
 # L’individuo
 

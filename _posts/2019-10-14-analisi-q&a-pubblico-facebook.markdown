@@ -2,8 +2,8 @@
 title: "Breve analisi del Q&A pubblico di Facebook"
 layout: post
 date: 2019-10-14 18:00
-# image: /assets/TBD.jpg
-# headerImage: false
+image: /assets/images/profilo.jpg
+headerImage: false
 tag:
 - tech
 - culture
@@ -11,6 +11,7 @@ category: blog
 author: jaack
 description: Un paio di considerazioni sull'ennesima battuta di Facebook contro le
 istituzioni
+published: true
 ---
 Finalmente sono riuscito, a circa 2 settimane dalla pubblicazione, a guardare
 tutto il Q&A pubblico che ha trasmesso Mark Zuckerberg in diretta dal suo profilo Facebook
