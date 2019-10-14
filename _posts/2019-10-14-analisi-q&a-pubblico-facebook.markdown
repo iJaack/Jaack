@@ -9,8 +9,7 @@ tag:
 - culture
 category: blog
 author: jaack
-description: Un paio di considerazioni sull'ennesima battuta di Facebook contro le
-istituzioni
+description: Un paio di considerazioni sull'ennesima battuta di Facebook contro le istituzioni
 published: true
 ---
 Finalmente sono riuscito, a circa 2 settimane dalla pubblicazione, a guardare
