@@ -123,23 +123,24 @@ La realtà in cui siamo costantemente connessi mostra che entro il 2021, in Euro
 
 <img class="image" src="{{site.url}}/assets/images/projects/previsione_5G_2025" alt="Previsione indotto 5G, entro il 2025, Statista.com">
 
-Le future reti 5G mirano a fornire servizi locali wireless di alta qualità per soddisfare le esigenze specifiche dei singoli settori verticali oltre le tradizionali offerte di banda larga mobile. Il 5G ha il potenziale di rivoluzionare l'ecosistema aziendale di comunicazione mobile e di aprire il mercato a nuovi modelli di operatori locali verticali specifici.
+Le future reti 5G mirano a fornire **servizi locali wireless** di alta qualità per soddisfare le esigenze specifiche dei singoli settori verticali, oltre le tradizionali offerte di banda larga mobile. Il 5G ha il potenziale di rivoluzionare l'ecosistema aziendale di comunicazione mobile e di aprire il mercato a nuovi modelli di operatori locali verticali specifici.
 
-Insomma, il 5G non è l’evoluzione del 4G, è un nuovo modo di pensare la comunicazione tra dispositivi.
+Insomma, il 5G non è l’evoluzione del 4G, ma un nuovo modo di pensare la comunicazione tra dispositivi.
 
 # L’individuo
 
-Se vi dicessi che la rivoluzione digitale, di cui tanto sentiamo parlare, è in atto, sta accadendo ora, sotto i nostri occhi, eppure non riusciamo a percepirla. Individui così connessi grazie ad una tecnologia mobile così veloce che non sono in grado di afferrare in tempo il cambiamento.
+La rivoluzione digitale, di cui tanto sentiamo parlare, è in atto, sta accadendo ora, sotto i nostri occhi, eppure non riusciamo a percepirla. Individui così connessi grazie ad una tecnologia mobile così veloce che non sono in grado di afferrare in tempo il cambiamento. Un paradosso.
 
 La risposta risiede nella velocità con cui la realtà sta cambiando e nella vulnerabilità con cui l’uomo riesce a recepirla, comprenderla e utilizzarla.
-E noi, individui, divisi tra testa e cuore, ci sapremo relazionare a queste nuove realtà digitali così disruptive? Le nuove tecnologie sono seducenti quando ciò che offre soddisfa la nostra vulnerabilità umana; si scopre allora che siamo davvero molto vulnerabili. Ci sentiamo soli, ma abbiamo paura dell’intimità: le connessioni digitali possono offrire l’illusione della compagnia senza gli impegni reali. Insomma, la tecnologia ci ha sempre offerto delle alternative alla comunicazione faccia a faccia.
-Immerso in quella società liquida, di cui Bauman è il promotore, l’individuo nel 2030 abiterà una società dalla struttura reticolare in cui si confronterà  quotidianamente con le nuove tecnologie che definiranno sempre più la sua realtà.
+Sarà l'individuo relazionarsi a queste nuove realtà digitali così *disruptive*? Le nuove tecnologie sono seducenti quando ciò che offrono soddisfa la nostra vulnerabilità umana; si scopre allora che siamo davvero molto vulnerabili. Ci sentiamo soli, ma abbiamo paura dell’intimità: le connessioni digitali possono offrire l’illusione della compagnia senza un impegno reale. La tecnologia ci ha sempre offerto delle alternative alla comunicazione faccia a faccia.
+Immerso in quella **società liquida**, di cui Bauman è il promotore, l’individuo nel 2030 abiterà una società dalla struttura reticolare in cui si confronterà  quotidianamente con le nuove tecnologie che definiranno sempre più la sua realtà.
 
-Ma che cosa ci servirà per essere cittadini di questa nuova realtà in cui ci apprestiamo ad entrare?
-La nostra identità  sta acquisendo  una connotazione sempre più fluida e complessa a causa degli innumerevoli e continui passi avanti della tecnologia e dei mezzi di comunicazione. Proprio questa fluidità e complessità ci consentono di vivere in numerosi contesti digitali e reali, ma nello stesso tempo rendono le nostre molteplici identità sempre più attaccabili da nuove e complesse minacce. Bisogna garantire e, al contempo, tutelare  quella che è la nostra immagine, il nostro io rispetto alla realtà digitale.
+Ma che cosa servirà per essere cittadini di questa nuova realtà in cui ci apprestiamo ad entrare?
+La nostra identità sta acquisendo una connotazione sempre più fluida e complessa a causa degli innumerevoli e continui passi avanti della tecnologia e dei mezzi di comunicazione. Proprio questa fluidità e complessità ci consentono di vivere in numerosi contesti digitali e reali, ma nello stesso tempo rendono le nostre molteplici identità sempre più attaccabili da nuove e complesse minacce. Bisogna garantire - e al contempo tutelare - la nostra immagine, il nostro io rispetto alla realtà digitale.
 
-Questo nuovo Io ha una connotazione in più è digitale, avremo bisogno di una cittadinanza/identità digitale. Avete presente quando prima di prenotare un nuovo ristorante, visitate i vari social, analizzare le varie recensioni per poi decidere se andarci o meno? Ecco su per giù la cittadinanza digitale sarà il nostro biglietto di ingresso nella realtà digitale.
-Dal momento che sempre più attività stanno transitando nell’ambiente digitale, maggiore è la necessità di identificazione a distanza, in modo che le azioni compiute dagli utenti possano essere attribuite alle loro identità reali. Senza identità digitale saremo solo individui astratti che agiscono in un universo di bit. Nessuno può essere in grado di affermare di essere qualcun’altro. Questo esclude, quindi, la necessità di avere un documento fisico, una presenza fisica, o un soggetto terzo di fiducia che verifichi manualmente la presenza o i documenti. Di conseguenza, gli utenti di un determinato sistema possono essere autenticati automaticamente e in remoto. Possiamo guardare alla tecnologia Blockchain per trovare risposte a questa esigenza.
+Questo nuovo Io ha una connotazione aggiuntiva: è digitale. Avremo bisogno di una cittadinanza/identità digitale. Avete presente quando prima di prenotare un nuovo ristorante, visitate i vari social, per analizzare le varie recensioni per poi decidere se andarci o meno? Ecco, la cittadinanza digitale sarà il nostro biglietto di ingresso nella realtà digitale.
+
+Dal momento che sempre più attività stanno transitando nell’ambiente digitale, la necessità di identificazione a distanza è sempre maggiore, in modo che le azioni compiute dagli utenti possano essere attribuite alle loro identità reali. Senza identità digitale saremo solo individui astratti che agiscono in un universo di bit. Nessuno può essere in grado di affermare di essere qualcun’altro. Questo esclude, quindi, la necessità di avere un documento fisico, una presenza fisica, o un soggetto terzo di fiducia che verifichi manualmente la presenza o i documenti. Di conseguenza, gli utenti di un determinato sistema possono essere autenticati automaticamente e in remoto. Possiamo guardare alla tecnologia Blockchain per trovare risposte a questa esigenza.
 
 La Blockchain potrebbe essere impiegata nelle fasi di identificazione e verifica del cliente, agendo come database di identità digitali blindate e crittografate, cui è possibile accedere in alternativa a database centralizzati. Ipotizzando uno scenario di “Permission Ledger”, si potrebbe migliorare l’efficienza dell’intero processo: digitalizzazione delle fasi di rilascio e verifica delle identità digitali, automazione di alcuni passaggi intermedi mediante l’adozione di specifici smart contracts, che controllano (e garantiscono) la corretta esecuzione delle regole. A sua volta l’industria che si basa sulla sharing economy può trarre innumerevoli vantaggi dall’adozione di una distributed ledger technology, mediante cui sono gestite le identità digitali.
 
@@ -150,6 +151,7 @@ L’AI è una tecnologia potente  va maneggiata con estrema cautela e la nostra 
 Il 5G e EMBB (Enhanced Mobile Broadband), che fornisce una maggiore larghezza di banda dei dati completata da miglioramenti moderati della latenza sia su 5G NR che su 4G LTE, velocizza il tempo di attesa di download e di riproduzione di file video sui vari smartphone.Il ritardo visivo dell'occhio umano è di circa 100 millisecondi (ms). La latenza su una rete 5G sarà  inferiore a 20 millisecondi per i consumatori e può essere ancora più bassa in alcune applicazioni aziendali come smart industry. Con il 5G, gli utenti dei servizi video possono sperimentare un'attesa quasi nulla.  Attualmente le due teste di serie per l’applicazione del 5G sono Vodafone e Huawei. Queste le parole di Yang Chaobin, presidente della linea di prodotti 5G di Huawei: "Vodafone e Huawei hanno completato con successo l'implementazione di una rete 5G live e fornito un'esperienza di servizio superiore basata sui terminali commerciali 5G. Huawei continuerà a collaborare con il settore per promuovere un utilizzo commerciale di successo del 5G."
 
 Andiamo a vedere un po’ cosa dicono i numeri:
+
 1.	BAIN Macro Trends ha analizzato una gamma di tecnologie già in fase di commercializzazione o prossime a tale fase, tra cui robot umanoidi di servizio, robot collaborativi (cobots), droni, intelligenza artificiale e algoritmi di apprendimento automatico. Queste tecnologie trasformeranno principalmente il settore dei servizi delle economie più avanzate e di alcune economie emergenti. Sulla base di tale analisi, la rapida diffusione dell’automazione si scontrerà nel prossimo decennio con i cambiamenti demografici creando cambiamenti dirompenti in tutta l’economia globale;
 2.	Secondo BAIN MACRO Trends entro il 2030 queste tecnologie potrebbero aumentare la produttività del lavoro in media del 30% rispetto al 2015, con un impatto crescente nel tempo. Questo miglioramento graduale varia considerevolmente tra le industrie, da livelli relativamente modesti nei servizi sanitari e scolastici a un impatto notevole in settori come servizi di ristorazione, vendita al dettaglio, trasporto;
 3.	La famiglia Ericsson ha dichiarato che il numero di abbonamenti smartphone è destinato ad aumentare di 45 percento, raggiungendo un totale di 7,2 miliardi. Grazie, soprattutto, al 5G;
@@ -162,6 +164,7 @@ L'economia di rete o la net economy è il termine con cui si contrassegna il sis
 L’economia digitale è lo “stadio” dell’economia che si manifesta attraverso una “tecnologia” che influenza la produzione di beni/servizi e la distribuzione degli stessi, cioè la comunicazione tra i soggetti dell’economia. Che futuro e presente passino dal web è affermazione persino ovvia. La principale conseguenza dell’uso di questi strumenti è che, in larga parte, il lavoratore oggi possiede i mezzi di produzione: siamo delocalizzati: “ mi occorre, un PC, uno smartphone e una connessione Wi-fi per poter lavorare”. Credo che molti di noi stiano sorridendo nel leggere questa frase e per la maggior parte di noi è la realtà di tutti i giorni.
 
 Chi non ha mai avuto una crisi di panico quando non si accende il computer? Quando la connessione wi-fi è lenta che il caricamento non si completerebbe nemmeno sotto invito, quanti  avrebbero voluto lasciarsi andare alla follia più totale? Niente paura, da qualche parte nel mondo ci sarà un social media manager che starà affrontando lo stesso. Sono i rischi del mestiere per chi lavora con il digitale. Tra le professioni di cui 10 anni non avremmo immaginato neppure l’esistenza ve ne presentiamo alcune:
+
 1.	Sviluppatore di app, pensate che nel 2008 era un mercato che non esisteva, nel 2016 valeva 1.300 miliardi di dollari, indotto compreso, nel 2021 secondo la società di analisi App Annie, l’economia che ruota intorno alle app potrebbe diventare la terza a livello mondiale con 6.350 miliardi di dollari, e una crescita del 385% rispetto al 2016;
 2.	Makeshift Structure Engineer, Ingegnere 3D; la crescita in questo settore richiederà specialisti di software 3D, designer specializzati e programmatori di macchine che contribuiranno insieme a creare enormi opportunità di impiego e posti di lavoro nei prossimi decenni;
 3.	Ingegnere auto a guida automatica, Mentre il mercato dei trasporti automatici inizia a prendere piede, comincia anche a creare nuove professioni. I mezzi automatici non sono in grado di progettarsi e di ripararsi da soli; così ci sarà una crescente domanda di ingegneri, meccanici e sviluppatori di software di guida specializzati in questo tipo di veicoli;
@@ -172,12 +175,13 @@ Chi non ha mai avuto una crisi di panico quando non si accende il computer? Quan
 
 Ora vi proponiamo diversi lavori che cominceranno ad avere un ruolo predominante con l’avanzamento del tridente Blockchain, AI e 5G:
 **Blockchain**: la blockchain sta già creando posti di lavoro e nuove figure professionali, possiamo già indicare quali sono quelle emerse, in ambito tecnico e non.
-a)	Blockchain Information Security Analyst;
-b)	Blockchain Data Scientist: Blockchain e big data rappresentano un sodalizio dal grande futuro, ne deriva che anche gli scienziati dei dati con competenze blockchain non potranno che essere ricercatissimi;
-c)	Blockchain Developer:  gli sviluppatori scrivono il codice e costruiscono le strutture dati per le catene di blocchi;
-d)	Specialista di Marketing Blockchain;
-e)	Blockchain Project Manager;
-f)	Technical Recruiter;
+
+- Blockchain Information Security Analyst;
+- Blockchain Data Scientist: Blockchain e big data rappresentano un sodalizio dal grande futuro, ne deriva che anche gli scienziati dei dati con competenze blockchain non potranno che essere ricercatissimi;
+- Blockchain Developer:  gli sviluppatori scrivono il codice e costruiscono le strutture dati per le catene di blocchi;
+- Specialista di Marketing Blockchain;
+- Blockchain Project Manager;
+- Technical Recruiter;
 
 Una forte conoscenza di cosa si richieda in una società blockchain e la capacità di attrarre talenti saranno fondamentali.
 
@@ -192,7 +196,8 @@ Le aziende dovranno affidarsi sempre più alle nuove tendenze IT, come il mobile
 Il mobile edge computing elabora le informazioni “on site” per insight in tempo reale, mentre filtra i dati mission-critical in cloud per un’analisi più approfondita senza sovraccaricare le infrastrutture IT. I device, che possono elaborare i dati a livello edge, diventeranno sempre più importanti per la forza lavoro del futuro, permettendo alle aziende di ridurre la tensione sui propri servizi cloud e, al contempo, garantire produttività e sicurezza attraverso un perimetro IT esteso.
 
 “Le soluzioni IoT contribuiranno a dare forma alla forza lavoro del futuro, trasformando modalità e abitudini lavorative. Dall’ingegneria alla logistica fino a sanità e sicurezza, queste soluzioni non solo garantiscono una maggiore mobilità, ma creano attività nuove e più efficienti per i dipendenti”
-Massimo Arioli, Head of B2B Sales & Marketing, Toshiba Client Solutions Italy.
+
+*Massimo Arioli, Head of B2B Sales & Marketing, Toshiba Client Solutions Italy.*
 
 # Il trasporto urbano
 
@@ -218,7 +223,7 @@ La prossima generazione di sistemi di trasporto intelligenti (ITS) combinerà si
 In che modo i veicoli a guida autonoma riusciranno comunicheranno con chi li circonda, senza un vero e proprio conducente umano? Ford ha effettuato una serie di test utilizzando la segnaletica luminosa per indicare le diverse manovre di guida del veicolo. Il conducente del Transit Connect scelto per i test, ha “indossato” una Human Car Seat, una particolare tuta in grado di nascondere un vero conducente nella posizione di guida. Progettata per sembrare a tutti gli effetti un sedile, la tuta crea, negli utenti della strada, l’illusione di vedere un veicolo completamente autonomo, fattore fondamentale per valutarne realmente le interazioni.
 In questo modo i ricercatori hanno potuto valutare in maniera più efficace le reazioni ai segnali luminosi trasmessi da una barra luminosa, montata sul tetto, che lampeggiava nei colori bianco, viola e turchese per indicare la marcia, la sosta o il dare la precedenza del Transit Connect.
 
-“Fondamentalmente le persone hanno bisogno di fidarsi dei veicoli autonomi e di sviluppare un metodo universale di comunicazione visiva che sia la chiave di tutto. L’idea di trasformare qualcuno in Human Car Seat è emersa durante un momento di pausa e c’è stata subito la consapevolezza che questo fosse il modo migliore e più efficace per scoprire ciò che ci serviva per mettere in atto il progetto”
+<blockquote>“Fondamentalmente le persone hanno bisogno di fidarsi dei veicoli autonomi e di sviluppare un metodo universale di comunicazione visiva che sia la chiave di tutto. L’idea di trasformare qualcuno in Human Car Seat è emersa durante un momento di pausa e c’è stata subito la consapevolezza che questo fosse il modo migliore e più efficace per scoprire ciò che ci serviva per mettere in atto il progetto”</blockquote>
 
 *Thorsten Warwel, Manager, Core Lighting, Ford of Europe*
 
@@ -267,6 +272,7 @@ Richard Ells e il suo team stanno cercando di far in modo che Electroneum si tro
 Il tallone d’Achille, uno dei punti deboli della governance italiana sin dagli anni 90 è la gestione dei rapporti che intercorrono tra cittadini e Pubblica Amministrazione. Da sempre considerato un apparato lento, inefficiente e troppo burocratico, è stata investita nel corso degli anni da una pioggia di riforme  che non hanno mai avuto una concreta realizzazione. La citizenship, soprattutto quella italiana, si caratterizza per un’assenza relazionale tra i cittadini e le pubbliche istituzioni.
 
 Nonostante questo gap, la struttura della PA potrebbe subire un notevole cambiamento, in termini di comunicazione interna e di relazionalità esterna, in seguito all’incontro con un tridente tecnologico che ne ri-disegnerebbe la fisionomia. La PA e le tecnologie “disruptive” saranno in grado di dialogare con efficacia ed efficienze con la network society che abiterà le nostre smart cities?  La digitalizzazione della Pubblica Amministrazione corre parallela all’implementazione della fruizione dei Big Data e  dell’open government. Entrambi i concetti suddetti ampliano il senso di trasparenza e pubblicità istituzionale in funzione dei tre principi, cui la PA è chiamata a rispondere:
+
 * Trasparenza;
 * Partecipazione;
 * Collaboration;
@@ -310,12 +316,14 @@ Il 5G permette di avere l’accesso alle risorse di rete per tutti per favorire 
 
 È una struttura progettata per essere multicanale, versatile e totalmente cloud, rispetta le ultime direttive in materia di privacy e prevede meccanismi anti-intrusione e anti-manomissione.
 Le speranze riposte nella blockchain fanno leva sulle tre caratteristiche di questa tecnologia:
+
 1.	trasparenza
 2.	immutabilità
 3.	responsabilità
 
 Un report di CB Insight aiuta a comprendere come la blockchain può essere di aiuto per sicurezza del voto elettronico e per la tutela stessa dell’elettorato.
-Osservando la foto la blockchain può intervenire in tre momenti del Digital Voting Journey (secondo CB Insight),
+Osservando la foto la blockchain può intervenire in tre momenti del Digital Voting Journey (secondo CB Insight):
+
 1.	Fase pre-elettorale: la blockchain può aiutare a ridurre i rischi di influenza mediatica scorretta con soluzioni che indirizzano un controllo mediante strumenti crittografici dell’azione dei media e con Mobile apps per la gestione del voto a loro volta basate sulla blockchain;
 2.	Fase elettorale: del voto la blockchain può portare garanzie nella gestione dell’identità dei partecipanti e nella garanzia dell’unicità del documento di voto per ciascun partecipante;
 3.	Fase post-elettorale: la blockchain potrebbe essere perfetta per effettuare gli audit necessari al controllo. In funzione delle sue caratteristiche legate alla trasparenza e all’ immutabilità, si potrebbero ridurre orme di violazione a posteriori.
@@ -325,10 +333,10 @@ Osservando la foto la blockchain può intervenire in tre momenti del Digital Vot
 La valorizzazione dell’informazione, del dato e del cittadino cui quel dato è rivolto, la tempistica dello scambio delle informazioni, l’autenticazione dei rapporti di fiducia, basati non più sulla parola ma su supporti tecnologici specifici e difficilmente falsificabile, stanno diventando il nuovo paradigma del business moderno. E’ opinione condivisa che la pubblica amministrazione rivesta un ruolo fondamentale sul piano legislativo e regolatorio, è il più imponente fornitore di servizi e di infrastrutture ai cittadini e alle aziende e genera con essi una interazione continua, quotidiana e superiore ad ogni altra interazione sociale. Tutto ruota intorno ai servizi pubblici.
 
 Per concludere, vi riportiamo le parole della Ministra Buongiorno, tratte dall’intervista per Webnews:
-“Il lavoro agile io lo incentiverò perché ci credo molto, ma il punto di base è che la tecnologia è velocissima e la pubblica amministrazione è lenta, e succede spesso che si ha il prodotto tecnologico pronto ma manca l’organizzazione in ufficio. Occorre fare una sorta di percorso cronologico: prima semplificare e organizzare, poi avere il prodotto tecnologico. È chiaro che se io non formo il personale, ci sarà sempre questa discrasia tra ufficio bloccato e prodotto tecnologico [già rilasciato]. Per esempio, per quanto riguarda le carte d’identità digitali, ci sono alcuni comuni in cui si riesce ad avere questo prodotto immediatamente, altri in cui bisogna aspettare 3-4 mesi, perché manca un’organizzazione di base. Ecco perché dico che la Pubblica Amministrazione va prima semplificata, e a quel punto si può digitalizzare. Altrimenti abbiamo una serie di prodotti tecnologici, ma non siamo in grado di usarli”.
-
+<blockquote>“Il lavoro agile io lo incentiverò perché ci credo molto, ma il punto di base è che la tecnologia è velocissima e la pubblica amministrazione è lenta, e succede spesso che si ha il prodotto tecnologico pronto ma manca l’organizzazione in ufficio. Occorre fare una sorta di percorso cronologico: prima semplificare e organizzare, poi avere il prodotto tecnologico. È chiaro che se io non formo il personale, ci sarà sempre questa discrasia tra ufficio bloccato e prodotto tecnologico [già rilasciato]. Per esempio, per quanto riguarda le carte d’identità digitali, ci sono alcuni comuni in cui si riesce ad avere questo prodotto immediatamente, altri in cui bisogna aspettare 3-4 mesi, perché manca un’organizzazione di base. Ecco perché dico che la Pubblica Amministrazione va prima semplificata, e a quel punto si può digitalizzare. Altrimenti abbiamo una serie di prodotti tecnologici, ma non siamo in grado di usarli”.</blockquote>
 
 Il Quantum Processor è stato introdotto nei modelli QLED 2018. Nelle TV di nuova generazione in casa Samsung, supporta la risoluzione 8K della serie Q900. È il brain della TV ed è responsabile della gestione di quattro funzioni chiave:
+
 1.	Qualità immagine: upscaling 4K / 8K, riduzione del rumore, dimmer locale, controllo del colore e masterizzazione HDR;
 2.	Suono: controllo audio intelligente;
 3.	Ambient Mode: regola la qualità delle immagini in base alle condizioni di illuminazione dell'ambiente;
@@ -336,7 +344,8 @@ Il Quantum Processor è stato introdotto nei modelli QLED 2018. Nelle TV di nuov
 
 Il Quantum Processor 8K è responsabile dell'applicazione di queste formule ai contenuti video per creare immagini 8K per la visualizzazione. Il motore di upscaling AI 8K si concentra sul miglioramento di quattro elementi di qualità dell'immagine: creazione di dettagli, ripristino dei bordi (riduzione della sfocatura tramite interpolazione), riduzione del rumore (incentrata in particolare sul miglioramento del rumore di quantizzazione ottenuto con sorgenti di streaming compresse) e rimozione di frastagliature da curve e bordi angolati.
 
-Ad accompagnare il Quantum Processor, i QLED TV implemetano le loro funzioni con l’Intelligenza Artificiale. L'approccio Samsung all'upscaling  basato sull'intelligenza artificiale è denominato Machine Learning Super Resolution o MLSR. Si tratta di un processo di apprendimento automatico attraverso  la valutazione di milioni di immagini a bassa/alta risoluzione. Le immagini di alta qualità vengono utilizzate per creare versioni di qualità inferiore, simulando la tipologia di immagini di bassa qualità che un consumatore medio si aspetterebbe di ricevere. In che modo ?
+Ad accompagnare il Quantum Processor, i QLED TV implemetano le loro funzioni con l’Intelligenza Artificiale. L'approccio Samsung all'upscaling  basato sull'intelligenza artificiale è denominato Machine Learning Super Resolution o MLSR. Si tratta di un processo di apprendimento automatico attraverso  la valutazione di milioni di immagini a bassa/alta risoluzione. Le immagini di alta qualità vengono utilizzate per creare versioni di qualità inferiore, simulando la tipologia di immagini di bassa qualità che un consumatore medio si aspetterebbe di ricevere:
+
 1.	Degradare la risoluzione;
 2.	Aggiungere rumore, sfocatura e cicli di compressione / decompressione a vari livelli per indurre artefatti.
 
