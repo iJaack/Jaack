@@ -17,11 +17,11 @@ A dire il vero, avevo "lasciato perdere" gli aggiornamenti dell'iPad da qualche 
 
 Non mi aspettavo che l'iPad potesse essere il sostituto del mio MacBook. O meglio, mi sarebbe piaciuto. Ma troppi anni poi sono passati, troppi aggiornamenti sono arrivati che non cambiavano mai radicalmente l'approccio dell'iPad al mobile computing.
 
-Dopo l'annuncio di Apple, ho subito voluto provare la più interessante novità di iPadOS 13: Safari
+Dopo l'annuncio di Apple, ho subito voluto provare la più interessante novità di iPadOS 13: Safari.
 
 Dopotutto, possiamo stare a dire quanto vogliamo che abbiamo workflow con decine di applicazioni che intersecano le azioni tra di loro, ma il buon vecchio browser web ci serve nel 90% delle volte. Per andare su Facebook, per evitare di scaricare nuove app ed utilizzare la controparte web, e per utilizzare la male/benedetta suite di Google, che funziona solo online. Oddio, in realtà, se si installa l'estensione Google Docs Offline per Chrome o Brave, si possono anche modificare i file offline, a patto che il documento sia stato prima caricato online e che non si chiuda la finestra, altrimenti i dati non vengono mantenuti in memoria, per poi essere caricati una volta che si va online.
 
-Insomma, Google Docs su iPad è una vera benedizione. Perché la suite di app native è inutilizzabile, almeno per ora. Ma la domanda vera è: può sostituire l'esperienza di navigazione di un computer o, anche nello specifico, di un MacBook? Può andare a sostituire l'esperienza complessiva di un MacBook? Può sostituire un MacBook?
+Insomma, Google Docs su iPad è una vera benedizione. Perché la suite di app native è inutilizzabile, almeno per ora. Ma la domanda vera è: può sostituire l'esperienza di navigazione di un computer o, anche nello specifico, di un MacBook? O meglio: può andare a sostituire l'esperienza complessiva di un MacBook? O ancora meglio: può sostituire un MacBook?
 
 Per rispondere a questa domanda, ho impiegato letteralmente dei mesi a scrivere questo articolo.
 
