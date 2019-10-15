@@ -1,8 +1,8 @@
 ---
 title: "Odissea tra un'estate con iPadOS, autunno con MacBook Pro e sconti per l'università"
 layout: post
-date: 2019-09-30 11:00
-image: /assets/TBD.jpg
+date: 2019-10-20 11:00
+image: /assets/ipados-13-beta.jpg
 headerImage: false
 tag:
 - tech
