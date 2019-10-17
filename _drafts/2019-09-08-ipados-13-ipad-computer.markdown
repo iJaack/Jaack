@@ -15,7 +15,7 @@ Quando ho visto Apple annunciare iPadOS 13, ero eccitato 'neutralmente': ogni ag
 
 A dire il vero, avevo "lasciato perdere" gli aggiornamenti dell'iPad da qualche anno. Nel 2017 ho acquistato l'iPad Pro da 9.7" perché ne avevo bisogno per l'università: con la **Apple Pencil e OneNote** prendevo appunti molto facilmente e non avevo bisogno di altro, in realtà.
 
-Non mi aspettavo che l'iPad potesse essere il sostituto del mio MacBook. O meglio, mi sarebbe piaciuto. Ma troppi anni poi sono passati, troppi aggiornamenti sono arrivati che non cambiavano mai radicalmente l'approccio dell'iPad al mobile computing.
+Non mi aspettavo che l'iPad potesse essere il sostituto del mio MacBook. O meglio, mi sarebbe piaciuto. Ma troppi anni sono passati, troppi aggiornamenti sono arrivati che non cambiavano mai radicalmente l'approccio dell'iPad al mobile computing.
 
 Dopo l'annuncio di Apple, ho subito voluto provare la più interessante novità di iPadOS 13: Safari.
 
@@ -27,7 +27,9 @@ Per rispondere a questa domanda, ho impiegato letteralmente dei mesi a scrivere 
 
 ### Luglio 2019
 
-All'inizio, durante le ultime due settimane di preparazione di Campus Party 2019 (CPIT3), avevo capito che avevo bisogno delle app su MacBook che avevo anche su iPad. Avevo già installato iPadOS 13 beta, quindi ho dato il MacBook alla mia ragazza (in modo da non avere la tentazione di riutilizzarlo)
+All'inizio, durante le ultime due settimane di preparazione di Campus Party 2019 (CPIT3), avevo capito che avevo bisogno delle app su MacBook che avevo anche su iPad. Avevo già installato iPadOS 13 beta, quindi ho dato il MacBook alla mia ragazza (in modo da non avere la tentazione di riutilizzarlo) e ho installato alcune app in più che mi avrebbero aiutato anche a non usare troppo l'iPhone.
+
+Ho scelto
 
 Scrivo questi paragrafi utilizzando Working Copy per iPad su un tavolino piccolissimo di una compagnia area low-cost. Se avessi dovuto tirare fuori il laptop, sarebbe stata una faccenda ingombrante. Ed invece sto comodo, con la Smart Keyboard e le cuffie mentre ascolto la musica.
 Quando viaggio in treno, per cui posso avere una connessione ad internet più o meno funzionante, ricevo messaggi su Telegram, mail su Airmail: guardo la notifica sull'Apple Watch e apro l'app con lo Slide Over su iPad, e poi la ributto fuori. Ormai mi viene naturale.
