@@ -19,22 +19,22 @@ Sono per acquisti su Amazon (ovviamente, come non poteva essere) e sono *fino al
 
 Eccoli tutti. Segnalatemi pure se non funzionano o se sono scaduti, così li aggiorno.
 
-#### Spigen SteadiBoost Convertible (Flat & Stand) Qi Fast Wireless Charger
+**Spigen SteadiBoost Convertible (Flat & Stand) Qi Fast Wireless Charger**
 + [Acquista su Amazon](https://amzn.to/33J4r7K)
 + Codice sconto 50%: **SPGWRLES**
 
-#### Spigen DuraSync iPhone Fast Charging Cable (USB-C to Lightning, 2-Pack)
+**Spigen DuraSync iPhone Fast Charging Cable (USB-C to Lightning, 2-Pack)**
 + [Acquista su Amazon](https://amzn.to/2VRi2ak)
 + Codice sconto 50%: **PDFAST50**
 
-#### Spigen Essential F711D Power Bank 10,000 mAh
+**Spigen Essential F711D Power Bank 10,000 mAh**
 + [Acquista su Amazon](https://amzn.to/31pEyrN)
 + Codice sconto aggiuntivo del 30%: **9JAGXEUT**
 
-#### Spigen SteadiBoost USB C Power Delivery
+**Spigen SteadiBoost USB C Power Delivery**
 + [Acquista su Amazon](https://amzn.to/2MQOG7X)
 + Codice sconto 25%: **FASTSALE**
 
-#### Spigen SteadiBoost 45W Quick Charge 3.0 - Caricatore da auto
+**Spigen SteadiBoost 45W Quick Charge 3.0 - Caricatore da auto**
 + [Acquista su Amazon](https://amzn.to/2MPlttY)
 + Codice sconto 20%: **PDCAAUTO**
