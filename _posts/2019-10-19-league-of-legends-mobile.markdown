@@ -1,5 +1,5 @@
 ---
-title: "League of Legends su mobile è croce e delizia"
+title: "League of Legends su mobile sarà croce e delizia"
 layout: post
 date: 2019-10-19 18:00
 image: /assets/images/League-of-legends-wild-rift.png
