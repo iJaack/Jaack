@@ -1,7 +1,7 @@
 ---
 title: "Il mio prossimo talk a Code4Future"
 layout: post
-date: 2019-10-17 14:00
+date: 2019-10-31 18:00
 image: /assets/images/code4future-2019.png
 headerImage: false
 tag:
@@ -22,5 +22,7 @@ Rifletterò sui termini di responsabilità culturale e di cambiamento della soci
 
 Vi aspetto, e ho 10 biglietti a prezzo ridotto: per assistere al mio workshop bisogna
 prendere il **Master Pass** e prenotare il workshop. In fase di registrazione, bisogna inserire il codice **BarbieriC4F** per avere diritto allo sconto.
+
+Aggiornamento! Ho anche un codice sconto per biglietti completamente gratuiti, usando questo codice: **FREEBARBIERIC4F**. Ci vediamo lì!
 
 [**Prendi un biglietto per Code4Future**](https://www.code4future.it/#ticketing)
