@@ -2,10 +2,11 @@
 title: "Telegram Open Network"
 layout: post
 date: 2019-09-15 20:00
-# image: /assets/images/
+image: /assets/images/TON/TON-Wallet-website.png
 headerImage: false
 tag:
 - tech
+- blockchain
 category: projects
 author: jaack
 description: Guide, commenti, aggiornamenti
