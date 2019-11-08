@@ -1,7 +1,7 @@
 ---
 title: "IAB Podcast - L'innovazione liquida | IAB Forum 2019"
 layout: post
-date: 2019-11-08 12:00
+date: 2019-11-08 11:00
 image: /assets/images/projects/iab-podcast-giacomo.png
 headerImage: false
 tag:
