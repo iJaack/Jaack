@@ -3,7 +3,7 @@ title: "IAB Podcast - L'innovazione liquida | IAB Forum 2019"
 layout: post
 date: 2019-11-08 12:00
 image: /assets/images/projects/iab-podcast-giacomo.png
-headerImage: true
+headerImage: false
 tag:
 - tech
 category: projects
@@ -23,6 +23,8 @@ Allo **IAB Forum 2019** intervisterò otto speaker, tra fondatori di startup e c
 Di seguito il programma completo, se invece volete venire GRATIS alla conferenza, scrivetemi su Twitter o Instagram, ho qualche decina di biglietti: **@ijaack94**.
 
 [Link dell'evento](https://www.iab.it/eventi/iab-forum/iab-forum-2019/) | [Link dell'agenda ufficiale](https://www.iab.it/eventi/iab-forum/iab-forum-2019/innovation-arena/) | [Link per acquistare un biglietto](https://www.iab.it/eventi/iab-forum/iab-forum-2019/iscriviti/)
+
+<img class="image" src="{{site.url}}/assets/images/projects/iab-podcast-giacomo.png" alt="IAB Podcast Giacomo Barbieri" />
 
 ---
 ---
