@@ -1,24 +1,28 @@
 ---
-title: "IAB Podcast - L'innovazione liquida"
+title: "IAB Podcast - L'innovazione liquida | IAB Forum 2019"
 layout: post
-date: 2019-11-06 18:00
-image: /assets/images/projects/.jpg
+date: 2019-11-08 12:00
+image: /assets/images/projects/iab-podcast-giacomo.png
 headerImage: true
 tag:
 - tech
 category: projects
 author: jaack
 description: Palinsesto per l'Innovation Arena di IAB Forum 2019
-published: false
+published: true
 ---
 
-Quando nel 1999 il filosofo e sociologo Zygmunt Bauman pubblicò il libro ‘Modernità Liquida', il mondo che descriveva era quello in cui gli utenti e consumatori si stavano trasformando.
+Quando nel 1999 il filosofo e sociologo Zygmunt Bauman pubblicò il libro *‘Modernità Liquida'*, il mondo che descriveva era quello in cui gli utenti e consumatori si stavano trasformando.
 
 Oggi, a distanza di 20 anni dalla pubblicazione di quel libro, i brand devono comunicare con successo ai nativi della società liquida, utenti senza punti di riferimento solidi e con ideali di perfezione in continuo cambiamento.
 
 Le certezze dei grandi comunicatori post-internet non valgono più per i Millennials e soprattutto per la Generazione Z. Si abbassa la soglia d'attenzione, cambiano i flussi di lavoro e le modalità di intrattenimento.
 
-Otto speaker, tra fondatori di startup e comunicatori di nuova generazione, attivisti in questa nuova epoca di ricerca dell’attenzione, discuteranno degli approcci utilizzati per parlare ai nativi digitali con storytelling originali, pro-attivi e flessibili.
+Allo **IAB Forum 2019** intervisterò otto speaker, tra fondatori di startup e comunicatori di nuova generazione, attivisti in questa nuova epoca di ricerca dell’attenzione, con cui discuterò degli approcci utilizzati per parlare ai nativi digitali con storytelling originali, pro-attivi e flessibili.
+
+Di seguito il programma completo, se invece volete venire GRATIS alla conferenza, scrivetemi su Twitter o Instagram, ho qualche decina di biglietti: **@ijaack94**.
+
+[Link dell'evento](https://www.iab.it/eventi/iab-forum/iab-forum-2019/) | [Link dell'agenda ufficiale](https://www.iab.it/eventi/iab-forum/iab-forum-2019/innovation-arena/) | [Link per acquistare un biglietto](https://www.iab.it/eventi/iab-forum/iab-forum-2019/iscriviti/)
 
 ---
 ---
