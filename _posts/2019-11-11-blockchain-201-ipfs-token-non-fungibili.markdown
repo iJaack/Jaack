@@ -20,10 +20,10 @@ Ho iniziato quindi a preparare dei contenuti su **IPFS** e cryptogattini. Di
 IPFS ne ho già parlato sul blog [qui](https://jaack.me/filecoin-update-q2-q3-2019/),
 mentre di cryptogattini ne ho parlato solo nelle mie masterclass per DoubleBit.
 
-Intanto, tramite il bottone qui sotto, è possibile scaricare le slide del mio intervento,
-tenendo presente però che sto preparando una versione più corposa per un workshop
+Tramite il bottone qui sotto, è possibile scaricare le slide del mio intervento,
+mentre più in basso ancora è possibile leggere la trascrizione completa del mio intervento
 durante [Code4Future](https://www.code4future.it), un evento organizzato da HTML.it
-al Talent Garden di Roma Ostiense, quello appena aperto, il 9 novembre prossimo.
+al Talent Garden di Roma Ostiense, quello appena aperto, il 9 novembre scorso.
 
 <img class="image" src="{{site.url}}/assets/images/Blockchain-201_IPFS-e-token-non-fungibili_2019-10-10_cover.png" />
 <a class="link" href="{{site.url}}/assets/docs/Blockchain-201_IPFS-e-token-non-fungibili_2019-10-10.pdf">
