@@ -26,7 +26,7 @@ Di seguito il programma completo, se invece volete venire GRATIS alla conferenza
 - [Link dell'agenda ufficiale](https://www.iab.it/eventi/iab-forum/iab-forum-2019/innovation-arena/)
 - [Link per acquistare un biglietto](https://www.iab.it/eventi/iab-forum/iab-forum-2019/iscriviti/)
 
-<img class="image" src="{{site.url}}/assets/images/projects/iab-podcast-giacomo.png" alt="IAB Podcast Giacomo Barbieri" />
+<img class="image" src="{{site.url}}/assets/images/projects/IAB-Forum-2019/iab-podcast-giacomo.png" alt="IAB Podcast Giacomo Barbieri" />
 
 ---
 ---
