@@ -2,7 +2,7 @@
 title: "IAB Podcast - L'innovazione liquida | IAB Forum 2019"
 layout: post
 date: 2019-11-08 11:00
-image: /assets/images/projects/iab-podcast-giacomo.png
+image: /assets/images/projects/IAB-Forum-2019/iab-podcast-giacomo.png
 headerImage: false
 tag:
 - tech
@@ -30,6 +30,8 @@ Di seguito il programma completo, se invece volete venire GRATIS alla conferenza
 
 ---
 ---
+
+<img class="image" src="{{site.url}}/assets/images/projects/IAB-Forum-2019/iab-podcast-20-novembre.png" alt="IAB Podcast Giacomo Barbieri" />
 
 ## 20 novembre
 
@@ -71,6 +73,8 @@ La soglia dell’attenzione dell’individuo è diminuita negli ultimi anni: la 
 
 ---
 ---
+
+<img class="image" src="{{site.url}}/assets/images/projects/IAB-Forum-2019/iab-podcast-21-novembre.png" alt="IAB Podcast Giacomo Barbieri" />
 
 ## 21 novembre
 #### 9:45 - 9:55
