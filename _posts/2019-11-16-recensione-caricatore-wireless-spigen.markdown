@@ -51,4 +51,4 @@ Che dire di più. Sì, mi piace. Lo sto usando. Vale i 50€ a cui lo si può ac
  su Amazon? Forse ci sono caricatori wireless migliori, ma la combinazione di 'modalità stand' e modalità 'base' e la porta USB-C per l'alimentazione mi fanno
 pensare che questo caricatore sia più versatile degli altri.
 
-[]**Acquista Steadiboost Flex su Amazon**](https://amzn.to/33QZ32B)
+[**Acquista Steadiboost Flex su Amazon**](https://amzn.to/33QZ32B)
