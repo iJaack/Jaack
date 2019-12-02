@@ -94,6 +94,20 @@ show-author: true
 # do you want some animations?
 animation: true
 
+podcast_url: https://jaack.me/podcast
+podcast_album_art: /assets/images/VitaDaMillennial_logo_podcast.png
+podcast_title: Vita da Millennial
+podcast_owner: Giacomo Barbieri
+podcast_email: giacomobarbieri94@gmail.com
+podcast_category: Culture
+podcast_subcategory_one: Technology
+podcast_subcategory_two: Life
+podcast_explicit: "no"
+podcast_author: Giacomo Barbieri
+podcast_description: Un racconto delle sfide quotidiane di un millennial, tutto in prima persona. Puro sentimento ed esperienza.
+podcast_summary: Il millennial italiano ha sfide diverse da quelle di un coetaneo oltreoceano o dall’altra parte del mondo, e queste sfide sono sempre troppo sottovalutate, sminuite da considerazioni di osservatori che di Millennial, forse, hanno solo i figli. Avere figli millennial non vuol dire sapere come funzionano i millennial, perché molto spesso alcuni tratti psicologici e distintivi che caratterizzano le paure, le eccitazioni, le emozioni di un millennial sono difficilmente descrivibili e poco comprensibili ad un pubblico di una generazione diversa.
+podcast_subtitle: Un modo per far esprimere solidarietà nei confronti dei coetanei, e per trasmettere i valori della generazione a quelle precedenti e quelle successive.
+
 plugins:
   - jekyll-seo-tag
   - jekyll-gist
