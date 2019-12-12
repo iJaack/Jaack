@@ -1,5 +1,5 @@
 ---
-title: Questa settimana in tre parole
+title: Newsletter
 layout: page
 ---
 # Questa settimana in tre parole

@@ -22,6 +22,12 @@
             {% endif %}
         {% endif %}
 
+        {% if page.title != "Podcast" %}
+        <li class="item">
+          <a class="link" href="{{ site.url }}/podcast">Podcast</a>
+        </li>
+        {% endif %}
+
         {% if site.projects == true %}
             {% if page.title != "Progetti" %}
                 <li class="item">
