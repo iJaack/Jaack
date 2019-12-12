@@ -4,7 +4,7 @@ layout: page
 ---
 # Vita da Millennial
 
-<img class="image" src="{{site.url}}/assets/VitaDaMillennial_logo_podcast.png" alt="Vita da Millennial Podcast">
+<img class="image" src="{{site.url}}/assets/images/VitaDaMillennial_logo_podcast.png" alt="Vita da Millennial Podcast">
 
 Cercando su Google, i risultati di ricerca sulla parola ‘Millennial’ producono poca testimonianza tangibile. Cercando su Amazon, invece, escono fuori 7 libri su come assumere i millennial, come funziona il loro mondo: tutti libri scritti da persone hanno un’età decisamente diversa da quella di un millennial. Molti di questi libri, inoltre, raccontano la vita del millennial statunitense, di quello asiatico e di un mondo che in Italia non esiste ancora, o forse non esisterà mai.
 
