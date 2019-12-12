@@ -7,9 +7,9 @@
         {% endif %}
 
         {% if site.blog == true %}
-            {% if page.title != "Zibaldone" %}
+            {% if page.title != "Blog" %}
                 <li class="item">
-                    <a class="link" href="{{ site.url }}/blog">Zibaldone</a>
+                    <a class="link" href="{{ site.url }}/blog">Blog</a>
                 </li>
             {% endif %}
         {% endif %}
@@ -23,11 +23,17 @@
         {% endif %}
 
         {% if site.projects == true %}
-            {% if page.title != "Ricerca" %}
+            {% if page.title != "Progetti" %}
                 <li class="item">
-                    <a class="link" href="{{ site.url }}/projects">Ricerca</a>
+                    <a class="link" href="{{ site.url }}/projects">Progetti</a>
                 </li>
             {% endif %}
+        {% endif %}
+
+        {% if page.title != "Newsletter" %}
+        <li class="item">
+          <a class="link" href="{{ site.url }}/newsletter">Newsletter</a>
+        </li>
         {% endif %}
     </ul>
 </nav>
