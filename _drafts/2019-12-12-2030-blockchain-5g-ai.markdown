@@ -1,12 +1,12 @@
 ---
 title: "2030: come Blockchain, 5G e AI plasmeranno le città di domani"
 layout: post
-date: 2019-10-25 10:00
-image: /assets/images/2030_cover.jpg
+date: 2019-12-12 10:00
+## image: /assets/images/2030_cover.jpg
 headerImage: false
 tag:
 - blockchain
-category: project
+category: projects
 author: jaack
 description: In collaborazione con Aurora Caporossi
 published: true
