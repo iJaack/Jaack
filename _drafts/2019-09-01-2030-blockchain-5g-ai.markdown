@@ -12,22 +12,21 @@ description: In collaborazione con Aurora Caporossi
 published: true
 ---
 
-In collaborazione con Aurora Caporossi
+*In collaborazione con Aurora Caporossi*
 
 # Indice
 - [Introduzione](#Introduzione)
-- [La città del domani](#La città del domani)
-- [Blockchain](#Blockchain)
-- [AI](#AI)
-- [5G](#5G)
+  - [La città del domani](#La città del domani)
+    - [Blockchain](#Blockchain)
+    - [AI](#AI)
+    - [5G](#5G)
 - [L’individuo](#L'individuo)
 - [Il trasporto urbano](#Il trasporto urbano)
 - [Le telecomunicazioni](#Le telecomunicazioni)
-- [La Pubblica Amministrazione](#La pubblica amministrazione)
+- [La Pubblica Amministrazione](#La Pubblica Amministrazione)
 - [Siamo pronti per la città del domani?](#Siamo pronti per la città del domani?)
 - [Conclusione](#Conclusione)
 - [Bibliografia](#Bibliografia)
-
 
 # Introduzione
 
@@ -39,7 +38,7 @@ Oggi siamo abituati a misurare il progresso tecnologico sulla base del **numero 
 
 In realtà, questa concezione è piuttosto *distorta*.
 
-Il mercato degli smartphone è in stallo, così come quello dei personal computer, che però subisce già da qualche anno nei confronti di tablet e, appunto, smartphone.
+Il mercato degli smartphone è in stallo, così come quello dei personal computer, che però subisce già da qualche anno nei confronti di tablet e, appunto, degli smartphone.
 
 <img class="image" src="{{site.url}}/assets/images/projects/smartphone_venduti_2018.jpg" alt="Smartphone venduti, 2018, Statista.com">
 
@@ -47,33 +46,36 @@ Il mercato degli smartphone è in stallo, così come quello dei personal compute
 
 <img class="image" src="{{site.url}}/assets/images/projects/computer_venduti_2018.jpg" alt="Computer venduti, 2018, Statista.com">
 
-I numeri parlano chiaro: il mercato degli smartphone è **saturo**, quello dei tablet e pc è in lenta discesa. Forse il progresso tecnologico non è più da monitorare seguendo questi indicatori. Forse, anzi sicuramente, ce ne sono altri.
+I numeri parlano chiaro: il mercato degli smartphone è **saturo**, quello dei tablet e pc è in lenta discesa. Forse il progresso tecnologico non è più da monitorare seguendo questi indicatori. Forse, anzi sicuramente, gli indicatori rilevanti sono altri.
 
-Oggi, per l’individuo comune è difficile pensare a diversi avanzamenti nella tecnica, perché la prossima rivoluzione tecnologica è talmente grande e complessa, che diventa problematico da spiegare con un paio di numeri o una foto. La prossima rivoluzione tecnologica è in atto, è costantemente sotto i nostri occhi, ma non ce ne siamo ancora accorti, come se non riuscissimo a percepirla davvero, perché è ancora tutto così primordiale, così poco connesso.
+Oggi, per l’individuo comune è difficile pensare a diversi avanzamenti nella tecnica, perché la prossima rivoluzione tecnologica è talmente grande e complessa che diventa problematico da spiegare con un paio di numeri o una foto. La prossima rivoluzione tecnologica è in atto, è costantemente sotto i nostri occhi, ma non ce ne siamo ancora accorti, come se non riuscissimo a percepirla davvero, perché è ancora tutto così primordiale, così poco connesso.
 
 Nel 2030, vivremo una realtà diversa, e tutto questo grazie a 3 grandi correnti tecnologiche, che oggi sentiamo ovunque ma che non riusciamo a definire nella loro interezza: **blockchain**, **AI** e **5G**.
 
 Queste tre correnti, che oggi si trovano a differenti stati di evoluzione del loro percorso di maturazione, contribuiranno a creare la più complessa e granulare evoluzione che l’uomo abbia mai percepito: quella della smart city.
 
 Prima di descrivere i cambiamenti che si susseguiranno, è fondamentale chiedersi che cosa si intende con il termine *smart*.
+
 Sempre più in voga negli ultimi anni, “smart” è un lemma di origine britannica: veicola più significati in relazione al contesto nel quale è inserito. Per facilitarne la comprensione legheremo tale termine a tre concetti principali: smart city, smart economy e smart work.
 
-Prendendo come riferimento queste accezioni, il termine ha sviluppato il significato principale di intelligenza; si usa in italiano per descrivere tutti quegli oggetti dotati di intelligenza artificiale, o magari per delle tecnologie particolarmente innovative e di forte impatto. In italiano, così come in inglese, il termine *smart* veicola tutto ciò che rimanda all’innovazione, l’intelligenza.
+Prendendo come riferimento queste accezioni, il termine ha sviluppato il significato principale di intelligenza; si usa in italiano per descrivere tutti quegli oggetti dotati di intelligenza artificiale, o delle tecnologie particolarmente innovative e di forte impatto. In italiano, così come in inglese, il termine *smart* veicola tutto ciò che rimanda all’innovazione e all’intelligenza.
 
-Stiamo vivendo tempi interessanti. Forse il migliore dei tempi per le aziende tecnologiche. La rivoluzione digitale è “mind-blowing”, direbbero gli americani. Per la maggior parte delle persone, potrebbe essere il peggiore dei tempi a causa delle sfide umane che si devono affrontare e le possibili crisi globali. Una cosa è certa: la realtà sta cambiando. Tra dieci anni le città non avranno la configurazione attuale. Dunque cosa dovrebbe essere la smart city? Che cosa dovrebbe fare per la popolazione che vi abita? Nessuna città diventerà *smart* senza garantire il benessere e il miglioramento della vita dei suoi cittadini, senza conquistare le menti di chi sarà protagonista di tale cambiamento.
+Stiamo vivendo tempi interessanti. Forse il migliore dei tempi per le aziende tecnologiche. La rivoluzione digitale è “mind-blowing”, direbbero gli americani. Per la maggior parte delle persone, potrebbe essere il peggiore dei tempi a causa delle sfide umane che si devono affrontare e le possibili crisi globali. Una cosa è certa: la realtà sta cambiando. Tra dieci anni le città non avranno la configurazione attuale.
+
+Dunque cosa dovrebbe essere la smart city? Che cosa dovrebbe fare per la popolazione che vi abita? Nessuna città diventerà *smart* senza garantire il benessere e il miglioramento della vita dei suoi cittadini, senza conquistare le menti di chi sarà protagonista di tale cambiamento.
 
 La definizione che si dà oggi di ‘smart city’ è molto diversa rispetto a quella definita in questo documento. Un po’ come anche per le parole ‘blockchain’, ‘5G’ e ‘AI.
 
 ## La città del domani
 
-La smart city è, per l’accezione in questo documento, la città che vivremo nel 2030. Una città realmente interconnessa, senza perdita di informazione tra le parti che partecipano al sistema.
+La smart city è, per l’accezione usata in questo documento, la città che vivremo nel 2030. Una città realmente interconnessa, senza perdita di informazione tra le parti che partecipano al sistema.
 Per poter immaginare come blockchain, AI e 5G possano contribuire a realizzare una città di questo tipo, è necessario creare delle definizioni che, per l’interezza del documento, aiutino a comprendere il comportamento di queste tre correnti tecnologiche.
  
 ### Blockchain
 
 Immaginata sin dai primi anni ‘90, ma realizzata efficacemente solo alla fine del 2008 da Satoshi Nakamoto  (pseudonimo di una persona o di un gruppo di persone, ancora non è chiaro), la blockchain è nata come infrastruttura di rete peer-to-peer per abilitare il trasferimento di bitcoin, la prima e originale criptovaluta.
 
-Una blockchain, così come dice la parola nella sua traduzione in inglese, è una catena di blocchi, un registro digitale distribuito (Distributed Ledger) aperto e consultabile in ogni momento. Avendo una struttura decentralizzata, non esiste nessun server centrale avente la possibilità concreta di prevalere: il processo decisionale passa attraverso un rigoroso processo di costruzione del consenso. Ogni transazione o informazione inserita in questo database deve essere approvata dal *50%+1* dei nodi della rete. La tecnologia blockchain si struttura come un nuovo paradigma per la gestione delle informazioni e delle transazioni ed è utilizzata laddove esista una relazione di scambio. Il ruolo di un database distribuito tra i nodi della rete garantisce lo scambio di informazioni e valore in modo sicuro, veloce, trasparente fra sistemi, persone e oggetti.
+Una blockchain, così come dice la parola nella sua traduzione in inglese, è una catena di blocchi, un registro digitale distribuito (Distributed Ledger) aperto e consultabile in ogni momento. Avendo una struttura decentralizzata, non esiste nessun server centrale avente la possibilità concreta di prevalere: il processo decisionale passa attraverso un rigoroso processo di costruzione del consenso. Ogni transazione o informazione inserita in questo database deve essere approvata dal **50%+1** dei nodi della rete. La tecnologia blockchain si struttura come un nuovo paradigma per la gestione delle informazioni e delle transazioni ed è utilizzata laddove esista una relazione di scambio. Il ruolo di un database distribuito tra i nodi della rete garantisce lo scambio di informazioni e valore in modo sicuro, veloce, trasparente fra sistemi, persone e oggetti.
 
 <img class="image" src="{{site.url}}/assets/images/projects/spesa_soluzioni_blockchain.jpg" alt="Spesa in soluzioni blockchain, Statista.com">
 
@@ -82,7 +84,7 @@ Una blockchain, così come dice la parola nella sua traduzione in inglese, è un
 ### AI
 
 AI è l’abbreviazione inglese di **Artificial Intelligence**, ovvero Intelligenza Artificiale. Per poter definire bene cosa è un’intelligenza artificiale, è necessario capire cosa si intende per intelligenza.
-L’intelligenza è la ‘capacità di risolvere problemi di natura complessa’, secondo Max Tegmark, fisico del Massachusetts Institute of Technology e autore di ‘Life 3.0: Being Human in the age of Artificial Intelligence’. Secondo Tegmark, l’intelligenza non può essere misurata da un singolo Quoziente Intellettivo, poiché non è identificata da un singolo obiettivo durante l’esistenza.
+L’intelligenza è la ‘capacità di risolvere problemi di natura complessa’, secondo *Max Tegmark*, fisico del Massachusetts Institute of Technology e autore di ‘**Life 3.0: Being Human in the age of Artificial Intelligence**’. Secondo Tegmark, l’intelligenza non può essere misurata da un singolo Quoziente Intellettivo, poiché non è identificata da un singolo obiettivo durante l’esistenza.
 
 Allo stesso modo, non è possibile identificare ad oggi l’Intelligenza Artificiale come reale Intelligenza, poiché non è in grado di portare a termine diversi obiettivi da sola. Ad oggi, esiste l’AI che permette di scattare foto qualitativamente eccellenti senza hardware particolarmente performante, quella che gioca benissimo a DOTA 2 o a Go, quella che traduce il testo in più lingue, e così via. Non esiste ancora una vera Intelligenza Artificiale, che gli scienziati hanno, per semplicità, definito Intelligenza Artificiale Generale.
 Un’Intelligenza Artificiale Generale (o AGI, nell'abbreviazione inglese) è un’intelligenza in grado di risolvere problemi complessi di qualunque natura.
