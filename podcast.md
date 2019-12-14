@@ -6,7 +6,7 @@ layout: page
 
 <img class="image" src="{{site.url}}/assets/images/podcast/VitaDaMillennial_logo_podcast.png" alt="Vita da Millennial Podcast">
 
-<img class="image" src="{{site.url}}/assets/images/podcast/Apple_Podcast_Listen.png" href="https://podcasts.apple.com/it/podcast/vita-da-millennial/id1491071753"
+<img class="image" src="{{site.url}}/assets/images/podcast/Apple_Podcast_Listen.png" href="https://podcasts.apple.com/it/podcast/vita-da-millennial/id1491071753" >
 
 <img class="image" src="{{site.url}}/assets/images/podcast/Spotify_Podcast_Listen.png" href="https://open.spotify.com/show/3n2nXoWafjEx87EJyZ14b8" >
 
