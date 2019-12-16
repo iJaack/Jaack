@@ -2,7 +2,6 @@
 title: Podcast
 layout: page
 ---
-# Vita da Millennial
 
 <img class="image" src="{{site.url}}/assets/images/podcast/VitaDaMillennial_logo_podcast.png" alt="Vita da Millennial Podcast">
 
