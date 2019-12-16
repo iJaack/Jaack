@@ -2,7 +2,7 @@
 title: Chi sono
 layout: page
 ---
-<img class="image" src="{{site.url]}/assets/images/Foto-profilo-2020.jpg">
+<img class="image" src="{{site.url}}/assets/images/Foto-profilo-2020.jpg">
 
 <p>Ho sempre avuto difficoltà a definire la mia persona.</p>
 
