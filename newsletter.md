@@ -2,7 +2,7 @@
 title: Newsletter
 layout: page
 ---
-# Questa settimana in tre parole
+<img class="image" src="{{site.url}}/assets/images/newsletter_preamble_cover.png">
 
 **FOMO**. *Fear Of Missing Out*. È da questa premessa che ho pensato che sarebbe stato
 utile **Questa settimana in tre parole'**.
