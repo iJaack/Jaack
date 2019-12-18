@@ -6,6 +6,21 @@ body
 	font: 17px $fontSans
 	color: $alpha
 
+@media (prefers-color-scheme: dark)
+	body
+		color: #fff
+		background-color: #000
+
+	a,
+	a:link
+		color: red
+	
+	a:visited,
+	a:focus,
+	a:hover,
+	a:active
+		color: yellow
+
 h1, h2, h3, h4
 	font-family: $fontSans
 	color: $beta
