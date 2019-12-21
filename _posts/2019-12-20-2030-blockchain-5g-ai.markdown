@@ -40,11 +40,11 @@ In realtà, questa concezione è piuttosto *distorta*.
 
 Il mercato degli smartphone è in stallo, così come quello dei personal computer, che però subisce già da qualche anno nei confronti di tablet e, appunto, degli smartphone.
 
-<img class="image" src="{{site.url}}/assets/images/projects/smartphone_venduti_2018.jpg" alt="Smartphone venduti, 2018, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/smartphone_venduti_2018.jpg" alt="Smartphone venduti, 2018, Statista.com">
 
-<img class="image" src="{{site.url}}/assets/images/projects/tablet_venduti_2018.jpg" alt="Tablet venduti, 2018, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/tablet_venduti_2018.jpg" alt="Tablet venduti, 2018, Statista.com">
 
-<img class="image" src="{{site.url}}/assets/images/projects/computer_venduti_2018.jpg" alt="Computer venduti, 2018, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/computer_venduti_2018.jpg" alt="Computer venduti, 2018, Statista.com">
 
 I numeri parlano chiaro: il mercato degli smartphone è **saturo**, quello dei tablet e pc è in lenta discesa. Forse il progresso tecnologico non è più da monitorare seguendo questi indicatori. Forse, anzi sicuramente, gli indicatori rilevanti sono altri.
 
@@ -77,9 +77,9 @@ Immaginata sin dai primi anni ‘90, ma realizzata efficacemente solo alla fine 
 
 Una blockchain, così come dice la parola nella sua traduzione in inglese, è una catena di blocchi, un registro digitale distribuito (Distributed Ledger) aperto e consultabile in ogni momento. Avendo una struttura decentralizzata, non esiste nessun server centrale avente la possibilità concreta di prevalere: il processo decisionale passa attraverso un rigoroso processo di costruzione del consenso. Ogni transazione o informazione inserita in questo database deve essere approvata dal **50%+1** dei nodi della rete. La tecnologia blockchain si struttura come un nuovo paradigma per la gestione delle informazioni e delle transazioni ed è utilizzata laddove esista una relazione di scambio. Il ruolo di un database distribuito tra i nodi della rete garantisce lo scambio di informazioni e valore in modo sicuro, veloce, trasparente fra sistemi, persone e oggetti.
 
-<img class="image" src="{{site.url}}/assets/images/projects/spesa_soluzioni_blockchain.jpg" alt="Spesa in soluzioni blockchain, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/spesa_soluzioni_blockchain.jpg" alt="Spesa in soluzioni blockchain, Statista.com">
 
-<img class="image" src="{{site.url}}/assets/images/projects/utenti_blockchain_wallet_2018.jpg" alt="Utenti di wallet blockchain, 2018, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/utenti_blockchain_wallet_2018.jpg" alt="Utenti di wallet blockchain, 2018, Statista.com">
  
 ### AI
 
@@ -89,7 +89,7 @@ L’intelligenza è la ‘capacità di risolvere problemi di natura complessa’
 Allo stesso modo, non è possibile identificare ad oggi l’Intelligenza Artificiale come reale Intelligenza, poiché non è in grado di portare a termine diversi obiettivi da sola. Ad oggi, esiste l’AI che permette di scattare foto qualitativamente eccellenti senza hardware particolarmente performante, quella che gioca benissimo a DOTA 2 o a Go, quella che traduce il testo in più lingue, e così via. Non esiste ancora una vera Intelligenza Artificiale, che gli scienziati hanno, per semplicità, definito Intelligenza Artificiale Generale.
 Un’Intelligenza Artificiale Generale (o AGI, nell'abbreviazione inglese) è un’intelligenza in grado di risolvere problemi complessi di qualunque natura.
 
-<img class="image" src="{{site.url}}/assets/images/projects/ricavi_ai_2018.jpg" alt="Ricavi del settore AI, 2018, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/ricavi_ai_2018.jpg" alt="Ricavi del settore AI, 2018, Statista.com">
 
 È importante sapere che **oggi l'Intelligenza Artificiale Generale**, quella che immaginiamo e che vediamo nei film di fantascienza, non esiste.
 Ci sono degli esperimenti che sono portati avanti da consorzi di aziende e da associazioni devote allo sviluppo di AI etiche, come OpenAI, ma le opinioni più ottimistiche posizionano il raggiungimento della creazione di un sistema di Intelligenza Artificiale Generale intorno al 2040. Le opinioni più pessimistiche lo posizionano intorno al 2100. Più del 50% degli scienziati rimane d'accordo che vedremo l'AGI in questo secolo.
@@ -119,11 +119,11 @@ La **Next Generation Mobile Networks Alliance** definisce i seguenti requisiti p
 * efficienza dei segnali potenziata;
 * latenza significativamente ridotta in confronto alla connessione LTE.
 
-<img class="image" src="{{site.url}}/assets/images/projects/celle_5G_2022.jpg" alt="Numero di celle 5G, entro il 2022, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/celle_5G_2022.jpg" alt="Numero di celle 5G, entro il 2022, Statista.com">
 
 La realtà in cui siamo costantemente connessi mostra che entro il 2021, in Europa, il 4G non sarà sufficiente per sostenere la richiesta di traffico dati delle città. Le stime identificano una crescita della domanda pari al 40% annui almeno fino al 2025. Insomma la quantità degli oggetti connessi crescerà esponenzialmente e ciò avverrà a causa, o meglio per merito, della diffusione del 5G.
 
-<img class="image" src="{{site.url}}/assets/images/projects/previsione_5G_2025" alt="Previsione indotto 5G, entro il 2025, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/previsione_5G_2025" alt="Previsione indotto 5G, entro il 2025, Statista.com">
 
 Le future reti 5G mirano a fornire **servizi locali wireless** di alta qualità per soddisfare le esigenze specifiche dei singoli settori verticali, oltre le tradizionali offerte di banda larga mobile. Il 5G ha il potenziale di rivoluzionare l'ecosistema aziendale di comunicazione mobile e di aprire il mercato a nuovi modelli di operatori locali verticali specifici.
 
@@ -328,11 +328,10 @@ Osservando la foto la blockchain può intervenire in tre momenti del Digital Vot
 2.	Fase elettorale: del voto la blockchain può portare garanzie nella gestione dell’identità dei partecipanti e nella garanzia dell’unicità del documento di voto per ciascun partecipante;
 3.	Fase post-elettorale: la blockchain potrebbe essere perfetta per effettuare gli audit necessari al controllo. In funzione delle sue caratteristiche legate alla trasparenza e all’ immutabilità, si potrebbero ridurre orme di violazione a posteriori.
 
-<img class="image" src="" alt="">
-
 La valorizzazione dell’informazione, del dato e del cittadino cui quel dato è rivolto, la tempistica dello scambio delle informazioni, l’autenticazione dei rapporti di fiducia, basati non più sulla parola ma su supporti tecnologici specifici e difficilmente falsificabile, stanno diventando il nuovo paradigma del business moderno. E’ opinione condivisa che la pubblica amministrazione rivesta un ruolo fondamentale sul piano legislativo e regolatorio, è il più imponente fornitore di servizi e di infrastrutture ai cittadini e alle aziende e genera con essi una interazione continua, quotidiana e superiore ad ogni altra interazione sociale. Tutto ruota intorno ai servizi pubblici.
 
 Per concludere, vi riportiamo le parole della Ministra Buongiorno, tratte dall’intervista per Webnews:
+
 <blockquote>“Il lavoro agile io lo incentiverò perché ci credo molto, ma il punto di base è che la tecnologia è velocissima e la pubblica amministrazione è lenta, e succede spesso che si ha il prodotto tecnologico pronto ma manca l’organizzazione in ufficio. Occorre fare una sorta di percorso cronologico: prima semplificare e organizzare, poi avere il prodotto tecnologico. È chiaro che se io non formo il personale, ci sarà sempre questa discrasia tra ufficio bloccato e prodotto tecnologico [già rilasciato]. Per esempio, per quanto riguarda le carte d’identità digitali, ci sono alcuni comuni in cui si riesce ad avere questo prodotto immediatamente, altri in cui bisogna aspettare 3-4 mesi, perché manca un’organizzazione di base. Ecco perché dico che la Pubblica Amministrazione va prima semplificata, e a quel punto si può digitalizzare. Altrimenti abbiamo una serie di prodotti tecnologici, ma non siamo in grado di usarli”.</blockquote>
 
 Il Quantum Processor è stato introdotto nei modelli QLED 2018. Nelle TV di nuova generazione in casa Samsung, supporta la risoluzione 8K della serie Q900. È il brain della TV ed è responsabile della gestione di quattro funzioni chiave:
