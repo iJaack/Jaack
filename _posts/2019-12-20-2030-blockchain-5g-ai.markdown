@@ -1,7 +1,7 @@
 ---
 title: "2030: come Blockchain, 5G e AI plasmeranno le città di domani"
 layout: post
-date: 2019-12-12 10:00
+date: 2019-12-20 10:00
 ## image: /assets/images/2030_cover.jpg
 headerImage: false
 tag:
@@ -106,7 +106,7 @@ Nel frattempo, la spesa pubblica e privata nel settore AI aumenta a dismisura.
 + America Latina: 0,5
 + Resto del mondo: 1,2
 
-**Fonte: PwC; Studio condotto da: PwC; Periodo di riferimento: 2017; Regione: Tutto il mondo**
+*Fonte: PwC; Studio condotto da: PwC; Periodo di riferimento: 2017; Regione: Tutto il mondo*
  
 ### 5G
 
@@ -140,7 +140,7 @@ Immerso in quella **società liquida**, di cui Bauman è il promotore, l’indiv
 Ma che cosa servirà per essere cittadini di questa nuova realtà in cui ci apprestiamo ad entrare?
 La nostra identità sta acquisendo una connotazione sempre più fluida e complessa a causa degli innumerevoli e continui passi avanti della tecnologia e dei mezzi di comunicazione. Proprio questa fluidità e complessità ci consentono di vivere in numerosi contesti digitali e reali, ma nello stesso tempo rendono le nostre molteplici identità sempre più attaccabili da nuove e complesse minacce. Bisogna garantire - e al contempo tutelare - la nostra immagine, il nostro io rispetto alla realtà digitale.
 
-Questo nuovo Io ha una connotazione aggiuntiva: è digitale. Avremo bisogno di una cittadinanza/identità digitale. Avete presente quando prima di prenotare un nuovo ristorante, visitate i vari social, per analizzare le varie recensioni per poi decidere se andarci o meno? Ecco, la cittadinanza digitale sarà il nostro biglietto di ingresso nella realtà digitale.
+Questo nuovo Io ha una connotazione aggiuntiva: è **digitale**. Avremo bisogno di una cittadinanza/identità digitale. Avete presente quando prima di prenotare un nuovo ristorante, visitate i vari social, per analizzare le varie recensioni per poi decidere se andarci o meno? Ecco, la cittadinanza digitale sarà il nostro biglietto di ingresso nella realtà digitale.
 
 Dal momento che sempre più attività stanno transitando nell’ambiente digitale, la necessità di identificazione a distanza è sempre maggiore, in modo che le azioni compiute dagli utenti possano essere attribuite alle loro identità reali. Senza identità digitale saremo solo individui astratti che agiscono in un universo di bit. Nessuno può essere in grado di affermare di essere qualcun’altro. Questo esclude, quindi, la necessità di avere un documento fisico, una presenza fisica, o un soggetto terzo di fiducia che verifichi manualmente la presenza o i documenti. Di conseguenza, gli utenti di un determinato sistema possono essere autenticati automaticamente e in remoto. Possiamo guardare alla tecnologia Blockchain per trovare risposte a questa esigenza.
 
@@ -151,8 +151,6 @@ Quando si introducono tecnologie così impattanti ci si chiede sempre che fine f
 L’AI è una tecnologia potente  va maneggiata con estrema cautela e la nostra  fantasia - inevitabilmente - vola alle immagini apocalittiche del film Terminator. Insomma, queste tecnologie cambieranno la fruizione della realtà offrendoci una nuova esperienza. Basti pensare al modo in cui il 5G sta ristrutturando, ad oggi, la vita cittadina. Per farvi comprendere meglio, tra le vie spagnole ubicate tra Plaza Catalunya, Paseo de Gracia, Balmes e Universitat, Vodafone ha installato una rete 5G con uno spettro 5G commerciale per costruire una rete ad alte prestazioni con Huawei E2E. Sulla stessa rete, sono stati forniti vari servizi eMBB utilizzando smartphone e CPE commerciali Huawei 5G per offrire la migliore esperienza della ‘connessione di rete mobile di quinta generazione’.
 
 Il 5G e EMBB (Enhanced Mobile Broadband), che fornisce una maggiore larghezza di banda dei dati completata da miglioramenti moderati della latenza sia su 5G NR che su 4G LTE, velocizza il tempo di attesa di download e di riproduzione di file video sui vari smartphone.Il ritardo visivo dell'occhio umano è di circa 100 millisecondi (ms). La latenza su una rete 5G sarà  inferiore a 20 millisecondi per i consumatori e può essere ancora più bassa in alcune applicazioni aziendali come smart industry. Con il 5G, gli utenti dei servizi video possono sperimentare un'attesa quasi nulla.  Attualmente le due teste di serie per l’applicazione del 5G sono Vodafone e Huawei. Queste le parole di Yang Chaobin, presidente della linea di prodotti 5G di Huawei: "Vodafone e Huawei hanno completato con successo l'implementazione di una rete 5G live e fornito un'esperienza di servizio superiore basata sui terminali commerciali 5G. Huawei continuerà a collaborare con il settore per promuovere un utilizzo commerciale di successo del 5G."
-
-Andiamo a vedere un po’ cosa dicono i numeri:
 
 1.	BAIN Macro Trends ha analizzato una gamma di tecnologie già in fase di commercializzazione o prossime a tale fase, tra cui robot umanoidi di servizio, robot collaborativi (cobots), droni, intelligenza artificiale e algoritmi di apprendimento automatico. Queste tecnologie trasformeranno principalmente il settore dei servizi delle economie più avanzate e di alcune economie emergenti. Sulla base di tale analisi, la rapida diffusione dell’automazione si scontrerà nel prossimo decennio con i cambiamenti demografici creando cambiamenti dirompenti in tutta l’economia globale;
 2.	Secondo BAIN MACRO Trends entro il 2030 queste tecnologie potrebbero aumentare la produttività del lavoro in media del 30% rispetto al 2015, con un impatto crescente nel tempo. Questo miglioramento graduale varia considerevolmente tra le industrie, da livelli relativamente modesti nei servizi sanitari e scolastici a un impatto notevole in settori come servizi di ristorazione, vendita al dettaglio, trasporto;
@@ -167,27 +165,27 @@ L’economia digitale è lo “stadio” dell’economia che si manifesta attrav
 
 Chi non ha mai avuto una crisi di panico quando non si accende il computer? Quando la connessione wi-fi è lenta che il caricamento non si completerebbe nemmeno sotto invito, quanti  avrebbero voluto lasciarsi andare alla follia più totale? Niente paura, da qualche parte nel mondo ci sarà un social media manager che starà affrontando lo stesso. Sono i rischi del mestiere per chi lavora con il digitale. Tra le professioni di cui 10 anni non avremmo immaginato neppure l’esistenza ve ne presentiamo alcune:
 
-1.	Sviluppatore di app, pensate che nel 2008 era un mercato che non esisteva, nel 2016 valeva 1.300 miliardi di dollari, indotto compreso, nel 2021 secondo la società di analisi App Annie, l’economia che ruota intorno alle app potrebbe diventare la terza a livello mondiale con 6.350 miliardi di dollari, e una crescita del 385% rispetto al 2016;
-2.	Makeshift Structure Engineer, Ingegnere 3D; la crescita in questo settore richiederà specialisti di software 3D, designer specializzati e programmatori di macchine che contribuiranno insieme a creare enormi opportunità di impiego e posti di lavoro nei prossimi decenni;
-3.	Ingegnere auto a guida automatica, Mentre il mercato dei trasporti automatici inizia a prendere piede, comincia anche a creare nuove professioni. I mezzi automatici non sono in grado di progettarsi e di ripararsi da soli; così ci sarà una crescente domanda di ingegneri, meccanici e sviluppatori di software di guida specializzati in questo tipo di veicoli;
-4.	Specialista di cloud computing, Non è la nuvola che sovrasta i cieli del mondo, ma dal 2006  ha una nuova accezione. Nasce durante una conferenza nel corso della quale Eric Schmidt ha descritto l’approccio al software da parte di Google come “cloud computing”. Da allora, la “nuvola” informatica è diventata una realtà per chiunque, e il cloud management, il cloud engineering e il cloud strategizing sono diventate professioni;
-5.	Analista di big data, insieme all’IoT, i big data sono il futuro della civiltà dell’informazione. E con una massa di dati che cresce al ritmo del 40% ogni anno, è ovvio che cresca anche la domanda di figure professionali capaci di analizzare e processare questa enorme mole di informazioni. I dati non mentono ma dobbiamo essere in grado di leggerli e comprenderli;
-6.	Cyber Security Manager, ovvero colui al quale viene affidata la gestione della sicurezza dei dati in azienda;
-7.	Data Protection Officer,che tutela i dati sensibili dei clienti e del personale dell’azienda;
+1.	**Sviluppatore di app** - nel 2008 era un mercato che non esisteva, nel 2016 valeva 1.300 miliardi di dollari, indotto compreso, nel 2021 secondo la società di analisi App Annie, l’economia che ruota intorno alle app potrebbe diventare la terza a livello mondiale con 6.350 miliardi di dollari, e una crescita del 385% rispetto al 2016;
+2.	**Makeshift Structure Engineer, Ingegnere 3D** - la crescita in questo settore richiederà specialisti di software 3D, designer specializzati e programmatori di macchine che contribuiranno insieme a creare enormi opportunità di impiego e posti di lavoro nei prossimi decenni;
+3.	**Ingegnere auto a guida automatica** - Mentre il mercato dei trasporti automatici inizia a prendere piede, comincia anche a creare nuove professioni. I mezzi automatici non sono in grado di progettarsi e di ripararsi da soli; così ci sarà una crescente domanda di ingegneri, meccanici e sviluppatori di software di guida specializzati in questo tipo di veicoli;
+4.	**Specialista di cloud computing** - Non è la nuvola che sovrasta i cieli del mondo, ma dal 2006  ha una nuova accezione. Nasce durante una conferenza nel corso della quale Eric Schmidt ha descritto l’approccio al software da parte di Google come “cloud computing”. Da allora, la “nuvola” informatica è diventata una realtà per chiunque, e il cloud management, il cloud engineering e il cloud strategizing sono diventate professioni;
+5.	**Analista di big data** - insieme all’IoT, i big data sono il futuro della civiltà dell’informazione. E con una massa di dati che cresce al ritmo del 40% ogni anno, è ovvio che cresca anche la domanda di figure professionali capaci di analizzare e processare questa enorme mole di informazioni. I dati non mentono ma dobbiamo essere in grado di leggerli e comprenderli;
+6.	**Cyber Security Manager** - colui al quale viene affidata la gestione della sicurezza dei dati in azienda;
+7.	**Data Protection Officer** -  che tutela i dati sensibili dei clienti e del personale dell’azienda;
 
-Ora vi proponiamo diversi lavori che cominceranno ad avere un ruolo predominante con l’avanzamento del tridente Blockchain, AI e 5G:
-**Blockchain**: la blockchain sta già creando posti di lavoro e nuove figure professionali, possiamo già indicare quali sono quelle emerse, in ambito tecnico e non.
+Diversi lavori cominceranno ad avere un ruolo predominante con l’avanzamento del tridente Blockchain, AI e 5G:
+**Blockchain** - sta già creando posti di lavoro e nuove figure professionali, possiamo già indicare quali sono quelle emerse, in ambito tecnico e non.
 
-- Blockchain Information Security Analyst;
-- Blockchain Data Scientist: Blockchain e big data rappresentano un sodalizio dal grande futuro, ne deriva che anche gli scienziati dei dati con competenze blockchain non potranno che essere ricercatissimi;
-- Blockchain Developer:  gli sviluppatori scrivono il codice e costruiscono le strutture dati per le catene di blocchi;
-- Specialista di Marketing Blockchain;
-- Blockchain Project Manager;
-- Technical Recruiter;
+  - **Blockchain Information Security Analyst**
+  - **Blockchain Data Scientist** - Blockchain e big data rappresentano un sodalizio dal grande futuro, ne deriva che anche gli scienziati dei dati con competenze blockchain non potranno che essere ricercatissimi
+  - **Blockchain Developer** - gli sviluppatori scrivono il codice e costruiscono le strutture dati per le catene di blocchi
+  - **Specialista di Marketing Blockchain**
+  - **Blockchain Project Manager**
+  - **Technical Recruiter**
 
 Una forte conoscenza di cosa si richieda in una società blockchain e la capacità di attrarre talenti saranno fondamentali.
 
-**AI**: qui lasciamo parlare i dati del World Economic Forum. La survey si basa su un’analisi di top manager e specialisti delle risorse umane di 300 aziende globali in 12 settori industriali: tecnologie come intelligenza artificiale, robotica e medicina di precisione potrebbero creare più occupazione di quanta ne minaccino. La cosiddetta “quarta rivoluzione industriale” distruggerà 75 milioni di posti di lavoro nel mondo ma ne creerà, potenzialmente, quasi il doppio, ben 133 milioni. Ma per raggiungere il risultato bisognerà puntare sulla formazione di risorse professionali. Allora bisognerà formare persone adatte ai nuovi mestieri per essere competitivi lì.  Il fatto è che  oggi non lo sappiamo e formiamo lavoratori pensando solo ai fabbisogni immediati, eppure in Cina tra i banchi delle scuole elementari è stata introdotta una nuova materia, l’intelligenza artificiale;
+**AI** - qui lasciamo parlare i dati del World Economic Forum. La survey si basa su un’analisi di top manager e specialisti delle risorse umane di 300 aziende globali in 12 settori industriali: tecnologie come intelligenza artificiale, robotica e medicina di precisione potrebbero creare più occupazione di quanta ne minaccino. La cosiddetta “quarta rivoluzione industriale” distruggerà 75 milioni di posti di lavoro nel mondo ma ne creerà, potenzialmente, quasi il doppio, ben 133 milioni. Ma per raggiungere il risultato bisognerà puntare sulla formazione di risorse professionali. Allora bisognerà formare persone adatte ai nuovi mestieri per essere competitivi lì.  Il fatto è che  oggi non lo sappiamo e formiamo lavoratori pensando solo ai fabbisogni immediati, eppure in Cina tra i banchi delle scuole elementari è stata introdotta una nuova materia, l’intelligenza artificiale;
 
 **5G**: La vera sfida per il mercato del lavoro è la preparazione di un mix di competenze tecnologiche e trasversali, che dovranno essere presenti contemporaneamente sia nelle figure manageriali sia in quelle operative. Questa nuova ‘connessione di rete mobile di quinta generazione’ 5G gioca e giocherà sempre più un ruolo chiave: il poter connettere alla rete in maniera più funzionale i sistemi ma anche le aziende e i clienti, rappresenta un’esigenza basilare nella proposta di soluzioni di nuova generazione che sottendono l’utilizzo di reti di trasmissione più veloci e affidabili. Il 5G è essenziale per lo sviluppo dell’Industria 4.0, è il tessuto latente su cui si scendono in campo le varie tecnologie.
 
@@ -197,7 +195,7 @@ Una forte conoscenza di cosa si richieda in una società blockchain e la capacit
 Le aziende dovranno affidarsi sempre più alle nuove tendenze IT, come il mobile edge computing, per supportare la gestione dei dati dal punto di vista dell’efficienza e della sicurezza.
 Il mobile edge computing elabora le informazioni “on site” per insight in tempo reale, mentre filtra i dati mission-critical in cloud per un’analisi più approfondita senza sovraccaricare le infrastrutture IT. I device, che possono elaborare i dati a livello edge, diventeranno sempre più importanti per la forza lavoro del futuro, permettendo alle aziende di ridurre la tensione sui propri servizi cloud e, al contempo, garantire produttività e sicurezza attraverso un perimetro IT esteso.
 
-“Le soluzioni IoT contribuiranno a dare forma alla forza lavoro del futuro, trasformando modalità e abitudini lavorative. Dall’ingegneria alla logistica fino a sanità e sicurezza, queste soluzioni non solo garantiscono una maggiore mobilità, ma creano attività nuove e più efficienti per i dipendenti”
+<blockquote>“Le soluzioni IoT contribuiranno a dare forma alla forza lavoro del futuro, trasformando modalità e abitudini lavorative. Dall’ingegneria alla logistica fino a sanità e sicurezza, queste soluzioni non solo garantiscono una maggiore mobilità, ma creano attività nuove e più efficienti per i dipendenti”</blockquote>
 
 *Massimo Arioli, Head of B2B Sales & Marketing, Toshiba Client Solutions Italy.*
 
