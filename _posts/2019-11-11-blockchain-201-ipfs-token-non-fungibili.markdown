@@ -169,6 +169,8 @@ Io ne ho fatto uno in 10 minuti che si chiama **JaackCoin**, sulla blockchain Wa
 
 Abbiamo la possibilità di creare un mercato da zero: è un’espressione molto grande di libertà finanziaria. Non solo possiamo usare i nostri soldi senza darne conto a qualcun altro, ma possiamo anche creare il nostro mercato.
 
+{% include changes.html %}
+
 ## Risorse utili
 
 ### IPFS

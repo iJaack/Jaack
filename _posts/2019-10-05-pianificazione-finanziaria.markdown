@@ -154,3 +154,5 @@ Tutte le celle con i caratteri in rosso sono le variabili da modificare. Tutto m
 [**Crea una copia del Template Pianificazione Finanziaria da Google Sheets**](https://docs.google.com/spreadsheets/d/1CKOfSzOspkYhrh7m9QZNKhjCEM6s07JwkyyfkoEQqJM/edit?usp=sharing)
 
 Spero di essere stato sufficientemente esaustivo. Questo modello non è definitivo, potrebbe cambiare ed aggiornarsi spesso. Ma è un buon punto di partenza per pianificare con successo ed impegno la propria vita finanziaria, senza incorrere in costi nascosti e senza rischiere di spendere più del dovuto. Con me, per ora, sta funzionando.
+
+{% include changes.html %}

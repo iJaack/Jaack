@@ -1,7 +1,7 @@
 ---
 title: "2030: come Blockchain, 5G e AI plasmeranno le città di domani"
 layout: post
-date: 2019-12-20 10:00
+date: 2019-12-22 10:00
 ## image: /assets/images/2030_cover.jpg
 headerImage: false
 tag:
@@ -13,6 +13,10 @@ published: true
 ---
 
 *In collaborazione con Aurora Caporossi*
+
+Una mattina dell’anno **2030**, una giornata inizierà in modo molto diverso da come lo immaginiamo oggi.
+
+Ma non ce ne renderemo conto. La tecnologia sta evolvendo rapidamente, ma la nostra percezione di questo fenomeno non è esattamente in linea con il vero avanzamento nei processi che stanno avvenendo a livello tecnologico, culturale e politico.
 
 # Indice
 - [Introduzione](#Introduzione)
@@ -30,10 +34,6 @@ published: true
 
 # Introduzione
 
-Una mattina dell’anno 2030, una giornata inizierà in modo molto diverso da come lo immaginiamo oggi.
-
-Ma non ce ne renderemo conto. La tecnologia sta evolvendo rapidamente, ma la nostra percezione di questo fenomeno non è esattamente in linea con il vero avanzamento nei processi che stanno avvenendo a livello tecnologico, culturale e politico.
-
 Oggi siamo abituati a misurare il progresso tecnologico sulla base del **numero di smartphone** rilasciati in un anno e le loro funzionalità: il numero di megapixel della fotocamera, il numero di fotocamere, la nitidezza del display. Queste sono tutte qualità descrivibili e comparabili, e sono appunto quelle che oggi utilizziamo per poter dire che *il mondo sta cambiando*.
 
 In realtà, questa concezione è piuttosto *distorta*.
@@ -42,9 +42,9 @@ Il mercato degli smartphone è in stallo, così come quello dei personal compute
 
 <img class="image" src="{{site.url}}/assets/images/projects/2030/smartphone_venduti_2018.jpg" alt="Smartphone venduti, 2018, Statista.com">
 
-<img class="image" src="{{site.url}}/assets/images/projects/2030/tablet_venduti_2018.jpg" alt="Tablet venduti, 2018, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/tablet_venduti_2018.png" alt="Tablet venduti, 2018, Statista.com">
 
-<img class="image" src="{{site.url}}/assets/images/projects/2030/computer_venduti_2018.jpg" alt="Computer venduti, 2018, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/computer_venduti_2018.png" alt="Computer venduti, 2018, Statista.com">
 
 I numeri parlano chiaro: il mercato degli smartphone è **saturo**, quello dei tablet e pc è in lenta discesa. Forse il progresso tecnologico non è più da monitorare seguendo questi indicatori. Forse, anzi sicuramente, gli indicatori rilevanti sono altri.
 
@@ -123,7 +123,7 @@ La **Next Generation Mobile Networks Alliance** definisce i seguenti requisiti p
 
 La realtà in cui siamo costantemente connessi mostra che entro il 2021, in Europa, il 4G non sarà sufficiente per sostenere la richiesta di traffico dati delle città. Le stime identificano una crescita della domanda pari al 40% annui almeno fino al 2025. Insomma la quantità degli oggetti connessi crescerà esponenzialmente e ciò avverrà a causa, o meglio per merito, della diffusione del 5G.
 
-<img class="image" src="{{site.url}}/assets/images/projects/2030/previsione_5G_2025" alt="Previsione indotto 5G, entro il 2025, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/previsione_5G_2025.jpg" alt="Previsione indotto 5G, entro il 2025, Statista.com">
 
 Le future reti 5G mirano a fornire **servizi locali wireless** di alta qualità per soddisfare le esigenze specifiche dei singoli settori verticali, oltre le tradizionali offerte di banda larga mobile. Il 5G ha il potenziale di rivoluzionare l'ecosistema aziendale di comunicazione mobile e di aprire il mercato a nuovi modelli di operatori locali verticali specifici.
 
@@ -149,6 +149,8 @@ La Blockchain potrebbe essere impiegata nelle fasi di identificazione e verifica
 Quando si introducono tecnologie così impattanti ci si chiede sempre che fine farà la manualità dell’uomo, che fine farà la morale e la soggettività che ci caratterizza. Visioni dicotomiche ci  accompagnano man mano che ci avviciniamo al 2030. La questione più delicata è quella che ruota intorno all’Intelligenza Artificiale, al cui cospetto si trovano due fazioni: apocalittici e integrati nell’utilizzo  dell’AI.  La sfida etica dell’introduzione di soluzioni di Intelligenza Artificiale è rappresentata dall’esigenza di rispondere in maniera equilibrata alla polarizzazione di queste due visioni, integrando l’innovazione e tenendo conto degli effetti che questa ha già avuto e continuerà ad avere nello sviluppo della società, rispettando e salvaguardando i valori fondamentali universalmente riconosciuti.
 
 L’AI è una tecnologia potente  va maneggiata con estrema cautela e la nostra  fantasia - inevitabilmente - vola alle immagini apocalittiche del film Terminator. Insomma, queste tecnologie cambieranno la fruizione della realtà offrendoci una nuova esperienza. Basti pensare al modo in cui il 5G sta ristrutturando, ad oggi, la vita cittadina. Per farvi comprendere meglio, tra le vie spagnole ubicate tra Plaza Catalunya, Paseo de Gracia, Balmes e Universitat, Vodafone ha installato una rete 5G con uno spettro 5G commerciale per costruire una rete ad alte prestazioni con Huawei E2E. Sulla stessa rete, sono stati forniti vari servizi eMBB utilizzando smartphone e CPE commerciali Huawei 5G per offrire la migliore esperienza della ‘connessione di rete mobile di quinta generazione’.
+
+<img class="image" src="{{site.url}}/assets/images/projects/2030/5g_live_barcellona_mwc_2019.jpg" alt="Schema del test 5G durante MWC 2019, Barcellona">
 
 Il 5G e EMBB (Enhanced Mobile Broadband), che fornisce una maggiore larghezza di banda dei dati completata da miglioramenti moderati della latenza sia su 5G NR che su 4G LTE, velocizza il tempo di attesa di download e di riproduzione di file video sui vari smartphone.Il ritardo visivo dell'occhio umano è di circa 100 millisecondi (ms). La latenza su una rete 5G sarà  inferiore a 20 millisecondi per i consumatori e può essere ancora più bassa in alcune applicazioni aziendali come smart industry. Con il 5G, gli utenti dei servizi video possono sperimentare un'attesa quasi nulla.  Attualmente le due teste di serie per l’applicazione del 5G sono Vodafone e Huawei. Queste le parole di Yang Chaobin, presidente della linea di prodotti 5G di Huawei: "Vodafone e Huawei hanno completato con successo l'implementazione di una rete 5G live e fornito un'esperienza di servizio superiore basata sui terminali commerciali 5G. Huawei continuerà a collaborare con il settore per promuovere un utilizzo commerciale di successo del 5G."
 
@@ -322,6 +324,9 @@ Le speranze riposte nella blockchain fanno leva sulle tre caratteristiche di que
 3.	responsabilità
 
 Un report di CB Insight aiuta a comprendere come la blockchain può essere di aiuto per sicurezza del voto elettronico e per la tutela stessa dell’elettorato.
+
+<img class="image" src="{{site.url}}/assets/images/projects/2030/elezione_blockchain.jpg" alt="Schema di un elezione con blockchain">
+
 Osservando la foto la blockchain può intervenire in tre momenti del Digital Voting Journey (secondo CB Insight):
 
 1.	Fase pre-elettorale: la blockchain può aiutare a ridurre i rischi di influenza mediatica scorretta con soluzioni che indirizzano un controllo mediante strumenti crittografici dell’azione dei media e con Mobile apps per la gestione del voto a loro volta basate sulla blockchain;
@@ -333,6 +338,8 @@ La valorizzazione dell’informazione, del dato e del cittadino cui quel dato è
 Per concludere, vi riportiamo le parole della Ministra Buongiorno, tratte dall’intervista per Webnews:
 
 <blockquote>“Il lavoro agile io lo incentiverò perché ci credo molto, ma il punto di base è che la tecnologia è velocissima e la pubblica amministrazione è lenta, e succede spesso che si ha il prodotto tecnologico pronto ma manca l’organizzazione in ufficio. Occorre fare una sorta di percorso cronologico: prima semplificare e organizzare, poi avere il prodotto tecnologico. È chiaro che se io non formo il personale, ci sarà sempre questa discrasia tra ufficio bloccato e prodotto tecnologico [già rilasciato]. Per esempio, per quanto riguarda le carte d’identità digitali, ci sono alcuni comuni in cui si riesce ad avere questo prodotto immediatamente, altri in cui bisogna aspettare 3-4 mesi, perché manca un’organizzazione di base. Ecco perché dico che la Pubblica Amministrazione va prima semplificata, e a quel punto si può digitalizzare. Altrimenti abbiamo una serie di prodotti tecnologici, ma non siamo in grado di usarli”.</blockquote>
+
+<img class="image" src="{{site.url}}/assets/images/projects/2030/samsung_do_what_you_cant.jpg" alt="Samsung, 2019">
 
 Il Quantum Processor è stato introdotto nei modelli QLED 2018. Nelle TV di nuova generazione in casa Samsung, supporta la risoluzione 8K della serie Q900. È il brain della TV ed è responsabile della gestione di quattro funzioni chiave:
 
@@ -364,6 +371,8 @@ Crediamo che uno dei più grandi doni fatti all’umanità dal cinema è la poss
 Paura di queste previsioni? Molti si chiederanno perché addurre scenari futuri, quantificare come cambierà la nostra quotidianità. Fondamentalmente non stiamo prevedendo “la città del futuro”, non siamo i protagonisti di Star Wars o di Upside Down. Non stiamo immaginando possibili scenari con robot lanciafiamme o “transformers” che combattono per il bene dell’umanità.
 
 Non stiamo tessendo una trama hollywoodiana. Stiamo osservando la realtà dei fatti e quello di cui abbiamo parlato è già tra noi, ma è ancora incomprensibile e intangibile per la mente umana. Le trasformazioni delle società avvengono attraverso cambi di paradigmi, mutamenti prospettici che ci permettono di avvertire e vivere i cambiamenti. Blockchain, AI e 5G non sono solo tecnologie “disruptive”, sono dei paradigmi, quasi delle “ideologie”, che permetteranno una fruizione diversa delle attività e dei contenuti della realtà rispetto ad oggi: il 2030 non sarà tra 1000 anni. Dobbiamo essere affamati di conoscenza, affinare le competenze, essere consapevoli delle conseguenze per poter governare cambiamenti di così grande impatto.
+
+{% include changes.html %}
 
 # Bibliografia
 
