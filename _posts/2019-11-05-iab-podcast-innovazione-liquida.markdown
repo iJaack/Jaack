@@ -27,8 +27,8 @@ Di seguito il programma completo, se invece volete venire GRATIS alla conferenza
 
 Aggiornamento: è uscito il podcast, qui in basso i link per ascoltare tutte le interviste.
 
-<a href="https://open.spotify.com/show/0U7UqoEWiCxj7hHpxmJDIA?si=p4DLO-jNTuuPGmI1GMLbog"><src="{{site.url}}/assets/images/podcast/Apple_Podcasts_Listen.jpg"></a>
-<a href="https://podcasts.apple.com/it/podcast/iab-podcast/id1488937440"><src="{{site.url}}/assets/images/podcast/Spotify_Podcast_Listen.png"></a>
+<a href="https://open.spotify.com/show/0U7UqoEWiCxj7hHpxmJDIA?si=p4DLO-jNTuuPGmI1GMLbog"><img class="image" src="{{site.url}}/assets/images/podcast/Apple_Podcasts_Listen.jpg"></a>
+<a href="https://podcasts.apple.com/it/podcast/iab-podcast/id1488937440"><img class="image" src="{{site.url}}/assets/images/podcast/Spotify_Podcast_Listen.png"></a>
 
 
 <img class="image" src="{{site.url}}/assets/images/projects/IAB-Forum-2019/iab-podcast-giacomo.png" alt="IAB Podcast Giacomo Barbieri" />
