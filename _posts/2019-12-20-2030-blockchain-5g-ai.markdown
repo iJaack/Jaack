@@ -15,7 +15,10 @@ published: true
 *In collaborazione con Aurora Caporossi*
 
 ### Scarica le slide:
-#### [dal mio Dropbox Space](https://www.dropbox.com/s/a2p2xmqx0ejix2a/2030_come-Blockchain-AI-e-5G-plasmeranno-le-citt%C3%A0-di-domani.pdf?dl=0) | [da IPFS](https://ipfs.io/ipfs/QmdE2r816cJRZ9sNsnNe8WmXDmL6J7cxBMrKKi8kue9imF?filename=2030_come-Blockchain-AI-e-5G-plasmeranno-le-citta%CC%80-di-domani.pdf)
+- [dal mio Dropbox Space](https://www.dropbox.com/s/a2p2xmqx0ejix2a/2030_come-Blockchain-AI-e-5G-plasmeranno-le-citt%C3%A0-di-domani.pdf?dl=0)
+- [da IPFS](https://ipfs.io/ipfs/QmdE2r816cJRZ9sNsnNe8WmXDmL6J7cxBMrKKi8kue9imF?filename=2030_come-Blockchain-AI-e-5G-plasmeranno-le-citta%CC%80-di-domani.pdf)
+
+---
 
 Una mattina dell’anno **2030**, una giornata inizierà in modo molto diverso da come lo immaginiamo oggi.
 
@@ -380,38 +383,38 @@ Non stiamo tessendo una trama hollywoodiana. Stiamo osservando la realtà dei fa
 # Bibliografia
 
 ## Blockchain
-* https://www.corrierecomunicazioni.it/digital-economy/blockchain-e-la-finanza-il-mercato-numero-uno-nel-2030-varra-460-mld-di-dollari/
-* https://medium.com/altcoin-magazine/altcoin-news-will-iota-and-vw-build-the-car-of-the-future-bfb35137d86f
-* https://www.webnews.it/2018/05/02/mobi-blockchain-automotive/:
-* https://link.medium.com/JUlLeTXJfU
-* https://it.cointelegraph.com/news/ibm-partnership-uses-blockchain-iot-to-combat-drought-in-california
-* https://twitter.com/RobertoDeBiase/status/1095320628863877129
-* https://hackernoon.com/a-beginners-guide-to-ipfs-20673fedd3f
-* https://www.ibm.com/blogs/blockchain/2018/06/introducing-mobi-the-mobility-open-blockchain-initiative/
-* https://www.bedicon.org/wp-content/uploads/2018/01/finance_topic2_source2.pdf
-* https://link.medium.com/00yZ86d3jU
-* https://www.nytimes.com/2019/02/15/books/review/blockchain.html
+* [https://www.corrierecomunicazioni.it/digital-economy/blockchain-e-la-finanza-il-mercato-numero-uno-nel-2030-varra-460-mld-di-dollari/](https://www.corrierecomunicazioni.it/digital-economy/blockchain-e-la-finanza-il-mercato-numero-uno-nel-2030-varra-460-mld-di-dollari/)
+* [https://medium.com/altcoin-magazine/altcoin-news-will-iota-and-vw-build-the-car-of-the-future-bfb35137d86f](https://medium.com/altcoin-magazine/altcoin-news-will-iota-and-vw-build-the-car-of-the-future-bfb35137d86f)
+* [https://www.webnews.it/2018/05/02/mobi-blockchain-automotive/](https://www.webnews.it/2018/05/02/mobi-blockchain-automotive/)
+* [https://link.medium.com/JUlLeTXJfU](https://link.medium.com/JUlLeTXJfU)
+* [https://it.cointelegraph.com/news/ibm-partnership-uses-blockchain-iot-to-combat-drought-in-california](https://it.cointelegraph.com/news/ibm-partnership-uses-blockchain-iot-to-combat-drought-in-california)
+* [https://twitter.com/RobertoDeBiase/status/1095320628863877129](https://twitter.com/RobertoDeBiase/status/1095320628863877129)
+* [https://hackernoon.com/a-beginners-guide-to-ipfs-20673fedd3f](https://hackernoon.com/a-beginners-guide-to-ipfs-20673fedd3f)
+* [https://www.ibm.com/blogs/blockchain/2018/06/introducing-mobi-the-mobility-open-blockchain-initiative/](https://www.ibm.com/blogs/blockchain/2018/06/introducing-mobi-the-mobility-open-blockchain-initiative/)
+* [https://www.bedicon.org/wp-content/uploads/2018/01/finance_topic2_source2.pdf](https://www.bedicon.org/wp-content/uploads/2018/01/finance_topic2_source2.pdf)
+* [https://link.medium.com/00yZ86d3jU](https://link.medium.com/00yZ86d3jU)
+* [https://www.nytimes.com/2019/02/15/books/review/blockchain.html](https://www.nytimes.com/2019/02/15/books/review/blockchain.html)
 
 ## AI
-* https://www.blockchain4innovation.it/tecnologie/intelligenza-artificiale-decentralizzata/
-* https://www.hklaw.com/files/Uploads/Documents/Articles/Blockchain5GEnabledInternetofThings.pdf
-* https://www.forbes.com/sites/bernardmarr/2018/01/08/the-amazing-ways-tesla-is-using-artificial-intelligence-and-big-data/#36a206a54270
-* https://www.gao.gov/assets/700/690910.pdf
-* https://www.forbes.com/sites/danielaraya/2019/01/29/the-challenges-with-regulating-self-driving-cars/
-* https://www.bitmat.it/blog/news/82691/veicoli-a-guida-autonoma-ford-esegue-nuovi-test
-* https://www.theverge.com/2019/2/11/18219981/american-ai-initiative-trump-administration-funding-research-data
-* https://www.zerounoweb.it/analytics/cognitive-computing/jobrapido-con-lintelligenza-artificiale-potenzia-la-ricerca-del-lavoro/
-* https://www.chicagobusiness.com/html-page/834696
-* https://www.theverge.com/2019/2/14/18224704/ai-machine-learning-language-models-read-write-openai-gpt2
-* https://www.theverge.com/2019/1/25/18196234/google-android-auto-in-car-systems-apple-carplay-interview
+* [https://www.blockchain4innovation.it/tecnologie/intelligenza-artificiale-decentralizzata/](https://www.blockchain4innovation.it/tecnologie/intelligenza-artificiale-decentralizzata)
+* [https://www.hklaw.com/files/Uploads/Documents/Articles/Blockchain5GEnabledInternetofThings.pdf](https://www.hklaw.com/files/Uploads/Documents/Articles/Blockchain5GEnabledInternetofThings.pdf)
+* [https://www.forbes.com/sites/bernardmarr/2018/01/08/the-amazing-ways-tesla-is-using-artificial-intelligence-and-big-data/#36a206a54270](https://www.forbes.com/sites/bernardmarr/2018/01/08/the-amazing-ways-tesla-is-using-artificial-intelligence-and-big-data/#36a206a54270)
+* [https://www.gao.gov/assets/700/690910.pdf](https://www.gao.gov/assets/700/690910.pdf)
+* [https://www.forbes.com/sites/danielaraya/2019/01/29/the-challenges-with-regulating-self-driving-cars/](https://www.forbes.com/sites/danielaraya/2019/01/29/the-challenges-with-regulating-self-driving-cars/)
+* [https://www.bitmat.it/blog/news/82691/veicoli-a-guida-autonoma-ford-esegue-nuovi-test](https://www.bitmat.it/blog/news/82691/veicoli-a-guida-autonoma-ford-esegue-nuovi-test)
+* [https://www.theverge.com/2019/2/11/18219981/american-ai-initiative-trump-administration-funding-research-data](https://www.theverge.com/2019/2/11/18219981/american-ai-initiative-trump-administration-funding-research-data)
+* [https://www.zerounoweb.it/analytics/cognitive-computing/jobrapido-con-lintelligenza-artificiale-potenzia-la-ricerca-del-lavoro/](https://www.zerounoweb.it/analytics/cognitive-computing/jobrapido-con-lintelligenza-artificiale-potenzia-la-ricerca-del-lavoro/)
+* [https://www.chicagobusiness.com/html-page/834696](https://www.chicagobusiness.com/html-page/834696)
+* [https://www.theverge.com/2019/2/14/18224704/ai-machine-learning-language-models-read-write-openai-gpt2](https://www.theverge.com/2019/2/14/18224704/ai-machine-learning-language-models-read-write-openai-gpt2)
+* [https://www.theverge.com/2019/1/25/18196234/google-android-auto-in-car-systems-apple-carplay-interview](https://www.theverge.com/2019/1/25/18196234/google-android-auto-in-car-systems-apple-carplay-interview)
 
 ## 5G
-* https://www.webnews.it/2018/12/05/5g-italy-occorre-anzitutto-linfrastruttura/
-* https://www.webnews.it/2018/12/05/5g-italy-il-5g-sara-uninfrastruttura-pervasiva/
-* https://www.webnews.it/2018/12/07/5g-italy-serve-la-convergenza-degli-investimenti/
-* https://link.medium.com/aSbu2NGmeU
-* https://res.mdpi.com/applsci/applsci-08-01048/article_deploy/applsci-08-01048.pdf?filename=&attachment=1
-* https://link.medium.com/9Qvd621oeU
-* https://link.medium.com/Te0Jv69oeU
-* https://www.ericsson.com/en/mobility-report/reports/november-2018
-* https://www.forbes.com/sites/tiriasresearch/2018/12/05/qualcomm-launches-5g-with-the-snapdragon-855/#2010a0ef1cc7
+* [https://www.webnews.it/2018/12/05/5g-italy-occorre-anzitutto-linfrastruttura/](https://www.webnews.it/2018/12/05/5g-italy-occorre-anzitutto-linfrastruttura/)
+* [https://www.webnews.it/2018/12/05/5g-italy-il-5g-sara-uninfrastruttura-pervasiva/](https://www.webnews.it/2018/12/05/5g-italy-il-5g-sara-uninfrastruttura-pervasiva/)
+* [https://www.webnews.it/2018/12/07/5g-italy-serve-la-convergenza-degli-investimenti/](https://www.webnews.it/2018/12/07/5g-italy-serve-la-convergenza-degli-investimenti/)
+* [https://link.medium.com/aSbu2NGmeU](https://link.medium.com/aSbu2NGmeU)
+* [https://res.mdpi.com/applsci/applsci-08-01048/article_deploy/applsci-08-01048.pdf?filename=&attachment=1](https://res.mdpi.com/applsci/applsci-08-01048/article_deploy/applsci-08-01048.pdf?filename=&attachment=1)
+* [https://link.medium.com/9Qvd621oeU](https://link.medium.com/9Qvd621oeU)
+* [https://link.medium.com/Te0Jv69oeU](https://link.medium.com/Te0Jv69oeU)
+* [https://www.ericsson.com/en/mobility-report/reports/november-2018](https://www.ericsson.com/en/mobility-report/reports/november-2018)
+* [https://www.forbes.com/sites/tiriasresearch/2018/12/05/qualcomm-launches-5g-with-the-snapdragon-855/#2010a0ef1cc7](https://www.forbes.com/sites/tiriasresearch/2018/12/05/qualcomm-launches-5g-with-the-snapdragon-855/#2010a0ef1cc7)
