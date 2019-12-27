@@ -1,9 +1,9 @@
 ---
 title: "2030: come Blockchain, 5G e AI plasmeranno le città di domani"
 layout: post
-date: 2019-12-22 10:00
-## image: /assets/images/2030_cover.jpg
-headerImage: false
+date: 2019-12-27 10:00
+image: /assets/images/projects/2030/2030_cover.png
+headerImage: true
 tag:
 - blockchain
 category: projects
@@ -13,6 +13,8 @@ published: true
 ---
 
 *In collaborazione con Aurora Caporossi*
+
+### Scarica le slide: [dal mio Dropbox Space](https://www.dropbox.com/s/a2p2xmqx0ejix2a/2030_come-Blockchain-AI-e-5G-plasmeranno-le-citt%C3%A0-di-domani.pdf?dl=0) | [da IPFS](https://ipfs.io/ipfs/QmdE2r816cJRZ9sNsnNe8WmXDmL6J7cxBMrKKi8kue9imF?filename=2030_come-Blockchain-AI-e-5G-plasmeranno-le-citta%CC%80-di-domani.pdf)
 
 Una mattina dell’anno **2030**, una giornata inizierà in modo molto diverso da come lo immaginiamo oggi.
 
