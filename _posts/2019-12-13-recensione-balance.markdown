@@ -21,7 +21,7 @@ in diretta competizione con Headspace. È un'app che aiuta a costruire un percor
 di meditazione, giorno per giorno, iniziano con sessioni di *2-3 minuti* e
 continuando con sessioni di meditazione sempre più lunghe, complesse e avanzate.
 
-<img class="image" src="{{site.url}}/assets/images/Balance_app_1.png" alt="Balance">
+<img class="image" src="{{base}}/assets/images/Balance_app_1.png" alt="Balance">
 
 Prima di usare Balance, avevo già usato Headspace per qualche settimana. Avevo fatto
 alcune sessioni, ma non mi ero trovato benissimo. O meglio, le singole sessioni di
@@ -58,7 +58,7 @@ Balance è gratuita se si vogliono fare solo alcune sessioni semplici, mentre co
  primi due moduli iniziali, i **Foundation I e II**, e stavo iniziando a fare le
  sessioni del terzo modulo, **Foundation III**.
 
-<img class="image" src="{{site.url}}/assets/images/Balance_app_2.png" alt="Balance">
+<img class="image" src="{{base}}/assets/images/Balance_app_2.png" alt="Balance">
 
 Se le prime sessioni sono state estremamente piacevoli e soprattutto facili da svolgere
  (circa 3-5 minuti di durata), le sessioni successive erano da circa 10 minuti, quasi sempre.

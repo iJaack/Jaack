@@ -2,28 +2,28 @@
     <ul class="list">
         {% if page.title != "Home" %}
             <li class="item">
-                <a class="link" href="{{ site.url }}/">Home</a>
+                <a class="link" href="{{base}}/">Home</a>
             </li>
         {% endif %}
 
         {% if site.blog == true %}
             {% if page.title != "Blog" %}
                 <li class="item">
-                    <a class="link" href="{{ site.url }}/blog">Blog</a>
+                    <a class="link" href="{{base}}/blog">Blog</a>
                 </li>
             {% endif %}
         {% endif %}
 
         {% if page.title != "Podcast" %}
         <li class="item">
-          <a class="link" href="{{ site.url }}/podcast">Podcast</a>
+          <a class="link" href="{{base}}/podcast">Podcast</a>
         </li>
         {% endif %}
 
         {% if site.about == true %}
             {% if page.title != "Chi sono" %}
                 <li class="item">
-                    <a class="link" href="{{ site.url }}/about">Io</a>
+                    <a class="link" href="{{base}}/about">Io</a>
                 </li>
             {% endif %}
         {% endif %}
@@ -31,14 +31,14 @@
         {% if site.projects == true %}
             {% if page.title != "Progetti" %}
                 <li class="item">
-                    <a class="link" href="{{ site.url }}/projects">Progetti</a>
+                    <a class="link" href="{{base}}/projects">Progetti</a>
                 </li>
             {% endif %}
         {% endif %}
 
         {% if page.title != "Newsletter" %}
         <li class="item">
-          <a class="link" href="{{ site.url }}/newsletter">Newsletter</a>
+          <a class="link" href="{{base}}/newsletter">Newsletter</a>
         </li>
         {% endif %}
     </ul>

@@ -28,7 +28,7 @@ Stellar aveva concepito l'inflazione della cryptovaluta principale della blockch
 
 Lo scopo era genuino. Ma poi sono nate delle *pool*, delle piattaforme che permettono agli utenti di votare l'assegnazione dei fondi su uno specifico indirizzo e poi ottenere quei fondi per se stessi. Qui sotto, un piccolo disegnino di come ha funzionato (poco onestamente) finora.
 
-<img class="image" src="{{site.url}}/assets/images/stellar-inflazione.jpg" alt="Come funziona (male) l'inflazione di Stellar" />
+<img class="image" src="{{base}}/assets/images/stellar-inflazione.jpg" alt="Come funziona (male) l'inflazione di Stellar" />
 
 Fino a che i fondi vengono reindirizzati a progetti singoli, ma esterni agli utenti che votano le "donazioni", il valore viene creato comunque.
 Ma quando, tramite il meccanismo descritto sopra, ogni utente fa una donazione che poi prende per se stesso, *tutti* aumentano i propri fondi, e quindi non si crea nessun valore, perché se io ho 1€ e tutti quanti hanno 1€, se io ricevo altri 10€ e tutti rimangono con 1€, io ho più potere di acquisto degli altri, ma se anche tutti gli altri ricevono 10€, il nostro potere di acquisto si allinea, e quindi si annullano le differenze. Tanto vale che allora avevamo tutti 1€.

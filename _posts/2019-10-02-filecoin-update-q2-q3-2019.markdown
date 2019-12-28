@@ -14,7 +14,7 @@ published: true
 
 Questa domenica, nella newsletter *'Questa settimana in tre parole'* (bottone per l'iscrizione in fondo all'articolo) ho suggerito la lettura dell'aggiornamento periodico del team di Filecoin sul loro progetto, che finalmente ora ha una roadmap che include già la *versione 1.0.0*.
 
-<img class="image" src="{{site.url}}/assets/images/recap-filecoin-update-q2-q3-2019.jpg" alt="Appunti sull'Update Filecoin Q2 Q3 2019" >
+<img class="image" src="{{base}}/assets/images/recap-filecoin-update-q2-q3-2019.jpg" alt="Appunti sull'Update Filecoin Q2 Q3 2019" >
 
 Per chi non lo conoscesse, Filecoin è un progetto di infrastruttura decentralizzata basata su blockchain e IPFS, realizzato da Protocol Labs, una startup high-tech composta da Ph.D e studenti del MIT Massachussets Insitute of Technology.
 Filecoin ha raccolto, nel 2017, oltre 230 milioni di dollari per realizzare l'infrastruttura decentralizzata definitiva, con protocolli di consenso originali e in grado di garantire l'integrità e la veridicità del dato.
