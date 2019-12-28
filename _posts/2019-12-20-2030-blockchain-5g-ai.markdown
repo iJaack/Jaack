@@ -1,9 +1,9 @@
 ---
 title: "2030: come Blockchain, 5G e AI plasmeranno le città di domani"
 layout: post
-date: 2019-12-12 10:00
-## image: /assets/images/2030_cover.jpg
-headerImage: false
+date: 2019-12-27 10:00
+image: /assets/images/projects/2030/2030_cover.png
+headerImage: true
 tag:
 - blockchain
 category: projects
@@ -13,6 +13,16 @@ published: true
 ---
 
 *In collaborazione con Aurora Caporossi*
+
+### Scarica le slide (338 MB):
+- [dal mio Dropbox Space](https://www.dropbox.com/s/a2p2xmqx0ejix2a/2030_come-Blockchain-AI-e-5G-plasmeranno-le-citt%C3%A0-di-domani.pdf?dl=0)
+- [da IPFS](https://ipfs.io/ipfs/QmdE2r816cJRZ9sNsnNe8WmXDmL6J7cxBMrKKi8kue9imF?filename=2030_come-Blockchain-AI-e-5G-plasmeranno-le-citta%CC%80-di-domani.pdf)
+
+---
+
+Una mattina dell’anno **2030**, una giornata inizierà in modo molto diverso da come lo immaginiamo oggi.
+
+Ma non ce ne renderemo conto. La tecnologia sta evolvendo rapidamente, ma la nostra percezione di questo fenomeno non è esattamente in linea con il vero avanzamento nei processi che stanno avvenendo a livello tecnologico, culturale e politico.
 
 # Indice
 - [Introduzione](#Introduzione)
@@ -30,21 +40,17 @@ published: true
 
 # Introduzione
 
-Una mattina dell’anno 2030, una giornata inizierà in modo molto diverso da come lo immaginiamo oggi.
-
-Ma non ce ne renderemo conto. La tecnologia sta evolvendo rapidamente, ma la nostra percezione di questo fenomeno non è esattamente in linea con il vero avanzamento nei processi che stanno avvenendo a livello tecnologico, culturale e politico.
-
 Oggi siamo abituati a misurare il progresso tecnologico sulla base del **numero di smartphone** rilasciati in un anno e le loro funzionalità: il numero di megapixel della fotocamera, il numero di fotocamere, la nitidezza del display. Queste sono tutte qualità descrivibili e comparabili, e sono appunto quelle che oggi utilizziamo per poter dire che *il mondo sta cambiando*.
 
 In realtà, questa concezione è piuttosto *distorta*.
 
 Il mercato degli smartphone è in stallo, così come quello dei personal computer, che però subisce già da qualche anno nei confronti di tablet e, appunto, degli smartphone.
 
-<img class="image" src="{{site.url}}/assets/images/projects/smartphone_venduti_2018.jpg" alt="Smartphone venduti, 2018, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/smartphone_venduti_2018.jpg" alt="Smartphone venduti, 2018, Statista.com">
 
-<img class="image" src="{{site.url}}/assets/images/projects/tablet_venduti_2018.jpg" alt="Tablet venduti, 2018, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/tablet_venduti_2018.png" alt="Tablet venduti, 2018, Statista.com">
 
-<img class="image" src="{{site.url}}/assets/images/projects/computer_venduti_2018.jpg" alt="Computer venduti, 2018, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/computer_venduti_2018.png" alt="Computer venduti, 2018, Statista.com">
 
 I numeri parlano chiaro: il mercato degli smartphone è **saturo**, quello dei tablet e pc è in lenta discesa. Forse il progresso tecnologico non è più da monitorare seguendo questi indicatori. Forse, anzi sicuramente, gli indicatori rilevanti sono altri.
 
@@ -77,9 +83,9 @@ Immaginata sin dai primi anni ‘90, ma realizzata efficacemente solo alla fine 
 
 Una blockchain, così come dice la parola nella sua traduzione in inglese, è una catena di blocchi, un registro digitale distribuito (Distributed Ledger) aperto e consultabile in ogni momento. Avendo una struttura decentralizzata, non esiste nessun server centrale avente la possibilità concreta di prevalere: il processo decisionale passa attraverso un rigoroso processo di costruzione del consenso. Ogni transazione o informazione inserita in questo database deve essere approvata dal **50%+1** dei nodi della rete. La tecnologia blockchain si struttura come un nuovo paradigma per la gestione delle informazioni e delle transazioni ed è utilizzata laddove esista una relazione di scambio. Il ruolo di un database distribuito tra i nodi della rete garantisce lo scambio di informazioni e valore in modo sicuro, veloce, trasparente fra sistemi, persone e oggetti.
 
-<img class="image" src="{{site.url}}/assets/images/projects/spesa_soluzioni_blockchain.jpg" alt="Spesa in soluzioni blockchain, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/spesa_soluzioni_blockchain.jpg" alt="Spesa in soluzioni blockchain, Statista.com">
 
-<img class="image" src="{{site.url}}/assets/images/projects/utenti_blockchain_wallet_2018.jpg" alt="Utenti di wallet blockchain, 2018, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/utenti_blockchain_wallet_2018.jpg" alt="Utenti di wallet blockchain, 2018, Statista.com">
  
 ### AI
 
@@ -89,7 +95,7 @@ L’intelligenza è la ‘capacità di risolvere problemi di natura complessa’
 Allo stesso modo, non è possibile identificare ad oggi l’Intelligenza Artificiale come reale Intelligenza, poiché non è in grado di portare a termine diversi obiettivi da sola. Ad oggi, esiste l’AI che permette di scattare foto qualitativamente eccellenti senza hardware particolarmente performante, quella che gioca benissimo a DOTA 2 o a Go, quella che traduce il testo in più lingue, e così via. Non esiste ancora una vera Intelligenza Artificiale, che gli scienziati hanno, per semplicità, definito Intelligenza Artificiale Generale.
 Un’Intelligenza Artificiale Generale (o AGI, nell'abbreviazione inglese) è un’intelligenza in grado di risolvere problemi complessi di qualunque natura.
 
-<img class="image" src="{{site.url}}/assets/images/projects/ricavi_ai_2018.jpg" alt="Ricavi del settore AI, 2018, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/ricavi_ai_2018.jpg" alt="Ricavi del settore AI, 2018, Statista.com">
 
 È importante sapere che **oggi l'Intelligenza Artificiale Generale**, quella che immaginiamo e che vediamo nei film di fantascienza, non esiste.
 Ci sono degli esperimenti che sono portati avanti da consorzi di aziende e da associazioni devote allo sviluppo di AI etiche, come OpenAI, ma le opinioni più ottimistiche posizionano il raggiungimento della creazione di un sistema di Intelligenza Artificiale Generale intorno al 2040. Le opinioni più pessimistiche lo posizionano intorno al 2100. Più del 50% degli scienziati rimane d'accordo che vedremo l'AGI in questo secolo.
@@ -106,7 +112,7 @@ Nel frattempo, la spesa pubblica e privata nel settore AI aumenta a dismisura.
 + America Latina: 0,5
 + Resto del mondo: 1,2
 
-**Fonte: PwC; Studio condotto da: PwC; Periodo di riferimento: 2017; Regione: Tutto il mondo**
+*Fonte: PwC; Studio condotto da: PwC; Periodo di riferimento: 2017; Regione: Tutto il mondo*
  
 ### 5G
 
@@ -119,11 +125,11 @@ La **Next Generation Mobile Networks Alliance** definisce i seguenti requisiti p
 * efficienza dei segnali potenziata;
 * latenza significativamente ridotta in confronto alla connessione LTE.
 
-<img class="image" src="{{site.url}}/assets/images/projects/celle_5G_2022.jpg" alt="Numero di celle 5G, entro il 2022, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/celle_5G_2022.jpg" alt="Numero di celle 5G, entro il 2022, Statista.com">
 
 La realtà in cui siamo costantemente connessi mostra che entro il 2021, in Europa, il 4G non sarà sufficiente per sostenere la richiesta di traffico dati delle città. Le stime identificano una crescita della domanda pari al 40% annui almeno fino al 2025. Insomma la quantità degli oggetti connessi crescerà esponenzialmente e ciò avverrà a causa, o meglio per merito, della diffusione del 5G.
 
-<img class="image" src="{{site.url}}/assets/images/projects/previsione_5G_2025" alt="Previsione indotto 5G, entro il 2025, Statista.com">
+<img class="image" src="{{site.url}}/assets/images/projects/2030/previsione_5G_2025.jpg" alt="Previsione indotto 5G, entro il 2025, Statista.com">
 
 Le future reti 5G mirano a fornire **servizi locali wireless** di alta qualità per soddisfare le esigenze specifiche dei singoli settori verticali, oltre le tradizionali offerte di banda larga mobile. Il 5G ha il potenziale di rivoluzionare l'ecosistema aziendale di comunicazione mobile e di aprire il mercato a nuovi modelli di operatori locali verticali specifici.
 
@@ -140,7 +146,7 @@ Immerso in quella **società liquida**, di cui Bauman è il promotore, l’indiv
 Ma che cosa servirà per essere cittadini di questa nuova realtà in cui ci apprestiamo ad entrare?
 La nostra identità sta acquisendo una connotazione sempre più fluida e complessa a causa degli innumerevoli e continui passi avanti della tecnologia e dei mezzi di comunicazione. Proprio questa fluidità e complessità ci consentono di vivere in numerosi contesti digitali e reali, ma nello stesso tempo rendono le nostre molteplici identità sempre più attaccabili da nuove e complesse minacce. Bisogna garantire - e al contempo tutelare - la nostra immagine, il nostro io rispetto alla realtà digitale.
 
-Questo nuovo Io ha una connotazione aggiuntiva: è digitale. Avremo bisogno di una cittadinanza/identità digitale. Avete presente quando prima di prenotare un nuovo ristorante, visitate i vari social, per analizzare le varie recensioni per poi decidere se andarci o meno? Ecco, la cittadinanza digitale sarà il nostro biglietto di ingresso nella realtà digitale.
+Questo nuovo Io ha una connotazione aggiuntiva: è **digitale**. Avremo bisogno di una cittadinanza/identità digitale. Avete presente quando prima di prenotare un nuovo ristorante, visitate i vari social, per analizzare le varie recensioni per poi decidere se andarci o meno? Ecco, la cittadinanza digitale sarà il nostro biglietto di ingresso nella realtà digitale.
 
 Dal momento che sempre più attività stanno transitando nell’ambiente digitale, la necessità di identificazione a distanza è sempre maggiore, in modo che le azioni compiute dagli utenti possano essere attribuite alle loro identità reali. Senza identità digitale saremo solo individui astratti che agiscono in un universo di bit. Nessuno può essere in grado di affermare di essere qualcun’altro. Questo esclude, quindi, la necessità di avere un documento fisico, una presenza fisica, o un soggetto terzo di fiducia che verifichi manualmente la presenza o i documenti. Di conseguenza, gli utenti di un determinato sistema possono essere autenticati automaticamente e in remoto. Possiamo guardare alla tecnologia Blockchain per trovare risposte a questa esigenza.
 
@@ -150,9 +156,9 @@ Quando si introducono tecnologie così impattanti ci si chiede sempre che fine f
 
 L’AI è una tecnologia potente  va maneggiata con estrema cautela e la nostra  fantasia - inevitabilmente - vola alle immagini apocalittiche del film Terminator. Insomma, queste tecnologie cambieranno la fruizione della realtà offrendoci una nuova esperienza. Basti pensare al modo in cui il 5G sta ristrutturando, ad oggi, la vita cittadina. Per farvi comprendere meglio, tra le vie spagnole ubicate tra Plaza Catalunya, Paseo de Gracia, Balmes e Universitat, Vodafone ha installato una rete 5G con uno spettro 5G commerciale per costruire una rete ad alte prestazioni con Huawei E2E. Sulla stessa rete, sono stati forniti vari servizi eMBB utilizzando smartphone e CPE commerciali Huawei 5G per offrire la migliore esperienza della ‘connessione di rete mobile di quinta generazione’.
 
-Il 5G e EMBB (Enhanced Mobile Broadband), che fornisce una maggiore larghezza di banda dei dati completata da miglioramenti moderati della latenza sia su 5G NR che su 4G LTE, velocizza il tempo di attesa di download e di riproduzione di file video sui vari smartphone.Il ritardo visivo dell'occhio umano è di circa 100 millisecondi (ms). La latenza su una rete 5G sarà  inferiore a 20 millisecondi per i consumatori e può essere ancora più bassa in alcune applicazioni aziendali come smart industry. Con il 5G, gli utenti dei servizi video possono sperimentare un'attesa quasi nulla.  Attualmente le due teste di serie per l’applicazione del 5G sono Vodafone e Huawei. Queste le parole di Yang Chaobin, presidente della linea di prodotti 5G di Huawei: "Vodafone e Huawei hanno completato con successo l'implementazione di una rete 5G live e fornito un'esperienza di servizio superiore basata sui terminali commerciali 5G. Huawei continuerà a collaborare con il settore per promuovere un utilizzo commerciale di successo del 5G."
+<img class="image" src="{{site.url}}/assets/images/projects/2030/5g_live_barcellona_mwc_2019.jpg" alt="Schema del test 5G durante MWC 2019, Barcellona">
 
-Andiamo a vedere un po’ cosa dicono i numeri:
+Il 5G e EMBB (Enhanced Mobile Broadband), che fornisce una maggiore larghezza di banda dei dati completata da miglioramenti moderati della latenza sia su 5G NR che su 4G LTE, velocizza il tempo di attesa di download e di riproduzione di file video sui vari smartphone.Il ritardo visivo dell'occhio umano è di circa 100 millisecondi (ms). La latenza su una rete 5G sarà  inferiore a 20 millisecondi per i consumatori e può essere ancora più bassa in alcune applicazioni aziendali come smart industry. Con il 5G, gli utenti dei servizi video possono sperimentare un'attesa quasi nulla.  Attualmente le due teste di serie per l’applicazione del 5G sono Vodafone e Huawei. Queste le parole di Yang Chaobin, presidente della linea di prodotti 5G di Huawei: "Vodafone e Huawei hanno completato con successo l'implementazione di una rete 5G live e fornito un'esperienza di servizio superiore basata sui terminali commerciali 5G. Huawei continuerà a collaborare con il settore per promuovere un utilizzo commerciale di successo del 5G."
 
 1.	BAIN Macro Trends ha analizzato una gamma di tecnologie già in fase di commercializzazione o prossime a tale fase, tra cui robot umanoidi di servizio, robot collaborativi (cobots), droni, intelligenza artificiale e algoritmi di apprendimento automatico. Queste tecnologie trasformeranno principalmente il settore dei servizi delle economie più avanzate e di alcune economie emergenti. Sulla base di tale analisi, la rapida diffusione dell’automazione si scontrerà nel prossimo decennio con i cambiamenti demografici creando cambiamenti dirompenti in tutta l’economia globale;
 2.	Secondo BAIN MACRO Trends entro il 2030 queste tecnologie potrebbero aumentare la produttività del lavoro in media del 30% rispetto al 2015, con un impatto crescente nel tempo. Questo miglioramento graduale varia considerevolmente tra le industrie, da livelli relativamente modesti nei servizi sanitari e scolastici a un impatto notevole in settori come servizi di ristorazione, vendita al dettaglio, trasporto;
@@ -167,27 +173,27 @@ L’economia digitale è lo “stadio” dell’economia che si manifesta attrav
 
 Chi non ha mai avuto una crisi di panico quando non si accende il computer? Quando la connessione wi-fi è lenta che il caricamento non si completerebbe nemmeno sotto invito, quanti  avrebbero voluto lasciarsi andare alla follia più totale? Niente paura, da qualche parte nel mondo ci sarà un social media manager che starà affrontando lo stesso. Sono i rischi del mestiere per chi lavora con il digitale. Tra le professioni di cui 10 anni non avremmo immaginato neppure l’esistenza ve ne presentiamo alcune:
 
-1.	Sviluppatore di app, pensate che nel 2008 era un mercato che non esisteva, nel 2016 valeva 1.300 miliardi di dollari, indotto compreso, nel 2021 secondo la società di analisi App Annie, l’economia che ruota intorno alle app potrebbe diventare la terza a livello mondiale con 6.350 miliardi di dollari, e una crescita del 385% rispetto al 2016;
-2.	Makeshift Structure Engineer, Ingegnere 3D; la crescita in questo settore richiederà specialisti di software 3D, designer specializzati e programmatori di macchine che contribuiranno insieme a creare enormi opportunità di impiego e posti di lavoro nei prossimi decenni;
-3.	Ingegnere auto a guida automatica, Mentre il mercato dei trasporti automatici inizia a prendere piede, comincia anche a creare nuove professioni. I mezzi automatici non sono in grado di progettarsi e di ripararsi da soli; così ci sarà una crescente domanda di ingegneri, meccanici e sviluppatori di software di guida specializzati in questo tipo di veicoli;
-4.	Specialista di cloud computing, Non è la nuvola che sovrasta i cieli del mondo, ma dal 2006  ha una nuova accezione. Nasce durante una conferenza nel corso della quale Eric Schmidt ha descritto l’approccio al software da parte di Google come “cloud computing”. Da allora, la “nuvola” informatica è diventata una realtà per chiunque, e il cloud management, il cloud engineering e il cloud strategizing sono diventate professioni;
-5.	Analista di big data, insieme all’IoT, i big data sono il futuro della civiltà dell’informazione. E con una massa di dati che cresce al ritmo del 40% ogni anno, è ovvio che cresca anche la domanda di figure professionali capaci di analizzare e processare questa enorme mole di informazioni. I dati non mentono ma dobbiamo essere in grado di leggerli e comprenderli;
-6.	Cyber Security Manager, ovvero colui al quale viene affidata la gestione della sicurezza dei dati in azienda;
-7.	Data Protection Officer,che tutela i dati sensibili dei clienti e del personale dell’azienda;
+1.	**Sviluppatore di app** - nel 2008 era un mercato che non esisteva, nel 2016 valeva 1.300 miliardi di dollari, indotto compreso, nel 2021 secondo la società di analisi App Annie, l’economia che ruota intorno alle app potrebbe diventare la terza a livello mondiale con 6.350 miliardi di dollari, e una crescita del 385% rispetto al 2016;
+2.	**Makeshift Structure Engineer, Ingegnere 3D** - la crescita in questo settore richiederà specialisti di software 3D, designer specializzati e programmatori di macchine che contribuiranno insieme a creare enormi opportunità di impiego e posti di lavoro nei prossimi decenni;
+3.	**Ingegnere auto a guida automatica** - Mentre il mercato dei trasporti automatici inizia a prendere piede, comincia anche a creare nuove professioni. I mezzi automatici non sono in grado di progettarsi e di ripararsi da soli; così ci sarà una crescente domanda di ingegneri, meccanici e sviluppatori di software di guida specializzati in questo tipo di veicoli;
+4.	**Specialista di cloud computing** - Non è la nuvola che sovrasta i cieli del mondo, ma dal 2006  ha una nuova accezione. Nasce durante una conferenza nel corso della quale Eric Schmidt ha descritto l’approccio al software da parte di Google come “cloud computing”. Da allora, la “nuvola” informatica è diventata una realtà per chiunque, e il cloud management, il cloud engineering e il cloud strategizing sono diventate professioni;
+5.	**Analista di big data** - insieme all’IoT, i big data sono il futuro della civiltà dell’informazione. E con una massa di dati che cresce al ritmo del 40% ogni anno, è ovvio che cresca anche la domanda di figure professionali capaci di analizzare e processare questa enorme mole di informazioni. I dati non mentono ma dobbiamo essere in grado di leggerli e comprenderli;
+6.	**Cyber Security Manager** - colui al quale viene affidata la gestione della sicurezza dei dati in azienda;
+7.	**Data Protection Officer** -  che tutela i dati sensibili dei clienti e del personale dell’azienda;
 
-Ora vi proponiamo diversi lavori che cominceranno ad avere un ruolo predominante con l’avanzamento del tridente Blockchain, AI e 5G:
-**Blockchain**: la blockchain sta già creando posti di lavoro e nuove figure professionali, possiamo già indicare quali sono quelle emerse, in ambito tecnico e non.
+Diversi lavori cominceranno ad avere un ruolo predominante con l’avanzamento del tridente Blockchain, AI e 5G:
+**Blockchain** - sta già creando posti di lavoro e nuove figure professionali, possiamo già indicare quali sono quelle emerse, in ambito tecnico e non.
 
-- Blockchain Information Security Analyst;
-- Blockchain Data Scientist: Blockchain e big data rappresentano un sodalizio dal grande futuro, ne deriva che anche gli scienziati dei dati con competenze blockchain non potranno che essere ricercatissimi;
-- Blockchain Developer:  gli sviluppatori scrivono il codice e costruiscono le strutture dati per le catene di blocchi;
-- Specialista di Marketing Blockchain;
-- Blockchain Project Manager;
-- Technical Recruiter;
+  - **Blockchain Information Security Analyst**
+  - **Blockchain Data Scientist** - Blockchain e big data rappresentano un sodalizio dal grande futuro, ne deriva che anche gli scienziati dei dati con competenze blockchain non potranno che essere ricercatissimi
+  - **Blockchain Developer** - gli sviluppatori scrivono il codice e costruiscono le strutture dati per le catene di blocchi
+  - **Specialista di Marketing Blockchain**
+  - **Blockchain Project Manager**
+  - **Technical Recruiter**
 
 Una forte conoscenza di cosa si richieda in una società blockchain e la capacità di attrarre talenti saranno fondamentali.
 
-**AI**: qui lasciamo parlare i dati del World Economic Forum. La survey si basa su un’analisi di top manager e specialisti delle risorse umane di 300 aziende globali in 12 settori industriali: tecnologie come intelligenza artificiale, robotica e medicina di precisione potrebbero creare più occupazione di quanta ne minaccino. La cosiddetta “quarta rivoluzione industriale” distruggerà 75 milioni di posti di lavoro nel mondo ma ne creerà, potenzialmente, quasi il doppio, ben 133 milioni. Ma per raggiungere il risultato bisognerà puntare sulla formazione di risorse professionali. Allora bisognerà formare persone adatte ai nuovi mestieri per essere competitivi lì.  Il fatto è che  oggi non lo sappiamo e formiamo lavoratori pensando solo ai fabbisogni immediati, eppure in Cina tra i banchi delle scuole elementari è stata introdotta una nuova materia, l’intelligenza artificiale;
+**AI** - qui lasciamo parlare i dati del World Economic Forum. La survey si basa su un’analisi di top manager e specialisti delle risorse umane di 300 aziende globali in 12 settori industriali: tecnologie come intelligenza artificiale, robotica e medicina di precisione potrebbero creare più occupazione di quanta ne minaccino. La cosiddetta “quarta rivoluzione industriale” distruggerà 75 milioni di posti di lavoro nel mondo ma ne creerà, potenzialmente, quasi il doppio, ben 133 milioni. Ma per raggiungere il risultato bisognerà puntare sulla formazione di risorse professionali. Allora bisognerà formare persone adatte ai nuovi mestieri per essere competitivi lì.  Il fatto è che  oggi non lo sappiamo e formiamo lavoratori pensando solo ai fabbisogni immediati, eppure in Cina tra i banchi delle scuole elementari è stata introdotta una nuova materia, l’intelligenza artificiale;
 
 **5G**: La vera sfida per il mercato del lavoro è la preparazione di un mix di competenze tecnologiche e trasversali, che dovranno essere presenti contemporaneamente sia nelle figure manageriali sia in quelle operative. Questa nuova ‘connessione di rete mobile di quinta generazione’ 5G gioca e giocherà sempre più un ruolo chiave: il poter connettere alla rete in maniera più funzionale i sistemi ma anche le aziende e i clienti, rappresenta un’esigenza basilare nella proposta di soluzioni di nuova generazione che sottendono l’utilizzo di reti di trasmissione più veloci e affidabili. Il 5G è essenziale per lo sviluppo dell’Industria 4.0, è il tessuto latente su cui si scendono in campo le varie tecnologie.
 
@@ -197,7 +203,7 @@ Una forte conoscenza di cosa si richieda in una società blockchain e la capacit
 Le aziende dovranno affidarsi sempre più alle nuove tendenze IT, come il mobile edge computing, per supportare la gestione dei dati dal punto di vista dell’efficienza e della sicurezza.
 Il mobile edge computing elabora le informazioni “on site” per insight in tempo reale, mentre filtra i dati mission-critical in cloud per un’analisi più approfondita senza sovraccaricare le infrastrutture IT. I device, che possono elaborare i dati a livello edge, diventeranno sempre più importanti per la forza lavoro del futuro, permettendo alle aziende di ridurre la tensione sui propri servizi cloud e, al contempo, garantire produttività e sicurezza attraverso un perimetro IT esteso.
 
-“Le soluzioni IoT contribuiranno a dare forma alla forza lavoro del futuro, trasformando modalità e abitudini lavorative. Dall’ingegneria alla logistica fino a sanità e sicurezza, queste soluzioni non solo garantiscono una maggiore mobilità, ma creano attività nuove e più efficienti per i dipendenti”
+<blockquote>“Le soluzioni IoT contribuiranno a dare forma alla forza lavoro del futuro, trasformando modalità e abitudini lavorative. Dall’ingegneria alla logistica fino a sanità e sicurezza, queste soluzioni non solo garantiscono una maggiore mobilità, ma creano attività nuove e più efficienti per i dipendenti”</blockquote>
 
 *Massimo Arioli, Head of B2B Sales & Marketing, Toshiba Client Solutions Italy.*
 
@@ -324,18 +330,22 @@ Le speranze riposte nella blockchain fanno leva sulle tre caratteristiche di que
 3.	responsabilità
 
 Un report di CB Insight aiuta a comprendere come la blockchain può essere di aiuto per sicurezza del voto elettronico e per la tutela stessa dell’elettorato.
+
+<img class="image" src="{{site.url}}/assets/images/projects/2030/elezione_blockchain.jpg" alt="Schema di un elezione con blockchain">
+
 Osservando la foto la blockchain può intervenire in tre momenti del Digital Voting Journey (secondo CB Insight):
 
 1.	Fase pre-elettorale: la blockchain può aiutare a ridurre i rischi di influenza mediatica scorretta con soluzioni che indirizzano un controllo mediante strumenti crittografici dell’azione dei media e con Mobile apps per la gestione del voto a loro volta basate sulla blockchain;
 2.	Fase elettorale: del voto la blockchain può portare garanzie nella gestione dell’identità dei partecipanti e nella garanzia dell’unicità del documento di voto per ciascun partecipante;
 3.	Fase post-elettorale: la blockchain potrebbe essere perfetta per effettuare gli audit necessari al controllo. In funzione delle sue caratteristiche legate alla trasparenza e all’ immutabilità, si potrebbero ridurre orme di violazione a posteriori.
 
-<img class="image" src="" alt="">
-
 La valorizzazione dell’informazione, del dato e del cittadino cui quel dato è rivolto, la tempistica dello scambio delle informazioni, l’autenticazione dei rapporti di fiducia, basati non più sulla parola ma su supporti tecnologici specifici e difficilmente falsificabile, stanno diventando il nuovo paradigma del business moderno. E’ opinione condivisa che la pubblica amministrazione rivesta un ruolo fondamentale sul piano legislativo e regolatorio, è il più imponente fornitore di servizi e di infrastrutture ai cittadini e alle aziende e genera con essi una interazione continua, quotidiana e superiore ad ogni altra interazione sociale. Tutto ruota intorno ai servizi pubblici.
 
 Per concludere, vi riportiamo le parole della Ministra Buongiorno, tratte dall’intervista per Webnews:
+
 <blockquote>“Il lavoro agile io lo incentiverò perché ci credo molto, ma il punto di base è che la tecnologia è velocissima e la pubblica amministrazione è lenta, e succede spesso che si ha il prodotto tecnologico pronto ma manca l’organizzazione in ufficio. Occorre fare una sorta di percorso cronologico: prima semplificare e organizzare, poi avere il prodotto tecnologico. È chiaro che se io non formo il personale, ci sarà sempre questa discrasia tra ufficio bloccato e prodotto tecnologico [già rilasciato]. Per esempio, per quanto riguarda le carte d’identità digitali, ci sono alcuni comuni in cui si riesce ad avere questo prodotto immediatamente, altri in cui bisogna aspettare 3-4 mesi, perché manca un’organizzazione di base. Ecco perché dico che la Pubblica Amministrazione va prima semplificata, e a quel punto si può digitalizzare. Altrimenti abbiamo una serie di prodotti tecnologici, ma non siamo in grado di usarli”.</blockquote>
+
+<img class="image" src="{{site.url}}/assets/images/projects/2030/samsung_do_what_you_cant.jpg" alt="Samsung, 2019">
 
 Il Quantum Processor è stato introdotto nei modelli QLED 2018. Nelle TV di nuova generazione in casa Samsung, supporta la risoluzione 8K della serie Q900. È il brain della TV ed è responsabile della gestione di quattro funzioni chiave:
 
@@ -368,41 +378,43 @@ Paura di queste previsioni? Molti si chiederanno perché addurre scenari futuri,
 
 Non stiamo tessendo una trama hollywoodiana. Stiamo osservando la realtà dei fatti e quello di cui abbiamo parlato è già tra noi, ma è ancora incomprensibile e intangibile per la mente umana. Le trasformazioni delle società avvengono attraverso cambi di paradigmi, mutamenti prospettici che ci permettono di avvertire e vivere i cambiamenti. Blockchain, AI e 5G non sono solo tecnologie “disruptive”, sono dei paradigmi, quasi delle “ideologie”, che permetteranno una fruizione diversa delle attività e dei contenuti della realtà rispetto ad oggi: il 2030 non sarà tra 1000 anni. Dobbiamo essere affamati di conoscenza, affinare le competenze, essere consapevoli delle conseguenze per poter governare cambiamenti di così grande impatto.
 
+{% include changes.html %}
+
 # Bibliografia
 
 ## Blockchain
-* https://www.corrierecomunicazioni.it/digital-economy/blockchain-e-la-finanza-il-mercato-numero-uno-nel-2030-varra-460-mld-di-dollari/
-* https://medium.com/altcoin-magazine/altcoin-news-will-iota-and-vw-build-the-car-of-the-future-bfb35137d86f
-* https://www.webnews.it/2018/05/02/mobi-blockchain-automotive/:
-* https://link.medium.com/JUlLeTXJfU
-* https://it.cointelegraph.com/news/ibm-partnership-uses-blockchain-iot-to-combat-drought-in-california
-* https://twitter.com/RobertoDeBiase/status/1095320628863877129
-* https://hackernoon.com/a-beginners-guide-to-ipfs-20673fedd3f
-* https://www.ibm.com/blogs/blockchain/2018/06/introducing-mobi-the-mobility-open-blockchain-initiative/
-* https://www.bedicon.org/wp-content/uploads/2018/01/finance_topic2_source2.pdf
-* https://link.medium.com/00yZ86d3jU
-* https://www.nytimes.com/2019/02/15/books/review/blockchain.html
+* [https://www.corrierecomunicazioni.it/digital-economy/blockchain-e-la-finanza-il-mercato-numero-uno-nel-2030-varra-460-mld-di-dollari/](https://www.corrierecomunicazioni.it/digital-economy/blockchain-e-la-finanza-il-mercato-numero-uno-nel-2030-varra-460-mld-di-dollari/)
+* [https://medium.com/altcoin-magazine/altcoin-news-will-iota-and-vw-build-the-car-of-the-future-bfb35137d86f](https://medium.com/altcoin-magazine/altcoin-news-will-iota-and-vw-build-the-car-of-the-future-bfb35137d86f)
+* [https://www.webnews.it/2018/05/02/mobi-blockchain-automotive/](https://www.webnews.it/2018/05/02/mobi-blockchain-automotive/)
+* [https://link.medium.com/JUlLeTXJfU](https://link.medium.com/JUlLeTXJfU)
+* [https://it.cointelegraph.com/news/ibm-partnership-uses-blockchain-iot-to-combat-drought-in-california](https://it.cointelegraph.com/news/ibm-partnership-uses-blockchain-iot-to-combat-drought-in-california)
+* [https://twitter.com/RobertoDeBiase/status/1095320628863877129](https://twitter.com/RobertoDeBiase/status/1095320628863877129)
+* [https://hackernoon.com/a-beginners-guide-to-ipfs-20673fedd3f](https://hackernoon.com/a-beginners-guide-to-ipfs-20673fedd3f)
+* [https://www.ibm.com/blogs/blockchain/2018/06/introducing-mobi-the-mobility-open-blockchain-initiative/](https://www.ibm.com/blogs/blockchain/2018/06/introducing-mobi-the-mobility-open-blockchain-initiative/)
+* [https://www.bedicon.org/wp-content/uploads/2018/01/finance_topic2_source2.pdf](https://www.bedicon.org/wp-content/uploads/2018/01/finance_topic2_source2.pdf)
+* [https://link.medium.com/00yZ86d3jU](https://link.medium.com/00yZ86d3jU)
+* [https://www.nytimes.com/2019/02/15/books/review/blockchain.html](https://www.nytimes.com/2019/02/15/books/review/blockchain.html)
 
 ## AI
-* https://www.blockchain4innovation.it/tecnologie/intelligenza-artificiale-decentralizzata/
-* https://www.hklaw.com/files/Uploads/Documents/Articles/Blockchain5GEnabledInternetofThings.pdf
-* https://www.forbes.com/sites/bernardmarr/2018/01/08/the-amazing-ways-tesla-is-using-artificial-intelligence-and-big-data/#36a206a54270
-* https://www.gao.gov/assets/700/690910.pdf
-* https://www.forbes.com/sites/danielaraya/2019/01/29/the-challenges-with-regulating-self-driving-cars/
-* https://www.bitmat.it/blog/news/82691/veicoli-a-guida-autonoma-ford-esegue-nuovi-test
-* https://www.theverge.com/2019/2/11/18219981/american-ai-initiative-trump-administration-funding-research-data
-* https://www.zerounoweb.it/analytics/cognitive-computing/jobrapido-con-lintelligenza-artificiale-potenzia-la-ricerca-del-lavoro/
-* https://www.chicagobusiness.com/html-page/834696
-* https://www.theverge.com/2019/2/14/18224704/ai-machine-learning-language-models-read-write-openai-gpt2
-* https://www.theverge.com/2019/1/25/18196234/google-android-auto-in-car-systems-apple-carplay-interview
+* [https://www.blockchain4innovation.it/tecnologie/intelligenza-artificiale-decentralizzata/](https://www.blockchain4innovation.it/tecnologie/intelligenza-artificiale-decentralizzata)
+* [https://www.hklaw.com/files/Uploads/Documents/Articles/Blockchain5GEnabledInternetofThings.pdf](https://www.hklaw.com/files/Uploads/Documents/Articles/Blockchain5GEnabledInternetofThings.pdf)
+* [https://www.forbes.com/sites/bernardmarr/2018/01/08/the-amazing-ways-tesla-is-using-artificial-intelligence-and-big-data/#36a206a54270](https://www.forbes.com/sites/bernardmarr/2018/01/08/the-amazing-ways-tesla-is-using-artificial-intelligence-and-big-data/#36a206a54270)
+* [https://www.gao.gov/assets/700/690910.pdf](https://www.gao.gov/assets/700/690910.pdf)
+* [https://www.forbes.com/sites/danielaraya/2019/01/29/the-challenges-with-regulating-self-driving-cars/](https://www.forbes.com/sites/danielaraya/2019/01/29/the-challenges-with-regulating-self-driving-cars/)
+* [https://www.bitmat.it/blog/news/82691/veicoli-a-guida-autonoma-ford-esegue-nuovi-test](https://www.bitmat.it/blog/news/82691/veicoli-a-guida-autonoma-ford-esegue-nuovi-test)
+* [https://www.theverge.com/2019/2/11/18219981/american-ai-initiative-trump-administration-funding-research-data](https://www.theverge.com/2019/2/11/18219981/american-ai-initiative-trump-administration-funding-research-data)
+* [https://www.zerounoweb.it/analytics/cognitive-computing/jobrapido-con-lintelligenza-artificiale-potenzia-la-ricerca-del-lavoro/](https://www.zerounoweb.it/analytics/cognitive-computing/jobrapido-con-lintelligenza-artificiale-potenzia-la-ricerca-del-lavoro/)
+* [https://www.chicagobusiness.com/html-page/834696](https://www.chicagobusiness.com/html-page/834696)
+* [https://www.theverge.com/2019/2/14/18224704/ai-machine-learning-language-models-read-write-openai-gpt2](https://www.theverge.com/2019/2/14/18224704/ai-machine-learning-language-models-read-write-openai-gpt2)
+* [https://www.theverge.com/2019/1/25/18196234/google-android-auto-in-car-systems-apple-carplay-interview](https://www.theverge.com/2019/1/25/18196234/google-android-auto-in-car-systems-apple-carplay-interview)
 
 ## 5G
-* https://www.webnews.it/2018/12/05/5g-italy-occorre-anzitutto-linfrastruttura/
-* https://www.webnews.it/2018/12/05/5g-italy-il-5g-sara-uninfrastruttura-pervasiva/
-* https://www.webnews.it/2018/12/07/5g-italy-serve-la-convergenza-degli-investimenti/
-* https://link.medium.com/aSbu2NGmeU
-* https://res.mdpi.com/applsci/applsci-08-01048/article_deploy/applsci-08-01048.pdf?filename=&attachment=1
-* https://link.medium.com/9Qvd621oeU
-* https://link.medium.com/Te0Jv69oeU
-* https://www.ericsson.com/en/mobility-report/reports/november-2018
-* https://www.forbes.com/sites/tiriasresearch/2018/12/05/qualcomm-launches-5g-with-the-snapdragon-855/#2010a0ef1cc7
+* [https://www.webnews.it/2018/12/05/5g-italy-occorre-anzitutto-linfrastruttura/](https://www.webnews.it/2018/12/05/5g-italy-occorre-anzitutto-linfrastruttura/)
+* [https://www.webnews.it/2018/12/05/5g-italy-il-5g-sara-uninfrastruttura-pervasiva/](https://www.webnews.it/2018/12/05/5g-italy-il-5g-sara-uninfrastruttura-pervasiva/)
+* [https://www.webnews.it/2018/12/07/5g-italy-serve-la-convergenza-degli-investimenti/](https://www.webnews.it/2018/12/07/5g-italy-serve-la-convergenza-degli-investimenti/)
+* [https://link.medium.com/aSbu2NGmeU](https://link.medium.com/aSbu2NGmeU)
+* [https://res.mdpi.com/applsci/applsci-08-01048/article_deploy/applsci-08-01048.pdf?filename=&attachment=1](https://res.mdpi.com/applsci/applsci-08-01048/article_deploy/applsci-08-01048.pdf?filename=&attachment=1)
+* [https://link.medium.com/9Qvd621oeU](https://link.medium.com/9Qvd621oeU)
+* [https://link.medium.com/Te0Jv69oeU](https://link.medium.com/Te0Jv69oeU)
+* [https://www.ericsson.com/en/mobility-report/reports/november-2018](https://www.ericsson.com/en/mobility-report/reports/november-2018)
+* [https://www.forbes.com/sites/tiriasresearch/2018/12/05/qualcomm-launches-5g-with-the-snapdragon-855/#2010a0ef1cc7](https://www.forbes.com/sites/tiriasresearch/2018/12/05/qualcomm-launches-5g-with-the-snapdragon-855/#2010a0ef1cc7)

@@ -1,7 +1,7 @@
 ---
 title: "Pianificazione finanziaria senza costi"
 layout: post
-date: 2019-09-17 15:00
+date: 2019-12-18 15:00
 image: assets/images/projects/pianificazione-finanziaria/mappa.png
 headerImage: false
 tag:
@@ -33,34 +33,33 @@ feedback e proposte di modifiche.
 
 # Dove tengo i soldi
 
-## Conto Principale: FINECO
+## Conto Principale: Illimity
 
-Sì, lo ammetto. Il mio conto principale è un conto più o meno standard.
-Ma FINECO mi ha preso. È una banca interamente online, nel senso che tutte le
-operazioni si possono fare senza la necessità di andare in un posto fisico, una filiale.
-Oggi questo è banale, ma già 3 anni fa non lo era. Ho aperto un conto FINECO poco
-dopo averne chiuso uno in Poste Italiane.
+Fino a fine novembre 2019 avevo FINECO come Conto Principale, ora invece ho Illimity.
 
-Con FINECO ho una carta di debito VISA, e non pago commissioni di alcun genere:
-né sui bonifici SEPA, né sui ritiri, su niente. Se ritiro più di un certo importo al mese (e questo varia in base al tipo di conto che si ha), FINECO mi addebita 1 euro
-al mese per i mesi in cui supero questo importo. In realtà, FINECO mi addebita **sempre** questo importo, ma se non supero il limite mi rimborsa immediatamente la cifra.
+Il conto della nuova banca mi ha incuriosito ed interessato perché è tutta online, non pago
+nessun canone mensile (FINECO è diventata a pagamento a 3,95€ al mese per chi ha più di 28 anni: io non ho ancora 28 anni, ma ormai la frittata è fatta), fintanto che ricevo almeno 750€ di stipendio al mese e spendo almeno 300€ con la carta, oppure collego due pagamenti ricorrenti. Diciamo che non è difficile.
+Ma il motivo per cui mi sono davvero convinto è che Illimity non è un conto per trader, come FINECO: è un conto per giovani. Bastano 1.500€ sul conto per richiedere la carta di credito (con FINECO 5.000) ed è semplicissimo mettere i fondi sui conti deposito, che maturano fino al 2% lordo. Si possono anche accantonare soldi in 'progetti', a cui Illimity aggiunge un 0.50% di interesse.
 
-Su FINECO faccio confluire tutti i miei guadagni: è il conto di entrata, da cui
+Su Illimity faccio confluire tutti i miei guadagni: è il conto di entrata, da cui
 poi smisto i soldi negli altri servizi/banche.
 
-[**Apri un conto FINECO**](https://finecobank.com/it/apriconto/scelta-online-cp)
+[**Apri un conto Illimity usando il codice GIABAR94 per ricevere 25€ sul conto**](https://illimitybank.com)
 
-## Carta di credito American Express Oro
+## Carta di credito American Express Platino
 
 Con la carta di credito ho deciso di sostenere solo due tipi
 di spese:
 * **Spese di Lavoro**, che poi avrò rimborsate;
 * **Spese Mensili** e **Spese Annuali Ricorrenti**;
 
-Questa carta è collegata al mio Conto Principale (FINECO).
-L'abbonamento annuale costa circa **160€**, ma facendo tante spese si accumula un numero di punti tale da poter riscattare l'abbonamento annuale a costo zero o estremamente ridotto. E il primo anno, con tantissime promozioni, costa circa 60€ (tipo usando il link qui in basso).
+Questa carta è collegata al mio Conto Principale (Illimity).
+L'abbonamento annuale costa circa **720€**, ma facendo tante spese si accumula un numero di punti tale da poter riscattare l'abbonamento annuale a costo zero o estremamente ridotto.
+Io, per esempio, ho riscattato un'offerta di adesione per cui avevo subito 15.000 punti (circa 60€), e un'altra per cui al raggiungimento di 3.000€ di spesa nei primi tre mesi ho diritto ad altri 50.000 punti (circa 200€). Se fosse solo questo, mi costerebbe tantissimo, circa 460€ l'anno (720-60-200), ma per me il costo è ancora più basso, dato che viaggio molto.
 
-[**Prendi una carta American Express Oro**](www.americanexpress.it/amico/gIACOBUKnp?XLINK=MYCP)
+AMEX Platino, infatti, mi da il fast track in tutti gli aeroporti più importanti d'Italia (che solitamente costano 10€ l'uno) e l'accesso a oltre 1300 lounge aeroportuali in tutto il mondo gratuitamente, con il programma Priority Pass Prestige, che da solo costerebbe 399€ l'anno. La domanda sorge spontanea: "ma non potresti evitare l'accesso alle lounge? A che ti serve?". Ci sono periodi in cui prendo anche 3-4 voli a settimana, e poter contare su una lounge per mangiare, riposare e lavorare ha un valore altissimo per me. Poi basta pensare che, prendendo un aereo due volte a settimana e comprando almeno una bottiglietta d'acqua in aeroporto, che costa circa 3€ ovunque, spenderei 24€ al mese (3x2x4). Con poco più del doppio posso mangiare 'gratis' e illimitato in qualuque aeroporto. Decisamente comveniente.
+
+[**Prendi una carta American Express Platino**](www.americanexpress.it/amico/gIACOB7yXC?XLINK=MYCP)
 
 ## Conto per l'estero: Revolut
 
@@ -115,6 +114,14 @@ L'unica volta che ho messo 50€ su un ETF ci ho rimesso il 3%, quindi ho lascia
 
 [**Scarica Oval Money**](https://m.onelink.me/b2d2a73d)
 
+## Come spendo: Curve
+Tecnicamente, cerco di usare sempre Apple Pay o Google Pay per pagare.
+Capita però, spesso, che il commerciante non abbia il POS contactless oppure che sia più veloce per me prendere la carta, che il telefono - sembra strano, ma quando il telefono è nello zaino e il portafoglio nella tasca posteriore, tutto è possibile.
+Da qualche tempo, quindi, sto usando **Curve**, un'app con carta di debito Mastercard collegata che mi permette di associare tutte le carte VISA e Mastercard che ho, e di *scegliere* con quale carta voglio pagare dall'app, utilizzando solo la carta fisica di Curve.
+È semplice: basta che, quando devo pagare, vado nell'app, seleziono la carta con cui voglio pagare e pago con la carta fisica. Se mi sbaglio, posso *annullare la transazione su una carta per metterla su un'altra* entro 7 giorni. E guadagno anche del cashback su alcuni negozi, tipo McDonald's o Amazon.
+
+[Registrati su CURVE e hai 5 dollari di benvenuto][http://www.curve.app/join#DG87ARMD]
+
 ## EXTRA: Conto pensione: cryptovalute
 
 Non è un vero e proprio conto, ma quei soldi io li considero la mia pensione. Mi ritengo, da circa un anno, un HODLER. Uno di quelli che le cryptovalute non le spende, ma le accumula. Perché un giorno potrebbero comunque valere di più.
@@ -127,17 +134,6 @@ Oggi, dopo aver imparato che tenere le mie crypto sugli exchange non è una buon
 Ma non potevo controllare tutti i wallet uno per uno ogni volta che avessi avuto bisogno di avere una visione d'insieme. Per trovare **CoinStats** ci ho messo un bel po' di tempo, ma alla fine ne sono rimasto soddisfatto: basta inserire le chiavi pubbliche dei wallet e le chiavi API degli exchange utilizzati per avere tutto insieme. Ora CoinStats fornisce anche un wallet che supporta oltre 220 monete, ma bisognerebbe trasferire tutto, incorrendo in commissioni.
 
   [Guarda il mio portafoglio crpyto](https://coinstats.app/p/shoYj8) | [Scarica CoinStats](https://coinstats.app)
-
-# Come vedo entrate ed uscite: Yolt
-
-Yolt è l'app di ING Direct (non me lo immaginavo davvero) per collegare tutti i conti
-delle varie banche, online e tradizionali, per avere una visione di quello che sta succedendo alle proprie finanze.
-
-L'app si basa sull'assunto che oggi un utente ha più di un conto, e più di una banca di riferimento. La lista delle banche supportate è lunga ma, così come con Oval Money, nemmeno Yolt supporta Revolut, quindi non mi è possibile controllare le spese da lì, che però vincolo solo agli acquisti all'estero con valuta diversa dall'euro, quindi una situazione che si verifica non molto spesso (sebbene più di qualche volta).
-
-Yolt è utile perché mi permette di categorizzare facilmente dei pagamenti come *abbonamenti ricorrenti*, facendo quindi una previsione intelligente delle uscite e facendo la somma dei conti correnti e delle carte collegate, facendomi subito capire quale sia la mia effettiva liquidità.
-
-[**Scarica Yolt**](https://www.yolt.com/it/)
 
 # Come pianifico con successo: Google Sheet
 
@@ -154,3 +150,7 @@ Tutte le celle con i caratteri in rosso sono le variabili da modificare. Tutto m
 [**Crea una copia del Template Pianificazione Finanziaria da Google Sheets**](https://docs.google.com/spreadsheets/d/1CKOfSzOspkYhrh7m9QZNKhjCEM6s07JwkyyfkoEQqJM/edit?usp=sharing)
 
 Spero di essere stato sufficientemente esaustivo. Questo modello non è definitivo, potrebbe cambiare ed aggiornarsi spesso. Ma è un buon punto di partenza per pianificare con successo ed impegno la propria vita finanziaria, senza incorrere in costi nascosti e senza rischiere di spendere più del dovuto. Con me, per ora, sta funzionando.
+
+{% include changes.html %}
+
+*22 dicembre 2019: Questa pagina è stata aggiornata sostituendo Illimity con FINECO, rimuovendo Curve e Yolt e sostituendo AMEX Oro con AMEX Platino

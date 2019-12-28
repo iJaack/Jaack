@@ -47,3 +47,5 @@ Generalmente, in circa 1 minuto dovrebbero arrivare i GRAM.
 <img class="image" src="{{base}}/assets/images/projects/TON/GRAM-TON-Wallet.png" alt="I GRAM sulla testnet ricevuti dal bot su Telegram" />
 
 Chi vuole giocare con me sulla testnet TON? :) Questo il mio indirizzo: **EQCKFdRUi6GbTlhfS3Q_UmOncABG10zzh0wIJL0od1PoKNfa**
+
+{% include changes.html %}
