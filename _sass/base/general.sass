@@ -14,7 +14,7 @@ body
 	a,
 	a:link
 		color: red
-	
+
 	a:visited,
 	a:focus,
 	a:hover,
@@ -26,6 +26,10 @@ h1, h2, h3, h4
 	color: $beta
 	-webkit-font-smoothing: antialiased
 	text-rendering: optimizeLegibility
+
+@media (prefers-color-scheme:dark)
+	h1, h2, h3, h4
+		color: #fff
 
 h1
 	font-size: 2.8rem

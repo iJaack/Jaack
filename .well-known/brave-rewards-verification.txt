@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: jaack.me
+Token: da75aa48321124882cfd44470d0d040ce601b75b51d9200e975685d4ab41c9ff
