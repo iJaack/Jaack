@@ -14,7 +14,7 @@ published: true
 Dopo il talk ad Ala34, il mio mini-progetto di ricerca per raccontare due casi d'uso
 molto concreti ma anche futuristici verrà descritto, più nel dettaglio, in un workshop di 45 minuti durante il Code4Future, un evento promosso da HTML.it in collaborazione con Talent Garden e Seedble, l'8 e 9 novembre prossimo.
 
-<img class="image" src="{{site.url}}/assets/images/code4future-2019.png" alt="Il mio intervento al Code4Future a Talent Garden Ostiense" />
+<img class="image" src="{{base}}/assets/images/code4future-2019.png" alt="Il mio intervento al Code4Future a Talent Garden Ostiense" />
 
 L'evento si svolgerà nel nuovo **Talent Garden di Roma Ostiense**, che aprirà a breve - avrò occasione di fare un giretto, spero. Questo workshop prende la radici dalla ricerca su IPFS e token non fungibili [che ho già pubblicato](https://jaack.me/blockchain-201-ipfs-token-non-fungibili/), ma ruota attorno alle esigenze di cambiamento del mindset che l'utente deve iniziare a formare: è inutile pensare a riformare internet, se la password più utilizzata è ancora 'password', o '1234' o, ancora peggio '4321' (che sembra difficile perché è il contrario della roba più facile a cui si può pensare).
 

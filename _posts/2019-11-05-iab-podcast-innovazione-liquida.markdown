@@ -31,12 +31,12 @@ Aggiornamento: è uscito il podcast, qui in basso i link per ascoltare tutte le 
 [IAB Podcast su Spotify](https://open.spotify.com/show/0U7UqoEWiCxj7hHpxmJDIA?si=p4DLO-jNTuuPGmI1GMLbog) | [IAB Podcast su Apple Podcast](https://podcasts.apple.com/it/podcast/iab-podcast/id1488937440)
 
 
-<img class="image" src="{{site.url}}/assets/images/projects/IAB-Forum-2019/iab-podcast-giacomo.png" alt="IAB Podcast Giacomo Barbieri" />
+<img class="image" src="{{base}}/assets/images/projects/IAB-Forum-2019/iab-podcast-giacomo.png" alt="IAB Podcast Giacomo Barbieri" />
 
 ---
 ---
 
-<img class="image" src="{{site.url}}/assets/images/projects/IAB-Forum-2019/iab-podcast-20-novembre.png" alt="IAB Podcast Giacomo Barbieri" />
+<img class="image" src="{{base}}/assets/images/projects/IAB-Forum-2019/iab-podcast-20-novembre.png" alt="IAB Podcast Giacomo Barbieri" />
 
 ## 20 novembre
 
@@ -81,7 +81,7 @@ La soglia dell’attenzione dell’individuo è diminuita negli ultimi anni: la 
 ---
 ---
 
-<img class="image" src="{{site.url}}/assets/images/projects/IAB-Forum-2019/iab-podcast-21-novembre.png" alt="IAB Podcast Giacomo Barbieri" />
+<img class="image" src="{{base}}/assets/images/projects/IAB-Forum-2019/iab-podcast-21-novembre.png" alt="IAB Podcast Giacomo Barbieri" />
 
 ## 21 novembre
 #### 9:45 - 9:55
