@@ -26,7 +26,7 @@ body
 @media (prefers-color-scheme: dark)
 	a,
 	a:link
-		color: #121212
+		color: $white
 
 	a:visited,
 	a:focus,
@@ -59,10 +59,7 @@ h1, h2, h3, h4
 
 @media (prefers-color-scheme: dark)
 		h1, h2, h3, h4
-		font-family: $fontSans
 		color: $white
-		-webkit-font-smoothing: antialiased
-		text-rendering: optimizeLegibility
 
 h1
 	font-size: 3rem
@@ -81,6 +78,14 @@ h4
 a
 	color: $delta
 	text-decoration: underline
+
+@media (prefers-color-scheme: light)
+	a
+		color: $black
+
+@media (prefers-color-scheme: dark)
+	a
+		color: $white
 
 p
 	line-height: 1.7
