@@ -4,7 +4,10 @@ body, html
 body
 	line-height: 1
 	font: 17px $fontSans
-	color: $alpha
+
+@media (prefers-color-scheme: light)
+	body
+		color: $alpha
 
 @media (prefers-color-scheme: dark)
 	body
@@ -14,23 +17,56 @@ body
 	a,
 	a:link
 		color: red
-	
+
+@media (prefers-color-scheme: light)
+	a,
+	a:link
+		color: red
+
+@media (prefers-color-scheme: dark)
+	a,
+	a:link
+		color: #121212
+
 	a:visited,
 	a:focus,
 	a:hover,
 	a:active
 		color: yellow
 
+@media (prefers-color-scheme: light)
+	a:visited,
+	a:focus,
+	a:hover,
+	a:active
+		color: yellow
+
+@media (prefers-color-scheme: dark)
+	a:visited,
+	a:focus,
+	a:hover,
+	a:active
+		color: red
+
 h1, h2, h3, h4
 	font-family: $fontSans
-	color: $beta
 	-webkit-font-smoothing: antialiased
 	text-rendering: optimizeLegibility
+
+@media (prefers-color-scheme: light)
+	h1, h2, h3, h4
+	color: $black
+
+@media (prefers-color-scheme: dark)
+		h1, h2, h3, h4
+		font-family: $fontSans
+		color: $white
+		-webkit-font-smoothing: antialiased
+		text-rendering: optimizeLegibility
 
 h1
 	font-size: 3rem
 	letter-spacing: -1px
-	color: $beta
 	font-weight: 700
 
 h2
@@ -48,17 +84,23 @@ a
 
 p
 	line-height: 1.7
-	color: $alpha
 	font-weight: 300
 	margin-bottom: 20px
 	letter-spacing: 0.4px
+
+@media(prefers-color-scheme: light)
+	p
+		color: $black
+
+@media(prefers-color-scheme: dark)
+	p
+		color: $white
 
 	@media #{$mobile}
 		letter-spacing: 0.2px
 
 strong
 	font-weight: 400
-	color: #000
 
 ul,
 ol
@@ -146,3 +188,7 @@ pre
 
 .wrapper-large
 	max-width: 810px
+
+@media (prefers-color-scheme: dark)
+	svg
+		filter: invert(100%)
