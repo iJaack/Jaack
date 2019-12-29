@@ -27,7 +27,7 @@ Tramite la tecnologia blockchain, è possibile automatizzare il processo più di
 Non si tratta di elezioni, di emendamenti, di partiti. Si tratta di democratizzare, realmente, la società.
 Rousseau è un progetto che oggi, nelle mani dei 5 Stelle, *non è minimamente sfruttato a dovere*. Ma questa è un’altra storia.
 
-<img src="{{site.url}}/assets/images/support-brave-browser.png" alt="Brave Browser"/>
+<img src="{{base}}/assets/images/support-brave-browser.png" alt="Brave Browser"/>
 
 Questa è invece la storia di un progetto per il quale è stato necessario avviare una vera e propria transizione. Questa è la storia del passaggio **da Chrome a Brave**.
 
@@ -88,7 +88,7 @@ Brave Browser è di sicuro un *pilastro dell'internet* libero contemporaneo, ma 
 
 Ah, comunque la risposta è no: non sto rimpiangendo Google Chrome. Su ambiente desktop Brave si comporta benissimo, perché è basato su Chromium: ho risparmiato un sacco di tempo non guardando migliaia di banner. La schermata indica il tempo risparmiato su un utente su un dispositivo: io ho 4 utenti Google loggati su 5 dispositivi differenti (due smartphone, un laptop, un desktop e un tablet), quindi il totale del tempo risparmiato è 20 volte quello che si legge qui sotto.
 
-<img src="{{site.url}}/assets/images/tempo-risparmiato-brave-browser.png" alt="Brave Browser"/>
+<img src="{{base}}/assets/images/tempo-risparmiato-brave-browser.png" alt="Brave Browser"/>
 
 Rimpiango principalmente Safari su iOS, perché Brave non è in grado di integrarsi così bene come il browser predefinito. Ed infatti, alla fine di questi mesi di incubazione, ho deciso di disinstallare Brave sul mio iPhone e il mio iPad. Ma rimane su MacBook, su PC Windows e soprattutto su smartphone Android, su cui funziona davvero molto bene.
 

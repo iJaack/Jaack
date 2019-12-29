@@ -20,12 +20,12 @@ layout: page
 {% if site.post-advance-links contains page.category %}
     <div class="blog-navigation">
         {% if page.previous.hidden == false and page.previous.url %}
-            <a class="prev" href="{{ site.url }}{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
+            <a class="prev" href="{{base}}{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
         {% else %}
             <a class="prev"></a>
         {% endif %}
         {% if page.next.hidden == false and page.next.url %}
-            <a class="next" href="{{ site.url }}{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
+            <a class="next" href="{{base}}{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
         {% endif %}
     </div>
 {% endif %}

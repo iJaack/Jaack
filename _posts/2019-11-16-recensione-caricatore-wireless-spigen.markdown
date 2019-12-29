@@ -17,7 +17,7 @@ sconto da distribuire nel mio network.
 
 Ci ho messo un mese per partorire qualche impressione sul caricatore wireless **Steadiboost Flex** - e non credo che farò un articolo sugli altri caricatori che ho ricevuto - perché come si recensisce un caricatore? Oltre la lista di specifiche tecniche, quello che si può discutere è la sua qualità e robustezza, la sua versatilità e la - cosa più importante - capacità di carica.
 
-<img class="image" src="{{site.url}}/assets/images/Spigen-Steadiboost-Flex-4.jpg" alt="Spigen Steadiboost Flex" >
+<img class="image" src="{{base}}/assets/images/Spigen-Steadiboost-Flex-4.jpg" alt="Spigen Steadiboost Flex" >
 
 Quindi: sì, **è costruito bene**. È in plastica, non è in acciaio o materiale pregiato.
  Ma è ottimo così, perché lo stand deve agganciare per bene lo smartphone:  se
@@ -26,7 +26,7 @@ fosse stato di acciaio o di alluminio, il dispositivo sarebbe scivolato, o avreb
  perché credo sia inutile per la vita di tutti i giorni: sempre meno persone usano
  un trasformatore con una sola porta USB.
 
- <img class="image" src="{{site.url}}/assets/images/Spigen-Steadiboost-Flex-2.jpg" alt="Spigen Steadiboost Flex" >
+ <img class="image" src="{{base}}/assets/images/Spigen-Steadiboost-Flex-2.jpg" alt="Spigen Steadiboost Flex" >
 
 La versatilità mi ha colpito: supporta il fast charging del mio trasformatore
 a 4 porte della Anker, e si collega con una USB-A (quella standard, per intenderci)
@@ -34,7 +34,7 @@ che diventa una USB-C, quindi utilizzabile anche per altri dispositivi che ho. I
 Per ora non si è ancora tagliato o sfilacciato, ma è solo un mese che ce l'ho, quindi
 non so dire se possa durare anni.
 
-<img class="image" src="{{site.url}}/assets/images/Spigen-Steadiboost-Flex-3.jpg" alt="Spigen Steadiboost Flex" >
+<img class="image" src="{{base}}/assets/images/Spigen-Steadiboost-Flex-3.jpg" alt="Spigen Steadiboost Flex" >
 
 Per stimare la capacità di carica, ho fatto un test per il peggiore dei casi, che
 dovrebbe indicare che peggio di così non può fare. Ho caricato da 0% (proprio spento)
@@ -45,7 +45,7 @@ devo dire che sono soddisfatto: in generale, durante la giornata, mi basta lasci
 lo smartphone (Galaxy Note 10 o iPhone X) per una mezz'oretta per vederlo caricato
 di almeno il 30% in più.
 
-<img class="image" src="{{site.url}}/assets/images/Spigen-Steadiboost-Flex.jpg" alt="Spigen Steadiboost Flex" >
+<img class="image" src="{{base}}/assets/images/Spigen-Steadiboost-Flex.jpg" alt="Spigen Steadiboost Flex" >
 
 Che dire di più. Sì, mi piace. Lo sto usando. Vale i 50€ a cui lo si può acquistare
  su Amazon? Forse ci sono caricatori wireless migliori, ma la combinazione di 'modalità stand' e modalità 'base' e la porta USB-C per l'alimentazione mi fanno

@@ -13,7 +13,7 @@ published: true
 ---
 LOL arriva su mobile.
 
-<img class="image" src="{{site.url}}/assets/images/League-of-legends-wild-rift.png"
+<img class="image" src="{{base}}/assets/images/League-of-legends-wild-rift.png"
 alt="League of Legends: Wild Rift" />
 
 Potrebbe già finire così l'articolo, che si spiega da solo per chi ci gioca. O meglio,

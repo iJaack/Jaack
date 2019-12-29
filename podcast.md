@@ -3,11 +3,11 @@ title: Podcast
 layout: page
 ---
 
-<img class="image" src="{{site.url}}/assets/images/podcast/VitaDaMillennial_logo_podcast.png" alt="Vita da Millennial Podcast">
+<img class="image" src="{{base}}/assets/images/podcast/VitaDaMillennial_logo_podcast.png" alt="Vita da Millennial Podcast">
 
-<a href="https://podcasts.apple.com/it/podcast/vita-da-millennial/id1491071753"><img class="image" src="{{site.url}}/assets/images/podcast/Apple_Podcasts_Listen.jpg" align="middle"></a>
+<a href="https://podcasts.apple.com/it/podcast/vita-da-millennial/id1491071753"><img class="image" src="{{base}}/assets/images/podcast/Apple_Podcasts_Listen.jpg" align="middle"></a>
 
-<a href="https://open.spotify.com/show/3n2nXoWafjEx87EJyZ14b8"><img class="image" src="{{site.url}}/assets/images/podcast/Spotify_Podcast_Listen.png" align="middle"></a>
+<a href="https://open.spotify.com/show/3n2nXoWafjEx87EJyZ14b8"><img class="image" src="{{base}}/assets/images/podcast/Spotify_Podcast_Listen.png" align="middle"></a>
 
 Cercando su Google, i risultati di ricerca sulla parola ‘Millennial’ producono poca testimonianza tangibile. Cercando su Amazon, invece, escono fuori 7 libri su come assumere i millennial, come funziona il loro mondo: tutti libri scritti da persone hanno un’età decisamente diversa da quella di un millennial. Molti di questi libri, inoltre, raccontano la vita del millennial statunitense, di quello asiatico e di un mondo che in Italia non esiste ancora, o forse non esisterà mai.
 

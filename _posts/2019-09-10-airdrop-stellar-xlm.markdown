@@ -36,7 +36,7 @@ in questo senso.
 
 In ogni caso, ieri mi è arrivato questo bel messaggino nella chat:
 
-<img class="image" src="{{ site.url }}/assets/images/keybase-stellar-wallet.png" alt="Il messaggio
+<img class="image" src="{{base}}/assets/images/keybase-stellar-wallet.png" alt="Il messaggio
 dell'airdrop di XLM">
 
 Circa 20 euro di Stellar sul mio conto, ed altrettanti ogni mese per i prossimi due anni.
@@ -50,7 +50,7 @@ della stessa come moneta di scambio. Stellar si sta imponendo sempre di più
 come l'"avversario vero" di Ripple, che viene sempre nominata "la crypto delle banche".
 Tra i puristi di bitcoin, XRP è proprio scam, truffa.
 
-<img class="image" src="{{ site.url }}/assets/images/keybase-stellar-airdrop.png" alt="Il mio wallet XLM
+<img class="image" src="{{base}}/assets/images/keybase-stellar-airdrop.png" alt="Il mio wallet XLM
 dopo il primo airdrop">
 
 Stellar invece ha una storia diversa: è più basata sulla community, la piattaforma
