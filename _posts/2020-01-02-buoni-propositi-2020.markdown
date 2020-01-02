@@ -2,7 +2,7 @@
 title: "I buoni propositi per il mio 2020, con i dati"
 layout: post
 date: 2020-01-02 14:00
-image: /assets/images/obiettivi-2020.jpg
+image: /assets/images/obiettivi-2020.png
 headerImage: true
 tag:
 -
