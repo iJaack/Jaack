@@ -6,3 +6,4 @@ Gemfile.lock
 vendor/
 *.env
 .env
+.env
