@@ -22,6 +22,10 @@ Per compilare la lista dei miei buoni propositi 2020, parto sempre dal documento
 
 <img class="image" src="{{base}}/assets/images/risultati-2019.png" alt="Risultati 2019">
 
+Potete crearlo facendo una copia di questo foglio condiviso:
+
+[**Template Recap Attività**](https://docs.google.com/spreadsheets/d/1CVQJuBqYHhF2uGW0ftKGa2PObcWUCwoZePmClF0-QXg/edit?usp=sharing)
+
 Da questo documento, creo un foglio duplicato che è uguale identico a quello che si vede qui sopra, ma con i nuovi obiettivi per il 2020. È il foglio 'Aspettative 2020':
 
 <img class="image" src="{{base}}/assets/images/aspettative-2020-1.png" alt="Aspettative 2020 - 1">
