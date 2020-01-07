@@ -12,7 +12,7 @@ description: Google Sheets, un editor di foto e tanta pianificazione
 published: true
 ---
 
-Dopo aver chiuso il 2019 con il mio [post di recap]({{base}}/recap-2019/), è il momento di continuare ad utilizzare il mio Sistema per pianificare anche il 2020.
+Dopo aver chiuso il 2019 con il mio [post di recap]({{base}}/Recap-2019/), è il momento di continuare ad utilizzare il mio Sistema per pianificare anche il 2020.
 
 Questi primi giorni di gennaio sono il periodo ideale per farlo, perché ancora non si è tornati completamente a lavoro, si ha la mente fresca dal riposo delle ultime due settimane e la pancia piena di tutte le abbuffate per ragionare bene.
 
