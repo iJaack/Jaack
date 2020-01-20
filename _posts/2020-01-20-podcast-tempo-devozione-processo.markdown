@@ -48,7 +48,11 @@ E ancora:
 “Senza obiettivi andremo il più lontano possibile. Con il processo forse si sbatte davanti all’obiettivo. Se raggiungi l’obiettivo sarai depresso, se non lo raggiungi sarai frustrato.---Devozione è il modo in cui si raggiungono obiettivi significativi. Come fa l’obiettivo ad essere allo stesso tempo il punto di partenza e il punto di arrivo?”
 </blockquote>
 
-La questione è quanto è bella e significativa la vita che hai vissuto.
+La frase più importante, quella che racchiude tutto, credo sia questa:
+
+<blockquote>
+***La questione è quanto è bella e significativa la vita che hai vissuto***.
+<blockquote>
 
 ---
 
@@ -56,7 +60,7 @@ Quel giorno sono successe un po’ di cose. Ho aperto gli occhi alle 4:05, mi so
 
 Non ho lavorato fino alle 14:00, quando sono arrivato in ufficio e dopo aver pranzato. In tutta la mattinata ho pensato a riposarmi, a fare meditazione in aereo, ad ascoltare podcast e a leggere articoli. Ho fatto tutto. Non ho più la FOMO, non so perché ma riesco ad essere in controllo del flusso che mi viene incontro ogni giorno. Forse perché faccio meno di quello che impiegava più del mio tempo. Tipo guardare serie TV. Non so. Però mi rendo conto che questo tenore di vita mi rende contento, felice.
 
-Le frasi che ho letto all’inizio della puntata sono di Sadhguru, un mistico e yogi indiano.
+Le frasi che ho letto all’inizio dell'articolo sono di *Sadhguru**, un mistico e yogi indiano.
 
 All'età di 25 anni, il 23 settembre 1982 Jaggi Vasudev guidò fino a Chamundi Hill, dove sedette su una roccia sulla quale ebbe una esperienza spirituale: "Fino a quel momento della mia vita, ho sempre pensato: 'questo sono io' e che qualcun altro è qualcos'altro. Ma per la prima volta non sapevo più cosa fosse 'me' e cosa non lo fosse. Ad un tratto, ciò che io ero era semplicemente ovunque. La stessa roccia su cui ero seduto, l'aria che respiravo, la stessa atmosfera intorno a me: ero appena esploso in ogni cosa. Il che suona come un'assoluta follia. Pensai che questa esperienza fosse durata dai dieci ai quindici minuti, ma, dopo essere tornato alla mia normale consapevolezza, ero stato seduto lì per quattro ore e mezza, pienamente cosciente, con occhi aperti, ma il tempo era semplicemente capovolto". Sei settimane dopo questa esperienza, lasciò la sua attività ad un suo amico e viaggiò a lungo nel tentativo di comprendere la sua esperienza mistica. Dopo un anno di meditazione e viaggi, Jaggi Vasudev decidette di insegnare yoga per condividere le sue esperienze interiori.
 
