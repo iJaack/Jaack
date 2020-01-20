@@ -2,7 +2,7 @@
 title: "Come installare un nodo IPFS"
 layout: post
 date: 2020-01-20 12:00
-image: /assets/images/markdown.jpg
+image: /assets/images/projects/IPFS/ipfs-desktop.png
 headerImage: true
 tag:
 - blockchain
