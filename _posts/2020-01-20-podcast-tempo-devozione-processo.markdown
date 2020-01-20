@@ -2,8 +2,8 @@
 title: "Sul tempo e la devozione al processo"
 layout: post
 date: 2020-01-20 11:30
-# image: /assets/images/markdown.jpg
-headerImage: false
+image: https://images.unsplash.com/photo-1524678714210-9917a6c619c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2549&q=80
+headerImage: true
 tag:
 -
 category: blog
@@ -51,8 +51,8 @@ E ancora:
 La frase più importante, quella che racchiude tutto, credo sia questa:
 
 <blockquote>
-***La questione è quanto è bella e significativa la vita che hai vissuto***.
-<blockquote>
+La questione è quanto è bella e significativa la vita che hai vissuto.
+</blockquote>
 
 ---
 
