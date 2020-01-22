@@ -13,6 +13,8 @@ description: Brave Browser dopo 9 mesi di utilizzo
 published: true
 ---
 
+[**Scarica Brave Browser**](https://brave.com/jaa499)
+
 Tempo fa, ho letto un [lungo e approfondito articolo di Darren Loucaides su WIRED US](https://www.wired.com/story/italy-five-star-movement-techno-utopians/), che racconta della nascita del Movimento 5 Stelle ma soprattutto della piattaforma Rousseau, che oggi è utilizzata dagli attivisti del Movimento 5 Stelle come strumento di democrazia diretta.
 
 Questo strumento, insieme ad altri di cui poco si conosce, sono i pilastri della
@@ -97,6 +99,7 @@ Anche se il mainstream non è ancora pronto a questa idea del 'pagare per naviga
 
 Forse è ora di riprendere in mano la nostra identità e tenerla al sicuro sui nostri dispositivi, invece che in rete.
 
+[**Scarica Brave Browser**](https://brave.com/jaa499)
 
 <div class="review">
     <div class="toleft">

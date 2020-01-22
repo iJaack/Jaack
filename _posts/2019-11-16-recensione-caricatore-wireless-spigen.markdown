@@ -3,9 +3,10 @@ title: "Recensione Spigen Steadiboost Flex"
 layout: post
 date: 2019-11-15 18:00
 image: /assets/images/Spigen-Steadiboost-Flex.jpg
-headerImage: false
+headerImage: true
 tag:
 - tech
+- review
 category: blog
 author: jaack
 description: Recensione caricatore wireless stand Spigen Steadiboost Flex

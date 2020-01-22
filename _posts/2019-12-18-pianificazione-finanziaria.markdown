@@ -5,7 +5,7 @@ date: 2019-12-18 15:00
 image: assets/images/projects/pianificazione-finanziaria/mappa.png
 headerImage: false
 tag:
-- tech
+- culture
 category: projects
 author: jaack
 description: Come risparmierò senza rinunciare a nulla

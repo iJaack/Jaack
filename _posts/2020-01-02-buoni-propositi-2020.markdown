@@ -5,7 +5,7 @@ date: 2020-01-02 14:00
 image: /assets/images/obiettivi-2020.png
 headerImage: true
 tag:
--
+- culture
 category: blog
 author: jaack
 description: Google Sheets, un editor di foto e tanta pianificazione

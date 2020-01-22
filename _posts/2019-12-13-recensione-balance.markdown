@@ -3,9 +3,9 @@ title: "Balance è l'app che ti aiuta a meditare, davvero "
 layout: post
 date: 2019-12-13 10:00
 image: /assets/images/Balance_app_1.jpg
-headerImage: false
+headerImage: true
 tag:
-- reviews
+- review
 - tech
 category: blog
 author: jaack

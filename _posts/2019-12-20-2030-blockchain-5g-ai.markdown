@@ -6,6 +6,7 @@ image: /assets/images/projects/2030/2030_cover.png
 headerImage: true
 tag:
 - blockchain
+- web
 category: projects
 author: jaack
 description: In collaborazione con Aurora Caporossi

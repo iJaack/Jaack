@@ -5,7 +5,7 @@ date: 2020-01-20 11:30
 image: https://images.unsplash.com/photo-1524678714210-9917a6c619c2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2549&q=80
 headerImage: true
 tag:
--
+- culture
 category: blog
 author: jaack
 description: La trascrizione della 2a puntata della 2a stagione di Vita da Millennial.

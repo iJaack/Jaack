@@ -5,7 +5,7 @@ date: 2019-12-30 12:00
 image: /assets/images/Foto-profilo-2020.jpg
 headerImage: true
 tag:
-- 
+- culture
 category: blog
 author: jaack
 description: Numeri, lezioni, pensieri

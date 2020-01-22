@@ -5,7 +5,7 @@ date: 2019-12-20 15:00
 image: /assets/images/projects/IAB-Forum-2019/iab-podcast-giacomo.png
 headerImage: false
 tag:
-- tech
+- culture
 category: projects
 author: jaack
 description: Palinsesto per l'Innovation Arena di IAB Forum 2019
