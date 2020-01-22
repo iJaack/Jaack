@@ -1,5 +1,5 @@
 ---
-title: Newsletter
+title: Questa settimana in tre parole - Newsletter
 layout: page
 ---
 <img class="image" src="{{base}}/assets/images/newsletter_preamble_cover.png">

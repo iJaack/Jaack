@@ -1,6 +1,6 @@
 <nav class="{% if page.title == "Home" %}nav-home{% else %}nav{% endif %}">
     <ul class="list">
-      
+
         {% if site.blog == true %}
             {% if page.title != "Blog" %}
                 <li class="item">
@@ -16,7 +16,7 @@
         {% endif %}
 
         {% if site.about == true %}
-            {% if page.title != "Chi sono" %}
+            {% if page.title != "Io" %}
                 <li class="item">
                     <a class="link" href="{{base}}/about">Io</a>
                 </li>
