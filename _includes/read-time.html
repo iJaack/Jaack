@@ -4,6 +4,6 @@
     {% if words < 250 %}
         Tempo di lettura: 1 minuto!
     {% else %}
-        Tempo di lettura: Tra {{ words | divided_by:400 }}e {{ words | divided_by:500 }}minuti
+        Tempo di lettura: {{ words | divided_by:500 }}-{{ words | divided_by:400 }} minuti
     {% endif %}
 </span>
