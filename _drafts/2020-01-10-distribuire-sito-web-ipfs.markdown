@@ -29,4 +29,5 @@ Il vantaggio è che il mio sito non può **praticamente mai** andare offline: se
 Per iniziare, bisogna vedere i requisiti:
 - Un sito web statico usando i seguenti framework: jekyll, hakyll, elevently, gatsby, hugo, hexo, nuxt, pelican, create-react-app, metalsmith, middleman, docusaurus e tutti i siti web che supportano i contenuti nelle cartelle *site* e *docs*
 - **npm** installato ([scarica npm](https://nodejs.org/en/download/))
-- consigliato: nodo IPFS installato in locale ([come installare un nodo IPFS]({{base}}/installare-nodo-ipfs))
+- consigliato: nodo IPFS installato in locale - [Come installare un nodo IPFS]({{base}}/installare-nodo-ipfs)
+- un account su un servizio di pinning dei dati, consigliato con Pinata - [Come configurare il servizio di pinning Pinata]({{base}}/configurare-pinning-pinata-ipfs)

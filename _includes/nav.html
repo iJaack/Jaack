@@ -1,6 +1,12 @@
 <nav class="{% if page.title == "Home" %}nav-home{% else %}nav{% endif %}">
     <ul class="list">
 
+      {% if page.title != "Podcast" %}
+      <li class="item">
+        <a class="link" href="{{base}}/podcast">Podcast</a>
+      </li>
+      {% endif %}
+
         {% if site.blog == true %}
             {% if page.title != "Blog" %}
                 <li class="item">
@@ -9,24 +15,18 @@
             {% endif %}
         {% endif %}
 
-        {% if page.title != "Podcast" %}
-        <li class="item">
-          <a class="link" href="{{base}}/podcast">Podcast</a>
-        </li>
+        {% if site.projects == true %}
+            {% if page.title != "Progetti" %}
+                <li class="item">
+                    <a class="link" href="{{base}}/projects">Progetti</a>
+                </li>
+            {% endif %}
         {% endif %}
 
         {% if site.about == true %}
             {% if page.title != "Io" %}
                 <li class="item">
                     <a class="link" href="{{base}}/about">Io</a>
-                </li>
-            {% endif %}
-        {% endif %}
-
-        {% if site.projects == true %}
-            {% if page.title != "Progetti" %}
-                <li class="item">
-                    <a class="link" href="{{base}}/projects">Progetti</a>
                 </li>
             {% endif %}
         {% endif %}
