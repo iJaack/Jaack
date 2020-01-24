@@ -1,6 +1,7 @@
 ---
 layout: page
 Title: Routine
+description: Routine e workflows per una vita più efficiente e produttiva
 ---
 
 Questa pagina non è un post, non è una recensione né un progetto. È la mia vita.

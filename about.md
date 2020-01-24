@@ -1,7 +1,9 @@
 ---
 title: Chi sono
 layout: page
+description: Chi è Giacomo Barbieri, tech blogger e community manager
 ---
+
 <img class="image" src="{{base}}/assets/images/Foto-profilo-2020.jpg">
 
 <p>Ho sempre avuto difficoltà a definire la mia persona.</p>

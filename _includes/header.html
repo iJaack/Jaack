@@ -20,6 +20,9 @@
 
         <h1 class="title">{{ site.name }}</h1>
         <h2 class="description">{{ site.bio }}</h2>
+        {% if page.description %}
+          <meta name="description" content="{{ page.description }}">
+        {% endif %}
 
         {% include social-links.html %}
     </header>

@@ -1,6 +1,7 @@
 ---
 title: Vita da Millennial - Podcast
 layout: page
+description: Un podcast per raccontare le sfide di un millennial, registrato da Giacomo Barbieri
 ---
 
 <img class="image" src="{{base}}/assets/images/podcast/VitaDaMillennial_logo_podcast.png" alt="Vita da Millennial Podcast">

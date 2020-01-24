@@ -1,6 +1,7 @@
 ---
 title: Questa settimana in tre parole - Newsletter
 layout: page
+description: Una newsletter settimanale, per sfuggire alla FOMO: 3 notizie interessanti ogni domenica pomeriggio
 ---
 
 <a href="https://www.producthunt.com/posts/questa-settimana-in-tre-parole?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-questa-settimana-in-tre-parole" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=181982&theme=light" alt="Questa settimana in tre parole - The best of the week in your inbox, every Sunday (italian) | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" /></a>

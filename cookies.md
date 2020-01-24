@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Cookie Policy
+description: Continuando la navigazione, l'utente accetta la raccolta dei dati aggregati
 ---
 
 Il sito web [Jaack.me](https://jaack.me), di proprietà di Giacomo Barbieri, utilizza servizi di terze parti per analizzare
