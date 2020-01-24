@@ -6,11 +6,12 @@ image: /assets/images/projects/IPFS/ipfs-desktop.png
 headerImage: true
 tag:
 - blockchain
-category: projects
+category: blog
 author: jaack
 description: Join the decentralization!
 published: true
 ---
+<pre>Nota: questa piccola guida fa parte di una serie di guide per conoscere e sviluppare su IPFS. <a href="{{base}}/distribuire-sito-web-ipfs">Clicca qui</a> per andare alla pagina principale della guida.</pre>
 
 Per installare un nodo IPFS, le istruzioni sono molto semplici.
 

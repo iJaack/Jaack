@@ -6,7 +6,7 @@ image: /assets/images/markdown.jpg
 headerImage: true
 tag:
 - blockchain
-category: projects
+category: blog
 author: jaack
 description: Funziona con i siti statici ed è quasi tutto user-friendly
 published: true
