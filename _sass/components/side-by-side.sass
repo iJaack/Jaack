@@ -1,43 +1,46 @@
 .side-by-side
     @media #{$above}
-        width: 130%
-        margin: 6rem 0 6rem -15%
+        width: 120%
+        margin: 0rem 0 0rem
 
     @media #{$below}
         width: 100%
-        margin: 4rem 0
+        margin: 2rem 0
 
-    > .toleft,
+    > .toleft
+        display: inline-block
+        width: 37%
+
     > .toright
         display: inline-block
-        width: 47.5%
+        width: 35%
 
         @media #{$below}
             img
                 text-align: center
-                display: block
-                margin: 0 auto
+                display: inline-block
+                padding: 0.8rem
 
     > .toleft
         @media #{$above}
-            margin-right: 2%
+            margin-right: 1%
 
         @media #{$below}
-            width: 100%
-            margin: 0 0 4rem 0
+            width: 50%
+            margin: 0 0 1rem 0
 
     > .toright
         @media #{$above}
-            margin-left: 2%
+            margin-left: 1%
             vertical-align: top
 
         @media #{$below}
-            width: 100%
-            margin: 0 0 4rem 0
+            width: 32.5%
+            margin: 0 0 0 2rem
 
     > .toleft > p,
     > .toright > p
-        margin: 0 0 4rem 0
+        margin: 0 0 2rem 0
 
         @media #{$below}
             margin: 0

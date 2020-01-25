@@ -3,12 +3,21 @@ title: Vita da Millennial - Podcast
 layout: page
 description: Un podcast per raccontare le sfide di un millennial, registrato da Giacomo Barbieri
 ---
-
+<div class="side-by-side">
+<div class="toleft">
 <img class="image" src="{{base}}/assets/images/podcast/VitaDaMillennial_logo_podcast.png" alt="Vita da Millennial Podcast">
+</div>
 
-<a href="https://podcasts.apple.com/it/podcast/vita-da-millennial/id1491071753"><img class="image" src="{{base}}/assets/images/podcast/Apple_Podcasts_Listen.jpg" align="middle"></a>
+<div class="toright">
+<a href="https://podcasts.apple.com/it/podcast/vita-da-millennial/id1491071753"><img class="image" src="{{base}}/assets/images/podcast/Apple_Podcasts_Listen.png"></a>
 
-<a href="https://open.spotify.com/show/3n2nXoWafjEx87EJyZ14b8"><img class="image" src="{{base}}/assets/images/podcast/Spotify_Podcast_Listen.png" align="middle"></a>
+<a href="https://open.spotify.com/show/3n2nXoWafjEx87EJyZ14b8"><img class="image" src="{{base}}/assets/images/podcast/Spotify_Podcast_Listen.png"></a>
+
+<a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9hbmNob3IuZm0vcy8yYWZmZTJjL3BvZGNhc3QvcnNz"><img class="image" src="{{base}}/assets/images/podcast/Google_Podcasts_Listen.png"></a>
+
+<a href="https://radiopublic.com/vita-da-millennial-WP4AOv"><img class="image" src="{{base}}/assets/images/podcast/RadioPublic_Listen.png"></a>
+</div>
+</div>
 
 Cercando su Google, i risultati di ricerca sulla parola ‘Millennial’ producono poca testimonianza tangibile. Cercando su Amazon, invece, escono fuori 7 libri su come assumere i millennial, come funziona il loro mondo: tutti libri scritti da persone hanno un’età decisamente diversa da quella di un millennial. Molti di questi libri, inoltre, raccontano la vita del millennial statunitense, di quello asiatico e di un mondo che in Italia non esiste ancora, o forse non esisterà mai.
 
