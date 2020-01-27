@@ -133,7 +133,7 @@ Oggi, dopo aver imparato che tenere le mie crypto sugli exchange non è una buon
 
 Ma non potevo controllare tutti i wallet uno per uno ogni volta che avessi avuto bisogno di avere una visione d'insieme. Per trovare **CoinStats** ci ho messo un bel po' di tempo, ma alla fine ne sono rimasto soddisfatto: basta inserire le chiavi pubbliche dei wallet e le chiavi API degli exchange utilizzati per avere tutto insieme. Ora CoinStats fornisce anche un wallet che supporta oltre 220 monete, ma bisognerebbe trasferire tutto, incorrendo in commissioni.
 
-  [Guarda il mio portafoglio crpyto](https://coinstats.app/p/shoYj8) | [Scarica CoinStats](https://coinstats.app)
+  [Guarda il mio portafoglio crypto](https://coinstats.app/p/shoYj8) | [Scarica CoinStats](https://coinstats.app)
 
 # Come pianifico con successo: Google Sheet
 
@@ -153,4 +153,4 @@ Spero di essere stato sufficientemente esaustivo. Questo modello non è definiti
 
 {% include changes.html %}
 
-*22 dicembre 2019: Questa pagina è stata aggiornata sostituendo Illimity con FINECO, rimuovendo Curve e Yolt e sostituendo AMEX Oro con AMEX Platino
+*22 dicembre 2019: Questa pagina è stata aggiornata sostituendo Illimity con FINECO, rimuovendo Curve e Yolt e sostituendo AMEX Oro con AMEX Platino*
