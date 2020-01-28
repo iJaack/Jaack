@@ -7,25 +7,21 @@
 %}{% assign showHeader = true %}{% endif %}
 
 {% if showHeader == true %}
-    <header class="header-home {% if site.animation %}animated{% endif %}">
-        {% if site.about %}
-            <a class="link" href="{{base}}/about">
-                <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{base}}/{{ site.picture }}{% endif %}" />
-            </a>
-        {% else %}
-            <span class="link">
-                <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{base}}/{{ site.picture }}{% endif %}" />
-            </span>
-        {% endif %}
+  <header class="header-home {% if site.animation %}animated{% endif %}">
+    {% if site.about%}
+      <a class="link" href="{{base}}/about">
+        <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{base}}/{{ site.picture }}{% endif %}" />
+      </a>
+    {% endif %}
 
-        <h1 class="title">{{ site.name }}</h1>
-        <h2 class="description">{{ site.bio }}</h2>
-        {% if page.description %}
-          <meta name="description" content="{{ page.description }}">
-        {% endif %}
+    <h1 class="title">{{ site.name }}</h1>
+    <h2 class="description">{{ site.bio }}</h2>
+    {% if page.description %}
+      <meta name="description" content="{{ page.description }}">
+    {% endif %}
 
-        {% include social-links.html %}
-    </header>
+    {% include social-links.html %}
+  </header>
 {% endif %}
 
 {% include nav.html %}

@@ -6,6 +6,8 @@ description: Chi è Giacomo Barbieri, tech blogger e community manager
 
 <img class="image" src="{{base}}/assets/images/Foto-profilo-2020.jpg">
 
+<h3 align="center"><a href="{{base}}/en/about/">Read this in English</a></h3>
+
 <p>Ho sempre avuto difficoltà a definire la mia persona.</p>
 
 <p>Credo questo sia un grosso problema, ma mi piace pensare che voglio rimanere con questo problema fino ai 30 anni. Credo che non sapersi descrivere, alla mia età, sia un modo per poter dire di saper fare un po' di tutto. Di essere in grado di adattarsi velocemente.</p>
