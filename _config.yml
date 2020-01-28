@@ -85,6 +85,54 @@ show-author: true
 # do you want some animations?
 animation: true
 
+## transation tree
+t:
+  it:
+    home:
+      name: "Home"
+      url: "/"
+    about:
+      name: "Chi sono"
+      url: "/about/"
+    podcast:
+      name: "Podcast"
+      url: "/podcast/"
+    blog:
+      name: "Blog"
+      url: "/blog/"
+    projects:
+      name: "Progetti"
+      url: "/projects/"
+    newsletter:
+      name: "Newsletter"
+      url: "/newsletter/"
+    cookies:
+      name: "Cookie Policy"
+      url: "/cookies/"
+  en:
+    home:
+      name: "Home"
+      url: "/"
+    about:
+      name: "Chi sono"
+      url: "/about-en/"
+    podcast:
+      name: "Podcast"
+      url: "/podcast-en/"
+    blog:
+      name: "Blog"
+      url: "/blog-en/"
+    projects:
+      name: "Progetti"
+      url: "/projects-en/"
+    newsletter:
+      name: "Newsletter"
+      url: "/newsletter-en/"
+    cookies:
+      name: "Cookie Policy"
+      url: "/cookies-en/
+
+
 plugins:
   - jekyll-seo-tag
   - jekyll-gist

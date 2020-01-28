@@ -27,6 +27,15 @@ layout: compress
 
     {% include pocket.html %}
 
+    {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+    {% for post in posts %}
+      <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url }}" />
+    {% endfor %}
+    {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+    {% for page in pages %}
+      <link rel="alternate" hreflang="{{ page.lang }}" href="{{ page.url }}" />
+    {% endfor %}
+
     <link rel="canonical" href="{{base}}{{ page.url | replace:'index.html','' }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{base}}{{ "/feed.xml" }}" />
 
