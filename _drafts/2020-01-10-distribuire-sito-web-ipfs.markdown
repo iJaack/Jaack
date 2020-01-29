@@ -1,8 +1,8 @@
 ---
 title: "Come ho distribuito il mio sito web su IPFS con ipfs-deploy"
 layout: post
-date: 2020-01-10 11:00
-image: /assets/images/markdown.jpg
+date: 2020-01-30 12:00
+image: /assets/images/projects/IPFS/decentralizzare-web-ipfs.svg
 headerImage: true
 tag:
 - blockchain
@@ -31,3 +31,6 @@ Per iniziare, bisogna vedere i requisiti:
 - **npm** installato ([scarica npm](https://nodejs.org/en/download/))
 - consigliato: nodo IPFS installato in locale - [Come installare un nodo IPFS]({{base}}/installare-nodo-ipfs)
 - un account su un servizio di pinning dei dati, consigliato con Pinata - [Come configurare il servizio di pinning Pinata]({{base}}/configurare-pinning-pinata-ipfs)
+- Un account su Cloudflare per il servizio DNS - [Come configurare il proprio sito web con Cloudflare]() Coming Soon
+
+### istruzioni
