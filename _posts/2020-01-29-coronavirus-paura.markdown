@@ -32,7 +32,7 @@ Come si è morto di SARS.
 
 Sono andato a vedere cosa è successo con SARS e con MERS (quest'ultimo è un virus che è partito dall'Arabia Saudita). Con SARS il virus è partito da un animale, il gatto civetta, mentre con MERS dai dromedari. Ho studiato un po' la situazione sul sito ufficiale dell'Organizzazione Mondiale della Sanità e ho trovato dei dati che mi hanno confortato.
 
-<img class="image" src="{{base}}/assets/images/MERS-epicure-July-2019.png" alt="La distribuzione temporale dei casi di MERS fino al 2019">
+<img class="image" src="{{base}}/assets/images/MERS-epicurve-July-2019.png" alt="La distribuzione temporale dei casi di MERS fino al 2019">
 
 Ho capito, per esempio, che le persone ancora oggi si ammalano di MERS: sono poche, certo, e sono tutte in Arabia Saudita. Un po' come quando è possibile prendere la malaria in alcune zone dell'Africa.
 
