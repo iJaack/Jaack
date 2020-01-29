@@ -42,7 +42,7 @@ Poi ho scoperto che SARS, MERS e nCov (quest'ultimo il nome del virus di questo 
 
 Sono andato poi a vedere le vittime della MERS, che non è iniziata in Cina. E mi sono accorto che ci sono stati 3.000 casi.
 
-<img class="image" src="SOURCE" alt="{{base}}/assets/images/Casi-MERS-2019.png" alt="I dati sui casi della MERS, 2019, Organizzazione Mondiale della Sanità">
+<img class="image" src="{{base}}/assets/images/Casi-MERS-2019.png" alt="I dati sui casi della MERS, 2019, Organizzazione Mondiale della Sanità">
 
 Allora mi è venuto un dubbio: perché gli infettati dalla SARS sono stati cos tanti di più degli infettati dalla MERS? Probabilmente perché in Cina *ci sono proprio più persone*. Allora sono andato su Google e ho cercato i dati sulla popolazione dell'Arabia Saudita e della Cina nel momento delle due epidemie.
 
