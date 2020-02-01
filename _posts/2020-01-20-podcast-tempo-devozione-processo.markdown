@@ -12,7 +12,7 @@ description: La trascrizione della 2a puntata della 2a stagione di Vita da Mille
 published: true
 ---
 
-<iframe src="https://anchor.fm/jaack/embed/episodes/Sul-tempo-e-la-devozione-al-processo-eaa04a" height="300px" width="810px" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://anchor.fm/jaack/embed/episodes/Sul-tempo-e-la-devozione-al-processo-eaa04a" height="180px" width="810px" frameborder="0" scrolling="no"></iframe>
 
 Qualche giorno fa mi è venuto in mente, andando a mettere l’acqua per il caffè per la seconda volta durante la giornata, della differenza nella nostra percezione del tempo quando le attività vengono **pianificate** o si fanno senza pianificazione.
 
