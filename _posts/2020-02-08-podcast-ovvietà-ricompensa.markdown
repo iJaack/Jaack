@@ -53,7 +53,11 @@ Sarebbe un mondo in cui l’uomo non ha più un **incentivo** a lavorare perché
 Se un uomo ha tutto, perché dovrebbe sforzarsi per avere qualcosa che già ha?
 Questo mondo sarebbe piatto, monotono, e privo di progresso. Perché nessuno avrebbe più motivo di **progredire**.
 
-Oggi, per esempio, Elon Musk lavora per una ricompensa molto grande: la **salute del pianeta**. L’insegnate della scuola media della cittadina in montagna lavora per portare a casa del denaro con cui lui o lei può fare una vacanza, cambiare aria.
+<s>Oggi, per esempio, Elon Musk lavora per una ricompensa molto grande: la salute del pianeta. L’insegnate della scuola media della cittadina in montagna lavora per portare a casa del denaro con cui lui o lei può fare una vacanza, cambiare aria.</s>
+
+[ Mi è stato fatto notare che ho avuto *"una leggerezza nel dire che la ricompensa di Elon Musk sia un pianeta piú in salute, e quella di un’insegnante i soldi per andare in vacanza."* È sembrata *"un’edulcorazione dell’imprenditoria capitalista e un togliere la dignitá di vocazione ad uno dei pochi mestieri in cui quella vocazione é rimasta."*
+
+Lungi da me voler dire sminuire il lavoro per uno o per un altro. So benissimo che il ruolo dell'insegnante è di fondamentale importanza e chi lo fa per vocazione rende un valore immenso alla società e all'individuo. Io stesso ho ricordo particolarmente professori che hanno segnato, in un modo o nell'altro, il mio approccio alla cultura e reso in parte chi sono oggi (grazie Rosalba, Giulia, Carlo, Mariagrazia, fra tutti). La mia voleva essere un'esemplificazione che, effettivamente, si è rivelata troppo semplicistica. *(Grazie Stefano per la segnalazione)* ]
 
 Io lavoro per **condividere il mio sapere** e fare divulgazione, per far scattare una scintilla nella testa di chi mi legge o mi ascolta. Ognuno ha la propria ricompensa. Se non ci fosse una ricompensa, che mondo vuoto sarebbe?
 
