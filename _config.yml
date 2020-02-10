@@ -94,7 +94,7 @@ plugins:
   - jekyll-sitemap
 
 jekyll-mentions:
-    base_url: https://github.com
+    base_url: https://twitter.com
 
 compress_html:
     ignore:
