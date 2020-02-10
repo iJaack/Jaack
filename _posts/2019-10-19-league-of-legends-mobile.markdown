@@ -3,7 +3,7 @@ title: "League of Legends su mobile sarà croce e delizia"
 layout: post
 date: 2019-10-19 18:00
 image: /assets/images/League-of-legends-wild-rift.png
-headerImage: false
+headerImage: true
 tag:
 - giochi
 category: blog
@@ -12,9 +12,6 @@ description: League of Legends Wild Rift è in arrivo nel 2020
 published: true
 ---
 LOL arriva su mobile.
-
-<img class="image" src="{{base}}/assets/images/League-of-legends-wild-rift.png"
-alt="League of Legends: Wild Rift" />
 
 Potrebbe già finire così l'articolo, che si spiega da solo per chi ci gioca. O meglio,
 ognuno se lo spiega come vuole.

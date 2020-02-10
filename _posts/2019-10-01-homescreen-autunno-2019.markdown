@@ -3,7 +3,7 @@ title: "Homescreen per l'autunno 2019"
 layout: post
 date: 2019-10-01 13:00
 image: /assets/images/homescreen-estate-autunno-2019.jpg
-headerImage: false
+headerImage: true
 tag:
 - tech
 category: blog
@@ -15,8 +15,6 @@ published: true
 E così siamo arrivati ad Ottobre.
 
 Mi sono preso un mese di tempo per eseguire una transizione ragionata sul mio workflow quotidiano passando per la homescreen del mio iPhone.
-
-<img class="image" src="https://jaack.me/assets/images/homescreen-estate-autunno-2019.jpg" alt="Homescreen Estate - Autunno 2019" />
 
 A sinistra, la disposizione delle app fino a ieri, che era la disposizione 'estiva'. A destra, quella 'invernale', che tiene conto di ragionamenti del tutto diversi, ma che non cambia drasticamente la pelle del mio iPhone.
 

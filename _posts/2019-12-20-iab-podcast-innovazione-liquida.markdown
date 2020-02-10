@@ -3,7 +3,7 @@ title: "IAB Podcast - L'innovazione liquida | IAB Forum 2019"
 layout: post
 date: 2019-12-20 15:00
 image: /assets/images/projects/IAB-Forum-2019/iab-podcast-giacomo.png
-headerImage: false
+headerImage: true
 tag:
 - culture
 category: projects
@@ -34,8 +34,6 @@ Aggiornamento: è uscito il podcast, qui in basso i link per ascoltare tutte le 
     <a href="https://podcasts.apple.com/it/podcast/iab-podcast/id1488937440"><img class="image" src="{{site.url}}/assets/images/podcast/Spotify_Podcast_Listen.png"></a>
   </div>
 </div>
-
-<img class="image" src="{{base}}/assets/images/projects/IAB-Forum-2019/iab-podcast-giacomo.png" alt="IAB Podcast Giacomo Barbieri" />
 
 ---
 ---

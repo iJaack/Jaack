@@ -2,8 +2,8 @@
 title: "Blockchain 201: IPFS e token non fungibili"
 layout: post
 date: 2019-11-11 17:00
-image: assets/images/Blockchain-201_IPFS-e-token-non-fungibili_2019-10-10_cover.png
-headerImage: false
+image: /assets/images/projects/blockchain-201/Blockchain-201.jpg
+headerImage: true
 tag:
 - blockchain
 category: projects
@@ -28,8 +28,6 @@ al Talent Garden di Roma Ostiense, quello appena aperto, il 9 novembre scorso.
 <img class="image" src="{{base}}/assets/images/Blockchain-201_IPFS-e-token-non-fungibili_2019-10-10_cover.png" />
 <a class="link" href="{{base}}/assets/docs/Blockchain-201_IPFS-e-token-non-fungibili_2019-10-10.pdf">
 Scarica le slide del mio intervento</a>
-
-<img class="image" src="{{base}}/assets/images/projects/blockchain-201/Blockchain-201.jpg" />
 
 ## IPFS: Interplanetary File System
 
