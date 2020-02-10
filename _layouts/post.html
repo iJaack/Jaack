@@ -15,9 +15,28 @@ layout: page
     <time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%A. %B %d, %Y" }}</time>
     <p>{% if site.read-time %} {% include read-time.html %}{% endif %}</p>
 </span>
+<div class="beeline">
+  <div class="beeline-button hidden xs">
+    <a class="beeline-button-ref">
+      <button class="beeline-btn-grey-rif active" data-color="bright">Bright
+        </button>
+        <button class="beeline-btn-grey-rif" data-color="dark">Dark
+        </button>
+        <button class="beeline-btn-grey-rif" data-color="blues">Blues
+        </button>
+        <button class="beeline-btn-grey-rif" data-color="gray">Bright
+        </button>
+        <button class="beeline-btn-grey-rif" data-color="inverted">Inverted
+        </button>
+        <button class="beeline-btn-grey-rif" data-color="off">Off
+        </button>
+    </a>
+  </div>
+  </div>
+<div class="color">
+  {{content}}
+</div>
 
-{{content}}
-<script src=“{{base}}/assets/js/beeline-reader.js”></script>
 {% if site.post-advance-links contains page.category %}
     <div class="blog-navigation">
         {% if page.previous.hidden == false and page.previous.url %}
