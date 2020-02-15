@@ -11,6 +11,9 @@ author: jaack
 description: Le app sul dock del mio MacBook Pro, il dispositivo più importante per il mio lavoro
 published: true
 ---
+
+<h4 align="center"><a href="{{base}}/assets/docs/2020-wallpaper-macbook-pro@3x.png">Scarica lo sfondo (HD)</a></h4>
+
 macOS è il fulcro della mia attività lavorativa e creativa. Il laptop che uso ora, un MacBook Pro 13" del 2019 con processore i5, 256GB di memoria e 16 GB di RAM, è l'hub da cui partono tutte le mie attività. [Come già spiegato]({{base}}/ipados-13-ipad-computer/), ho deciso di non fare il passaggio all'esperienza completamente mobile con un iPad Pro, perché sto sempre più intensificando il mio lavoro con lo sviluppo di codice (ho in programma un po' di progetti web), e scrivere a smanettare su questo mio sito personale mi sta facendo imparare tantissimo, e non voglio mollare questa mia nuova parte di me.
 
 Mi ero prefissato di scrivere questo articolo da un po' di tempo, e decidere come impostare il dock del mio laptop una volta e per tutte per tutto l'anno mi ha fatto fare dei ragionamenti che ho forzato e che sono contento di aver fatto.

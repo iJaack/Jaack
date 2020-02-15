@@ -1,6 +1,6 @@
 ---
 layout: page
-Title: Routine
+Title: Workflows
 description: Routine e workflows per una vita più efficiente e produttiva
 ---
 
@@ -23,7 +23,7 @@ qui in basso.
 L'iPhone è il fulcro delle mie attività, in mobilità e in ufficio o a casa.
 Non perché iOS sia migliore di Android in qualche modo, anzi, gli ultimi smartphone Android mi piacciono sempre di più. Come dico sempre, è tutta una questione di ecosistema: su iOS ci sono app che non ci sono su Android, o che su Android hanno un'interfaccia meno intuitiva e, di conseguenza, meno usabile con facilità durante le operazioni quotidiane.
 
-[L'homescreen attuale del mio iPhone: autunno 2019](https://jaack.me/homescreen-estate-autunno-2019)
+[L'homescreen attuale del mio iPhone: autunno 2019]({{base}}/homescreen-estate-autunno-2019)
 
 ## iPad
 
@@ -32,10 +32,13 @@ Non perché iOS sia migliore di Android in qualche modo, anzi, gli ultimi smartp
 ## Android
 
 ## macOS (laptop)
+Il MacBook è il cuore delle mie operazioni di tutti i giorni: se con l'iPhone controllo con un attimo tutti gli aspetti della mia vita quotidiana, con il MacBook *faccio le cose*.
+
+[Il dock di macOS - 2020]({{base}}/homescreen-2020-macos)
 
 ## Windows (desktop)
 
-# Le app e i servizi che uso (in ordine alfabetico)
+# Le app e i servizi che uso
 
 - Agenda
 
@@ -61,8 +64,6 @@ Non perché iOS sia migliore di Android in qualche modo, anzi, gli ultimi smartp
 
 - Messenger
 
-- Scribd
-
 - Strava
 
 - Elevate
@@ -75,7 +76,11 @@ Non perché iOS sia migliore di Android in qualche modo, anzi, gli ultimi smartp
 
 - Goodreads
 
-- Musica
+- Apple Music
+
+- Exist.io
+
+- 1Password
 
 # I workflow che utilizzo
 
