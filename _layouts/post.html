@@ -16,18 +16,17 @@ layout: page
     <p>{% if site.read-time %} {% include read-time.html %}{% endif %}</p>
 </span>
 <div class="beeline">
-  <div class="beeline-button hidden xs">
+  <div class="beeline-button">
     <a class="beeline-button-ref" href="http://www.beelinereader.com/education/?utm_source=rifpp">
-      <img src="/assets/images/Bb-logo-gradient.png"/>About BeeLine</a>
+      <img src="/assets/images/Bb-logo-gradient.png"/></a>
       <button class="beeline-btn-grey-rif active" data-color="bright">Bright</button>
-      <button class="beeline-btn-grey-rif" data-color="blues">Blues</button>
-      <button class="beeline-btn-grey-rif" data-color="inverted">Inverted</button>
-      <button class="beeline-btn-grey-rif" data-color="off">Off</button>
+      <button class="beeline-btn-blues-rif" data-color="blues">Blues</button>
+      <button class="beeline-btn-inverted-rif" data-color="inverted">Inverted</button>
+      <button class="beeline-btn-off-rif" data-color="off">Off</button>
     </div>
   </div>
-  <div class="color">
+
     {{content}}
-  </div>
 
 {% if site.post-advance-links contains page.category %}
     <div class="blog-navigation">
