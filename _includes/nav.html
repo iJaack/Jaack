@@ -1,40 +1,27 @@
 <nav class="{% if page.title == "Home" %}nav-home{% else %}nav{% endif %}">
-    <ul class="list">
+  <ul class="list">
+    <li class="item">
+      <a class="link" href="{{base}}/podcast">Podcast</a>
+    </li>
 
-      {% if page.title != "Podcast" %}
-      <li class="item">
-        <a class="link" href="{{base}}/podcast">Podcast</a>
-      </li>
-      {% endif %}
+    <li class="item">
+      <a class="link" href="{{base}}/blog">Blog</a>
+    </li>
 
-        {% if site.blog == true %}
-            {% if page.title != "Blog" %}
-                <li class="item">
-                    <a class="link" href="{{base}}/blog">Blog</a>
-                </li>
-            {% endif %}
-        {% endif %}
+    <li class="item">
+      <a class="link" href="{{base}}/workflows">Workflows</a>
+    </li>
 
-        {% if site.projects == true %}
-            {% if page.title != "Progetti" %}
-                <li class="item">
-                    <a class="link" href="{{base}}/projects">Projects</a>
-                </li>
-            {% endif %}
-        {% endif %}
+    <li class="item">
+      <a class="link" href="{{base}}/about">Me</a>
+    </li>
 
-        {% if site.about == true %}
-            {% if page.title != "Io" %}
-                <li class="item">
-                    <a class="link" href="{{base}}/about">Me</a>
-                </li>
-            {% endif %}
-        {% endif %}
+    <li class="item">
+      <a class="link" href="{{base}}/projects">Projects</a>
+    </li>
 
-        {% if page.title != "Newsletter" %}
-        <li class="item">
-          <a class="link" href="{{base}}/newsletter">Newsletter</a>
-        </li>
-        {% endif %}
-    </ul>
+    <li class="item">
+      <a class="link" href="{{base}}/newsletter">Newsletter</a>
+    </li>
+  </ul>
 </nav>
