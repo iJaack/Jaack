@@ -15,6 +15,7 @@ published: true
 
 <img class="image" src="{{base}}/assets/images/routines/2020/homescreen-2020-iphone-page1.png" alt="Homescreen iPhone, pagina 1, 2020">
 
+
 ## Seconda pagina: poco usati e da evitare
 
 <img class="image" src="{{base}}/assets/images/routines/2020/homescreen-2020-iphone-page2.png" alt="Homescreen iPhone, pagina 2, 2020">

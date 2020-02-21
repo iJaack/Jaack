@@ -6,7 +6,7 @@ image: /assets/images/projects/IPFS/decentralizzare-web-ipfs.svg
 headerImage: true
 tag:
 - blockchain
-category:
+category: projects
 author: jaack
 description: Funziona con i siti statici ed è quasi tutto user-friendly
 published: true
@@ -31,8 +31,6 @@ Per iniziare, bisogna vedere i requisiti:
 - **npm** installato ([scarica npm](https://nodejs.org/en/download/))
 - consigliato: nodo IPFS installato in locale - [Come installare un nodo IPFS]({{base}}/installare-nodo-ipfs)
 - un account su un servizio di pinning dei dati, consigliato con Pinata - [Come configurare il servizio di pinning Pinata]({{base}}/configurare-pinning-pinata-ipfs)
-- Un account su Cloudflare per il servizio DNS - [Come configurare il proprio sito web con Cloudflare](Coming Soon)
+- Un account su Cloudflare per il servizio DNS
 
 ### Istruzioni
-
-*Coming soon*
