@@ -11,6 +11,7 @@ author: jaack
 description: Estratto della 6a puntata della 2a stagione di Vita da Millennial
 published: true
 ---
+<iframe src="https://anchor.fm/jaack/embed/episodes/Il-falso-mito-del-Deep-Work-eavtf1" height="180px" width="810px" frameborder="0" scrolling="no"></iframe>
 
 Ci sono delle conversazioni che si fanno perché ne vale la pena; altre invece tutti le pensano ma nessuno ha il coraggio di farle; altre ancora perché ripeterle non è mai abbastanza, ma ognuno inizia la conversazione a modo suo, ed è questo che da valore.
 Sì, non è semplice capire di cosa sto parlando, sono molto vago, decisamente troppo. Ci arrivo, piano piano.
