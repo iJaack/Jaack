@@ -31,7 +31,7 @@ Una volta fatto questo, bisogna disporre le icone secondo tre sistemi differenti
 
 ## Pagina principale: frequenti
 
-<img class="image" src="{{base}}/assets/images/routines/2020/homescreen-2020-iphone-page1.png" alt="Homescreen iPhone, pagina 1, 2020">
+<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-iphone-page1.png" alt="Homescreen iPhone, pagina 1, 2020">
 
 La prima pagina è dedicata alle app **frequenti**, ovvero le app che
 - già si usano frequentemente
@@ -48,7 +48,7 @@ Io personalmente, poi, utilizzo due metodi per la disposizione delle icone in qu
 
 ## Seconda pagina: poco usati e da evitare
 
-<img class="image" src="{{base}}/assets/images/routines/2020/homescreen-2020-iphone-page2.png" alt="Homescreen iPhone, pagina 2, 2020">
+<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-iphone-page2.png" alt="Homescreen iPhone, pagina 2, 2020">
 
 In ogni smartphone ci sono app che usiamo di più e che usiamo di meno. Ma ci sono anche quelle app che abbiamo, ma che vogliamo utilizzare solo lo stretto necessario. Quelle sono le app da mettere nella seconda pagina, dedicata alle app **poco usate e da evitare**.
 
@@ -58,13 +58,13 @@ In questa pagina ci sono app di lavoro (Slack, Monday) che è meglio usare il me
 
 ## Terza pagina: cartelle
 
-<img class="image" src="{{base}}/assets/images/routines/2020/homescreen-2020-iphone-page3.png" alt="Homescreen iPhone, pagina 3, 2020">
+<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-iphone-page3.png" alt="Homescreen iPhone, pagina 3, 2020">
 
 La terza pagina è molto semplice: se rimangono app, si dispongono in **cartelle**. Io personalmente ho le app Apple e tutte le app che hanno un'interfaccia che uso poco (ad esempio: non uso quasi mai l'app di 1Password perché uso direttamente la funzionalità di riempimento automatico in tutto il sistema operativo) in una stessa cartella 'Altro', e poi raggruppo le altre app in cartelle che tendenzialmente hanno come nome il verbo che le rappresenta: per esempio, JustEat, TheFork e Quandoo sono tutte app che mi permettono di mangiare, quindi la cartella si chiama **Eat**; Netflix, VVVID, DAZN, Amazon Prime Video sono tutte app che mi permettodono di guardare (serie TV, film, ecc.) quindi la cartella si chiama **Watch**; e così via.
 
 ## Pagina widget: occhiate veloci
 
-<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-iphone-widget.png" alt="Homescreen iPhone, pagina widget, 2020"
+<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-iphone-widget.png" alt="Homescreen iPhone, pagina widget, 2020">
 
 La schermata dei widget la uso poco, ad essere sincero, ma ho comunque configurato secondo un piccolo schema: le app i cui widget mi danno il numero sufficiente di informazioni di cui ho bisogno senza aprire l'app. Ed in generale, nonostate in foto abbia messo 11 widget, in realtà uso davvero solo i primi 4, che vedo senza scorrere: batteria, calendario (Fantastical), contatore internet (MyVodafone) e meteo (CARROT Weather).
 
