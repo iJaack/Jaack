@@ -4,7 +4,7 @@ Title: Workflows
 description: Routine e workflows per una vita più efficiente e produttiva
 ---
 
-*Questa pagina non è completa*
+*Questa pagina è in costruzione*
 
 Questa pagina non è un post, non è una recensione né un progetto. È la mia vita.
 Il modo in cui la mia vita è organizzata e il modo in cui alcune cose accadono
@@ -27,13 +27,29 @@ qui in basso.
 L'iPhone è il fulcro delle mie attività, in mobilità e in ufficio o a casa.
 Non perché iOS sia migliore di Android in qualche modo, anzi, gli ultimi smartphone Android mi piacciono sempre di più. Come dico sempre, è tutta una questione di ecosistema: su iOS ci sono app che non ci sono su Android, o che su Android hanno un'interfaccia meno intuitiva e, di conseguenza, meno usabile con facilità durante le operazioni quotidiane.
 
-[L'homescreen attuale del mio iPhone: autunno 2019]({{base}}/homescreen-estate-autunno-2019)
+[L'homescreen attuale del mio iPhone: 2020]({{base}}/homescreen-iphone-2020)
+
+#### Homescreen precedenti
+
+[Estate-autunno]({{base}}/homescreen-estate-autunno-2019)
 
 ### iPad
 
+#### Homescreen precedenti
+
+...
+
 ### Apple Watch
 
+#### Homescreen precedenti
+
+...
+
 ### Android
+
+#### Homescreen precedenti
+
+...
 
 ### macOS (laptop)
 
@@ -42,6 +58,10 @@ Non perché iOS sia migliore di Android in qualche modo, anzi, gli ultimi smartp
 Il MacBook è il cuore delle mie operazioni di tutti i giorni: se con l'iPhone controllo con un attimo tutti gli aspetti della mia vita quotidiana, con il MacBook *faccio le cose*.
 
 [Il dock di macOS - 2020]({{base}}/homescreen-2020-macos)
+
+#### Homescreen precedenti
+
+...
 
 ### Windows (desktop)
 
@@ -54,10 +74,12 @@ Il MacBook è il cuore delle mie operazioni di tutti i giorni: se con l'iPhone c
 - Balance (solo iOS)
 - CARROT Weather
 - Day One
+- Exist.io
 - Fantastical
 - Fattura24
 - Feedly
 - Good Morning Italia
+- Goodreads
 - Google Foto
 - Pocket
 - Telegram
@@ -68,9 +90,6 @@ Il MacBook è il cuore delle mie operazioni di tutti i giorni: se con l'iPhone c
 - Raindrop.io
 - Revolut
 - Waze
-- Goodreads
-- Exist.io
-
 
 ## I workflow che utilizzo
 
