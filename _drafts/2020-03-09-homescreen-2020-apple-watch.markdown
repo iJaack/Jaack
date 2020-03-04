@@ -1,11 +1,11 @@
 ---
 title: "Homescreen 2020 - WatchOS"
 layout: post
-date: 2020-02-20 12:00
-image: /assets/images/markdown.jpg
+date: 2020-03-09 12:00
+image: /assets/images/routines/homescreen/2020/homescreen-2020-watchos-cover.png
 headerImage: true
 tag:
--
+- technology
 category: blog
 author: jaack
 description: Il mio metodo per usare l'Apple Watch come filtro dell'iPhone
