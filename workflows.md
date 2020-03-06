@@ -41,6 +41,12 @@ Non perché iOS sia migliore di Android in qualche modo, anzi, gli ultimi smartp
 
 ### Apple Watch
 
+<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-watchos-cover.png" alt="Homescreen Apple Watch, 2020">
+
+L'Apple Watch è il dispositivo che meno uso, più guardo, meglio lo sto usando. Non ho ancora trovato un metodo universale per configurarlo in maniera definitiva, ma ci sto lavorando.
+
+[L'homescreen attuale del mio Apple Watch: 2020]({{base}}/homescreen-2020-apple-watch)
+
 #### Homescreen precedenti
 
 ...
