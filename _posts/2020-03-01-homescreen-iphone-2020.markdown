@@ -13,6 +13,8 @@ description: Il Metodo Universale per Disporre le Icone sullo Smartphone (MUDIS)
 published: true
 ---
 
+<h4 align="center"><a href="{{base}}/assets/docs/2020-wallpaper-iphone-x.png">Scarica lo sfondo per iPhone X (HD)</a></h4>
+
 Nel corso del tempo, ho cercato di capire come posizionare le icone sul mio smartphone per essere più efficiente. Ho provato con la disposizione per colore, per utilizzo, per categoria, per naturalezza di visione (= le più usate disposte a F, perché il cervello usa gli occhi per leggere una pagina in questo modo).
 
 Tutto questo funzionava, ma solo in circostanze specifiche: mi rendevo conto che non ero mai sicuro di come fossero disposte, e ne mettevo in discussione la disposizione molto di frequente. Ma non trovavo mai un framework condiviso per **decidere come disporre le icone**, mettendo in discussione il layout anche una volta al giorno. In poche parole, ho cercato di rispondere alla domanda "come disporre le icone e capire quando è ora di cambiare?"
