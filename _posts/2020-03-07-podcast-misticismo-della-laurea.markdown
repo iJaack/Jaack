@@ -16,7 +16,7 @@ published: true
 
 <blockquote>“Ma quindi quando ti laurei?”</blockquote>
 
-Mi hanno fatto questa domanda decine, centinaia di volte negli ultimi anni. Ho sempre rispondo in un paio di modi: *“sto studiando, ma sai, nel frattempo lavoro anche, quindi vado lento”*, oppure *“eh, in questo momento ho messo in pausa per qualche mese, il lavoro mi occupa tutta la giornata, non finisco mai”*.
+Mi hanno fatto questa domanda decine, centinaia di volte negli ultimi anni. Ho sempre risposto in un paio di modi: *“sto studiando, ma sai, nel frattempo lavoro anche, quindi vado lento”*, oppure *“eh, in questo momento ho messo in pausa per qualche mese, il lavoro mi occupa tutta la giornata, non finisco mai”*.
 
 Ma non è mai così semplice.
 
