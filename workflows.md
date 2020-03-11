@@ -7,11 +7,10 @@ description: Routine e workflows per una vita più efficiente e produttiva
 *Questa pagina è in costruzione*
 
 Questa pagina non è un post, non è una recensione né un progetto. È la mia vita.
-Il modo in cui la mia vita è organizzata e il modo in cui alcune cose accadono
-per inerzia. Il modo in cui riesco a creare momenti casuali positivi per me e le persone che mi stanno intorno e con cui lavoro.
 
-È come se fosse il libro di me, ma non la mia biografia. E per questo è a capitoli, che si possono consultare, in maniera sparsa, usando la tabella dei contenuti
-qui in basso.
+Il modo in cui la mia vita è organizzata e il modo in cui alcune cose accadono per inerzia. Il modo in cui riesco a creare momenti casuali positivi per me e le persone che mi stanno intorno e con cui lavoro.
+
+È come se fosse il libro di me, ma non la mia biografia. E per questo è a capitoli, che si possono consultare, in maniera sparsa, usando la tabella dei contenuti qui in basso.
 
 ## Indice
 - [Homescreen](#La mia homescreen)
@@ -35,6 +34,12 @@ Non perché iOS sia migliore di Android in qualche modo, anzi, gli ultimi smartp
 
 ### iPad
 
+<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-ipad-cover.png" />
+
+L'iPad è il mio dispositivo di supporto: quando sono in mobilità supporta il mio MacBook (anche con l'estensione schermo con la funzionalità **Sidecar su macOS Calatina**), mentre quando sono a casa è uno schermo indipendente che sfrutto in contesti specifici.
+
+[L'homescreen attuale del mio iPad: 2020]({{base}}/homescreen-2020-ipad/)
+
 #### Homescreen precedenti
 
 ...
@@ -53,6 +58,10 @@ L'Apple Watch è il dispositivo che meno uso, più guardo, meglio lo sto usando.
 
 ### Android
 
+
+
+Dal 2019, uso uno smartphone Android con un'altra SIM come smartphone 'personale': quello che uso la sera e nel weekend, e che uso quando non voglio essere disturbato da impegni di lavoro. Ad oggi, ho un **Samsung Galaxy Note 10** a questo scopo, prima un **Huawei Mate 10**.
+
 #### Homescreen precedenti
 
 ...
@@ -70,6 +79,8 @@ Il MacBook è il cuore delle mie operazioni di tutti i giorni: se con l'iPhone c
 ...
 
 ### Windows (desktop)
+
+
 
 ## Le app e i servizi che uso
 
