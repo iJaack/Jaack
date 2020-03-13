@@ -1,5 +1,5 @@
 ---
-title: "8 cose che puoi fare per nella lotta contro il COVID-19"
+title: "8 cose che puoi fare per la lotta contro il COVID-19"
 layout: post
 date: 2020-03-13 21:00
 image: /assets/images/coronavirus-edicola.jpg
