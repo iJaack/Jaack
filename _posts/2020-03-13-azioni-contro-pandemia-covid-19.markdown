@@ -16,29 +16,28 @@ In questi giorni di frenesia digitale e di spasmodica attesa delle ore 18:00 per
 
 *Questo post potrebbe essere aggiornato con nuovi suggerimenti*
 
-### 1. Stare a casa
+<h3>1. Stare a casa</h3>
 
 Questo è ovvio, ma non si smette mai di ribadirlo. Fortunatamente, in Italia (diversamente da quanto è successo in Cina), possiamo andare ancora a correre, a fare le spesa, a portare fuori i cani.
 
-
-### 2. Non diffondere notizie se non hai una fonte
+<h3>2. Non diffondere notizie se non hai una fonte</h3>
 
 Non c'è altro da dire, non fatelo.
 
 
-### 3. Fare una donazione alle associazioni tramite Revolut
+<h3>3. Fare una donazione alle associazioni tramite Revolut</h3>
 
 <img class="image" src="{{base}}/assets/images/coronavirus-donazione-revolut.png" alt="Una donazione su Revolut" />
 
 Revolut, l'app di mobile banking, permette di fare donazioni anche piccolissime. Io l'ho fatta di 70 centesimi. Se tutti facessimo una donazione di 70 centesimi, si raccoglierebbero oltre 40 milioni di euro.
 
 
-### 4. Fare una donazione agli ospedali su GoFundMe**
+<h3>4. Fare una donazione agli ospedali su GoFundMe</h3>
 
 Su GitHub, dei volontari stanno raccogliendo un indice di tutte le raccolte fondi per gli ospedali. Basta anche un euro ad un solo ospedale per fare la differenza -> [https://github.com/colibri17/covid19-italy-fund-raising/blob/master/README.md](https://github.com/colibri17/covid19-italy-fund-raising/blob/master/README.md)
 
 
-### 5. Aiutare la ricerca con il tuo computer
+<h3>5. Aiutare la ricerca con il tuo computer</h3>
 
 Sì, ok, stiamo tutto il giorno al computer di questi tempi. Ma quando siamo a pranzo, o di notte quando dormiamo, potremmo lasciare che dei ricercatori sfruttino anche la potenza del nostro computer per trovare soluzioni a problemi globali come, in questo caso, la lotta al COVID-19.
 
@@ -46,11 +45,9 @@ Questo è possibile con Folding@Home, un servizio molto semplice: basta scaricar
 
 Qui il link per il download -> [https://foldingathome.org/](https://foldingathome.org/)
 
-
 ### 6. Ordinare una pizza
 
 Facciamo girare l'economia, ordinando una pizza a domicilio, se possiamo permettercelo.
-
 
 ### 7. Comprare il giornale
 
