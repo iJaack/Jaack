@@ -8,8 +8,7 @@ tag:
 - culture
 category: blog
 author: jaack
-description: Cose che puoi fare per aiutare concretamente l'umanità contro
-l'epidemia globale COVID-19 causava dal nuovo Coronavirus SARS-CoV-2
+description: Cose che puoi fare per aiutare concretamente l'umanità contro l'epidemia globale COVID-19 causata dal nuovo Coronavirus SARS-CoV-2
 published: true
 ---
 
