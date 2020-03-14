@@ -29,6 +29,9 @@ layout: page
         {% endif %}
     </div>
 {% endif %}
+
+{% include donation.html %}
+
 {% include newsletter.html %}
 
 {% if site.related %}
@@ -37,8 +40,4 @@ layout: page
 
 {% if site.show-author %}
     {% include author.html %}
-{% endif %}
-
-{% if site.disqus.categories contains page.category %}
-    {% include disqus.html %}
 {% endif %}

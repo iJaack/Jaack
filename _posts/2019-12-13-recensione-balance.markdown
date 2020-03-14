@@ -2,7 +2,7 @@
 title: "Balance è l'app che ti aiuta a meditare, davvero "
 layout: post
 date: 2019-12-13 10:00
-image: /assets/images/Balance_app_1.jpg
+image: /assets/images/Balance_app_1.png
 headerImage: true
 tag:
 - review
@@ -20,8 +20,6 @@ Volevo scrivere questa recensione da un po', ma non ho mai trovato la chiave
 in diretta competizione con Headspace. È un'app che aiuta a costruire un percorso
 di meditazione, giorno per giorno, iniziano con sessioni di *2-3 minuti* e
 continuando con sessioni di meditazione sempre più lunghe, complesse e avanzate.
-
-<img class="image" src="{{base}}/assets/images/Balance_app_1.png" alt="Balance">
 
 Prima di usare Balance, avevo già usato Headspace per qualche settimana. Avevo fatto
 alcune sessioni, ma non mi ero trovato benissimo. O meglio, le singole sessioni di

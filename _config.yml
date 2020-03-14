@@ -1,6 +1,6 @@
 # main text of home
 name: Giacomo Barbieri
-bio: Millennial blogger, community manager
+bio: Millennial Blogger, Community Expert
 
 # twitter summary info
 description: Community, Tech e Crypto
@@ -25,8 +25,8 @@ analytics-google: 'UA-50794519-4'
 
 # if you don't want comments in your posts, leave categories empty
 disqus:
-  shortname: jaack-me # enter this from your disqus account
-  categories: [blog] # only show disqus for posts that have these categories
+  shortname: # enter this from your disqus account
+  categories: # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
 facebook: ijaack94
@@ -46,7 +46,7 @@ medium: ijaack94
 authors:
     jaack:
         name: Giacomo Barbieri
-        bio: Millennial blogger, community manager
+        bio: Blogger with over 5 years of experience in blogs and newspapers,passionate about AI, 5G and blockchain. Never-ending learner of new technologies and approaches, I believe in the decentralized government and in the Internet of Money.
         external-image: false
         picture: assets/images/profilo-homepage-ig.png
         twitter: ijaack94
