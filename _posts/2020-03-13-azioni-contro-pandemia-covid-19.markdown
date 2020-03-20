@@ -1,5 +1,5 @@
 ---
-title: "8 cose che puoi fare per la lotta contro il COVID-19"
+title: "9 cose che puoi fare per la lotta contro il COVID-19"
 layout: post
 date: 2020-03-13 21:00
 image: /assets/images/coronavirus-edicola.jpg
@@ -56,5 +56,8 @@ alt="Riviste dall'edicola" />
 
 Allo stesso modo, invece di comprare il giornale in digitale, andiamo dal nostro edicolante di fiducia. Le edicole sono ancora aperte e offrono un servizio di distribuzione dell'informazione che non dobbiamo dare per scontato, soprattutto di questi tempi.
 
-### 8. Trovare altre 8 cose
+### 8. Donare il sangue
+Ci sono postazioni per farlo in moltissime città in questi giorni. Grazie Mike per la segnalazione.
+
+### 9. Trovare altre 8 cose
 Perché non ce ne sono mai abbastanza.
