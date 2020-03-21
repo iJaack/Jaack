@@ -74,7 +74,7 @@ But this is not accepted from other people, that are staying at home and can’t
 
 Yes, we’re becoming crazy, but so will you, Americans. You’re not in this phase yet, but you will be. You will be hating each other to preserve place for the ones that could have COVID-19, because if more people get tested, more people could be confirmed positive, isolated and contained, and so the virus will be contained, and the outbreak will stop fast. But that’s not going to happen I think. WHO says that this virus is here to stay for a long time (more than a few months),  and we need to get used to that.
 
-I stopped running. I prefer not having to discuss everyday about dull reasons, and sacrificing my needs for the greater good. Al least for now. Don't underestimate your place in the bigger picture. In pandemic times, every little action or discussion contributes to the greater flow of information. Remember that.
+I stopped running. I prefer not having to discuss everyday about dull reasons, but I understand I need to sacrifice my needs for the greater good. At least for now. Don't underestimate your place in the bigger picture. In pandemic times, every little action or discussion contributes to the greater flow of information. Remember that.
 
 ## 6. The “How f*****g much is this gonna last?” Phase: Hate Against Everyone
 
