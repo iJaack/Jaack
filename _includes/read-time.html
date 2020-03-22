@@ -2,8 +2,8 @@
     {% assign words = content | number_of_words %}
 
     {% if words < 250 %}
-        Tempo di lettura: 1 minuto!
+        Reading Time: 1 minute!
     {% else %}
-        Tempo di lettura: {{ words | divided_by:250 }}-{{ words | divided_by:180 }} minuti
+        Reading Time: {{ words | divided_by:250 }}-{{ words | divided_by:180 }} minutes
     {% endif %}
 </span>

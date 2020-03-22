@@ -46,21 +46,6 @@ poi smisto i soldi negli altri servizi/banche.
 
 [**Apri un conto Illimity usando il codice GIABAR94 per ricevere 25€ sul conto**](https://illimitybank.com)
 
-## Carta di credito American Express Platino
-
-Con la carta di credito ho deciso di sostenere solo due tipi
-di spese:
-* **Spese di Lavoro**, che poi avrò rimborsate;
-* **Spese Mensili** e **Spese Annuali Ricorrenti**;
-
-Questa carta è collegata al mio Conto Principale (Illimity).
-L'abbonamento annuale costa circa **720€**, ma facendo tante spese si accumula un numero di punti tale da poter riscattare l'abbonamento annuale a costo zero o estremamente ridotto.
-Io, per esempio, ho riscattato un'offerta di adesione per cui avevo subito 15.000 punti (circa 60€), e un'altra per cui al raggiungimento di 3.000€ di spesa nei primi tre mesi ho diritto ad altri 50.000 punti (circa 200€). Se fosse solo questo, mi costerebbe tantissimo, circa 460€ l'anno (720-60-200), ma per me il costo è ancora più basso, dato che viaggio molto.
-
-AMEX Platino, infatti, mi da il fast track in tutti gli aeroporti più importanti d'Italia (che solitamente costano 10€ l'uno) e l'accesso a oltre 1300 lounge aeroportuali in tutto il mondo gratuitamente, con il programma Priority Pass Prestige, che da solo costerebbe 399€ l'anno. La domanda sorge spontanea: "ma non potresti evitare l'accesso alle lounge? A che ti serve?". Ci sono periodi in cui prendo anche 3-4 voli a settimana, e poter contare su una lounge per mangiare, riposare e lavorare ha un valore altissimo per me. Poi basta pensare che, prendendo un aereo due volte a settimana e comprando almeno una bottiglietta d'acqua in aeroporto, che costa circa 3€ ovunque, spenderei 24€ al mese (3x2x4). Con poco più del doppio posso mangiare 'gratis' e illimitato in qualuque aeroporto. Decisamente comveniente.
-
-[**Prendi una carta American Express Platino**](www.americanexpress.it/amico/gIACOB7yXC?XLINK=MYCP)
-
 ## Conto per l'estero: Revolut
 
 Qualche mese fa sono andato a San Francisco e ho avuto diverse spese lì: alcune
@@ -73,7 +58,9 @@ Ho scoperto Revolut quasì per caso, non ricordo nemmeno quando, né come: Revol
 Io non ho fatto alcun abbonamento perché non ho bisogno delle funzionalità aggiuntive, ma sono situazioni che vanno analizzate caso per caso.
 In ogni caso, sposto i soldi dal Conto Principale in base alle necessità, e se rimangono li lascio lì ed eventualmente li recupero sul Conto Principale a fine anno. Il vantaggio di Revolut è che si può ricaricare tramite Apple Pay o carta di credito, quindi l'accredito dei soldi è immediato, a differenza del bonifico che impiega 1-2 giorni lavorativi.
 
-[**Scarica Revolut**](https://revolut.com/referral/giacomozf!G10D21)
+Iscrivendosi fino al 10 Aprile 2020 tramite il link in basso, è possibile ricevere una carta gratuita.
+
+[**Scarica Revolut**](https://revolut.com/referral/giacomozf!F07121)
 
 ## Conto 'Sfizi': N26
 
@@ -150,6 +137,22 @@ Tutte le celle con i caratteri in rosso sono le variabili da modificare. Tutto m
 [**Crea una copia del Template Pianificazione Finanziaria da Google Sheets**](https://docs.google.com/spreadsheets/d/1CKOfSzOspkYhrh7m9QZNKhjCEM6s07JwkyyfkoEQqJM/edit?usp=sharing)
 
 Spero di essere stato sufficientemente esaustivo. Questo modello non è definitivo, potrebbe cambiare ed aggiornarsi spesso. Ma è un buon punto di partenza per pianificare con successo ed impegno la propria vita finanziaria, senza incorrere in costi nascosti e senza rischiere di spendere più del dovuto. Con me, per ora, sta funzionando.
+
+## Non più in uso ma comunque valide
+
+## Carta di credito American Express Platino
+
+Con la carta di credito sostenevo solo due tipi di spese:
+* **Spese di Lavoro**, che poi avrò rimborsate;
+* **Spese Mensili** e **Spese Annuali Ricorrenti**;
+
+Questa carta era collegata al mio Conto Principale (Illimity).
+L'abbonamento annuale costa circa **720€**, ma facendo tante spese si accumula un numero di punti tale da poter riscattare l'abbonamento annuale a costo zero o estremamente ridotto.
+Io, per esempio, ho riscattato un'offerta di adesione per cui avevo subito 15.000 punti (circa 60€), e un'altra per cui al raggiungimento di 3.000€ di spesa nei primi tre mesi ho diritto ad altri 50.000 punti (circa 200€). Se fosse solo questo, mi costerebbe tantissimo, circa 460€ l'anno (720-60-200), ma per me il costo è ancora più basso, dato che viaggio molto.
+
+AMEX Platino, infatti, mi da il fast track in tutti gli aeroporti più importanti d'Italia (che solitamente costano 10€ l'uno) e l'accesso a oltre 1300 lounge aeroportuali in tutto il mondo gratuitamente, con il programma Priority Pass Prestige, che da solo costerebbe 399€ l'anno. La domanda sorge spontanea: "ma non potresti evitare l'accesso alle lounge? A che ti serve?". Ci sono periodi in cui prendo anche 3-4 voli a settimana, e poter contare su una lounge per mangiare, riposare e lavorare ha un valore altissimo per me. Poi basta pensare che, prendendo un aereo due volte a settimana e comprando almeno una bottiglietta d'acqua in aeroporto, che costa circa 3€ ovunque, spenderei 24€ al mese (3x2x4). Con poco più del doppio posso mangiare 'gratis' e illimitato in qualuque aeroporto. Decisamente comveniente.
+
+[**Prendi una carta American Express Platino**](www.americanexpress.it/amico/gIACOB7yXC?XLINK=MYCP)
 
 {% include changes.html %}
 
