@@ -58,9 +58,11 @@ L'Apple Watch è il dispositivo che meno uso, più guardo, meglio lo sto usando.
 
 ### Android
 
-
+<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-android-cover.png" alt="Homescreen Samsung Galaxy Note 10+, 2020">
 
 Dal 2019, uso uno smartphone Android con un'altra SIM come smartphone 'personale': quello che uso la sera e nel weekend, e che uso quando non voglio essere disturbato da impegni di lavoro. Ad oggi, ho un **Samsung Galaxy Note 10** a questo scopo, prima un **Huawei Mate 10**.
+
+[L'homescreen attuale del mio Samsung Galaxy Note 10+: 2020]({{base}}/homescreen-2020-android)
 
 #### Homescreen precedenti
 
@@ -77,9 +79,6 @@ Il MacBook è il cuore delle mie operazioni di tutti i giorni: se con l'iPhone c
 #### Homescreen precedenti
 
 ...
-
-### Windows (desktop)
-
 
 
 ## Le app e i servizi che uso
