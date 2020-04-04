@@ -22,7 +22,7 @@ La questione, invece, è più complicata di così: avere due smartphone vuol dir
 In casi come i miei, ci sono, per forza di cose, degli elementi comuni tra le due, dato che
 mi reputo una persona fortunata a fare più o meno sempre quello che mi piace per lavoro.
 
-Ma proprio per questo motivo, per evitare il *bornout*, il totale assorbimento della vita personale
+Ma proprio per questo motivo, per evitare il *burnout*, il totale assorbimento della vita personale
 in favore di quella lavorativa, ho dovuto trovare un modo per rendere naturale il passaggio da lavoro
 a relax.
 
