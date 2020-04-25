@@ -22,8 +22,10 @@ description: Chi è Giacomo Barbieri, tech blogger e community manager
 
 <h2>A cosa sto lavorando</h2>
 <ul>
-  <li><a href="https://italia.campus-party.org/community/">Campus Party Italia 2020 (CPIT4)</a></li>
+  <li><a href="https://italia.campus-party.org/community/">Campus Party Italia Digital Edition (CPDE)</a></li>
+  <li><a href="https://italia.campus-party.org/cplive/">Campus Party Live (#CPLive)</a></li>
   <li>Content curation in italiano per Luno Exchange</li>
+  <li><a href="https://www.lastampa.it/argomenti/digitalife">Rubrica DigitaLife per *La Stampa*</a></li>
 </ul>
 
 <h2> A cosa ho lavorato</h2>
@@ -32,6 +34,7 @@ description: Chi è Giacomo Barbieri, tech blogger e community manager
   <li>Next Betting Experience, gruppo di lavoro Lottomatica</li>
     <li><a href="https://www.webnews.it/author/g-barbieri/">Recensioni e approfondimenti su Webnews.it</a></li>
     <li><a href="https://www.html.it/author/giacomo-barbieri/">Approfondimenti su tecnologie di sviluppo per HTML.it</a></li>
+    <li>Marketing e comunicazione per IngDan Italia</li>
     <li><a href="https://www.saggiamente.com/author/giacomo-barbieri/"> Recensioni e approfondimenti iOS e macOS su Saggiamente</a></li>
     <li><a href="https://tweaknology.org">Tweaknology, blog sulla tecnologia e innovazione (ora chiuso)</a></li>
 <ul>
