@@ -6,17 +6,14 @@ description: Test per live events su Campus Party Digital Edition
 
 ### Test Twitch
 
-<div id="twitch-embed"></div>
-  <script src="https://embed.twitch.tv/embed/v1.js"></script>
-    <script type="text/javascript">
-      new Twitch.Embed("twitch-embed", {
-        width: 854,
-        height: 480,
-        channel: "campusparty"
-        // only needed if your site is also embedded on embed.example.com and othersite.example.com
-        // parent: ["embed.example.com", "othersite.example.com"]
-      });
-  </script>
+<iframe src="https://player.twitch.tv/?channel=campusparty"></iframe>
+
+<iframe
+  id="chat_embed"
+  src="https://www.twitch.tv/embed/campusparty/chat"
+  height="500"
+  width="350">
+</iframe>
 
 <h3>Test</h3>
 
