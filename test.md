@@ -6,13 +6,13 @@ description: Test per live events su Campus Party Digital Edition
 
 ### Test Twitch
 
-<iframe src="https://player.twitch.tv/?channel=campusparty" width="500"></iframe>
+<iframe src="https://player.twitch.tv/?channel=campusparty" width="700" height="550"></iframe>
 
 <iframe
   id="chat_embed"
   src="https://www.twitch.tv/embed/campusparty/chat"
   height="500"
-  width="150">
+  width="200">
 </iframe>
 
 <h3>Test</h3>
