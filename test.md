@@ -6,7 +6,7 @@ description: Test per live events su Campus Party Digital Edition
 
 ### Test Twitch
 
-<iframe src="https://player.twitch.tv/?channel=campusparty" width="700" height="550"></iframe>
+<iframe src="https://player.twitch.tv/?channel=campusparty" width="650" height="500"></iframe>
 
 <iframe
   id="chat_embed"
