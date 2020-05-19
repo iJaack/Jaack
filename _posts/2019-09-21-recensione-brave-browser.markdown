@@ -7,6 +7,7 @@ headerImage: true
 tag:
 - web
 - review
+- apps
 category: blog
 author: jaack
 description: Brave Browser dopo 9 mesi di utilizzo

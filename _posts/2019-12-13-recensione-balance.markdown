@@ -7,6 +7,7 @@ headerImage: true
 tag:
 - review
 - tech
+- apps
 category: blog
 author: jaack
 description: Un'app per costruire l'abitudine della meditazione
