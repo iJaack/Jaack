@@ -1,14 +1,14 @@
 ---
 title: "COVID-19 Aftermath: Rise of communities and office productivity"
 layout: post
-date: 2020-05-20 11:00
-image:
+date: 2020-05-20 22:30
+image: /assets/images/projects/Covid-19-aftermath-communites/covid-19-aftermath-cover.png
 headerImage: true
 tag:
--
+- culture
 category: projects
 author: jaack
-description:
+description: Why are people enjoying watching are people talking random all day long?
 published: true
 ---
 
