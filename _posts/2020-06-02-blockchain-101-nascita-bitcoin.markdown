@@ -1,7 +1,7 @@
 ---
 title: "Blockchain 101: La nascita di bitcoin"
 layout: post
-date: 2020-06-06 12:00
+date: 2020-06-02 12:00
 image: /assets/images/bitcoin-timeline.png
 headerImage: true
 tag:
