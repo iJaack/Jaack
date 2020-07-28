@@ -38,16 +38,37 @@ In base alla mole di lavoro, può essere un attività che dura pochi secondi o q
 
 In realtà, prima di eseguire quest'operazione, si può andare sulle preferenze e, nel tab 'Generale', selezionare quali lingue mantenere. In base al numero di app installate, questa prima operazione può liberare anche parecchi gigabyte.
 
+### Estensioni
+
 <img class="image" src="{{base}}/assets/images/routines/apps/CleanMyMacX/cleanmymac-x_extensions.png" alt="CleanMyMac X, Extensions" />
+
+### Manutenzione
 
 <img class="image" src="{{base}}/assets/images/routines/apps/CleanMyMacX/cleanmymac-x_maintenance.png" alt="CleanMyMac X, Maintenance" />
 
+Spesso, dopo aver installato e rimosso molte app e spostato tanti file, la memoria interna (hard disk o SSD) può risultare disordinata. Questo disordine porta ad un rallentamento del computer, perché i vari processi hanno più difficoltà a trovare le risorse di cui hanno bisogno in tempi rapidi. Per ricostruire la memoria, si può ancora una volta usare CleanMyMac X nella sezione Manutenzione ed eseguire una serie di operazioni: quelle consigliate sono (per non bloccare il computer per troppo tempo ma raggiungere un risultato accettabile) Libera la RAM, Libera lo spazio cancellabile, Esegui script di manutenzione e Cancella cache DNS. Queste operazioni possono durare da qualche secondo a qualche decina di minuti, in base al livello di disordine dei file. Ma i benefici sono poi decisamente visibili.
+
+### Ottimizzazione
+
 <img class="image" src="{{base}}/assets/images/routines/apps/CleanMyMacX/cleanmymac-x_optimization.png" alt="CleanMyMac X, Optimization" />
+
+Il problemi di un Mac si vedono già dall’avvio. Appena comprato, tutto è veloce e scattante, ma più si installano app che richiedono di essere eseguite insieme all’avvio del sistema, più l’avvio sarà lento. È poi sempre più difficile trovare quali sono queste app, che molto spesso non visualizzano un’icona nel dock e nella barra di stato. Per ripulire il sistema dalle app che ‘ingombrano’ l’avvio, si può ancora usare CleanMyMac X, andando su Ottimizzazione -> Elementi di Login. In questa schermata, ci sono diversi tipi di elementi:
+gli Helper - che sono moduli di supporto alle app, senza i quali l’app non ha accesso ad altre app o il sistema per la condivisione dei dati
+Le app vere e proprie
+I moduli aggiuntivi delle app (Menu a scomparsa, menu fluttuante sullo schermo, ecc.)
+É buona norma non eliminare nessuna app, ma è utile abilitare o disabilitare moduli in base all’utilizzo di queste in un periodo specifico, riducendo all’avvio solo quelle realmente necessarie.
+
+Oltre alle app, all’avvio vengono eseguiti anche una serie di agenti di avvio, piccole applicazioni di supporto o altri prodotti software. I servizi di sistema ampliano le funzionalità dell’app principale, ma in alcuni casi potrebbe essere utile rimuoverle o disabilitarle. In generale, non è consigliabile rimuoverle (per ripristinare bisognerebbe reinstallare l’app), ma si possono certamente disabilitare. Un esempio sono gli innumerevoli agenti che vengono avviati per garantire l’esecuzione di Microsoft Teams e la suite Creative Cloud di Adobe. Anche questa operazione si può eseguire su CleanMyMac X, andando su Ottimizzazione -> Agenti di avvio. Alla fine della pulizia, è consigliabile un riavvio del computer.
+
+### Lente spaziale
 
 <img class="image" src="{{base}}/assets/images/routines/apps/CleanMyMacX/cleanmymac-x_space-lens-1.png" alt="CleanMyMac X, Space Lens, 1" />
 
 <img class="image" src="{{base}}/assets/images/routines/apps/CleanMyMacX/cleanmymac-x_space-lens-2.png" alt="CleanMyMac X, Space Lens, 2" />
 
+### Disinstallazione
+
 <img class="image" src="{{base}}/assets/images/routines/apps/CleanMyMacX/cleanmymac-x_uninstaller.png" alt="CleanMyMac X, Uninstaller" />
+
 
 <img class="image" src="{{base}}/assets/images/routines/apps/CleanMyMacX/cleanmymac-x_updater.png" alt="CleanMyMac X, Updater" />
