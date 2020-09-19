@@ -1,5 +1,5 @@
 ---
-title: Questa settimana in tre parole - Newsletter
+title: In tre parole - Newsletter
 layout: page
 description: Newsletter domenicale per persone sempre troppo occupate
 ---
@@ -10,14 +10,14 @@ description: Newsletter domenicale per persone sempre troppo occupate
 <img class="image" src="{{base}}/assets/images/newsletter_preamble_cover.png">
 
 **FOMO**. *Fear Of Missing Out*. È da questa premessa che ho pensato che sarebbe stato
-utile **Questa settimana in tre parole'**.
+utile **In tre parole'**.
 
 Ogni settimana vengono create miliardi di notizie: molti di queste sono false,
 realizzate in maniera fittizia, altre (*si spera la maggior parte*) sono realizzate
 da grandi giornalisti che raccontano degli scorci di realtà che non tutti siamo
 in grado di vedere, nemmeno con l'aiuto di internet.
 
-**Questa settimana in tre parole** è una newsletter che automatizza un processo che
+**In tre parole** è una newsletter che automatizza un processo che
 da solo faccio da tempo: quello di leggere e comprendere degli aspetto dell'attualità
 tecnologica, economica, politica e sociale che passano inosservati.
 

@@ -23,7 +23,6 @@ description: Chi è Giacomo Barbieri, tech blogger e community manager
 <h2>A cosa sto lavorando</h2>
 <ul>
   <li><a href="https://avascan.info">Lancio di Avascan - Avalanche explorer</a></li>
-  <li>Content curation in italiano per Luno Exchange</li>
   <li><a href="https://www.lastampa.it/tecnologia">Recensioni e approfondimenti per *La Stampa Tech*</a></li>
 </ul>
 
