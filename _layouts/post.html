@@ -17,8 +17,10 @@ layout: page
 </span>
 
 <beeline-button target=".post" exclude=".exclude"></beeline-button>
-
-{{content}}
+<div class="post">
+  {{content}}
+</div>
+<div class="exclude">
 {% if site.post-advance-links contains page.category %}
     <div class="blog-navigation">
         {% if page.previous.hidden == false and page.previous.url %}
@@ -43,3 +45,4 @@ layout: page
 {% if site.show-author %}
     {% include author.html %}
 {% endif %}
+</div>
