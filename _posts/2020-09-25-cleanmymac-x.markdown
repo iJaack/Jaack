@@ -1,7 +1,7 @@
 ---
 title: "CleanMyMac X"
 layout: post
-date: 2020-05-28 12:00
+date: 2020-09-25 15:30
 image: /assets/images/routines/apps/CleanMyMacX/cleanmymac-x_start.png
 headerImage: true
 tag:
@@ -40,7 +40,11 @@ In realtà, prima di eseguire quest'operazione, si può andare sulle preferenze 
 
 ### Estensioni
 
+Le estensioni possono essere utili, ma caricano **tantissimo** il computer, perché vengono eseguite insieme ad altri processi.
+
 <img class="image" src="{{base}}/assets/images/routines/apps/CleanMyMacX/cleanmymac-x_extensions.png" alt="CleanMyMac X, Extensions" />
+
+Ad esempio, ci sono le *estensioni per Spotlight*, la ricerca universale su macOS, che rallentano proprio il processo di ricerca. Poi ci sono quelle di WebKit, i *plugin di Internet*, che fondamentalmente sono delle estensioni che si integrano con tutti i browser web (quindi tipo Flash Player e tutte le integrazioni di Adobe). Alcune di queste estensioni si possono configurare direttamente dalle impostazioni, e con CleanMyMac X è possibile anche disabilitare la pagina di configurazione nelle impostazioni, dalla sezione *Pannelli delle preferenze*. Ed infine le *estensioni di Safari, specifiche per quel browser, che si installano direttamente dal Mac App Store ora. Quelle non si possono rimuovere da CleanMyMac X, ma almeno si ha una panoramica di quante ce ne sono e come si 'diramano' nelle altre app (app ed estensioni possono a loro volta avere altre estensioni o necessitare di altre estensioni per funzionare o per offrire maggiori funzionalità).
 
 ### Manutenzione
 
@@ -64,11 +68,18 @@ Oltre alle app, all’avvio vengono eseguiti anche una serie di agenti di avvio,
 
 <img class="image" src="{{base}}/assets/images/routines/apps/CleanMyMacX/cleanmymac-x_space-lens-1.png" alt="CleanMyMac X, Space Lens, 1" />
 
+Molto spesso la memoria interna del computer si riempie senza un particolare motivo: installiamo tante app, scarichiamo tanti file e non sappiamo più dove li abbiamo messi. Con la **lente spaziale**, possiamo vedere quali sono i file più grandi, dove si trovano e possiamo decidere che farne. Nella maggior parte dei casi, la cartella *System*, che è una cartella di sistema piena di pacchetti e, soprattutto, il *sistema operativo*. Non dovete toccarla, perché è una di quelle cartelle che garantiscono il funzionamento del sistema insieme a */Users/NOMEUTENTE/Library/*, */usr* e */private*.
+
 <img class="image" src="{{base}}/assets/images/routines/apps/CleanMyMacX/cleanmymac-x_space-lens-2.png" alt="CleanMyMac X, Space Lens, 2" />
 
 ### Disinstallazione
 
 <img class="image" src="{{base}}/assets/images/routines/apps/CleanMyMacX/cleanmymac-x_uninstaller.png" alt="CleanMyMac X, Uninstaller" />
 
+Certo, non è una funzionalità *fondamentale*: le app su macOS si possono disinstallare anche solo spostando l'icona dell'app dalla cartella Applicazioni al cestino, ma con CleanMyMac X è possibile disinstallare fino a 10 app alla volta. Utile quando si vuole fare 'pulizia a fondo' senza formattare il computer da zero.
 
 <img class="image" src="{{base}}/assets/images/routines/apps/CleanMyMacX/cleanmymac-x_updater.png" alt="CleanMyMac X, Updater" />
+
+Ho impiegato mesi a scrivere questa panoramica: non è tanto una recensione, perché c'è poco da giudicare: CleanMyMac X funziona bene, si compra in abbonamento perché il flusso di cassa continuo finanzia lo sviluppo di nuove funzionalità e di compatibilità con i nuovi aggiornamenti del sistema operativo, e fa il suo dovere. Perché non scaricarla quindi?
+
+<a href="https://macpaw.audw.net/c/2275161/63812/1733"><img class="image" src="{{base}}/assets/images/routines/apps/CleanMyMacX/Ad_CleanMyMacX.png" alt="Download CleanMyMac X"></a>
