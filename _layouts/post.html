@@ -16,23 +16,23 @@ layout: page
     <p>{% if site.read-time %} {% include read-time.html %}{% endif %}</p>
 </span>
 
-<beeline-button target=".post" exclude=".exclude"></beeline-button>
+<beeline-button target=".post" exclude=".exclude" size="medium"></beeline-button>
 <div class="post">
   {{content}}
 </div>
 <div class="exclude">
-{% if site.post-advance-links contains page.category %}
+  {% if site.post-advance-links contains page.category %}
     <div class="blog-navigation">
-        {% if page.previous.hidden == false and page.previous.url %}
-            <a class="prev" href="{{base}}{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
-        {% else %}
-            <a class="prev"></a>
-        {% endif %}
-        {% if page.next.hidden == false and page.next.url %}
-            <a class="next" href="{{base}}{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
-        {% endif %}
+      {% if page.previous.hidden == false and page.previous.url %}
+        <a class="prev" href="{{base}}{{ page.previous.url }}">&laquo; {{ page.previous.title }}</a>
+      {% else %}
+        <a class="prev"></a>
+      {% endif %}
+      {% if page.next.hidden == false and page.next.url %}
+        <a class="next" href="{{base}}{{ page.next.url }}">{{ page.next.title }} &raquo;</a>
+      {% endif %}
     </div>
-{% endif %}
+  {% endif %}
 
 {% include donation.html %}
 
