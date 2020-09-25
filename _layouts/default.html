@@ -28,14 +28,11 @@ layout: compress
 
     {% include pocket.html %}
 
-    {% include beeline-button.min.js %}
-
     <link rel="canonical" href="{{base}}{{ page.url | replace:'index.html','' }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{base}}{{ "/feed.xml" }}" />
     <link rel="webmention" href="https://webmention.io/jaack.me/webmention" />
     <link rel="pingback" href="https://webmention.io/jaack.me/xmlrpc" />
     <link href="mailto:giacomobarbieri94@gmail.com" rel="me">
-    <script src="assets/beeline/beeline-button.min.js"></script>
 
     <style>
     {% capture scss_sheet %}{% include style.scss %}{% endcapture %}
@@ -63,6 +60,7 @@ layout: compress
     {% include icons.html %}
 
     <script async defer src="https://cdn.simpleanalytics.io/hello.js"></script>
+    <script src="assets/beeline/beeline-button.min.js"></script>
     <noscript>
       <img src="https://api.simpleanalytics.io/hello.gif" alt="">
     </noscript>
