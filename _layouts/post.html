@@ -16,11 +16,10 @@ layout: page
     <p>{% if site.read-time %} {% include read-time.html %}{% endif %}</p>
 </span>
 
-<beeline-button target=".post" exclude=".exclude" size="medium"></beeline-button>
+<beeline-button target=".post" exclude=".exclude" size="large"></beeline-button>
 <div class="post">
   {{content}}
 </div>
-<div class="exclude">
   {% if site.post-advance-links contains page.category %}
     <div class="blog-navigation">
       {% if page.previous.hidden == false and page.previous.url %}
@@ -45,4 +44,3 @@ layout: page
 {% if site.show-author %}
     {% include author.html %}
 {% endif %}
-</div>
