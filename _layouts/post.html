@@ -16,7 +16,7 @@ layout: page
     <p>{% if site.read-time %} {% include read-time.html %}{% endif %}</p>
 </span>
 
-<beeline-button target=".post" exclude=".exclude" size="large"></beeline-button>
+<beeline-button target=".post" exclude=".exclude, .nav, .reading-time" size="large"></beeline-button>
 <div class="post">
   {{content}}
 </div>
