@@ -15,7 +15,7 @@ layout: page
     <time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%A. %B %d, %Y" }}</time>
     <p>{% if site.read-time %} {% include read-time.html %}{% endif %}</p>
 </span>
-<beeline-button target=".post" exclude=".exclude, .nav, .date, .blog-navigation, .prev, .next, .reading-time" size="large"></beeline-button>
+<beeline-button target=".post" exclude=".exclude, .nav, .date, .blog-navigation, .prev, .next, .reading-time" size="regular"></beeline-button>
 <div class="post">
   {{content}}
 </div>
