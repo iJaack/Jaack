@@ -4,7 +4,8 @@ layout: post
 date: 2020-10-30 00:30
 image: /assets/images/silenzio-notte-iphone12-pro.JPG
 headerImage: true
-# tag:
+tag:
+-
 category: blog
 author: jaack
 description: Sembra come una conversazione che non finisce mai, un botta e risposta che dura da mesi.
@@ -31,7 +32,7 @@ Il contapassi segna **1.746** passi alle 20:00. La media del 2019 era 7.500. Ovv
 
 Ecco, questo siamo noi. Forse ognuno ha delle differenze in base al lavoro che fa, ma posso dire che questo, comunque, sono io. Mi dico che è una situazione passeggera, che passerà. Che devo sfruttare questo periodo al massimo, che non ne avrò altri come questo. Però non riesco a rendermi conto, davvero, che questo è un periodo difficile per **tutti**, tantissimo. Mi dico che ho solo 26 anni, e che quelli più grandi di me ne hanno viste di peggio. Ecco, forse no: forse solo quelli che hanno visto le guerre mondiali hanno visto di peggio. Ma non lo so, non ne ho la percezione, quindi non riesco ad usare questa informazione a mio vantaggio.
 
-Non riesco a dirmi "Rilassati. Stai, **stiamo** tutti affrontando un periodo terribile in cui le relazioni sociali, pilastro della nostra esistenza in quanto animali sociali, sono inibite per affrontare una minaccia invisibile che tutto il mondo pensa di sconfiggere ma che ancora non ha dimostrato nemmeno di conoscere a fondo. La strada è ancora lontana, e prima di rendi conto che puoi rilassarti e concederti delle debolezze, meglio è."
+Non riesco a dirmi *"Rilassati. Stai, stiamo tutti affrontando un periodo terribile in cui le relazioni sociali, pilastro della nostra esistenza in quanto animali sociali, sono inibite per affrontare una minaccia invisibile che tutto il mondo pensa di sconfiggere ma che ancora non ha dimostrato nemmeno di conoscere a fondo. La strada è ancora lontana, e prima di rendi conto che puoi rilassarti e concederti delle debolezze, meglio è."*
 
 Forse questo non succederà mai. Come non è successo e non succederà a moltissimi altri come me. Non ci lasceremo andare, non ci concederemo degli errori, delle mancanze. Però ci tenevo a scrivere queste righe per fissare, non solo nella memoria, le parole che ho pensato, perché **le ho pensate**, ma non sono riuscito a dargli peso. Non so se capita spesso anche a voi: sapete che è una cosa è sbagliata, oppure deve essere fatta in un certo modo, ma lo stesso continuate a fare come pensate. Perché non **avete la percezione associata allo sbaglio**, e quindi non vi colpisce. Non fa effetto, come quando si usa **terremoto** su un Pokémon di tipo volante: diamine, ma certo che non fa effetto, il pennuto vola! Non risente degli effetti della terra sotto di lui..
 
@@ -39,6 +40,8 @@ Così, allo stesso modo, non riesco a pensare che, se qualcosa va storto, alla f
 
 E invece è una maledetta **montagna**, che si può scalare solo con un *piccone e un paio di scarponcini belli duri*.
 
-Il problema è che può anche essere un intero pianeta da attraversare, ma io lo vedrò sempre e solo come un *ostacolo da corsa di atletica leggera*. Credo sia un problema della mia generazione. E quindi ecco che l'unica soluzione per risolvere questo grande dilemma, tra **scalare la montagna** e **aspettare che la montagna si sposti o si abbassi**, è sempre la seconda.
+Il problema è che può anche essere un intero pianeta da attraversare, ma io lo vedrò sempre e solo come un *ostacolo da corsa di atletica leggera*. Credo sia un problema della mia generazione.
+
+E quindi ecco che l'unica soluzione per risolvere questo grande dilemma, tra **scalare la montagna** e **aspettare che la montagna si sposti o si abbassi**, è sempre la seconda.
 
 Passerà.
