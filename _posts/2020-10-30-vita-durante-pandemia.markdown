@@ -45,3 +45,7 @@ Il problema è che può anche essere un intero pianeta da attraversare, ma io lo
 E quindi ecco che l'unica soluzione per risolvere questo grande dilemma, tra **scalare la montagna** e **aspettare che la montagna si sposti o si abbassi**, è sempre la seconda.
 
 Passerà.
+
+*Extra: una clip di un episodio recente di South Park spiega ancora meglio il paradosso*
+
+<iframe width="810" height="480" src="https://www.youtube.com/embed/iDk9GYNO6KE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
