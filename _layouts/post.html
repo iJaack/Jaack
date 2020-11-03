@@ -16,7 +16,7 @@ layout: page
     <p>{% if site.read-time %} {% include read-time.html %}{% endif %}</p>
 </span>
 <beeline-button target=".post" exclude=".exclude, .nav, .date, .blog-navigation, .prev, .next, .reading-time" size="regular"></beeline-button>
-<div class="post">
+<div>
   {{content}}
 </div>
   {% if site.post-advance-links contains page.category %}
