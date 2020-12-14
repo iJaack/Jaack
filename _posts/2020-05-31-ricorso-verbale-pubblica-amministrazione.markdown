@@ -46,7 +46,7 @@ Mi ritengo un'inguaribile ottimista: quando leggo che qualcosa *sarà disponibil
 
 Pronto per il download, cerco prima il [**driver CIE**](https://www.cartaidentita.interno.gov.it/identificazione-digitale/software-cie/) (che servono per far riconoscere la CIE al sistema operativo), ma poi mi chiedo come faccio a farla riconoscere dal computer, dato che è una carta. Ed ecco il primo *gap*, il primo buco: che senso ha, nel 2020, stare ancora dietro alle smart card per collegare una carta ad un computer?
 
-Ed infatti qualcuno questa domanda se la deve essere fatta, perché facendo una ricerca più approfondita, scopro che esiste un'app per Android, [**Firmo con CIE**](https://www.firmoconcie.it/), che sfrutta i driver CIE per collegare lo smartphone alla CIE **usando direttamente l'NFC** - purtroppo, a causa delle restrizioni di Apple sull'utilizzo dell'NFC, quest'app non funziona perfettamente su iOS..
+Ed infatti qualcuno questa domanda se la deve essere fatta, perché facendo una ricerca più approfondita, scopro che esiste un'app per Android, [**Firmo con CIE**](https://www.firmoconcie.it/), che sfrutta i driver CIE per collegare lo smartphone alla CIE **usando direttamente l'NFC** -<strike> purtroppo, a causa delle restrizioni di Apple sull'utilizzo dell'NFC, quest'app non funziona perfettamente su iOS..</strike> l'app funziona bene anche su iOS ora! Ringrazione per la [segnalazione](https://www.buymeacoffee.com/jaack/c/598010) il creatore dell'app, Ugo Chirico.
 
 <img class="image" src="{{base}}/assets/images/firmo-con-cie-android.png" alt="I passi per mettere la firma digitale con 'Firma con CIE'">
 <figcaption class="caption">I passi per mettere la firma digitale con 'Firmo con CIE'</figcaption>
