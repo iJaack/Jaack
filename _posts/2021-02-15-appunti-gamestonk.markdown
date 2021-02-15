@@ -57,6 +57,6 @@ E poi c'è chi ha comprato uno spazio pubblicitario e New York solo per ridere d
 <blockquote class="reddit-card" data-card-created="1613411851"><a href="https://www.reddit.com/r/wallstreetbets/comments/l97ykd/the_real_reason_wall_street_is_terrified_of_the/">The real reason Wall Street is terrified of the GME situation</a> from <a href="http://www.reddit.com/r/wallstreetbets">r/wallstreetbets</a></blockquote>
 <script async src="//embed.redditmedia.com/widgets/platform.js" charset="UTF-8"></script>
 
-Un ingegnere ha fatto un'analisi sulle azioni di Gamestop, e ha intuito che qualcosa non andava.. anche se **io** non ho ben capito cosa. Se lo avete capito, [scrivetemi](mailto:hey@jaack.me) o [mandatemi un tweet](https://twitter.com/ijaack94), che sono proprio
+Un ingegnere ha fatto un'analisi sulle azioni di Gamestop, e ha intuito che qualcosa non andava.. anche se **io** non ho ben capito cosa. Se lo avete capito, [scrivetemi](mailto:hey@jaack.me) o [mandatemi un tweet](https://twitter.com/ijaack94), che sono proprio curioso.
 
 {% include changes.html %}
