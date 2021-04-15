@@ -1,5 +1,5 @@
 ---
- title: "Come dichiarare le crypto in maniera semplice"
+title: "Come dichiarare le crypto in maniera semplice"
 layout: post
 date: 2021-04-15 14:30
 image: /assets/images/crypto.jpg
