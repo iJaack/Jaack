@@ -96,14 +96,10 @@ Intendi dire che si pagano le tasse se si possiedono più di 50k della stessa cr
 
 </blockquote>
 
-<italic>
-
 Ciao Luca,
 Grazie di avermi scritto e grazie di aver letto l’articolo. In merito alla tua domanda, il conteggio per le tasse va fatto su tutte le criptovalute e su tutti i wallet che possiedi. Se usi Koinly, il servizio che suggerisco, puoi tracciare e dichiarare crypto da più wallet.
 Ad esempio, se hai 10K in BTC, 20K in ETH e 30K in LTC, hai un totale di 60K, quindi superi la soglia e pagherai la plusvalenza per qualsiasi plusvalenza tu faccia su quei 60K, quindi se i tuoi fondi diventano di 61K, tu pagherai a fine anno il 26% di 61K-60K = 26% di 1K = 260€.
 
 Se usi Koinly questo conto viene fatto automaticamente, tu devi solo risolvere eventuali ambiguità, taggando le transazioni che il servizio non riesce a categorizzare (ad esempio airdrop, mining rewards, rendita da NFT o reward da liquidità).
-
-</italic>
 
 {% include changes.html %}
