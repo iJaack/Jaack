@@ -2,6 +2,7 @@
 title: "Come dichiarare le crypto in maniera semplice"
 layout: post
 date: 2021-04-15 14:30
+update: 2021-08-15 14:00
 image: /assets/images/crypto.jpg
 headerImage: true
 tag:
@@ -81,5 +82,28 @@ La mia carta crypto principale: in realtà ne esistono diversi livelli, e in ogn
 ### Binance Card
 
 La mia carta crypto di riserva. Iscriversi a Binance è facile: se non l'avete già fatto [questo è il link](https://www.binance.cc/en/register?ref=TY28UD9P), e dopo aver fatto la procedura di compilazione di tutti i dati personali (la procedura KYC), potete andare in [questa pagina](https://www.binance.com/en/cards) per avviare la richiesta di una carta VISA. La carta arriva in 7 giorni lavorativi e di base offre un cashback dell'1% in BNB sul 99% delle transazioni tranne i prelievi all'ATM. È già compatibile con Google Pay ma ancora non con Apple Pay. Il cashback in realtà è proporzionale ai BNB posseduti nel conto Binance, e fino all'8%. Ovviamente senza commissioni sui pagamenti.
+
+# Domande & risposte
+
+Luca chiede, via mail:
+
+<blockquote>
+
+Ciao Giacomo,
+Ho letto sul tuo blog l'articolo "Come dichiarare le crypto in maniera semplice", e avrei giusto una domanda da farti.
+Tu scrivi che le cripto vanno dichiarate tutte ma le tasse per le plusvalenze vanno pagate  se"Il valore di quella criptovaluta è stato maggiore di 51.645,69€;" per almeno 7 giorni consecutivi nello stesso anno solare.
+Intendi dire che si pagano le tasse se si possiedono più di 50k della stessa criptovaluta per più di 7 giorni nello stesso wallet? Cosa succede se invece si opera con le criptovalute ma poi il saldo è in euro? Per esempio io sto effettuando perlopiù arbitraggio con cripto(non bitcoin) ed euro, e quello che guadagno per ora lo sto tenendo sugli exchange stessi in euro. Questi guadagni non andrebbero dichiarati?
+
+</blockquote>
+
+<italic>
+
+Ciao Luca,
+Grazie di avermi scritto e grazie di aver letto l’articolo. In merito alla tua domanda, il conteggio per le tasse va fatto su tutte le criptovalute e su tutti i wallet che possiedi. Se usi Koinly, il servizio che suggerisco, puoi tracciare e dichiarare crypto da più wallet.
+Ad esempio, se hai 10K in BTC, 20K in ETH e 30K in LTC, hai un totale di 60K, quindi superi la soglia e pagherai la plusvalenza per qualsiasi plusvalenza tu faccia su quei 60K, quindi se i tuoi fondi diventano di 61K, tu pagherai a fine anno il 26% di 61K-60K = 26% di 1K = 260€.
+
+Se usi Koinly questo conto viene fatto automaticamente, tu devi solo risolvere eventuali ambiguità, taggando le transazioni che il servizio non riesce a categorizzare (ad esempio airdrop, mining rewards, rendita da NFT o reward da liquidità).
+
+</italic>
 
 {% include changes.html %}
