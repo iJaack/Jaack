@@ -16,9 +16,9 @@ Ho iniziato con Wordpress.
 
 Nel 2014 non sapevo nulla di nulla.
 
-Nulla di cosa fosse un blog (davvero), di come si gestisse un team, di come fare andare avanti un progetto. [Tweaknology](https://tweaknology.org) è stato un bellissimo, l'ho detto tantissime volte. E me lo sono detto ancora più spesso. Ora la collaborazione con [Italian Tech](https://italian.tech) mi da la possibilità di parlare con tante persone diverse, di dare una voce alle mie idee, ma è un giornale.
+Nulla di cosa fosse un blog (davvero), di come si gestisse un team, di come fare andare avanti un progetto. [Tweaknology](https://tweaknology.org) è stato un bellissimo esperimento, l'ho detto tantissime volte. E me lo sono detto ancora più spesso. Ora la collaborazione con [Italian Tech](https://italian.tech) mi da la possibilità di parlare con tante persone diverse, di dare una voce alle mie idee, ma è un giornale.
 
-È così assurdo pensare che 7 anni fa scrivevo le prime righe su un blog lanciato con altri 3 colleghi in università, e ora la mia firma è su La Repubblica e La Stampa. Scrivo di quello che mi piace, è il motivo per cui i miei contenuti sono chiesti. Posso dire di aver fatto strada, e cdi non essermi mai accontentato.
+È così assurdo pensare che 7 anni fa scrivevo le prime righe su un blog lanciato con altri 3 colleghi in università, e ora la mia firma è su La Repubblica e La Stampa. Scrivo di quello che mi piace, è il motivo per cui i miei contenuti sono chiesti. Posso dire di aver fatto strada, e di non essermi mai accontentato.
 
 Nel 2017, quando ho iniziato a lavorare in Campus Party, ero contentissimo: potevo amplificare ancora di più il mio lavoro come blogger, dando la possibilità a tanti esperti da tutta Italia e da tutto il mondo di raccontare la loro storia. Ho iniziato come **Community Manager** e sono diventato **Global Content Manager**. Ho parlato con Al Gore, Vint Cerf, Tim Berners-Lee, Edward Snowden, ma anche con giovanissimi che hanno già fatto passi da gigante nel progresso tecnologico. Ma mi è sempre mancato qualcosa. Il problema che sentivo era che io **parlavo** di tutte queste cose, o lasciavo che gli altri parlassero di quello che avevano fatto. Io, fondamentalmente, non avevo mai parlato di una cosa mia.
 
