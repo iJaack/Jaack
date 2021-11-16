@@ -2,7 +2,7 @@
 title: "Un nuovo corso"
 layout: post
 date: 2021-11-16 13:00
-image: /assets/images/avascan.jpg
+image: /assets/images/avascan.png
 headerImage: true
 tag:
 - blockchain
