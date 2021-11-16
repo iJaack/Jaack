@@ -42,6 +42,6 @@ Ed è per questo che da oggi mi rimetto a fare il mestiere che facevo anni fa, i
 
 Le nostre posizioni aperte sono qui, con altre che si aggiungeranno nelle prossime settimane: [https://jobs.avascan.info/](https://jobs.avascan.info)
 
-Basta anche mandarmi una mail a hey@jaack.me con oggetto "Candidatura Avascan".
+Basta anche mandarmi una mail a [hey@jaack.me](mailto:hey@jaack.me) con oggetto "Candidatura Avascan".
 
 Alla prossima storia.
