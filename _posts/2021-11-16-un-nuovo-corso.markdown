@@ -40,7 +40,7 @@ Questa cosa mi fa impazzire, perché finalmente sto lavorando a un prodotto soft
 
 Ed è per questo che da oggi mi rimetto a fare il mestiere che facevo anni fa, il blogger. Racconterò il nostro viaggio, qui in italiano, e sul [blog di Avascan](https://blog.avascan.info) in inglese, sperando che in molti si riconoscano, e decidano di fare questo viaggio con noi. Sarà bellissimo, davvero.
 
-Le nostre posizioni aperte sono qui, con altre che si aggiungeranno nelle prossime settimane: https://jobs.avascan.info/
+Le nostre posizioni aperte sono qui, con altre che si aggiungeranno nelle prossime settimane: [https://jobs.avascan.info/](https://jobs.avascan.info)
 
 Basta anche mandarmi una mail a hey@jaack.me con oggetto "Candidatura Avascan".
 
