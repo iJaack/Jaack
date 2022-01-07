@@ -5,7 +5,7 @@ date: 2022-01-05 20:00
 image:
 headerImage: true
 tag:
-- blockchain
+- life
 category: blog
 author: jaack
 description: E altre considerazioni sull'inizio del 2022

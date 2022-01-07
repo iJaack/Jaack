@@ -5,7 +5,7 @@ date: 2021-10-29 20:00
 image: /assets/images/writing.jpg
 headerImage: true
 tag:
--
+- life
 category: blog
 author: jaack
 description: Non lo faccio più da tempo.

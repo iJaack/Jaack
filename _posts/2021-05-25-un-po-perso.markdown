@@ -5,7 +5,7 @@ date: 2021-05-25 23:00
 image: /assets/images/lost.jpg
 headerImage: true
 tag:
--
+- life
 category: blog
 author: jaack
 description: So che è una transizione, e penso capiti a tutti. Ma comunque..

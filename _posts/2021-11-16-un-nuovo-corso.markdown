@@ -5,7 +5,7 @@ date: 2021-11-16 13:00
 image: /assets/images/avascan.png
 headerImage: true
 tag:
-- blockchain
+- avascan
 category: blog
 author: jaack
 description: Sto tornando. Più forte di prima.
