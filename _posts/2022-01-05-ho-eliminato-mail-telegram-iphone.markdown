@@ -49,7 +49,7 @@ E tutta questa complessità deve essere gestita. Per questo motivo, nel corso de
 Ma la questione centrale, il motivo per cui mi sono messo a scrivere queste righe, non è questo: è che _anche il mio lavoro è cambiato, radicalmente_, negli ultimi mesi. Ora mi occupo più di gestire i cambiamenti e i macro-obiettivi rispetto alle attività singole. Lavoro tendenzialmente meno di prima, ma perché ho bisogno di molta più concentrazione per farlo, e quindi non posso permettermi distrazioni nella maggior parte dei momenti della giornata.
 
 Questo cambiamento doveva sortire degli effetti anche sui miei flussi di lavoro personali, e così ci ho riflettuto durante queste vacanze natalizie. Ho iniziato ad agire appena tornato, il 3 gennaio:
-- Ho fatto un abbonamento a **Setapp**, che mi permette di avere uno store di più di 200 app che altrimenti sarebbero a pagamento in abbonamento, per un costo di 170€/anno circa;
+- Ho fatto un abbonamento a **Setapp** ([qui](https://go.setapp.com/invite/oglmsmu6) c'è un mese gratis se ci si abbona), che mi permette di avere uno store di più di 200 app che altrimenti sarebbero a pagamento in abbonamento, per un costo di 170€/anno circa;
 - Sto rimuovendo tutte le app a cui ero abbonato che posso sostituire con app disponibili su Setapp (tra cui Fantastical per BusyCal, Diarly per Day One e altre);
 - Ho avuto così modo di provare altre app che altrimenti non avrei mai comprato, come **Paste**, **iStats Menu** e **Workspace** (quest'ultima davvero utile: permette di creare delle configurazioni di app, siti e azioni da fare contemporaneamente usando un'unica scorciatoia);
 
