@@ -24,7 +24,7 @@ Dal metà 2020 ho intensificato i miei sforzi nel mondo crypto, in cui avevo pro
 
 <h2>A cosa sto lavorando</h2>
 <ul>
-  <li><a href="https://avascan.info">Crescita di Avascan - Avalanche explorer</a></li>
+  <li><a href="https://avascan.info">Crescita di Avascan - The Avalanche explorer</a></li>
   <li><a href="https://italian.tech">Recensioni e approfondimenti per *Italian Tech*</a></li>
 </ul>
 
