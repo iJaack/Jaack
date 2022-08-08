@@ -1,0 +1,50 @@
+---
+title: "An Overview of ZK-EVMs"
+layout: post
+date: 2022-08-08 11:00
+image: 
+headerImage: false
+tag:
+- blockchain
+category:
+author: jaack
+description: A ZK-EVM is a Virtual Machine that integrate ZK-SNARK technology to make cryptographic proofs of execution on Ethereum-like transactions, either to integrate it in the Ethereum chain itself or to build ZK-rollups that are more scalable.
+published: true
+---
+
+A **ZK-EVM** is a *Virtual Machine* that integrate **ZK-SNARK** technology to make cryptographic proofs of execution on Ethereum-like transactions, either to integrate it in the Ethereum chain itself or to build **ZK-rollups** that are more scalable.
+
+I’m looking ZK-EVMs from the outside, but it’s always so intriguing to understand what the next technology advancement. Also, I fell in love with ZK-SNARK tech way back in 2017 by doing research on *Zcash*.
+
+[Vitalik Buterin just did](https://vitalik.ca/general/2022/08/04/zkevm.html) a wonderful, but also pretty technical, summary of all the ZK-EVMs types that are being built. I think he’s quite convinced that Ethereum will ultimately scale with ZK-rollups that allow for faster prove time and better security across the board.
+
+## Type 1: Fully Ethereum-equivalent
+**Pros**: They are designed verify EVM blocks and support the **same execution layer** (but not the consensus layer, so they won’t likely work out of the box with the beacon chain). Tooling can be re-used, as well as infrastructure to build rollups more integrated with the L1: for example, clients can verify *both the L1* and the rollup without additional tweaking.
+**Cons**: since Ethereum was not designed to prove ZK blocks, a proof can take many hours to compute. Solutions can be found in *parallelisation* or dedicated *ASIC machines*.
+
+## Type 2: Fully EVM-equivalent
+**Pros**: almost equal to Ethereum, but they have differences in block structure, state tree and other aspects. Clients will also work with rollups with some tweaking.
+Changes in the *hash function and Merkle tree*, as well as removal of external hash verification can improve proof time.
+**Cons**: Since there are differences in the state tree, apps that verify Merkle proofs of historical blocks may not work (some bridges work this way). Also, memory still need to be accessed and verified, and there could be interpretation issues (the compiler needing to read one instruction in multiple chunks instead of one).
+
+## Type 2.5: EVM-equivalent, except for gas costs
+**Pros**: Increases the gas costs for certain operations that are very difficult to ZK-prove. This helps in reducing worst-case prover time by allowing for a greater bandwidth to be allocated.
+**Cons**: Certain applications may not work and certain functions may not be possible anymore (the more operations in a transactions that are in the same blocks, the less gas can each of them can take up, since gas limit per block is fixed).
+
+## Type 3: Almost EVM-equivalent
+**Pros**: The goal is to reach ZK-EVM at Layer 1, sacrificing some features like precompiles, changes in memory and contract code interpretation.
+**Cons**: Some applications will need to be re-built since they reliant on precompiles and other changes.
+
+Type 3 is meant to be a transitional stage towards Type 1 ZK-EVM.
+
+## Type 4: High-level-language equivalent
+A Type 4 system works by taking smart contract source code written in a high-level language (eg. Solidity, Vyper, or some intermediate that both compile to) and compiling that to some language that is explicitly designed to be ZK-SNARK-friendly.
+
+**Cons**: it’s simpler because it avoids all the hassle to prove the EVM execution layer
+**Pros**: since it will be different byte code, some functions (like CREATE2) will not work as intended, and debugging infrastructure would need to be re-built for the new language/bytecode.
+
+As I’m seeing it, this an almost-decade-long effort to render Ethereum more scalable while using ZK proofs. All of the projects current in development are years away from being in production, and if the Ethereum Merge has taught us something, is that things will happen in super-small steps and many errors can arise.
+
+Most likely, every type of EVM will reach Type 1 (except for some Type 4 that will have specific use cases to remain as a Type 4) and go through all the types. As Vitalik says, different clients could use different implementations and proof methods, but I’m not sure if this will mean that the network becomes more decentralised: it most lilkely will become more sparse and not perfectly redundant, since the execution layer is not processed in the same way.
+
+Still, EVM is the most flexible and robust Virtual Machine that I know of, so the addition of ZK proofs will have effects on the whole EVM ecosystem for years to come.
