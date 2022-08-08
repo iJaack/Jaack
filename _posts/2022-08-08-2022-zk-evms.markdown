@@ -2,11 +2,11 @@
 title: "An Overview of ZK-EVMs"
 layout: post
 date: 2022-08-08 11:00
-image: 
+image: /assets/images/dati-2021-overview.png
 headerImage: false
 tag:
 - blockchain
-category:
+category: blog
 author: jaack
 description: A ZK-EVM is a Virtual Machine that integrate ZK-SNARK technology to make cryptographic proofs of execution on Ethereum-like transactions, either to integrate it in the Ethereum chain itself or to build ZK-rollups that are more scalable.
 published: true
