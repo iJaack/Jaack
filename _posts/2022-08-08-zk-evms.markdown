@@ -2,18 +2,18 @@
 title: "An Overview of ZK-EVMs"
 layout: post
 date: 2022-08-08 11:00
-image: /assets/images/dati-2021-overview.png
-headerImage: false
+image: /assets/images/zk-evms.png
+headerImage: true
 tag:
 - blockchain
 category: blog
 author: jaack
-description: A ZK-EVM is a Virtual Machine that integrates ZK-SNARK tech to make cryptographic proofs of execution on Ethereum-like transactions.
+description: An extract and some considerations from Vitalik Buterin's blog post
 published: true
 ---
 A **ZK-EVM** is a *Virtual Machine* that integrates **ZK-SNARK** technology to make cryptographic proofs of execution on Ethereum-like transactions, either to integrate it in the Ethereum chain itself or to build **ZK-rollups** that are more scalable.
 
-I’m looking ZK-EVMs from the outside, but it’s always so intriguing to understand what the next technology advancement. Also, I fell in love with ZK-SNARK tech way back in 2017 by doing research on *Zcash*.
+I’m looking at ZK-EVMs from the outside, but it’s always so intriguing to understand what the next technology advancement will be. Also, I fell in love with ZK-SNARK tech way back in 2017 when I was doing research on *Zcash*.
 
 [Vitalik Buterin just did](https://vitalik.ca/general/2022/08/04/zkevm.html) a wonderful, but also pretty technical, summary of all the ZK-EVMs types that are being built. I think he’s quite convinced that Ethereum will ultimately scale with ZK-rollups that allow for faster prove time and better security across the board.
 
