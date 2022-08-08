@@ -2,8 +2,8 @@
 title: "An Overview of ZK-EVMs"
 layout: post
 date: 2022-08-08 00:00
-image: /assets/images/zk-evms.png
-headerImage: true
+image:
+headerImage: false
 tag:
 - blockchain
 category: blog
