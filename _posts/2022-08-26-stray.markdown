@@ -1,0 +1,34 @@
+---
+title: "Stray è un piacevole puzzle adventure con un gattino molto vispo"
+layout: post
+date: 2022-08-26 00:00
+image: /assets/images/stray-cover.png
+headerImage: true
+tag:
+- videogames
+category: blog
+author: jaack
+description: 7 ore per completarlo tutta la storia con qualche extra
+published: true
+---
+Durante questa estate, ho cercato il modo più bello che potessi trovare di intrattenermi nei momenti di svago da solo, o di noia. Ho provato con le [serie TV](https://jaack.me/the-office/) (ma a un certo punto non posso guardare 10 ore al giorno di puntate), ho provato con i libri, ma nessuno mi ha appassionato particolarmente (alcuni troppo pesanti, altri troppo orientati al professionale, altri molto lunghi), e anche i videogiochi.
+
+Ho provato tanto videogiochi non solo in questa estate, ma anche prima: quest'estate, però, Sony mi ha offerto 3 mesi gratis di **Playstation Plus Premium** con cui ho potuto scaricare una varietà di giochi. Dopo tante prove, ho capito che il tipo di videogioco che più mi piace è quello di avventura e puzzle. Qualcosa come Super Mario Odissey, che aggiunge anche l'elemento platformer, o Uncharted, che inserisce anche logiche RPG. Questi giochi, però, sono molto lunghi: come un libro di molte centinaia di pagine.
+
+**Stray**, invece - un gioco indie che costa 40€ e che è stato molto promosso da Sony stessa - è il giusto equilibrio tra longevità e intensità, almeno per i miei gusti. È disponibile per gli utenti che hanno almeno l'abbonamento a PS Plus Extra.
+
+Giocare a Stray è come leggere un libro di **200-300 pagine**: può essere una cosa veloce (se si segue solo la storia principale, circa 4-5 ore), oppure può durare un po' di più se si approfondiscono i dettagli e si ritorna su alcune scene per apprezzare al meglio (8 ore per giocare tutti gli extra e completare tutti i trofei, secondo le statiastiche degli utenti di GameTrack).
+
+<img class="image" src="{{base}}/assets/images/stray-1.png" alt="Stray" >
+
+In Stray si prendono i panni i un **gattino** che si perde in una città sotterranea che è stata creata a seguito dello scoppio di un'epidemia per la preservazione della razza umana. Gli umani, nel frattempo, sono tutti morti e hanno lasciato spazio ai robot, che hanno preso usi e costumi dei loro creatori (molto stravaganti le scene in cui si vedono robot barbieri, robot cuochi ma non solo) anche se non ne hanno bisogno.
+
+Ci sono **4 ambientazioni principali**, divise in **12 capitoli**, e l'accesso ad ogni ambientazione chiude l'accesso a quella precedente, anche se i capitoli si possono rigiocare. Quello che mi è piaciuto di più di Stray è la capacità di indicare la strada al giocatore senza dare troppi indizi. In Stray **non ci sono dati in sovra-impressione**, non ci sono sequenze complicate di tasti per fare mosse in ogni situazione: con **X si salta**, con **quadrato si interagisce con gli oggetti**, e con **triangolo si fanno delle mosse feline**, come grattare una parete o un tappeto, fare un pisolino o buttare per terra oggetti
+
+<img class="image" src="{{base}}/assets/images/stray-2.png" alt="Stray" >
+
+Agli occhi di un giocatore che ha imparato tutti i comandi ma che non ha ancora giocato, ogni cosa appare come un **potenziale indizio per superare il livello**. Non ci sono istruzioni chiare, ma solo delle indicazioni di massima: chi trovare, in quale zona cercare e cosa serve fare per andare avanti. Ma l'operazione che effettivamente serve fare non è meccanica, ma **intuitiva dopo un po' di ragionamenti**. In alcuni livelli, ho perso quasi un'ora a cercare cose che poi ho scoperto stavo cercando partendo da presupposti sbagliati. Altre volte, invece, ho finito un livello in pochi minuti.
+
+Anche se avrò speso almeno un'oretta totale delle 7 ore che ho impiegato per arrivare alla fine per ammirare e girovagare nelle bellissime ambientazioni con fotografia mozzafiato.
+
+In queste 7 ore, sento di aver letto e vissuto una bella storia con un dolce e simpatico protagonista che non parla. E di essermi divertito molto.
