@@ -1,7 +1,7 @@
 ---
 title: "My 2022 in data - and predictions for 2023"
 layout: post
-date: 2023-01-03 11:00
+date: 2023-01-03 9:00
 image: /assets/images/Goals-2022.png
 headerImage: true
 tag:
