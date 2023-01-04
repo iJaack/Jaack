@@ -27,8 +27,8 @@ jobs:
     - run: npm run build --if-present
     - run: ipd _site -p pinata -d cloudflare
       env: 
-        IPFS_DEPLOY_CLOUDFLARE__API_TOKEN=E9QOqnDxfTLVufwsZR5rglipJcEkcOxxo7vn03U1
-        IPFS_DEPLOY_CLOUDFLARE__ZONE=jaack.me
-        IPFS_DEPLOY_CLOUDFLARE__RECORD=_dnslink.ipfs.jaack.me
-        IPFS_DEPLOY_PINATA__API_KEY=15aad1e3bb1cdd9aae7b
-        IPFS_DEPLOY_PINATA__SECRET_API_KEY=6b7940d9f9998955fc2f96992a42edfcabec5c2b99359d66684ba471efbabac7
+        IPFS_DEPLOY_CLOUDFLARE__API_TOKEN: ${{ secrets.IPFS_DEPLOY_CLOUDFLARE__API_TOKEN }}
+        IPFS_DEPLOY_CLOUDFLARE__ZONE: ${{ secrets.IPFS_DEPLOY_CLOUDFLARE__ZONE }}
+        IPFS_DEPLOY_CLOUDFLARE__RECORD: "_dnslink.ipfs.viteview.xyz"
+        IPFS_DEPLOY_PINATA__API_KEY: ${{ secrets.IPFS_DEPLOY_PINATA__API_KEY }}
+        IPFS_DEPLOY_PINATA__SECRET_API_KEY: ${{ secrets.IPFS_DEPLOY_PINATA__SECRET_API_KEY }}
