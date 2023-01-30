@@ -1,7 +1,7 @@
 ---
 title: "Collaboration in crypto teams is undervalued"
 layout: post
-date: 2023-01-30 17:00
+date: 2023-01-30 9:00
 image: /assets/images/connects.png
 headerImage: true
 tag:
