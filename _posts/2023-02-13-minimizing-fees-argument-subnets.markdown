@@ -1,7 +1,7 @@
 ---
 title: "Minimizing fees: an argument for subnets"
 layout: post
-date: 2023-02-13 16:00
+date: 2023-02-13 12:00
 image: https://docs.avax.network/assets/images/subnet-validators-0667a8ef05ae5dc26a545d2f52333208.png
 headerImage: true
 tag:
