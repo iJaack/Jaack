@@ -1,29 +1,28 @@
 ---
 layout: page
 title: Cookie Policy
-description: Continuando la navigazione, l'utente accetta la raccolta dei dati aggregati
+description: By continuing browsing, the user accepts the collection of aggregated data.
 ---
 
-Il sito web [Jaack.me](https://jaack.me), di proprietà di Giacomo Barbieri, utilizza servizi di terze parti per analizzare
-il comportamento degli utenti in forma aggregata.
-Continuando la navigazione, l'utente accetta la raccolta dei dati aggregati.
+The website [Jaack.me](https://jaack.me), owned by Giacomo Barbieri, uses third-party services to analyze user behavior in an aggregated form.
+By continuing browsing, the user accepts the collection of aggregated data.
 
 ### Google Signal
-Visione olistica dei modi in cui gli utenti interagiscono con il sito web da più browser e dispositivi. Per impostazione predefinita, i dati sugli accessi scadono dopo 26 mesi. I rapporti cross-device includono solo dati aggregati. Non verrano mai esposti i dati per singoli utenti.
+Provides a holistic view of how users interact with the website across multiple browsers and devices. By default, access data expires after 26 months. Cross-device reports only include aggregated data. Data for individual users will never be exposed.
 
-[Maggiori informazioni](https://support.google.com/analytics/answer/7532985?hl=it)
+[Learn more](https://support.google.com/analytics/answer/7532985?hl=en)
 
 ### Hotjar
-Aiuta a comprendere il comportamento degli utenti del sito grazie a strumenti quali le heatmap e le registrazioni di sessione. Gli strumenti raccolgono esclusivamente dati campione e non analizzano il comportamento di singoli utenti.
+Helps understand user behavior on the site through tools such as heatmaps and session recordings. The tools collect only sample data and do not analyze the behavior of individual users.
 
-[Maggiori informazioni](https://www.hotjar.com/blog/what-is-hotjar/)
+[Learn more](https://www.hotjar.com/blog/what-is-hotjar/)
 
 ### Simple Analytics
-Raccoglie visualizzazioni uniche, timestamp, user agent (per un massimo di 90 giorni), URL (parzialmente), siti referral, dimensioni dei dispositivi. **Non** raccoglie indirizzi IP.
+Collects unique views, timestamps, user agents (up to 90 days), partial URLs, referral sites, and device sizes. It **does not** collect IP addresses.
 
-[Maggiori informazioni](https://docs.simpleanalytics.com/what-we-collect?ref=simpleanalytics.com)
+[Learn more](https://docs.simpleanalytics.com/what-we-collect?ref=simpleanalytics.com)
 
 ### Cloudflare
-Fare riferimento alla Privacy Policy.
+Refer to the Privacy Policy.
 
-[Maggiori informazioni](https://www.cloudflare.com/privacypolicy/)
+[Learn more](https://www.cloudflare.com/privacypolicy/)

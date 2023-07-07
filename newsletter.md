@@ -9,6 +9,8 @@ description: Newsletter domenicale per persone sempre troppo occupate
 
 <img class="image" src="{{base}}/assets/images/newsletter_preamble_cover.png">
 
+*Aggiornamento 7 luglio 2023: Questa newsletter non esce più da un po' ormai. Sto preparando una nuova newsletter, che uscirà nei prossimi mesi, e sarà solo in inglese.*
+
 **FOMO**. *Fear Of Missing Out*. È da questa premessa che ho pensato che sarebbe stato
 utile **In tre parole'**.
 

@@ -19,6 +19,8 @@ description: Un podcast per raccontare le sfide di un millennial, registrato da 
 </div>
 </div>
 
+*Aggiornamento 7 luglio 2023: Il podcast è stato un interessante esperimento, ma non credo che ne farò altri, sebbene è stato un ottimo modo per raccontare delle mie esperienze.*
+
 Cercando su Google, i risultati di ricerca sulla parola ‘Millennial’ producono poca testimonianza tangibile. Cercando su Amazon, invece, escono fuori 7 libri su come assumere i millennial, come funziona il loro mondo: tutti libri scritti da persone hanno un’età decisamente diversa da quella di un millennial. Molti di questi libri, inoltre, raccontano la vita del millennial statunitense, di quello asiatico e di un mondo che in Italia non esiste ancora, o forse non esisterà mai.
 
 Il millennial italiano ha sfide diverse da quelle di un coetaneo oltreoceano o dall’altra parte del mondo, e queste sfide sono sempre troppo sottovalutate, sminuite da considerazioni di osservatori che di Millennial, forse, hanno solo i figli. Avere figli millennial non vuol dire sapere come funzionano i millennial, perché molto spesso alcuni tratti psicologici e distintivi che caratterizzano le paure, le eccitazioni, le emozioni di un millennial sono difficilmente descrivibili e poco comprensibili ad un pubblico di una generazione diversa.

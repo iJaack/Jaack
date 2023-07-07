@@ -84,26 +84,20 @@ Il MacBook è il cuore delle mie operazioni di tutti i giorni: se con l'iPhone c
 ## Le app e i servizi che uso
 
 - 1Password
-- Agenda (solo iOS, iPadOS e macOS)
-- Airmail (solo iOS, iPadOS e macOS)
+- Apple Notes
+- Apple Mail
 - Apple Music
-- Balance (solo iOS)
-- CARROT Weather
-- Day One
-- Exist.io
-- Fantastical
+- Day One (presto sostituito da Apple Journal)
+- Apple Calendar
 - Fattura24
-- Feedly
+- Matter
 - Good Morning Italia
-- Goodreads
-- Google Foto
-- Pocket
+- Book Track
 - Telegram
-- Things 3
+- Apple Reminders
 - Trakt.tv
-- Pillow (solo iOS e WatchOS)
 - Strava
-- Raindrop.io
+- TrainingPeaks
 - Revolut
 - Waze
 
