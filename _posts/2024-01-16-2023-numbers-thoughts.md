@@ -1,5 +1,5 @@
 ---
-title: "2023 in review, in number and thoughs"
+title: "2023 review, in numbers and thoughts"
 layout: post
 date: 2024-01-06 9:00
 image: /assets/images/2024.png
