@@ -2,7 +2,7 @@
 title: "2023 in review, in number and thoughs"
 layout: post
 date: 2024-01-06 9:00
-image: /assets/images/Goals-2023.png
+image: /assets/images/2024.png
 headerImage: true
 tag:
 - life
