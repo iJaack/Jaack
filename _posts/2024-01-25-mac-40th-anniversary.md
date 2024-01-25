@@ -1,5 +1,5 @@
 ---
-title: "On Mac's 40th anniversary"
+title: "On Mac's 40th Anniversary"
 layout: post
 date: 2024-01-25 9:00
 image: /assets/images/mac-40.jpg
