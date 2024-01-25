@@ -62,8 +62,7 @@ In Greg Joswiak's (senior vice president of Worlwide Marketing) words:
   “We run Apple, one of the largest companies in the world, on Mac.”
 </blockquote>
 
-<iframe width="960" height="540" src="https://www.youtube.com/watch?v=8bepzUM1x3w&" frameborder="0" allowfullscreen></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8bepzUM1x3w?si=ER0Auh3NzPndNQOt" title="Steve Jobs presenting the first Mac in 1984" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Happy 40th birthday, Mac!
 
