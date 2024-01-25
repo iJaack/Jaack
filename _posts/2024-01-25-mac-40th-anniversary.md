@@ -62,7 +62,7 @@ In Greg Joswiak's (senior vice president of Worlwide Marketing) words:
   “We run Apple, one of the largest companies in the world, on Mac.”
 </blockquote>
 
-<iframe width="960" height="540" src="http://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="960" height="540" src="https://www.youtube.com/watch?v=8bepzUM1x3w&" frameborder="0" allowfullscreen></iframe>
 
 
 Happy 40th birthday, Mac!
