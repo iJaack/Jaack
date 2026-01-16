@@ -3,16 +3,80 @@ layout: page
 title: Blog
 description: Lo 'Zibaldone' - raccolta di pensieri senza censure
 ---
-<section class="list">
-	{% if site.posts.size == 0 %}
-		<p class="text-center">Nessun post per ora :)</p>
+<style>
+	.tabs {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #ddd;
+	}
+
+	.tab-button {
+		background: none;
+		border: none;
+		padding: 10px 20px;
+		cursor: pointer;
+		font-size: 1.1em;
+		font-weight: bold;
+		color: #666;
+		border-bottom: 3px solid transparent;
+	}
+
+	.tab-button.active {
+		color: #000;
+		border-bottom: 3px solid #000;
+	}
+
+	.post-list {
+		display: none;
+	}
+
+	.post-list.active {
+		display: block;
+	}
+</style>
+
+<div class="tabs">
+	<button class="tab-button active" onclick="openTab('english')">English</button>
+	<button class="tab-button" onclick="openTab('italian')">Italiano</button>
+</div>
+
+<section id="english" class="post-list active list">
+	{% assign en_posts = site.posts | where_exp: "item", "item.lang != 'it'" %}
+	{% if en_posts.size == 0 %}
+	<p class="text-center">No English posts yet :)</p>
 	{% else %}
-		{% for post in site.posts %}
-			{% if post.category == 'blog' %}
-				{% if post.hidden != true %}
-					{% include blog-post.html %}
-				{% endif %}
-			{% endif %}
-		{% endfor %}
+	{% for post in en_posts %}
+	{% if post.category == 'blog' and post.hidden != true %}
+	{% include blog-post.html %}
+	{% endif %}
+	{% endfor %}
 	{% endif %}
 </section>
+
+<section id="italian" class="post-list list">
+	{% assign it_posts = site.posts | where_exp: "item", "item.lang == 'it'" %}
+	{% if it_posts.size == 0 %}
+	<p class="text-center">Nessun post in Italiano per ora :)</p>
+	{% else %}
+	{% for post in it_posts %}
+	{% if post.category == 'blog' and post.hidden != true %}
+	{% include blog-post.html %}
+	{% endif %}
+	{% endfor %}
+	{% endif %}
+</section>
+
+<script>
+	function openTab(lang) {
+		// Hide all lists
+		document.querySelectorAll('.post-list').forEach(list => list.classList.remove('active'));
+		// Deactivate all buttons
+		document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+
+		// Show target list
+		document.getElementById(lang).classList.add('active');
+		// Activate target button
+		event.currentTarget.classList.add('active');
+	}
+</script>
