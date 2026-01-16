@@ -9,23 +9,26 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        node-version: [ 14.17.0 ]
-        
+        node-version: [ 18.x ]
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install -g ipfs-deploy --ignore-scripts
+        cache: 'npm'
+    
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '2.6'
+        bundler-cache: true
+        
     - run: npm ci
-    - run: npm run build --if-present
-    - run: ipd _site -p pinata -d cloudflare
+    - run: bundle exec jekyll build
+    - run: npx ipfs-deploy _site -p pinata -d cloudflare
       env: 
         IPFS_DEPLOY_CLOUDFLARE__API_TOKEN: ${{ secrets.IPFS_DEPLOY_CLOUDFLARE__API_TOKEN }}
         IPFS_DEPLOY_CLOUDFLARE__ZONE: ${{ secrets.IPFS_DEPLOY_CLOUDFLARE__ZONE }}

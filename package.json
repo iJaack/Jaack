@@ -1,0 +1,11 @@
+{
+  "name": "jaack-website",
+  "version": "1.0.0",
+  "description": "Jekyll website source for Jaack",
+  "scripts": {
+    "build": "jekyll build"
+  },
+  "dependencies": {
+    "ipfs-deploy": "^12.0.1"
+  }
+}

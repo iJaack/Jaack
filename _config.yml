@@ -16,7 +16,8 @@ picture: assets/images/profilo-homepage-ig.png
 # resume-external: true
 # resume-url: https://google.com/?q=my+resume
 
-your url: https://ijaack.github.io
+url: "https://ijaack.github.io"
+baseurl: ""
 
 permalink: /:title/
 
@@ -89,7 +90,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-gist
   - jekyll-feed
-  - jemoji
   - jekyll-admin
   - jekyll-sitemap
 
@@ -102,4 +102,4 @@ compress_html:
         - development
         - stage
 
-exclude: ["travis.sh", "Rakefile", "README.md", "Gemfile", "Gemfile.lock", "FAQ.md"]
+exclude: ["Rakefile", "README.md", "Gemfile", "Gemfile.lock", "vendor", "node_modules"]
