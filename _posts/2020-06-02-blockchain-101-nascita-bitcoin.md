@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Per capire come siamo arrivati a questo punto, però, è necessario fare alcuni passi indietro ed analizzare la storia della blockchain dall’inizio.
 published: true
+lang: it
 ---
 
 Pochi ricorderanno il 2019 come l’anno della **blockchain**: sì, certo, alcuni produttori di smartphone (HTC, Samsung, per esempio) hanno annunciato smartphone con supporto diretto alla nuova tecnologia.

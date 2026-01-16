@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: E altre considerazioni sull'inizio del 2022
 published: true
+lang: it
 ---
 
 Alcuni mi hanno chiesto se avessi aggiornamenti sui miei [workflow](https://jaack.me/workflows/) per il 2021 (ora 2022). Altri mi hanno chiesto di fare una puntata di [Vita da Millennial](https://jaack.me/podcast/) per raccontare quello che sto facendo e come lo sto facendo, perché possa essere utile e di ispirazione.

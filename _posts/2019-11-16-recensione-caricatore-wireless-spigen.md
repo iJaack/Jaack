@@ -11,6 +11,7 @@ category: blog
 author: jaack
 description: Recensione caricatore wireless stand Spigen Steadiboost Flex
 published: true
+lang: it
 ---
 
 Un mese fa, Spigen mi ha mandato alcuni caricatori da provare e alcuni codici

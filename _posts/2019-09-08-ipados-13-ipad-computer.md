@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Come sono riuscito a sopravvivere con l'iPad quando mi serviva il computer, ma non mi ha fatto cambiare idea
 published: true
+lang: it
 ---
 Quando ho visto Apple annunciare iPadOS 13, ero eccitato 'neutralmente': ogni aggiornamento di iOS arriva con qualche novità nascosta o lo si capisce davvero solo quando lo si prova, quindi non volevo stupirmi prima del dovuto.
 

@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Le app sul dock del mio MacBook Pro, il dispositivo più importante per il mio lavoro
 published: true
+lang: it
 ---
 
 <h4 align="center"><a href="{{base}}/assets/docs/2020-wallpaper-macbook-pro@3x.png">Scarica lo sfondo (HD)</a></h4>

@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Il mio metodo per usare l'Apple Watch come filtro dell'iPhone
 published: true
+lang: it
 ---
 A differenza di quanto progettato per la [Homescreen dell'iPhone]({{base}}/homescreen-2020-iphone),
 l'Apple Watch è l'oggetto che uso di meno di tutti i miei dispositivi, e questo è un bene.

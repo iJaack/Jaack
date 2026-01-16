@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Gli sconti di Ottobre di Spigen
 published: true
+lang: it
 ---
 
 Un paio di settimane fa, Spigen mi ha inviato alcune cose da recensire. Sebbene

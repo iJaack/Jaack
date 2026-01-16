@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Chi era tutta quella gente?
 published: true
+lang: it
 ---
 
 Ho finalmente visto il September Evento 2019 di Apple su Youtube (grande cosa che l'hanno trasmesso anche lì). Invece di un articolo, ho preferito semplicemente mettere giù una serie di pensieri che ho scritto mentre guardavo tutta la conferenza.

@@ -11,6 +11,7 @@ category: blog
 author: jaack
 description: Ho imparato a tenere pulito e 'ordinato' il mio Mac con CleanMyMac X
 published: true
+lang: it
 ---
 
 Quando si tratta di comprare un nuovo MacBook (e per ora è successo due volte da quando uso macOS), devo fare un gran bel salto di qualità. Per il MacBook che ho ora, per esempio (un MacBook Pro 13" del 2019), ho fatto il salto da 8 a 16 GB di RAM, perché sapevo che avrei avuto il bisogno di più spazio per app in parallelo.

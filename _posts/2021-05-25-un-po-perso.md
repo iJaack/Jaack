@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: So che è una transizione, e penso capiti a tutti. Ma comunque..
 published: true
+lang: it
 ---
 
 Mi sento un po' perso.

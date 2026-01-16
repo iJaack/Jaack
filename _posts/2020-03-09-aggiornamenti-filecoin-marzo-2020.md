@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Gli aggiornamenti dell'ultimo quarter su Filecoin
 published: true
+lang: it
 ---
 
 Periodicamente, seguo gli aggiornamenti di progetti blockchain che credo hanno

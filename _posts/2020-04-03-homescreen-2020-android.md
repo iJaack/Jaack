@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Il mio smartphone Android come telefono personale
 published: true
+lang: it
 ---
 
 Se come smartphone per lavoro uso l'iPhone, come smartphone personale ho scelto Android.

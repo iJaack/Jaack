@@ -11,6 +11,7 @@ category: blog
 author: jaack
 description: Un paio di considerazioni sull'ennesima battuta di Facebook contro le istituzioni
 published: true
+lang: it
 ---
 Finalmente sono riuscito, a circa 2 settimane dalla pubblicazione, a guardare
 tutto il Q&A pubblico che ha trasmesso Mark Zuckerberg in diretta dal suo profilo Facebook

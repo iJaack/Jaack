@@ -10,6 +10,7 @@ category: projects
 author: jaack
 description: Funziona con i siti statici ed è quasi tutto user-friendly
 published: true
+lang: it
 ---
 
 A gran richiesta, pubblico una guida su come distribuire il proprio sito web

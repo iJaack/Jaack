@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Estratto della 3a puntata della 2a stagione di Vita da Millennial
 published: true
+lang: it
 ---
 <iframe src="https://anchor.fm/jaack/embed/episodes/Il-Coraggio-dellAttesa-eaj2nu" height="180px" width="810px" frameborder="0" scrolling="no"></iframe>
 

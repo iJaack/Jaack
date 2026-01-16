@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: La bellezza dell'internet tramite i video-meme
 published: true
+lang: it
 ---
 
 Ci ho preso gusto. Vedo delle cose bellissime su TikTok, è vorrei curarne una selezione: una raccolta dei più caratteristici video-meme e clip pieni di cultura pop.

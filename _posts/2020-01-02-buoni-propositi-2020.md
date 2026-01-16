@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Google Sheets, un editor di foto e tanta pianificazione
 published: true
+lang: it
 ---
 
 Dopo aver chiuso il 2019 con il mio [post di recap]({{base}}/Recap-2019/), è il momento di continuare ad utilizzare il mio Sistema per pianificare anche il 2020.

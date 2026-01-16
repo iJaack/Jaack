@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Sto tornando. Più forte di prima.
 published: true
+lang: it
 ---
 
 Ho iniziato con Wordpress.

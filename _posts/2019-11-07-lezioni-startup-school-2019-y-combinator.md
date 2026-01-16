@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Appunti e riflessioni sul corso per imprenditori
 published: true
+lang: it
 ---
 
 Mi prendo sempre almeno 30 minuti al giorno, la sera dopo le 19:00, per impararare

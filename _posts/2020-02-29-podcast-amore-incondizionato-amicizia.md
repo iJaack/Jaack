@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Estratto dalla 7a puntata della 2a stagione di Vita da Millennial.
 published: true
+lang: it
 ---
 <blockquote>They love you, no matter what</blockquote>
 

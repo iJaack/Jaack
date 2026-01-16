@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Dalla Carta d'Identità Elettronica alla firma digitale, la Pubblica Amministrazione funziona benissimo, ma bisogno navigarci
 published: true
+lang: it
 ---
 
 Per chi ha seguito le mie (sfortunate) vicende, il 2 maggio ho preso una cosiddetta

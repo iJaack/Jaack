@@ -1,6 +1,7 @@
 <div class="item {% if post.star %}star{% endif %}">
     <a class="url" href="{{base}}{{ post.url }}">
-        <aside class="date"><time datetime="{{ post.date | date:"%d-%m-%Y" }}">{{ post.date | date: "%b %d %Y" }}</time></aside>
-        <h3 class="title">{{ post.title }}</h3>
+        <aside class="date"><time datetime="{{ post.date | date:" %d-%m-%Y" }}">{{ post.date | date: "%b %d %Y"
+                }}</time></aside>
+        <h3 class="title">{{ post.title }}{% if post.lang == 'it' %} <span class="lang-badge">IT</span>{% endif %}</h3>
     </a>
 </div>

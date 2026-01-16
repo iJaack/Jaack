@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Estratto della 6a puntata della 2a stagione di Vita da Millennial
 published: true
+lang: it
 ---
 <iframe src="https://anchor.fm/jaack/embed/episodes/Il-falso-mito-del-Deep-Work-eavtf1" height="180px" width="810px" frameborder="0" scrolling="no"></iframe>
 

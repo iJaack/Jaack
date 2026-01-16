@@ -11,6 +11,7 @@ category: blog
 author: jaack
 description: Il Metodo Universale per Disporre le Icone sullo Smartphone (MUDIS)
 published: true
+lang: it
 ---
 
 <h4 align="center"><a href="{{base}}/assets/docs/2020-wallpaper-iphone-x.png">Scarica lo sfondo per iPhone X (HD)</a></h4>

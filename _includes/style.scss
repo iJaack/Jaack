@@ -22,3 +22,19 @@
 @import "components/side-by-side";
 @import "components/social-links";
 @import "components/spoiler";
+
+.lang-badge {
+    display: inline-block;
+    padding: 0.2em 0.6em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+    color: #fff;
+    background-color: #007bff;
+    margin-left: 5px;
+    vertical-align: middle;
+}

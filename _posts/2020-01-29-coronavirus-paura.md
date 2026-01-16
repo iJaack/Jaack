@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: La paura ti fa pensare cose brutte. Tipo che odi i cinesi perché porca miseria ma perché diamine sono sempre loro.
 published: true
+lang: it
 ---
 Lunedì mattina, ho preso l'aereo da Vienna per andare in ufficio a Milano.
 Arrivato in aeroporto, ho visto tanti cinesi. *Tantissimi*. Di solito non noto questa cosa, perché sto con le cuffie e penso a cercare il gate di partenza.

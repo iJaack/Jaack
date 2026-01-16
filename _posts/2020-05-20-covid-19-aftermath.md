@@ -10,6 +10,7 @@ category: projects
 author: jaack
 description: Why are people enjoying watching are people talking random all day long?
 published: true
+lang: it
 ---
 
 *This is an extension of the talk I gave on e-learning platform iBicocca

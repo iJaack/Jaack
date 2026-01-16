@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Non lo faccio più da tempo.
 published: true
+lang: it
 ---
 
 Ho iniziato a scrivere [parlando di tecnologia](https://tweaknology.org). Ho trovato un mondo ad aspettarmi che avrei sempre voluto conoscere. Pensavo di essere sul tetto del mondo. E invece ora sono qui, a pensare a tutt’altro.

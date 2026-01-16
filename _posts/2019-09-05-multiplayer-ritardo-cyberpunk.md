@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Un modo per allungare l'attesa
 published: true
+lang: it
 ---
 
 [The Verge](https://www.theverge.com/2019/9/4/20849235/cyberpunk-2077-multiplayer-launch)

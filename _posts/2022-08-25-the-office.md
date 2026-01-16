@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Tanto è cambiato, ma tanto è anche rimasto uguale
 published: true
+lang: it
 ---
 
 Una volta ogni qualche anno, in estate soprattutto, decido di guardare una vecchia serie tv tutta d'un fiato. Uno di quei show che hanno fatto la storia della TV, ma che non ho avuto modo di vedere quanto andavano in onda, per un motivo o per un altro. Ho iniziato questa tradizione con **How I Met Your Mother** quando stava finendo, passando poi a **Breaking Bad** qualche mese dopo la fine della serie.

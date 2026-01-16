@@ -10,6 +10,7 @@ category: projects
 author: jaack
 description: Come risparmierò senza rinunciare a nulla
 published: true
+lang: it
 ---
 Mi rendo conto che sto diventando un tipo sempre più pragmatico. Che la vita mi da spesso pugni in faccia, quindi meglio se mi difendo bene. Soprattutto quando si tratta di soldi.
 

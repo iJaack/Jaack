@@ -10,6 +10,7 @@ category: projects
 author: jaack
 description: Palinsesto per l'Innovation Arena di IAB Forum 2019
 published: true
+lang: it
 ---
 
 Quando nel 1999 il filosofo e sociologo Zygmunt Bauman pubblicò il libro *‘Modernità Liquida'*, il mondo che descriveva era quello in cui gli utenti e consumatori si stavano trasformando.

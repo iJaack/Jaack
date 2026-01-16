@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: League of Legends Wild Rift è in arrivo nel 2020
 published: true
+lang: it
 ---
 LOL arriva su mobile.
 

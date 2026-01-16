@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Un solo computer non basta per garantire la resilienza dei dati
 published: true
+lang: it
 ---
 
 <pre>Nota: questa piccola guida fa parte di una serie di guide per conoscere e sviluppare su IPFS.

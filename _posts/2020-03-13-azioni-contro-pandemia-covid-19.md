@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Cose che puoi fare per aiutare concretamente l'umanità contro l'epidemia globale COVID-19 causata dal nuovo Coronavirus SARS-CoV-2
 published: true
+lang: it
 ---
 
 In questi giorni di frenesia digitale e di spasmodica attesa delle ore 18:00 per l'aggiornamento del bollettino della Protezione Civile, mi hanno segnalato tantissime iniziative per dare una mano. Le riassumo qui, in punti.

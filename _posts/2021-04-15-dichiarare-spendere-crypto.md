@@ -11,6 +11,7 @@ category: blog
 author: jaack
 description: Dichiarare e spendere, senza troppi problemi - almeno per ora
 published: true
+lang: it
 ---
 
 Da quando ho iniziato a lavorare nel mondo crypto full time, ho dovuto imparare, sulla mia pelle, tutta una serie di procedure e nozioni che prima non avevo, sia perché non mi servivano, ma soprattutto perché non usavo le crypto così tanto. Oggi, lavorando in [Avascan](https://avascan.info), le crypto sono il mio pane quotidiano e faccio tantissime transazioni ogni mese, sia per ricevere soldi, che per inviarli, che per modificare il mio portafoglio di investimenti.

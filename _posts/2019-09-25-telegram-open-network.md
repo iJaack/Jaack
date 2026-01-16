@@ -11,6 +11,7 @@ category: projects
 author: jaack
 description: Guide, commenti, aggiornamenti
 published: true
+lang: it
 ---
 **Telegram** è la mia app preferita di **messaggistica**.
 

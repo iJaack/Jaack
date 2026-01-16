@@ -12,6 +12,7 @@ category: blog
 author: jaack
 description: Un'app per costruire l'abitudine della meditazione
 published: true
+lang: it
 ---
 
 Volevo scrivere questa recensione da un po', ma non ho mai trovato la chiave

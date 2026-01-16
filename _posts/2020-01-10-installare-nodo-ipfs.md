@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Join the decentralization!
 published: true
+lang: it
 ---
 <pre>Nota: questa piccola guida fa parte di una serie di guide per conoscere e sviluppare su IPFS. <a href="{{base}}/distribuire-sito-web-ipfs">Clicca qui</a> per andare alla pagina principale della guida.</pre>
 

@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: L'iPad come companion e non come sostituto dell'esperienza desktop
 published: true
+lang: it
 ---
 
 Per molti l'iPad è il sostituto perfetto dell'esperienza desktop. [Federico Viticci

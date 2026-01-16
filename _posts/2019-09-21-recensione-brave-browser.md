@@ -12,6 +12,7 @@ category: blog
 author: jaack
 description: Brave Browser dopo 9 mesi di utilizzo
 published: true
+lang: it
 ---
 
 [**Scarica Brave Browser**](https://brave.com/jaa499)

@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Sembra come una conversazione che non finisce mai, un botta e risposta che dura da mesi.
 published: true
+lang: it
 ---
 
 Passerà.

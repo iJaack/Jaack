@@ -10,6 +10,7 @@ category: projects
 author: jaack
 description: Un approfondimento su due casi d'uso blockchain che ho particolarmente a cuore
 published: true
+lang: it
 ---
 Per un evento ad [**Ala/34**](https://ala34.com), un co-working a Roma, mi è stato chiesto di preparare
 un talk su casi d'uso della blockchain, come naturale evoluzione di un talk che

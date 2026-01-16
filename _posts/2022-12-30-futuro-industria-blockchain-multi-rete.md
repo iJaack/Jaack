@@ -11,6 +11,7 @@ category: blog
 author: jaack
 description: Come scala una blockchain? Qual'è la differenza tra bitcoin, ethereum e avalanche e cosmos? Un breve viaggio nel futuro delle reti multi-blockchain e delle implicazioni per l’utente finale
 published: true
+lang: it
 ---
 
 Tutti ormai conosciamo il termine blockchain, e sappiamo (in maniera più o meno precisa) cosa significa: è il **registro condiviso, pubblico e decentralizzato**, su cui vengono registrati trasferimenti di valore.

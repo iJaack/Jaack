@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Cambiano le necessità, cambiano le app
 published: true
+lang: it
 ---
 
 E così siamo arrivati ad Ottobre.

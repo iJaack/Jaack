@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Alcune immagini e frasi da ricordare.
 published: true
+lang: it
 ---
 
 Vorrei poter scrivere un articolo intero su tutto quello che è successo tra Gamestop, r/WallStreetBets e Robinhood, ma non ne ho le forze. C'è stato talmente tanto trambusto che non saprei da dove cominciare, non so abbastanza, non ho tempo di collegare tutti i puntini.

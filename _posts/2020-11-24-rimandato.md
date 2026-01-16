@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Doveva essere il mio ultimo esame universitario.
 published: true
+lang: it
 ---
 Stamattina ho fatto quello che doveva essere il mio ultimo esame universitario.
 

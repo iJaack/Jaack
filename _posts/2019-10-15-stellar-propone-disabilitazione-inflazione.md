@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Nell'ultimo aggiornamento, la SDF ha proposto la disabilitazione dell'inflazione
 published: true
+lang: it
 ---
 Ho sempre pensato che **Stellar** fosse un bel progetto blockchain.
 

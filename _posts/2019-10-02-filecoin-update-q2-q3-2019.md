@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Annuncio della mainnet, test importanti
 published: true
+lang: it
 ---
 
 Questa domenica, nella newsletter *'Questa settimana in tre parole'* (bottone per l'iscrizione in fondo all'articolo) ho suggerito la lettura dell'aggiornamento periodico del team di Filecoin sul loro progetto, che finalmente ora ha una roadmap che include già la *versione 1.0.0*.

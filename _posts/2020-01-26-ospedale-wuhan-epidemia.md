@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description:  In Cina, precisamente a Wuhan, dove c'è l'epidemia di cui tutti parlano, costruiranno questo ospedale in poco tempo. Sarà operativo dal 3 febbraio.
 published: true
+lang: it
 ---
 Questa foto, presa da [BBC News](https://www.bbc.com/news/world-asia-china-51245156), non può essere stata scattata in qualsiasi posto del mondo che non sia in Cina.
 

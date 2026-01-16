@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Maccy è gratis, open source e senza interfaccia da finestra
 published: true
+lang: it
 ---
 Quando su iOS e macOS Apple ha abilitato la possibilità di copiare automaticamente
 e rendere disponibili gli appunti copiati su tutti i dispositivi connessi allo

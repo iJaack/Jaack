@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Siamo tutti stanchi, ma non dobbiamo per forza odiarci per delle sottigliezze burocratiche
 published: true
+lang: it
 ---
 La vita in quarantena è difficile. Dal **4 maggio** si possono vedere i propri cari, ma molte restrizioni allo spostamento rimarranno.
 

@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: L'airdrop è dedicato agli utenti di Keybase
 published: true
+lang: it
 ---
 Ho comprato per la prima volta bitcoin 2 anni fa circa. Da quel momento in poi,
 per circa 6 mesi, ho fatto trading (anche giornaliero), dannandomi su tutte le

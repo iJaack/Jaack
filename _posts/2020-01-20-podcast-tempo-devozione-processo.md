@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: La trascrizione della 2a puntata della 2a stagione di Vita da Millennial.
 published: true
+lang: it
 ---
 
 <iframe src="https://anchor.fm/jaack/embed/episodes/Sul-tempo-e-la-devozione-al-processo-eaa04a" height="180px" width="810px" frameborder="0" scrolling="no"></iframe>

@@ -10,6 +10,7 @@ category: blog
 author: jaack
 description: Una piattaforma in cui pokémon ed esseri umani possono davvero coesistere
 published: true
+lang: it
 ---
 Ho giocato a Pokémon per tutta la mia infanzia.
 
