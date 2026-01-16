@@ -37,8 +37,8 @@ description: Lo 'Zibaldone' - raccolta di pensieri senza censure
 </style>
 
 <div class="tabs">
-	<button class="tab-button active" onclick="openTab('english')">English</button>
-	<button class="tab-button" onclick="openTab('italian')">Italiano</button>
+	<button class="tab-button active" onclick="openTab('english', this)">English</button>
+	<button class="tab-button" onclick="openTab('italian', this)">Italiano</button>
 </div>
 
 <section id="english" class="post-list active list">
@@ -68,15 +68,15 @@ description: Lo 'Zibaldone' - raccolta di pensieri senza censure
 </section>
 
 <script>
-	function openTab(lang) {
+	function openTab(lang, btn) {
 		// Hide all lists
 		document.querySelectorAll('.post-list').forEach(list => list.classList.remove('active'));
 		// Deactivate all buttons
-		document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+		document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
 
 		// Show target list
 		document.getElementById(lang).classList.add('active');
 		// Activate target button
-		event.currentTarget.classList.add('active');
+		btn.classList.add('active');
 	}
 </script>
