@@ -1,5 +1,5 @@
 ---
-title: "La paura del nuovo Coronavirus"
+title: "The Fear of the New Coronavirus"
 layout: post
 date: 2020-01-29 17:00
 image: /assets/images/fear.jpg
@@ -8,64 +8,59 @@ tag:
 - culture
 category: blog
 author: jaack
-description: La paura ti fa pensare cose brutte. Tipo che odi i cinesi perché porca miseria ma perché diamine sono sempre loro.
+description: Fear makes you think bad things. Like that you hate the Chinese because damn why the hell is it always them.
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
+Monday morning, I took the plane from Vienna to go to the office in Milan.
+Arriving at the airport, I saw many Chinese people. *Lots of them*. I usually don't notice this, because I have headphones on and I'm thinking about looking for the departure gate.
 
+Some were wearing masks. Some perhaps weren't exactly Chinese, maybe Japanese or Vietnamese. But I was very **afraid**. That they were sick. That they had the coronavirus.
 
-Lunedì mattina, ho preso l'aereo da Vienna per andare in ufficio a Milano.
-Arrivato in aeroporto, ho visto tanti cinesi. *Tantissimi*. Di solito non noto questa cosa, perché sto con le cuffie e penso a cercare il gate di partenza.
+I know it's an *unhealthy* thought, I know. Probably, if the virus had taken hold in Spain, and I hadn't been able to clearly recognize a Spaniard by their somatic features, I wouldn't have been so afraid.
 
-Alcuni erano con le mascherine. Alcuni forse non erano proprio cinesi, magari giapponesi o vietnamiti. Ma avevo tanta **paura**. Che fossero ammalati. Che avessero il coronavirus.
+And instead I was. Because the *potential carrier* of this virus is a easily recognizable population: I recognize that there is also the misunderstanding linked to the fact that the person might not be Chinese but from a neighboring country (and therefore with very similar somatic features), but fear takes over.
 
-So che è un pensiero *malsano*, lo so. Probabilmente, se il virus avesse preso piede in Spagna, e non fossi stato in grado di riconoscere chiaramente uno spagnolo dai suoi tratti somatici, non avrei avuto così paura.
+<img class="image" src="{{base}}/assets/images/Casi-nCov-28-gennaio-2019.png" alt="The cases of nCov-2019 updated to January 28, 2019, World Health Organization">
 
-E invece ce l'avevo. Perché ad essere *potenziale portatore* di questo virus è una popolazione facilmente riconoscibile: riconosco che c'è anche il fraintendimento legato al fatto che la persona potrebbe non essere cinese ma di un Paese vicino (e quindi con tratti somatici molto simili), ma la paura prende il sopravvento.
+Fear makes you think bad things. Like that you hate the Chinese because damn why the hell is it always them who trigger epidemics: and in 2003 with SARS, and now with the coronavirus.
 
-<img class="image" src="{{base}}/assets/images/Casi-nCov-28-gennaio-2019.png" alt="I casi di nCov-2019 aggiornati al 28 Gennaio 2019, Organizzazione Mondiale della Sanità">
+And it's always something new. Today you don't die of smallpox because it's extinct, theoretically not even of pneumonia because there is a cure. But of coronavirus today you die.
 
-La paura ti fa pensare cose brutte. Tipo che odi i cinesi perché porca miseria ma perché diamine sono sempre loro a far scattare le epidemie: e nel 2003 con la SARS, e ora con il coronavirus.
+Just as people died of SARS.
 
-Ed è sempre qualcosa di nuovo. Oggi di vaiolo non si muore perché è estinto, di polmonite teoricamente nemmeno perché c'è una cura. Ma di coronavirus oggi si muore.
+<img class="image" src="{{base}}/assets/images/civetta-sars.jpg" alt="The civet cat">
 
-Come si è morto di SARS.
+I went to see what happened with SARS and MERS (the latter is a virus that started in Saudi Arabia). With SARS the virus started from an animal, the civet cat, while with MERS from dromedaries. I studied the situation a bit on the official World Health Organization website and found some data that comforted me.
 
-<img class="image" src="{{base}}/assets/images/civetta-sars.jpg" alt="Il gatto civetta">
+<img class="image" src="{{base}}/assets/images/MERS-epicurve-July-2019.png" alt="The temporal distribution of MERS cases until 2019">
 
-Sono andato a vedere cosa è successo con SARS e con MERS (quest'ultimo è un virus che è partito dall'Arabia Saudita). Con SARS il virus è partito da un animale, il gatto civetta, mentre con MERS dai dromedari. Ho studiato un po' la situazione sul sito ufficiale dell'Organizzazione Mondiale della Sanità e ho trovato dei dati che mi hanno confortato.
+I understood, for example, that people still get sick with MERS today: they are few, certainly, and they are all in Saudi Arabia. A bit like when it is possible to catch malaria in some areas of Africa.
 
-<img class="image" src="{{base}}/assets/images/MERS-epicurve-July-2019.png" alt="La distribuzione temporale dei casi di MERS fino al 2019">
+Then I discovered that SARS, MERS and nCov (the latter the name of the virus of this period) are all part of the strain of viruses called **coronavirus**. Then I went to study the entire *expansion chain*, so to speak, of these viruses. And I realized that SARS had a maximum of about 8,000 infected, almost 800 deaths in 29 countries.
 
-Ho capito, per esempio, che le persone ancora oggi si ammalano di MERS: sono poche, certo, e sono tutte in Arabia Saudita. Un po' come quando è possibile prendere la malaria in alcune zone dell'Africa.
+<img class="image" src="{{base}}/assets/images/Casi-SARS-2003.png" alt="The data on SARS cases, 2003, World Health Organization">
 
-Poi ho scoperto che SARS, MERS e nCov (quest'ultimo il nome del virus di questo periodo) fanno tutti parte del ceppo di virus che si chiama **coronavirus**. Poi sono andato a studiare tutta la *catena di espansione*, per così dire, di questi virus. E mi sono accorto che la SARS ha avuto un massimo di circa 8.000 infettati, quasi 800 morti in 29 paesi.
+I then went to see the victims of MERS, which did not start in China. And I realized that there were 3,000 cases.
 
-<img class="image" src="{{base}}/assets/images/Casi-SARS-2003.png" alt="I dati sui casi della SARS, 2003, Organizzazione Mondiale della Sanità">
+<img class="image" src="{{base}}/assets/images/Casi-MERS-2019.png" alt="The data on MERS cases, 2019, World Health Organization">
 
-Sono andato poi a vedere le vittime della MERS, che non è iniziata in Cina. E mi sono accorto che ci sono stati 3.000 casi.
+Then a doubt came to me: why were there so many more infected by SARS than by MERS? Probably because in China *there are just more people*. So I went to Google and searched for data on the population of Saudi Arabia and China at the time of the two epidemics.
 
-<img class="image" src="{{base}}/assets/images/Casi-MERS-2019.png" alt="I dati sui casi della MERS, 2019, Organizzazione Mondiale della Sanità">
+In 2002, there were about 1.28 billion people in China. In Saudi Arabia, in 2012-2013, there were 30 million people. OK, the comparison is merciless. But then I thought that, effectively, China is so big that one should not consider the whole country, but only the province where the epidemic started.
 
-Allora mi è venuto un dubbio: perché gli infettati dalla SARS sono stati cos tanti di più degli infettati dalla MERS? Probabilmente perché in Cina *ci sono proprio più persone*. Allora sono andato su Google e ho cercato i dati sulla popolazione dell'Arabia Saudita e della Cina nel momento delle due epidemie.
+I summarize everything:
 
-Nel 2002, in Cina c'erano circa 1.28 miliardi di persone. In Arabia Saudita, nel 2012-2013, c'erano 30 milioni di persone. OK, il confronto è impietoso. Poi però ho pensato che, effettivamente, la Cina è così grande che non bisognerebbe considerare tutto il Paese, ma solo la provincia in cui è iniziata l'epidemia.
+- In 2003, SARS first appeared in the province of **Guangdong**, which has about **100 million** inhabitants (it's the area bordering Hong Kong, to be clear) and had 8,000 cases and about 800 infected worldwide
+- In 2012, when MERS appeared, in Saudi Arabia, the population basin was **30 million** and about 2,500 people have been infected to date, with about 850 deaths
+- Today, with the new coronavirus, the population living in the Hubei region, of **56 million** people, has been isolated, and there are about 4,500 cases of infection with over 130 deaths
 
-Ricapitolo tutto:
+I am an aspiring engineer, so I like to do calculations and therefore find the **percentage of infected compared to the reference population**:
 
-- Nel 2003, la SARS è apparsa la prima volta nella provincia del **Guangdong**, che ha circa **100 milioni** di abitanti (è la zona che confina con Hong Kong, per capirci) e ha avuto 8.000 casi e circa 800 infetti in tutto il mondo
-- Nel 2012, quando è apparsa la MERS, in Arabia Saudita, il bacino di popolazione era di **30 milioni** e sono stati infettati, fino ad oggi, circa 2.500 persone, con circa 850 morti
-- Oggi, con il nuovo coronavirus, è stata isolata la popolazione che vive nella regione dell'Hubei, da **56 milioni** di persone, e ci sono circa 4.500 casi di infezione con oltre 130 morti
-
-Io sono aspirante ingegnere, quindi mi piace fare calcoli e trovare quindi la **percentuale di infettati rispetto alla popolazione di riferimento**:
-
-- SARS: 0,008%
-- MERS: 0,008%
+- SARS: 0.008%
+- MERS: 0.008%
 - nCov-2019: 0.008%
 
-Sorprendentemente, le percentuali sono praticamente uguali. Non sembra un'epidemia globale così anormale, dopotutto.
+Surprisingly, the percentages are practically the same. It doesn't seem like such an abnormal global epidemic, after all.
 
-Forse non ho più così paura come prima. Meno male che ho approfondito.
+Maybe I'm not as afraid as before anymore. Luckily I looked into it.

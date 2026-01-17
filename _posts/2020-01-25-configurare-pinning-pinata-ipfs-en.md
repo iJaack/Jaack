@@ -1,5 +1,5 @@
 ---
-title: "Come configurare il pinning dei dati su IPFS con Pinata"
+title: "How to configure data pinning on IPFS with Pinata"
 layout: post
 date: 2020-01-24 12:00
 image: /assets/images/projects/IPFS/pinning-ipfs.png
@@ -8,44 +8,38 @@ tag:
 - blockchain
 category: blog
 author: jaack
-description: Un solo computer non basta per garantire la resilienza dei dati
+description: A single computer is not enough to guarantee data resilience
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+<pre>Note: this little guide is part of a series of guides to learn about and develop on IPFS.
+<a href="{{base}}/distribuire-sito-web-ipfs">Click here</a> to go to the main page of the guide.</pre>
 
+After [installing the IPFS node]({{base}}/installare-nodo-ipfs) on your computer, one can say that the content we put through the IPFS Desktop app is on IPFS and will remain there.
 
-<pre>Nota: questa piccola guida fa parte di una serie di guide per conoscere e sviluppare su IPFS.
-<a href="{{base}}/distribuire-sito-web-ipfs">Clicca qui</a> per andare alla pagina principale della guida.</pre>
+This is true but only partially. Since IPFS works - conceptually - like torrent, if the content is only on one computer and that computer is unavailable for any reason, that content is no longer retrievable.
 
-Dopo aver [installato il nodo IPFS]({{base}}/installare-nodo-ipfs) sul proprio computer,
-si può dire che i contenuti che mettiamo tramite l'app IPFS Desktop sono su IPFS e lì rimarranno.
+For this reason, for some time now there have been services for IPFS called *pinning* services: a sort of cloud storage to guarantee data resilience. If they are not on your computer, the pinning service maintains them, guaranteeing their availability.
 
-Questo è vero ma solo in parte. Dato che IPFS funziona - a livello concettuale - come torrent, se i contenuti sono solo un computer e quel computer per qualsiasi motivo non è disponibile, quel contenuto non è più reperibile.
+There are several pinning services, but for this guide we will use the **Pinata** service, which for now has proven to be the easiest and fastest to configure and use.
 
-Per questo, da qualche tempo per IPFS esistono dei servizi che si chiamano di *pinning*: una sorta di cloud storage per garantire la resilienza dei dati. Se non sono sul proprio computer, il servizio di pinning li mantiene, garantendone la disponibilità.
+To register, just go to [pinata.cloud](https://pinata.cloud) creating credentials with email and password.
 
-Esistono diversi servizi di pinning, ma per questa guida useremo il servizio **Pinata**, che per ora si è rivelato il più facile e veloce da configurare ed usare.
+This guide would end like this, and it would be useless to even write it, if it didn't make sense to explain Pinata's features so that they are useful for distributing files and websites on IPFS.
 
-Per registrarsi, basta andare su [pinata.cloud](https://pinata.cloud) creando le credenziali con email e password.
+<img class="image" src="{{base}}/assets/images/projects/IPFS/pinata-getting-started-ipfs.png" alt="The Getting Started screen of Pinata.cloud">
 
-Questa guida finirebbe così, e sarebbe inutile anche solo scriverla, se non che è ha senso spiegare le funzionalità di Pinata in modo che siano utili per distribuire file e siti web su IPFS.
+As soon as you log in to Pinata, the **Getting Started** screen appears, which is actually the most complex screen of all: it is the documentation on using Pinata's APIs to create apps that use IPFS as decentralized storage. Not our case.
 
-<img class="image" src="{{base}}/assets/images/projects/IPFS/pinata-getting-started-ipfs.png" alt="La schermata Getting Started di Pinata.cloud">
+<img class="image" src="{{base}}/assets/images/projects/IPFS/pinata-upload-ipfs.png" alt="The Upload screen of Pinata.cloud">
 
-Non appena si fa l'accesso su Pinata, appare la schermata **Getting Started**, che in realtà è la schermata più complessa di tutte: è la documentazione sull'utilizzo delle API di Pinata per creare app che utilizzino IPFS come storage decentralizzato. Non il nostro caso.
+The **Upload** screen is similar to the Files tab on IPFS Desktop: it allows you to upload files to IPFS simply by uploading them to the web page, but in this case the files reside in the Pinata cloud and not on your computer.
 
-<img class="image" src="{{base}}/assets/images/projects/IPFS/pinata-upload-ipfs.png" alt="La schermata Upload di Pinata.cloud">
+<img class="image" src="{{base}}/assets/images/projects/IPFS/pinata-pinning-ipfs.png" alt="The Pin Explorer screen of Pinata.cloud">
 
-La schermata **Upload** è simile al tab Files su IPFS Desktop: permette di caricare i file su IPFS semplicemente caricandoli nella pagina web, ma in questo caso i file risiedono nel cloud di Pinata e non sul proprio computer.
+Whenever you upload a file or distribute a website on IPFS via Pinata, you can check the history of hashes linked to the uploaded files in the **Pin Explorer** screen. The screenshot above shows the two versions, one from December 2019 and one from January 2020, of the jaack.me site. Since Pinata has a free data upload limit per user of 1 GB, I try to keep only one version of the site for each month on Pinata, deleting the others.
 
-<img class="image" src="{{base}}/assets/images/projects/IPFS/pinata-pinning-ipfs.png" alt="La schermata Pin Explorer di Pinata.cloud">
+<img class="image" src="{{base}}/assets/images/projects/IPFS/pinata-account-ipfs.png" alt="The Account screen of Pinata.cloud">
 
-Ogni qualvolta che si carica un file o si distribuisce un sito web su IPFS tramite Pinata, è possibile controllare la storia degli hash collegati ai file caricati nella schermata **Pin Explorer**. La schermata in alto mostra le due versione, una di dicembre 2019 e una di gennaio 2020, del sito jaack.me. Dato che Pinata ha un limite di caricamento dati gratuito per utente di 1 GB, cerco di mantenere su Pinata solo una versione del sito per ogni mese, cancellando le altre.
-
-<img class="image" src="{{base}}/assets/images/projects/IPFS/pinata-account-ipfs.png" alt="La schermata Account di Pinata.cloud">
-
-L'ultima schermata importante è quella dell'account, che contiene le informazioni sensibili relativi alle chiavi private che permettono ad applicazioni e servizi esterni di interfacciarsi con il servizio di pinning offerto da Pinata. Le informazioni rilevanti - email, chiave privata e chiave segreta - saranno fondamentali nella distribuzione del proprio sito web su IPFS.
+The last important screen is the account screen, which contains sensitive information relating to private keys that allow external applications and services to interface with the pinning service offered by Pinata. The relevant information - email, private key and secret key - will be fundamental in distributing your website on IPFS.

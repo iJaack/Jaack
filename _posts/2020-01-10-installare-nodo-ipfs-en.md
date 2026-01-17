@@ -1,5 +1,5 @@
 ---
-title: "Come installare un nodo IPFS"
+title: "How to install an IPFS node"
 layout: post
 date: 2020-01-20 12:00
 image: /assets/images/projects/IPFS/ipfs-desktop.png
@@ -12,35 +12,30 @@ description: Join the decentralization!
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
+<pre>Note: this little guide is part of a series of guides to learn about and develop on IPFS. <a href="{{base}}/distribuire-sito-web-ipfs">Click here</a> to go to the main page of the guide.</pre>
 
+To install an IPFS node, the instructions are very simple.
 
-<pre>Nota: questa piccola guida fa parte di una serie di guide per conoscere e sviluppare su IPFS. <a href="{{base}}/distribuire-sito-web-ipfs">Clicca qui</a> per andare alla pagina principale della guida.</pre>
+First of all, just go to the [Release page on Github of the IPFS project](https://github.com/ipfs-shipyard/ipfs-desktop/releases) and select the *ipfs-desktop* file followed by version number and operating system.
 
-Per installare un nodo IPFS, le istruzioni sono molto semplici.
+<img class="image" src="{{base}}/assets/images/projects/IPFS/ipfs-desktop-github.png" alt="The Release page of IPFS Desktop on Github">
 
-Basta prima di tutto andare sulla [pagina Release su Github del progetto IPFS](https://github.com/ipfs-shipyard/ipfs-desktop/releases) e selezionare il file *ipfs-desktop* seguito da numero versione e sistema operativo.
+Once the file is downloaded, simply run it to proceed with the installation.
 
-<img class="image" src="{{base}}/assets/images/projects/IPFS/ipfs-desktop-github.png" alt="La pagina Release di IPFS Desktop su Github">
-
-Una volta scaricato il file, è sufficiente eseguirlo per procedere con l'installazione.
-
-Una volta installato, alla prima esecuzione il sistema operativo darà un avviso di sicurezza. Su MacOS, basta andare in Impostazioni -> Sicurezza & Privacy e selezionare 'Apri comunque' dopo aver aperto il lucchetto nell'angolo in basso a sinistra della finestra.
+Once installed, upon first run the operating system will give a security warning. On MacOS, just go to Settings -> Security & Privacy and select 'Open Anyway' after opening the lock in the bottom left corner of the window.
 
 <img class="image" src="{{base}}/assets/images/projects/IPFS/ipfs-desktop-allow.png">
 
-Apparirà un nuovo banner che informerà che IPFS sta cercando di ascoltare gli eventi sulla rete esterna: bisogna cliccare OK e proseguire, altrimenti l'app non sarà in grado di comunicare con la rete per inviare file sincronizzati in locale.
+A new banner will appear informing that IPFS is trying to listen to events on the external network: you must click OK and continue, otherwise the app will not be able to communicate with the network to send files synchronized locally.
 
-L'app IPFS Desktop è molto intuitiva: non è necessaria alcuna configurazione aggiuntiva nelle impostazioni. Il tab **Status** indica lo stato della connessione.
+The IPFS Desktop app is very intuitive: no additional configuration is needed in the settings. The **Status** tab indicates the connection status.
 
-<img class="image" src="{{base}}/assets/images/projects/IPFS/ipfs-desktop-status.png" alt="Il tab Status di IPFS Desktop">
+<img class="image" src="{{base}}/assets/images/projects/IPFS/ipfs-desktop-status.png" alt="The Status tab of IPFS Desktop">
 
-Nel tab **Files** è possibile visualizzare i files scaricati dalla rete IPFS ed è anche possibile aggiungere file su IPFS, un po' come ho fatto io per la ricerca su [IPFS e token non fungibili]({{base}}/blockchain-201-ipfs-token-non-fungibili/).
+In the **Files** tab you can view files downloaded from the IPFS network and it is also possible to add files to IPFS, a bit like I did for the research on [IPFS and non-fungible tokens]({{base}}/blockchain-201-ipfs-token-non-fungibili/).
 
-<img class="image" src="{{base}}/assets/images/projects/IPFS/ipfs-desktop-files.png" alt="Il tab Files di IPFS Desktop">
+<img class="image" src="{{base}}/assets/images/projects/IPFS/ipfs-desktop-files.png" alt="The Files tab of IPFS Desktop">
 
-I tab **Explore** e **Peers** servono per esplorare i contenuti su IPFS e gli altri utenti che stanno condividendo le proprie risorse per il bene della decentralizzazione della rete.
+The **Explore** and **Peers** tabs serve to explore content on IPFS and other users who are sharing their resources for the good of network decentralization.
 
-Installare IPFS Desktop è solo il primo passo verso la decentralizzazione! :rocket:
+Installing IPFS Desktop is just the first step towards decentralization! :rocket:
