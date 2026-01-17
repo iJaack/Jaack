@@ -1,67 +1,62 @@
 ---
-title: "Il Coraggio dell'Attesa"
+title: "The Courage of Waiting"
 layout: post
 date: 2020-02-01 22:00
 image: /assets/images/attesa-wait.jpg
 headerImage: true
 tag:
--  culture
+- culture
 category: blog
 author: jaack
-description: Estratto della 3a puntata della 2a stagione di Vita da Millennial
+description: Extract from the 3rd episode of the 2nd season of Millennial Life
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
-
-
 <iframe src="https://anchor.fm/jaack/embed/episodes/Il-Coraggio-dellAttesa-eaj2nu" height="180px" width="810px" frameborder="0" scrolling="no"></iframe>
 
-Vorrei parlare di qualcosa che ha a che fare con l’**attesa**.
+I would like to talk about something that has to do with **waiting**.
 
-Non è un collegamento scontato, però cercate di immaginarlo con me: l’attesa è quel concetto che ci fa pensare che qualcosa non succederà subito. *Ora*. Ma che succederà *dopo*.
+It is not an obvious connection, but try to imagine it with me: waiting is that concept that makes us think that something will not happen immediately. *Now*. But that it will happen *later*.
 
-Ora, il motivo per cui una determinata cosa, un determinato fatto potrebbe succedere dopo, è più di uno: possiamo aspettare perché stiamo aspettando qualcuno che faccia qualcosa; stiamo aspettando che qualcosa si realizzi per inerzia; oppure possiamo imporci di aspettare per capire meglio la realtà che ci circonda.
+Now, the reason why a certain thing, a certain fact might happen later, is more than one: we can wait because we are waiting for someone to do something; we are waiting for something to happen by inertia; or we can force ourselves to wait to better understand the reality that surrounds us.
 
-Oggi siamo circondati da spunti che ci implorano di non aspettare: clicca qui, ascolta ora, compra subito.
+Today we are surrounded by cues that beg us not to wait: click here, listen now, buy immediately.
 
-Siamo tutti (o quasi) iscritti ad **Amazon Prime** perché non possiamo fare a meno della spedizione gratuita in uno o due giorni. Non sappiamo quasi più cosa significhi aspettare davvero. Durante la mia infanzia, ho sempre aspettato il Natale per ricevere i regali.
+We are all (or almost) subscribed to **Amazon Prime** because we cannot do without free shipping in one or two days. We hardly know what it means to wait anymore. During my childhood, I always waited for Christmas to receive gifts.
 
-E a posteriori mi rendo conto che il vero regalo era l’attesa stessa, perché mi faceva vivere con il desiderio.
-Oggi viviamo con desideri infimi e inutili che riusciamo a soddisfare subito, e con desideri impossibili che i nostri idoli e gli influencer su internet ci fanno sognare.
+And in retrospect I realize that the real gift was the waiting itself, because it made me live with desire.
+Today we live with lowly and useless desires that we manage to satisfy immediately, and with impossible desires that our idols and influencers on the internet make us dream of.
 
-Io sogno di comprare una **Tesla Model 3**. Vorrei che fosse la mia prima auto di proprietà. Costa un bel po’ di soldi, però mi rendo conto che il desiderio è ora cosi poco realizzabile, che rimane nel cassetto. E i sogni nel cassetto non sono quelli che ci fanno alzare la mattina. Semmai, sono quelli che ci fanno sentire impotenti nel realizzarli.
+I dream of buying a **Tesla Model 3**. I would like it to be my first owned car. It costs quite a bit of money, but I realize that the desire is now so little achievable, that it remains in the drawer. And dreams in the drawer are not the ones that make us get up in the morning. If anything, they are the ones that make us feel powerless in achieving them.
 
 ---
 
-Tra il 2015 e il 2018, nel mio periodo di **massima attività** come blogger e recensore di prodotti di elettronica di consumo, ricevevo decine di pacchi al mese. Ero come un **drogato di attese soddisfatte**. Non facevo in tempo ad emozionarmi per la prova di un nuovo telefono, che subito ne avevo un altro. E poi un computer. E poi un videogioco. E poi una TV. E poi daccapo.
-Il periodo di attesa si era fatto così breve che non avrei mai pensato di aspettare per avere qualsiasi altra cosa. Che avrei avuto sempre tutto subito.
+Between 2015 and 2018, in my period of **maximum activity** as a blogger and reviewer of consumer electronics products, I received dozens of packages a month. I was like a **junkie of satisfied expectations**. I didn't have time to get excited about testing a new phone, that immediately I had another one. And then a computer. And then a video game. And then a TV. And then all over again.
+The waiting period had become so short that I would never have thought of waiting to have anything else. That I would always have everything immediately.
 
-*E stavo sbagliando.*
+*And I was wrong.*
 
-Se non ricordo male, nell’estate del 2017 (o forse era del 2016), ho dovuto recensire parecchi computer fissi, dei mini-pc. C’è stato un momento in cui ne avevo 3 in casa. In quel periodo stavo anche dando un esame estremamente utile all’università: Calcolatori Elettronici.
-In poche parole, per un bel po di sere estive, mi sono messo a studiare un libro che trovo ancora oggi bellissimo ed estremamente completo, che mi ha fatto capire come funzionasse l’elettronica di base di un computer. Il libro è [Architettura dei Calcolatori, di Andrew Tanenbaum](https://amzn.to/2vKpnzD).
+If I remember correctly, in the summer of 2017 (or maybe it was 2016), I had to review several desktop computers, mini-pcs. There was a moment when I had 3 in the house. In that period I was also taking an extremely useful exam at the university: Electronic Computers.
+In short, for quite a few summer evenings, I started studying a book that I still find beautiful and extremely complete today, which made me understand how the basic electronics of a computer worked. The book is [Structured Computer Organization, by Andrew Tanenbaum](https://amzn.to/2vKpnzD).
 
-Ho utilizzato subito le conoscenze apprese nel libro per scrivere tutte le recensioni di quei mini-pc, misurando la frequenza di clock, la temperatura del processore, la TPU, e tutta una serie di valori che mi davano la comprensione generale che mi serviva per dire che un computer fosse più o meno performante in determinate condizioni.
+I immediately used the knowledge learned in the book to write all the reviews of those mini-pcs, measuring the clock frequency, the processor temperature, the TPU, and a whole series of values that gave me the general understanding I needed to say that a computer was more or less performing in certain conditions.
 
-Per fare tutti questi test, impiegavo un bel po’ di tempo, ma sapevo benissimo la teoria, quindi non ci mettevo proprio tantissimo. Per l’università, avevo approfondito la dinamica, e poi mi è bastato solo leggere i risultati per tirare le conclusioni.
+To do all these tests, I took quite a bit of time, but I knew the theory very well, so it didn't take me that long. For the university, I had deepened the dynamics, and then I just had to read the results to draw conclusions.
 
-Certo, i giornalisti più esperti mi diranno che il livello di dettaglio è un altro. Ma io credo di svolgere di più il ruolo di quello che fa vedere a chiunque che ognuno può farsi i suoi approfondimenti.
+Of course, more experienced journalists will tell me that the level of detail is another. But I believe I play more the role of the one who shows everyone that anyone can do their own in-depth analysis.
 
-Ma la parola chiave è sempre **attesa**.
+But the key word is always **waiting**.
 
-E certo, perché nell’era delle informazioni veloci, l’attesa è un lusso che non tutti si possono permettere ed un’azione di coraggio che non tutti sono disposti a compiere.
+And certainly, because in the era of fast information, waiting is a luxury that not everyone can afford and an action of courage that not everyone is willing to perform.
 
-L’attesa è quell’atto di eroismo che l’utente prende per dire ‘*non mi fermo al titolo’*, *‘non mi basta’*, *‘non ho ben capito’*, *‘voglio capirci di più’*, *‘questa cosa non mi torna’*. È un’atto eroico, anzi, da **supereroe**, perché attendere di capire, approfondendo una determinata questione, significa **fermarsi mentre il tempo scorre**. Mentre il feed cresce. Mentre le notifiche si accumulano e i task si impilano.
+Waiting is that act of heroism that the user takes to say '*I don't stop at the title'*, *'it's not enough for me'*, *'I didn't quite understand'*, *'I want to understand more'*, *'this thing doesn't add up'*. It is a heroic act, indeed, a **superhero** one, because waiting to understand, deepening a certain issue, means **stopping while time flows**. While the feed grows. While notifications accumulate and tasks pile up.
 
-Significa dire di no al tempo, e sì alla mente. No al feed, e sì al pensiero critico. No alle notifiche, e sì alla nostra dignità.
+It means saying no to time, and yes to the mind. No to the feed, and yes to critical thinking. No to notifications, and yes to our dignity.
 
-Ora qualcuno potrà pensare che sto esagerando, ma io non credo proprio: lasciare che il tempo, il news feed, le notifiche e i task ci travolgano nella vita di tutti i giorni ci rende persone povere e vuote, manipolabili e psicolabili. Perchè non abbiamo capacità di pensiero, *‘quella cosa non la capisco, oppure, ancora peggio ‘mi fido di lui/lei’*. Senza aver capito perché fidarsi. Senza aver controllato cosa è successo prima, e immaginato cosa potrebbe succedere dopo.
+Now someone might think that I am exaggerating, but I really don't think so: letting time, the news feed, notifications and tasks overwhelm us in everyday life makes us poor and empty people, manipulable and unstable. Because we have no thinking capacity, *'I don't understand that thing, or, even worse 'I trust him/her'*. Without having understood why to trust. Without having checked what happened before, and imagined what could happen after.
 
-Lascio a voi il pensiero di come questo tipo di ragionamento abbia già influenzato grandissimi cambiamenti nella storia recente, specialmente negli ultimi 10 anni. Il ragionamento dovrete farlo voi.
+I leave to you the thought of how this type of reasoning has already influenced huge changes in recent history, especially in the last 10 years. You will have to do the reasoning.
 
-Mi farebbe piacere se questa approfondimento potesse diventare la rampa di lancio di una discussione più ampia sul senso dell’approfondimento e sul valore della pazienza, magari proprio sui social. Perché tutto si può controllare, basta rendersi conto del danno che sta arrecando.
+I would be pleased if this in-depth analysis could become the launch pad for a broader discussion on the meaning of in-depth analysis and the value of patience, maybe right on social media. Because everything can be controlled, just realize the damage it is causing.
 
-*Abbiate pazienza, e vivrete meglio*.
+*Have patience, and you will live better*.

@@ -1,5 +1,5 @@
 ---
-title: "L'ovvietà della ricompensa"
+title: "The Obviousness of Reward"
 layout: post
 date: 2020-02-08 12:00
 image: /assets/images/reward.jpg
@@ -8,65 +8,60 @@ tag:
 - culture
 category: blog
 author: jaack
-description: La trascrizione della 4a puntata della 2a stagione di Vita da Millennial
+description: Transcript of the 4th episode of the 2nd season of Millennial Life
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
-
-
 
 <iframe src="https://anchor.fm/jaack/embed/episodes/LOvviet-della-Ricompensa-ean7sd" height="180px" width="810px" frameborder="0" scrolling="no"></iframe>
 
-Ieri ho fatto l’**esame** per cui mi sono preparato per un bel po’ di tempo.
+Yesterday I took the **exam** for which I have been preparing for quite some time.
 
-Circa *tre settimane*. Se faccio i conti guardando al mio calendario, vedo che solo nell’ultima settimana ha occupato circa **15-18 ore** del mio tempo. Questa settimana lavorativa, che proprio in queste ore volge al termine, è stata davvero impegnativa, ma l’ho superata. Ho anche lavorato *tantissimo*.
+About *three weeks*. If I calculate looking at my calendar, I see that only in the last week it occupied about **15-18 hours** of my time. This working week, which is ending right in these hours, was really demanding, but I passed it. I also worked *a lot*.
 
-Tra studio e lavoro, ho accumulato almeno **13 ore al giorno**, per 5 giorni, sono circa **65 ore**. Elon Musk dice di lavorare 110 ore a settimana, ma io non credo che questo sia possibile. Ne va della sanità mentale.
+Between study and work, I accumulated at least **13 hours a day**, for 5 days, that's about **65 hours**. Elon Musk says he works 110 hours a week, but I don't believe that is possible. Mental health is at stake.
 
-Io non credo nemmeno che per me abbia senso di lavorare meno di 50 ore a settimana. È che a me piace quello che faccio, e quindi non mi pesa farlo: semmai, mi pesa alcune volte il metodo per arrivare a fare quello che faccio. La parte *burocratica*. Vorrei stare tutto il tempo a **leggere, pensare, scrivere e creare**. Ma so che questo non è possibile.
+I don't even believe that for me it makes sense to work less than 50 hours a week. It's that I like what I do, and so it doesn't weigh on me to do it: if anything, knowing the method to get to do what I do weighs on me sometimes. The *bureaucratic* part. I would like to spend all the time **reading, thinking, writing and creating**. But I know that this is not possible.
 
-Scrivo queste righe guardando l’Apple Watch che segna le 21:33: tra un’oretta sarò in un pub con i miei amici a bere una birra, a rilassarmi e a godere il momento alla fine della settimana che sancisce la conclusione della mia settimana da tour de force. Pensandoci, non sento il bisogno di vedermi con i miei amici durante periodi di routine lavorativa. Il mio corpo e la mia mente non hanno bisogno di *stabilizzarsi*.
+I write these lines looking at the Apple Watch which marks 21:33: in an hour or so I will be in a pub with my friends drinking a beer, relaxing and enjoying the moment at the end of the week that marks the conclusion of my tour de force week. Thinking about it, I don't feel the need to see my friends during periods of work routine. My body and my mind do not need to *stabilize*.
 
-Quando invece passo una settimana difficile, complessa e piena di attività e impegni, vedo il momento in cui sto con i miei amici, o più spesso con la mia ragazza, come una ricompensa di quello che ho fatto.
+When instead I pass a difficult, complex week full of activities and commitments, I see the moment when I am with my friends, or more often with my girlfriend, as a reward for what I have done.
 
-Se faccio di meno di quello che avevo pensato di fare, non riesco a godermi quei momenti, sento come se non me li fossi **meritati**.
+If I do less than what I thought I would do, I can't enjoy those moments, I feel as if I haven't **deserved** them.
 
-Credo che questo genere di dinamica che accade nel mio cervello sia il risultato di un contesto culturale in cui sono nato e cresciuto e che fa parte della mia cultura personale da cui non posso prescindere.
+I believe that this kind of dynamic that happens in my brain is the result of a cultural context in which I was born and raised and which is part of my personal culture that I cannot ignore.
 
-Questo non mi piace, ma d’altronde non posso farci niente.
+I don't like this, but on the other hand I can't do anything about it.
 
-Vorrei potermi godere i momenti più semplici, felici e tranquilli della mia vita senza pensare al fatto che me li sia meritati o meno.
+I wish I could enjoy the simplest, happiest and quietest moments of my life without thinking about whether I deserved them or not.
 
-Quando ero bambino non avevo il concetto del lavoro, ma solo quello del ‘dovere di studiare’: *se non fai i compiti, non vai fuori a giocare; se fai il bravo*, *stasera andiamo mangiare la pizza*. Ho sempre visto i momenti belli almeno come ricompensa del lavoro che potevo svolgere.
+When I was a child I didn't have the concept of work, but only that of the 'duty to study': *if you don't do your homework, you don't go out to play; if you are good*, *tonight we go eat pizza*. I have always seen beautiful moments at least as a reward for the work I could do.
 
-D’altronde, pensiamoci un attimo: chi punisce i propri figli con delle ricompense? Già solo dire, scrivere questa frase è un **paradosso**.
+After all, let's think about it for a moment: who punishes their children with rewards? Just saying, writing this sentence is a **paradox**.
 
-Però bisognerebbe farlo. A pensarci bene, oggi molti genitori puniscono i propri figli con delle ricompense, ma queste ricompense non sono chiare.
-I bambini particolarmente vivaci, oggi, sono ‘accuditi’ dallo schermo di un iPad, da Peppa Pig, da YouTube. Implicitamente, è come se il genitore stesse dicendo se non fai i compiti, ti faccio fare quello che vuoi.
+But it should be done. thinking about it, today many parents punish their children with rewards, but these rewards are not clear.
+Particularly lively children, today, are 'looked after' by the screen of an iPad, by Peppa Pig, by YouTube. Implicitly, it is as if the parent were saying if you don't do your homework, I'll let you do what you want.
 
-Ora: non voglio puntare il dito contro nessuno. Il contesto in cui i genitori si comportano in questo modo è il frutto di ciò di cui ho parlato sia nell’articolo [sul tempo e la devozione al processo](https://jaack.me/podcast-tempo-devozione-processo/) e in quello [sul coraggio dell’attesa](https://jaack.me/podcast-coraggio-attesa/). È un contesto in cui, in poche parole, c’è sempre poco tempo per fare troppe cose. O almeno così sembra.
+Now: I don't want to point the finger at anyone. The context in which parents behave in this way is the result of what I talked about both in the article [on time and devotion to the process](https://jaack.me/podcast-tempo-devozione-processo/) and in the one [on the courage of waiting](https://jaack.me/podcast-coraggio-attesa/). It is a context in which, in a nutshell, there is always little time to do too many things. Or at least so it seems.
 
-E così, usare un iPad come morfina educativa per i propri figli sembra la soluzione ovvia. Però c’è ancora tempo per cambiare questo corso.
-Basta prendere coraggio, e aspettare. Dare ai bambini la concezione dell’attesa. Del prendere tempo, e aspettare la ricompensa. Del guadagnare la ricompensa.
+And so, using an iPad as educational morphine for one's children seems the obvious solution. But there is still time to change this course.
+Just take courage, and wait. Give children the concept of waiting. Of taking time, and waiting for the reward. Of earning the reward.
 
-Non oso pensare a un mondo in cui le ricompense per il lavoro svolto *non esistano*, in cui le ricompense vengono ‘erogate’ indipendentemente che il lavoro sia svolto o meno. *Che siano meritate o meno*.
+I dare not think of a world where rewards for work done *do not exist*, where rewards are 'dispensed' regardless of whether the work is done or not. *Whether they are deserved or not*.
 
-Sarebbe un mondo in cui l’uomo non ha più un **incentivo** a lavorare perché non ha più un motivo per farlo. Tutto gli è dovuto.
+It would be a world where man no longer has an **incentive** to work because he no longer has a reason to do so. Everything is owed to him.
 
-Se un uomo ha tutto, perché dovrebbe sforzarsi per avere qualcosa che già ha?
-Questo mondo sarebbe piatto, monotono, e privo di progresso. Perché nessuno avrebbe più motivo di **progredire**.
+If a man has everything, why should he strive to have something he already has?
+This world would be flat, monotonous, and devoid of progress. Because no one would have any reason to **progress**.
 
-<s>Oggi, per esempio, Elon Musk lavora per una ricompensa molto grande: la salute del pianeta. L’insegnate della scuola media della cittadina in montagna lavora per portare a casa del denaro con cui lui o lei può fare una vacanza, cambiare aria.</s>
+<s>Today, for example, Elon Musk works for a very large reward: the health of the planet. The middle school teacher in the small town in the mountains works to bring home money with which he or she can take a holiday, change air.</s>
 
-[ Mi è stato fatto notare che ho avuto *"una leggerezza nel dire che la ricompensa di Elon Musk sia un pianeta piú in salute, e quella di un’insegnante i soldi per andare in vacanza."* È sembrata *"un’edulcorazione dell’imprenditoria capitalista e un togliere la dignitá di vocazione ad uno dei pochi mestieri in cui quella vocazione é rimasta."*
+[ It was pointed out to me that I had *"a superficiality in saying that Elon Musk's reward is a healthier planet, and that of a teacher the money to go on vacation."* It seemed like *"a sweetening of capitalist entrepreneurship and a removing the dignity of vocation from one of the few professions where that vocation has remained."*
 
-Lungi da me voler dire sminuire il lavoro per uno o per un altro. So benissimo che il ruolo dell'insegnante è di fondamentale importanza e chi lo fa per vocazione rende un valore immenso alla società e all'individuo. Io stesso ricordo particolarmente professori che hanno segnato, in un modo o nell'altro, il mio approccio alla cultura e reso in parte chi sono oggi (grazie Rosalba, Giulia, Carlo, Mariagrazia, fra tutti). La mia voleva essere un'esemplificazione che, effettivamente, si è rivelata troppo semplicistica. *(Grazie Stefano per la segnalazione)* ]
+Far be it from me to belittle the work for one or the other. I know very well that the role of the teacher is of fundamental importance and those who do it by vocation render immense value to society and the individual. I myself particularly remember professors who have marked, in one way or another, my approach to culture and partly made who I am today (thanks Rosalba, Giulia, Carlo, Mariagrazia, among all). Mine was intended to be an exemplification which, effectively, turned out to be too simplistic. *(Thanks Stefano for the report)* ]
 
-Io lavoro per **condividere il mio sapere** e fare divulgazione, per far scattare una scintilla nella testa di chi mi legge o mi ascolta. Ognuno ha la propria ricompensa. Se non ci fosse una ricompensa, che mondo vuoto sarebbe?
+I work to **share my knowledge** and popularize, to spark a spark in the head of those who read or listen to me. Everyone has their own reward. If there were no reward, what an empty world would it be?
 
-Questa puntata forse è un po’ contorta, forse è difficile da capire, forse l’ho pensata male. Ma, come molto di quello che scrivo, questi appunti sono venuti fuori come un fiume in piena mentre scrivevo il mio diario quotidiano, e credo che questo tipo di pensieri siano i migliori, perché sono spontanei e ricchi di associazioni e relazioni continuative, una sopra l’altra.
+This episode is perhaps a bit convoluted, perhaps difficult to understand, perhaps I thought it badly. But, like much of what I write, these notes came out like a flooding river while I was writing my daily diary, and I believe that this type of thoughts are the best, because they are spontaneous and rich in associations and continuous relationships, one on top of the other.
 
-Vi lascio con una domanda: qual è la vostra ricompensa? Cosa vi fa svegliare la mattina e pensare che se quel giorno non faceste nulla, quella ricompensa non arriverebbe?
+I leave you with a question: what is your reward? What makes you wake up in the morning and think that if you did nothing that day, that reward would not arrive?

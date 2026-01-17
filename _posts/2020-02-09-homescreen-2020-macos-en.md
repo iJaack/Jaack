@@ -1,5 +1,5 @@
 ---
-title: "Homescreen 2020 - dock di macOS"
+title: "Homescreen 2020 - macOS dock"
 layout: post
 date: 2020-02-09 21:00
 image: /assets/images/routines/homescreen/2020/homescreen-2020-macos-cover.png
@@ -8,91 +8,86 @@ tag:
 - tech
 category: blog
 author: jaack
-description: Le app sul dock del mio MacBook Pro, il dispositivo più importante per il mio lavoro
+description: The apps on my MacBook Pro dock, the most important device for my work
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+<h4 align="center"><a href="{{base}}/assets/docs/2020-wallpaper-macbook-pro@3x.png">Download wallpaper (HD)</a></h4>
 
+macOS is the center of my work and creative activity. The laptop I use now, a 13" MacBook Pro from 2019 with an i5 processor, 256GB of storage and 16 GB of RAM, is the hub from which all my activities start. [As already explained]({{base}}/ipados-13-ipad-computer/), I decided not to switch to the completely mobile experience with an iPad Pro, because I am increasingly intensifying my work with code development (I have a few web projects planned), and writing and tinkering on this personal site of mine is making me learn a lot, and I don't want to give up this new part of me.
 
-<h4 align="center"><a href="{{base}}/assets/docs/2020-wallpaper-macbook-pro@3x.png">Scarica lo sfondo (HD)</a></h4>
+I had set myself the goal of writing this article for some time, and deciding how to set up my laptop dock once and for all for the whole year made me do some reasoning that I forced and that I am happy to have done.
 
-macOS è il fulcro della mia attività lavorativa e creativa. Il laptop che uso ora, un MacBook Pro 13" del 2019 con processore i5, 256GB di memoria e 16 GB di RAM, è l'hub da cui partono tutte le mie attività. [Come già spiegato]({{base}}/ipados-13-ipad-computer/), ho deciso di non fare il passaggio all'esperienza completamente mobile con un iPad Pro, perché sto sempre più intensificando il mio lavoro con lo sviluppo di codice (ho in programma un po' di progetti web), e scrivere a smanettare su questo mio sito personale mi sta facendo imparare tantissimo, e non voglio mollare questa mia nuova parte di me.
-
-Mi ero prefissato di scrivere questo articolo da un po' di tempo, e decidere come impostare il dock del mio laptop una volta e per tutte per tutto l'anno mi ha fatto fare dei ragionamenti che ho forzato e che sono contento di aver fatto.
-
-Questo, quindi, è il mio dock per il 2020.
+This, therefore, is my dock for 2020.
 
 <img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-macos.png">
 
-Oltre alle classiche Finder, Impostazioni e App Store, che è facile spiegare perché sono lì - il Finder non lo posso togliere e Impostazioni e App Store sono di uso abbastanza comune -, ci sono esattamente altre 20 app sul mio dock. Ora, pezzo per pezzo, descriverò come tutte queste app hanno senso di esistere lì - e non per motivi banali.
+Besides the classic Finder, Settings and App Store, which is easy to explain why they are there - I can't remove the Finder and Settings and App Store are of quite common use -, there are exactly 20 other apps on my dock. Now, piece by piece, I will describe how all these apps make sense to exist there - and not for trivial reasons.
 
 # Networking
 <img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-macos-networking.png">
 
-Le prime sette app sono quelle che utilizzo con più frequenza non appena accendo il computer. Nello specifico, **Brave** è il mio browser di default. Ho già discusso della [mia esperienza con **Brave**]({{base}}/recensione-brave-browser/) in un articolo approfondito. È una delle prime app che avvio, insieme ad **Airmail**, il mio clienti di posta da ormai circa 2 anni. **Airmail** non è il migliore client di posta che ci possa essere, perché secondo me non esiste proprio uno. Ogni client ha delle caratteristiche positive ma dei difetti o delle lacune non irrilevanti. Per esempio, **Airmail** ha una forte integrazione con app e servizi esterni (io ho configurato Things e Fantastical, ma ce ne sono altre 15 almeno) e supporta quasi tutti i tipi di account con le API, quindi senza bisogno di generare password monouso se si usa l'autenticazione a 2 fattori: Google, G Suite, Exchange, Office 365, iCloud sono i miei tipi di account, che sono tutti supportati.
+The first seven apps are the ones I use most frequently as soon as I turn on the computer. Specifically, **Brave** is my default browser. I have already discussed [my experience with **Brave**]({{base}}/recensione-brave-browser/) in an in-depth article. It is one of the first apps I launch, together with **Airmail**, my email client for about 2 years now. **Airmail** is not the best email client there is, because in my opinion there isn't really one. Every client has positive features but significant defects or shortcomings. For example, **Airmail** has strong integration with external apps and services (I configured Things and Fantastical, but there are at least 15 others) and supports almost all types of accounts with APIs, so without needing to generate one-time passwords if you use 2-factor authentication: Google, G Suite, Exchange, Office 365, iCloud are my account types, which are all supported.
 
 <img class="image" src="{{base}}/assets/images/routines/homescreen/homescreen-macos-airmail.png">
 
-Poi ci sono le app di messaggistica: in ordine, uso più frequentemente **Telegram** (circa 1 ora al giorno, è praticamente la mia piattaforma di scambio informazioni con l'esterno), **Whatsapp** (solo con chi non usa Telegram),**Slack** (chat dell'ufficio e community che seguo), **iMessage** (solo per i messaggi dell'autenticazione a 2 fattori e le promozioni/spam -.- ).
+Then there are the messaging apps: in order, I use **Telegram** most frequently (about 1 hour a day, it is practically my information exchange platform with the outside world), **Whatsapp** (only with those who don't use Telegram), **Slack** (office chat and communities I follow), **iMessage** (only for 2-factor authentication messages and promotions/spam -.- ).
 
-A queste cinque si aggiunge **Twitter**, che non è proprio una chat, ma la uso come fosse una chat globale: qualche minuto tutte le sere, scrollo per vedere cosa si dice riguardo gli hashtag che seguo di più (bitcoin, blockchain, tech, ai, Elon Musk solo per fare qualche esempio) e interagisco con gli altri. Adoro Twitter perché mi permette di avere conversazioni con sconosciuti su temi che mi interessano e di trarre importanti spunti e riflessioni. È veloce, ma basta cliccare su un hashtag per perdersi nella profondità dell'insieme dei ragionamenti singoli di tutti gli utenti.
+To these five is added **Twitter**, which is not really a chat, but I use it like a global chat: a few minutes every evening, I scroll to see what is said about the hashtags I follow most (bitcoin, blockchain, tech, ai, Elon Musk just to make a few examples) and I interact with others. I adore Twitter because it allows me to have conversations with strangers on topics that interest me and to draw important insights and reflections. It is fast, but just click on a hashtag to get lost in the depth of the set of individual reasoning of all users.
 
 # Entertainment
 <img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-macos-entertainment.png">
 
-Dato che il computer, per me, è lo strumento che uso principalmente per lavorare e studiare, le applicazioni di intrattenimento e svago sono molto limitate. Giochi e app per streaming sono sull'iPad, sull'Apple TV e sul computer desktop con Windows. Quindi le uniche app che davvero ha senso per me lasciare in primo piano sono tre: **Apple Music**, **Pocket Casts** e **Apple TV**.
+Since the computer, for me, is the tool I use mainly to work and study, entertainment and leisure applications are very limited. Games and streaming apps are on the iPad, Apple TV and on the desktop computer with Windows. So the only apps that really make sense for me to leave in the foreground are three: **Apple Music**, **Pocket Casts** and **Apple TV**.
 
-**Apple Music** è la mia app per la musica: la uso su tutti i dispositivi, ho l'abbonamento studenti quindi pago poco meno di 60€ l'anno, e ho tutta una lista di playlist che seguo per i workout, le corse, il focus con rumore bianco, il focus con musica classica, e così via. Uso Apple Music e non Spotify perché più del 70% dei miei dispositivi sono Apple. Ho anche un HomePod che funziona alla grande con Apple Music.
+**Apple Music** is my music app: I use it on all devices, I have the student subscription so I pay a little less than 60€ a year, and I have a whole list of playlists that I follow for workouts, runs, focus with white noise, focus with classical music, and so on. I use Apple Music and not Spotify because more than 70% of my devices are Apple. I also have a HomePod that works great with Apple Music.
 
 <img class="image" src="{{base}}/assets/images/routines/homescreen/homescreen-macos-pocketcasts.png">
 
-**Pocket Casts** è una new entry, proprio di pochi giorni fa: quest'anno voglio spostare il focus della fruizione dei contenuti dalle serie TV ai podcast. Ascolto una decina di podcast, e aggiorno spesso la mia libreria, aggiungendo e rimuovendo podcast in base al periodo che sto passando e al tipo di contenuti che mi va di ascoltare. Usavo Apple Podcasts su MacBook, ma poi quando sono in auto uso Google Podcasts sul Galaxy Note 10+, e la cronologia di ascolti non viene sincronizzata. Per questo ho fatto una ricerca, durata circa un mese, e ho scelto, dopo aver provato tante alternative, di fare l'abbonamento a Pocket Casts Plus, da circa 11 euro l'anno, per avere tutte le funzionalità e anche l'app per macOS e Windows. Ho scelto in questo modo spinto sempre dalla stessa motivazione: "mi aiuta a quantificare meglio la mia vita?" E la risposta è sì.
+**Pocket Casts** is a new entry, just a few days ago: this year I want to shift the focus of content consumption from TV series to podcasts. I listen to about ten podcasts, and I often update my library, adding and removing podcasts based on the period I am going through and the type of content I feel like listening to. I used Apple Podcasts on MacBook, but then when I am in the car I use Google Podcasts on the Galaxy Note 10+, and the listening history is not synchronized. For this reason I did some research, lasting about a month, and I chose, after trying many alternatives, to subscribe to Pocket Casts Plus, for about 11 euros a year, to have all the features and also the app for macOS and Windows. I chose in this way always driven by the same motivation: "does it help me quantify my life better?" And the answer is yes.
 
-**Apple TV** non la sto usando molto, però ho in programma di guardare serie TV molto più su Apple TV+ che su Netflix e Amazon Prime Video nei prossimi mesi. I motivi principali sono due: ci sono pochi contenuti e per ora non lo pago.  Avere pochi contenuti mi da poca possibilità di scelta, e la qualità sembra molto alta, per cui  guarderò poche serie e film, ma di qualità.
+**Apple TV** I am not using much, but I plan to watch TV series much more on Apple TV+ than on Netflix and Amazon Prime Video in the coming months. The main reasons are two: there is little content and for now I don't pay for it. Having little content gives me little choice, and the quality seems very high, so I will watch few series and films, but of quality.
 
 # Productivity
 <img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-macos-productivity.png">
 
-Ci sono solo tre app che mi permettono di gestire la mia pianificazione a breve, medio e lungo termine: Things, Fantastical e Monday. **Things 3** è il centro di tutte le mie attività. Uso moltissimo Things 3 sul MacBook. Ogni mattina controllo quali sono le attività e inizio a segnarle come completate. È la prima app che apro la mattina e l'ultima che chiudo la sera. Sull'app uso la metodologia GTD per classificare le attività da fare e le revisiono 3 volte al giorno: la mattina, il pomeriggio (per capire se riesco ancora a fare tutto) e la sera - per rivedere le attività da fare per il giorno successivo.
+There are only three apps that allow me to manage my short, medium and long-term planning: Things, Fantastical and Monday. **Things 3** is the center of all my activities. I use Things 3 a lot on the MacBook. Every morning I check what the activities are and start marking them as completed. It is the first app I open in the morning and the last one I close in the evening. On the app I use the GTD methodology to classify activities to be done and I review them 3 times a day: in the morning, in the afternoon (to understand if I can still do everything) and in the evening - to review the activities to be done for the next day.
 
 <img class="image" src="{{base}}/assets/images/routines/homescreen/homescreen-macos-things.png">
 
-**Fantastical** è il mio calendario. Lo uso su tutti i dispositivi Apple, come Things 3: non ha moltissimo in più rispetto all'app nativa, ma le modalità di visualizzazione sono più confortevoli e c'è il supporto diretto per le videochiamate negli eventi con Hangouts e Zoom. Di recente Flexibits, la società che sviluppa l'app, ha rilasciato un aggiornamento (Fantastical 3) che introduce alcune funzionalità aggiuntive con un abbonamento di circa 50€ l'anno, che però non ho sottoscritto. Uso Fantastical ogni sera per creare eventi da dedicare a determinare attività - uso il timeboxing per dividere la mia giornata di lavoro.
+**Fantastical** is my calendar. I use it on all Apple devices, like Things 3: it doesn't have much more than the native app, but the viewing modes are more comfortable and there is direct support for video calls in events with Hangouts and Zoom. Recently Flexibits, the company that develops the app, released an update (Fantastical 3) that introduces some additional features with a subscription of about 50€ a year, which however I have not subscribed to. I use Fantastical every evening to create events to dedicate to determine activities - I use timeboxing to divide my workday.
 
 <img class="image" src="{{base}}/assets/images/routines/homescreen/homescreen-macos-fantastical.png">
 
-**Monday** non è una mia scelta: è l'app che utilizziamo in Campus Party per gestire le attività. È come un excel potenziato per gestire le scadenze e le timeline di lavoro. La uso solo per riportare le macro-attività al team, perché tutte le micro-attività che svolgo a livello personale le traccio su Things.
+**Monday** is not my choice: it is the app we use at Campus Party to manage activities. It is like a powered-up excel to manage deadlines and work timelines. I use it only to report macro-activities to the team, because all the micro-activities I perform on a personal level I track on Things.
 
 # Creativity
 <img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-macos-creativity.png">
 
-La creatività è una parte molto importante del mio lavoro.  Per questo ci sono 6 app che mi aiutano in questo: Raindrop, Day One, Agenda, MacDown, Pixelmator Pro e XMind ZEN.
+Creativity is a very important part of my work. For this reason there are 6 apps that help me in this: Raindrop, Day One, Agenda, MacDown, Pixelmator Pro and XMind ZEN.
 
 <img class="image" src="{{base}}/assets/images/routines/homescreen/homescreen-macos-raindrop.png">
 
-**Raindrop** è una nuova app che sto utilizzando da alcune settimane per raccogliere link. Serve semplicemente per salvare link dal web e raccoglierli in collezioni. In Raindrop ci va tutto quello che non va in Pocket e in OneNote, che sono le mie app per raccogliere articoli e ricerche, rispettivamente. C'è anche una versione premium da 3 dollari al mese, ma non ho bisogno di sotto-categorie e di altre funzionalità aggiuntive: mi basta raccogliere link e poi rivederli.
+**Raindrop** is a new app that I have been using for a few weeks to collect links. It simply serves to save links from the web and collect them in collections. In Raindrop goes everything that doesn't go in Pocket and OneNote, which are my apps for collecting articles and research, respectively. There is also a premium version for 3 dollars a month, but I don't need sub-categories and other additional features: I just need to collect links and then review them.
 
 <img class="image" src="{{base}}/assets/images/routines/homescreen/homescreen-macos-dayone.png">
 
-Anche **Day One** è una new entry. Nonostante l'avessi già provata qualche anno fa, ora ho capito come usarla: è il luogo virtuale in cui sfogo i miei pensieri ogni sera. Scrivo quasi sempre su MacBook, quasi mai su iPhone o iPad (non è su Android), perché sento come se dovessi stare comodo per far confluire i miei pensieri sullo schermo.
+**Day One** is also a new entry. Although I had already tried it a few years ago, now I understood how to use it: it is the virtual place where I vent my thoughts every evening. I almost always write on MacBook, almost never on iPhone or iPad (it is not on Android), because I feel like I have to be comfortable to let my thoughts flow onto the screen.
 
 <img class="image" src="{{base}}/assets/images/routines/homescreen/homescreen-macos-agenda.png">
 
-**Agenda** è una very new entry: l'avevo notata qualche mese fa, ma ho iniziato ad usarla solo a inizio gennaio. Mi serve per scrivere note relative agli appuntamenti, alle call e alle riunioni interne, nonché alle attività che pianifico. Mi serve per dare un contesto a quello che mi succede durante la giornata. È un po' come un diario, ma che descrive la giornata che si sta evolvendo. Su Day One racconto le cose a mente fredda, su Agenda mentre accadono. E poi, un paio di volte alla settimana, revisiono tutte le note 'Sull'Agenda', da fare e cerco di capire se mi servono ancora, altrimenti le tolgo da 'Sull'Agenda'. Rimangono comunque nell'app (che sincronizzo con Dropbox), ma non sono nella prima schermata, dove invece sono le note che mi servono subito.
+**Agenda** is a very new entry: I had noticed it a few months ago, but I started using it only at the beginning of January. I use it to write notes related to appointments, calls and internal meetings, as well as the activities I plan. I use it to give context to what happens to me during the day. It is a bit like a diary, but one that describes the day unfolding. On Day One I tell things with a cool head, on Agenda while they happen. And then, a couple of times a week, I review all the notes 'On the Agenda', to be done and try to understand if I still need them, otherwise I remove them from 'On the Agenda'. They still remain in the app (which I synchronize with Dropbox), but they are not on the first screen, where instead are the notes I need immediately.
 
 <img class="image" src="{{base}}/assets/images/routines/homescreen/homescreen-macos-macdown.png">
 
-**MacDown**  è un editor di testo open source, su cui sto cercando di contribuire allo sviluppo (ancora non ho fatto nulla, sto studiando la documentazione). È molto semplice, supporta il markdown, c'è un tab per l'anteprima ed è estremamente veloce e leggero. Ci sto scrivendo questo articolo.
+**MacDown** is an open source text editor, to which I am trying to contribute to development (I haven't done anything yet, I'm studying the documentation). It is very simple, supports markdown, there is a tab for preview and it is extremely fast and light. I am writing this article on it.
 
 <img class="image" src="{{base}}/assets/images/routines/homescreen/homescreen-macos-xmind-zen.png">
 
-**Pixelmator Pro** è utilissima: sebbene costi poco più di 40€, è estremamente semplice da utilizzare e ha il livello di complessità delle funzioni di cui ho bisogno. Con Pixelmator Pro creo le copertine delle newsletter, tutti i mockup che sono su questo sito e tutte le illustrazioni con un po' di testo e la combinazione di altre immagini. Ci facevo  anche le mappe concettuali, ma poi ho scoperto **XMind ZEN**, che invece è un'app che serve per fare solo mappe concenttuali e tabelle. È molto semplice, anche questa, e la uso parecchio per fare schemi delle materie che studio e delle ricerche che faccio. È a pagamento, ma si può usare anche gratis se si accetta il logo XMind sulle immagini esportate.
+**Pixelmator Pro** is very useful: although it costs a little more than 40€, it is extremely simple to use and has the level of complexity of functions I need. With Pixelmator Pro I create newsletter covers, all the mockups that are on this site and all illustrations with some text and the combination of other images. I also made concept maps with it, but then I discovered **XMind ZEN**, which instead is an app that serves only to make concept maps and tables. It is very simple, this one too, and I use it a lot to make diagrams of the subjects I study and the research I do. It is paid, but you can also use it for free if you accept the XMind logo on exported images.
 
 # Coding
 <img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-macos-coding.png">
 
-Infine, la programmazione sta occupando una parte sempre più importante nelle mie giornate. Per questo ci sono due app che sto usando e che soddisfano tutte i miei bisogni: Atom e XCode. Entrambe le app servono, ovviamente, per programmare, ma mentre **XCode** è specifica come ambiente di sviluppo per realizzare app per dispositivi Apple (ma non solo, comunque), con **Atom** posso sviluppare in qualsiasi linguaggio di programmazione, fare commit velocemente sulle mie repository Github e, grazie ad un sistema di pacchetti aggiuntivi, aggiungere riconoscimenti per nuove sintassi, e modificare la grafica e le scorciatoie per renderlo più comodo possibile. E poi è open source.
+Finally, programming is occupying an increasingly important part in my days. For this reason there are two apps that I am using and that satisfy all my needs: Atom and XCode. Both apps serve, obviously, to program, but while **XCode** is specific as a development environment to create apps for Apple devices (but not only, anyway), with **Atom** I can develop in any programming language, commit quickly on my Github repositories and, thanks to a system of additional packages, add recognition for new syntaxes, and modify graphics and shortcuts to make it as comfortable as possible. And then it is open source.
