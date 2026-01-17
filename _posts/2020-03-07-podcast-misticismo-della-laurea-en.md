@@ -1,5 +1,5 @@
 ---
-title: "Il Misticismo della Laurea"
+title: "The Mysticism of Graduation"
 layout: post
 date: 2020-03-07 12:00
 image: /assets/images/laurea.jpg
@@ -8,61 +8,56 @@ tag:
 - culture
 category: blog
 author: jaack
-description: Estratto dall'8a puntata della 2a stagione di Vita da Millennial.
+description: Extract from the 8th episode of the 2nd season of Millennial Life.
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
-
-
 
 <iframe src="https://anchor.fm/jaack/embed/episodes/Il-Misticismo-della-Laurea-ebavff" height="180px" width="810px" frameborder="0" scrolling="no"></iframe>
 
-<blockquote>“Ma quindi quando ti laurei?”</blockquote>
+<blockquote>“So when are you graduating?”</blockquote>
 
-Mi hanno fatto questa domanda decine, centinaia di volte negli ultimi anni. Ho sempre risposto in un paio di modi: *“sto studiando, ma sai, nel frattempo lavoro anche, quindi vado lento”*, oppure *“eh, in questo momento ho messo in pausa per qualche mese, il lavoro mi occupa tutta la giornata, non finisco mai”*.
+They have asked me this question dozens, hundreds of times in recent years. I have always answered in a couple of ways: *“I'm studying, but you know, I also work in the meantime, so I'm going slow”*, or *“eh, right now I've paused for a few months, work takes up my whole day, I never finish”*.
 
-Ma non è mai così semplice.
-
----
-
-Mi sono iscritto alla facoltà di Ingegneria Informatica nell’ottobre del 2013, e posso dire di aver vissuto la vita universitaria davverolo solo 5 mesi. A gennaio 2014, lo stesso giorno del mio primo esame, Geometria, ho fondato [Tweaknology](tweaknology.org), un blog che è diventato in poco tempo la rampa di lancio per tutti quelli che ci hanno lavorato. Sono molto contento di quello che Tweaknology è stato per tutti noi.
-
-Da quel momento, ho iniziato a dividere la mia vita tra studio e articoli, per circa un anno. Poi quello che scrivevo e pubblicavo mi rendeva sempre più visibile nell’ecosistema lavorativo, soprattutto quello tech e startup. E quindi, con proposte di lavoro di qua e di là, il tempo che dedicavo allo studio si assottgliava, in favore di quello dedicato al lavoro.
-
-La mia non è una storia atipica, né originale. Conosco molte persone che, come me, ai primi anni di università hanno intrapreso attività che poi hanno definito la loro carriera.
-
-Ho fatto tante cose diverse, negli anni che sono intercorsi tra il 2014 e oggi. Ad un certo punto, avevo deciso che l'università dovesse andare in secondo piano, perché se lo scopo di prendere una laurea è quello di trovare lavoro e io stavo già lavorando, non avevo più bisogno di una laurea. La logica era solida.
-
-Nel tempo, mi sono accorto che mi stavo sempre più allontanando da quello per cui volevo vivere: avevo scelto di fare **Ingegneria Informatica** perché volevo diventare Ingegnere (e lo scrivo con la I maiuscola, sì) uno di quelli che, nel mio immaginario infantile, crea le cose straordinarie e quasi magiche che fanno andare avanti il mondo. Ed invece il mio lavoro stava diventando sempre più vicino al marketing e alla comunicazione. Non dico che non mi piace, anzi. Ho studiato parecchio per essere un public speaker e per sapere come si posiziona un prodotto, sebbene non mi riesca sempre bene.
-Però avevo fatto una scelta, anni fa, e non l'avevo fatta a caso: volevo diventare un ingegnere perché adoravo l’idea di creare cose dal nulla: creare un’app, un sito web, un’infrastruttura, un framework. Quando ho avviato Tweaknology, mi sono sentito allo stesso modo: sebbene abbia scritto poche righe di codice per sviluppare il sito, ho ‘smanettato’ tantissimo. Ho imparato a risolvere i problemi senza fermarmi al primo ostacolo, e a vedere come il pubblico reagiva a quello che sviluppavo. *Era bellissimo*.
-
-Un paio di anni fa ho dato un esame all’apparenza piuttosto difficile, ma all'atto pratico molto semplice: **Mobile Computing**. Lo scopo era quello di creare un’applicazione mobile da zero usando **Xamarin**, un’ambiente di sviluppo per scrivere il codice una volta e tradurlo istantaneamente su tutte le piattaforme. Abbiamo fatto un’app utilizzabile in un paio di mesi, lavorandoci anche non troppo spesso. Eravamo in 4. Abbiamo sperimentato lo sviluppo collaborativo e l’integrazione fra design e sviluppo software. E abbiamo *creato* qualcosa.
-
-L’app non è mai uscita su App Store, era solo un progetto universitario (tra l’altro avevamo sviluppato alcune funzionalità, come la segnalazione dell’affollamento di bus e tram, che oggi sono in Google Maps), ma io avevo provato di nuovo quell’ebrezza di creare.
-
-Certo, avrei potuto creare qualcosa anche senza una laurea, ma sarebbe stato davvero un fallimento non portare a termine gli studi. Potevo tranquillamente laurearmi, perché sapevo che ero in grado di comprendere tutti gli aspetti dell'Ingegneria Informatica, quindi perché non farlo? E poi alcune materie, studiate bene, mi avrebbero fatto comprendere aspetti che forse se avessi studiato da solo non avrei compreso appieno.
-
-E così, nei 12 mesi successivi, ho passato altri due esami: **Basi di Dati** e **Algoritmi e Strutture Dati**, molto specifici. In quel momento, mi sono reso conto che effettivamente avevo passato quasi tutti gli esami caratterizzanti del terzo anno, lasciando dietro solo un esame del terzo anno e alcuni esami del primo e secondo anno.
-
-Posso dire che anche la mia ragazza ha fatto la sua parte, arrabbiandosi ogni volta che cazzeggiavo invece che studiare, ed infatti le sono grata: senza il suo costante supporto non avrei continuato in maniera così coerente.
+But it is never that simple.
 
 ---
 
-Oggi racconto questa storia perché ho appena passato un esame critico, e mi mancano 3 esami alla laurea. Ho tutto il tempo di concentrarmi e di dare questi 3 esami nel corso dell’anno: questo podcast è anche una lettera di intenti. Se non mi laureo nel 2020, avrò fatto una figura di merda scolpita nell’internet per sempre.
+I enrolled in the Computer Engineering faculty in October 2013, and I can say that I really lived university life for only 5 months. In January 2014, the same day as my first exam, Geometry, I founded [Tweaknology](tweaknology.org), a blog that soon became the launch pad for all those who worked on it. I am very happy with what Tweaknology was for all of us.
 
-Oggi mi sento più **sicuro**: fino allo scorso anno mi sentivo incastrato tra la promessa di laurearmi, quella di mandare avanti una startup, di lavorare ad un progetto importante, di accantonare sufficiente tempo per stare con la mia famiglia e la mia ragazza. Ora invece, dopo che ho scelto di *'razionalizzare’* la mia vita eliminando tutto ciò che era possibile, mi rendo conto che, focalizzandomi solo sulla laurea e sul mio lavoro (che fortunatamente ora è flessibile), posso finalmente portare a termine qualcosa.
+From that moment, I started dividing my life between study and articles, for about a year. Then what I wrote and published made me increasingly visible in the work ecosystem, especially the tech and startup one. And so, with job offers here and there, the time I dedicated to study thinned out, in favor of that dedicated to work.
 
-Conosco tanti ex-colleghi universitari che hanno lasciato l’università: chi per lanciare un’azienda di successo, chi per focalizzarsi sul lavoro. Li capisco: anche io sono passato in quella fase, quella in cui l'università è in secondo piano. Probabilmente, se avessi saputo che avrei potuto creare un’attività senza dovermi laureare, non avrei nemmeno iniziato l’università.
+Mine is not an atypical story, nor original. I know many people who, like me, in the first years of university undertook activities that then defined their career.
 
-Ma, credo forse anche grazie all'università, che mi ha fatto conoscere persone come me e con i miei stessi interessi, ho capito che *potevo farcela*.
+I did so many different things, in the years that passed between 2014 and today. At a certain point, I had decided that university should take a back seat, because if the purpose of getting a degree is to find a job and I was already working, I no longer needed a degree. The logic was solid.
 
-Prendere la laurea oggi, per me (e credo per molti altri della mia generazione), non è un modo per accedere al mondo del lavoro, anzi: conosco tantissime persone che sono uscite con **110 e lode dalla magistrale** di qualsiasi facoltà e che fanno fatica a trovare lavoro in Italia, o a trovare un lavoro che sia pagato bene e in maniera equa.
+Over time, I realized that I was moving further and further away from what I wanted to live for: I had chosen to do **Computer Engineering** because I wanted to become an Engineer (and I write it with a capital E, yes) one of those who, in my childhood imagination, creates extraordinary and almost magical things that make the world go round. And instead my job was becoming increasingly closer to marketing and communication. I'm not saying I don't like it, on the contrary. I studied a lot to be a public speaker and to know how a product is positioned, although I don't always succeed well.
+But I had made a choice, years ago, and I hadn't made it at random: I wanted to become an engineer because I adored the idea of creating things from nothing: creating an app, a website, an infrastructure, a framework. When I started Tweaknology, I felt the same way: although I wrote few lines of code to develop the site, I 'tinkered' a lot. I learned to solve problems without stopping at the first obstacle, and to see how the public reacted to what I developed. *It was beautiful*.
 
-Prendersi la laurea è un modo per dire che sì, *il pezzo di carta ce l’abbiamo*. Che sappiamo cosa vuole la generazione dei professori che ci insegnano tecnologie e metodologie nate prima di noi. Ma che se mentre prendiamo la laurea stiamo anche lavorando, vuol dire che quando non avremo più il pensiero di doverci laureare, saremo liberi di pensare a creare le tecnologie e le metodologie del futuro.
+A couple of years ago I took an apparently rather difficult exam, but in practice very simple: **Mobile Computing**. The goal was to create a mobile application from scratch using **Xamarin**, a development environment to write code once and translate it instantly to all platforms. We made a usable app in a couple of months, working on it not too often either. There were 4 of us. We experienced collaborative development and integration between design and software development. And we *created* something.
 
-E che le trasmetteremo agli altri usando metodi innovativi, non convenzionali che inventeremo in base all’esigenza, al bisogno.
+The app never came out on the App Store, it was just a university project (by the way we had developed some features, such as reporting bus and tram crowding, which are in Google Maps today), but I had felt that thrill of creating again.
 
-E quella sarà la nostra **rivincita**.
+Of course, I could have created something even without a degree, but it would have really been a failure not to complete my studies. I could easily graduate, because I knew I was able to understand all aspects of Computer Engineering, so why not do it? And then some subjects, studied well, would have made me understand aspects that perhaps if I had studied alone I would not have fully understood.
+
+And so, in the following 12 months, I passed two other exams: **Databases** and **Algorithms and Data Structures**, very specific. At that moment, I realized that I had effectively passed almost all the characterizing exams of the third year, leaving behind only one third-year exam and some first and second-year exams.
+
+I can say that my girlfriend also played her part, getting angry every time I messed around instead of studying, and in fact I am grateful to her: without her constant support I would not have continued so consistently.
+
+---
+
+Today I tell this story because I just passed a critical exam, and I have 3 exams left to graduate. I have plenty of time to concentrate and take these 3 exams during the year: this podcast is also a letter of intent. If I don't graduate in 2020, I will have made a fool of myself carved into the internet forever.
+
+Today I feel more **secure**: until last year I felt stuck between the promise of graduating, that of running a startup, of working on an important project, of setting aside enough time to be with my family and my girlfriend. Now instead, after I chose to *'rationalize'* my life by eliminating everything possible, I realize that, focusing only on the degree and my work (which fortunately is now flexible), I can finally complete something.
+
+I know many former university colleagues who left university: some to launch a successful company, some to focus on work. I understand them: I also went through that phase, the one where university is in the background. Probably, if I had known that I could create a business without having to graduate, I wouldn't even have started university.
+
+But, I believe perhaps also thanks to university, which introduced me to people like me and with my same interests, I understood that *I could do it*.
+
+Getting a degree today, for me (and I believe for many others of my generation), is not a way to access the world of work, on the contrary: I know so many people who came out with **110 cum laude from the master's degree** of any faculty and who struggle to find a job in Italy, or to find a job that is paid well and fairly.
+
+Getting a degree is a way of saying that yes, *we have the piece of paper*. That we know what the generation of professors who teach us technologies and methodologies born before us wants. But that if while we take the degree we are also working, it means that when we no longer have the thought of having to graduate, we will be free to think about creating the technologies and methodologies of the future.
+
+And that we will transmit them to others using innovative, unconventional methods that we will invent based on need, on necessity.
+
+And that will be our **revenge**.

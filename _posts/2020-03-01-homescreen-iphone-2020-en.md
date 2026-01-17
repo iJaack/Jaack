@@ -9,77 +9,72 @@ tag:
 - culture
 category: blog
 author: jaack
-description: Il Metodo Universale per Disporre le Icone sullo Smartphone (MUDIS)
+description: The Universal Method to Arrange Icons on the Smartphone (UMAIS)
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+<h4 align="center"><a href="{{base}}/assets/docs/2020-wallpaper-iphone-x.png">Download wallpaper for iPhone X (HD)</a></h4>
 
+Over time, I tried to figure out how to place icons on my smartphone to be more efficient. I tried arranging by color, by usage, by category, by naturalness of vision (= the most used arranged in an F, because the brain uses the eyes to read a page in this way).
 
-<h4 align="center"><a href="{{base}}/assets/docs/2020-wallpaper-iphone-x.png">Scarica lo sfondo per iPhone X (HD)</a></h4>
+All this worked, but only in specific circumstances: I realized that I was never sure how they were arranged, and I questioned the arrangement very frequently. But I never found a shared framework to **decide how to arrange icons**, questioning the layout even once a day. In short, I tried to answer the question "how to arrange icons and understand when it is time to change?"
 
-Nel corso del tempo, ho cercato di capire come posizionare le icone sul mio smartphone per essere più efficiente. Ho provato con la disposizione per colore, per utilizzo, per categoria, per naturalezza di visione (= le più usate disposte a F, perché il cervello usa gli occhi per leggere una pagina in questo modo).
+I published many posts over the last year and a half, describing the changes, and after thinking about it for a long time, I believe I have found a universal method that everyone can adopt: I don't know what to call it yet, so it will be the **Universal Method for Arranging Icons on the Smartphone** (**UMAIS**).
 
-Tutto questo funzionava, ma solo in circostanze specifiche: mi rendevo conto che non ero mai sicuro di come fossero disposte, e ne mettevo in discussione la disposizione molto di frequente. Ma non trovavo mai un framework condiviso per **decidere come disporre le icone**, mettendo in discussione il layout anche una volta al giorno. In poche parole, ho cercato di rispondere alla domanda "come disporre le icone e capire quando è ora di cambiare?"
+As a main requirement, one must think of arranging the icons in a maximum of three pages + a widget page. This method, for now, I have only tested on the iPhone because on Android smartphones there are too many extra variables (freely positionable widgets, variable number of rows and columns, type of launcher used). There are however some cues and reasoning that can also be applied to Android smartphones.
 
-Ho pubblicato tanti post nel corso dell'ultimo anno e mezzo, descrivendo i cambiamenti, e dopo averci pensato a lungo, credo di aver trovato un metodo universale che tutti possono adottare: non so ancora come chiamaerlo, quindi sarà il **Metodo Universale per Disporre le Icone sullo Smartphone** (**MUDIS**).
+The images that are present on this page, moreover, will be updated frequently during the year, to reflect changes to my homescreen. I still have to figure out how to show the change of individual pages, but I will think about it later.
 
-Come requisito principale, bisogna pensare di disporre le icone in un massimo di tre pagine + una pagina di widget. Questo metodo, per ora, l'ho testato solo sull'iPhone perché sugli smartphone Android ci sono troppe variabili in più (widget posizionabili liberamente, numero di righe e colonne variabili, tipo di launcher utilizzato). Ci sono comunque degli spunti e dei ragionamenti che possono essere applicati anche a smartphone Android.
+As a second requirement, instead, one must 'clean' the smartphone of unused apps. It can be done in two ways:
+1. Delete all apps whose icons show the cloud symbol next to the name: they are those apps that we haven't used for more than a certain period of time. This feature can be activated from *Settings -> iTunes Store and App Store -> Offload Unused Apps*. If we haven't used them for a long time, the chances that we will use them in the future are very few.
+2. Remove all little-used apps by checking the list from Settings -> General -> iPhone Storage.
 
-Le immagini che sono presenti su questa pagina, inoltre, saranno aggiornate frequentemente durante l'anno, per rispecchiare i cambiamenti alla mia homescreen. Devo ancora capire come mostrare il cambiamento delle singole pagine, ma ci penserò in un secondo momento.
+Once this is done, the icons must be arranged according to three different systems, one per page.
 
-Come secondo requisito, invece, bisognare 'pulire' lo smartphone di app inutilizzate. Si può fare in due modi:
-1. Eliminare tutte le app le cui icone mostrano il simbolo della nuvoletta accanto al nome: sono quelle app che non usiamo da più di un certo periodo di tempo. Questa funzionalità è attivabile da *Impostazioni -> iTunes Store e App Store -> Rimuovi app che non usi*. Se non le abbiamo usate per tanto tempo, le possibilità che le utilizzeremo in futuro sono davvero poche.
-2. Rimuovere tutte le app poco utilizzate controllandone la lista da Impostazioni -> Generali -> Spazio iPhone.
+## Main page: frequent
 
-Una volta fatto questo, bisogna disporre le icone secondo tre sistemi differenti, uno per pagina.
+<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-iphone-page1.png" alt="iPhone Homescreen, page 1, 2020">
 
-## Pagina principale: frequenti
+The first page is dedicated to **frequent** apps, i.e. apps that
+- are already used frequently
+- are used at the first unlock of the smartphone in the morning
+- that we would like to use more frequently.
 
-<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-iphone-page1.png" alt="Homescreen iPhone, pagina 1, 2020">
+For example, there are periods when I want to use Twitter more frequently than Instagram and Facebook. To do this, I must *force* my unconscious behavior, putting Twitter on the front page and *deleting* Facebook and Instagram. Moving social network apps to another page has little effect, because basically we are very 'attached' to our habits of scrolling the feed and seeing what others are doing, and so we would look for the app everywhere to be able to open it. Or even worse, we would look for it directly from the search bar.
 
-La prima pagina è dedicata alle app **frequenti**, ovvero le app che
-- già si usano frequentemente
-- si usano al primo sblocco dello smartphone la mattina
-- che vorremmo utilizzare più frequentemente.
+So, do I want to listen to more podcasts? I put Pocket Casts, or Podcast. Do I want to have the habit of looking for news on Reddit? I put Apollo. Do I want to train more? I put Nike Training Club and Strava. And so on.
 
-Per esempio, ci sono periodi in cui voglio usare Twitter più frequentemente di Instagram e di Facebook. Per farlo, devo *forzare* il mio comportamento inconscio, mettendo Twitter in prima pagina e *eliminando* Facebook e Instagram. Spostare le app dei social network in un'altra pagina ha poco effetto, perché tendenzialmente siamo molto 'attaccati' alle nostre abitudini di scrollare il feed e guardare cosa stiano facendo gli altri, e quindi cercheremmo l'app ovunque per poterla aprire. O ancora peggio, la cercheremmo direttamente dalla barra di ricerca.
+The main page is also the page of the apps we use during our morning routine. My morning routine, for example, includes 3 minutes of meditation, reading emails and the Good Morning Italia briefing, selecting the most relevant news from my feed on Feedly and, sometimes, running (with Strava) or a short workout (with Nike Training Club).
 
-Quindi, voglio ascoltare più podcast? Metto Pocket Casts, o Podcast. Voglio avere l'abitudine di cercare le notizie su Reddit? Metto Apollo. Voglio allenarmi di più? Metto Nike Training Club e Strava. E così via.
+Personally, then, I use two methods for arranging icons on this page: basically the same color on the columns (first column green, second white, etc.) and for ease of touch - Things and Telegram, for example, are absolutely the apps I use most during the day, and they are at the center of the right column, which is the one most easily reachable by my thumb when holding the smartphone. In the middle of the apps in the right column there is Waze, which is my road navigation app: it must be easy for me to open it while placing the smartphone on the car mount, and that is the best position to do so.
 
-La pagina principale è anche la pagina delle app che utilizziamo durante la nostra routine mattutina. La mia routine mattutina, per esempio, comprende 3 minuti di meditazione, lettura delle mail e del briefing di Good Morning Italia, selezione delle notizie più rilevanti dal mio feed su Feedly e, alcune volte, corsa (con Strava) o breve workout (con Nike Training Club).
+## Second page: rarely used and to avoid
 
-Io personalmente, poi, utilizzo due metodi per la disposizione delle icone in questa pagina: tendenzialmente lo stesso colore sulle colonne (prima colonna verde, seconda bianca, etc.) e per facilità di tocco - Things e Telegram, per esempio, sono in assoluto le app che uso di più durante la giornata, e sono al centro della colonna destra, che è quella più facilmente raggiungibile dal mio pollice quando impugno lo smartphone. In mezzo alle app della colonna di destra c'è Waze, che è la mia app di navigazione stradale: deve essere facile per me aprirla mentre posiziono lo smartphone sul supporto in auto, e quella è la migliore posizione per farlo.
+<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-iphone-page2.png" alt="iPhone Homescreen, page 2, 2020">
 
-## Seconda pagina: poco usati e da evitare
+In every smartphone there are apps that we use more and that we use less. But there are also those apps that we have, but that we want to use only the strictly necessary. Those are the apps to put on the second page, dedicated to **rarely used and to avoid** apps.
 
-<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-iphone-page2.png" alt="Homescreen iPhone, pagina 2, 2020">
+The arrangement of apps on this page is not dictated by ease of reach, but by simplicity of memorization: in my example, I arranged the apps with icons colored from light (white) to dark (black / red). It is not important to be precise with colors and gradation progression, because just remembering which color is in which row is enough, so the eye will immediately fall on a certain row if it wants to find the app of a certain color.
 
-In ogni smartphone ci sono app che usiamo di più e che usiamo di meno. Ma ci sono anche quelle app che abbiamo, ma che vogliamo utilizzare solo lo stretto necessario. Quelle sono le app da mettere nella seconda pagina, dedicata alle app **poco usate e da evitare**.
+On this page there are work apps (Slack, Monday) that it is better to use as little as possible on the smartphone but that must be there in cases of 'urgency'; leisure apps (Goodreads, Trakt.tv, Shazam) and other apps that are important to have at hand, but not to have on the front page.
 
-La disposizione delle app in questa pagina non è dettata dalla facilità di raggiungimento, ma dalla semplicità di memorizzazione: nel mio esempio, ho disposto le app con le icone di colore da chiaro (bianco) a scuro (nero / rosso). Non è importante essere precisi con i colori e la progressione di gradazione, perché basta ricordare quale colore sia in quale riga, e quindi l'occhio cadrà subito un una determinata riga se vuole trovare l'app di un determinato colore.
+## Third page: folders
 
-In questa pagina ci sono app di lavoro (Slack, Monday) che è meglio usare il meno possibile sullo smartphone ma che devono esserci in casi di 'urgenza'; le app di svago (Goodreads, Trakt.tv, Shazam) e altre app che è importante avere a portata di mano, ma non avere in prima pagina.
+<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-iphone-page3.png" alt="iPhone Homescreen, page 3, 2020">
 
-## Terza pagina: cartelle
+The third page is very simple: if apps remain, they are arranged in **folders**. Personally, I have Apple apps and all apps that have an interface that I use little (for example: I almost never use the 1Password app because I use the autofill feature directly throughout the operating system) in the same 'Other' folder, and then I group the other apps in folders that basically have the verb that represents them as a name: for example, JustEat, TheFork and Quandoo are all apps that allow me to eat, so the folder is called **Eat**; Netflix, VVVID, DAZN, Amazon Prime Video are all apps that allow me to watch (TV series, movies, etc.) so the folder is called **Watch**; and so on.
 
-<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-iphone-page3.png" alt="Homescreen iPhone, pagina 3, 2020">
+## Widget page: quick glances
 
-La terza pagina è molto semplice: se rimangono app, si dispongono in **cartelle**. Io personalmente ho le app Apple e tutte le app che hanno un'interfaccia che uso poco (ad esempio: non uso quasi mai l'app di 1Password perché uso direttamente la funzionalità di riempimento automatico in tutto il sistema operativo) in una stessa cartella 'Altro', e poi raggruppo le altre app in cartelle che tendenzialmente hanno come nome il verbo che le rappresenta: per esempio, JustEat, TheFork e Quandoo sono tutte app che mi permettono di mangiare, quindi la cartella si chiama **Eat**; Netflix, VVVID, DAZN, Amazon Prime Video sono tutte app che mi permettodono di guardare (serie TV, film, ecc.) quindi la cartella si chiama **Watch**; e così via.
+<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-iphone-widget.png" alt="iPhone Homescreen, widget page, 2020">
 
-## Pagina widget: occhiate veloci
+To be honest, I use the widget screen little, but I still configured it according to a small scheme: apps whose widgets give me enough information I need without opening the app. And in general, although in the photo I put 11 widgets, in reality I really only use the first 4, which I see without scrolling: battery, calendar (Fantastical), internet counter (MyVodafone) and weather (CARROT Weather).
 
-<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-iphone-widget.png" alt="Homescreen iPhone, pagina widget, 2020">
+## Dock: classics
 
-La schermata dei widget la uso poco, ad essere sincero, ma ho comunque configurato secondo un piccolo schema: le app i cui widget mi danno il numero sufficiente di informazioni di cui ho bisogno senza aprire l'app. Ed in generale, nonostate in foto abbia messo 11 widget, in realtà uso davvero solo i primi 4, che vedo senza scorrere: batteria, calendario (Fantastical), contatore internet (MyVodafone) e meteo (CARROT Weather).
-
-## Dock: classiche
-
-Che app mettere nel dock? Io questa domanda non me la sono mai praticamente posta, perché per me le app nel dock devono essere quelle che si utilizzano di più in assoluto, e per me sono proprio le app che Apple dispone di default: Telefono, Mail (che nel mio caso è sostituita da Airmail), Safari (che a tratti sostituisco con Brave) e Musica.
+What apps to put in the dock? I have practically never asked myself this question, because for me the apps in the dock must be the ones that are used absolutely the most, and for me they are exactly the apps that Apple arranges by default: Phone, Mail (which in my case is replaced by Airmail), Safari (which at times I replace with Brave) and Music.
 
 ---
 
-Spero di aver dato una mano a qualcuno a capire meglio come disporre le proprie app sullo smartphone. Io ci ho ragionato tantissimo e alla fine credo che questo metodo, insieme di criteri, sia molto ragionevole e soprattutto universale.
+I hope I have given someone a hand to better understand how to arrange their apps on the smartphone. I reasoned a lot about it and in the end I believe that this method, set of criteria, is very reasonable and above all universal.
