@@ -1,5 +1,5 @@
 ---
-title: "Maccy è un semplice ma efficace clipboard manager"
+title: "Maccy is a simple but effective clipboard manager"
 layout: post
 date: 2019-09-11 22:20
 image: /assets/maccy-macos.jpg
@@ -8,48 +8,43 @@ tag:
 - tech
 category: blog
 author: jaack
-description: Maccy è gratis, open source e senza interfaccia da finestra
+description: Maccy is free, open source and without a window interface
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
+When Apple enabled the ability on iOS and macOS to automatically copy
+and make available copied notes on all devices connected to the
+same iCloud account, I rejoiced quite a bit.
 
+I used that feature, Handoff, for a long time because very often
+I found myself copying a file, a sentence without having to necessarily synchronize
+the state of the entire app on the cloud. After a few months, however, this 'joy' slowly
+faded away: perhaps because more and more apps supported Handoff, so there was no need
+to copy the link if it was enough to click on the icon of the same app on another
+device and everything was immediately synchronized quickly.
 
-Quando su iOS e macOS Apple ha abilitato la possibilità di copiare automaticamente
-e rendere disponibili gli appunti copiati su tutti i dispositivi connessi allo
-stesso account iCloud, ho gioito parecchio.
+Or maybe because sometimes it didn't work. In general, the biggest problem was
+the lack of a way to collect my notes of a few words quickly,
+without having to swap them from one device to another or from one app to another.
 
-Ho utilizzato quella funzionalità, Handoff, per molto tempo perchè molto spesso
-mi trovato a copiare un file, una frase senza dover sincronizzare per forza
-lo stato di tutta l'app sul cloud. Dopo qualche mese, però, questa 'gioia' è pian
-piano svanita: forse perché sempre più app supportavano Handoff, quindi non c'era bisogno
-di copiare il link se bastava cliccare sull'icona della stessa app su un altro
-dispositivo e tutto veniva subito sincronizzato velocemente.
+I didn't know that there was a category of applications called *clipboard managers*.
 
-O forse perché qualche volta non funzionava. In generale il problema più grande era
-la mancanza di un modo per raccogliere i miei appunti di poche parole in maniera veloce,
-senza doverli scambiare da un dispositivo all'altro o da un'app all'altra.
+And I didn't verify even know that they cost almost at least €5-10. But then on Product Hunt I
+found Maccy, a lightweight and open source clipboard manager.
+So light that it doesn't even have a window interface. It works only with a little window
+that opens from the top status bar, on macOS.
 
-Non sapevo che esistesse una categoria di applicazioni chiamate *clipboard manager*.
+<img class="image" src="{{base}}/assets/images/maccy-macos.png" alt="Maccy on macOS">
 
-E non sapevo nemmeno che costassero quasi almeno 5-10€. Ma poi su Product Hunt ho
-trovato Maccy, un clipboard manager leggero ed open source.
-Così leggero che non ha nemmeno un'interfaccia a finestre. Funziona solo con una finestrella
-che si apre dalla barra di stato superiore, su macOS.
+What it does is very simple to explain: it remembers **all** notes copied during a session.
+It remembers them even if I log out or turn off the computer completely. To delete notes just
+click the 'clear' button in the drop-down menu that opens. I don't know what the maximum limit of
+notes it can keep is, probably thousands, which can be searched easily because
+the first line of the little window is actually a search bar.
 
-<img class="image" src="{{base}}/assets/images/maccy-macos.png" alt="Maccy su macOS">
+<img class="image" src="{{base}}/assets/images/maccy-macos-about.png" alt="The About window of Maccy on macOS">
 
-Quello che fa è molto semplice da spiegare: ricorda **tutti** gli appunti copiati durante una sessione.
-Li ricorda anche se faccio il logout o spengo proprio il computer. Per cancellare gli appunti basta
-cliccare il tasto 'clear' nel menù a tendina che si apre. Non so quanto sia il limite massimo di
-appunti che può tenere, probabilmente migliaia, che si possono ricercare facilmente perché
-la prima riga della finestrella è proprio una barra di ricerca.
+You can delete a single note, by pressing alt + delete, but only from the next release
+([the developer has already listened to user feedback](https://github.com/p0deje/Maccy/commit/a654f3bfa4b4cb90fc631cea3bd93f19bc204821)). Of course, a sort of classification of the most searched notes, perhaps pinned at the top, would have been useful - meanwhile [I asked for it](https://github.com/p0deje/Maccy/issues/46). For now it is just a list in chronological order. But for zero euros and maximum ease, some compromises can be accepted.
 
-<img class="image" src="{{base}}/assets/images/maccy-macos-about.png" alt="La finestra About di Maccy su macOS">
-
-Si può cancellare un solo appunto, premendo alt + delete, ma solo dalla prossima release
-([lo sviluppatore ha già ascoltato il feedback degli utenti](https://github.com/p0deje/Maccy/commit/a654f3bfa4b4cb90fc631cea3bd93f19bc204821)). Certo, sarebbe stata utile una specie di classificazione degli appunti più cercati, magari fissati in alto - io intanto [l'ho chiesto](https://github.com/p0deje/Maccy/issues/46). Per ora è solo una lista in ordine cronologico. Ma per zero euro e massima facilità, qualche compromesso lo si può accettare.
-
-Maccy è disponibile per macOS a [questo link](https://maccy.app/), gratis.
+Maccy is available for macOS at [this link](https://maccy.app/), free.

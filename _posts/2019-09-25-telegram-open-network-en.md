@@ -9,49 +9,44 @@ tag:
 - blockchain
 category: projects
 author: jaack
-description: Guide, commenti, aggiornamenti
+description: Guides, comments, updates
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
+**Telegram** is my favorite **messaging** app.
 
+Telegram is my favorite app to follow **news**.
 
-**Telegram** è la mia app preferita di **messaggistica**.
+Telegram is many things and, to put it briefly, is a free information platform.
+And now it is about to become decentralized too.
 
-Telegram è la mia app preferita per seguire le **notizie**.
+In this page, I will collect articles written by me, resources taken from the internet
+and considerations on new ways of using this app.
 
-Telegram è tante cose e, per dirla brevemente, è una piattaforma di informazione libera.
-E ora sta per diventare anche decentralizzata.
+If you want to be sure that I answer you, [contact me on Telegram](https://t.me/ijaack94).
 
-In questa pagina, raccoglierò articoli scritti da me, risorse prese da internet
-e considerazioni su nuove modalità di utilizzo di questa app.
+### The TON Wallet has been released in beta for the testnet!
 
-Se volete essere sicuri che io vi risponda, [contattatemi su Telegram](https://t.me/ijaack94).
+<img class="image" src="{{base}}/assets/images/projects/TON/TON-wallet-website.png" alt="TON Wallet Website" />
 
-### Il Wallet TON è stato rilasciato in beta per la testnet!
+Link to download TON wallet, now in beta -> [https://wallet.ton.org](https://wallet.ton.org)
 
-<img class="image" src="{{base}}/assets/images/projects/TON/TON-wallet-website.png" alt="Sito web del Wallet TON" />
+Once the software is downloaded and installed, it must be configured, but in reality the procedure is very simple. You must remember to **save** the seed phrase to regenerate the wallet in a safe place, which has 24 words. I always recommend **1Password** and save the password as if it were a Bank Account, but **LastPass** and **Dashlane** are also fine, which are semi-free (1Password costs about €40/year).
 
-Link per scaricare wallet TON, ora in beta -> [https://wallet.ton.org](https://wallet.ton.org)
+<img class="image" src="{{base}}/assets/images/projects/TON/TON-wallet-configurazione.png" alt="TON Wallet Configuration" />
 
-Una volta scaricato ed installato il software, si deve configurare, ma in realtà la procedura è semplicissima. Bisogna ricordare di **salvare** in un posto sicuro la frase seed per rigenerare il wallet, che ha 24 parole. Io consiglio sempre **1Password** e salvare la password come fosse un Conto Bancario, ma vanno bene anche **LastPass** e **Dashlane**, che sono semi-gratuiti (1Password costa circa 40€ l'anno).
+Once the configuration is done, the screen is really simple. We normal users surely have 0 GRAM to redeem, but we can start playing with the testnet by requesting testnet GRAMs from a Telegram bot -> [Test-TON-bot](https://t.me/test_ton_bot).
 
-<img class="image" src="{{base}}/assets/images/projects/TON/TON-wallet-configurazione.png" alt="Configurazione del Wallet TON" />
+<img class="image" src="{{base}}/assets/images/projects/TON/TON-wallet-home.png" alt="TON Wallet home, on macOS" />
 
-Una volta fatta la configurazione, la schermata è davvero semplice. Noi utenti normali abbiamo sicuramente 0 GRAM da riscattare, ma possiamo iniziare a giocare con la testnet richiedendo dei GRAM testnet da un bot Telegram -> [Test-TON-bot](https://t.me/test_ton_bot).
+Also on the bot the procedure is very simple, just indicate how many GRAMs you want to obtain on a scale ranging from 5 to 20. Who knows why such a defined number, since anyway the test coins have no value..
 
-<img class="image" src="{{base}}/assets/images/projects/TON/TON-wallet-home.png" alt="La home del Wallet TON, su macOS" />
+<img class="image" src="{{base}}/assets/images/projects/TON/Test-TON-bot-Telegram.png" alt="Test-TON-bot on Telegram" />
 
-Anche sul bot la procedura è semplicissima, basta indicare quanti GRAM si vuole ottenere in una scala che va da 5 a 20. Chissà perché un numero così definito, dato che comunque i le monete di test non hanno valore..
+Generally, in about 1 minute the GRAMs should arrive.
 
-<img class="image" src="{{base}}/assets/images/projects/TON/Test-TON-bot-Telegram.png" alt="Test-TON-bot su Telegram" />
+<img class="image" src="{{base}}/assets/images/projects/TON/GRAM-TON-Wallet.png" alt="GRAMs on testnet received from Telegram bot" />
 
-Generalmente, in circa 1 minuto dovrebbero arrivare i GRAM.
-
-<img class="image" src="{{base}}/assets/images/projects/TON/GRAM-TON-Wallet.png" alt="I GRAM sulla testnet ricevuti dal bot su Telegram" />
-
-Chi vuole giocare con me sulla testnet TON? :) Questo il mio indirizzo: **EQCKFdRUi6GbTlhfS3Q_UmOncABG10zzh0wIJL0od1PoKNfa**
+Who wants to play with me on the TON testnet? :) This is my address: **EQCKFdRUi6GbTlhfS3Q_UmOncABG10zzh0wIJL0od1PoKNfa**
 
 {% include changes.html %}

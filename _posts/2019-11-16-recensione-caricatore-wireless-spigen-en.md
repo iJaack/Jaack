@@ -1,5 +1,5 @@
 ---
-title: "Recensione Spigen Steadiboost Flex"
+title: "Spigen Steadiboost Flex Review"
 layout: post
 date: 2019-11-15 18:00
 image: /assets/images/Spigen-Steadiboost-Flex.jpg
@@ -9,53 +9,47 @@ tag:
 - review
 category: blog
 author: jaack
-description: Recensione caricatore wireless stand Spigen Steadiboost Flex
+description: Spigen Steadiboost Flex wireless charging stand review
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+A month ago, Spigen sent me some chargers to test and some discount codes
+to distribute in my network.
 
-
-Un mese fa, Spigen mi ha mandato alcuni caricatori da provare e alcuni codici
-sconto da distribuire nel mio network.
-
-Ci ho messo un mese per partorire qualche impressione sul caricatore wireless **Steadiboost Flex** - e non credo che farò un articolo sugli altri caricatori che ho ricevuto - perché come si recensisce un caricatore? Oltre la lista di specifiche tecniche, quello che si può discutere è la sua qualità e robustezza, la sua versatilità e la - cosa più importante - capacità di carica.
+It took me a month to give birth to some impressions on the **Steadiboost Flex** wireless charger - and I don't think I will write an article on the other chargers I received - because how do you review a charger? Besides the list of technical specifications, what can be discussed is its quality and robustness, its versatility and the - most important thing - charging capacity.
 
 <img class="image" src="{{base}}/assets/images/Spigen-Steadiboost-Flex-4.jpg" alt="Spigen Steadiboost Flex" >
 
-Quindi: sì, **è costruito bene**. È in plastica, non è in acciaio o materiale pregiato.
- Ma è ottimo così, perché lo stand deve agganciare per bene lo smartphone:  se
-fosse stato di acciaio o di alluminio, il dispositivo sarebbe scivolato, o avrebbe
- comunque avuto una presa precaria. Ed invece così, la sensazione è di una plastica che non lascia scorrere cosa si poggia sopra. Lo stand si può ripiegare fino a farlo coincidere con la base, ma ha poco senso usarlo in quella modalità. È in colore nero opaco, che non mi dispiace e si intona con il grigio siderale dell'iPad Pro e del MacBook Pro. Ha anche un trasformatore con presa singola, ma non l'ho mai usato
- perché credo sia inutile per la vita di tutti i giorni: sempre meno persone usano
- un trasformatore con una sola porta USB.
+So: yes, **it is built well**. It is made of plastic, not steel or precious material.
+But it is great like this, because the stand must grip the smartphone well: if
+it had been made of steel or aluminum, the device would have slipped, or would have
+had a precarious grip anyway. And instead like this, the feeling is of a plastic that does not let whatever is placed on it slide. The stand can be folded until it coincides with the base, but it makes little sense to use it in that mode. It is in matte black color, which I don't mind and matches the space gray of the iPad Pro and MacBook Pro. It also has a single-socket transformer, but I have never used it
+because I believe it is useless for everyday life: fewer and fewer people use
+a transformer with only one USB port.
 
- <img class="image" src="{{base}}/assets/images/Spigen-Steadiboost-Flex-2.jpg" alt="Spigen Steadiboost Flex" >
+<img class="image" src="{{base}}/assets/images/Spigen-Steadiboost-Flex-2.jpg" alt="Spigen Steadiboost Flex" >
 
-La versatilità mi ha colpito: supporta il fast charging del mio trasformatore
-a 4 porte della Anker, e si collega con una USB-A (quella standard, per intenderci)
-che diventa una USB-C, quindi utilizzabile anche per altri dispositivi che ho. Il cavo è molto resistente, somiglia a quelli di AmazonBasics.
-Per ora non si è ancora tagliato o sfilacciato, ma è solo un mese che ce l'ho, quindi
-non so dire se possa durare anni.
+The versatility struck me: it supports the fast charging of my Anker 4-port transformer, and connects with a USB-A (the standard one, to be clear)
+which becomes a USB-C, therefore usable also for other devices I have. The cable is very resistant, it resembles those of AmazonBasics.
+For now, it has not yet cut or frayed, but I have only had it for a month, so
+I can't say if it can last years.
 
 <img class="image" src="{{base}}/assets/images/Spigen-Steadiboost-Flex-3.jpg" alt="Spigen Steadiboost Flex" >
 
-Per stimare la capacità di carica, ho fatto un test per il peggiore dei casi, che
-dovrebbe indicare che peggio di così non può fare. Ho caricato da 0% (proprio spento)
-a 100% il mio iPhone X che ha ormai due anni e una batteria non più ottimale (89% di prestazioni) non usando il fast charging: ci ha messo circa 5 ore per caricare tutta
-la batteria. Contando che si tratta di ricarica wireless (quindi più lenta di ricarica via cavo), contando che con il fast charging si carica più velocemente
-e che con uno smartphone più recente la carica potrebbe essere ottimizzata meglio,
-devo dire che sono soddisfatto: in generale, durante la giornata, mi basta lasciare
-lo smartphone (Galaxy Note 10 o iPhone X) per una mezz'oretta per vederlo caricato
-di almeno il 30% in più.
+To estimate the charging capacity, I did a test for the worst case, which
+should indicate that it cannot do worse than this. I charged from 0% (actually off)
+to 100% my iPhone X which is now two years old and has a battery that is no longer optimal (89% performance) not using fast charging: it took about 5 hours to charge the whole
+battery. Counting that it is wireless charging (therefore slower than cable charging), counting that with fast charging it charges faster
+and that with a more recent smartphone the charge could be optimized better,
+I must say that I am satisfied: in general, during the day, it is enough for me to leave
+the smartphone (Galaxy Note 10 or iPhone X) for half an hour to see it charged
+at least 30% more.
 
 <img class="image" src="{{base}}/assets/images/Spigen-Steadiboost-Flex.jpg" alt="Spigen Steadiboost Flex" >
 
-Che dire di più. Sì, mi piace. Lo sto usando. Vale i 50€ a cui lo si può acquistare
- su Amazon? Forse ci sono caricatori wireless migliori, ma la combinazione di 'modalità stand' e modalità 'base' e la porta USB-C per l'alimentazione mi fanno
-pensare che questo caricatore sia più versatile degli altri.
+What more to say. Yes, I like it. I am using it. Is it worth the €50 at which it can be purchased
+on Amazon? Maybe there are better wireless chargers, but the combination of 'stand mode' and 'base' mode and the USB-C port for power make me
+think that this charger is more versatile than others.
 
-[**Acquista Steadiboost Flex su Amazon**](https://amzn.to/33QZ32B)
+[**Buy Steadiboost Flex on Amazon**](https://amzn.to/33QZ32B)

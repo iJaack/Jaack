@@ -1,5 +1,5 @@
 ---
-title: "Homescreen per l'autunno 2019"
+title: "Homescreen for autumn 2019"
 layout: post
 date: 2019-10-01 13:00
 image: /assets/images/homescreen-estate-autunno-2019.jpg
@@ -8,27 +8,22 @@ tag:
 - tech
 category: blog
 author: jaack
-description: Cambiano le necessità, cambiano le app
+description: Needs change, apps change
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+And so we arrived in October.
 
+I took a month to carry out a reasoned transition on my daily workflow passing through the homescreen of my iPhone.
 
-E così siamo arrivati ad Ottobre.
+On the left, the arrangement of apps until yesterday, which was the 'summer' arrangement. On the right, the 'winter' one, which takes into account completely different reasoning, but which does not drastically change the skin of my iPhone.
 
-Mi sono preso un mese di tempo per eseguire una transizione ragionata sul mio workflow quotidiano passando per la homescreen del mio iPhone.
+In order of appearance:
 
-A sinistra, la disposizione delle app fino a ieri, che era la disposizione 'estiva'. A destra, quella 'invernale', che tiene conto di ragionamenti del tutto diversi, ma che non cambia drasticamente la pelle del mio iPhone.
+- **Scribd** goes out, because during August, although I thought I'd use it, in the end I never listened to an audiobook. At most I read, but mainly articles. **Working Copy** enters, because I'm getting used to writing daily on this site, updating modules or articles, and as an app for git versioning it is phenomenal.
+- **Goodreads** goes out, moving to the second page, because I will read on weekends but by now I always remember to mark what page I arrived at. **Slack** enters, but positions itself in the bottom right corner, because the time has come to work and talk with the team daily.
+- **Telepass Pay X** goes out, which unfortunately I haven't used much because it has many bugs and usage points (gas stations, etc.) are not exactly everywhere, or are not equipped. **Nike Training Club** enters, because between Milan and Vienna (the places where I work and live currently), I can exploit a gym and should be able to train at least twice a week, in addition to running more or less the same number of times.
+- **PUBG Mobile** goes out, because until mid-October I will play with games that are on *Apple Arcade*, but I have already decided that I will play only with the Nintendo Switch. **Balance** enters, a guided meditation app from the same developers as Elevate which is creating the habit of meditating every morning for about 5 minutes, making me focus better and, for example, write this article in a few minutes instead of hours and hours of distracted and defocused work. A review will arrive shortly.
 
-In ordine di apparizione:
-
-- Esce **Scribd**, perché durante agosto, seppur pensavo di utilizzarlo, alla fine non ho mai sentito un audiolibro. Al massimo ho letto, ma soprattutto articoli. Entra **Working Copy**, perché mi sto abituando a scrivere quotidianamente su questo sito, aggiornando moduli o articoli, e come app per il git versioning è fenomenale.
-- Esce **Goodreads**, che va in seconda pagina, perché leggerò nei weekend ma ormai mi ricordo sempre di segnare a che pagina sono arrivato. Entra **Slack**, che però si posiziona nell'angolo in basso a destra, perché è arrivato il momento di lavorare e di parlare con il team quotidianamente.
-- Esce **Telepass Pay X**, che purtroppo non ho usato moltissimo perché ha molti bug e i punti di utilizzo (benzinai, ecc.) non sono proprio ovunque, oppure non sono attrezzati. Entra **Nike Training Club**, perché tra Milano e Vienna (i posti in cui lavoro e vivo attualmente), posso sfruttare una palestra e dovrei riuscire ad allenarmi almeno due volte a settimana, oltre a correre più o meno lo stesso numero di volte.
-- Esce **PUBG Mobile**, perché fino a metà ottobre giocherà con i giochi che sono su *Apple Arcade*, ma ho già deciso che giocherò solo con la Nintendo Switch. Entra **Balance**, un'app di meditazione guidata dagli stessi sviluppatori di Elevate che mi sta creando l'abitudine di meditare ogni mattina per circa 5 minuti, facendomi focalizzare meglio e, per esempio, scrivere questo articolo in pochi minuti invece che in ore e ore di lavoro distratto e defocalizzato. Arriverà una recensione a breve.
-
-La mia homescreen cambia in base alle abitudini, e non ho la pretesa di pensare che rimarrà sempre la stessa o che saprò con esattezza che userò le app che ho messo in prima pagina. È un'operazione di rifinitura continua. Lo rifarò anche a Gennaio 2020, probabilmente.
+My homescreen changes based on habits, and I don't pretend to think it will always remain the same or that I will know exactly that I will use the apps I put on the first page. It is a continuous finishing operation. I will do it again in January 2020, probably.

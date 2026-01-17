@@ -1,5 +1,5 @@
 ---
-title: "Balance è l'app che ti aiuta a meditare, davvero "
+title: "Balance is the app that helps you meditate, really"
 layout: post
 date: 2019-12-13 10:00
 image: /assets/images/Balance_app_1.png
@@ -10,87 +10,77 @@ tag:
 - apps
 category: blog
 author: jaack
-description: Un'app per costruire l'abitudine della meditazione
+description: An app to build the habit of meditation
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+I wanted to write this review for a while, but I never found the right key
+to tell this story. Today I found it.
 
+**Balance** is an app, by the same creators of Elevate, **Elevate Labs**, which puts itself
+in direct competition with Headspace. It implies an app that helps build a path
+of meditation, day by day, starting with sessions of *2-3 minutes* and
+continuing with increasingly long, complex and advanced meditation sessions.
 
-Volevo scrivere questa recensione da un po', ma non ho mai trovato la chiave
- giusta per raccontare questa storia. Oggi l'ho trovata.
+Before using Balance, I had already used Headspace for a few weeks. I had done
+some sessions, but I hadn't found myself very well. Or rather, the single sessions of
+meditation were extremely productive, but since the first sessions, the commitment required
+to do a complete path was *excessive*.
 
-**Balance** è un'app, dagli stessi creatori di Elevate, **Elevate Labs**, che si mette
-in diretta competizione con Headspace. È un'app che aiuta a costruire un percorso
-di meditazione, giorno per giorno, iniziano con sessioni di *2-3 minuti* e
-continuando con sessioni di meditazione sempre più lunghe, complesse e avanzate.
+Meditation should be a habit and, as such, must request minimal effort to be performed. It must be a pleasure to do it, not a duty. It must occupy
+a minimal time in the day and must make sense with respect to the life you are leading.
 
-Prima di usare Balance, avevo già usato Headspace per qualche settimana. Avevo fatto
-alcune sessioni, ma non mi ero trovato benissimo. O meglio, le singole sessioni di
-meditazione erano estremamente produttive, ma sin dalle prime sessioni, l'impegno richiesto
-per fare un percorso completo era *eccessivo*.
+**Headspace** seemed to me much more like a set of lessons that, in a few minutes at a time,
+teaches you to master, more or less like an automaton, all the main techniques
+of meditation: **Awareness, Breath Control, Visualization, Body Scan**,
+and so on. I must admit that, in a few sessions I managed to master,
+at least for a limited time of 5-10 minutes, these techniques.
 
-La  meditazione dovrebbe essere un'abitudine e, come tale, deve richiedere il minimo
-sforzo per essere eseguita. Deve essere un piacere farla, non un dovere. Deve occupare
-un tempo minimo nella giornata e deve avere un senso rispetto alla vita che stai
-svolgendo.
+But then, when I thought about the next meditation session, I imagined it as
+if I had to do a task, perform an assignment. Often, I was *happy* not to do it.
+And if you are not happy to do a thing you would like to do, then it is better not to do it.
 
-**Headspace** mi è sembrato molto più un insieme di lezioni che, in pochi minuti alla volta,
-ti insegna a padroneggiare, più o meno come un automa, tutte le tecniche principali
- della meditazione: **Consapevolezza, Controllo del Respito, Visualizzazione, Scansione del Corpo**,
- e così via. Devo ammettere che, in poche sessioni sono riuscito a padroneggiare,
- almeno per un tempo limitato di 5-10 minuti, queste tecniche.
+I let two years pass: in the meantime, I used and abused Elevate, this app
+that proposes to me every day grammar, syntactic, mathematical, conceptual tests, and which
+allows me to 'activate' the brain in the morning and keep it trained on
+logics of thought that I do not use frequently.
 
-Ma poi, quando pensavo alla successiva sessione di meditazione, la immaginavo come
-se avessi dovuto fare un task, eseguire un compito. Spesso, ero *contento* di non farlo.
-E se non sei contento di fare una cosa che vorresti fare, allora è meglio non farla.
+Since I liked Elevate, I wanted to give Balance a chance too, as soon as it came out,
+because I imagined that the habit-building format had been the same.
 
-Ho lasciato passare due anni: nel frattempo, ho usato e abusato di Elevate, quest'app
-che mi propone ogni giorno dei test grammaticali, sintattici, matematici, concettuali, e che
-mi permette di 'attivare' il cervello la mattina e di tenerlo allenato su
-logiche di pensiero che non utilizzo frequentemente.
-
-Dato che Elevate mi è piaciuta, ho voluto dare una chance anche a Balance, non appena uscita,
-perché immaginavo che il format di costruzione dell'abitudine fosse stato lo stesso.
-
-Balance è gratuita se si vogliono fare solo alcune sessioni semplici, mentre costa circa
- **52€ l'anno** se si vuole avere l'accesso a tutte le sessioni, tutti i programmmi avanzati
- e a tutte le sessioni singole. Sto provando Balance da alcuni mesi ormai, e avrei voluto scrivere qualcosa già dalla seconda-terza settimana di utilizzo, ma non riuscivo a trovare una particolare *reason why* da raccontare.
- In quel momento, usavo Balance più o meno tutti i giorni, ero arrivato a completare i
- primi due moduli iniziali, i **Foundation I e II**, e stavo iniziando a fare le
- sessioni del terzo modulo, **Foundation III**.
+Balance is free if you only want to do some simple sessions, while it costs about
+**€52 per year** if you want access to all sessions, all advanced programs
+and all single sessions. I have been trying Balance for a few months now, and I would have liked to write something already from the second-third week of use, but I couldn't find a particular *reason why* to tell.
+At that moment, I used Balance more or less every day, I had come to complete the
+first two initial modules, **Foundation I and II**, and I was starting to do the
+sessions of the third module, **Foundation III**.
 
 <img class="image" src="{{base}}/assets/images/Balance_app_2.png" alt="Balance">
 
-Se le prime sessioni sono state estremamente piacevoli e soprattutto facili da svolgere
- (circa 3-5 minuti di durata), le sessioni successive erano da circa 10 minuti, quasi sempre.
- Da un punto di vista temporale, io non sono per niente preoccupato dall'inserire nella mia
- routine mattutina una sessione di relax di 5 minuti - guardo un video in meno su Youtube quando
- sono ancora nel letto. Ma 10 minuti sono già un po' di più.
+If the first sessions were extremely pleasant and above all easy to carry out
+(about 3-5 minutes duration), subsequent sessions were about 10 minutes, almost always.
+From a temporal point of view, I am not at all worried about inserting a 5-minute relaxation session into my morning routine - I watch one less video on YouTube when
+I am still in bed. But 10 minutes are already a bit more.
 
-Certo, ovviamente **10 minuti** non sono niente rispetto alle sessioni di meditazione
- complete che durano anche un'ora e più, ma io non sto cercando di raggungere il Nirvana -
- sto solo provando a trovare un modo di raccogliere le mie idee al mattino o alla sera, e
- stare meglio con me stesso.
+Sure, obviously **10 minutes** are nothing compared to complete meditation sessions
+that last even an hour and more, but I am not trying to reach Nirvana -
+I am just trying to find a way to gather my ideas in the morning or in the evening, and
+be better with myself.
 
-Sia all'inizio, prima ancora dell'inizio della prima sessione, che all'inizio di ogni sessione
-successiva, Balance mi propone dei quesiti a cui rispondere, per controllare il mio stato di
-avanzamento sulle varie tecniche e per capire come mi sento oggi. Questo strumento è *estremamente utile*,
-perché serve al sistema per creare una sessione audio che sia in linea con le esigenze del particolare giorno,
-e che tiene conto di tuoi rallentamenti nell'apprendimento o delle tua abilità apprese nel tempo,
-magari aumentando le pause tra una frase e l'altra o proponendo meno esercizi nella sessione.
+Both at the beginning, even before the start of the first session, and at the beginning of each subsequent session, Balance proposes questions to answer, to check my progress status on the various techniques and to understand how I feel today. This tool is *extremely useful*,
+because it serves the system to create an audio session that is in line with the needs of the particular day,
+and which takes into account your slowdowns in learning or your skills learned over time,
+maybe increasing the pauses between one phrase and another or proposing fewer exercises in the session.
 
-Il motivo per cui ho scritto questo articolo solo oggi, a distanza di quasi 3 mesi dalla
-prima apertura dell'app, è che oggi mi ritrovo a dover limitare il numero di sessioni di meditazione
-che posso fare, e questo mi manca. Non sono sollevato, mi manca.
+The reason why I wrote this article only today, almost 3 months after the
+first opening of the app, is that today I find myself having to limit the number of meditation sessions
+I can do, and I miss this. I am not relieved, I miss it.
 
-Vorrei poter meditare di più, vorrei poter raccogliere le mie idee al mattino e anche la sera,
-ma ancora non ho trovato il modo di incastrare queste sessioni, che ora sono diventate da 10-15 minuti,
-nella mia routine quotidiana. Per ora ho trovato una *soluzione intermedia*: 5 volte a settimana Elevate,
-due volte a settimana Balance. Magari medito il lunedì e/o nel weekend e, per i giorni lavorativi, in cui
-ho sempre fretta e poco tempo per me stesso, ho inserito Elevate.
+I would like to be able to meditate more, I would like to be able to gather my ideas in the morning and also in the evening,
+but I still haven't found a way to fit these sessions, which have now become 10-15 minutes,
+into my daily routine. For now I have found an *intermediate solution*: 5 times a week Elevate,
+twice a week Balance. Maybe I meditate on Mondays and/or on weekends and, for working days, when
+I am always in a hurry and have little time for myself, I inserted Elevate.
 
-Quindi sì, Balance mi è piaciuta, così tanto che mi manca. E vorrei poterla usare di più.
+So yes, I liked Balance, so much that I miss it. And I wish I could use it more.

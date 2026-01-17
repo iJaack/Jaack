@@ -1,49 +1,43 @@
 ---
-title: "Economia del multiplayer in ritardo"
+title: "The Delayed Multiplayer Economy"
 layout: post
 date: 2019-09-05 11:40
 image: /assets/images/cyberpunk-2077.jpg
 headerImage: false
 tag:
-- giochi
+- games
 category: blog
 author: jaack
-description: Un modo per allungare l'attesa
+description: A way to prolong the wait
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
-
-
 
 [The Verge](https://www.theverge.com/2019/9/4/20849235/cyberpunk-2077-multiplayer-launch)
-riporta che anche **Cyberpunk 2077**, l'open world sviluppato
-da CD Projekt, riceverà un update successivamente al primo DLC per l'abilitazione
-del multiplayer.
+reports that **Cyberpunk 2077** too, the open world developed
+by CD Projekt, will receive an update following the first DLC to enable
+multiplayer.
 
-Ora, questo mi fa pensare che ci siano 2 tipi di giochi fondamentalmente:
-quelli che sono **multiplayer fin dall'inizio** (*Fortnite, Overwatch, PUBG*
-  i primi che mi vengono in mente) e quelli che invece sono delle storie single
-  player, che vengono 'aumentati' (in inglese c'è il termine *enhanced* che
-  rende benissimo l'idea) dal multiplayer - mi vengono in mente ** GTA 5 e No Man's Sky*).
+Now, this makes me think that there are fundamentally 2 types of games:
+those that are **multiplayer from the start** (*Fortnite, Overwatch, PUBG*
+are the first that come to mind) and those that are single player stories,
+which are 'enhanced' by multiplayer - **GTA 5 and No Man's Sky** come to mind.
 
-Lo scopo fondamentale è quello di 'incatenare' il più possibile il giocatore
-davanti allo schermo con le stesse immagini, fargli cambiare gioco il meno possibile.
-GTA 5 è ancora molto giocato in tutto il mondo, e No Man's Sky è un gioco completo
-(sebbene non esattamente come avevamo immaginato) solo ora.
+The fundamental goal is to 'chain' the player as much as possible
+in front of the screen with the same images, making them change game as little as possible.
+GTA 5 is still widely played around the world, and No Man's Sky is a complete game
+(although not exactly how we imagined it) only now.
 
-Questa idea di rendere il gioco 'completo' solo molto tempo dopo mi ricorda molto
-il concept degli smartphone e. Quando compro un iPhone o uno smartphone Android con
-una certa versione del sistema operativo, gli ingegneri Apple e Google stanno in realtà
-già lavorando ad una versione che verrà rilasciata dopo 2 o 3 anni almeno.
-Le funzionalità che saranno disponibili nella versione successiva sono già pronte,
-ma vengono rilasciate 'a dosi', sia per mantenere alta l'attesa per nuove funzioni, sia
-per evitare di rimanere senza nulla di nuovo da proporre improvvisamente.
+This idea of making the game 'complete' only much later reminds me a lot
+of the smartphone concept. When I buy an iPhone or an Android smartphone with
+a certain OS version, Apple and Google engineers are actually already
+working on a version that will be released at least 2 or 3 years later.
+The features that will be available in the next version are already ready,
+but they are released 'in doses', both to keep anticipation high for new features, and
+to avoid suddenly running out of new things to propose.
 
-Il multiplayer in un videogioco come Cyberpunk 2077 è l'aggiornamento **definitivo**:
-incorona la riuscita del gioco come piattaforma di intrattenimento globale. GTA 5, all'epoca,
-è riuscito nell'intento. No Man's Sky no.
-Ma ci piacerebbe, forse, gustare tutte le funzionalità del gioco tutte insieme fin dal primo
-giorno, per una volta.
+Multiplayer in a video game like Cyberpunk 2077 is the **ultimate** update:
+it crowns the game's success as a global entertainment platform. GTA 5, at the time,
+succeeded in this intent. No Man's Sky did not.
+But perhaps we would like to enjoy all the game's features all together from day one,
+for once.

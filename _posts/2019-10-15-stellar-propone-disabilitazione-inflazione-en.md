@@ -1,5 +1,5 @@
 ---
-title: "Stellar 12 propone l'annullamento dell'inflazione"
+title: "Stellar 12 proposes the cancellation of inflation"
 layout: post
 date: 2019-10-15 13:00
 image: /assets/images/stellar-inflazione.jpg
@@ -8,37 +8,31 @@ tag:
 - blockchain
 category: blog
 author: jaack
-description: Nell'ultimo aggiornamento, la SDF ha proposto la disabilitazione dell'inflazione
+description: In the latest update, the SDF proposed disabling inflation
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
+I have always thought that **Stellar** was a good blockchain project.
 
+I never had time (and neurons) to read and understand all the features
+in the whitepaper, but I knew it is a project based more on rethinking
+the current financial infrastructure, than on the idea of giving the world a 'liberal'
+currency, like bitcoin.
 
-Ho sempre pensato che **Stellar** fosse un bel progetto blockchain.
+Stellar is supported by **IBM** and many large and small companies, as well as by many
+groups of developers who receive, quarterly, funds from the **Stellar Development Foundation** to power applications in the ecosystem and community.
 
-Non ho mai avuto tempo (e neuroni) per leggere e comprendere tutte le funzionalità
-nel whitepaper, ma sapevo che è un progetto che si basa più sul ripensamento
-dell'infrastruttura finanziaria attuale, che sull'idea di dare al mondo una moneta
-'liberale', come bitcoin.
+In the latest protocol update, released a few days ago, reaching version 12.0.0, the Development Foundation proposed disabling inflation.
 
-Stellar è appoggiato da **IBM** e da tante grandi e piccole aziende, nonché da tanti
-gruppi di sviluppatori che ricevono, trimestralmente, fondi dalla **Stellar Development Foundation** per alimentare la applicazioni nell'ecosistema e nella
-community.
+Stellar had conceived the inflation of the main blockchain cryptocurrency, XLM, as a way to efficiently redirect new tokens generated to development projects on the ecosystem. The basic reasoning was that users of the Stellar community cared about the development of the ecosystem and, therefore, would *vote* to redirect the new funds generated to projects that would benefit from them, without directly affecting their own funds.
 
-Nell'ultimo aggiornamento del protocollo, rilasciato qualche giorno fa, arrivato alla versione 12.0.0, la Development Foundation ha proposto la disabilitazione dell'inflazione.
+The purpose was genuine. But then *pools* were born, platforms that allow users to vote for the assignment of funds to a specific address and then obtain those funds for themselves. Below, a small drawing of how it has worked (not very honestly) so far.
 
-Stellar aveva concepito l'inflazione della cryptovaluta principale della blockchain, XLM, come un modo per redirezionare efficientemente nuovi token generati a progetti di sviluppo sull'ecosistema. Il ragionamento di base era che gli utenti della community di Stellar avessero a cuore lo sviluppo dell'ecosistema e, quindi, *votassero* per reindirizzare i nuovi fondi generati a progetti che ne beneficiassero, senza intaccare direttamente i propri fondi.
+<img class="image" src="{{base}}/assets/images/stellar-inflazione.jpg" alt="How Stellar inflation works (badly)" />
 
-Lo scopo era genuino. Ma poi sono nate delle *pool*, delle piattaforme che permettono agli utenti di votare l'assegnazione dei fondi su uno specifico indirizzo e poi ottenere quei fondi per se stessi. Qui sotto, un piccolo disegnino di come ha funzionato (poco onestamente) finora.
+As long as funds are redirected to single projects, but external to the users voting for "donations", value is created anyway.
+But when, through the mechanism described above, each user makes a donation which they then take for themselves, *everyone* increases their funds, and therefore no value is created, because if I have €1 and everyone else has €1, if I receive another €10 and everyone stays with €1, I have more purchasing power than the others, but if everyone else also receives €10, our purchasing power aligns, and therefore the differences cancel out. We might as well all have had €1 then.
 
-<img class="image" src="{{base}}/assets/images/stellar-inflazione.jpg" alt="Come funziona (male) l'inflazione di Stellar" />
+Furthermore, all these transactions that are created and do not contribute to creating value, only increase the mass of transactions generated, and clog the blockchain, decreasing scalability.
 
-Fino a che i fondi vengono reindirizzati a progetti singoli, ma esterni agli utenti che votano le "donazioni", il valore viene creato comunque.
-Ma quando, tramite il meccanismo descritto sopra, ogni utente fa una donazione che poi prende per se stesso, *tutti* aumentano i propri fondi, e quindi non si crea nessun valore, perché se io ho 1€ e tutti quanti hanno 1€, se io ricevo altri 10€ e tutti rimangono con 1€, io ho più potere di acquisto degli altri, ma se anche tutti gli altri ricevono 10€, il nostro potere di acquisto si allinea, e quindi si annullano le differenze. Tanto vale che allora avevamo tutti 1€.
-
-Inoltre, tutte queste transazioni che vengono create e che non contribuiscono a creare valore, aumentano solo la massa di transazioni generate, ed intasano la blockchain, diminuendo la scalabilità.
-
-La proposta della disabilitazione dell'inflazione è nel protocollo v 12.0.0, ma se durante la votazione del prossimo 28 ottobre non dovesse essere approvata, la Stellar Development Foundation rilascerà una versione 13.0.0 con tutte le funzioni della 12.0.0 fatta eccezione per la disabilitazione dell'inflazione, e si rivoterà dopo alcune settimane.
+The proposal to disable inflation is in protocol v 12.0.0, but if during the vote on October 28th it is not approved, the Stellar Development Foundation will release a version 13.0.0 with all the functions of 12.0.0 except for the disabling of inflation, and there will be a revote after a few weeks.

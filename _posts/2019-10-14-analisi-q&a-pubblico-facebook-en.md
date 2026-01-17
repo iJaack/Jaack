@@ -1,5 +1,5 @@
 ---
-title: "Breve analisi del Q&A pubblico di Facebook"
+title: "Brief analysis of Facebook's public Q&A"
 layout: post
 date: 2019-10-14 18:00
 image: /assets/images/profilo.jpg
@@ -9,50 +9,45 @@ tag:
 - culture
 category: blog
 author: jaack
-description: Un paio di considerazioni sull'ennesima battuta di Facebook contro le istituzioni
+description: A couple of considerations on Facebook's umpteenth joke against institutions
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
+I finally managed, about 2 weeks after publication, to watch
+the entire public Q&A that Mark Zuckerberg broadcast live from his Facebook profile
+to respond to the audio recording published anonymously by an intern
+which filmed Zuckerberg while expressing, with somewhat 'loose' tones, his
+disappointment with Senator Elizabeth Warren's proposal to 'break up Big Tech'.
 
+Although many of the activities of US politicians are on Twitter, a Facebook employee,
+with a direct question to the CEO, points out that in reality Warren, in addition to other politicians who
+harshly criticize Facebook's position as a monopolist platform, use Facebook itself
+to do their own propaganda and to communicate with their audience.
 
-Finalmente sono riuscito, a circa 2 settimane dalla pubblicazione, a guardare
-tutto il Q&A pubblico che ha trasmesso Mark Zuckerberg in diretta dal suo profilo Facebook
-per rispondere alla registrazione audio pubblicata anonimamente da uno stagista
-che riprendeva Zuckerberg mentre esprimeva, con toni un po' 'sciolti', il proprio
-disappunto per la proposta della senatrice Elizabeth Warren di 'rompere le Big Tech'.
+So what are they doing on Facebook, if they think it is a poorly regulated
+and risky terrain?
 
-Sebbene molte delle attività dei politici statunitensi siano su Twitter, un dipendente Facebook,
-con una domanda diretta al CEO, fa notare come in realtà la Warren, oltre ad altri politici che
-criticano aspramente la posizione di Facebook come piattaforma monopolista, usano proprio Facebook
-per fare la propria propaganda e per comunicare con il proprio pubblico.
+I don't want to defend Facebook vigorously, much less Zuckerberg, who knows well that
+'with great power comes great responsibility'. As I was discussing yesterday in the latest email
+of my newsletter 'This week in three words' (subscription link at the end of the article),
+Facebook has problems that other Big Techs don't have, because it directly influences people's
+culture. Not being aware of it until the Cambridge Analytica scandal, Facebook had to
+set up a rehabilitation program, which however seems not to be enough.
 
-Che ci stanno a fare quindi su Facebook, se pensano che sia un terreno poco regolamentato
-e rischioso?
+From the Q&A, which can still be planned in advance, it turns out however that the values
+on which decisions taken by Zuck and the Facebook board are based are coherent.
 
-Non voglio difendere Facebook a spada tratta, tanto meno Zuckerberg, che sa bene che
-'da grandi poteri derivano grandi responsabilità'. Come discutevo ieri nell'ultima mail
-della mia newsletter 'Questa settimana in tre parole' (link per l'iscrizione alla fine dell'articolo),
-Facebook ha problemi che altre Big Tech non hanno, perché influenza direttamente la cultura dei
-popoli. Non essendone consapevole fino allo scandalo di Cambridge Analytica, Facebook ha dovuto
-mettere in piedi un programma di riabilitazione, che però sembra non bastare.
+The live starts, in fact, precisely with Zuckerberg talking about the published recording, adding
+: "When the audio was published, we thought about what we had to do. Then we told ourselves
+that actually the things I had said, that we had said, we really think them. So this, today,
+is the opportunity to show the world what we think."
 
-Dal Q&A, che può comunque essere pianificato in anticipo, risulta però che i valori
-su cui si fondano le decisioni prese da Zuck e il board di Facebook siano coerenti.
+They talk about encrypted conversations, the cultural implications that this technology entails,
+climate change, but also banal new minor features integrated into Facebook Messenger.
+All other offices around the world are also connected live (the broadcast takes place from the headquarters in Silicon Valley).
 
-Il live inizia, infatti, proprio con Zuckerberg che parla della registrazione pubblicata, aggiungendo
-(tradotto in italiano): "Quando l'audio è stato pubblicato, abbiamo pensato a cosa dovevamo fare. Poi ci siamo detti
-che in realtà le cose che avevo detto, che avevamo detto, le pensiamo davvero. Quindi questa, oggi,
-è l'opportunità per far vedere al mondo cosa pensiamo."
+Employee stories who have gone through particular challenges are shared, and in the end a video from the **Community Voices** from Facebook initiative is shared, which aims to collect stories where Facebook, Instagram or Whatsapp play a significant role.
 
-Si parla di conversazioni crittografate, delle implicazioni culturali che questa tecnologia comporta,
-del cambiamento climatico, ma anche di banali nuove funzionalità minori integrate in Facebook Messenger.
-In diretta sono collegati anche gli uffici di tutte le altri sedi del mondo (la diretta avviene dal quartier generale nella Silicon Valley).
-
-Sono condivise le storie dei dipendenti che hanno attraverso sfide particolari, e alla fine è condiviso un video dall'iniziativa **Community Voices** from Facebook, che mira a raccogliere le storie in cui Facebook, Instagram o Whatsapp ricoprono un ruolo significativo.
-
-Potete guardare tutto il Q&A, direttamente da Facebook, qui in basso.
+You can watch the entire Q&A, directly from Facebook, down here.
 
 <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fzuck%2Fvideos%2F10109571020295401%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>

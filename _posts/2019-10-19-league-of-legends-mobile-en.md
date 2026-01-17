@@ -1,40 +1,35 @@
 ---
-title: "League of Legends su mobile sarà croce e delizia"
+title: "League of Legends on mobile will be a mixed blessing"
 layout: post
 date: 2019-10-19 18:00
 image: /assets/images/League-of-legends-wild-rift.png
 headerImage: true
 tag:
-- giochi
+- games
 category: blog
 author: jaack
-description: League of Legends Wild Rift è in arrivo nel 2020
+description: League of Legends Wild Rift is coming in 2020
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
+LOL arrives on mobile.
 
+The article could end right here, explaining itself for those who play it. Or rather,
+everyone explains it as they want.
+There are those who think that the experience of **League of Legends**, after 10 years of patches, seasons and new champions on the pc version, could be upset on mobile. There are instead those who think they are two different things, that one should not exclude the other.
 
-LOL arriva su mobile.
-
-Potrebbe già finire così l'articolo, che si spiega da solo per chi ci gioca. O meglio,
-ognuno se lo spiega come vuole.
-C'è chi pensa che l'esperienza di **League of Legends**, dopo 10 anni di patch, stagioni e nuovi campioni sulla versione pc, possa essere stravolta su mobile. C'è invece chi pensa che siano due cose diverse, che una non debba escludere l'altra.
-
-Non sono per niente un esperto di League of Legends. Ho iniziato a giocare quando ho visto il team di eSports di Campus Party, i Campus Party Sparks. Il coach 'Cristo' mi ha dato qualche dritta quando facevo delle sessioni di gioco notturne, e ho capito che LoL è un gioco che funziona bene, così, solo su pc. I controlli precisi non si possono avere allo stesso modo su console, né tantomeno su smartphone.
+I am not a League of Legends expert at all. I started playing when I saw the Campus Party eSports team, the Campus Party Sparks. Coach 'Cristo' gave me some tips when I did night gaming sessions, and I understood that LoL is a game that works well, like that, only on pc. Detailed controls cannot be had in the same way on console, nor on smartphones.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/0YdOIx-k2vI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Guardando il video di introduzione di LoL mobile su YouTube (che trovate più in basso) penso al lavoro di ripensamento dell'esperienza di gioco che è stato fatto: gli sviluppatori del gioco hanno pensato ad un utente come me, facendo la versione mobile.
-Io non sto quasi mai a casa, sto spesso in giro o magari non ho a disposizione un computer potente per giocare decentemente. O magari anche vorrei mettermi a giocare ma non posso
-pensare di stare 40-45 minuti attaccato davanti al computer, perché è troppo tempo per me.
+Watching the LoL mobile introduction video on YouTube (which you can find below) I think about the work of rethinking the gaming experience that has been done: the game developers thought of a user like me, making the mobile version.
+I am almost never at home, I am often around or perhaps I don't have a powerful computer available to play decently. Or maybe I would also like to start playing but I can't
+think of spending 40-45 minutes stuck in front of the computer, because it is too much time for me.
 
-Nell'era in cui l'attenzione è la nuova valuta di scambio, chiedere più di 20 minuti ad un player che gioca a LoL per lavoro non è un problema, ma chiederlo ad un utente che gioca la sera e nei weekend con gli amici e non si incaponisce più di tanto per il ranking, è decisamente un'altra faccenda.
+In the era where attention is the new currency of exchange, asking more than 20 minutes from a player who plays LoL for work is not a problem, but asking it from a user who plays in the evening and on weekends with friends and doesn't get stubborn too much for ranking, is definitely another matter.
 
-Ed è per questo che nasce LoL mobile: perché LoL, in realtà, ha il potenziale di piacere a tutti: è un gioco di strategia, estremamente complesso se si vuole giocare ad alti livelli, ma anche estremamente divertente se si vuole fare solo una partita veloce.
+And that is why LoL mobile is born: because LoL, in reality, has the potential to please everyone: it is a strategy game, extremely complex if you want to play at high levels, but also extremely fun if you only want to play a quick game.
 
-Ed ora, la fetta di utenti del secondo tipo aumenterà di certo.
+And now, the slice of users of the second type will certainly increase.
 
-League of Legends arriverà su mobile nel 2020 sia su Play Store che su App Store. Ci si può registrare da [questo link](https://wildrift.leagueoflegends.com/it-it/).
+League of Legends will arrive on mobile in 2020 on both Play Store and App Store. You can register at [this link](https://wildrift.leagueoflegends.com/it-it/).

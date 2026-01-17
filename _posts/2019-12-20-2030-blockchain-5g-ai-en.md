@@ -1,427 +1,93 @@
 ---
-title: "2030: come Blockchain, 5G e AI plasmeranno le città di domani"
+title: "2030: how Blockchain, 5G and AI will shape tomorrow's cities"
 layout: post
-date: 2019-12-27 10:00
-image: /assets/images/projects/2030/2030_cover.png
+date: 2019-12-20 12:00
+image: /assets/images/projects/2030/cover.jpg
 headerImage: true
 tag:
 - blockchain
-- web
+- ai
 category: projects
 author: jaack
-description: In collaborazione con Aurora Caporossi
+description: Report of the event held at the Talent Garden in Rome on December 17, 2019
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+Last Tuesday I was invited to speak at the event **"2030: how Blockchain, 5G and AI will shape tomorrow's cities"**,
+an event organized by **Connectia** and **The Blockchain Management School** (of which I am a former student of the First Edition),
+at the Talent Garden in Rome Ostiense.
 
+Initially, I had to bring a fairly technical speech on the blockchain world,
+but then seeing the lineup of speakers I decided to change my speech, bringing
+a more colloquial chat (so no slides this time) about what makes a city *'Smart'*.
 
-*In collaborazione con Aurora Caporossi*
+<img class="image" src="{{base}}/assets/images/projects/2030/locandina.jpg">
 
-### Scarica le slide (338 MB):
-- [dal mio Dropbox Space](https://www.dropbox.com/s/a2p2xmqx0ejix2a/2030_come-Blockchain-AI-e-5G-plasmeranno-le-citt%C3%A0-di-domani.pdf?dl=0)
-- [da IPFS](https://ipfs.io/ipfs/QmdE2r816cJRZ9sNsnNe8WmXDmL6J7cxBMrKKi8kue9imF?filename=2030_come-Blockchain-AI-e-5G-plasmeranno-le-citta%CC%80-di-domani.pdf)
+## The speech
 
----
+The lineup of speakers was monstrous: **Massimo Chiriatti** (CTO of IBM), **Gian Luca Comandini** (MISE Blockchain Task Force), **William Nonnis** (Full Stack Developer at the Ministry of Defense), **Giorgio Sestili** (Journalist), **Raffaele Mauro** (Endeavor Italy) just to name a few.
 
-Una mattina dell’anno **2030**, una giornata inizierà in modo molto diverso da come lo immaginiamo oggi.
+My speech was placed right after Massimo Chiriatti's: speaking after a person of that depth and experience was difficult but also extremely stimulating.
+Massimo talked about the difference between *prediction* and *forecast*, about how technology (especially AI) must help man and not replace him, and about how necessary it is to ask the right questions to get the right answers.
 
-Ma non ce ne renderemo conto. La tecnologia sta evolvendo rapidamente, ma la nostra percezione di questo fenomeno non è esattamente in linea con il vero avanzamento nei processi che stanno avvenendo a livello tecnologico, culturale e politico.
+This is the summary of my speech.
 
-# Indice
-- [Introduzione](#Introduzione)
-  - [La città del domani](#La città del domani)
-    - [Blockchain](#Blockchain)
-    - [AI](#AI)
-    - [5G](#5G)
-- [L’individuo](#L'individuo)
-- [Il trasporto urbano](#Il trasporto urbano)
-- [Le telecomunicazioni](#Le telecomunicazioni)
-- [La Pubblica Amministrazione](#La Pubblica Amministrazione)
-- [Siamo pronti per la città del domani?](#Siamo pronti per la città del domani?)
-- [Conclusione](#Conclusione)
-- [Bibliografia](#Bibliografia)
+### What is a Smart City?
 
-# Introduzione
+It is often thought that a Smart City is a city full of sensors, cameras, things that happen automatically.
+This is partially true, but it is not the point.
+A Smart City is a city that uses technology to **improve the quality of life of its citizens**.
+And this can happen in many ways, not necessarily filling the city with sensors.
 
-Oggi siamo abituati a misurare il progresso tecnologico sulla base del **numero di smartphone** rilasciati in un anno e le loro funzionalità: il numero di megapixel della fotocamera, il numero di fotocamere, la nitidezza del display. Queste sono tutte qualità descrivibili e comparabili, e sono appunto quelle che oggi utilizziamo per poter dire che *il mondo sta cambiando*.
+I often take the example of **Estonia**: a country that is truly digital.
+There, 99% of state services are online. You can vote online, open a company in 15 minutes, check your medical records...
+But if you walk through the streets of Tallinn, you don't see robots or flying cars. You see a normal city.
+The difference is that citizens verify their identity with a digital ID card, have access to all services remotely, and trust the state because transparency is guaranteed by technology (often blockchain).
 
-In realtà, questa concezione è piuttosto *distorta*.
+In Italy (and in many other places), we often confuse the *means* with the *end*.
+We engage in pharaonic projects of 'Smart Lighting' or 'Smart Parking' which then perhaps do not work or are useless, thinking that is the smart city.
+Instead, we should start from the citizen's needs.
 
-Il mercato degli smartphone è in stallo, così come quello dei personal computer, che però subisce già da qualche anno nei confronti di tablet e, appunto, degli smartphone.
+### 5G, AI and Blockchain: the enabling triad
 
-<img class="image" src="{{site.url}}/assets/images/projects/2030/smartphone_venduti_2018.jpg" alt="Smartphone venduti, 2018, Statista.com">
+Today we have three technologies that, together, can truly change things.
 
-<img class="image" src="{{site.url}}/assets/images/projects/2030/tablet_venduti_2018.png" alt="Tablet venduti, 2018, Statista.com">
+1.  **5G**: It's not just "faster internet". It's **zero latency** and **massive connection density**. It means being able to connect millions of sensors per square kilometer without clogging the network. It means that a self-driving car can communicate with traffic lights and other cars in real time, avoiding accidents.
+2.  **Artificial Intelligence (AI)**: It is the *brain*. It collects the data coming from 5G sensors, analyzes it and makes decisions or suggests actions. It optimizes traffic, energy consumption, waste management.
+3.  **Blockchain**: It is the *trust*. In a world where everything is connected and managed by algorithms, how do we know that data is not manipulated? That my digital identity is safe? That the energy I produce and sell to the grid is counted correctly? Blockchain provides this layer of certificated and immutable trust.
 
-<img class="image" src="{{site.url}}/assets/images/projects/2030/computer_venduti_2018.png" alt="Computer venduti, 2018, Statista.com">
+### The Problem of Privacy and Control
 
-I numeri parlano chiaro: il mercato degli smartphone è **saturo**, quello dei tablet e pc è in lenta discesa. Forse il progresso tecnologico non è più da monitorare seguendo questi indicatori. Forse, anzi sicuramente, gli indicatori rilevanti sono altri.
+But there is a dark side. A city full of sensors and AI can easily become a **Big Brother**.
+China is an example of this with its *Social Credit System*. Cameras recognize faces, AI analyzes behavior, and the state gives a score to each citizen. If the score is low, you cannot take the plane or train.
+Is this the Smart City we want? I don't think so.
 
-Oggi, per l’individuo comune è difficile pensare a diversi avanzamenti nella tecnica, perché la prossima rivoluzione tecnologica è talmente grande e complessa che diventa problematico da spiegare con un paio di numeri o una foto. La prossima rivoluzione tecnologica è in atto, è costantemente sotto i nostri occhi, ma non ce ne siamo ancora accorti, come se non riuscissimo a percepirla davvero, perché è ancora tutto così primordiale, così poco connesso.
+Here **Blockchain** returns as a fundamental element.
+If we build the infrastructure on decentralized protocols, where the citizen owns their data and decides whom to give it to (perhaps in exchange for tokens or services), then we avoid centralized mass surveillance.
+We need **Self-Sovereign Identity**. I am the master of my identity, not Google, not Facebook, not the State.
 
-Nel 2030, vivremo una realtà diversa, e tutto questo grazie a 3 grandi correnti tecnologiche, che oggi sentiamo ovunque ma che non riusciamo a definire nella loro interezza: **blockchain**, **AI** e **5G**.
+### Conclusions
 
-Queste tre correnti, che oggi si trovano a differenti stati di evoluzione del loro percorso di maturazione, contribuiranno a creare la più complessa e granulare evoluzione che l’uomo abbia mai percepito: quella della smart city.
+2030 is close. The technologies are already here.
+The difference will not be made by technology itself, but by **how we use it**.
+It will be politics, ethics, culture that decide whether we will live in a digital techno-dictatorship or in a society where technology truly frees man from bureaucracy and inefficiency, leaving him more time for creativity and social relationships.
 
-Prima di descrivere i cambiamenti che si susseguiranno, è fondamentale chiedersi che cosa si intende con il termine *smart*.
+I am an optimist. I see great opportunities. But we must be vigilant and actively participate in the construction of this future. We cannot just undergo it.
 
-Sempre più in voga negli ultimi anni, “smart” è un lemma di origine britannica: veicola più significati in relazione al contesto nel quale è inserito. Per facilitarne la comprensione legheremo tale termine a tre concetti principali: smart city, smart economy e smart work.
+<img class="image" src="{{base}}/assets/images/projects/2030/foto-talk.jpg">
 
-Prendendo come riferimento queste accezioni, il termine ha sviluppato il significato principale di intelligenza; si usa in italiano per descrivere tutti quegli oggetti dotati di intelligenza artificiale, o delle tecnologie particolarmente innovative e di forte impatto. In italiano, così come in inglese, il termine *smart* veicola tutto ciò che rimanda all’innovazione e all’intelligenza.
+## Other interesting ideas from the event
 
-Stiamo vivendo tempi interessanti. Forse il migliore dei tempi per le aziende tecnologiche. La rivoluzione digitale è “mind-blowing”, direbbero gli americani. Per la maggior parte delle persone, potrebbe essere il peggiore dei tempi a causa delle sfide umane che si devono affrontare e le possibili crisi globali. Una cosa è certa: la realtà sta cambiando. Tra dieci anni le città non avranno la configurazione attuale.
+**William Nonnis** brought a very pragmatic point of view: the Public Administration must digitize not to be "cool", but to save money and provide better services. He cited examples of how blockchain can streamline procurement and reduce corruption.
 
-Dunque cosa dovrebbe essere la smart city? Che cosa dovrebbe fare per la popolazione che vi abita? Nessuna città diventerà *smart* senza garantire il benessere e il miglioramento della vita dei suoi cittadini, senza conquistare le menti di chi sarà protagonista di tale cambiamento.
+**Lorenzo Giustino** (deputy) talked about the regulatory regulatory difficulties. The legislator is always chasing technology. We need agile laws that allow experimentation (Sandbox).
 
-La definizione che si dà oggi di ‘smart city’ è molto diversa rispetto a quella definita in questo documento. Un po’ come anche per le parole ‘blockchain’, ‘5G’ e ‘AI.
+**Raffaele Mauro** broadened the horizon to the concept of **Scale-up**. It is not enough to create startups, we need to make them grow. And to make them grow we need an ecosystem that works, of which the Smart City is the substrate.
 
-## La città del domani
+It was a beautiful evening, full of curious people and interesting questions.
+Thanks again to the organizers for the invite.
 
-La smart city è, per l’accezione usata in questo documento, la città che vivremo nel 2030. Una città realmente interconnessa, senza perdita di informazione tra le parti che partecipano al sistema.
-Per poter immaginare come blockchain, AI e 5G possano contribuire a realizzare una città di questo tipo, è necessario creare delle definizioni che, per l’interezza del documento, aiutino a comprendere il comportamento di queste tre correnti tecnologiche.
- 
-### Blockchain
+If you are interested in these topics, I suggest you follow the **Blockchain Management School**, which does an excellent job of dissemination and training.
 
-Immaginata sin dai primi anni ‘90, ma realizzata efficacemente solo alla fine del 2008 da Satoshi Nakamoto  (pseudonimo di una persona o di un gruppo di persone, ancora non è chiaro), la blockchain è nata come infrastruttura di rete peer-to-peer per abilitare il trasferimento di bitcoin, la prima e originale criptovaluta.
-
-Una blockchain, così come dice la parola nella sua traduzione in inglese, è una catena di blocchi, un registro digitale distribuito (Distributed Ledger) aperto e consultabile in ogni momento. Avendo una struttura decentralizzata, non esiste nessun server centrale avente la possibilità concreta di prevalere: il processo decisionale passa attraverso un rigoroso processo di costruzione del consenso. Ogni transazione o informazione inserita in questo database deve essere approvata dal **50%+1** dei nodi della rete. La tecnologia blockchain si struttura come un nuovo paradigma per la gestione delle informazioni e delle transazioni ed è utilizzata laddove esista una relazione di scambio. Il ruolo di un database distribuito tra i nodi della rete garantisce lo scambio di informazioni e valore in modo sicuro, veloce, trasparente fra sistemi, persone e oggetti.
-
-<img class="image" src="{{site.url}}/assets/images/projects/2030/spesa_soluzioni_blockchain.jpg" alt="Spesa in soluzioni blockchain, Statista.com">
-
-<img class="image" src="{{site.url}}/assets/images/projects/2030/utenti_blockchain_wallet_2018.jpg" alt="Utenti di wallet blockchain, 2018, Statista.com">
- 
-### AI
-
-AI è l’abbreviazione inglese di **Artificial Intelligence**, ovvero Intelligenza Artificiale. Per poter definire bene cosa è un’intelligenza artificiale, è necessario capire cosa si intende per intelligenza.
-L’intelligenza è la ‘capacità di risolvere problemi di natura complessa’, secondo *Max Tegmark*, fisico del Massachusetts Institute of Technology e autore di ‘**Life 3.0: Being Human in the age of Artificial Intelligence**’. Secondo Tegmark, l’intelligenza non può essere misurata da un singolo Quoziente Intellettivo, poiché non è identificata da un singolo obiettivo durante l’esistenza.
-
-Allo stesso modo, non è possibile identificare ad oggi l’Intelligenza Artificiale come reale Intelligenza, poiché non è in grado di portare a termine diversi obiettivi da sola. Ad oggi, esiste l’AI che permette di scattare foto qualitativamente eccellenti senza hardware particolarmente performante, quella che gioca benissimo a DOTA 2 o a Go, quella che traduce il testo in più lingue, e così via. Non esiste ancora una vera Intelligenza Artificiale, che gli scienziati hanno, per semplicità, definito Intelligenza Artificiale Generale.
-Un’Intelligenza Artificiale Generale (o AGI, nell'abbreviazione inglese) è un’intelligenza in grado di risolvere problemi complessi di qualunque natura.
-
-<img class="image" src="{{site.url}}/assets/images/projects/2030/ricavi_ai_2018.jpg" alt="Ricavi del settore AI, 2018, Statista.com">
-
-È importante sapere che **oggi l'Intelligenza Artificiale Generale**, quella che immaginiamo e che vediamo nei film di fantascienza, non esiste.
-Ci sono degli esperimenti che sono portati avanti da consorzi di aziende e da associazioni devote allo sviluppo di AI etiche, come OpenAI, ma le opinioni più ottimistiche posizionano il raggiungimento della creazione di un sistema di Intelligenza Artificiale Generale intorno al 2040. Le opinioni più pessimistiche lo posizionano intorno al 2100. Più del 50% degli scienziati rimane d'accordo che vedremo l'AGI in questo secolo.
-
-Nel frattempo, la spesa pubblica e privata nel settore AI aumenta a dismisura.
-
-#### Aumento del PIL a livello globale grazie all’Intelligenza Artificiale entro il 2030 (in trilioni di dollari)
-
-+ Cina: 7
-+ Nord America: 3,7
-+ Europa Settentrionale: 1,8
-+ Europa Meridionale: 0,7
-+ Asia Sviluppata: 0,9
-+ America Latina: 0,5
-+ Resto del mondo: 1,2
-
-*Fonte: PwC; Studio condotto da: PwC; Periodo di riferimento: 2017; Regione: Tutto il mondo*
- 
-### 5G
-
-5G sta per *‘connessione di rete mobile di quinta generazione’*. È lo standard di connessioni di rete mobili che sarà disponibile a partire dal 2019 in un numero limitato di città in Italia e nel mondo.
-La **Next Generation Mobile Networks Alliance** definisce i seguenti requisiti per le reti 5G (semplificati per chiarezza):
-
-* velocità di decine di megabit al secondo per decine di migliaia di utenti in contemporanea;
-* velocità di connessioni non inferiore ad 1 Gbps;
-* copertura migliorata;
-* efficienza dei segnali potenziata;
-* latenza significativamente ridotta in confronto alla connessione LTE.
-
-<img class="image" src="{{site.url}}/assets/images/projects/2030/celle_5G_2022.jpg" alt="Numero di celle 5G, entro il 2022, Statista.com">
-
-La realtà in cui siamo costantemente connessi mostra che entro il 2021, in Europa, il 4G non sarà sufficiente per sostenere la richiesta di traffico dati delle città. Le stime identificano una crescita della domanda pari al 40% annui almeno fino al 2025. Insomma la quantità degli oggetti connessi crescerà esponenzialmente e ciò avverrà a causa, o meglio per merito, della diffusione del 5G.
-
-<img class="image" src="{{site.url}}/assets/images/projects/2030/previsione_5G_2025.jpg" alt="Previsione indotto 5G, entro il 2025, Statista.com">
-
-Le future reti 5G mirano a fornire **servizi locali wireless** di alta qualità per soddisfare le esigenze specifiche dei singoli settori verticali, oltre le tradizionali offerte di banda larga mobile. Il 5G ha il potenziale di rivoluzionare l'ecosistema aziendale di comunicazione mobile e di aprire il mercato a nuovi modelli di operatori locali verticali specifici.
-
-Insomma, il 5G non è l’evoluzione del 4G, ma un nuovo modo di pensare la comunicazione tra dispositivi.
-
-# L’individuo
-
-La rivoluzione digitale, di cui tanto sentiamo parlare, è in atto, sta accadendo ora, sotto i nostri occhi, eppure non riusciamo a percepirla. Individui così connessi grazie ad una tecnologia mobile così veloce che non sono in grado di afferrare in tempo il cambiamento. Un paradosso.
-
-La risposta risiede nella velocità con cui la realtà sta cambiando e nella vulnerabilità con cui l’uomo riesce a recepirla, comprenderla e utilizzarla.
-Sarà l'individuo relazionarsi a queste nuove realtà digitali così *disruptive*? Le nuove tecnologie sono seducenti quando ciò che offrono soddisfa la nostra vulnerabilità umana; si scopre allora che siamo davvero molto vulnerabili. Ci sentiamo soli, ma abbiamo paura dell’intimità: le connessioni digitali possono offrire l’illusione della compagnia senza un impegno reale. La tecnologia ci ha sempre offerto delle alternative alla comunicazione faccia a faccia.
-Immerso in quella **società liquida**, di cui Bauman è il promotore, l’individuo nel 2030 abiterà una società dalla struttura reticolare in cui si confronterà  quotidianamente con le nuove tecnologie che definiranno sempre più la sua realtà.
-
-Ma che cosa servirà per essere cittadini di questa nuova realtà in cui ci apprestiamo ad entrare?
-La nostra identità sta acquisendo una connotazione sempre più fluida e complessa a causa degli innumerevoli e continui passi avanti della tecnologia e dei mezzi di comunicazione. Proprio questa fluidità e complessità ci consentono di vivere in numerosi contesti digitali e reali, ma nello stesso tempo rendono le nostre molteplici identità sempre più attaccabili da nuove e complesse minacce. Bisogna garantire - e al contempo tutelare - la nostra immagine, il nostro io rispetto alla realtà digitale.
-
-Questo nuovo Io ha una connotazione aggiuntiva: è **digitale**. Avremo bisogno di una cittadinanza/identità digitale. Avete presente quando prima di prenotare un nuovo ristorante, visitate i vari social, per analizzare le varie recensioni per poi decidere se andarci o meno? Ecco, la cittadinanza digitale sarà il nostro biglietto di ingresso nella realtà digitale.
-
-Dal momento che sempre più attività stanno transitando nell’ambiente digitale, la necessità di identificazione a distanza è sempre maggiore, in modo che le azioni compiute dagli utenti possano essere attribuite alle loro identità reali. Senza identità digitale saremo solo individui astratti che agiscono in un universo di bit. Nessuno può essere in grado di affermare di essere qualcun’altro. Questo esclude, quindi, la necessità di avere un documento fisico, una presenza fisica, o un soggetto terzo di fiducia che verifichi manualmente la presenza o i documenti. Di conseguenza, gli utenti di un determinato sistema possono essere autenticati automaticamente e in remoto. Possiamo guardare alla tecnologia Blockchain per trovare risposte a questa esigenza.
-
-La Blockchain potrebbe essere impiegata nelle fasi di identificazione e verifica del cliente, agendo come database di identità digitali blindate e crittografate, cui è possibile accedere in alternativa a database centralizzati. Ipotizzando uno scenario di “Permission Ledger”, si potrebbe migliorare l’efficienza dell’intero processo: digitalizzazione delle fasi di rilascio e verifica delle identità digitali, automazione di alcuni passaggi intermedi mediante l’adozione di specifici smart contracts, che controllano (e garantiscono) la corretta esecuzione delle regole. A sua volta l’industria che si basa sulla sharing economy può trarre innumerevoli vantaggi dall’adozione di una distributed ledger technology, mediante cui sono gestite le identità digitali.
-
-Quando si introducono tecnologie così impattanti ci si chiede sempre che fine farà la manualità dell’uomo, che fine farà la morale e la soggettività che ci caratterizza. Visioni dicotomiche ci  accompagnano man mano che ci avviciniamo al 2030. La questione più delicata è quella che ruota intorno all’Intelligenza Artificiale, al cui cospetto si trovano due fazioni: apocalittici e integrati nell’utilizzo  dell’AI.  La sfida etica dell’introduzione di soluzioni di Intelligenza Artificiale è rappresentata dall’esigenza di rispondere in maniera equilibrata alla polarizzazione di queste due visioni, integrando l’innovazione e tenendo conto degli effetti che questa ha già avuto e continuerà ad avere nello sviluppo della società, rispettando e salvaguardando i valori fondamentali universalmente riconosciuti.
-
-L’AI è una tecnologia potente  va maneggiata con estrema cautela e la nostra  fantasia - inevitabilmente - vola alle immagini apocalittiche del film Terminator. Insomma, queste tecnologie cambieranno la fruizione della realtà offrendoci una nuova esperienza. Basti pensare al modo in cui il 5G sta ristrutturando, ad oggi, la vita cittadina. Per farvi comprendere meglio, tra le vie spagnole ubicate tra Plaza Catalunya, Paseo de Gracia, Balmes e Universitat, Vodafone ha installato una rete 5G con uno spettro 5G commerciale per costruire una rete ad alte prestazioni con Huawei E2E. Sulla stessa rete, sono stati forniti vari servizi eMBB utilizzando smartphone e CPE commerciali Huawei 5G per offrire la migliore esperienza della ‘connessione di rete mobile di quinta generazione’.
-
-<img class="image" src="{{site.url}}/assets/images/projects/2030/5g_live_barcellona_mwc_2019.jpg" alt="Schema del test 5G durante MWC 2019, Barcellona">
-
-Il 5G e EMBB (Enhanced Mobile Broadband), che fornisce una maggiore larghezza di banda dei dati completata da miglioramenti moderati della latenza sia su 5G NR che su 4G LTE, velocizza il tempo di attesa di download e di riproduzione di file video sui vari smartphone.Il ritardo visivo dell'occhio umano è di circa 100 millisecondi (ms). La latenza su una rete 5G sarà  inferiore a 20 millisecondi per i consumatori e può essere ancora più bassa in alcune applicazioni aziendali come smart industry. Con il 5G, gli utenti dei servizi video possono sperimentare un'attesa quasi nulla.  Attualmente le due teste di serie per l’applicazione del 5G sono Vodafone e Huawei. Queste le parole di Yang Chaobin, presidente della linea di prodotti 5G di Huawei: "Vodafone e Huawei hanno completato con successo l'implementazione di una rete 5G live e fornito un'esperienza di servizio superiore basata sui terminali commerciali 5G. Huawei continuerà a collaborare con il settore per promuovere un utilizzo commerciale di successo del 5G."
-
-1.	BAIN Macro Trends ha analizzato una gamma di tecnologie già in fase di commercializzazione o prossime a tale fase, tra cui robot umanoidi di servizio, robot collaborativi (cobots), droni, intelligenza artificiale e algoritmi di apprendimento automatico. Queste tecnologie trasformeranno principalmente il settore dei servizi delle economie più avanzate e di alcune economie emergenti. Sulla base di tale analisi, la rapida diffusione dell’automazione si scontrerà nel prossimo decennio con i cambiamenti demografici creando cambiamenti dirompenti in tutta l’economia globale;
-2.	Secondo BAIN MACRO Trends entro il 2030 queste tecnologie potrebbero aumentare la produttività del lavoro in media del 30% rispetto al 2015, con un impatto crescente nel tempo. Questo miglioramento graduale varia considerevolmente tra le industrie, da livelli relativamente modesti nei servizi sanitari e scolastici a un impatto notevole in settori come servizi di ristorazione, vendita al dettaglio, trasporto;
-3.	La famiglia Ericsson ha dichiarato che il numero di abbonamenti smartphone è destinato ad aumentare di 45 percento, raggiungendo un totale di 7,2 miliardi. Grazie, soprattutto, al 5G;
-
-Per accompagnare i cittadini verso questi cambiamenti non sono sufficienti le leggi, normative e buone pratiche tecniche e tecnologiche: servono una narrazione ed un immaginario costruiti dalla società in maniera inclusiva delineando i significati e i ruoli di queste nuove tecnologie. La società contemporanea, caratterizzata da una forte digitalizzazione, ha il compito di creare i presupposti per cui le persone possano sviluppare, insieme e responsabilmente, una visione del mondo coerente con le novità che tali tecnologie portano con sé. E’ opportuno costruire una narrazione strategica che accompagni l’individuo a popolare le nuove smart cities. Se il futuro è la conseguenza delle scelte operate nel presente, non possiamo non porci il problema lasciando che l’interpretazione dello sviluppo tecnologico e delle sue conseguenze sociali non sia presidiato.
-
-Nuovi individui con una nuova identità in una realtà sempre più digitale che, tra i tanti dubbi, si domandano quali saranno le professioni del futuro? Dovremmo salutare alcuni lavori. E la fatidica domanda: i robot ruberanno il lavoro agli umani? Una domanda alla volta e portiamo il futuro tra le vostre mani.
-
-L'economia di rete o la net economy è il termine con cui si contrassegna il sistema di transizioni e di attività economiche che si svolge telematicamente.
-L’economia digitale è lo “stadio” dell’economia che si manifesta attraverso una “tecnologia” che influenza la produzione di beni/servizi e la distribuzione degli stessi, cioè la comunicazione tra i soggetti dell’economia. Che futuro e presente passino dal web è affermazione persino ovvia. La principale conseguenza dell’uso di questi strumenti è che, in larga parte, il lavoratore oggi possiede i mezzi di produzione: siamo delocalizzati: “ mi occorre, un PC, uno smartphone e una connessione Wi-fi per poter lavorare”. Credo che molti di noi stiano sorridendo nel leggere questa frase e per la maggior parte di noi è la realtà di tutti i giorni.
-
-Chi non ha mai avuto una crisi di panico quando non si accende il computer? Quando la connessione wi-fi è lenta che il caricamento non si completerebbe nemmeno sotto invito, quanti  avrebbero voluto lasciarsi andare alla follia più totale? Niente paura, da qualche parte nel mondo ci sarà un social media manager che starà affrontando lo stesso. Sono i rischi del mestiere per chi lavora con il digitale. Tra le professioni di cui 10 anni non avremmo immaginato neppure l’esistenza ve ne presentiamo alcune:
-
-1.	**Sviluppatore di app** - nel 2008 era un mercato che non esisteva, nel 2016 valeva 1.300 miliardi di dollari, indotto compreso, nel 2021 secondo la società di analisi App Annie, l’economia che ruota intorno alle app potrebbe diventare la terza a livello mondiale con 6.350 miliardi di dollari, e una crescita del 385% rispetto al 2016;
-2.	**Makeshift Structure Engineer, Ingegnere 3D** - la crescita in questo settore richiederà specialisti di software 3D, designer specializzati e programmatori di macchine che contribuiranno insieme a creare enormi opportunità di impiego e posti di lavoro nei prossimi decenni;
-3.	**Ingegnere auto a guida automatica** - Mentre il mercato dei trasporti automatici inizia a prendere piede, comincia anche a creare nuove professioni. I mezzi automatici non sono in grado di progettarsi e di ripararsi da soli; così ci sarà una crescente domanda di ingegneri, meccanici e sviluppatori di software di guida specializzati in questo tipo di veicoli;
-4.	**Specialista di cloud computing** - Non è la nuvola che sovrasta i cieli del mondo, ma dal 2006  ha una nuova accezione. Nasce durante una conferenza nel corso della quale Eric Schmidt ha descritto l’approccio al software da parte di Google come “cloud computing”. Da allora, la “nuvola” informatica è diventata una realtà per chiunque, e il cloud management, il cloud engineering e il cloud strategizing sono diventate professioni;
-5.	**Analista di big data** - insieme all’IoT, i big data sono il futuro della civiltà dell’informazione. E con una massa di dati che cresce al ritmo del 40% ogni anno, è ovvio che cresca anche la domanda di figure professionali capaci di analizzare e processare questa enorme mole di informazioni. I dati non mentono ma dobbiamo essere in grado di leggerli e comprenderli;
-6.	**Cyber Security Manager** - colui al quale viene affidata la gestione della sicurezza dei dati in azienda;
-7.	**Data Protection Officer** -  che tutela i dati sensibili dei clienti e del personale dell’azienda;
-
-Diversi lavori cominceranno ad avere un ruolo predominante con l’avanzamento del tridente Blockchain, AI e 5G:
-**Blockchain** - sta già creando posti di lavoro e nuove figure professionali, possiamo già indicare quali sono quelle emerse, in ambito tecnico e non.
-
-  - **Blockchain Information Security Analyst**
-  - **Blockchain Data Scientist** - Blockchain e big data rappresentano un sodalizio dal grande futuro, ne deriva che anche gli scienziati dei dati con competenze blockchain non potranno che essere ricercatissimi
-  - **Blockchain Developer** - gli sviluppatori scrivono il codice e costruiscono le strutture dati per le catene di blocchi
-  - **Specialista di Marketing Blockchain**
-  - **Blockchain Project Manager**
-  - **Technical Recruiter**
-
-Una forte conoscenza di cosa si richieda in una società blockchain e la capacità di attrarre talenti saranno fondamentali.
-
-**AI** - qui lasciamo parlare i dati del World Economic Forum. La survey si basa su un’analisi di top manager e specialisti delle risorse umane di 300 aziende globali in 12 settori industriali: tecnologie come intelligenza artificiale, robotica e medicina di precisione potrebbero creare più occupazione di quanta ne minaccino. La cosiddetta “quarta rivoluzione industriale” distruggerà 75 milioni di posti di lavoro nel mondo ma ne creerà, potenzialmente, quasi il doppio, ben 133 milioni. Ma per raggiungere il risultato bisognerà puntare sulla formazione di risorse professionali. Allora bisognerà formare persone adatte ai nuovi mestieri per essere competitivi lì.  Il fatto è che  oggi non lo sappiamo e formiamo lavoratori pensando solo ai fabbisogni immediati, eppure in Cina tra i banchi delle scuole elementari è stata introdotta una nuova materia, l’intelligenza artificiale;
-
-**5G**: La vera sfida per il mercato del lavoro è la preparazione di un mix di competenze tecnologiche e trasversali, che dovranno essere presenti contemporaneamente sia nelle figure manageriali sia in quelle operative. Questa nuova ‘connessione di rete mobile di quinta generazione’ 5G gioca e giocherà sempre più un ruolo chiave: il poter connettere alla rete in maniera più funzionale i sistemi ma anche le aziende e i clienti, rappresenta un’esigenza basilare nella proposta di soluzioni di nuova generazione che sottendono l’utilizzo di reti di trasmissione più veloci e affidabili. Il 5G è essenziale per lo sviluppo dell’Industria 4.0, è il tessuto latente su cui si scendono in campo le varie tecnologie.
-
-* Il 5G porterà la mobilità a un nuovo livello, permettendo ai dipendenti di lavorare in modalità mobile con il supporto di una connettività senza precedenti: velocità superiore per download e upload, minore latenza e la capacità di eseguire simultaneamente più applicazioni, avendo la possibilità di svolgere anche i compiti più impegnativi da remoto.
-* Capacità di fungere da base per l’adozione dell’IoT in ambito business. Nelle sue prime fasi, i mercati IoT combinati raggiungeranno entro il 2021 un valore di oltre 450 miliardi di euro a livello mondiale, con importanti vantaggi che non possono essere ignorati.
-
-Le aziende dovranno affidarsi sempre più alle nuove tendenze IT, come il mobile edge computing, per supportare la gestione dei dati dal punto di vista dell’efficienza e della sicurezza.
-Il mobile edge computing elabora le informazioni “on site” per insight in tempo reale, mentre filtra i dati mission-critical in cloud per un’analisi più approfondita senza sovraccaricare le infrastrutture IT. I device, che possono elaborare i dati a livello edge, diventeranno sempre più importanti per la forza lavoro del futuro, permettendo alle aziende di ridurre la tensione sui propri servizi cloud e, al contempo, garantire produttività e sicurezza attraverso un perimetro IT esteso.
-
-<blockquote>“Le soluzioni IoT contribuiranno a dare forma alla forza lavoro del futuro, trasformando modalità e abitudini lavorative. Dall’ingegneria alla logistica fino a sanità e sicurezza, queste soluzioni non solo garantiscono una maggiore mobilità, ma creano attività nuove e più efficienti per i dipendenti”</blockquote>
-
-*Massimo Arioli, Head of B2B Sales & Marketing, Toshiba Client Solutions Italy.*
-
-# Il trasporto urbano
-
-Ad oggi, il trasporto urbano, perlomeno per l’esperienza dell’italiano medio, è un incubo. Sebbene città metropolitane (e di stampo evidentemente europeo) come Milano e Torino dispongono di una infrastruttura di trasporto urbano semi-automatizzata e fluida, la situazione può non dirsi medesima per altre città come Napoli, Roma, Catania, Reggio Calabria, per esempio.
-In generale, però, è palese che il trasporto urbano che siamo abituati a vivere sia estremamente obsoleto e rigido.
-
-Il trasporto urbano nella città di domani non esisterà più come lo immaginiamo adesso. Sarà un’esperienza fluida e proattiva. Si adatterà alle esigenze di ogni singolo individuo e migliorerà con il tempo, grazie all’Intelligenza Artificiale; terrà traccia di ogni nostro spostamento, ma manterrà privato e anonimizzato questo record, grazie alla blockchain; e sarà immediata e senza interruzioni, grazie alla capacità e velocità della connessione 5G. La blockchain, insieme alle altre tecnologie, avrà un impatto crescente sulla fornitura di servizi di mobilità, poiché consentiranno alle reti aziendali di ridurre i costi di coordinamento delle loro attività.
-
-Facciamo un salto al MOBI, la Mobility Open Blockchain Initiative, lanciata al Dubai Future Blockchain Summit. Tra le varie proposte vi presentiamo quella che abiterà superbamente il 2030: la costruzione di  un prototipo di identità digitale per veicoli o un passaporto per auto in grado di tracciare e proteggere l'odometro di un veicolo e i dati pertinenti sui ledger. Questo può ridurre drasticamente le frodi nelle vendite di auto usate in quanto gli acquirenti possono finalmente avere una cronologia accurata del veicolo. Aiuta inoltre i concessionari di auto e gli assicuratori a sottoscrivere accuratamente la storia di un veicolo per garanzie e polizze assicurative.
-
-L’obiettivo è quello di ridisegnare l’industria automotive e le modalità di fruizione dei veicoli. Uno dei progetti che combinano mobility e blockchain riguarda la collaborazione tra Wolkswagen e IOTA, che  rilasceranno nel mercato un prodotto compatibile con il Tangle  già nel 2019. Johann Jungwirth, Chief Digital Officer del Gruppo Volkswagen, è entrato a far parte del team IOTA quest'anno come membro del Supervisory Board. La collaborazione è incentrata sulla creazione di un Digital Car Pass  che, sfruttando la tecnologia e la struttura del Tangle, monitori le prestazioni di un veicolo. Ma che cos’è un Digital Car Pass? Avete presente quando tornate da un viaggio, arrivate a casa di vostra nonna e vi comincia ad analizzare ogni minima parte del vostro corpo. Tra il “quanto ti sei dimagrito” e “ che cosa ti hanno fatto”, in poche ore, ma che dico in pochi secondi hanno uno spettro completo di voi e del vostro viaggio. Vi ha fatto una radiografia completa.
-
-Ecco, possiamo affermare che un Digital Car Pass aiuterà Volkswagen a identificare i difetti nelle proprie auto il più rapidamente possibile, soprattutto nei nuovi modelli. Con i dati in tempo reale delle auto, Volkswagen può letteralmente richiamare le auto che hanno problemi per risolverli il prima possibile. Efficacia ed efficienza sono un must.  Inoltre, i proprietari di auto saranno in grado di controllare l'analisi dei dati della loro auto e sapere quando l'auto richiede manutenzione e pianificazione, assicurando che la loro auto sia ben mantenuta.
-
-Analogamente, gli acquirenti di auto di seconda mano potranno conoscere la storia dell’automobile in che misura è stata mantenuta. Non parliamo di auto che si trasformano in robot per combattere contro gli umani, ma di  una tecnologia nuova e avanzata che impatterà positivamente sulla fruizione dei servizi automobilistici. E se con la tecnologia blockchain posso scrivere la storia della mia macchina, con il 5G potrò guidare in Svezia pur essendo a Barcellona. Aggiungerei nonostante i 3233 km di distanza. Come è possibile? vi starete chiedendo. Abbiamo compreso che il 5G è il “completamento” ideale di quell’’ecosistema che consentirà lo sviluppo dell’Internet of Things. Renderà possibile la connessione di un numero di device molto più elevato di quanto non sia possibile oggi, con prestazioni molto più performanti che consentiranno un utilizzo più semplice e sicuro, anche in mobilità, di droni e robot.
-
-La testimonianza arriva direttamente dal Mobile World Congress di Barcellona in cui Ericsson ha dato prova delle numerose potenzialità della rete ultraveloce. Rete che porteremo direttamente nelle nostre tasche grazie agli smartphone creati dai vari colossi del mobile. Grazie al 5G un ragazzo ha vissuto l’esperienza, tra il virtuale e il reale, di poter guidare un tir nella zona industriale di Gòteborg, Svezia. Sapete quanto ci sarebbe voluto in macchina? 33 ore e 21 minuti. Il tir di cui vi stiamo parlando è il **T-Pod**, progettato dalla startup Einride. E’ un autocarro da 20 tonnellate a propulsione elettrica e privo di cabina, in quanto la “guida” è autonoma di livello 5 (senza uomo a bordo), la più alta ad oggi prevista. Il camion lungo 7 metri è in grado di trasportare 15 euro pallet (il bancale per il trasporto merci usato in Europa) con 1 kWh di energia consumata ogni km.
-
-Per la guida si utilizzerebbero inizialmente dei camionisti virtuali, cioè degli operatori che controllano da remoto il comportamento ottimale del T-Pod sulle strade, ma pure nelle operazioni di carico e scarico, anche esse automatizzate. Il progetto in fase beta è pensato per collegare i grandi centri di arrivo delle merci, come porti e aeroporti, con le strutture intorno alle città dal quale partono le consegne dell’ultimo miglio, ossia a negozi, uffici e case. T-Pod, Ericsson e 5G ci mettono alla guida del futuro. Le sorprese non finiscono  qui perché attraverso le reti mobili 5G un’ulteriore cambiamento si prospetta per il settore automobilistico. Parliamo della possibilità di creare servizi di connettività per le comunicazioni V2V e V2I (vehicle-infrastructure).
-
-La prossima generazione di sistemi di trasporto intelligenti (ITS) combinerà sia V2V che V2I, consentendo ai veicoli di operare in modo autonomo e monitorandoli  dal software ospitato nel cloud. Tali sistemi possono comportare la gestione remota di una flotta di veicoli, in cui un operatore remoto o un sistema automatizzato ha il controllo di tutti i veicoli. Propriamento il  V2V consente ai veicoli di scambiare dati direttamente o tramite l'infrastruttura di rete come e quando richiesti,mentre il  V2I consente la comunicazione all'infrastruttura stradale, così come i servizi cloud per i veicoli.
-
-In che modo i veicoli a guida autonoma riusciranno comunicheranno con chi li circonda, senza un vero e proprio conducente umano? Ford ha effettuato una serie di test utilizzando la segnaletica luminosa per indicare le diverse manovre di guida del veicolo. Il conducente del Transit Connect scelto per i test, ha “indossato” una Human Car Seat, una particolare tuta in grado di nascondere un vero conducente nella posizione di guida. Progettata per sembrare a tutti gli effetti un sedile, la tuta crea, negli utenti della strada, l’illusione di vedere un veicolo completamente autonomo, fattore fondamentale per valutarne realmente le interazioni.
-In questo modo i ricercatori hanno potuto valutare in maniera più efficace le reazioni ai segnali luminosi trasmessi da una barra luminosa, montata sul tetto, che lampeggiava nei colori bianco, viola e turchese per indicare la marcia, la sosta o il dare la precedenza del Transit Connect.
-
-<blockquote>“Fondamentalmente le persone hanno bisogno di fidarsi dei veicoli autonomi e di sviluppare un metodo universale di comunicazione visiva che sia la chiave di tutto. L’idea di trasformare qualcuno in Human Car Seat è emersa durante un momento di pausa e c’è stata subito la consapevolezza che questo fosse il modo migliore e più efficace per scoprire ciò che ci serviva per mettere in atto il progetto”</blockquote>
-
-*Thorsten Warwel, Manager, Core Lighting, Ford of Europe*
-
-# Le telecomunicazioni
-
-Se oggi ci consideriamo connessi, tra poco saremo iperconnessi, e gli oggetti più di noi:
-le  nuove tecnologie sono pronte a decollare.
-Secondo i reportage di Mobile Economy della GSMA, pubblicata al MWC di Barcellona 2019 altri 16 mercati principali in tutto il mondo passeranno alle reti commerciali 5G quest’anno, in seguito ai primi lanci 5G in Corea del Sud e negli Stati Uniti. Inoltre, si prevede che il numero di connessioni 5G raggiungerà 1,4 miliardi entro il 2025.  A questo punto, il 5G prevede di rappresentare circa il 30% delle connessioni in mercati come la Cina e l’Europa, e circa la metà del totale negli Stati Uniti. Il numero di connessioni IoT globali triplicherà fino a 25 miliardi entro il 2025, mentre le entrate globali dell’IoT quadruplicheranno fino a 1,1 trilioni di dollari.
-
-Quindi, le performance della tecnologia 5G necessitano di una rete di interconnessione dei siti mobili ad alte prestazioni che abiliti questa evoluzione tecnologica.
-Per rendere operativo il 5G, per quanto concerne le infrastrutture c’è necessità di un cambio di filosofia. Alla base ci sono stazioni radio molto più piccole di quelle attualmente utilizzate, che avranno una densificazione notevole rispetto al passato ma che saranno molto meno impattanti dal punto di vista visivo. Salutiamo, quindi, le vecchie antenne per lasciare spazio a dispositivi decisamente più piccoli e performanti.
-
-Il circuito virtuoso che il 5G, insieme al cloud e alla blockchain, sarà in grado di innescare nelle città intelligenti riguarda il collegamento a doppio filo tra persone, aziende, oggetti e pubblica amministrazione. La comunicazione andrà in modo parallelo in due direzioni: da una parte consentirà di raccogliere in tempo reale informazioni utili ai decision maker e di renderle disponibili su piattaforme intuitive e di semplice consultazione, utili per prendere le decisioni più adatte caso per caso, dall’altra metterà i singoli cittadini nella condizione di poter usufruire di servizi migliori, utilizzando sia i dispositivi mobili come smartphone e tablet, sia weareable, come smartwatch. La smart city del futuro abilitata dal 5G si presenta così come una città completamente shared e social.
-
-Se con il 5G cambia la velocità di fruizione e di trasmissione delle informazione, con la blockchain e l’AI si ridefinisce la struttura stessa del modo in cui trasmettiamo e riceviamo le informazioni. Per meglio comprendere, vi riportiamo l’esempio di Bubbletone. L’obiettivo di BubbleTone, secondo quando riportato dal CEO, Yury Morozov, è quello di eliminare il roaming internazionale, inefficiente e costoso sia per gli utenti che per i provider, e costruire una piattaforma di telecomunicazioni globale. BubbleTone sta progettando il primo sistema blockchain per le telecomunicazioni, globale e decentralizzato, che consente agli utenti e ai fornitori di rete mobile di interagire in modo sicuro e diretto. Dopo aver creato un account sulla piattaforma BubbleTone, gli operatori mobili possono utilizzare i modelli di contratto intelligenti forniti per pubblicare rapidamente le loro offerte sulla blockchain per permettere a tutti gli utenti di app di averne accesso. Ciò significa che gli operatori possono portare gli utenti identificati in modo sicuro all’interno della propria rete tramite uno smart contract reciprocamente concordato e applicabile. L’avvento degli smart contract basati su blockchain eliminerà anche il problema del mancato pagamento dei servizi resi, una problematica notevole per l’industria.
-
-Cambiano le regole del gioco della comunicazione e ci troviamo inseriti inseriti in un costante flusso comunicativo a cui abbiamo costantemente accesso. Inoltre, le imprese di telecomunicazione utilizzano costantemente l’automazione per migliorare e rendere più efficiente il proprio servizio di assistenza clienti. Ne è un esempio Vodafone, che ha rilasciato il suo assistente virtuale Tobi, in grado di fare un’ottima assistenza clienti, senza commettere errori o tralasciare i più specifici obblighi contrattuali”.
-
-### Blockchain + Smartphone
-
-Affrontiamo due casi:
-1.	Samsung Galaxy S10
-2.	Electroneum. M1
-
-Entrambi implementano le loro funzionalità sfruttando la tecnologia blockchain e la possibilità di effettuare transazioni con le valute digitali. Tuttavia rispondono ad esigenze molto diverse.
-
-Il Samsung Galaxy S10, accompagnato dal Samsung Galaxy S10 5G (basato sul nuovo protocollo di connettività di rete) sviluppa le funzionalità dell’hardware attraverso:
-* Integrazione di un neural processing unit (NPU);
-* aumento della velocità di trasferimento dei dati;
-* utilizzo di un Physically Unclonable Function (PUF) per garantire un maggior livello di sicurezza;
-
-È proprio l’inserimento di un PUF che consente una maggior sicurezza nell’archiviazione dei dati e nel mantenimento della privacy. Per questo motivo il sistema garantirebbe l’inserimento di private key inerenti a un wallet di criptovalute.
-
-Il nuovo smartphone promette una feature a livello hardware per archiviare con sicurezza le private key dei nostri wallet.  Tuttavia, il modello Samsung Galaxy S10 che sarà distribuito in Italia, ad oggi, non prevede la presenza del crypto wallet. Tuttavia, risulta essere abilitata la modalità software nel modello che sarà distribuito in Corea.  
-
-Da quanto era emerso precedentemente, questo  feature hardware potrebbe supportare qualsiasi criptovaluta. Sarà necessario attendere ulteriori hands-on per comprendere l’effettiva presenza di un wallet vero e proprio per Bitcoin ed Ethereum.
-Electroneum.M1 inaugura una nuova generazione di smartphones.Il dispositivo è destinato ai mercati emergenti, avrà un costo di soli 80$ e sarà dotato di una tecnologia di cloud mining con cui sarà possibile guadagnare token ETN tramite l’app (online e offline). Electroneum ha come obiettivo quello di sviluppare un ecosistema di pagamenti digitali che consentirà a chiunque di incassare, inviare e ricevere fondi digitali tramite smartphone senza che sia necessario un conto bancario.
-
-I pagamenti, che avvengono attraverso su dispositivi mobili, sono effettuati con ETN, la criptovaluta più veloce esistente, nonché la prima valuta digitale che integra, nativamente, un sistema di KYC/AML. Gli ETN rappresentano una riserva di valore utilizzabile per l’acquisto di oggetti quotidiani. Inoltre,  dalla app mobile gli utenti possono trasferire ETN a chiunque in un istante, sia di persona che in remoto e  con i compensi derivati dal mining virtuale sarà possibile acquistare pacchetti dati per internet, minuti e SMS direttamente dall’app.
-
-È opportuno ricordare che non si tratta di mining vero e proprio ma di una forma  di airdrop creato da Electroneum per rendere virale l’uso delle criptovalute e in particolare di ETN. L’utente può caricare i propri dati di trasmissione e i dati direttamente dall’app Electroneum. Il lancio di uno smartphone con queste caratteristiche nasce dalla necessità di colmare il gap fiduciario degli utenti e dei MVNOs (operatori virtuali) nei confronti delle cryptocurrencies e di quello che ad esse è correlato.
-Richard Ells e il suo team stanno cercando di far in modo che Electroneum si trovi al di sopra di tutte le altre criptovalute in termini di fiducia, velocità e sicurezza.
-
-# La Pubblica Amministrazione
-
-Il tallone d’Achille, uno dei punti deboli della governance italiana sin dagli anni 90 è la gestione dei rapporti che intercorrono tra cittadini e Pubblica Amministrazione. Da sempre considerato un apparato lento, inefficiente e troppo burocratico, è stata investita nel corso degli anni da una pioggia di riforme  che non hanno mai avuto una concreta realizzazione. La citizenship, soprattutto quella italiana, si caratterizza per un’assenza relazionale tra i cittadini e le pubbliche istituzioni.
-
-Nonostante questo gap, la struttura della PA potrebbe subire un notevole cambiamento, in termini di comunicazione interna e di relazionalità esterna, in seguito all’incontro con un tridente tecnologico che ne ri-disegnerebbe la fisionomia. La PA e le tecnologie “disruptive” saranno in grado di dialogare con efficacia ed efficienze con la network society che abiterà le nostre smart cities?  La digitalizzazione della Pubblica Amministrazione corre parallela all’implementazione della fruizione dei Big Data e  dell’open government. Entrambi i concetti suddetti ampliano il senso di trasparenza e pubblicità istituzionale in funzione dei tre principi, cui la PA è chiamata a rispondere:
-
-* Trasparenza;
-* Partecipazione;
-* Collaboration;
-
-Le istituzioni devono garantire forme di discussione, di relazionalità consapevole e di collaborazione, con gli utenti, sollecitarli e facilitarli nelle attività di controllo dei processi decisionali, attraverso l’utilizzo delle nuove tecnologie che devono essere disponibili e usabili.
-
-Il 2019 è cominciato con una novità per il sistema nazionale italiano quanto il MISE , il 21 gennaio 2019, ha coordinato la prima riunione d'insediamento dei gruppi di esperti su AI, sui registri distribuiti e blockchain. Coordinamente, nella stessa settimana, si sono tenuti diversi incontri sulla fungibilità della rete 5G in Italia. Andiamo a individuare i possibili scenari che vedono coinvolti blockchain, AI, 5G e Pubblica Amministrazione.
-
-Le istituzioni italiane saranno davvero pronte a reggere il confronto? In una realtà in cui siamo costantemente sotto assedio di informazioni, ci districhiamo in un sovraccarico cognitivo (o “information overload”) e il nostro sguardo è sempre più scettico nei confronti delle notizie cui ogni giorno prestiamo attenzione. Tuttavia non abbiamo un’attenzione selettiva tale per poter identificare le news dalle fake news, ma ci facciamo coinvolgere un pò da tutto quello che sentiamo. Perchè “ho sentito dire che” è una forma inconscia di deresponsabilizzazione facilmente utilizzabile in un sistema poco trasparente e senza un’equa distribuzione delle parti.
-
-A fronte di ciò, la caratteristica più importante del binomio blockchain-PA non risiede tanto nell’utilizzo della mera struttura a blocchi, ma nel fatto che la rete sia aperta, distribuita e accessibile a tutti i cittadini. Il meccanismo di consenso, ovvero la validazione delle informazioni/transazioni inserite in blockchain, è gestito da forze indipendenti che si autoregolano e non dipendono più da una terza parte pronta ad aggiungere il suo timbro decisionale. Il problema è che sono ancora tanti “gli altarini” da scoprire del sistema governativo italiano e ammettiamo pure che noi cittadini ad additare colpe nei confronti di chi esercita il potere ci mettiamo meno di una transazione del sistema bitcoin.
-
-Quando si parla di pubblicazione amministrazione è abitudine intavolare la discussione con un solenne **“non mi fido”**: pecchiamo di affidabilità. Una condizione per cui l’applicazione di queste nuove tecnologie è indispensabile è la mancanza di fiducia verso alcune entità che cooperano nei vari ambienti. Parliamo di un’applicazione in un contesto extra-amministrativo  che garantisca un rapporto fluido e diretto con il cittadino il quale diventerebbe parte integrante della rete delle istituzioni normative.
-
-Secondo l’**Osservatorio Blockchain & Distributed Ledger della School of Management del Politecnico di Milano**, attualmente sono all’attivo diversi progetti per l’applicazione della blockchain a diversi settori. La spinta più importante continua ad arrivare dal finance che copre il 59% del mercato. Per quanto riguarda le applicazioni al settore Government, la percentuale si riduce fino al  9% dei progetti, logistica con il 7,2%,  utility con il 3,9%, per arrivare all’agri-food con il 3%. L’obiettivo principale è quello di rendere più efficienti e sicuri quei servizi così lenti e poco meritevoli di fiducia. A ragion di ciò, riportiamo le parole di Stefano Quintarelli, ex parlamentare ed esperto di IT:
-
-<blockquote>“La blockchain è un fenomeno che osservo con attenzione da tanto tempo. Il punto è capire in che occasioni usare la blockchain. Individuare, al di là delle questioni tecnologiche, quando è più efficiente rispetto ai sistemi già in uso”</blockquote>
-
-Stiamo parlando di una vera e propria trasformazione digitale, non sarà una semplice maschera che il sistema istituzionale italiano indosserà per rendersi partecipe dei cambiamenti tecnologici mondiali europei. Stiamo parlando che un giorno potremmo vedere quantificato “in blocchi” il debito pubblico italiano, potremmo capire come vengono spesi i soldi pubblici (che per definizione appartengono alla pubblica comunità), potremmo elaborare delle proposte di modifica sulla gestione delle risorse, allocandole in funzione dei bisogni principali della comunità.
-
-Insomma non saremmo viandanti in un Italia sempre più frammentata, ma cittadini che aspirano a partecipare attivamente ai processi decisionali.
-Aristotele definiva l'individuo come uno *ζῷον πολιτικόν*, un animale politico che era dédito più agli interessi personali che al bene comune. Hobbes ci chiamava con l’aforisma “homo hominis lupus”.
-
-Per meglio intenderci, sin dai tempi più remoti l’individuo non è mai stato descritto come un portatore sano di civiltà e collaborazione forse per una sua innata tendenza a non fidarsi di chi è esattamente come lui. In un sistema decentralizzato, affiancato anche da 5G e AI, quello di su cui dovremmo riporre la nostra fiducia è il dato inserito, crittografato e convalidato sulla catena di blocchi. In un sistema in cui non ci si può fidare della persona stessa, decentralizzare la fiducia affidandosi a validazione algoritmiche basate su principi matematici è una possibile soluzione.
-
-La semplificazione amministrativa potrebbe essere veramente una delle sfide della blockchain e dell’AI che abilita grazie a una ridefinizione dei processi. Ad esempio, l’uso di smart contract può consentire di introdurre livelli di automazione che rendono più efficiente la macchina amministrativa, che accelerano le fasi di controllo e verifica e, grazie alla crittografia e alla distribuzione delle informazioni sui nodi della rete, si possono offrire livelli di garanzia e sicurezza delle informazioni diversamente ottenibili con maggiori complessità e maggiori costi. La strutturazione di  Modelli previsionali, apprendimento profondo, supporto delle decisioni, analisi semantica e ri-strutturazione delle informazioni aziendali saranno realtà che aumenteranno le loro funzioni grazie all’AI.
-
-L’Intelligenza Artificiale ridisegnerà le nostre vite. La nostra quotidianità di esseri umani, cittadini, lavoratori, genitori e figli, sta cambiando sotto gli occhi di tutti. Queste tecnologie, con particolare attenzione all’AI che da sempre rende dubbiosi i cittadini, è allo stesso tempo un’innovazione tecnologica e sociale che può trasformare radicalmente il nostro mondo sia nel bene sia nel male. È necessario, quindi, accompagnarla con attenzione, strutturandola nella direzione più conforme alle necessità cittadine. Romanzi e film di fantascienza avvalorano la paura dell’ignoto: l’AI spesso viene rappresentata in maniera negativa, come un pericolo per l’umanità, potenzialmente capace di prendere il sopravvento e di dominarci.
-
-Ma nel 2030 sarà più probabile che il frigo sarà in grado di dirci che il latte sta per scadere, far partire la richiesta di acquisto e riceverlo direttamente a casa che scrivere un film da Oscar. Con gli assistenti digitali dei telefoni cellulari, i sistemi di guida assistita delle automobili, i chatbot che rispondono quando chiamiamo soggetti pubblici o privati, i sistemi di traduzione automatica di testi e discorsi, i robot in fabbrica, gli algoritmi che ci raccomandano prodotti e servizi di nostro gradimento e quelli che ci assistono nell’apprendimento, o videogiochi sempre più realistici e coinvolgenti.
-
-Le pubbliche amministrazioni potranno servirsi di algoritmi intelligenti, capaci di processare grandi moli di dati, per esempio sulle risorse disponibili nelle aree disagiate, oppure sull’andamento dei vari settori per ottenere una visione più chiara delle scelte che devono o che vogliono compiere. È possibile che il personale degli uffici pubblici risponda in maniera personalizzata a tutte le richieste dei cittadini, servendosi di strumenti di AI adeguatamente istruiti, che producono automaticamente i contenuti da inviare. L’AI renderà visibile e fruibile quell’ammontare invisibile di dati nascosti e frammentati tra gli archivi dello stato. Tutti immaginiamo enormi libri bianchi, polverosi senza un nesso logico, pieni di dati e numeri di cui nessuno si cura ma che potrebbero essere utili per definire le nuove rotte da seguire.
-
-La sfida associata al ruolo dei dati è dunque la creazione di condizioni che permettano all’Intelligenza Artificiale di utilizzare basi di dati costituite in maniera corretta. Gli ambiti in cui sta operando l’AI sono legati all’elaborazione di immagini, la guida autonoma e la ricerca sul web che sono stati resi possibili grazie alla disponibilità di dataset ampi e relativamente strutturati, in grado quindi di essere impiegati nell’addestramento degli algoritmi di apprendimento automatico (machine learning). Al contrario, i dati provenienti da una moltitudine di dispositivi connessi fra loro possono risultare frammentati, eterogenei e distribuiti irregolarmente nello spazio e nel tempo.  Trasparenza, sicurezza e velocità. Tre asset, tre treni che la PA non può perdere.
-
-La velocità che consente una comunicazione fluida e che cristallizza i tempi burocratici sarà garantita dalla reti di telecomunicazioni di quinta generazione. Il famoso 5G consentirà di sviluppare servizi ad hoc più vicini alle esigenze dei cittadini e di cambiare radicalmente il loro rapporto con la “macchina” amministrativa. Il 5G sarà in grado di garantire maggiore velocità di navigazione e una più capillare copertura. L’obiettivo è quello di rendere i servizi pubblici accessibili e “smart”, tramite dispositivi mobili (approccio “mobile first”), con architetture sicure, scalabili, altamente affidabili e basate su interfacce applicative (API) chiaramente definite.
-
-L’Italia sta operando per creare un “sistema operativo” che risulti esseri più efficace per cittadini, Pubblica Amministrazione e imprese. Nuovi scenari collegati allo sviluppo di nuove tecnologie si stanno delineando sempre più chiaramente e la stessa natura dei business sta cambiando.
-
-Il 5G permette di avere l’accesso alle risorse di rete per tutti per favorire la nascita di un mercato dominato non solo da chi possiede l’infrastruttura ma soprattutto da chi ha l’applicazione giusta e meglio performante, garantendo ovviamente la remunerazione degli investimenti fatti per la realizzazione della rete 5G.  Uno dei settori più appetibili per l’applicazione di queste tecnologie rispetto alla PA è la tracciabilità e la sicurezza del voto elettronico. È il programma “Cripto-voting”, realizzato con i finanziamenti di Sardegna Ricerche nell’ambito del Por-Fesr Sardegna 2014-2020 da NetService , che prevede l’utilizzo di due blockchain unite, mediante la tecnologia Data Encryption and Storage, in una soluzione che garantisca sicurezza, trasparenza, accessibilità e funzionalità dell‘e-voting.
-
-È una struttura progettata per essere multicanale, versatile e totalmente cloud, rispetta le ultime direttive in materia di privacy e prevede meccanismi anti-intrusione e anti-manomissione.
-Le speranze riposte nella blockchain fanno leva sulle tre caratteristiche di questa tecnologia:
-
-1.	trasparenza
-2.	immutabilità
-3.	responsabilità
-
-Un report di CB Insight aiuta a comprendere come la blockchain può essere di aiuto per sicurezza del voto elettronico e per la tutela stessa dell’elettorato.
-
-<img class="image" src="{{site.url}}/assets/images/projects/2030/elezione_blockchain.jpg" alt="Schema di un elezione con blockchain">
-
-Osservando la foto la blockchain può intervenire in tre momenti del Digital Voting Journey (secondo CB Insight):
-
-1.	Fase pre-elettorale: la blockchain può aiutare a ridurre i rischi di influenza mediatica scorretta con soluzioni che indirizzano un controllo mediante strumenti crittografici dell’azione dei media e con Mobile apps per la gestione del voto a loro volta basate sulla blockchain;
-2.	Fase elettorale: del voto la blockchain può portare garanzie nella gestione dell’identità dei partecipanti e nella garanzia dell’unicità del documento di voto per ciascun partecipante;
-3.	Fase post-elettorale: la blockchain potrebbe essere perfetta per effettuare gli audit necessari al controllo. In funzione delle sue caratteristiche legate alla trasparenza e all’ immutabilità, si potrebbero ridurre orme di violazione a posteriori.
-
-La valorizzazione dell’informazione, del dato e del cittadino cui quel dato è rivolto, la tempistica dello scambio delle informazioni, l’autenticazione dei rapporti di fiducia, basati non più sulla parola ma su supporti tecnologici specifici e difficilmente falsificabile, stanno diventando il nuovo paradigma del business moderno. E’ opinione condivisa che la pubblica amministrazione rivesta un ruolo fondamentale sul piano legislativo e regolatorio, è il più imponente fornitore di servizi e di infrastrutture ai cittadini e alle aziende e genera con essi una interazione continua, quotidiana e superiore ad ogni altra interazione sociale. Tutto ruota intorno ai servizi pubblici.
-
-Per concludere, vi riportiamo le parole della Ministra Buongiorno, tratte dall’intervista per Webnews:
-
-<blockquote>“Il lavoro agile io lo incentiverò perché ci credo molto, ma il punto di base è che la tecnologia è velocissima e la pubblica amministrazione è lenta, e succede spesso che si ha il prodotto tecnologico pronto ma manca l’organizzazione in ufficio. Occorre fare una sorta di percorso cronologico: prima semplificare e organizzare, poi avere il prodotto tecnologico. È chiaro che se io non formo il personale, ci sarà sempre questa discrasia tra ufficio bloccato e prodotto tecnologico [già rilasciato]. Per esempio, per quanto riguarda le carte d’identità digitali, ci sono alcuni comuni in cui si riesce ad avere questo prodotto immediatamente, altri in cui bisogna aspettare 3-4 mesi, perché manca un’organizzazione di base. Ecco perché dico che la Pubblica Amministrazione va prima semplificata, e a quel punto si può digitalizzare. Altrimenti abbiamo una serie di prodotti tecnologici, ma non siamo in grado di usarli”.</blockquote>
-
-<img class="image" src="{{site.url}}/assets/images/projects/2030/samsung_do_what_you_cant.jpg" alt="Samsung, 2019">
-
-Il Quantum Processor è stato introdotto nei modelli QLED 2018. Nelle TV di nuova generazione in casa Samsung, supporta la risoluzione 8K della serie Q900. È il brain della TV ed è responsabile della gestione di quattro funzioni chiave:
-
-1.	Qualità immagine: upscaling 4K / 8K, riduzione del rumore, dimmer locale, controllo del colore e masterizzazione HDR;
-2.	Suono: controllo audio intelligente;
-3.	Ambient Mode: regola la qualità delle immagini in base alle condizioni di illuminazione dell'ambiente;
-4.	Funzioni intelligenti: motore vocale Bixby, Guida universale e altro ancora;
-
-Il Quantum Processor 8K è responsabile dell'applicazione di queste formule ai contenuti video per creare immagini 8K per la visualizzazione. Il motore di upscaling AI 8K si concentra sul miglioramento di quattro elementi di qualità dell'immagine: creazione di dettagli, ripristino dei bordi (riduzione della sfocatura tramite interpolazione), riduzione del rumore (incentrata in particolare sul miglioramento del rumore di quantizzazione ottenuto con sorgenti di streaming compresse) e rimozione di frastagliature da curve e bordi angolati.
-
-Ad accompagnare il Quantum Processor, i QLED TV implemetano le loro funzioni con l’Intelligenza Artificiale. L'approccio Samsung all'upscaling  basato sull'intelligenza artificiale è denominato Machine Learning Super Resolution o MLSR. Si tratta di un processo di apprendimento automatico attraverso  la valutazione di milioni di immagini a bassa/alta risoluzione. Le immagini di alta qualità vengono utilizzate per creare versioni di qualità inferiore, simulando la tipologia di immagini di bassa qualità che un consumatore medio si aspetterebbe di ricevere:
-
-1.	Degradare la risoluzione;
-2.	Aggiungere rumore, sfocatura e cicli di compressione / decompressione a vari livelli per indurre artefatti.
-
-Le differenze possono essere codificate come "coefficienti del kernel di apprendimento". I dati relativi all'apprendimento dei coefficienti del kernel per i file audio e le immagini fisse sono piuttosto piccoli e possono essere supportati sul cloud. Ma il video è molto più complesso con set di dati molto più grandi. Ciò rende l'elaborazione basata su cloud troppo rischiosa, quindi Samsung incorpora questi coefficienti nel processore di immagini TV per un accesso locale e rapido nel processo di upscaling.
-
-Questi coefficienti includono anche istruzioni di mappatura dei toni per modificare la curva PQ per quel particolare oggetto. Il risultato è una "formula" o algoritmo che viene assegnato a ciascuna classe di immagini e basato sulla risoluzione dell'immagine in entrata (es. SD, HD, FHD o UHD). Queste formule o kernel vengono quindi assemblati in una banca dati che è incorporata nella TV.
- 
-# Siamo pronti per la città del domani?
-
-L’excursus appena descritto è a tratti piacevole, a tratti inquietante, a tratti folle.
-Le aziende hanno bisogno di flessibilità per espandersi man a mano che i confini si ampliano. Hanno anche bisogno di accedere al proprio cloud, reti, dati e partner, in modo da potersi collegare direttamente a qualsiasi cosa di cui hanno bisogno, ovunque ne abbiano bisogno. I cittadini hanno bisogno di formazione e conoscenza per rapportarsi con queste nuove tecnologie.
-
-Crediamo che uno dei più grandi doni fatti all’umanità dal cinema è la possibilità di reinventare visivamente il proprio passato e il proprio futuro. Epoche che non abbiamo vissuto diventano accessibili, vivide e malleabili, specialmente se ciò che viene raccontato ha luogo in epoche che ancora non abbiamo attraversato e magari mai attraverseremo. Quanti film ci  hanno già hanno già mostrato  futuro dell’umanità e quante volte abbiamo detto “manca ancora molto, prima o poi accadrà”. Dai dati e dalle informazioni raccolte si evince che questo tempo non è affatto lontano. Questi cambiamenti tecnologici così distruptive sono adesso presenti tra noi, ma un pò per paura del futuro, un pò per noncuranza del presente non riusciamo a comprenderla.
-
-# Conclusione
-
-Paura di queste previsioni? Molti si chiederanno perché addurre scenari futuri, quantificare come cambierà la nostra quotidianità. Fondamentalmente non stiamo prevedendo “la città del futuro”, non siamo i protagonisti di Star Wars o di Upside Down. Non stiamo immaginando possibili scenari con robot lanciafiamme o “transformers” che combattono per il bene dell’umanità.
-
-Non stiamo tessendo una trama hollywoodiana. Stiamo osservando la realtà dei fatti e quello di cui abbiamo parlato è già tra noi, ma è ancora incomprensibile e intangibile per la mente umana. Le trasformazioni delle società avvengono attraverso cambi di paradigmi, mutamenti prospettici che ci permettono di avvertire e vivere i cambiamenti. Blockchain, AI e 5G non sono solo tecnologie “disruptive”, sono dei paradigmi, quasi delle “ideologie”, che permetteranno una fruizione diversa delle attività e dei contenuti della realtà rispetto ad oggi: il 2030 non sarà tra 1000 anni. Dobbiamo essere affamati di conoscenza, affinare le competenze, essere consapevoli delle conseguenze per poter governare cambiamenti di così grande impatto.
-
-{% include changes.html %}
-
-# Bibliografia
-
-## Blockchain
-* [https://www.corrierecomunicazioni.it/digital-economy/blockchain-e-la-finanza-il-mercato-numero-uno-nel-2030-varra-460-mld-di-dollari/](https://www.corrierecomunicazioni.it/digital-economy/blockchain-e-la-finanza-il-mercato-numero-uno-nel-2030-varra-460-mld-di-dollari/)
-* [https://medium.com/altcoin-magazine/altcoin-news-will-iota-and-vw-build-the-car-of-the-future-bfb35137d86f](https://medium.com/altcoin-magazine/altcoin-news-will-iota-and-vw-build-the-car-of-the-future-bfb35137d86f)
-* [https://www.webnews.it/2018/05/02/mobi-blockchain-automotive/](https://www.webnews.it/2018/05/02/mobi-blockchain-automotive/)
-* [https://link.medium.com/JUlLeTXJfU](https://link.medium.com/JUlLeTXJfU)
-* [https://it.cointelegraph.com/news/ibm-partnership-uses-blockchain-iot-to-combat-drought-in-california](https://it.cointelegraph.com/news/ibm-partnership-uses-blockchain-iot-to-combat-drought-in-california)
-* [https://twitter.com/RobertoDeBiase/status/1095320628863877129](https://twitter.com/RobertoDeBiase/status/1095320628863877129)
-* [https://hackernoon.com/a-beginners-guide-to-ipfs-20673fedd3f](https://hackernoon.com/a-beginners-guide-to-ipfs-20673fedd3f)
-* [https://www.ibm.com/blogs/blockchain/2018/06/introducing-mobi-the-mobility-open-blockchain-initiative/](https://www.ibm.com/blogs/blockchain/2018/06/introducing-mobi-the-mobility-open-blockchain-initiative/)
-* [https://www.bedicon.org/wp-content/uploads/2018/01/finance_topic2_source2.pdf](https://www.bedicon.org/wp-content/uploads/2018/01/finance_topic2_source2.pdf)
-* [https://link.medium.com/00yZ86d3jU](https://link.medium.com/00yZ86d3jU)
-* [https://www.nytimes.com/2019/02/15/books/review/blockchain.html](https://www.nytimes.com/2019/02/15/books/review/blockchain.html)
-
-## AI
-* [https://www.blockchain4innovation.it/tecnologie/intelligenza-artificiale-decentralizzata/](https://www.blockchain4innovation.it/tecnologie/intelligenza-artificiale-decentralizzata)
-* [https://www.hklaw.com/files/Uploads/Documents/Articles/Blockchain5GEnabledInternetofThings.pdf](https://www.hklaw.com/files/Uploads/Documents/Articles/Blockchain5GEnabledInternetofThings.pdf)
-* [https://www.forbes.com/sites/bernardmarr/2018/01/08/the-amazing-ways-tesla-is-using-artificial-intelligence-and-big-data/#36a206a54270](https://www.forbes.com/sites/bernardmarr/2018/01/08/the-amazing-ways-tesla-is-using-artificial-intelligence-and-big-data/#36a206a54270)
-* [https://www.gao.gov/assets/700/690910.pdf](https://www.gao.gov/assets/700/690910.pdf)
-* [https://www.forbes.com/sites/danielaraya/2019/01/29/the-challenges-with-regulating-self-driving-cars/](https://www.forbes.com/sites/danielaraya/2019/01/29/the-challenges-with-regulating-self-driving-cars/)
-* [https://www.bitmat.it/blog/news/82691/veicoli-a-guida-autonoma-ford-esegue-nuovi-test](https://www.bitmat.it/blog/news/82691/veicoli-a-guida-autonoma-ford-esegue-nuovi-test)
-* [https://www.theverge.com/2019/2/11/18219981/american-ai-initiative-trump-administration-funding-research-data](https://www.theverge.com/2019/2/11/18219981/american-ai-initiative-trump-administration-funding-research-data)
-* [https://www.zerounoweb.it/analytics/cognitive-computing/jobrapido-con-lintelligenza-artificiale-potenzia-la-ricerca-del-lavoro/](https://www.zerounoweb.it/analytics/cognitive-computing/jobrapido-con-lintelligenza-artificiale-potenzia-la-ricerca-del-lavoro/)
-* [https://www.chicagobusiness.com/html-page/834696](https://www.chicagobusiness.com/html-page/834696)
-* [https://www.theverge.com/2019/2/14/18224704/ai-machine-learning-language-models-read-write-openai-gpt2](https://www.theverge.com/2019/2/14/18224704/ai-machine-learning-language-models-read-write-openai-gpt2)
-* [https://www.theverge.com/2019/1/25/18196234/google-android-auto-in-car-systems-apple-carplay-interview](https://www.theverge.com/2019/1/25/18196234/google-android-auto-in-car-systems-apple-carplay-interview)
-
-## 5G
-* [https://www.webnews.it/2018/12/05/5g-italy-occorre-anzitutto-linfrastruttura/](https://www.webnews.it/2018/12/05/5g-italy-occorre-anzitutto-linfrastruttura/)
-* [https://www.webnews.it/2018/12/05/5g-italy-il-5g-sara-uninfrastruttura-pervasiva/](https://www.webnews.it/2018/12/05/5g-italy-il-5g-sara-uninfrastruttura-pervasiva/)
-* [https://www.webnews.it/2018/12/07/5g-italy-serve-la-convergenza-degli-investimenti/](https://www.webnews.it/2018/12/07/5g-italy-serve-la-convergenza-degli-investimenti/)
-* [https://link.medium.com/aSbu2NGmeU](https://link.medium.com/aSbu2NGmeU)
-* [https://res.mdpi.com/applsci/applsci-08-01048/article_deploy/applsci-08-01048.pdf?filename=&attachment=1](https://res.mdpi.com/applsci/applsci-08-01048/article_deploy/applsci-08-01048.pdf?filename=&attachment=1)
-* [https://link.medium.com/9Qvd621oeU](https://link.medium.com/9Qvd621oeU)
-* [https://link.medium.com/Te0Jv69oeU](https://link.medium.com/Te0Jv69oeU)
-* [https://www.ericsson.com/en/mobility-report/reports/november-2018](https://www.ericsson.com/en/mobility-report/reports/november-2018)
-* [https://www.forbes.com/sites/tiriasresearch/2018/12/05/qualcomm-launches-5g-with-the-snapdragon-855/#2010a0ef1cc7](https://www.forbes.com/sites/tiriasresearch/2018/12/05/qualcomm-launches-5g-with-the-snapdragon-855/#2010a0ef1cc7)
+[**Download the event photos**](https://www.facebook.com/pg/blockchainmanagementschool/photos/?tab=album&album_id=568759847019875)
