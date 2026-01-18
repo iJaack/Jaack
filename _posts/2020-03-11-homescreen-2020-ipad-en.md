@@ -8,77 +8,72 @@ tag:
 - tech
 category: blog
 author: jaack
-description: L'iPad come companion e non come sostituto dell'esperienza desktop
+description: The iPad as a companion and not as a replacement for the desktop experience
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+For many, the iPad is the perfect replacement for the desktop experience. [Federico Viticci
+of MacStories succeeded](https://www.macstories.net/stories/desktop-class-safari-for-ipad-a-hands-on-look-at-the-difference-the-ipados-update-makes-to-apples-browser/), but I didn't. For me, the iPad
+is a companion tool for my daily activities, in specific
+circumstances.
 
+With iPadOS 13 on an **iPad Pro 9.7** bought in 2016, I took advantage of widgets on the homescreen to make everything more easily accessible right from the first page. Since I don't use the iPad for every context, moreover,
+I was able to simplify the display of apps on a single page.
 
-Per molti l'iPad è il sostituto perfetto dell'esperienza desktop. [Federico Viticci
-di MacStories ci è riuscito](https://www.macstories.net/stories/desktop-class-safari-for-ipad-a-hands-on-look-at-the-difference-the-ipados-update-makes-to-apples-browser/), ma io no. Per me l'iPad
-è uno strumento di accompagnamento alle mie attività quotidiane, in circostanze
-specifiche.
-
-Con iPadOS 13 su un **iPad Pro 9.7** comprato nel 2016, ho sfruttato i widget nella homescreen per rendere tutto più facilmente fruibile già dalla prima pagina. Dato che non uso l'iPad per qualsiasi contesto, inoltre,
-ho potuto semplificare la visualizzazione delle app in una sola pagina.
-
-### Widget
+### Widgets
 <img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-ipad-widget.png"
-alt="Homescreen iPadOS, Widget, 2020"/>
-<figcaption class="caption">Homescreen iPadOS, Widget, 2020</figcaption>
+alt="iPadOS Homescreen, Widgets, 2020"/>
+<figcaption class="caption">iPadOS Homescreen, Widgets, 2020</figcaption>
 
-Le mie routine quotidiane ruotano sempre attorno alle stesse due applicazioni:
-**Things** e **Fantastical**. E quindi queste due app sono presenti nella homescreen
-con i widget. Il widget di Fantastical è quello più in alto, e mostra la timeline
-degli eventi nelle immediate vicinanze temporali: è molto utile per capire se sto
-facendo quello che avrei dovuto fare secondo i piani prefissati. Subito sotto c'è il widget
-di Things, che mi fa vedere quali sono i task della giornata. Per rafforzare il senso del dovere
-e tenere sempre a mente quale siano le cose da fare per la giornata, tengo l'app Things, con il badge che
-visualizza il numero di task della giornata, anche nel dock.
+My daily routines always revolve around the same two applications:
+**Things** and **Fantastical**. And so these two apps are present on the homescreen
+with widgets. The Fantastical widget is the top one, and it shows the timeline
+of events in the immediate temporal vicinity: it is very useful to understand if I am
+doing what I should have done according to the set plans. Immediately below is the
+Things widget, which shows me what the tasks of the day are. To reinforce the sense of duty
+and always keep in mind what the things to do for the day are, I keep the Things app, with the badge that
+displays the number of tasks of the day, also in the dock.
 
-Ho anche altri widget, ma li uso talmente poco che sono irrilevanti allo scopo di questo articolo.
+I also have other widgets, but I use them so little that they are irrelevant for the purpose of this article.
 
-### App
+### Apps
 
-Anche per scegliere le app da usare sull'iPad ho un criterio, che in realtà è molto semplice e
-probabilmente usato, anche inconsciamente, da tutti: sull'iPad ci vanno solo le app che sfruttano appieno
-lo schermo più grande rispetto allo smartphone, e le app che sugli altri dispositivi sarebbero sfruttate
-poco.
+Even for choosing the apps to use on the iPad I have a criterion, which is actually very simple and
+probably used, even unconsciously, by everyone: on the iPad go only the apps that fully exploit
+the larger screen compared to the smartphone, and the apps that on other devices would be used
+little.
 
 <img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-ipad-apps-1.png"
-alt="Homescreen iPadOS, Primo gruppo di app, 2020"/>
-<figcaption class="caption">Homescreen iPadOS, Primo gruppo di app, 2020</figcaption>
+alt="iPadOS Homescreen, First group of apps, 2020"/>
+<figcaption class="caption">iPadOS Homescreen, First group of apps, 2020</figcaption>
 
-Del primo gruppo fanno parte:
+The first group includes:
 
-- **CARROT Weather**, un'app meteo che ha un'ottima visualizzazione estesa nella versione iPadOS;
-- **Pixelmator**: non è un'app che uso moltissimo su iPad (perché la uso molto di più di MacBook), ma Pixelmator è fatto davvero bene per iPadOS e quando ho bisogno di ritoccare una foto o di farla da zero gestendo pochi livelli, preferisco usarla su iPad;
-- **YouTube**: guardo YouTube praticamente solo su iPad quando sono a casa. Sul monitor è complicato (devo spostarlo così che si rivolge verso il letto, devo mettere il mouse sul comodino)
-- **Skype** (o **Zoom**): Per ora ho messo Skype, ma sto usando sempre più frequentemente Zoom, quindi credo
-che ad un certo punto sostituirò. La webcam del MacBook è pessima, mentre quella dell'iPad è ottima, quindi se devo fare delle call in giro (o anche a casa), qualche volta opto per usare l'iPad;
-- **Ludo Club**: ci deve essere almeno un gioco sull'iPad. Io ne tengo *al massimo uno*, perché altrimenti lo userei più come console che come strumento. Oggi c'è Ludo Club, con cui gioco spesso con la mia ragazza, ma prima c'era **Monopoly** o anche **Super Mario Run**. Di solito scelgo giochi che hanno il multiplayer locale sullo stesso schermo, per giocare meglio;
-- **Telegram, Slack e Messenger**: essendo l'iPad un supporto, più che uno strumento focale, lo uso moltissimo come finestra esterna e indipendente per comunicare tramite Telegram, Slack e Messenger. Ho le notifiche disattivate di default su tutte le app e il *Non disturbare** attivo in maniera permanente, così posso mantenere contatti continui con i colleghi e gli amici, ma non farmi disturbare ogni 5 minuti dal suono e la vibrazione delle notifiche;
-- **OneNote**: Anche OneNote è un'app che uso come supporto, per visualizzare i contenuti che ho scritto con un altro dispositivo. Quando avevo l'Apple Pencil (che ho perso un paio d'anni fa e mai più ricomprato), usavo OneNote per prendere appunti, ma mi sono accorto che in realtà la Pencil serve più per *annotare* che per *scrivere*. Annotare su appunti presi scrivendo sulla tastiera e su immagini prese da altre parti;
-- **Agenda**: di solito uso [Agenda su MacBook]({{base}}/homescreen-2020-macos/), ma qualche volta mi capita di avere un lampo di genio, un momento particolarmente creativo e magari voglio solo scrivere, evitando tutte le distrazioni. Dato che sull'iPad ho disattivato tutte le notifiche e mantengo il *non disturbare* in maniera permanente, sono privo di distrazioni;
-- **Pocket**: leggere gli articoli salvati sull'iPad invece che sullo smartphone fa una gran bella differenze, soprattutto per una persona come me che ne legge oltre 600 l'anno (sembra poco, ma provate a contarli alla fine dell'anno - le notizie flash non contano!)
+- **CARROT Weather**, a weather app that has an excellent extended view in the iPadOS version;
+- **Pixelmator**: it is not an app that I use a lot on iPad (because I use it much more on MacBook), but Pixelmator is really well made for iPadOS and when I need to retouch a photo or make it from scratch managing few layers, I prefer to use it on iPad;
+- **YouTube**: I watch YouTube practically only on iPad when I am at home. On the monitor it is complicated (I have to move it so that it faces the bed, I have to put the mouse on the bedside table)
+- **Skype** (or **Zoom**): For now I put Skype, but I am using Zoom more and more frequently, so I believe
+that at some point I will replace it. The MacBook webcam is terrible, while the iPad one is excellent, so if I have to make calls around (or even at home), sometimes I opt to use the iPad;
+- **Ludo Club**: there must be at least one game on the iPad. I keep *at most one*, because otherwise I would use it more as a console than as a tool. Today there is Ludo Club, with which I often play with my girlfriend, but before there was **Monopoly** or even **Super Mario Run**. usually I choose games that have local multiplayer on the same screen, to play better;
+- **Telegram, Slack and Messenger**: the iPad being a support, rather than a focal tool, I use it a lot as an external and independent window to communicate via Telegram, Slack and Messenger. I have notifications disabled by default on all apps and *Do Not Disturb* permanently active, so I can maintain continuous contacts with colleagues and friends, but not be disturbed every 5 minutes by the sound and vibration of notifications;
+- **OneNote**: OneNote is also an app that I use as a support, to view content that I wrote with another device. When I had the Apple Pencil (which I lost a couple of years ago and never bought again), I used OneNote to take notes, but I realized that in reality the Pencil serves more to *annotate* than to *write*. Annotate on notes taken typing on the keyboard and on images taken from elsewhere;
+- **Agenda**: usually I use [Agenda on MacBook]({{base}}/homescreen-2020-macos/), but sometimes I happen to have a stroke of genius, a particularly creative moment and maybe I just want to write, avoiding all distractions. Since on the iPad I have disabled all notifications and keep *do not disturb* permanently, I am free of distractions;
+- **Pocket**: reading saved articles on the iPad instead of on the smartphone makes a big difference, especially for a person like me who reads over 600 a year (seems little, but try counting them at the end of the year - flash news don't count!)
 
 <img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-ipad-apps-2.png"
-alt="Homescreen iPadOS, Secondo gruppo di app, 2020"/>
-<figcaption class="caption">Homescreen iPadOS, Secondo gruppo di app, 2020</figcaption>
+alt="iPadOS Homescreen, Second group of apps, 2020"/>
+<figcaption class="caption">iPadOS Homescreen, Second group of apps, 2020</figcaption>
 
-Del secondo gruppo, invece, fanno parte:
+The second group, instead, includes:
 
-- **Kindle**: preferisco non usare Kindle su iPad (o uso il Kindle Paperwhite, oppure leggo direttamente su carta), ma ci sono [dei libri che ho comprato su Kindle]({{base}}/libri-2020/) e dei periodi in cui voglio viaggiare leggero. Quando queste due condizioni sono soddisfatte, leggo su Kindle;
-- **Topolino** (o altra app magazine): sì, leggo ancora Topolino. Mi rilassa tantissimo. E cerco
-di leggerlo sull'iPad. Da quest'anno ho fatto l'abbonamento alla sola versione digitale per evitare di avere
- altra carta in giro che tengo fondalmente solo per ricordo.
-- **Netflix** e **Prime Video**: In aereo, in treno, al letto, sul divano. Sull'iPad vedo Netflix e Prime Video nel migliore dei modi, in mobilità. A differenza del sito web dal MacBook, posso salvare le puntate o i film per vederli offline. Certo, se avessi un laptop Windows 2 in 1 avrei la possibilità di utilizzare un laptop come un tablet per questa specifica situazione, ma per ora mi tengo i miei dispositivi Apple;
-- **Twitch**: da qualche mese ho l'abitudine di seguire i tornei di eSports almeno una volta a settimana. Quando sono alla scrivania, a casa o in ufficio, e c'è un match live, tengo Twitch sull'iPad con le cuffie wireless collegate mentre lavoro sul laptop o il desktop. Discorso simile vale per **DAZN**.
+- **Kindle**: I prefer not to use Kindle on iPad (either I use the Kindle Paperwhite, or I read directly on paper), but there are [books I bought on Kindle]({{base}}/libri-2020/) and periods when I want to travel light. When these two conditions are met, I read on Kindle;
+- **Topolino** (or other magazine app): yes, I still read Mickey Mouse. It relaxes me a lot. And I try
+to read it on the iPad. From this year I subscribed to the digital version only to avoid having
+more paper around that I basically keep only as a souvenir.
+- **Netflix** and **Prime Video**: On the plane, on the train, on the bed, on the sofa. On the iPad I see Netflix and Prime Video in the best possible way, on the move. Unlike the website from the MacBook, I can save episodes or movies to watch them offline. Of course, if I had a Windows 2-in-1 laptop I would have the possibility to use a laptop as a tablet for this specific situation, but for now I keep my Apple devices;
+- **Twitch**: for some months I have the habit of following eSports tournaments at least once a week. When I am at the desk, at home or in the office, and there is a live match, I keep Twitch on the iPad with wireless headphones connected while I work on the laptop or desktop. Similar speech applies to **DAZN**.
 
 ---
 
-Le altre app le ho scelte perché c'è una buona probabilità che le utilizzi anche su iPad, e sono utili da avere a portada di mano: **Pocket Casts, Facetime, La Calcolatrice, Google Photo, Day One,** la suite **iWork**, **Working Copy** (non mi capita spesso di scrivere codice su iPad, ma potrebbe capitare di fare un fix veloce), Toggl, Dropbox, Twitter e Feedly. Insomma, l'iPad è un supporto visivo e spesso fisso su app di messaggistica istantanea e di background.
+The other apps I chose because there is a good chance that I use them also on iPad, and they are useful to have at hand: **Pocket Casts, Facetime, The Calculator, Google Photo, Day One,** the **iWork** suite, **Working Copy** (I don't happen often to write code on iPad, but it could happen to make a quick fix), Toggl, Dropbox, Twitter and Feedly. In short, the iPad is a visual and often fixed support on instant messaging and background apps.

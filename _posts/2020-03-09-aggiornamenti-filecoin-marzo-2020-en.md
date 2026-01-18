@@ -1,5 +1,5 @@
 ---
-title: "Filecoin Febbraio 2020: tipsets, proof system, roadmap"
+title: "Filecoin February 2020: tipsets, proof system, roadmap"
 layout: post
 date: 2020-03-09 16:00
 image: https://filecoin.io/images/blog/blog-post-banner-roadmap-update-feb-2020.jpg
@@ -8,65 +8,60 @@ tag:
 - blockchain
 category: blog
 author: jaack
-description: Gli aggiornamenti dell'ultimo quarter su Filecoin
+description: Filecoin updates for the last quarter
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+Periodically, I follow updates on blockchain projects that I believe have
+still unexpressed potential. Among these is **Filecoin**, which is a project built
+on IPFS ([which I have already discussed extensively]({{base}}/filecoin-update-q2-q3-2019/)).
 
-
-Periodicamente, seguo gli aggiornamenti di progetti blockchain che credo hanno
-un potenziale ancora inespresso. Tra questi c'è **Filecoin**, che è un progetto costruito
-su IPFS ([di cui ho parlato già ampiamente]({{base}}/filecoin-update-q2-q3-2019/)).
-
-Gli aggiornamenti di Febbraio sono i seguenti.
+The updates for February are as follows.
 
 ### Tipsets
-Filecoin spiega come funzionano i *tipsets*, un modulo del loro
-Protocollo di Consenso Atteso (Expected Consensus Protocol). I *tipsets* sono una
-variante dei blocchi figli di una DAG, un grafo aciclico diretto, utilizzato su Ethereum. In poche parole, mentre il consenso dei blocchi sulla blockchain bitcoin avviene sulla catena più lunga,
-su Ethereum ogni blocco può avere dei blocchi 'zii' (**Uncle Blocks**), che sono minati
-nella stessa Epoca di un blocco genitore, ma non hanno raggiunto il consenso maggiore.
+Filecoin explains how *tipsets* work, a module of their
+Expected Consensus Protocol. *Tipsets* are a
+variant of child blocks in a DAG, a directed acyclic graph, used on Ethereum. In short, while block consensus on the bitcoin blockchain happens on the longest chain,
+on Ethereum each block can have 'uncle' blocks (**Uncle Blocks**), which are mined
+in the same Epoch as a parent block, but did not reach the majority consensus.
 
-In Ethereum, gli Uncle Blocks possono dare più rilevanza ad un nuovo blocco figlio che è stato minato
-dal blocco genitore, entrando di fatto nella catena di blocchi principale. In Filecoin, invece,
-l'approccio è leggermente diverso: ogni tipset (set di ultimi blocchi) ha un *peso*, dato dalla somma dei genitori a cui è collegato. Nell'immagine in basso c'è una rappresentazione schematica, che sicuramente si capisce meglio.
+In Ethereum, Uncle Blocks can give more relevance to a new child block that was mined
+from the parent block, effectively entering the main block chain. In Filecoin, however,
+the approach is slightly different: each tipset (set of latest blocks) has a *weight*, given by the sum of the parents it is connected to. In the image below there is a schematic representation, which is certainly easier to understand.
 
 <img class="image" src="https://filecoin.io/images/blog/tipsets-family-weights-5.svg"/>
 
-Dato che, inoltre, i blocchi validati sono solo quelli che provengono dallo stesso genitore e che sono minati nella stessa epoca, si risolve velocemente una potenziale divergenza di blocchi (un fork temporaneo tra una epoca e l'altra) e allo stesso tempo si ricompensa più miner, che possono aver, insieme, prodotto più blocchi. Ragionando su questo, mi viene il dubbio: come evitare che poi il mining sia centralizzato nelle mani di pochi? Come assicurarsi che ad ogni epoca ci sia un cambio anche solo parziale dei miner eletti per la produzione del blocco successivo?
+Since, moreover, validated blocks are only those that come from the same parent and are mined in the same epoch, a potential divergence of blocks (a temporary fork between one epoch and another) is quickly resolved and at the same time more miners are rewarded, who may have, together, produced more blocks. Thinking about this, a doubt comes to me: how to avoid mining then being centralized in the hands of a few? How to ensure that at each epoch there is even a partial change of miners elected for the production of the next block?
 
-([Fonte](https://filecoin.io/blog/tipsets-family-based-approach-to-consensus/))
+([Source](https://filecoin.io/blog/tipsets-family-based-approach-to-consensus/))
 
-### Il Proof System
+### The Proof System
 
-Filecoin annuncia i dettagli del suo Proof System, un mix di prove per dimostrare di avere l'autorità, meritarla ancora e di ricevere la ricompensa dallo spazio dati salvato:
+Filecoin announces details of its Proof System, a mix of proofs to demonstrate authority, deserve it again and receive reward from stored data space:
 
-- **Proof-of-Space**: per dimostrare l'autorità nell'ottenere dati da salvare sul proprio hard disk, il miner deve dimostrare di avere sul supporto di memorizzazione lo spazio richiesto;
-- **Proof-of-Storage**: è il sistema che serve a dimostrare di avere un determinato dato nel proprio supporto di memorizzazione;
-- **Proof-of-Spacetime**: è il sistema che chiede ad un numero casuale di miner di provare pubblicamente che i dati che hanno ricevuto sono ancora nel loro supporto di memorizzazione.
+- **Proof-of-Space**: to demonstrate authority in obtaining data to save on one's hard disk, the miner must demonstrate having the required space on the storage medium;
+- **Proof-of-Storage**: is the system that serves to demonstrate having a specific piece of data in one's storage medium;
+- **Proof-of-Spacetime**: is the system that asks a random number of miners to publicly prove that the data they received are still in their storage medium.
 
-La Proof-of-Space e la Proof-of-Storage sono stati combinati da Protocol Labs (il team che sta sviluppando Filecoin) nella **Proof-of-Replication**.
+Proof-of-Space and Proof-of-Storage were combined by Protocol Labs (the team developing Filecoin) into **Proof-of-Replication**.
 
-Insieme a questa spiegazione (che è in realtà è molto più complessa di così), Protocol Labs spiega le ragioni per il quale ha impiegato così tanto tempo a sviluppare Filecoin: per ottimizzare queste configurazioni (trovando il giusto mix tra incentivi, tempo di elaborazione e sicurezza), hanno dovuto affidarsi ad un software che risolve problemi di ottimizzazione con vincoli, e trovare i giusti vincoli che garantissero il mix sopracitato.
+Along with this explanation (which is actually much more complex than this), Protocol Labs explains the reasons why it took so long to develop Filecoin: to optimize these configurations (finding the right mix between incentives, processing time and security), they had to rely on software that solves optimization problems with constraints, and find the right constraints that guaranteed the aforementioned mix.
 
-([Fonte](https://filecoin.io/blog/filecoin-proof-system/))
+([Source](https://filecoin.io/blog/filecoin-proof-system/))
 
 ### Roadmap
 
-- Dopo aver lanciato la Fase 1 della Testnet l'11 dicembre 2019, sono stati accumulati oltre 3.6 PiB di storage comprovato;
-- Gli sviluppatori hanno rilasciato implementazioni di Filecoin [in C++](https://github.com/filecoin-project/cpp-filecoin) e [in Rust](https://github.com/chainsafe/forest) e stanno lavorando; all'interoperabilità tra queste implementazioni
-- È stata ottimizzata la Proof-of-Replication (come descritto sopra), ottimizzando il sistema di prove SNARK (incremento di 2x);
-- **Textile** ha annunciato di stare lavorando a degli strumenti per creare facilmente applicazioni per la rete Filecoin.
-- É stata lanciata (non dal team Filecoin) la piattaforma [Terminal.co](terminal.co), che promette di distribuire facilmente il proprio sito con IPFS partendo da una repository Github. Il sito è contemporaneamente distribuito sia su IPFS che su protocollo http(s) tramite una CDN globale;
-- [Zondax](https://zondax.ch/) ha pubblicato la repository relativa allo sviluppo di un'app per visualizzare il [Ledger Filecoin](https://github.com/Zondax/ledger-filecoin), mentre [Open Work Labs](https://www.openworklabs.com/) sta lavorando ad un [wallet](https://twitter.com/openworklabs/status/1225882262291378176).
-- Trustwallet ha annunciato il [supporto per i token Filecoin](https://github.com/trustwallet/wallet-core/pull/811)
+- After launching Phase 1 of the Testnet on December 11, 2019, over 3.6 PiB of proven storage were accumulated;
+- Developers released Filecoin implementations [in C++](https://github.com/filecoin-project/cpp-filecoin) and [in Rust](https://github.com/chainsafe/forest) and are working on interoperability between these implementations;
+- Proof-of-Replication was optimized (as described above), optimizing the SNARK proof system (2x increase);
+- **Textile** announced they are working on tools to easily build applications for the Filecoin network.
+- The platform [Terminal.co](terminal.co) was launched (not by the Filecoin team), which promises to easily distribute your site with IPFS starting from a Github repository. The site is simultaneously distributed both on IPFS and on http(s) protocol via a global CDN;
+- [Zondax](https://zondax.ch/) published the repository related to the development of an app to view the [Filecoin Ledger](https://github.com/Zondax/ledger-filecoin), while [Open Work Labs](https://www.openworklabs.com/) is working on a [wallet](https://twitter.com/openworklabs/status/1225882262291378176).
+- Trustwallet announced [support for Filecoin tokens](https://github.com/trustwallet/wallet-core/pull/811)
 
-[Fonte](https://filecoin.io/blog/roadmap-update-february-2020/)
+[Source](https://filecoin.io/blog/roadmap-update-february-2020/)
 
 ---
 
-Altre risorse: [Come funziona Filecoin, in 5 minuti (in inglese)](https://protocol.ai/blog/technical-barriers-to-blockchain/)
+Other resources: [How Filecoin works, in 5 minutes](https://protocol.ai/blog/technical-barriers-to-blockchain/)

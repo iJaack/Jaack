@@ -8,66 +8,61 @@ tag:
 - tech
 category: blog
 author: jaack
-description: Il mio smartphone Android come telefono personale
+description: My Android smartphone as a personal phone
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+If as a smartphone for work I use the iPhone, as a personal smartphone I chose Android.
 
+The first question that comes to mind is *why have two smartphones* instead of one.
+If it is a matter of having two SIMs (personal and work), one could very well opt for a dual SIM phone: now iPhones are too - the first model was the iPhone XS (Max).
 
-Se come smartphone per lavoro uso l'iPhone, come smartphone personale ho scelto Android.
+The question, however, is more complicated than this: having two smartphones means
+**dividing in two** one's life, strongly separating the personal sphere from the working one.
+In cases like mine, there are, inevitably, common elements between the two, given that
+I consider myself a lucky person to do more or less always what I like for work.
 
-La prima domanda che viene in mente è *perché avere due smartphone* invece che uno.
-Se è una questione di avere due SIM (personale e lavoro), si potrebbe benissimo optare per un telefono dual SIM: ora anche gli iPhone lo sono - il primo modello è stato l'iPhone XS (Max).
+But precisely for this reason, to avoid *burnout*, the total absorption of personal life
+in favor of working life, I had to find a way to make the transition from work
+to relaxation natural.
 
-La questione, invece, è più complicata di così: avere due smartphone vuol dire
-**dividere in due** la propria vita, scindendo fortemente la sfera personale da quella lavorativa.
-In casi come i miei, ci sono, per forza di cose, degli elementi comuni tra le due, dato che
-mi reputo una persona fortunata a fare più o meno sempre quello che mi piace per lavoro.
+This translates into small daily rules, which in this moment of quarantine (in which
+personal and working life are closer than ever) are increasingly less feasible, but which during
+normal life help me a lot. For simplicity, I will use the acronym **PS** for the
+Personal Smartphone (today a Galaxy Note 10+) and **WS** for the Work Smartphone:
 
-Ma proprio per questo motivo, per evitare il *burnout*, il totale assorbimento della vita personale
-in favore di quella lavorativa, ho dovuto trovare un modo per rendere naturale il passaggio da lavoro
-a relax.
+- WS is used from 9:00 to 20:00 (tendentially working hours),
+PS before 9:00 and after 20:00;
+- On WS only **one social network app at a time** is installed, on PS all of them;
 
-Questo si traduce in delle piccole regole quotidiane, che in questo momento di quararenta (in cui la
-vita personale e lavorativa sono più vicine che mai) sono sempre meno attuabili, ma che durante
-la vita normale mi aiutano parecchio. Per semplicità, utilizzerò l'acronimo **SP** per lo
-Smartphone Personale (oggi un Galaxy Note 10+) e **SL** per lo Smartphone di Lavoro:
+These are two simple rules. If there were more, it would certainly be more difficult to follow them. Instead,
+in this way, it is not a problem.
 
-- SL si utilizza dalle 9:00 alle 20:00 (orario tendenzialmente di operatività lavorativa),
-SP prima delle 9:00 e dopo le 20:00;
-- Su SL è installata solo **un'app social network alla volta**, su SP tutte;
+Starting from these premises, describing the homescreen of my Android smartphone is simple, because
+the smartphone that must be used for personal life **must not** have all the apps and workflows
+of working life. It must remain simple and effective. Very focused on photos (taking, seeing and sharing them), games, social networks and videos.
 
-Sono due semplici regole. Se fossero di più, sarebbe sicuramente più difficile seguirle. Invece,
-in questo modo, non è un problema.
+## First page: social & fun
 
-Partendo da queste premesse, descrivere la homescreen del mio smartphone Android risulta semplice, perché
-lo smartphone che deve essere utilizzato per la vita personale **non deve** avere tutte le app e i workflow
-della vita lavorativa. Deve rimanere semplice ed efficace. Molto incentrato sulle foto (farle, vedere e condividerle), sui giochi, sui social network e sui video.
+<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-android-page1.png" alt="Android Homescreen, page 1, 2020" />
 
-## Prima pagina: social & fun
+If on the iPhone I only have one social network app, on the Galaxy Note 10+ I have all of them: on the front page Instagram,
+Facebook, Linkedin, Twitter. There remain some apps that are on the [first page of the iPhone]({{base}}/homescreen-iphone-2020/): Google Photo, a calendar app, CARROT Weather, Whatsapp, Feedly, Pocket Casts, Strava. Since this smartphone is mainly used when I don't work, apps that on the iPhone are hidden (because potential vehicle for distraction), here are in the foreground: for example Trakt.tv, Goodreads, Discord, Anchor, the Game Launcher (with Fortnite, Pokémon Go, FIFA Mobile, Pokémon Quest and PUBG Mobile among all).
 
-<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-android-page1.png" alt="Homescreen Android, prima pagina, 2020" />
+Instead of Telegram, I use Telegram Plus, an alternative client (thanks for the report @Soffio) that better organizes conversations, dividing them into tabs for groups, bots, channels, one-on-one conversations, supergroups and special conversations. Very useful not to be distracted by the thousands of notifications that supergroups accumulate every day.
 
-Se sull'iPhone ho solo un'app di social network, sul Galaxy Note 10+ le ho tutte: in prima pagina Instagram,
-Facebook, Linkedin, Twitter. Rimangono alcune app che sono sulla [prima pagina dell'iPhone]({{base}}/homescreen-iphone-2020/): Google Photo, un'app di calendario, CARROT Weather, Whatsapp, Feedly, Pocket Casts, Strava. Dato che questo smartphone è principalmente utilizzato quando non lavoro, delle app che sull'iPhone sono nascote (perché potenziale veicolo di distrazione), qui sono in primo piano: per esempio Trakt.tv, Goodreads, Discord, Anchor, il Game Launcher (con Fortnite, Pokémon Go, FIFA Mobile, Pokémon Quest e PUBG Mobile tra tutti).
+Two very important apps, and specific to the context in which I use the Android smartphone, are **Android Auto for phone** and **Amazon Kindle**: the first is a hub for simplified and hands-free access to apps used in the car. It is really Android Auto, but directly on smartphone, instead of on the car's on-board computer. A good solution for those who do not have a car with an on-board computer compatible with Android Auto; Amazon Kindle, on the other hand, is useful because all the digital books I have I save on Kindle. I have a Kindle Paperwhite, but very often it happens that, traveling, I want to travel as light as possible and therefore carry fewer things as possible: the Kindle is the first thing I remove, because although it weighs little, it stiffens the compartment of the backpack in which it is put, effectively taking away space from more 'flexible' objects in shape. So having the Kindle app on the smartphone, which I carry always in the backpack, is very useful if I want to continue in the [reading of my books for 2020]({{base}}/libri-2020/).
 
-Al posto di Telegram, uso Telegram Plus, un client alternativo (grazie per la segnalazione @Soffio) che organizza meglio le conversazioni, dividendole in tab per gruppi, bot, canali, conversazioni one-on-one, supergruppi e conversazioni speciali. Molto utile per non essere distratti  dalle migliaia di notifiche che i supergruppi accumulano ogni giorno.
+## Second page: miscellaneous
+<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-android-page2.png" alt="Android Homescreen, page 2, 2020" />
 
-Due app molto importanti, e specifiche per il contesto in cui utilizzo lo smartphone Android, sono **Android Auto for phone** e **Amazon Kindle**: la prima è un hub per accesso semplificato e hands-free alle app che si utilizzano in auto. È proprio Android Auto, ma direttamente su smartphone, invece che sul computer di bordo dell'auto. Una buona soluzione per chi non ha l'auto con computer di bordo compatibile con Android Auto; Amazon Kindle, invece, è utile perché tutti i libri digitali che ho li salvo su Kindle. Ho un Kindle Paperwhite, ma molto spesso capita che, in viaggio, voglia viaggiare il più leggero possibile e quindi porto meno cose possibile: il Kindle è la prima cosa  che tolgo, perché nonostante pesi poco, irrigidisce il comparto dello zaino in cui lo si mette, togliendo effettivamente spazio a oggetti più 'flessibili' nella forma. Quindi avere l'app Kindle sullo smartphone, che invece porto sempre nello zaino, è molto utile se voglio continuare nella [lettura dei miei libri per il 2020]({{base}}/libri-2020/).
+As with the third page of the iPhone homescreen, the second page of the Android smartphone is organized mainly in folders and apps that I could use with lower priority than those on the first page. In particular, the selection criterion follows the same as the first page, that is to place in plain sight the apps that recall relaxation and personal commitments.
 
-## Seconda pagina: miscellanea
-<img class="image" src="{{base}}/assets/images/routines/homescreen/2020/homescreen-2020-android-page2.png" alt="Homescreen Android, seconda pagina, 2020" />
-
-Come con la terza pagina della homescreen dell'iPhone, la seconda pagina dello smartphone Android è organizzata prevalentemente in cartelle e in app che potrei utilizzare con priorità più bassa rispetto a quelle sulla prima pagina. In particolare, il criterio di selezione segue lo stesso della prima pagina, ovvero di posizionare in bella vista le app che richiamano al relax e agli impegni personali.
-
-Ecco perché ci sono Amazon, Stremio, Twitch, Prime Video, Topolino, TikTok, DAZN. Tutte le altre app fanno parte della categoria "la uso quando sono in giro", ovvero Samsung Notes (per prendere velocemente appunti anche a schermo spento con la S Pen), Google Maps, Shazam. Ci son poi le cartelle **Ride** e **Enjoy**, che sono rispettivamente tutte quelle di servizi collegati al ride sharing e allo svago fuori casa (The Fork, UCICinemas, Quandooo, TripAdvisor) che non ha senso mettere in bella vista perché non si usano spesso, ma solo in momenti specifici: è più facile cercarle direttamente.
+That's why there are Amazon, Stremio, Twitch, Prime Video, Topolino, TikTok, DAZN. All other apps are part of the category "I use it when I'm around", namely Samsung Notes (to quickly take notes even with the screen off with the S Pen), Google Maps, Shazam. Then there are the **Ride** and **Enjoy** folders, which are respectively all those of services connected to ride sharing and leisure outside the home (The Fork, UCICinemas, Quandoo, TripAdvisor) that make no sense to put in plain sight because they are not used often, but only in specific moments: it is easier to look for them directly.
 
 ---
 
-Sicuramente il sistema di disposizione delle app su smartphone Android non è preciso e rodato come il M.U.D.I.S. su iPhone. In questo mio sistema non sono contemplati widget e la disposizione vera e propria sulla griglia segue una semplice scala cromatica dall'alto verso il basso.
+Surely the system of arranging apps on Android smartphones is not precise and tested like the M.U.D.I.S. on iPhone. In this system of mine widgets are not contemplated and the actual arrangement on the grid follows a simple color scale from top to bottom.
 
-Sicuramente ci sono modi migliori, ma ne ho provati molti e per ora questo, quello più semplice, è sembrato il più valido di tutti.
+Surely there are better ways, but I have tried many and for now this one, the simplest one, seemed the most valid of all.
