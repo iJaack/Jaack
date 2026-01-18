@@ -1,5 +1,5 @@
 ---
-title: "Mi sento un po' perso."
+title: "I feel a bit lost."
 layout: post
 date: 2021-05-25 23:00
 image: /assets/images/lost.jpg
@@ -8,42 +8,37 @@ tag:
 - life
 category: blog
 author: jaack
-description: So che è una transizione, e penso capiti a tutti. Ma comunque..
+description: I know it's a transition, and I think it happens to everyone. But still..
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+I feel a bit lost.
 
+And I realized it because, every day, around 9:00 PM, I write some notes on Day One, the app I use to keep my personal diary.
 
-Mi sento un po' perso.
+I realized it because I no longer feel the drive I had before. I don't know how to explain. Yet I am fine. I have a beautiful and interesting job, a wife and a family who love me, and friends with whom I manage to spend time more or less (maybe not as much as I would like).
 
-E me ne sono accorto perché, ogni giorno, intorno alle 21:00, scrivo qualche appunto su Day One, l'app che uso per tenere il mio diario personale.
+But I feel a bit lost. *Disoriented* is the most correct word.
 
-Me ne sono accorto perché non sento più la spinta che avevo prima. Non so come spiegare. Eppure sto bene. Ho un lavoro bello e interessante, una moglie e una famiglia che mi ama, e amici con cui bene o male riesco a passare del tempo (magari non tanto come vorrei).
+And every time I think about this, every time I generally think about how I am, I think about how I arrived at the exact moment I am thinking. And in the last 3 months the answer I can give myself is always the same: "You changed your life". And it's like this: within three months, in order:
+- I left the job I had been at for 4 years;
+- I got my bachelor's degree in Computer Engineering;
+- I moved;
+- I got married.
 
-Però mi sento un po' perso. *Disorientato* è la parola più corretta.
+There are foundations, in life, that make us what we are: they are **family**, **friends**, **love** and **work**. These pillars are very important because they give us a sense of direction, help us navigate life and know what to do, for better or for worse, when we find ourselves in difficulty or when something beautiful happens to us.
 
-E ogni volta che penso a questo, ogni volta che in generale penso a come sto, penso a come sono arrivato al momento esatto in cui sto pensando. E negli ultimi 3 mesi la risposta che mi so dare è sempre la stessa: "Hai cambiato la tua vita". Ed è così: nel giro di tre mesi, in ordine:
-- ho lasciato il lavoro su cui ero da 4 anni;
-- ho preso la laurea triennale in Ingegneria Informatica;
-- mi sono trasferito;
-- mi sono sposato.
+Here, in the last 3 months I have seen my friends very little, for many reasons: pandemic, study, work, many commitments. And so they couldn't be my pillar in that moment, but only recently.
 
-Ci sono delle fondamenta, nella vita, che ci rendono quello che siamo: sono la **famiglia**, gli **amici**, l'**amore** e il **lavoro**. Questi pilastri sono molto importanti perché ci danno il senso dell'orientamento, ci aiutano a navigare la vita e a sapere cosa fare, nel bene o nel male, quando ci troviamo in difficoltà o quando ci capita qualcosa di bello.
+The family has expanded, because I got married, and so there is a *new family* and an *extended family*. It had been like this for some time, but when you get married this model solidifies, and it is more marked.
 
-Ecco, negli ultimi 3 mesi ho visto pochissimo i miei amici, per tanti motivi: pandemia, studio, lavoro, tanti impegni. E quindi loro non hanno potuto essere il mio pilastro in quel momento, ma solo da poco.
+Love has changed, because with marriage nothing changes, except that there is the certainty of the perpetual bond, and this makes one feel good.
 
-La famiglia si è allargata, perché mi sono sposato, e quindi c'è una *nuova famiglia* e una *famiglia estesa*. Era così già da tempo, ma quando ci si sposa questo modello si solidifica, ed è più marcato.
+Work has changed, and it is making me evolve in new ways. And yes, I was ready, but it is equally difficult and demanding.
 
-L'amore è cambiato, perché con il matrimonio non cambia nulla, se non che c'è la certezza del legame perpetuo, e questo fa stare bene.
+When everything changes, it takes a little time to let everything settle into a new framework of normality. And the transition period is really annoying, I must say. Although I am striving to create new routines, habits, I cannot think of compressing the experience of years and years of life with the same pillars, and applying it to a life with different pillars, others evolved, others totally new.
 
-Il lavoro è cambiato, e mi sta facendo evolvere in nuovi modi. E sì, ero pronto, ma è ugualmente difficile e impegnativo.
+And then there is also the pandemic, which does not help. Here, paradoxically the pandemic does not help, OK, but it has also helped a lot. It was a very powerful catalyst that gave a wake-up call to the entire population, and I saw the effects on me: probably, if there had been no pandemic, nothing would have changed. And instead everything has changed, and I am happy about it.
 
-Quando tutto cambia, ci vuole un po' di tempo a far sedimentare tutto in un nuovo quadro di normalità. E il periodo di transizione è davvero fastidioso, devo dire. Sebbene mi stia sforzando di creare delle nuove routine, delle abitudini, non posso pensare di comprimere l'esperienza di anni e anni di vita con gli stessi pilastri, e applicarla a una vita con dei pilastri diversi, altri evoluti, altri totalmente nuovi.
-
-E poi c'è anche la pandemia, che non aiuta. Ecco, paradossalmente la pandemia non aiuta, OK, ma ha anche aiutato tantissimo. È stata un catalizzatore potentissimo che ha dato una svegliata a tutta la popolazione, e io ne ho visto gli effetti su di me: probabilmente, se non ci fosse stata la pandemia, nulla sarebbe cambiato. E invece è cambiato tutto, e ne sono felice.
-
-Anche se devo superare una lunga transizione, verso una vita che oggi non riesco ancora a capire appieno, e a vivere di conseguenza.
+Even if I have to overcome a long transition, towards a life that today I still cannot fully understand, and live accordingly.

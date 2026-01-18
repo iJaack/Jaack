@@ -1,5 +1,5 @@
 ---
-title: "Come dichiarare le crypto in maniera semplice"
+title: "How to declare crypto simply"
 layout: post
 date: 2021-04-15 14:30
 update: 2021-08-15 14:00
@@ -9,103 +9,98 @@ tag:
 - crypto
 category: blog
 author: jaack
-description: Dichiarare e spendere, senza troppi problemi - almeno per ora
+description: Declare and spend, without too many problems - at least for now
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+Since I started working in the crypto world full time, I had to learn, on my own skin, a whole series of procedures and notions that I didn't have before, both because I didn't need them, but above all because I didn't use crypto that much. Today, working at [Avascan](https://avascan.info), crypto is my daily bread and I make lots of transactions every month, both to receive money, and to send it, and to modify my investment portfolio.
 
+Today living on crypto is possible.
 
-Da quando ho iniziato a lavorare nel mondo crypto full time, ho dovuto imparare, sulla mia pelle, tutta una serie di procedure e nozioni che prima non avevo, sia perché non mi servivano, ma soprattutto perché non usavo le crypto così tanto. Oggi, lavorando in [Avascan](https://avascan.info), le crypto sono il mio pane quotidiano e faccio tantissime transazioni ogni mese, sia per ricevere soldi, che per inviarli, che per modificare il mio portafoglio di investimenti.
+## Declare
+The hardest part is the declaration. Today, in reality, it is not **mandatory** to declare your crypto. Or rather, it is mandatory to do so, but the Revenue Agency has no legal or fiscal tool to be able to check self-declarations. Or, even better, it could do it, but not for everything: it could for example ask all centralized exchanges (like Coinbase, Binance, Bittrex) which currently are obliged to collect personal information (through the famous KYC procedure) what each person's funds are, and it would have every right. Centralized exchanges are in fact providers of **custodial wallets**, i.e. cryptocurrency wallets of which they themselves also keep the private keys, and therefore are to all intents and purposes like banks: when you deposit money in the bank, you are giving your money to the bank which remembers that you put it there. But in reality they belong to the bank. Similarly centralized exchanges are custodians of crypto assets.
 
-Oggi vivere di crypto si può.
+In addition to this, however, there are also **non-custodial wallets**, i.e. those wallets whose private key is in the hands of the fund holder, and not a third party. There are many of these wallets, I'll name just a few: Metamask, Jaxx, Exodus are the most famous multi-currency wallets on the market, but there are also specific wallets for each crypto, which allow you to interact better with the reference blockchain (tendentially, multi-currency wallets only allow you to manage funds and not interact with smart contracts, for example). The Revenue Agency, in Italy and in the world, has no way to state that a certain address belongs to a certain person, also because in most cases new addresses are generated for every interaction with the blockchain by single-currency wallets but above all multi-currency ones.
 
-## Dichiarare
-La parte più difficile è la dichiarazione. Oggi, in realtà, non è **obbligatorio** dichiarare le proprie crypto. O meglio, è obbligatorio farlo, ma l'Agenzia delle Entrate non ha alcuno strumento giuridico, né fiscale per poter controllare le autodichiarazioni. O, ancora meglio, potrebbe farlo, ma non per tutto: potrebbe per esempio chiedere a tutti gli exchange centralizzati (come Coinbase, Binance, Bittrex) che attualmente sono obbligati a raccogliere le informazioni personali (tramite la famosa procedura KYC) quali sono i fondi di ognuno, e ne avrebbe tutto il diritto. Gli exchange centralizzati sono infatti fornitori di **custodial wallet**, ovvero di portafogli di criptovaluta di cui loro stessi custodiscono anche le chiavi private, e quindi sono a tutti gli effetti come delle banche: quando depositate dei soldi in banca, state dando i vostri soldi alla banca che ricorda che li avete messi voi. Ma in realtà sono della banca. Allo stesso modo exchange centralizzati sono custodi del patrimonio in crypto.
+All this digression to say that yes, it is technically mandatory to declare all crypto, and actually it is also useful to do so (and then I will explain why), but the State to date does not have a consolidated procedure to verify and possibly contest the declarations. Having said that, I declare everything I can, yet technically I will pay nothing in taxes.
 
-Oltre a questo, però, ci sono anche i **wallet non-custodial**, ovvero quei wallet la cui chiave privata è in mano al detentore dei fondi, e non a una parte terza. Ci sono tantissimi di questi wallet, ne faccio solo alcuni esempi: Metamask, Jaxx, Exodus sono i più famosi wallet multi-valuta sul mercato, però ci sono anche wallet specifici per ogni crypto, che permettono di interagire meglio con la blockchain di riferimento (tendenzialmente, i wallet multi-valuta permettono solo di gestire i fondi e non di interagire con il smart contracts, ad esempio). L'Agenzia delle Entrate, in Italia e nel mondo, non ha alcun modo per affermare che un certo indirizzo appartiene a una certa persona, anche perché nella maggior parte dei casi vengono generati nuovi indirizzi per ogni interazione con la blockchain da parte di wallet mono-valuta ma soprattutto multi-valuta.
-
-Tutta questa digressione per dire che sì, è tecnicamente obbligatorio dichiarare tutte le crypto, e in realtà è anche utile farlo (e poi spiegherò il perché), però lo Stato a oggi non ha una procedura consolidata per verificare ed eventualmente contestare le dichiarazioni. Detto questo, io dichiaro tutto quello che posso, eppure tecnicamente non pagherò nulla di tasse.
-
-Per far capire meglio, farò un esempio: io (senza entrare troppo nel dettaglio) detengo una ventina di criptovalute diverse:
+To make it better understood, I will give an example: I (without going too much into detail) hold about twenty different cryptocurrencies:
 - bitcoin;
 - Binance Coin (BNB);
-- Ether (ETH) e monete su Ethereum;
-- Avalanche (AVAX) e monete sulla rete Avalanche;
+- Ether (ETH) and coins on Ethereum;
+- Avalanche (AVAX) and coins on the Avalanche network;
 
-Su Ethereum, e soprattutto su Avalanche, le monete che ho non sono ferme, anzi: il 90% dei fondi sono investiti e bloccati in fondi particolari, che mi permettono di diversificare i guadagni e soprattutto il rischio. Per chi ne sa un po' di più, posso dire che ho i fondi bloccati in questo modo:
+On Ethereum, and especially on Avalanche, the coins I have are not still, on the contrary: 90% of the funds are invested and locked in special funds, which allow me to diversify earnings and above all risk. For those who know a bit more, I can say that I have funds locked in this way:
 
 - **Liquidity Pool**
 - **Staking**
 - **Yield farming**
 
-Nelle Liquidity Pool, per esempio, ho un'alto potenziale di guadagno perché ho un costante rischio di perdere una fetta dei fondi che ho messo, per guadagnare nuove monete. Gli altri invece (Staking e Yield Farming) mi danno tendenzialmente meno guadagni, ma sono più sicuri. Uso anche delle combinazioni di queste modalità, dei veri e propri strumenti finanziari.
+In Liquidity Pools, for example, I have a high earning potential because I have a constant risk of losing a slice of the funds I put in, to earn new coins. The others instead (Staking and Yield Farming) tend to give me fewer earnings, but are safer. I also use combinations of these modes, real financial instruments.
 
-Tutto questo per dire che i fondi io potrei non averli nel momento in cui faccio la dichiarazione, ma potrei avere solo un token che rappresenta la mia posizione in quell'investimento (e non sempre). È tutto talmente ancora nuovo che è davvero difficile spiegarlo in termini semplici, spero di essere il più chiaro possibile.
+All this to say that I might not have the funds at the moment I make the declaration, but I might only have a token that represents my position in that investment (and not always). It is all still so new that it is really difficult to explain it in simple terms, I hope to be as clear as possible.
 
-Per fare la dichiarazione, secondo l'ultima risoluzione dell'Agenzia dell'Entrate del 2018, devo inserire le informazioni relative al mio *capital gain* nel quadro RW della Dichiarazione Redditi Persone Fisiche. Ecco quanto dichiarato proprio dall'Agenzia dell'Entrate:
+To make the declaration, according to the latest resolution of the Revenue Agency of 2018, I must insert the information relating to my *capital gain* in the RW framework of the Personal Income Tax Return. Here is what was declared by the Revenue Agency itself:
 
 <blockquote>
-"[...]le cessioni a pronti di valuta virtuale non danno origine a redditi imponibili mancando la finalità speculativa salvo generare un reddito diverso qualora la valuta ceduta derivi da prelievi da portafogli elettronici (wallet), per i quali la giacenza media superi un controvalore di euro **51.645,69 per almeno sette giorni lavorativi continui nel periodo d’imposta**, ai sensi dell’articolo 67, comma 1, lettera c-ter), del testo unico delle imposte sui redditi approvato con D.P.R. 22 dicembre 1986, n. 917 (TUIR), e del comma 1-ter del medesimo articolo.
+"[...]spot sales of virtual currency do not give rise to taxable income lacking the speculative purpose unless generating other income if the sold currency derives from withdrawals from electronic wallets (wallets), for which the average balance exceeds a countervalue of euro **51,645.69 for at least seven continuous working days in the tax period**, pursuant to article 67, paragraph 1, letter c-ter), of the consolidated text of income taxes approved with D.P.R. December 22, 1986, n. 917 (TUIR), and paragraph 1-ter of the same article.
 
-Per cessione a pronti si intende una transazione in cui si ha lo scambio immediato di una valuta contro una valuta differente. Il valore in euro della giacenza media in valuta virtuale va calcolato secondo il cambio di riferimento all’inizio del periodo di imposta, e cioè al 1° gennaio dell’anno in cui si verifica il presupposto di tassazione (cfr. circolare 24 giugno 1998, n. 165)."
+By spot sale is meant a transaction in which there is the immediate exchange of a currency against a different currency. The value in euros of the average balance in virtual currency must be calculated according to the reference exchange rate at the beginning of the tax period, that is on January 1st of the year in which the taxation prerequisite occurs (cf. circular June 24, 1998, n. 165)."
 </blockquote>
 
-Il punto cruciale è qui, lo metto bene in evidenza:
+The crucial point is here, I highlight it well:
 
-<blockquote>... qualora la valuta ceduta derivi da prelievi da portafogli elettronici (wallet), per i quali la giacenza media superi un controvalore di euro **51.645,69 per almeno sette giorni lavorativi continui nel periodo d’imposta**</blockquote>
+<blockquote>... if the sold currency derives from withdrawals from electronic wallets (wallets), for which the average balance exceeds a countervalue of euro **51,645.69 for at least seven continuous working days in the tax period**</blockquote>
 
-Non sussiste un trattamento speciale: e come quando su un conto corrente si detengono valute diverse dall'EURO (come per esempio USD). Quindi il limite è **51.645,69€** per più di sette giorni, oltre il quale, a dichiarazione fatta, bisogna versare il 26% di tassa sulla plusvalenza.
+There is no special treatment: it is like when on a current account one holds currencies other than the EURO (such as USD). So the limit is **51,645.69€** for more than seven days, beyond which, once declared, 26% tax on capital gains must be paid.
 
-Ecco, anche qui, un aspetto ancora inesplorato: immaginiamo che io creo un NFT, e spendo 10 USD per pubblicarlo sulla blockchain. Per avere questo NFT, un utente (diciamo su Opensea.io) lo compra, per 1000 dollari. Io **non** ho il nome di questa persona, e quindi non gli posso fare la fattura. Potrei quindi generare uno scontrino, ma posso farlo solo se l'attività di creazione di NFT, in un modo o nell'altro, fa parte dell'oggetto della mia impresa (se ho un impresa - se non ce l'ho, mi fermo ancora prima). Se sono un privato che per hobby vuole disegnare sul computer e vendere i suoi lavori su blockchain, oggi non c'è nessuna legge che mi dice che devo dichiarare qualcosa. Un po' come quando un artista di strada dipinge quadri delle persone che passano. Forse non è nei limiti della legge, ma non ne è nemmeno fuori. È nel limbo.
+Here, too, an aspect still unexplored: let's imagine that I create an NFT, and spend 10 USD to publish it on the blockchain. To have this NFT, a user (let's say on Opensea.io) buys it, for 1000 dollars. I do **not** have the name of this person, and therefore I cannot issue an invoice. I could then generate a receipt, but I can do it only if the activity of creating NFTs, in one way or another, is part of the object of my business (if I have a business - if I don't, I stop even before). If I am a private individual who for a hobby wants to draw on the computer and sell his works on blockchain, today there is no law that tells me that I have to declare something. A bit like when a street artist paints pictures of people passing by. Maybe it is not within the limits of the law, but it is not outside either. It is in limbo.
 
-Per questo, se io ricevo Ether (ETH), bitcoin (BTC) o altra criptovaluta, e poi quella moneta aumenta di valore, io posso dichiararla, devo dichiararla, ma dato che non la sto cambiando per un'altra valuta (la cosiddetta *cessione a pronti* citata dall'Agenzia dell'Entrate), io non devo pagarci nessuna tassa, perché non ho a tutti gli effetti **materializzato** il mio profitto.
+For this reason, if I receive Ether (ETH), bitcoin (BTC) or another cryptocurrency, and then that coin increases in value, I can declare it, I must declare it, but since I am not exchanging it for another currency (the so-called *spot sale* cited by the Revenue Agency), I do not have to pay any tax on it, because I have not to all intents and purposes **hospitalized** my profit.
 
-Insomma, per farla breve: pagherò la tassa sulla plusvalenza solo al verificarsi, insieme, di tutte queste condizioni:
-- Ho ricevuto crypto o l'ho comprata;
-- L'ho scambiata per un'altra criptovaluta o per una valuta corrente;
-- Il valore di quella criptovaluta è stato maggiore di 51.645,69€;
-- Questo valore è stato tale per più di sette giorni nello stesso anno solare;
-- Non detengo criptovalute in staking o in yield farming;
-- Se detengo criptovalute in liquidity pool, o un token che rappresenta la mia posizione
-- Scambio il token di liquidity pool di cui sopra.
+In short, to put it briefly: I will pay the capital gains tax only upon the occurrence, together, of all these conditions:
+- I received crypto or bought it;
+- I exchanged it for another cryptocurrency or for a current currency;
+- The value of that cryptocurrency was greater than 51,645.69€;
+- This value was such for more than seven days in the same calendar year;
+- I do not hold cryptocurrencies in staking or in yield farming;
+- If I hold cryptocurrencies in liquidity pools, or a token that represents my position
+- I exchange the liquidity pool token mentioned above.
 
-Molto complicato, eh.
+Very complicated, huh.
 
-La parte più facile è l'ultima: per raccogliere tutte queste informazioni, io uso un solo servizio, che mi costa circa 80€ l'anno, e che si chiama [Koinly](https://koinly.io/?via=DA7B97EB). Con Koinly posso collegare tutti i wallet (sia custodial che non-custodial) di moltissime blockchain (non tutte le blockchain sono supportate però). Una volta collegati i wallet, in base al numero di transazioni che ho fatto, dovrò aspettare qualche minuto o qualche ora, poi potrò andare nella sezione **Tax Reports**, comprare il report e scaricare la versione completa da inviare al commercialista. Nel report c'è una panoramica che indica qual è stata la mia plusvalenza e, se serve, un breakdown di tutte le monete che ho detenuto nell'anno solare, il numero di transazioni, i soldi spesi in commissioni, etc.
+The easiest part is the last one: to collect all this information, I use only one service, which costs me about 80€ a year, and which is called [Koinly](https://koinly.io/?via=DA7B97EB). With Koinly I can connect all wallets (both custodial and non-custodial) of many blockchains (not all blockchains are supported though). Once the wallets are connected, based on the number of transactions I have made, I will have to wait a few minutes or a few hours, then I can go to the **Tax Reports** section, buy the report and download the complete version to send to the accountant. In the report there is an overview that indicates what my capital gain was and, if needed, a breakdown of all the coins I held in the calendar year, the number of transactions, the money spent on commissions, etc.
 
-## Spendere
+## Spending
 
-Una volta che si detengono crypto, per poterci vivere bisogna poterle spendere. Questo era forse difficile fino al 2017, ma ora è davvero facile. Esistono exchange centralizzati o fornitori di servizi che permettono di richiedere una carta prepagata che prende liquidità dalle disponibilità crypto e di valuta corrente per fare acquisti o prelievi agli ATM. Io ne uso due.
+Once you hold crypto, to be able to live on it you must be able to spend it. This was perhaps difficult until 2017, but now it is really easy. There are centralized exchanges or service providers that allow you to request a prepaid card that takes liquidity from crypto and current currency availability to make purchases or withdrawals at ATMs. I use two.
 
 ### Crypto.com VISA Card
 
-La mia carta crypto principale: in realtà ne esistono diversi livelli, e in ogni livello ci sono dei benefit aggiuntivi crescenti. Io ho la Royal Indigo, che per ricevere ho dovuto bloccare 10.000 CRO (Crypto.com Coin) per 6 mesi. La carta che mi è arrivata è una VISA Platino con tutti i benefit che le carte di questo tipo hanno (quindi lounge gratuita in tutti gli aeroporti tramite LoungeKey, assicurazioni di vario genere e altro), più altri benefit specifici di Crypto.com. La Royal Indigo per esempio mi da il 3% di cashback sul 99% delle transazioni online e offline (tranne ritiri agli ATM) e mi da il rimborso fino a 13,99 USD di Netflix e fino a 9,99 USD di Spotify ogni mese, tutto in CRO. Ormai in 6 mesi ho già recuperato 600€ in cashback, è davvero ottimo. Iscrivendosi tramite [questo link](https://crypto.com/app/yvwoskc50r) si ottengono 25 USD di bonus se si ordina una carta che richiede il blocco di almeno 350€.
+My main crypto card: actually there are different levels, and in each level there are increasing additional benefits. I have the Royal Indigo, which to receive I had to lock 10,000 CRO (Crypto.com Coin) for 6 months. The card that arrived is a Platinum VISA with all the benefits that cards of this type have (so free lounge in all airports via LoungeKey, insurance of various kinds and more), plus other benefits specific to Crypto.com. The Royal Indigo for example gives me 3% cashback on 99% of online and offline transactions (except withdrawals at ATMs) and gives me reimbursement up to 13.99 USD of Netflix and up to 9.99 USD of Spotify every month, all in CRO. By now in 6 months I have already recovered 600€ in cashback, it is really excellent. By signing up via [this link](https://crypto.com/app/yvwoskc50r) you get 25 USD bonus if you order a card that requires locking at least 350€.
 
 ### Binance Card
 
-La mia carta crypto di riserva. Iscriversi a Binance è facile: se non l'avete già fatto [questo è il link](https://www.binance.cc/en/register?ref=TY28UD9P), e dopo aver fatto la procedura di compilazione di tutti i dati personali (la procedura KYC), potete andare in [questa pagina](https://www.binance.com/en/cards) per avviare la richiesta di una carta VISA. La carta arriva in 7 giorni lavorativi e di base offre un cashback dell'1% in BNB sul 99% delle transazioni tranne i prelievi all'ATM. È già compatibile con Google Pay ma ancora non con Apple Pay. Il cashback in realtà è proporzionale ai BNB posseduti nel conto Binance, e fino all'8%. Ovviamente senza commissioni sui pagamenti.
+My backup crypto card. Signing up for Binance is easy: if you haven't already done so [this is the link](https://www.binance.cc/en/register?ref=TY28UD9P), and after having done the procedure of compiling all personal data (the KYC procedure), you can go to [this page](https://www.binance.com/en/cards) to start the request for a VISA card. The card arrives in 7 working days and basically offers a cashback of 1% in BNB on 99% of transactions except withdrawals at the ATM. It is already compatible with Google Pay but not yet with Apple Pay. The cashback is actually proportional to the BNB held in the Binance account, and up to 8%. Obviously without commissions on payments.
 
-# Domande & risposte
+# Q&A
 
-Luca chiede, via mail:
+Luca asks, via email:
 
 <blockquote>
 
-Ciao Giacomo,
-Ho letto sul tuo blog l'articolo "Come dichiarare le crypto in maniera semplice", e avrei giusto una domanda da farti.
-Tu scrivi che le cripto vanno dichiarate tutte ma le tasse per le plusvalenze vanno pagate  se"Il valore di quella criptovaluta è stato maggiore di 51.645,69€;" per almeno 7 giorni consecutivi nello stesso anno solare.
-Intendi dire che si pagano le tasse se si possiedono più di 50k della stessa criptovaluta per più di 7 giorni nello stesso wallet? Cosa succede se invece si opera con le criptovalute ma poi il saldo è in euro? Per esempio io sto effettuando perlopiù arbitraggio con cripto(non bitcoin) ed euro, e quello che guadagno per ora lo sto tenendo sugli exchange stessi in euro. Questi guadagni non andrebbero dichiarati?
+Hi Giacomo,
+I read on your blog the article "How to declare crypto simply", and I would just have a question for you.
+You write that cryptos must all be declared but capital gains taxes must be paid if "The value of that cryptocurrency was greater than 51,645.69€;" for at least 7 consecutive days in the same calendar year.
+Do you mean that taxes are paid if you own more than 50k of the same cryptocurrency for more than 7 days in the same wallet? What happens if instead you operate with cryptocurrencies but then the balance is in euros? For example, I am mostly doing arbitrage with crypto (not bitcoin) and euros, and what I earn for now I am keeping on the exchanges themselves in euros. Should these earnings not be declared?
 
 </blockquote>
 
-Ciao Luca,
-Grazie di avermi scritto e grazie di aver letto l’articolo. In merito alla tua domanda, il conteggio per le tasse va fatto su tutte le criptovalute e su tutti i wallet che possiedi. Se usi Koinly, il servizio che suggerisco, puoi tracciare e dichiarare crypto da più wallet.
-Ad esempio, se hai 10K in BTC, 20K in ETH e 30K in LTC, hai un totale di 60K, quindi superi la soglia e pagherai la plusvalenza per qualsiasi plusvalenza tu faccia su quei 60K, quindi se i tuoi fondi diventano di 61K, tu pagherai a fine anno il 26% di 61K-60K = 26% di 1K = 260€.
+Hi Luca,
+Thanks for writing to me and thanks for reading the article. Regarding your question, the tax calculation must be done on all cryptocurrencies and on all wallets you own. If you use Koinly, the service I suggest, you can track and declare crypto from multiple wallets.
+For example, if you have 10K in BTC, 20K in ETH and 30K in LTC, you have a total of 60K, so you exceed the threshold and will pay capital gains tax for any capital gain you make on those 60K, so if your funds become 61K, you will pay at the end of the year 26% of 61K-60K = 26% of 1K = 260€.
 
-Se usi Koinly questo conto viene fatto automaticamente, tu devi solo risolvere eventuali ambiguità, taggando le transazioni che il servizio non riesce a categorizzare (ad esempio airdrop, mining rewards, rendita da NFT o reward da liquidità).
+If you use Koinly this calculation is done automatically, you just have to resolve any ambiguities, tagging transactions that the service fails to categorize (for example airdrops, mining rewards, income from NFTs or liquidity rewards).
 
 {% include changes.html %}

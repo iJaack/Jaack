@@ -1,5 +1,5 @@
 ---
-title: "Ho eliminato mail e Telegram dal mio iPhone"
+title: "I removed email and Telegram from my iPhone"
 layout: post
 date: 2022-01-05 20:00
 image:
@@ -8,75 +8,69 @@ tag:
 - life
 category: blog
 author: jaack
-description: E altre considerazioni sull'inizio del 2022
+description: And other considerations on the beginning of 2022
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+Some asked me if I had updates on my [workflows](https://jaack.me/workflows/) for 2021 (now 2022). Others asked me to do an episode of [Vita da Millennial](https://jaack.me/podcast/) to tell what I am doing and how I am doing it, so that it can be useful and inspiring.
 
+I don't want to be an inspiration. I don't want to be an example. I don't think there is much to learn from me, as much as there is a need for active discussions on what I face.
 
-Alcuni mi hanno chiesto se avessi aggiornamenti sui miei [workflow](https://jaack.me/workflows/) per il 2021 (ora 2022). Altri mi hanno chiesto di fare una puntata di [Vita da Millennial](https://jaack.me/podcast/) per raccontare quello che sto facendo e come lo sto facendo, perché possa essere utile e di ispirazione.
+The reason why I haven't been able to express myself as often as in the past, this year, is because *I have few active thoughts in mind* besides those of workflows and goals for likely the [Avascan](https://avascan.info) project.
 
-Io non voglio essere di ispirazione. Non voglio essere un esempio. Non credo che ci sia tanto da imparare da me, quanto invece ci sia bisogno di discussioni attive su quello che io affronto.
+Yes, I actually feel poor in ideas in this sense. Recently, however, with the expansion of the team I talked about everywhere, I had to deal with themes that were very dear to me once, and that I had to review almost completely: the **integration of workflows**.
 
-Il motivo per cui non sono riuscito a esprimermi tanto spesso come in passato, quest'anno, è perché _ho pochi pensieri attivi in mente_ oltre a quelli dei flussi di lavoro e gli obiettivi per il progetto [Avascan](https://avascan.info).
+I often see guys on LinkedIn who tell that their company, their team, has grown quickly up to 20, 40, or even 50 people, and they say it as if it were the easiest thing in the world, a natural thing.
 
-Sì, mi sento effettivamente povero di idee in questo senso. Recentemente però, con l'espansione del team di cui ho parlato un po' ovunque, mi sono dovuto confrontare con dei temi che mi erano molto cari un tempo, e che ho dovuto rivedere quasi completamente: l'**integrazione del flussi di lavoro**.
+I have never found a **harder** thing than this in my life. It is such a complicated process. The goal is always to find the best person for a specific role, and not just laborers who do some activities a bit like that, when needed and that anyone can do. We looked for and are looking for extremely specialized people for some aspects, others very smart for others, and still others with zero specific competence but unparalleled field experience.
 
-Vedo spesso ragazzi su LinkedIn che raccontano che la loro azienda, il loro team, è cresciuto velocemente fino a 20, 40, o anche 50 persone, e lo dicono come se fosse la cosa più facile del mondo, una cosa naturale.
+Every person who entered the team had a well-defined role, which is not necessarily described by his job description, but by the set of activities he performs. Everyone has a certain level of autonomy (tendentially very high), but everyone's activities meet with those of others at some points, and therefore there is a need for a high level of **internal coordination**.
 
-Io non ho mai trovato una cosa più **difficile** di questa in vita mia. È un processo così complicato. L'obiettivo è trovare sempre la migliore persona per uno specifico ruolo, e non solo della manovalanza che faccia delle attività un po' così, quando serve e che possa fare chiunque. Abbiamo cercato e stiamo cercando persone estremamente specializzate per alcuni aspetti, altre molto sveglie per altri, e altre ancora con zero competenza specifica ma esperienza sul campo senza paragoni.
+In a team of 5-10 people, internal coordination is quite easy to manage, especially if the business being developed is relatively simple: maybe a software project, or a business based on relationships or content. I define **relatively simple** a business that has few ramifications, but only activities of different types. By **ramifications** I mean that a business can have activities that can 'explode' and become real business units, which may not be directly related to the primary activity.
 
-Ogni persona che è entrata nel team ha avuto un ruolo ben definito, che non è necessariamente descritto dalla sua job description, ma dall'insieme di attività che svolge. Ognuno ha un certo livello di autonomia (tendenzialmente molto alta), ma le attività di ognuno si incontrano con quelle degli altri in alcuni punti, e quindi c'è bisogno di un alto livello di **coordinazione interna**.
+I'll give an example: a company that develops online software (Software-as-a-Service) has a **Finance** unit that deals with managing all accounting, employee salaries and various cash flows. It is unlikely that a new business unit can stem from Finance, to manage a new financial product. The company makes online software, not financial instruments, so it would make no sense.
 
-In un team di 5-10 persone, la coordinazione interna è piuttosto facile da gestire, soprattutto se il business che viene sviluppato è relativamente semplice: magari un progetto software, oppure un business basato sulle relazioni o sui contenuti. Definisco **relativamente semplice** un business che ha poche ramificazioni, ma solo delle attività di diverso tipo. Per **ramificazioni** intendo che un business può avere delle attività che possono 'esplodere' e diventare delle vere e proprie unità di business, che possono non essere direttamente correlate all'attività primaria.
+Here, this kind of simplicity does not exist *at least* in two types of companies: **Corporates** (where the quantity of business activities necessitates greater granularity in the organization of internal teams and activities), and **crypto teams**: the latter, basically, grow in complexity because their structure is not yet well defined, and therefore it is not known well what the limits are. A crypto team can be a DAO, or a Decentralised Autonomous Organisation: a collective of people who are united by the fact that they have the token of that project. A DAO can do many different things:
 
-Faccio un esempio: un'azienda che sviluppa un software online (Software-as-a-Service) ha un'unità **Finance** che si occupa di gestire tutta la contabilità, gli stipendi dei dipendenti e i vari flussi di cassa. Difficilmente può nascere una nuova unità di business, che fa capo al Finance, per gestire un nuovo prodotto finanziario. L'azienda fa software online, non strumenti finanziari, quindi non avrebbe senso.
+- Develop online software (a DEX, a Money Market or other types of platforms)
+- Manage an investment fund (with treasury funds locked in the protocol)
+- Develop another online software (from the list above)
+- Create a collection of artworks (in the form of NFTs)
+- Create a club for certain reasons (using NFTs as membership certification)
+- And much more that I don't even know. Basically, what I mean is that a crypto team can expand into activities of any kind and infinitely.
 
-Ecco, questo genere di semplicità non esiste _almeno_ in due tipi di aziende: le **Corporate** (in cui la quantità di attività di business rende necessaria una maggiore granularità nell'organizzazione dei team interni e delle attività), e i **team crypto**: questi ultimi, fondamentalmente, crescono di complessità perché la loro struttura non è ancora ben definita, e quindi non si sa bene quali siano i limiti. Un team crypto può essere una DAO, ovvero una Decentralised Autonomous Organisation: un collettivo di persone che sono accumunate dal fatto che hanno il token di quel progetto. Una DAO può fare tante cose diverse:
+Even Avascan is becoming like this, being developed by a crypto team. It is expanding in an unpredictable way, and in doing so we are creating a database of information (tech as well as business) that must be coordinated and managed at best, to avoid it being lost. Many internal teams are also research teams, because so much is both to discover and above all to **understand** and analyze.
 
-- Sviluppare un software online (un DEX, un Money Market o altri tipi di piattaforme)
-- Gestire un fondo di investimento (con i fondi del tesoro bloccato nel protocollo)
-- Sviluppare un altro software online (dalla lista di cui sopra)
-- Creare una collezione di opere d'arte (sotto forma di NFT)
-- Creare un club per determinati motivi (usando gli NFT come certificazione della membership)
-
-E tanto altro che non so nemmeno. Fondamentalmente, quello che intendo, è che un team crypto può espandersi in attività di ogni tipo e all'infinito.
-
-Anche Avascan sta diventando così, essendo sviluppato da un team crypto. Si sta espandendo in maniera non prevedibile, e nel farlo stiamo creando un database di informazioni (di tecnologia come di business) che deve essere coordinato e gestito al meglio, per evitare che vada perso. Molti team interni sono anche dei team di ricerca, perché tantissimo è sia da scoprire che soprattutto da **capire** e analizzare.
-
-E tutta questa complessità deve essere gestita. Per questo motivo, nel corso del mese di dicembre abbiamo iniziato un processo che finirà a gennaio, con lo scopo di migrare tutte le nostre informazioni su un nuovo sistema basato su flussi di lavoro dedicati per area di competenza. Si basa tutto su **Jira**, che in molti conoscono, con alcune aggiunte e personalizzazioni.
+And all this complexity must be managed. For this reason, during the month of December we started a process that will end in January, with the aim of migrating all our information to a new system based on dedicated workflows by area of ​​expertise. Everything relies on **Jira**, which many know, with some additions and customizations.
 
 ---
 
-Ma la questione centrale, il motivo per cui mi sono messo a scrivere queste righe, non è questo: è che _anche il mio lavoro è cambiato, radicalmente_, negli ultimi mesi. Ora mi occupo più di gestire i cambiamenti e i macro-obiettivi rispetto alle attività singole. Lavoro tendenzialmente meno di prima, ma perché ho bisogno di molta più concentrazione per farlo, e quindi non posso permettermi distrazioni nella maggior parte dei momenti della giornata.
+But the central issue, the reason why I started writing these lines, is not this: it is that *my work has also changed, radically*, in the last months. Now I deal more with managing changes and macro-goals than single activities. I tend to work less than before, but because I need much more concentration to do it, and therefore I cannot afford distractions in most moments of the day.
 
-Questo cambiamento doveva sortire degli effetti anche sui miei flussi di lavoro personali, e così ci ho riflettuto durante queste vacanze natalizie. Ho iniziato ad agire appena tornato, il 3 gennaio:
-- Ho fatto un abbonamento a **Setapp** ([qui](https://go.setapp.com/invite/oglmsmu6) c'è un mese gratis se ci si abbona), che mi permette di avere uno store di più di 200 app che altrimenti sarebbero a pagamento in abbonamento, per un costo di 170€/anno circa;
-- Sto rimuovendo tutte le app a cui ero abbonato che posso sostituire con app disponibili su Setapp (tra cui Fantastical per BusyCal, Diarly per Day One e altre);
-- Ho avuto così modo di provare altre app che altrimenti non avrei mai comprato, come **Paste**, **iStats Menu** e **Workspace** (quest'ultima davvero utile: permette di creare delle configurazioni di app, siti e azioni da fare contemporaneamente usando un'unica scorciatoia);
+This change had to have some effects also on my personal workflows, and so I reflected on it during these Christmas holidays. I started acting as soon as I returned, on January 3:
+- I subscribed to **Setapp** ([here](https://go.setapp.com/invite/oglmsmu6) there is a free month if you subscribe), which allows me to have a store of more than 200 apps that would otherwise be paid by subscription, for a cost of about 170€/year;
+- I am removing all the apps I was subscribed to that I can replace with apps available on Setapp (including Fantastical for BusyCal, Diarly for Day One and others);
+- I thus had the opportunity to try other apps that otherwise I would never have bought, such as **Paste**, **iStats Menu** and **Workspace** (the latter really useful: implies creating configurations of apps, sites and actions to be done simultaneously using a single shortcut);
 
-In questo modo ho semplificato la gestione dei miei abbonamenti: invece di avere _n_ abbonamenti ad altrettante app, ho un solo abbonamento a tutto quello che mi serve.
+In this way I simplified the management of my subscriptions: instead of having *n* subscriptions to as many apps, I have only one subscription to everything I need.
 
-In più, solo sull'iPhone, ho eliminato **Spark** (la mia app di mail) e rimosso l'account di lavoro da **Telegram**.
+Plus, only on the iPhone, I deleted **Spark** (my email app) and removed the work account from **Telegram**.
 
-Il motivo è semplice: ogni mattina mi svegliavo, guardavo le mail per leggere le mie newsletter (Good Morning Italia, Finimize, The Block e altri), ma insieme a quelle trovavo anche le mail di lavoro e tutte le newsletter promozionali o le notifiche di app come Glovo, per ordini fatti il giorno prima. Insomma, molta confusione, e nel 90% dei casi mi trovavo al momento della riunione mattutina senza aver letto nulla.
+The reason is simple: every morning I woke up, looked at emails to read my newsletters (Good Morning Italia, Finimize, The Block and others), but together with those I also found work emails and all promotional newsletters or notifications from apps like Glovo, for orders made the day before. In short, a lot of confusion, and in 90% of cases I found myself at the time of the morning meeting without having read anything.
 
-E per me è un disastro se inizio a lavorare senza il mio briefing quotidiano. Me ne sono accorto qualche settimana fa, quando non avevo ancora letto i briefing e durante la giornata sono successi degli eventi che non riuscivo a capire (nello specifico, era il crollo dei mercati finanziari di alcuni punti percentuali e un crollo delle crypto). Ero disperato, e solo a fine giornata mi sono accorto che, se avessi letto il briefing, avrei saputo che erano attese delle dichiarazioni dalla Banca Centrale Europea e dalla Riserva Americana, ed era questa situazione che aveva creato incertezza sui mercati.
+And for me it is a disaster if I start working without my daily briefing. I realized it a few weeks ago, when I hadn't read the briefings yet and during the day events happened that I couldn't understand (specifically, it was the collapse of financial markets by a few percentage points and a collapse of crypto). I was desperate, and only at the end of the day I realized that, if I had read the briefing, I would have known that statements were expected from the Central European Bank and the American Reserve, and it was this situation that had created uncertainty in the markets.
 
-Per evitare che questo non accadesse di nuovo, ho cercato qualche app o servizio che che permettesse di dividere le mail di lavoro dalle newsletter e ho trovato **Matter**, un'app per iOS che serve per leggere esclusivamente le newsletter e gli articoli presi da varie fonti, tra cui Pocket, email e altro.
+To prevent this from happening again, I looked for some app or service that would allow separating work emails from newsletters and I found **Matter**, an iOS app that is used to read exclusively newsletters and articles taken from various sources, including Pocket, email and other.
 
 ---
 
-Telegram invece l'ho tolto perché creava un continuo stress soprattutto fuori dall'orario di lavoro: più della metà dei messaggi che ricevo provengono da persone che scrivono da fusi orari completamente diversi al mio, e quindi spesso ricevo messaggi alle 8, 9 o 10 di sera che mi sembrano urgenti, ma in realtà non lo sono. In realtà tutti i messaggi che arrivano a me, ora, sono non-critici: se il sito va giù o ci sono problemi gravi, c'è chi si mette subito all'opera per fare tornare tutto online, e c'è anche chi manda una comunicazione ai nostri utenti.
+Telegram instead I removed it because it created continuous stress especially outside working hours: more than half of the messages I receive come from people who write from time zones completely different from mine, and so often I receive messages at 8, 9 or 10 PM that seem urgent to me, but in reality they are not. Actually all messages that arrive to me, now, are non-critical: if the site goes down or there are serious problems, there are those who immediately get to work to bring everything back online, and there are also those who send a communication to our users.
 
-E in ogni caso, per le cose urgenti e critiche, avevo bisogno di usare un protocollo per filtrare tutto il resto. Per questo, Telegram con il mio account/numero di lavoro non è più su iPhone, ma c'è solo **Signal**, a cui i colleghi possono scrivermi se c'è qualcosa di grave o urgente. Tutte le conversazioni verso l'esterno rimangono su Telegram e quelle interne 'normali' nel nostro server di chat (le cui notifiche ho attive sull'iPhone) ma sono filtrate tramite un'estensiva configurazione degli stati di concentrazione di iOS, di cui però parlerò un'altra volta.
+And in any case, for urgent and critical things, I needed to use a protocol to filter everything else. For this reason, Telegram with my work account/number is no longer on iPhone, but there is only **Signal**, to which colleagues can write to me if there is something serious or urgent. All conversations towards the outside remain on Telegram and the internal 'normal' ones in our chat server (whose notifications I have active on the iPhone) but are filtered through an extensive configuration of iOS concentration states, of which however I will talk another time.
 
-In generale, email e Telegram, pensandoci a freddo e a posteriori, sono due fattori che mi hanno portato al burnout di qualche settimana fa, in cui avevo uno stato di ansia generalizzato.
+In general, email and Telegram, thinking about it coldly and with hindsight, are two factors that led me to the burnout of a few weeks ago, in which I had a generalized state of anxiety.
 
-Siamo ancora in una pandemia, che ci sta causando moltissimi problemi psicologici: ci sentiamo più sicuri a casa, con poche persone intorno a noi, abbiamo ansia sociale (io ne ho moltissima quando entro nei centri commerciali affollati). Il sovraccaricamento da informazioni, soprattutto nel mondo crypto in cui in un giorno si possono perdere decine di eventi importanti, è un **problema serio**. Dopo aver provato cosa vuol dire _'stare a mille'_, ho deciso di fare tutto con più calma, concentrazione e serenità.
+We are still in a pandemic, which is causing us many psychological problems: we feel safer at home, with few people around us, we have social anxiety (I have a lot when I enter crowded shopping centers). Information overload, especially in the crypto world where in a day you can miss dozens of important events, is a **serious problem**. After trying what it means to *'be at a thousand'*, I decided to do everything with more calm, concentration and serenity.
 
-E vediamo cosa succede.
+And let's see what happens.

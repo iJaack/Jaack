@@ -1,5 +1,5 @@
 ---
-title: "La scrittura, per me"
+title: "Writing, for me"
 layout: post
 date: 2021-10-29 20:00
 image: /assets/images/writing.jpg
@@ -8,41 +8,36 @@ tag:
 - life
 category: blog
 author: jaack
-description: Non lo faccio più da tempo.
+description: I haven't done it for a long time.
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+I started writing [talking about technology](https://tweaknology.org). I found a world waiting for me that I always wanted to know. I thought I was on top of the world. And instead here I am, thinking about something completely different.
 
+Since I started writing, I found writing as a way to **vent** without really doing it. I miss it so much, doing it by putting myself into the story.
 
-Ho iniziato a scrivere [parlando di tecnologia](https://tweaknology.org). Ho trovato un mondo ad aspettarmi che avrei sempre voluto conoscere. Pensavo di essere sul tetto del mondo. E invece ora sono qui, a pensare a tutt’altro.
+Now I haven't done it for a long time.
 
-Da quando ho iniziato a scrivere, ho trovato la scrittura come un modo per **sfogarmi** senza farlo davvero. Mi manca tanto, farlo mettendo me stesso dentro la storia.
+Maybe that's why I feel *empty*.
 
-Ora non lo faccio più da tempo.
+I feel like there is always a little piece of me missing, which doesn't make me happy as I was before, even when I had much less.
 
-Forse è per questo che mi sento _vuoto_.
+Now I have a fabulous job, a stable life, but also many 'grown-up' problems.
 
-Mi sento come se ci fosse sempre un pezzettino di me che manca, che non mi rende felice come ero prima, anche quando avevo molto meno.
+I don't know if it changes anything that these 'grown-up' problems are more complex and include more people and with more experience in fields I don't know at all. What changes, however, is the fact that I feel less and less able to tell them to myself as if they were stories, which usually I would have told others.
 
-Ora ho un lavoro favoloso, una vita stabile, ma anche tanti problemi ‘da grandi’.
+I always liked telling stories because it was my way of demystifying past problems.
 
-Non so se cambia qualcosa il fatto che questi problemi ‘da grandi’ siano più complessi e includano più persone e con più esperienza in campi che non conosco minimamente. Quello che però cambia è il fatto che io mi sento sempre meno in grado di raccontarmeli come se fossero delle storie, che di solito avrei raccontato ad altri.
+But now these problems, the 'grown-up' ones indeed, are so complex that I would take hours to reconstruct everything. I did a pilot project, but it was the only one. Then there were glimpses, even recent ones, but I never knew how to give continuity to my thoughts again.
+I envy and respect what **Riccardo Palombo** is doing with his *Pressappoco*, which is exactly what I had in mind with *Zibaldone*. A cauldron without interruption on my flow of thoughts. Which yes, would have been public, but whose purpose should never have been to attract an audience, but to make my thoughts transparent to everyone, and therefore also to me as a consequence. Public, so as to make them indelible.
 
-Mi è sempre piaciuto raccontare storie perché era il mio modo di demistificare problemi passati.
+The reason why I started writing is also because I didn't know how to speak.
 
-Ma ora questi problemi, quelli ‘da grandi’ appunto, sono talmente complessi che impiegherei ore a ricostruire tutto. Un progetto pilota l’ho fatto, ma è stato l’unico. Poi ci sono stati degli sprazzi, anche recenti, ma non ho mai più saputo dare continuità ai miei pensieri.
-Invidio e stimo quello che sta facendo **Riccardo Palombo** con il suo _Pressappoco_, che è esattamente quello che avevo in mente con lo _Zibaldone_. Un calderone senza soluzione di continuità sul mio flusso di pensieri. Che sì, sarebbe stato pubblico, ma il cui scopo non sarebbe mai dovuto essere quello di attrarre pubblico, ma di rendere trasparenti i miei pensieri a tutti, e quindi anche a me di conseguenza. Pubblici, così da renderli indelebili.
+And still I am not capable.
 
-Il motivo per cui ho iniziato a scrivere è anche perché non sapevo parlare.
+I often face discussions via message, even if now I believe I have improved, because with words, those spoken and not written, I am just not good.
 
-E tutt’ora non sono capace.
+I believe that the tapping of the keyboard favors the flow of my thoughts, boh, I wouldn't know.
 
-Affronto le discussioni spesso via messaggio, anche se ora credo di essere migliorato, perché a parole, quelle dette e non scritte, non sono proprio bravo.
-
-Credo che il ticchettio della tastiera favorisca il flusso dei miei pensieri, boh, non saprei.
-
-O forse il fatto che quando scrivo, a meno che non sia in una chat, non sto davvero parlando con nessuno. Comunque, anche in una chat, fino a che non premo invio, sto parlando solo con me stesso.
+Or maybe the fact that when I write, unless I am in a chat, I am not really talking to anyone. Anyway, even in a chat, until I press enter, I am only talking to myself.
