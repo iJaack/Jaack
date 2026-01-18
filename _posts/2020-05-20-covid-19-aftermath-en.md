@@ -12,11 +12,6 @@ description: Why are people enjoying watching are people talking random all day 
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
-
-
 
 *This is an extension of the talk I gave on e-learning platform iBicocca
 on May 19th, 2020. It's not complete and cannot substitute the 1-hour talk in

@@ -1,5 +1,5 @@
 ---
-title: "Blockchain 101: La nascita di bitcoin"
+title: "Blockchain 101: The Birth of bitcoin"
 layout: post
 date: 2020-06-02 12:00
 image: /assets/images/bitcoin-timeline.png
@@ -8,42 +8,37 @@ tag:
 - blockchain
 category: blog
 author: jaack
-description: Per capire come siamo arrivati a questo punto, però, è necessario fare alcuni passi indietro ed analizzare la storia della blockchain dall’inizio.
+description: To understand how we got to this point, however, it is necessary to take a few steps back and analyze the history of blockchain from the beginning.
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+Few will remember 2019 as the year of **blockchain**: yes, of course, some smartphone manufacturers (HTC, Samsung, for example) announced smartphones with direct support for the new technology.
 
+Google, Mercedes and Ford announced pilot programs for the development of some products and services, but every time some company announces this type of development, it is never clear in detail what type of optimization they are developing.
 
-Pochi ricorderanno il 2019 come l’anno della **blockchain**: sì, certo, alcuni produttori di smartphone (HTC, Samsung, per esempio) hanno annunciato smartphone con supporto diretto alla nuova tecnologia.
+Surely everyone associates bitcoin and cryptocurrencies with 2017, the year in which bitcoin reached a valuation per single unit of about 20,000 dollars. But 2018 and 2019 were two years of profound changes for the blockchain industry. Projects with advanced technological roots made huge strides forward, and the sector saw a natural selection of the most interesting projects.
 
-Google, Mercedes e Ford hanno annunciato dei programmi pilota di sviluppo di alcuni prodotti e servizi, ma ogni volta che qualche azienda annuncia questo tipo di sviluppo, non è mai chiaro nel dettaglio quale sia il tipo di ottimizzazione che stiano sviluppando.
-
-Sicuramente tutti associano il bitcoin e le criptovalute al 2017, anno in cui bitcoin ha raggiunto una valutazione per singola unità di circa 20.000 dollari. Ma il 2018 e il 2019 sono stati due anni di profondi cambiamenti per l’industria blockchain. I progetti con radici tecnologiche avanzate hanno fatto enormi passi in avanti, e il settore ha visto una selezione naturale dei progetti più interessanti.
-
-Per capire come siamo arrivati a questo punto, però, è necessario fare alcuni passi indietro ed analizzare la storia della blockchain dall’inizio.
+To understand how we got to this point, however, it is necessary to take a few steps back and analyze the history of blockchain from the beginning.
 
 ---
 
-Tutti associano il bitcoin a Satoshi Nakamoto, una figura mistica simile al poeta greco Omero: un nome che identifica una persona, ma che potrebbe in realtà rappresentare un movimento, un gruppo di persone che insieme ha concepito l’idea alla base del bitcoin.
+Everyone associates bitcoin with Satoshi Nakamoto, a mystical figure similar to the Greek poet Homer: a name that identifies a person, but which could actually represent a movement, a group of people who together conceived the idea behind bitcoin.
 
-<img class="image" src="{{base}}/assets/images/bitcoin-timeline.png" alt="Come è nato bitcoin, dagli anni '80">
+<img class="image" src="{{base}}/assets/images/bitcoin-timeline.png" alt="How bitcoin was born, from the 80s">
 
-La realtà è ben diversa: come tutte le invenzioni che si rispettino, anche bitcoin (e la blockchain, di conseguenza) è il risultato di una serie di invenzioni tecnologiche, di movimenti culturali e di situazioni politico-sociali che trovano riscontro nei lontani anni ’80, precisamente nel 1981. Nel febbraio di quell’anno **David Chaum**, informatico e crittografo , pubblicò un paper, *“Untraceable Electronic Mail, Return Addresses, and Digital Pseudonyms”*, descrivendo la sua idea di una rete in cui gli utenti, attraverso degli pseudonimi, potessero scambiare informazioni e esprimere il consenso su processi democratici (nel paper si fa l’esempio di applicazione di un’elezione), senza il bisogno di un’*autorità universalmente riconosciuta*. A questo paper ne fece seguito un’altro, nel 1982 (*“Blind signatures for untraceable payments”*), che descriveva in modo dettagliato un sistema di moneta digitale, in grado di raggiungere il consenso tra due o più nodi che non si conoscono, registrano la marca temporale delle transazioni effettuate in un registro a blocchi. David Chaum aveva descritto la blockchain, 25 anni prima che la blockchain come la conosciamo oggi sarebbe andata online.
+The reality is quite different: like all inventions worthy of respect, bitcoin (and the blockchain, consequently) is also the result of a series of technological inventions, cultural movements and political-social situations that find feedback in the distant 80s, precisely in 1981. In February of that year **David Chaum**, computer scientist and cryptographer, published a paper, *“Untraceable Electronic Mail, Return Addresses, and Digital Pseudonyms”*, describing his idea of ​​a network in which users, through pseudonyms, could exchange information and express consent on democratic processes (in the paper the example of application of an election is made), without the need for a *universally recognized authority*. This paper was followed by another, in 1982 (*“Blind signatures for untraceable payments”*), which described in detail a digital currency system, capable of reaching consensus between two or more nodes that do not know each other, recording the timestamp of transactions made in a block register. David Chaum had described the blockchain, 25 years before the blockchain as we know it today went online.
 
-Il paper dell’’82 è ritenuto essere il manifesto di partenza del movimento cypherpunk su internet, un movimento composto da attivisti, informatici e appassionati che metteva al centro la libertà e la privacy dell’individuo attraverso l’utilizzo di codice informatico.
+The '82 paper is considered to be the starting manifesto of the cypherpunk movement on the internet, a movement composed of activists, computer scientists and enthusiasts who put the freedom and privacy of the individual at the center through the use of computer code.
 
-Nel 1989, Chaum fondò **DigiCash**, la prima società di moneta elettronica (eCash). Alcuni clienti di DigiCash, che utilizzarono la moneta elettronica, furono la Deutsche Bank, Credit Suisse e Bank Austria. Nel 1999, Digicash dichiarò bancarotta e vendette tutti i suoi asset a eCash Technologies, un’altra società di moneta elettronica che non ebbe molta fortuna.
+In 1989, Chaum founded **DigiCash**, the first electronic money company (eCash). Some DigiCash customers, who used electronic money, were Deutsche Bank, Credit Suisse and Bank Austria. In 1999, Digicash declared bankruptcy and sold all its assets to eCash Technologies, another electronic money company that did not have much luck.
 
-Ma ormai il terreno era stato preparato. Nel marzo del 1997 Adam Back, anche lui informatico e crittografo, pubblicò una newsletter sulla mailing list cypherpunks descrivendo l’idea di **hashcash**: un algoritmo che poteva essere integrato con DigiCash e aveva esattamente il pezzo che alla moneta di Chaum mancava: un proof-of work (basato sulla prova di lavoro computazionale) usato per limitare email spam e attacchi DDoS. In parole semplici, la verifica di autenticità del mittente veniva assicurata da un task effettuato dal calcolatore. Oggi, un sistema molto simile presente ovunque su internet è il modulo Captcha (“Non sono un robot”).
+But by now the ground had been prepared. In March 1997 Adam Back, also a computer scientist and cryptographer, published a newsletter on the cypherpunks mailing list describing the idea of **hashcash**: an algorithm that could be integrated with DigiCash and had exactly the piece that Chaum's currency lacked: a proof-of-work (based on proof of computational work) used to limit spam emails and DDoS attacks. Simply put, the verification of authenticity of the sender was ensured by a task performed by the computer. Today, a very similar system present everywhere on the internet is the Captcha module (“I am not a robot”).
 
 ---
 
-Il ‘Day Zero’ della blockchain è da identificarsi venerdì 31 ottobre 2008, ore 14:10. In quel preciso istante, Satoshi Nakamoto pubblicò un messaggio sulla cryptography mailing list, descrivendo un progetto a cui stava lavorando: un *sistema di moneta elettronica che è pienamente peer-to-peer, senza alcun intermediario*. Era passato poco più di un mese dall’annuncio, il 15 settembre 2008, della bancarotta di Lehmann Brothers, il momento che storicamente viene riconosciuto come l’inizio della crisi finanziaria che ha portato alla più grande recessione mondiale dagli anni ’20. Satoshi Nakamoto e gli attivisti del movimento cypherpunk in quel periodo si facevano portavoce di idee anarchico-liberali, secondo le quali per riportare l’individuo alla libertà finanziaria era necessario azzerare il potere delle banche e decentralizzare il potere nelle mani dei singoli.
+The 'Day Zero' of blockchain is to be identified on Friday, October 31, 2008, 2:10 PM. In that precise instant, Satoshi Nakamoto published a message on the cryptography mailing list, describing a project he was working on: an *electronic money system that is fully peer-to-peer, without any intermediary*. Previously on September 15, 2008, the bankruptcy of Lehmann Brothers was announced, the moment that is historically recognized as the beginning of the financial crisis that led to the greatest global recession since the 20s. Satoshi Nakamoto and the activists of the cypherpunk movement at that time were spokespersons for anarcho-liberal ideas, according to which to restore the individual to financial freedom it was necessary to zero the power of banks and decentralize power into the hands of individuals.
 
-Il bitcoin è, in questo senso, oltre che una rivoluzione tecnologica, anche e soprattutto una rivoluzione culturale, che cambia il paradigma secondo il quale i rapporti di fiducia tra due o più persone devono necessariamente essere controllati e verificati da un terzo intermediario che ha un’autorità specifica nel farlo.
+Bitcoin is, in this sense, as well as a technological revolution, also and above all a cultural revolution, which changes the paradigm according to which trust relationships between two or more people must necessarily be controlled and verified by a third intermediary who has specific authority to do so.
 
-E la blockchain, dal 2008, è diventata molto di più: tra vicissitudini interne, nuovi framework e soluzioni alternative, nel corso della serie scopriremo che la strada verso la decentralizzazione del web è tortuosa e per nulla scontata.
+And the blockchain, since 2008, has become much more: between internal vicissitudes, new frameworks and alternative solutions, during the series we will discover that the road to the decentralization of the web is tortuous and by no means obvious.

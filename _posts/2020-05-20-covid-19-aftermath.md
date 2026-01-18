@@ -1,5 +1,5 @@
 ---
-title: "COVID-19 Aftermath: Rise of communities and office productivity"
+title: "Il dopo COVID-19: L'ascesa delle community e della produttività in ufficio"
 layout: post
 date: 2020-05-20 22:30
 image: /assets/images/projects/Covid-19-aftermath-communites/covid-19-aftermath-cover.png
@@ -8,105 +8,105 @@ tag:
 - culture
 category: projects
 author: jaack
-description: Why are people enjoying watching are people talking random all day long?
+description: Perché alla gente piace guardare persone che parlano a caso tutto il giorno?
 published: true
 lang: it
 ---
 
-*This is an extension of the talk I gave on e-learning platform iBicocca
-on May 19th, 2020. It's not complete and cannot substitute the 1-hour talk in
-terms of content and detail.*
+*Questa è un'estensione del talk che ho tenuto sulla piattaforma di e-learning iBicocca
+il 19 maggio 2020. Non è completo e non può sostituire il talk di 1 ora in
+termini di contenuto e dettaglio.*
 
-**[Download slides]({{base}}/assets/docs/COVID-19-Aftermath_Rise_of_communities_and_office_productivity_2020-05-19.pdf)**
+**[Scarica le slide]({{base}}/assets/docs/COVID-19-Aftermath_Rise_of_communities_and_office_productivity_2020-05-19.pdf)**
 
-# Preface
+# Prefazione
 
-**SARS-CoV-2**, the virus that's responsible for the novel coronavirus disease,
-better know as **COVID-19**, has surely changed our lives.
+**SARS-CoV-2**, il virus responsabile della nuova malattia da coronavirus,
+meglio nota come **COVID-19**, ha sicuramente cambiato le nostre vite.
 
 <img width="300" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/SARS-CoV-2_without_background.png/1920px-SARS-CoV-2_without_background.png"/>
-<caption class="caption">Sars-CoV-2 on Wikipedia</caption>
+<caption class="caption">Sars-CoV-2 su Wikipedia</caption>
 
-One way to look at the COVID-19 pandemic is to see it narrated by TIME's journalists. Below, you can see three covers that talk about the virus. Thing is,
-only the first two are about the 2020 pandemic, and the third is from 2017, including an articles written by Bill Gates about *How to keep the world safe*.
+Un modo per guardare alla pandemia COVID-19 è vederla narrata dai giornalisti del TIME. Qui sotto, potete vedere tre copertine che parlano del virus. Il punto è che
+solo le prime due riguardano la pandemia del 2020, e la terza è del 2017, e include un articolo scritto da Bill Gates su *Come mantenere il mondo al sicuro*.
 
-<img class="image" src="{{base}}/assets/images/projects/Covid-19-aftermath-communites/covid-19-time-covers.png" alt="TIME Covers, 2020 (first two) and 2017"/>
+<img class="image" src="{{base}}/assets/images/projects/Covid-19-aftermath-communites/covid-19-time-covers.png" alt="Copertine TIME, 2020 (prime due) e 2017"/>
 
-Well, if we got to be honest, we were not ready for this pandemic. Certainly, not from a sanitary point of view. We could argue that no one could expect a disease that would spread faster that SARS or MERS. We're talking about levels not seen in the 21st century. The nearest epidemic like this dates back to 1968: the **Hong Kong flu**, with a death tool estimated to have been anywhere from **1 to 4 million people globally**.
+Beh, se dobbiamo essere onesti, non eravamo pronti per questa pandemia. Certamente, non dal punto di vista sanitario. Potremmo sostenere che nessuno poteva aspettarsi una malattia che si diffondesse più velocemente della SARS o della MERS. Stiamo parlando di livelli mai visti nel 21° secolo. L'epidemia più vicina a questa risale al 1968: l'**influenza di Hong Kong**, con un bilancio delle vittime stimato tra **1 e 4 milioni di persone a livello globale**.
 
-Of course, I do not know what it's been like to be in a pandemic in the 60s, but what I do know is that the reproduction rate (i.e. the rate at which the virus infected people) was lower than the SARS-CoV-2. We could say that this is caused by the characteristics of the virus, but **densification** and **globalisation** are two other major causes that can enable a virus to spread more easily.
+Certo, non so come sia stato vivere una pandemia negli anni '60, ma quello che so è che il tasso di riproduzione (cioè il tasso al quale il virus infettava le persone) era inferiore a quello del SARS-CoV-2. Potremmo dire che ciò è causato dalle caratteristiche del virus, ma la **densificazione** e la **globalizzazione** sono altre due cause principali che possono consentire a un virus di diffondersi più facilmente.
 
-The fact is, that we were actually **more** prepared than in previous times, but not from a sanitary point of view, nor from a sociological one - not from a political one, surely. We had the **technology** ready to make a change in all the aspects of our lives.
+Il fatto è che eravamo effettivamente **più** preparati rispetto ai tempi passati, ma non da un punto di vista sanitario, né da uno sociologico - non da uno politico, sicuramente. Avevamo la **tecnologia** pronta per fare un cambiamento in tutti gli aspetti delle nostre vite.
 
-# Content and streaming
+# Contenuti e streaming
 
-Let's take the most evident example of all: **video streaming**. It seems like a futile example to make, but the ability to actually do something when stuck at home (such as finishing the entire Netflix catalogue, watching all pro players stream Fortnite plays or playing all the games queued for months or years) has been the best medicine for non-positive people in quarantine. Event the **World Health Organisation** recommended playing and watching videos as a way to decompress and escape reality for a while (though this info isn't anywhere to be found now).
+Prendiamo l'esempio più evidente di tutti: lo **streaming video**. Sembra un esempio futile da fare, ma la capacità di fare effettivamente qualcosa quando si è bloccati a casa (come finire l'intero catalogo Netflix, guardare tutti i pro player che trasmettono partite di Fortnite o giocare a tutti i giochi in coda da mesi o anni) è stata la migliore medicina per le persone non positive in quarantena. Persino l'**Organizzazione Mondiale della Sanità** ha raccomandato di giocare e guardare video come un modo per decomprimere e sfuggire alla realtà per un po' (anche se questa informazione non si trova da nessuna parte ora).
 
-And people have been escaping reality, as data shows. Below is an analysis published by StreamElements and Arsenal.gg in April, that tracks content on Twitch, Facebook Gaming, YouTube Gaming and Mixer, mostly gaming streaming platforms.
+E le persone sono fuggite dalla realtà, come mostrano i dati. Qui sotto c'è un'analisi pubblicata da StreamElements e Arsenal.gg in aprile, che traccia i contenuti su Twitch, Facebook Gaming, YouTube Gaming e Mixer, piattaforme di streaming prevalentemente di gioco.
 
-<img class="image" src="{{base}}/assets/images/projects/Covid-19-aftermath-communites/streaming-gaming-april-2020.png" alt="Gaming streaming on all platforms, April 2020"/>
+<img class="image" src="{{base}}/assets/images/projects/Covid-19-aftermath-communites/streaming-gaming-april-2020.png" alt="Streaming di gioco su tutte le piattaforme, aprile 2020"/>
 
-The evidence is a surge in video content fruition of all types, but if we look closer, we can see that the biggest jump was made by content **outside** of gaming, on platforms that mainly host gaming content. Why is that?
+L'evidenza è un'impennata nella fruizione di contenuti video di ogni tipo, ma se guardiamo più da vicino, possiamo vedere che il salto più grande è stato fatto dai contenuti **fuori** dal gaming, su piattaforme che ospitano principalmente contenuti di gaming. Perché?
 
-<img class="image" src="{{base}}/assets/images/projects/Covid-19-aftermath-communites/twitch-streaming-other-april-2020.png" alt="Other streaming on Twitch, April 2020"/>
+<img class="image" src="{{base}}/assets/images/projects/Covid-19-aftermath-communites/twitch-streaming-other-april-2020.png" alt="Altri streaming su Twitch, aprile 2020"/>
 
-As wee see, there's been an incredible **149%** jump year-over-year, lead by the **Just Chatting** and **Music** categories. The first category includes all things talking: talk shows, simple chatting about random topics. The second one is about music performances, that are surely hosted on streaming platforms to compensate the lack of physical tours. If the 'Music' category is somewhat predictable to think it may jump in time like these, the same cannot be said about 'Just Chatting'.
-Why are people enjoying watching are people talking random all day long?
+Come vediamo, c'è stato un incredibile salto del **149%** anno su anno, guidato dalle categorie **Just Chatting** e **Music**. La prima categoria include tutte le cose parlate: talk show, chiacchiere semplici su argomenti casuali. La seconda riguarda le performance musicali, che sono sicuramente ospitate su piattaforme di streaming per compensare la mancanza di tour fisici. Se è in qualche modo prevedibile pensare che la categoria 'Music' possa saltare in tempi come questi, non si può dire lo stesso di 'Just Chatting'.
+Perché alla gente piace guardare persone che parlano a caso tutto il giorno?
 
-# Wandering on the internet
+# Vagabondare su internet
 
-I wandered on the internet for a few weeks, in search of the pattern that connected people who enjoyed watching nothing in particular. Then I saw **Animal Talking**, a talk show hosted by video game journalist **Gary Whitta**, on Animal Crossing: New Horizons. I started watching a few minutes and then I got completely captivated by the format. I almost didn't care about what was said by the host and the invitees, but I found myself really focused on the crowd-y place. I was looking at big-head avatars with strange outfits, laughing, clapping and wandering around the set that was, actually, the house in Gary Whitta's island in the game.
-I felt *cozy*, not thinking about anything else than those laughs and those cute avatars.
+Ho vagabondato su internet per qualche settimana, alla ricerca dello schema che collegava le persone a cui piaceva guardare nulla in particolare. Poi ho visto **Animal Talking**, un talk show condotto dal giornalista di videogiochi **Gary Whitta**, su Animal Crossing: New Horizons. Ho iniziato a guardarne qualche minuto e poi sono stato completamente catturato dal formato. Quasi non mi importava di quello che veniva detto dal conduttore e dagli invitati, ma mi ritrovavo davvero concentrato sul luogo affollato. Guardavo avatar con la testa grande con abiti strani, che ridevano, applaudivano e vagavano per il set che era, in realtà, la casa nell'isola di Gary Whitta nel gioco.
+Mi sentivo *a mio agio*, non pensando a nient'altro che a quelle risate e a quegli avatar carini.
 
 <iframe width="900px" height="500px" src="https://player.twitch.tv/?channel=garywhitta&parent=www.example.com"></iframe>
 
-Then, while I surfed for new memes on Reddit, I found some live streamings about people doing very simple things on a roll. **Reddit Live** lets a user create a stream that includes a countdown: if the stream gets upvotes, comments, cheers or tips, the countdown gets set back for a few seconds. A person could go on for hours, if people keep coming and interacting with it. I really got attracted by a guy that was playing table tennis against a wall. He was all sweat-y, like he had been going on for hours. And people kept coming and telling him to go on for a walk, or to incite him. There, I saw an ephemeral community being created the moment that guy created the live stream. A community that will vanish once the live stream is over, but that may meet again in other (virtual) places.
+Poi, mentre navigavo alla ricerca di nuovi meme su Reddit, ho trovato alcuni live streaming di persone che facevano cose molto semplici di fila. **Reddit Live** consente a un utente di creare uno streaming che include un conto alla rovescia: se lo streaming riceve voti positivi, commenti, applausi o mance, il conto alla rovescia viene riportato indietro di qualche secondo. Una persona potrebbe andare avanti per ore, se le persone continuano ad arrivare e ad interagire con essa. Sono stato davvero attratto da un ragazzo che giocava a ping pong contro un muro. Era tutto sudato, come se andasse avanti da ore. E la gente continuava ad arrivare e a dirgli di andare a fare una passeggiata, o a incitarlo. Lì, ho visto una comunità effimera crearsi nel momento in cui quel ragazzo ha creato il live streaming. Una comunità che svanirà una volta terminato il live streaming, ma che potrebbe incontrarsi di nuovo in altri luoghi (virtuali).
 
 <img class="image" src="{{base}}/assets/images/projects/Covid-19-aftermath-communites/reddit-live.png" alt="Reddit Live"/>
 
-Last but not least, a few weeks ago I started playing **Fortnite** to combat boredom, lack of sleep, and to forget the fact that I could not see and be with my girlfriend, just few kilometers away, due to the [strict lockdown that Italy was in]({{base}}/hate-pill-against-coronavirus-isolation/).
-I started playing with my **13-year-old cousin**, that has walked me through all the tricks and strategies needed to play and win. And then, as I became more and more Fortnite-dependent, Epic Games (the game's developer) announced that **singer Travis Scott** would perform a virtual concert on the game.
+Ultimo ma non meno importante, qualche settimana fa ho iniziato a giocare a **Fortnite** per combattere la noia, la mancanza di sonno e per dimenticare il fatto che non potevo vedere e stare con la mia ragazza, a pochi chilometri di distanza, a causa del [rigido lockdown in cui si trovava l'Italia]({{base}}/hate-pill-against-coronavirus-isolation/).
+Ho iniziato a giocare con mio **cugino di 13 anni**, che mi ha guidato attraverso tutti i trucchi e le strategie necessarie per giocare e vincere. E poi, man mano che diventavo sempre più Fortnite-dipendente, Epic Games (lo sviluppatore del gioco) ha annunciato che il **cantante Travis Scott** avrebbe tenuto un concerto virtuale nel gioco.
 
-I had missed the first concert hosted by **deadmau5**, and I couldn't let myself miss this one. I jumped in and watched it twice. Actually, I haven't only watched it: I experienced it. I could jump, run and move myself while a giant Travis Scott danced over the water and then sat on a planet with an astronaut-like outfit. And the better part of it was that I was not doing it alone: I was commenting every move, every aspect with my group of friends on Fornite, real-time. We were there, but we weren't. It was special.
+Avevo perso il primo concerto ospitato da **deadmau5**, e non potevo permettermi di perdere questo. Mi sono buttato dentro e l'ho guardato due volte. In realtà, non l'ho solo guardato: l'ho vissuto. Potevo saltare, correre e muovermi mentre un gigantesco Travis Scott ballava sull'acqua e poi si sedeva su un pianeta con un vestito da astronauta. E la parte migliore è stata che non lo stavo facendo da solo: stavo commentando ogni mossa, ogni aspetto con il mio gruppo di amici su Fornite, in tempo reale. Eravamo lì, ma non lo eravamo. È stato speciale.
 
-<img class="image" src="{{base}}/assets/images/projects/Covid-19-aftermath-communites/fortnite-travis-scott-concert.png" alt="Travis Scott concert on Fortnite, 2020"/>
+<img class="image" src="{{base}}/assets/images/projects/Covid-19-aftermath-communites/fortnite-travis-scott-concert.png" alt="Concerto di Travis Scott su Fortnite, 2020"/>
 
-So I started listing a few key points of what I learned:
-- People are enjoying video content more than usual
-- People are enjoying extra-gaming content more than usual
-- People are finding new ways to get engaged in funny and original types of content (Reddit Live, Twitch talk show on Animal Crossing, pro players streaming, Fortnite concerts)
-- People are living in **virtual reality**, and that’s going to stick (broad meaning of virtual reality here)
+Così ho iniziato a elencare alcuni punti chiave di ciò che ho imparato:
+- Le persone si godono i contenuti video più del solito
+- Le persone si godono i contenuti extra-gaming più del solito
+- Le persone stanno trovando nuovi modi per essere coinvolte in tipi di contenuti divertenti e originali (Reddit Live, talk show su Twitch su Animal Crossing, streaming di pro player, concerti su Fortnite)
+- Le persone vivono nella **realtà virtuale**, e questo rimarrà (significato ampio di realtà virtuale qui)
 
-# Anatomy of a community
+# Anatomia di una community
 
-In my job as a community manager for [Campus Party](italia.campus-party.org), I
-got to learn how communities are created, how they grow and how they succeed. I don't have all the answers, but I started designing the patterns I found.
+Nel mio lavoro come community manager per [Campus Party](italia.campus-party.org), ho
+imparato come si creano le community, come crescono e come hanno successo. Non ho tutte le risposte, ma ho iniziato a progettare i modelli che ho trovato.
 
-<img class="image" src="{{base}}/assets/images/projects/Covid-19-aftermath-communites/anatomy-community.png" alt="Anatomy of a community"/>
+<img class="image" src="{{base}}/assets/images/projects/Covid-19-aftermath-communites/anatomy-community.png" alt="Anatomia di una community"/>
 
-Communities can be **offline** or **online**, and can be **structured or unstructured**, and anything in between. Those that I experienced and described above were communities: ephemeral, virtual communities. Definitely **unstructured** and completely **online**.
+Le community possono essere **offline** o **online**, e possono essere **strutturate o non strutturate**, e qualsiasi cosa nel mezzo. Quelle che ho vissuto e descritto sopra erano community: community effimere e virtuali. Decisamente **non strutturate** e completamente **online**.
 
-As defined on Wikipedia, a community is a *"social unit with commonalities such as norms, religion, values, customs or identity."* We know that communities share a single interest a meet in a specific place. Before the pandemic, that place was a co-working, an office during after-hours, a pub. Somewhere to be together and talk about the same things that everyone is interested in.
+Come definito su Wikipedia, una community è un *"unità sociale con comunanze come norme, religione, valori, costumi o identità."* Sappiamo che le community condividono un singolo interesse e si incontrano in un luogo specifico. Prima della pandemia, quel luogo era un co-working, un ufficio dopo l'orario di lavoro, un pub. Un posto dove stare insieme e parlare delle stesse cose a cui tutti sono interessati.
 
-Now that the pandemic has basically **erased** the chance of meet in crowded places and get together with more than a dozen people, communities are meeting in virtual places, like **Zoom** and **Google Meet**. But, aside from few exceptions, it's not ideal to be in a 50-participants Zoom videoconference and working from home has changed the time frames we usually work in. That UX Meetup on Wednesday after-hours is not an option anymore, even if it's taking place virtually. Because the office community, the most intimate and strong community beyond the family, is ever more present.
+Ora che la pandemia ha praticamente **cancellato** la possibilità di incontrarsi in luoghi affollati e riunirsi con più di una dozzina di persone, le community si incontrano in luoghi virtuali, come **Zoom** e **Google Meet**. Ma, a parte poche eccezioni, non è l'ideale essere in una videoconferenza Zoom con 50 partecipanti e lavorare da casa ha cambiato gli orari in cui lavoriamo di solito. Quel Meetup UX il mercoledì dopo il lavoro non è più un'opzione, anche se si svolge virtualmente. Perché la community dell'ufficio, la community più intima e forte oltre alla famiglia, è sempre più presente.
 
-<img class="image" src="{{base}}/assets/images/projects/Covid-19-aftermath-communites/sococo-office-community.png" alt="Sococo, an example of office community"/>
+<img class="image" src="{{base}}/assets/images/projects/Covid-19-aftermath-communites/sococo-office-community.png" alt="Sococo, un esempio di community d'ufficio"/>
 
-As people are learning how to interact in virtual communities, we’re starting to see a growth of communities that combine multiple approaches, using multiple tools and platforms to maintain the engagement. A community is not a meeting place anymore, it’s a way of being. What one does defines which communities s/he’s in, not the other way around. Community interests are shared across all platforms, that are just a means of best expressing different types of content.
+Mentre le persone imparano a interagire nelle community virtuali, stiamo iniziando a vedere una crescita di community che combinano molteplici approcci, utilizzando molteplici strumenti e piattaforme per mantenere il coinvolgimento. Una community non è più un luogo di incontro, è un modo di essere. Ciò che uno fa definisce in quali community si trova, non il contrario. Gli interessi della community sono condivisi su tutte le piattaforme, che sono solo un mezzo per esprimere al meglio diversi tipi di contenuti.
 
-So the [**sense of community**](http://www.wright-house.com/psychology/sense-of-community.html), as theorised by McMillan in 1986, is changing in its meaning. The *shared emotional connection*, that typically varies among communities, is shared across **all communities**, and it's the basic need to *feel safe, to feel respected and not to feel alone*. And the needs fulfilled by a community are different from one another, but with the same purpose: to be together and fight this (the pandemic) as one. And this is why people are watching **Animal Talking**, Gary Whitta's talk show on Animal Crossing: they need to laugh, to not have to think about anything, to be free for even a single moment. And even watching someone throw a ball at a wall for hours is useful, because it lets people think about that. Everything to be distracted.
+Quindi il [**senso di comunità**](http://www.wright-house.com/psychology/sense-of-community.html), come teorizzato da McMillan nel 1986, sta cambiando nel suo significato. La *connessione emotiva condivisa*, che varia tipicamente tra le community, è condivisa tra **tutte le community**, ed è il bisogno fondamentale di *sentirsi al sicuro, sentirsi rispettati e non sentirsi soli*. E i bisogni soddisfatti da una community sono diversi l'uno dall'altro, ma con lo stesso scopo: stare insieme e combattere questo (la pandemia) come uno solo. Ed è per questo che le persone guardano **Animal Talking**, il talk show di Gary Whitta su Animal Crossing: hanno bisogno di ridere, di non dover pensare a nulla, di essere liberi anche solo per un momento. E anche guardare qualcuno lanciare una palla contro un muro per ore è utile, perché permette alle persone di pensare a quello. Tutto per distrarsi.
 
-People are enjoying content and producing content and sharing content more than ever now, and the emotional connection that's created when a small group of people feel close to each other just by commenting the same funny video, that's a community. Right now, everyone is potentially a community, because that's what the world needs now. And that's OK.
+Le persone si godono i contenuti e producono contenuti e condividono contenuti più che mai ora, e la connessione emotiva che si crea quando un piccolo gruppo di persone si sente vicino l'uno all'altro solo commentando lo stesso video divertente, quella è una community. In questo momento, ognuno è potenzialmente una community, perché è ciò di cui il mondo ha bisogno ora. E va bene così.
 
-Laugh. Watch. Enjoy. Stay safe, guys.
+Ridete. Guardate. Divertitevi. State al sicuro, ragazzi.
 
-## Recommended articles
+## Articoli consigliati
 - [Compagnia tiene una riunione di prova su Animal Crossing (ma non è andata benissimo)](https://www.spaziogames.it/animal-crossin-riunione-di-lavoro/)
 - [Vicini ma lontani: stare insieme col multiplayer online durante la quarantena](https://www.lastampa.it/tecnologia/idee/2020/04/22/news/vicini-ma-lontani-stare-insieme-col-multiplayer-online-durante-la-quarantena-1.38746050)
 - [The Virus Changed the Way we Internet](https://www.nytimes.com/interactive/2020/04/07/technology/coronavirus-internet-use.html)
 - [‘It’s uniting people’: why 11 million people are playing Animal Crossing: New Horizons](https://www.theguardian.com/games/2020/may/13/animal-crossing-new-horizons-nintendo-game-coronavirus)
 
-## Researches
+## Ricerche
 - [Coronavirus productivity data: How the pandemic is changing the way we use digital devices, apps, and tools](https://blog.rescuetime.com/coronavirus-device-usage-statistics/)
 
 {% include changes.html %}
