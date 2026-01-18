@@ -1,5 +1,5 @@
 ---
-title: "Collaboration in crypto teams is undervalued"
+title: "La collaborazione nei team crypto è sottovalutata"
 layout: post
 date: 2023-01-30 9:00
 image: /assets/images/connects.png
@@ -9,41 +9,35 @@ tag:
 - crypto
 category: blog
 author: jaack
-description: Team collaboration is still highly undervalued, especially in crypto.
+description: La collaborazione nel team è ancora molto sottovalutata, specialmente nel mondo crypto.
 published: true
-
 lang: it
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+Penso che la collaborazione nel team sia ancora molto sottovalutata, specialmente nel mondo crypto.
 
+E poiché siamo nel mondo crypto, è tutta una questione di decentralizzazione. Un thread.
 
-I think team collaboration is still highly undervalued, especially in crypto.
+## Decentralizzazione della disponibilità
 
-And because we’re in crypto, it’a all about decentralization. A thread.
+Selezionare persone che lavorano in modo flessibile per lavorare in crypto è obbligatorio: il 9-to-5 non è fattibile, il timeboxing semplicemente non funziona. Nel tempo, ogni membro troverà la sua migliore serie di slot di disponibilità durante il giorno, in modo che il team sembri online 24/7
 
-## Decentralization of availability
+## Decentralizzazione del reclutamento
 
-Selecting people that work flexibly to work in crypto is mandatory: 9-to-5 is not feasible, timeboxing doesn’t simply work. Over time, each member will find its best set of availability slots during the day, so that the team seems online 24/7
+Per piccoli team, ognuno deve fare uso della propria rete per trovare nuovi assunti. Garantisce il massimo impegno DA PARTE dell'assunto e il massimo comfort dell'ambiente di lavoro PER l'assunto (= lavorare con persone che conosci già è positivo)
 
-## Decentralization of recruitment
+## Decentralizzazione dell'ideazione del prodotto
 
-For small teams, each one needs to make use of their network to find new hires. It ensures highest commitment FROM the hire and maximum work environment comfort FOR the hire (= working with people that u already know is good)
+Un explorer/scanner come Avascan è una raccolta di set di dati visualizzati in un modo (più o meno) alla moda. Ma diversi set di dati e visualizzazioni provengono da esigenze diverse: trader, analisti, sviluppatori e utenti generici.
 
-## Decentralization of product ideation
+Per visualizzare i dati più utili, le idee e i requisiti generali devono provenire da tutti i dipartimenti: tecnologia, finanza, gestione fondi, analisi forense e così via. Tutti devono essere in grado di redigere i requisiti del prodotto per informare la pipeline di sviluppo.
 
-An explorer/scanner such as Avascan is a collection of data sets displayed in a (more or less) fashioned way. But different data sets and visualizations come from different needs: traders, analysts, developers and general users.
+## Decentralizzazione della responsabilità
 
-In order to display the most useful data, ideas and general requirements need to come from all the departments: tech, finance, fund management, forensic analysis and so on. Everyone needs to be able to draft product requirements to inform the development pipeline.
+Penso che un buon team sia quello in cui la responsabilità è distribuita dall'alto verso il basso, ma un GRANDE team è quello in cui la responsabilità è automaticamente impacchettata, distribuita e disimballata in tutto il team in base a tempo, priorità e sforzo.
 
-## Decentralization of responsibility
+Ciò significa che sia le attività di team che quelle individuali possono essere riassegnate frequentemente e in modo flessibile senza grandi interruzioni. Tutti in ambito tecnologico sanno fare quasi tutto in ambito tecnologico, e tutti in ambito business sanno fare marketing, risorse umane o altro.
 
-I think a good team is one where responsibility is distributed from top to bottom, but a GREAT team is one where responsibility is automatically packed, distributed and unpacked throughout the whole team based on time, priority and effort.
+Ciò non implica che nessuno sia veramente esperto in una sola cosa. Implica solo che CHIUNQUE (diviso solo per tech e biz) ha una buona idea di cosa stiano facendo tutti gli altri, e può intervenire se necessario.
 
-This means that both team and individual activities can be reassigned frequently and flexibly with no major disruption. Everyone in tech knows how to do almost anything in tech, and everyone in biz knows how to do marketing, hr or else.
-
-This does not imply that no one is really skilled at just one thing. It only implies that ANYONE (only divided by tech and biz) has a good idea about what everybody else is doing, and can intervene is necessary.
-
-The Avascan team checks most of these points but not all of them. But I think some teams may check them all (maybe some DAOs? Small development teams?).
+Il team di Avascan controlla la maggior parte di questi punti ma non tutti. Ma penso che alcuni team possano controllarli tutti (forse alcune DAO? Piccoli team di sviluppo?).

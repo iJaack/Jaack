@@ -1,5 +1,5 @@
 ---
-title: "Minimizing fees: an argument for subnets"
+title: "Minimizzare le fee: un argomento a favore delle subnet"
 layout: post
 date: 2023-02-13 12:00
 image: https://docs.avax.network/assets/images/subnet-validators-0667a8ef05ae5dc26a545d2f52333208.png
@@ -9,47 +9,41 @@ tag:
 - crypto
 category: blog
 author: jaack
-description: And app-chains in general
+description: E le app-chain in generale
 published: true
-
 lang: it
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+Penso che [Vector Finance](https://vectorfinance.io) (e molte altre app simili) dovrebbero essere sulla loro subnet.
 
+Una Dapp è generalmente un insieme di smart contract (ovvero quasi mai è un SINGOLO smart contract), e gli smart contract possono interagire tra loro per eseguire operazioni composte.
 
-I think [Vector Finance](https://vectorfinance.io) (and many other similar apps) should be on their own subnet.
+Un esempio di operazioni composte sono le Dapps Vaults e Strategies, come Vector Finance, ma anche [SteakHut](https://steakhut.finance), [YieldYak](https://yieldyak.com) e altri (su Avalanche).
 
-A Dapp is generally a set of smart contract (i.e. it mostly never is a SINGLE smart contract), and smart contracts can interact with each other to perform compounded operations.
+Queste Dapps generalmente prendono i tuoi depositi e fanno molte cose con essi, come depositarli in un'altra pool, scambiare e/o richiedere fee e ricompense. E a volte lo fanno in una singola transazione, per ridurre il costo delle fee.
 
-An example of compounded operations is Vaults and Strategies Dapps, like Vector Finance , but also [SteakHut](https://steakhut.finance), [YieldYak](https://yieldyak.com) and others (on Avalanche).
+Ma anche se raggruppano le operazioni in una singola transazione, le fee saranno spesso alte - ovvero *più alte di 0,10$/tx*, che è accettabile anche quando si fanno più transazioni all'ora.
 
-These Dapps generally take your deposits and do a lot of stuff with them, like depositing them to another pool, swapping and/or claiming fees and rewards. And sometimes they do it in a single transactions, to reduce fee overhead.
+Alcuni esempi:
 
-But even if they batch operations in a single transaction, fees will often be high - meaning *higher than 0.10$/tx*, that is acceptable even when making multiple transactions per hour.
+<img class="image" src="{{base}}/assets/images/minimizing-fees-1.png" alt="Minimizzare le fee dalle approvazioni" >
 
-Some examples:
+- Un'approvazione è una delle più semplici, quindi prende solo 0,03$ di fee in condizioni normali (potrebbe essere vicino a 0,10$ in rari picchi di prezzo del gas);
 
-<img class="image" src="{{base}}/assets/images/minimizing-fees-1.png" alt="Minimizing fees from approves" >
+<img class="image" src="{{base}}/assets/images/minimizing-fees-2.png" alt="Minimizzare le fee dagli swap" >
 
-- An approve is one of the simplest, so it just takes 0.03$ of fees in normal conditions (could be close to 0.10$ in rare gas price spikes);
+- Uno swap su un DEX è un po' più complesso, e ti addebita 0,08 - 0,12, a seconda delle ottimizzazioni e del tipo di DEX - un po' più alto della mia tolleranza, ma comunque accettabile
 
-<img class="image" src="{{base}}/assets/images/minimizing-fees-2.png" alt="Minimizing fees from swaps" >
+<img class="image" src="{{base}}/assets/images/minimizing-fees-3.png" alt="Minimizzare le fee dai depositi nei vault" >
 
-- A swap on a DEX is a bit more complex, and it charges you 0.08 - 0.12, depending on optimizations and type of DEX - a bit higher than my tolerance, but still acceptable
+- Un deposito in un Vault, invece (come indicato sopra) è davvero più alto, **vicino a 1$** in fee. Questo non è un problema di Avalanche, perché il prezzo del gas è davvero basso. È solo che ci sono molte operazioni da calcolare per questo tipo di transazione, quindi potrebbero esserci molti costi.
 
-<img class="image" src="{{base}}/assets/images/minimizing-fees-3.png" alt="Minimizing fees from vault deposits" >
+Per ridurre le fee a (quasi) 0 per (quasi) ogni tipo di transazione, questi tipi di Dapps potrebbero spostarsi sulla loro subnet nel prossimo futuro.
 
-- A deposit in a Vault, instead (like stated above) is really higher, **close to 1$** in fees. This is not an Avalanche issue, because gas price is really low. It's just that there are a lot of operations to be computed for this type of transaction, so there could be a lot of costs.
+Le subnet possono sfruttare il **protocollo di messaggistica Avalanche Warp** per far interagire gli utenti dalla C-Chain, ma eseguire operazioni nel proprio ambiente isolato, economico e privo di traffico.
 
-To reduce fees to (almost) 0 for (almost) every type of transaction, these types of Dapps could move to their own subnet in the near future.
+Le subnet non sono solo una soluzione per ridurre il traffico, ma per minimizzare aggressivamente le fee.
 
-Subnets can leverage the **Avalanche Warp Messaging Protocol** to make users interact from C-Chain, but execute operations on their own isolated, cheap and traffic-free environment.
+Questa sarà una vittoria nella UX e un passo avanti verso l'adozione di massa.
 
-Subnets are not only a solution to reduce traffic, but to aggressively minimize fees.
-
-This'll be a win in UX and a step forward to mainstream adoption.
-
-[Dexalot](https://dexalot.com) is one that will show us a portion of what I'm talking, after launching on February 1st. Let's see how it pans out.
+[Dexalot](https://dexalot.com) è uno che ci mostrerà una parte di ciò di cui sto parlando, dopo il lancio il 1° febbraio. Vediamo come va a finire.

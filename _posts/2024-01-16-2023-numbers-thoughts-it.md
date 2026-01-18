@@ -1,5 +1,5 @@
 ---
-title: "2023 review, in numbers and thoughts"
+title: "Recensione del 2023, in numeri e pensieri"
 layout: post
 date: 2024-01-06 9:00
 image: /assets/images/2024.png
@@ -8,100 +8,94 @@ tag:
 - life
 category: blog
 author: jaack
-description: And goals for 2024
+description: E obiettivi per il 2024
 published: true
-
 lang: it
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+Stavo un po' aspettando di scrivere la migliore recensione del 2023 che potessi. Ho rimandato, spostato l'attività per giorni di fila, sperando di trovare l'ispirazione e di collegare i punti ancora meglio di quanto fatto l'anno scorso.
 
+È come se volessi _performare_ nella recensione, forse perché pensavo di non aver performato così bene guardando i dati che ho raccolto negli ultimi 12 mesi.
 
-I was kind of waiting to write the best 2023 review that I could. I postponed, moved the task for days in a row, hoping that I would find the inspiration and that I would connect the dots even better than I did last year.
+Ma la realtà è, come sempre, pronta a colpirti in faccia. Quindi eccomi qui, a raccogliere i miei pensieri il meglio che posso, per concludere il mio 2023 e pianificare, almeno teoricamente, il mio 2024.
 
-It’s like I wanted to _perform_ on the review, maybe because I thought I didn’t perform so good looking at the data I collected over the past 12 months.
+## Rimanere in salute
+All'inizio del 2023, mi sono detto che dovevo **rimanere in salute, divulgare e leggere di più**, e fare il resto delle cose _più o meno lo stesso_. E alcune cose le ho fatte, in effetti, meglio.
 
-But the reality is, like always, ready to punch you in the face. So here I am, gathering my thoughts as best as I can, to wrap up my 2023 and plan, theoretically at least, my 2024.
+**Sono rimasto più in salute**, se con questo intendi bruciare più calorie. Ma non ho avuto un anno migliore nel complesso, dal punto di vista del fitness. Secondo i dati raccolti dal mio _Apple Watch, Strava, TrainingPeaks_ e alcune voci manuali, in realtà ho bruciato meno calorie, ho pedalato meno, ho fatto molto meno minuti di esercizio. Ma la cosa peggiore è che ho bevuto molta meno acqua.
 
-## Stay healthy
-At the beginning of 2023, I told my self that I needed to **stay healthy, divulge and read more**, and do the rest of the things _more or less the same_. And some things I did, actually, do better.
+### Problema #1: Assunzione di acqua
 
-**I stayed more healthy**, if by that you mean burning more calories. But I did not have a better year overall, fitness-wise. According to data collected by my _Apple Watch, Strava, TrainingPeaks_, and some manual entries, I actually burned less calories, cycled less, did way less exercise minutes. But the worst thing is that I drank a lot less water.
+Traccio l'acqua con la mia bottiglia _HidrateSpark PRO_, che lo fa automaticamente, e bevo su quella bottiglia più del 90% delle volte, anche quando viaggio. Quindi sono sicuro che i numeri rappresentino la mia effettiva assunzione di bevande.
 
-### Issue #1: Water Intake
+L'assunzione di acqua è il problema più grande perché è direttamente correlato al mio peso: durante il 2023, mi sono allenato molto più che nel 2022, ma guardando il grafico fornito dall'app Salute, vedo che in realtà sono ingrassato, da circa 76 kg a circa 78 kg. Inoltre, la mia massa magra non è cresciuta molto, da circa 59,5 kg a circa 60,2 kg. Quindi sì, ho sperimentato una ridistribuzione della massa corporea, ma non così tanto - pensavo che sarei potuto diventare molto più magro. La parte superiore del mio corpo è più grande e più forte ora, ma la mia pancia ha ancora un po' di grasso - la vedo troppo grande.
 
-I track water with my _HidrateSpark PRO_ bottle, that does it automatically, and I drink on that bottle more than 90% of the time, even when I’m traveling. So I’m confident that the numbers represent my actual drink intake.
+Nel corso dell'anno, ho imparato che bere di più è fondamentale per ridurre il grasso corporeo. [Secondo alcuni studi](https://www.medicalnewstoday.com/articles/322296), bere acqua aiuta a mangiare meno, aumenta il consumo di calorie del 2-3%, aiuta a rimuovere i rifiuti dal corpo ed è necessario per bruciare i grassi, tra tutti i benefici. Ma devo bere **molto più di quanto faccia ora**.
 
-Water intake is the biggest issue because it’s directly related to my weight: during 2023, I trained a lot more than I did in 2022, but looking at the chart provided by the Health app, I see that I actually gained weight, from around 76 kg to around 78 kg. Also, my lean body mass hasn’t grown that much, from around 59.5 kg to around 60.2 kg. So yes, I’ve been experiencing body mass redistribution, but not that much - I thought I could get a lot leaner. My upper body is bigger and stronger now, but my belly has some fat still - I see it too big.
+Nel 2023, ho bevuto circa 1 litro al giorno. È davvero poco, soprattutto se penso di essermi allenato molto. Quindi, nel 2024 devo bere molto di più, almeno **una media di 2 litri al giorno, possibilmente raggiungendo i 3 litri al giorno**. Sarà molto difficile, ma ho alcuni strumenti che posso sfruttare per farlo più facilmente: **comprare una bottiglia più grande da 1 litro da usare a casa in modo che per bere quello che devo, devo solo riempirla due o tre volte al giorno, invece di 4 o 5 volte come faccio ora**, usando una bottiglia da 620 ml. Sembra una cosa strana da fare, ma mi aiuta a rimuovere un po' di attrito dall'attività del 'bere' - mia moglie ha comprato una bottiglia d'acqua da 2 litri, e ne beve solo una al giorno almeno, ma è un salto troppo grande per me, quindi salterò 'solo' alla bottiglia da 1 litro.
 
-Over the year, I learned that drinking more is critical in lowering body fat. [According to some studies](https://www.medicalnewstoday.com/articles/322296), drinking water helps eat less, increases calorie burn by 2-3%, helps remove waste from the body and is necessary to burn fats, among all the benefits. But I need to drink **a lot more than I do now**.
+### Problema #2: VO2 Max
 
-In 2023, I drank roughly 1 liter per day. That’s really low, especially if I think that I exercised a lot. So, in 2024 I need to drink a lot more, at least **an average of 2 liters per day, possibly reaching 3 liters per day**. That’s going to be very hard, but I have some tools I can leverage to get that done more easily: **buy a bigger, 1-liter bottle to use at home so that in order to drink what I have to, I only have to refill the water twice or three times per day, instead of 4 to 5 times like I do now**, using a 620 ml bottle. This seems like a weird thing to do, but it helps me remove some friction from the ‘drink’ activity - my wife bought a 2-liter water bottle, and she just drinks one bottle per day at least, but it’s too big of a leap for me, so I’ll ‘only’ jump to the 1-liter bottle.
+Non credo di dover cambiare le mie routine di allenamento - vorrei solo aggiungere altre attività al mio allenamento con i pesi 3 volte a settimana, qualcosa come correre, nuotare o persino giocare a tennis o a golf, anche se questi ultimi due a casa, sul mio visore VR. Mi piace quello che ho fatto, ma c'è anche una piccola modifica che potrei fare: **usare di più le scale**. Nel 2023 ho fatto l'80% di scale in meno. Sembra una metrica insignificante, ma salire le scale mi aiuta a tenere sotto controllo il cuore, aumentando rapidamente la frequenza cardiaca come se stessi correndo al 60-70% del mio ritmo. Scegliere di prendere le scale invece di usare l'ascensore aumenterà il mio VO2 Max settimana dopo settimana e mi sentirò meglio nel complesso.
 
-### Issue #2: VO2 Max
+Il VO2 Max misura il volume massimo di ossigeno che può essere pompato nei miei polmoni quando sono al massimo sforzo. Più alto è, meglio è. [Ciò è anche correlato alla frequenza respiratoria](https://chat.openai.com/share/bac4fb53-88e7-4568-b5c3-7baf8c9ce313), e in pratica significa che non ho le vertigini e non mi stanco quando faccio due o tre piani di scale. Inoltre, e questo è il risultato migliore, aiuta a ridurre la frequenza cardiaca di base, che a sua volta riduce i rischi o di ammalarsi. È un effetto valanga, direi.
 
-I don’t think I need to change my exercise routines - I would just like to add some other activities to my 3-times-per-week weight training, something like running, swimming, or even playing tennis or golf, albeit these last two at home, on my VR headset. I like what I did, but there’s also one small tweak that I could make: **use the stairs more**. In 2023 I climbed 80% less stairs. Seems like an insignificant metric, but climbing stairs helps me keep my heart in check, by raising my heart rate quickly like I’m running at 60-70% of my pace. Choosing to take the stairs instead of using the elevator will increase my VO2 Max week after week, and I’ll feel better overall.
+**Quindi, il secondo obiettivo per il mio 2024 è prendere le scale invece di usare l'ascensore il più possibile.**
 
-The VO2 Max measures the maximum volume of oxygen that can be pumped in my lungs when at peak effort. The higher it is, the better. [That is also related to the breathing rate](https://chat.openai.com/share/bac4fb53-88e7-4568-b5c3-7baf8c9ce313), and it basically means that I don’t get dizzy and tired when I take two or three floors by stairs.Also, and this is the best outcome, it helps reducing the base heart rate, which in turn reduces risks or getting ill. It is a snowballing effect, I would say.
+E aggiungerei anche, come obiettivo extra, di correre almeno 500 km. Non è davvero molto, appena sotto i 10 km a settimana, ma è abbastanza considerando che faccio pesi 3 volte a settimana.
 
-**So, the second goal for my 2024 is take the stairs instead of using the elevator as much as I can.**
+E per amare l'esercizio fisico, potrei comprare degli strumenti carini per essere attivo anche quando non posso uscire o se voglio diversificare un po'. Qualcosa come [GOLF+](https://www.meta.com/en-gb/experiences/2412327085529357/?ranking_trace=0_2412327085529357_QUESTSEARCH_4jPfUavMN3UqVsfPU_eyJwbGF0Zm9ybSI6ImFuZHJvaWQtNmRvZiIsInF1ZXJ5X3N0cmluZyI6ImdvbGYiLCJsb2NhbGUiOiJlbl9HQiIsIm51bV9mZXRjaCI6MTAxLCJzZWFyY2hfcm91dGUiOiJ3ZWIiLCJ0YWdfaWRzIjpbXX0%3D_eyJzZWN0aW9uX2tleSI6IlNFQVJDSCJ9) o [Tennis Esports](https://www.meta.com/en-gb/experiences/4872542182873415?ranking_trace=0_4872542182873415_QUESTSEARCH_0x4dERnHzoGOjZVFK_eyJwbGF0Zm9ybSI6ImFuZHJvaWQtNmRvZiIsInF1ZXJ5X3N0cmluZyI6InRlbm5pcyIsImxvY2FsZSI6ImVuX0dCIiwibnVtX2ZldGNoIjoxMDEsInNlYXJjaF9yb3V0ZSI6IndlYiIsInRhZ19pZHMiOltdfQ%3D%3D_eyJzZWN0aW9uX2tleSI6IlNFQVJDSCJ9) sul mio Meta Quest 2, o qualcosa sul mio Nintendo Switch. Ancora da definire, onestamente, ma non tutto deve essere scolpito nella pietra fin dall'inizio. Alcune potrebbero essere solo idee da perfezionare man mano che andiamo avanti.
 
-And I would also add, as an extra goal, to run at least 500 km. That’s really not much, just below 10 km per week, but it’s enough considering I do weights 3 times per week.
+Non è tutto negativo, però. Ho bruciato più calorie durante il riposo, il che significa che sto aumentando il mio metabolismo, e ho registrato più ore di allenamento. Ma mi piace sempre concentrarmi su ciò che potrei migliorare, non su ciò che ho realizzato.
 
-And to love exercising, I could buy some nice tools to be active even when I can’t go out or if I want to diversify a bit. Something like [GOLF+](https://www.meta.com/en-gb/experiences/2412327085529357/?ranking_trace=0_2412327085529357_QUESTSEARCH_4jPfUavMN3UqVsfPU_eyJwbGF0Zm9ybSI6ImFuZHJvaWQtNmRvZiIsInF1ZXJ5X3N0cmluZyI6ImdvbGYiLCJsb2NhbGUiOiJlbl9HQiIsIm51bV9mZXRjaCI6MTAxLCJzZWFyY2hfcm91dGUiOiJ3ZWIiLCJ0YWdfaWRzIjpbXX0%3D_eyJzZWN0aW9uX2tleSI6IlNFQVJDSCJ9) or [Tennis Esports](https://www.meta.com/en-gb/experiences/4872542182873415?ranking_trace=0_4872542182873415_QUESTSEARCH_0x4dERnHzoGOjZVFK_eyJwbGF0Zm9ybSI6ImFuZHJvaWQtNmRvZiIsInF1ZXJ5X3N0cmluZyI6InRlbm5pcyIsImxvY2FsZSI6ImVuX0dCIiwibnVtX2ZldGNoIjoxMDEsInNlYXJjaF9yb3V0ZSI6IndlYiIsInRhZ19pZHMiOltdfQ%3D%3D_eyJzZWN0aW9uX2tleSI6IlNFQVJDSCJ9) on my Meta Quest 2, or something on my Nintendo Switch. Still TBD, honestly, but not everything needs to be set in stone from the beginning. Some could just be ideas to refine as we get on.
+## Rilassarsi
+Anche se mi sono 'promesso' di rilassarmi più o meno lo stesso, non l'ho fatto tanto quanto avrei voluto. Ho giocato molto di più, completando 11 giochi, rispetto ai 2 del 2022, in oltre 150 ore su Switch e quasi 250 ore su PS5. Ho guardato meno serie TV e solo una manciata di film in più rispetto all'anno scorso, ma il più grande fallimento è stato non trascorrere tutto il tempo di qualità con mia moglie e la mia famiglia che volevo. Questo è qualcosa che non puoi misurare con i dati, ma è qualcosa che senti, se ti vedi dare priorità al lavoro il più delle volte.
 
-It’s not all bad, though. I did burn more calories during rest, which means that I’m increasing my metabolism, and I did log more workout hours. But I always like to focus on what I could improve, not on what I accomplished.
+Sono stato fortunato a discutere molto di queste cose negli ultimi 6 mesi e ho preso alcune misure per assicurarmi che ciò non accadesse più: ho iniziato la terapia e mi ci sono volute solo 5-6 sedute per capirci qualcosa di me. Ho anche iniziato a rimuovere le app dal telefono nei fine settimana e a reinstallarle il lunedì, in modo che fosse più difficile connettermi con i miei colleghi di lavoro. Mia moglie mi ha aiutato **molto**, e non avrei potuto farlo senza di lei.
 
-## Relax
-Even though I ‘promised’ myself to relax more or les the same, I didn’t do that as much as I liked. I did play much more, completing 11 games, up from 2 in 2022, in over 150 hours on the Switch and almost 250 hours on the PS5. I watched less TV shows and just a bunch of movies more than last year, but the biggest fail has been to not spend as much quality time with my wife and my family as I wanted to. This is something that you cannot measure with data points, but it’s something that you feel, if you see yourself prioritizing work most often than not.
+Quindi per il 2024, il mio obiettivo è **essere coerente e trascorrere più tempo con mia moglie, la mia famiglia e i miei amici e vivere grandi esperienze con loro**.
 
-I was lucky to discuss about these things a lot during the past 6 months, and I took some steps to ensure that this would not happen anymore: I started therapy, and it only took me 5-6 sessions to make some sense out of me. I also started removing apps from my phone on the weekends and reinstalling them on Monday, so that it would be harder to get connected with my work peers. My wife helped **a lot**, and I couldn’t have done this without her.
+Sto iniziando a spendere meno in cose a caso da Amazon e di più in concerti, eventi di stand up comedy, viaggi e cultura.
 
-So for 2024, my goal is to **be consistent and spend more time with my wife, family and friends and having great experiences with them**.
+## Viaggiare
+Dato che il relax e i viaggi saranno in qualche modo collegati nel 2024 per me, ho intenzione di viaggiare di più, privilegiando i viaggi di piacere rispetto a quelli di lavoro. Ho intenzione di fare **non più di 7 viaggi di lavoro quest'anno** (ho fatto 5 viaggi di lavoro nel 2023) e almeno **5 viaggi di piacere** (ne ho fatti 4 nel 2023).
 
-I’m starting to spend less on random things from Amazon and more on concerts, stand up comedy events, travel and culture.
+Viaggiare mi fa bene, soprattutto quando viaggio in treno o in aereo, perché riesco a rilassarmi forzatamente per qualche ora. Spesso ho usato questo tempo l'anno scorso per leggere e giocare sul mio Switch - ho guardato solo una manciata di serie TV o film, voglio farlo solo quando sono stanco.
 
-## Travel
-Since relaxing and traveling will be somewhat connected in 2024 for me, I plan to travel more, prioritizing leisure travel over work travels. I plan to make **not more than 7 work travels this year** (I made 5 work trips in 2023) and at least **5 leisure travels** (I did 4 in 2023).
+Sono soddisfatto dei miei dati di viaggio: sono stato in 9 paesi diversi, visitandone alcuni nuovi come Egitto, Marocco e Turchia. Sono particolarmente felice di essere finalmente riuscito a visitare un altro continente, l'Africa, perché penso che ogni continente abbia una cultura fondamentalmente diversa e amo la diversità.
 
-Traveling is good for me, especially when I travel by train or by plane, because I get to forcibly relax for a few hours. I often used this time last year to read and play on my Switch - I only watched a handful of TV shows or movies, I only want to do that when I’m tired.
+## Leggere
+Correlato al viaggio è il mio obiettivo di lettura: ho superato il mio obiettivo di lettura di 10 libri di quasi il 100%. Ciò è stato possibile perché ho ascoltato alcuni audiolibri e ho letto mentre ero in volo e in treno. Ricordo di aver letto due libri da copertina a copertina in due voli separati. Per il 2024, ho intenzione di leggere almeno **15 libri**, ma solo perché non voglio avere pressione da questo obiettivo. In realtà penso che ne leggerò _più di 20_, a dire il vero.
 
-I’m satisfied with my travel data: I went to 9 different countries, visiting some new like Egypt, Morocco and Turkey. I’m particularly happy that I got to finally visit another continent, Africa, because I think every continent has a fundamentally different culture, and I love diversity.
+Ma ho anche letto tonnellate di articoli: _Matter_ riporta che ho letto **l'equivalente di oltre 30 libri**, ma sono anche riuscito a cambiare il mio flusso di lavoro da _Matter_ a _Reader + Readwise_, che trovo più personalizzabile per il mio flusso di lavoro di lettura. Nel 2024 non ho intenzione di leggere più articoli, ma ho intenzione di **rivedere, rivisitare i miei appunti più spesso**, in modo da non dimenticare ciò che ho letto nel tempo.
 
-## Read
-Related to travel is my reading goal: I smashed my reading goal of 10 books by almost 100%. This was possible because I listened to some audiobooks and I read while on flights and on the train. I remember reading two books from cover to cover in two separate flights. For 2024, I plan to read at least **15 books**, but just because I don’t want to get pressure from this goal. I actually think I will read _more than 20_, to be honest.
+## Divulgare
+Nel 2022, mi sono detto che avrei divulgato di più nel 2023, e l'ho fatto: ho scritto più articoli in totale (12 contro 7 nel 2022) e ho fatto più conferenze (5 contro 4 nel 2022). Questo è esattamente il tipo di crescita che voglio mantenere: crescita sostenibile. Ho intenzione di **scrivere qualche altro articolo nel 2024 e fare più o meno la stessa quantità di conferenze**. Questo potrebbe essere il mio plateau, non credo di voler e di voler fare di più di così.
 
-But I also read a ton of articles: _Matter_ reports that I read **the equivalent of over 30 books**, but I also managed to change my workflow from _Matter_ to _Reader + Readwise_, that I find more customizable for my reading workflow. In 2024 I don’t plan to read more articles, but I plan to **review, revisit my notes more often**, so that I don’t forget what I read over time.
+## Fare soldi
+Dato che ora sono a mio agio con ciò che guadagno, non misurerò ciò che guadagno, ma la percentuale di risparmio. Nel 2022 praticamente non ho risparmiato nulla, tranne qualche investimento in azioni e le crypto che ho accumulato dal 2017. Ma nel 2023, io e mia moglie abbiamo fatto un piano di risparmio e investimento preciso e ci siamo attenuti ad esso prima di pagarci. Quindi nel 2023 ho risparmiato personalmente il 22,33% del mio reddito. Per il 2024, ho intenzione di risparmiare almeno il 30% - il 70% di questo da risparmiare in contanti e il resto in azioni e materie prime. Non mi piacciono molto gli ETF o gli ETN, scelgo sempre personalmente ogni azione o materia prima.
 
-## Divulge
-In 2022, I told myself I would divulge more in 2023, and I did it: I wrote more articles overall (12 vs. 7 in 2022) and I made more talks (5 vs. 4m in 2022). This is exactly the kind of growth I want to keep up with: sustainable growth. I plan to **write a few more articles in 2024 and make more or less the same amount of talks**. This could be my plateau, I don’t think I want and like to do more than this.
-
-## Make money
-Since I’m now comfortable with what I earn, I won’t be measuring what I earn, but the percentage of savings. In 2022 I basically didn’t save anything, except for some investment in stocks and the crypto I accumulated since 2017. But in 2023, me and my wife made a precise savings and investment plan, and sticked to it before paying ourselves. So in 2023 I personally saved 22.33% of my income. For 2024, I plan to save at least 30% - 70% of this to be saved in cash and the rest in stocks and commodities. I really don’t like ETFs or ETNs, I always hand-pick every stock or commodity.
-
-## Build
-Building is the last thing I wanna do, for two very different reasons: first, for work, I think I’m pretty good at building a business by now, so I don’t need to put more effort into it; second, for my life and family, we’re more oriented towards relaxing than building, at least for 2024. Who knows, but at least that’s what we think now.
+## Costruire
+Costruire è l'ultima cosa che voglio fare, per due motivi molto diversi: primo, per lavoro, penso di essere abbastanza bravo a costruire un business ormai, quindi non ho bisogno di metterci più impegno; secondo, per la mia vita e la mia famiglia, siamo più orientati al relax che alla costruzione, almeno per il 2024. Chissà, ma almeno è quello che pensiamo ora.
 
 ——
 
-According to my journal, in 2023 I worked and lived towards the goal with this priorities:
-- Make Money: 216 days
-- Stay healthy: 177 days
-- Relax: 143 days
-- Read: 83 days
-- Travel: 83 days
-- Build: 29 days
-- Divulge: 26 days
+Secondo il mio diario, nel 2023 ho lavorato e vissuto verso l'obiettivo con queste priorità:
+- Fare soldi: 216 giorni
+- Rimanere in salute: 177 giorni
+- Rilassarsi: 143 giorni
+- Leggere: 83 giorni
+- Viaggiare: 83 giorni
+- Costruire: 29 giorni
+- Divulgare: 26 giorni
 
-What I intend to do this year is more like the order I analyzed my 2023 in this article:
-- Stay healthy
-- Relax
-- Travel
-- Read
-- Divulge
-- Make money
-- Build
+Quello che intendo fare quest'anno è più simile all'ordine in cui ho analizzato il mio 2023 in questo articolo:
+- Rimanere in salute
+- Rilassarsi
+- Viaggiare
+- Leggere
+- Divulgare
+- Fare soldi
+- Costruire
 
-It’s a never ending process, but it’s what I like most about it!
+È un processo senza fine, ma è quello che mi piace di più!

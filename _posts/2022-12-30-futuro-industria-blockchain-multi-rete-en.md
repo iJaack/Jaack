@@ -1,5 +1,5 @@
 ---
-title: "Il futuro dell’industria blockchain sarà multi-rete"
+title: "The future of the blockchain industry will be multi-chain"
 layout: post
 date: 2022-12-30 12:00
 image: https://docs.avax.network/assets/images/subnet-validators-0667a8ef05ae5dc26a545d2f52333208.png
@@ -9,69 +9,64 @@ tag:
 - blockchain
 category: blog
 author: jaack
-description: Come scala una blockchain? Qual'è la differenza tra bitcoin, ethereum e avalanche e cosmos? Un breve viaggio nel futuro delle reti multi-blockchain e delle implicazioni per l’utente finale
+description: How does a blockchain scale? What is the difference between bitcoin, ethereum and avalanche and cosmos? A short journey into the future of multi-blockchain networks and the implications for the end user
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
 
+We all know the term blockchain by now, and we know (more or less precisely) what it means: it is the **shared, public and decentralized ledger**, on which value transfers are recorded.
+Until a couple of years ago, the term blockchain was unequivocal. A blockchain was a **network**.
 
+Since the conception of Bitcoin by **Satoshi Nakamoto**, in 2008, the blockchain was unequivocally identified as a network, in which miners validate transactions and find blocks. At the beginning there was only **Bitcoin**, but then clones arrived (*forks*): among the most important ones we can remember **Namecoin**, **Litecoin** and the still very famous **Dogecoin**.
 
-Tutti ormai conosciamo il termine blockchain, e sappiamo (in maniera più o meno precisa) cosa significa: è il **registro condiviso, pubblico e decentralizzato**, su cui vengono registrati trasferimenti di valore.
-Fino a un paio di anni fa, il termine blockchain era inequivocabile. Una blockchain era una **rete**.
+There were two key aspects that made a blockchain a network: an application to manage the **node** of the network and a set of **peers**.
 
-Dal concepimento di Bitcoin da parte di **Satoshi Nakamoto**, nel 2008, la blockchain era inequivocabilmente identificata come una rete, in cui i miner validano le transazioni e trovano i blocchi. All’inizio c’era solo **Bitcoin**, ma poi arrivarono dei cloni (i *fork*): tra i più importanti si possono ricordare **Namecoin**, **Litecoin** e l’ancora molto famosa **Dogecoin**.
+The application to manage the node (also called just 'node') contains the methods, functions and data necessary to make a computer able to **talk** with others in the same network.
 
-C’erano due aspetti cardine che rendevano una blockchain una rete: un’applicazione per gestire il **nodo** della rete e un insieme di **peer**.
+The set of peers is instead the set of computers that run the node and therefore speak the same **language**, the same *blockchain language*, so to speak.
 
-L’applicazione per gestire il nodo (chiamata anche solo ‘nodo') contiene i metodi, le funzioni e i dati necessari a rendere un computer in grado di **parlare** con gli altri nella stessa rete.
+A blockchain network is therefore conceptually defined as a **set of peers** exchanging data on a **shared ledger** using **special software** (the node) with which they speak the same language.
 
-L’insieme di peer è invece l’insieme di computer che fa girare il nodo e che quindi parla lo stesso **linguaggio**, lo stesso *linguaggio blockchain*, per così dire.
+In more precise terms, it is said that peers of a blockchain network use nodes to **reach consensus on the state of the chain**. Peers, shared ledger and node make a blockchain a network.
 
-Una rete blockchain quindi è concettualmente definita come un **insieme di peer** che si scambia dati su un **registro condiviso** usando uno **speciale software** (il nodo) con cui parlano lo stesso linguaggio.
+For example, on **Ethereum** there are different software that act as nodes, written with different programming languages, but which still speak the same blockchain language. The set of peers is always the same: they are the validators validating the Ethereum network.
 
-In termini più precisi, si dice che i peer di una rete blockchain usano i nodi per **andare a consenso sullo stato della catena**. Peers, registro condiviso e nodo rendono una blockchain una rete.
+To give another example: **Bitcoin** miners cannot talk to **Dogecoin** ones. They don't speak the same blockchain language. It is important to remember these 3 components because they are fundamental to understand how technology has evolved in recent years.
+This type of blockchain, the only one known until the explosion in 2017 (when bitcoin reached 20 thousand dollars), is called **Layer 1**. It is called this way because it is the first layer of communication, the basis of the structure: peers, data and the node.
 
-Per esempio, su **Ethereum** ci sono diversi software che fanno da nodo, scritti con diversi linguaggi di programmazione, ma che comunque parlano lo stesso linguaggio blockchain. L’insieme di peer è sempre lo stesso: sono i validatori che validano la rete Ethereum.
+But the technology used for Layer 1, with the structure we have seen so far, presented a big problem: **scalability**.
 
-Per fare un altro esempio: i miner **Bitcoin** non possono parlare con quelli **Dogecoin**. Non parlano lo stesso linguaggio blockchain. È importante ricordare questi 3 componenti perché sono fondamentali per capire come invece è evoluta la tecnologia negli ultimi anni.
-Questo tipo di blockchain, l’unico conosciuto fino all’esplosione nel 2017 (quando bitcoin ha raggiunto i 20 mila dollari), viene chiamato **Layer 1**. Si chiama così perché è il primo strato di comunicazione, la base della struttura: i peer, i dati e il nodo.
+Scalability can be defined as the **ability of a system to increase its capacity under variable traffic conditions**. A blockchain network, which must process transactions, presents scalability problems if it fails to reach the same numbers as the traditional counterpart, for example **VISA or MasterCard**. To give orders of magnitude, the VISA system manages to process up to **20,000** transactions per second in peak periods, and about **2,000** transactions per second in steady state.
 
-Ma la tecnologia usata per i Layer 1, con la struttura che abbiamo visto finora, presentava un grande problema: la **scalabilità**.
+To make a comparison, in 2017 bitcoin processed **7** transactions per second in peak periods, and about 3 in steady state. Between 2016 and 2017 there were several ways in which the crypto community tried to solve the scalability problem. A [Wikipedia page](https://en.wikipedia.org/wiki/Bitcoin_scalability_problem#:~:text=The%20Bitcoin%20scalability%20problem%20refers,limited%20in%20size%20and%20frequency.) was even made about it.
 
-La scalabilità può essere definita come l’**abilità di un sistema di aumentare la propria capacità in condizioni di traffico variabile**. Una rete blockchain, che deve processare transazioni, presenta problematiche di scalabilità se non riesce a raggiungere gli stessi numeri della controparte tradizionale, per esempio **VISA o MasterCard**. Per dare degli ordini di grandezza, il sistema VISA riesce a processare fino a **20.000** transazioni al secondo in periodo di picco, e circa **2.000** transazioni al secondo a regime.
+Many of the efforts did not lead to great improvements, on the contrary, they led to **breakups and creation of factions** in the crypto community, mainly the bitcoin one.
 
-Per fare un confronto, nel 2017 bitcoin ha processato **7** transazioni al secondo in periodi di picco, e circa 3 a regime. Tra il 2016 e il 2017 ci sono stati diversi modi in cui la comunità crypto ha provato a risolvere il problema della scalabilità. Ne è stata fatta perfino una [pagina su Wikipedia](https://en.wikipedia.org/wiki/Bitcoin_scalability_problem#:~:text=The%20Bitcoin%20scalability%20problem%20refers,limited%20in%20size%20and%20frequency.).
+Efforts focused on **increasing the capacity of a single blockchain**. Bitcoin Cash, in the summer of 2017, was born precisely for this.
 
-Molti degli sforzi non hanno portato a grandi miglioramenti, anzi, hanno portato a **rotture e creazione di fazioni** nella comunità crypto, principalmente quella bitcoin.
+<img class="image" src="https://ignite.com/_nuxt/img/1584f4d.webp" alt="Ignite, the development package for Cosmos blockchains" >
 
-Gli sforzi si concentravano nell’**aumentare la capacità di una singola blockchain**. Bitcoin Cash, nell’estate del 2017, è nato proprio per questo.
+*Ignite, the development package for Cosmos blockchains*
 
-<img class="image" src="https://ignite.com/_nuxt/img/1584f4d.webp" alt="Ignite, il pacchetto di sviluppo per blockchain di Cosmos" >
+Since 2018, however, a new paradigm has been introduced, which is defined as **Layer 0**. Layer 0 is a type of technological approach that **democratizes** the creation of new blockchains. The hypothesis is that therefore solving the scalability problem of a single blockchain is not so much impossible, as it is not optimal. It is easier to increase the number of blockchains, and therefore solve the problem not with single capacity, but with the parallelization of operations.
+**Cosmos** was the first example, released in 2018, followed by **Polkadot** and **Avalanche** in 2020.
 
-*Ignite, il pacchetto di sviluppo per blockchain di Cosmos*
+<img class="image" src="https://wiki.polkadot.network/assets/images/one-parachain-f8e0673144a718bd67834cdd69894ca2.png" alt="Polkadot parachains (photo: wiki.polkadot.network)" >
 
-Dal 2018, invece, un nuovo paradigma è stato introdotto, che viene definito come **Layer 0**. Il Layer 0 è un tipo di approccio tecnologico che **democratizza** la creazione di nuove blockchain. L’ipotesi è che quindi risolvere il problema della scalabilità di un singola blockchain sia non tanto impossibile, quanto non ottimale. È più facile aumentare il numero di blockchain, e quindi risolvere il problema non con la capacità singola, ma con la parallelizzazione delle operazioni.
-**Cosmos** è stato il primo esempio, rilasciato nel 2018, seguito da **Polkadot** e **Avalanche** nel 2020.
+*Polkadot parachains (photo: wiki.polkadot.network)*
 
-<img class="image" src="https://wiki.polkadot.network/assets/images/one-parachain-f8e0673144a718bd67834cdd69894ca2.png" alt="Le parachain di Polkadot (foto: wiki.polkadot.network)" >
+Each of these three can be considered a network in its own right, because the participants of the network use the same node. But within each of these networks, some subsets of nodes can exchange information on **extensions** of the shared ledger. These extensions take different names and are structured differently based on the platform, but the underlying concept is always the same: making it possible for anyone with basic programming knowledge to create and maintain a shared ledger (a blockchain, a Layer 1) exploiting a larger infrastructure (the Layer 0).
 
-*Le parachain di Polkadot (foto: wiki.polkadot.network)*
+The most important advantage one has when nodes in a network agree also on the state of a series of extensions, and not only of the main ledger, is that they still speak the same language. And therefore it is easier to transfer information between two extensions, compared to between two networks, using **intra-network communication protocols**, which are optimized compared to generic **bridges**.
 
-Ognuna di queste tre può essere considerata una rete a sé stante, perché i partecipanti della rete usano lo stesso nodo. Ma all’interno di ognuna di queste reti, alcuni sottoinsiemi di nodi possono scambiarsi informazioni su delle **estensioni** del registro condiviso. Queste estensioni prendono nomi diversi e sono strutturate in modo diverso in base alla piattaforma, ma il concetto di fondo è sempre lo stesso: rendere possibile a chiunque abbia una basilare conoscenza di programmazione la creazione e il mantenimento di un registro condiviso (una blockchain, un Layer 1) sfruttando un’infrastruttura più grande (il Layer 0).
+<img class="image" src="https://docs.avax.network/assets/images/subnet-validators-0667a8ef05ae5dc26a545d2f52333208.png" alt="Avalanche Subnets (photo: avax.network)" >
 
-Il vantaggio più importante che si ha quando dei nodi in una rete si mettono d’accordo anche sullo stato di una serie di estensioni, e non solo di del registro principale, è che parlano comunque lo stesso linguaggio. E quindi è più facile trasferire informazioni tra due estensioni, rispetto che tra due reti, usando dei **protocolli di comunicazione intra-rete**, che sono ottimizzati rispetto ai generici **bridge**.
+*Avalanche Subnets (photo: avax.network)*
 
-<img class="image" src="https://docs.avax.network/assets/images/subnet-validators-0667a8ef05ae5dc26a545d2f52333208.png" alt="Le subnet di Avalanche (foto: avax.network)" >
+In Cosmos, extensions are always called **blockchains**: in Polkadot, they are called **parachains**, while in Avalanche they are called **subnets**.
 
-*Le subnet di Avalanche (foto: avax.network)*
+The Layer 0 paradigm has therefore changed the basic relationship for which a blockchain was always a network, and vice versa. Now **a network is in general a set of blockchains**. In the case of bitcoin, the bitcoin network equals the bitcoin blockchain (because it is a Layer 1), but in the case of Avalanche, which is instead a Layer 0, a network is equal to a set of subnets.
 
-In Cosmos, le estensioni si chiamano sempre **blockchain**: in Polkadot, si chiamano **parachain**, mentre in Avalanche si chiamano **subnet**.
+In this new paradigm, a problem arises: if one of these Layer 0 platforms dominated the industry, what would happen? For example, if all currently known blockchains were Polkadot parachains. This would also be a problem, because everyone would use the same node to speak. They would all speak the same language. This in computer terms is defined as **single point of failure**, because it would become the weak link. If everyone speaks the same language, and that language happens to be banned in some contexts, no one can speak under any condition: for example, if in this scenario Polkadot were blocked (in any way) in China or Russia, no one could access their funds and transfer them on the network anymore.
 
-Il paradigma Layer 0 ha quindi cambiato la relazione di base per cui una blockchain era sempre una rete, e viceversa. Ora **una rete è in generale un insieme di blockchain**. Nel caso di bitcoin, la rete bitcoin è uguale alla blockchain bitcoin (perché è un Layer 1), ma nel caso di Avalanche, che invece è un Layer 0, una rete è uguale a un insieme di subnet.
-
-In questo nuovo paradigma, si pone un problema: se una di queste piattaforme Layer 0 dominasse l’industria, cosa succederebbe? Per esempio, se tutte le blockchain oggi conosciute fossero delle parachain di Polkadot. Anche questo sarebbe un problema, perché tutti userebbero lo stesso nodo per parlare. Parlerebbero tutti lo stesso linguaggio. Questo in termini informatici si definisce **single point of failure**, perché diventerebbe l’anello debole. Se tutti parlano uno stesso linguaggio, e quel linguaggio viene vietato in alcuni contesti, nessuno può parlare in nessuna condizione: ad esempio, se in questo scenario Polkadot venisse bloccato (in qualsiasi modo) in Cina o in Russia, nessuno potrebbe più accedere ai propri fondi e trasferirli in rete.
-
-Ed è per questo che il futuro dell’industria blockchain sarà pieno di reti, che includono una o più blockchain, e che parlano diversi linguaggi: per assicurare la **resilienza** dell’intera industria, al pari (se non di più) dell’attuale sistema finanziario tradizionale.
+And this is why the future of the blockchain industry will be full of networks, which include one or more blockchains, and which speak different languages: to ensure the **resilience** of the entire industry, equal to (if not more than) the current traditional financial system.
