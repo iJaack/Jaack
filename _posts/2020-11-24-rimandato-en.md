@@ -1,42 +1,37 @@
 ---
-title: "Rimandato."
+title: "Postponed."
 layout: post
 date: 2020-11-24 14:00
 image: /assets/images/study.jpg
 headerImage: true
 tag:
--
+- 
 category: blog
 author: jaack
-description: Doveva essere il mio ultimo esame universitario.
+description: It was supposed to be my last university exam.
 published: true
 lang: en
 ---
-***
-> **Note**: This is an automatic placeholder for the translated version.
-***
+This morning I took what was supposed to be my last university exam.
 
+I didn't pass it. Now I will have to wait for February to be able to retake it and, since it is not a session for graduating students in February, the professors could be stricter. The exam is written and oral. I didn't do very well in either, but in the oral I did decidedly worse.
 
-Stamattina ho fatto quello che doveva essere il mio ultimo esame universitario.
+I panicked, not saying things I studied or others I knew but hadn't learned well. So it makes sense that I didn't pass it. But it was supposed to be the last exam, so I had already applied for graduation, I had prepared myself psychologically to say goodbye to books in 2020, ready for a new year in 2021, in every sense.
 
-Non l'ho passato. Ora dovrò aspettare febbraio per poterlo ridare e, dato che non si tratta di una sessione per laureandi a febbraio, i professori potrebbero essere più severi. L'esame è scritto e orale. Non sono andato benissimo in nessuno dei due, ma nell'orale sono andato decisamente peggio.
+But no. In English they say *"life punches you in the face"*. It knocks you down. And I must say that after more than a month of study together with work, a week in which I paused all jobs and a lot of time spent on books, I didn't expect it. I thought I was better.
 
-Sono andato nel pallone, non dicendo cose che ho studiato o altre che sapevo ma che non avevo imparato bene. Quindi ci sta che non l'ho passato. Però doveva essere l'ultimo esame, quindi avevo già fatto domanda di laurea, mi ero preparato psicologicamente per dire addio a libri nel 2020, pronto per un anno nuovo nel 2021, in tutti i sensi.
+Now I realize that I had a wrong perception of myself, which was not aligned with reality. This thing happens very often to people who, like me, are extremely optimistic. In many cases, this optimism makes us do unthinkable things, maintain a balance between a thousand commitments and projects, but sometimes it makes us vulnerable. And when we are vulnerable and hit, we get hurt. Very badly.
 
-E invece no. In inglese si dice *"life punches you in the face"*, la vita ti prende a pugni in faccia. Ti mette a terra. E devo dire che dopo più di un mese di studio insieme al lavoro, una settimana in cui ho messo in pausa tutti i lavori e tanto tempo passato sui libri, non me l'aspettavo. Pensavo di essere meglio.
+Before writing these lines I looked at the ceiling for a few minutes, at home alone. I didn't scream, I didn't slam things against the wall or on the ground. But I didn't know who to take it out on. Simply because I can't take it out on myself anymore. Yes, I paused my studies to be able to work, and so now I pay the consequences, but I believe I have also shown that I want to remedy. Yet it is not enough.
 
-Ora mi accorgo che avevo una percezione sbagliata di me stesso, che non era allineata con la realtà. Questa cosa succede molto spesso alle persone che, come me, sono estremamente ottimiste. In molti casi, questo ottimismo ci fa fare cose impensabili, mantenere un equilibrio tra mille impegni e progetti, ma qualche volta ci rende vulnerabili. E quando siamo vulnerabili e siamo colpiti, ci facciamo male. Tanto male.
+It is not enough because what we want does not make reality as we want it. It does not model it to our liking. Indeed, very likely it models it in such a way as to create friction with what we imagine. Because this reality is a resultant of the realities that others imagine, and these can be sharp, bulky and maybe don't let us pass. They don't let us breathe, they suffocate us. And so yes, we must suffocate. We must feel breathless, without air for a while. I knew that if you train to 'suffocate yourself', that is, to keep your lungs without air, then your lungs work better. They breathe deeper. So probably life is this: getting used to running out of breath for a while, for a series of times, and getting bigger and bigger lungs.
 
-Prima di scrivere queste righe ho guardato il soffitto per qualche minuto, in casa da solo. Non ho gridato, non ho sbattuto le cose al muro o per terra. Ma non sapevo con chi prendermela. Semplicemente perché non ce la faccio più a prendermela con me stesso. Sì, ho messo in pausa gli studi per poter lavorare, e quindi ora ne pago le conseguenze, però credo di aver anche dimostrato di voler rimediare. Eppure non basta.
+It will seem that the lungs are always big enough to breathe well, and it is precisely in that moment that the air is taken away. It is a test of strength.
 
-Non basta perché quello che vogliamo non rende la realtà come la vogliamo noi. Non la modella a nostro piacimento. Anzi, molto probabilmente la modella in modo da fare da attrito a quella che immaginiamo. Perché questa realtà è una risultante delle realtà che immaginano gli altri, e queste possono essere spigolose, ingombranti e magari non ci lasciano passare. Non ci lasciano respirare, ci soffocano. E quindi sì, dobbiamo soffocare. Dobbiamo sentirci senza fiato, senza aria per un po'. Sapevo che se ti alleni a 'soffocarti', ovvero a mantenere i tuoi polmoni senza aria, poi i tuoi polmoni funzionano meglio. Respirano più profondamente. Quindi probabilmente la vita è questo: abituarsi a rimanere senza fiato per un po', per una serie di volte, e ingrandirsi sempre di più i polmoni.
+I took 4 exams this year, and I had set myself the goal of taking 5 and, therefore, graduating. Evidently, I did not reach this goal, but I came very close. Thinking about it, however, I had set myself other [7 goals]({{base}}/buoni-propositi-2020/), and some I exceeded amply, even above the rosiest expectations, considering the pandemic in the middle that should have messed up the plans. Yes, the most important goal, graduating, I did not reach, and I regret this. A lot.
 
-Sembrerà che i polmoni siano sempre sufficientemente grandi per respirare bene, ed è proprio in quel momento che viene tolta l'aria. E' una prova di forza.
+But it is also true that I have been extremely focused on studying for months now, indeed, almost for the whole year. And I'm tired. I have to recover energy from everything and turn off my brain sometimes. Often, when life punches you, you can only take it and fall to the ground: if you stay standing you will only get hurt even more. To get back up, you have to fall.
 
-Ho dato 4 esami quest'anno, e mi ero fissato l'obiettivo di darne 5 e, quindi, di laurearmi. Evidentemente, non ho raggiunto questo obiettivo, ma ci sono arrivato molto vicino. Pensandoci, però, mi ero fissato altri [7 obiettivi](https://jaack.me/buoni-propositi-2020/), e alcuni li ho superati ampiamente, anche sopra le più rosee aspettative, considerando la pandemia in mezzo che avrebbe dovuto scombinare i piani. Sì, l'obiettivo più importante, laurearsi, non l'ho raggiunto, e di questo me ne rammarico. Tantissimo.
+Today I will make a **resume** on all activities, calmly but constantly. I will do what I know how to do best, at my best. And this will make me recover a bit. It will make me think that after all I am not a failure, even if I have failed often. I am not ashamed of it, because I realized that failures made me see clearly *huge* opportunities later. And so nothing, for now the graduation is postponed. But by now I am very close to the finish line. I am still regretful, a lot, but it will pass.
 
-Però è anche vero che sono stato estremamente concentrato sullo studio per mesi ormai, anzi, quasi per tutto l'anno. E sono stanco. Devo recuperare energie da tutto e spegnere il cervello qualche volta. Spesso, quando la vita ti prende a pugni, puoi solo incassare e cadere a terra: se rimani in piedi ti farai solo ancora più male. Per rialzarsi, bisogna cadere.
-
-Nella giornata di oggi farò **resume** su tutte le attività, con calma ma costanza. Farò quello che so fare meglio, al meglio. E questo mi farà riprendere un po'. Mi farà pensare che dopotutto non sono un fallito, anche ho fallito spesso. Non me ne vergogno, perché mi sono reso conto che i fallimenti mi hanno fatto vedere chiaramente opportunità *enormi* in seguito. E quindi niente, per ora la laurea è rimandata. Ma ormai sono vicinissimo al traguardo. Sono ancora rammaricato, tanto, ma passerà.
-
-Non dimentico gli sforzi che ho fatto, e riconosco che mi hanno portato tanto avanti. Il prossimo anno non riparto da zero, ma sempre con l'esperienza maturata nei fallimenti - e nei traguardi. Alla prossima.
+I do not forget the efforts I made, and I recognize that they took me so far forward. Next year I will not start from scratch, but always with the experience gained in failures - and in goals. See you next time.
