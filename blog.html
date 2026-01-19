@@ -90,38 +90,54 @@ description: Lo 'Zibaldone' - raccolta di pensieri senza censure
 
 <script>
 	document.addEventListener('DOMContentLoaded', function () {
-		const buttons = document.querySelectorAll('.tab-button');
-		const contents = document.querySelectorAll('.tab-content');
+		var buttons = document.querySelectorAll('.tab-button');
+		var contents = document.querySelectorAll('.tab-content');
 
-		// Check if there's a stored preference
-		const validLangs = ['english', 'italian'];
-		let preferredLang = localStorage.getItem('blog-lang');
+		/* Safe local storage access */
+		var preferredLang = null;
+		try {
+			preferredLang = localStorage.getItem('blog-lang');
+		} catch (e) {
+			console.log('LS access failed');
+		}
 
-		// If explicit URL parameter ?lang=it exists, override
-		const urlParams = new URLSearchParams(window.location.search);
-		const langParam = urlParams.get('lang');
+		/* Check URL params */
+		var urlParams = new URLSearchParams(window.location.search);
+		var langParam = urlParams.get('lang');
 		if (langParam === 'it') preferredLang = 'italian';
 		if (langParam === 'en') preferredLang = 'english';
 
-		if (preferredLang && validLangs.includes(preferredLang)) {
+		var validLangs = ['english', 'italian'];
+		if (preferredLang && validLangs.indexOf(preferredLang) !== -1) {
 			activateTab(preferredLang);
 		}
 
-		buttons.forEach(button => {
-			button.addEventListener('click', () => {
-				const lang = button.getAttribute('data-tab');
+		buttons.forEach(function (button) {
+			button.addEventListener('click', function () {
+				var lang = button.getAttribute('data-tab');
 				activateTab(lang);
-				localStorage.setItem('blog-lang', lang);
+				try {
+					localStorage.setItem('blog-lang', lang);
+				} catch (e) { }
 			});
 		});
 
 		function activateTab(langId) {
-			// Remove active class from all
-			buttons.forEach(b => {
-				b.classList.toggle('active', b.getAttribute('data-tab') === langId);
+			buttons.forEach(function (b) {
+				var isActive = b.getAttribute('data-tab') === langId;
+				if (isActive) {
+					b.classList.add('active');
+				} else {
+					b.classList.remove('active');
+				}
 			});
-			contents.forEach(c => {
-				c.classList.toggle('active', c.id === langId);
+			contents.forEach(function (c) {
+				var isActive = c.id === langId;
+				if (isActive) {
+					c.classList.add('active');
+				} else {
+					c.classList.remove('active');
+				}
 			});
 		}
 	});
