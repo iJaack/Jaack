@@ -7,44 +7,65 @@ description: Lo 'Zibaldone' - raccolta di pensieri senza censure
 	.tabs {
 		display: flex;
 		justify-content: center;
-		margin-bottom: 20px;
-		border-bottom: 1px solid #ddd;
+		margin-bottom: 2rem;
+		border-bottom: 1px solid #e1e4e8;
+		gap: 1rem;
 	}
 
 	.tab-button {
 		background: none;
 		border: none;
-		padding: 10px 20px;
+		padding: 0.5rem 1rem;
 		cursor: pointer;
 		font-size: 1.1em;
-		font-weight: bold;
-		color: #666;
-		border-bottom: 3px solid transparent;
+		font-weight: 500;
+		color: #586069;
+		border-bottom: 2px solid transparent;
+		transition: all 0.2s ease;
+	}
+
+	.tab-button:hover {
+		color: #24292e;
 	}
 
 	.tab-button.active {
-		color: #000;
-		border-bottom: 3px solid #000;
+		color: #24292e;
+		border-bottom: 2px solid #24292e;
 	}
 
-	.post-list {
+	.tab-content {
 		display: none;
+		animation: fadeIn 0.3s ease;
 	}
 
-	.post-list.active {
+	.tab-content.active {
 		display: block;
+	}
+
+	@keyframes fadeIn {
+		from {
+			opacity: 0;
+		}
+
+		to {
+			opacity: 1;
+		}
 	}
 </style>
 
 <div class="tabs">
-	<button class="tab-button active" onclick="openTab('english', this)">English</button>
-	<button class="tab-button" onclick="openTab('italian', this)">Italiano</button>
+	<button id="btn-en" class="tab-button active" data-tab="english">English</button>
+	<button id="btn-it" class="tab-button" data-tab="italian">Italiano</button>
 </div>
 
-<section id="english" class="post-list active list">
-	{% assign en_posts = site.posts | where_exp: "item", "item.lang != 'it'" %}
+<section id="english" class="tab-content active list">
+	{% assign en_posts = site.posts | where: "lang", "en" %}
 	{% if en_posts.size == 0 %}
-	<p class="text-center">No English posts yet :)</p>
+	{% assign en_posts = site.posts | where_exp: "item", "item.lang != 'it'" %}
+	{% endif %}
+
+	{% if en_posts.size == 0 %}
+	<p class="text-center">No English posts yet.</p>
 	{% else %}
 	{% for post in en_posts %}
 	{% if post.category == 'blog' and post.hidden != true %}
@@ -54,10 +75,10 @@ description: Lo 'Zibaldone' - raccolta di pensieri senza censure
 	{% endif %}
 </section>
 
-<section id="italian" class="post-list list">
-	{% assign it_posts = site.posts | where_exp: "item", "item.lang == 'it'" %}
+<section id="italian" class="tab-content list">
+	{% assign it_posts = site.posts | where: "lang", "it" %}
 	{% if it_posts.size == 0 %}
-	<p class="text-center">Nessun post in Italiano per ora :)</p>
+	<p class="text-center">Nessun post in Italiano per ora.</p>
 	{% else %}
 	{% for post in it_posts %}
 	{% if post.category == 'blog' and post.hidden != true %}
@@ -68,15 +89,40 @@ description: Lo 'Zibaldone' - raccolta di pensieri senza censure
 </section>
 
 <script>
-	function openTab(lang, btn) {
-		// Hide all lists
-		document.querySelectorAll('.post-list').forEach(list => list.classList.remove('active'));
-		// Deactivate all buttons
-		document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+	document.addEventListener('DOMContentLoaded', function () {
+		const buttons = document.querySelectorAll('.tab-button');
+		const contents = document.querySelectorAll('.tab-content');
 
-		// Show target list
-		document.getElementById(lang).classList.add('active');
-		// Activate target button
-		btn.classList.add('active');
-	}
+		// Check if there's a stored preference
+		const validLangs = ['english', 'italian'];
+		let preferredLang = localStorage.getItem('blog-lang');
+
+		// If explicit URL parameter ?lang=it exists, override
+		const urlParams = new URLSearchParams(window.location.search);
+		const langParam = urlParams.get('lang');
+		if (langParam === 'it') preferredLang = 'italian';
+		if (langParam === 'en') preferredLang = 'english';
+
+		if (preferredLang && validLangs.includes(preferredLang)) {
+			activateTab(preferredLang);
+		}
+
+		buttons.forEach(button => {
+			button.addEventListener('click', () => {
+				const lang = button.getAttribute('data-tab');
+				activateTab(lang);
+				localStorage.setItem('blog-lang', lang);
+			});
+		});
+
+		function activateTab(langId) {
+			// Remove active class from all
+			buttons.forEach(b => {
+				b.classList.toggle('active', b.getAttribute('data-tab') === langId);
+			});
+			contents.forEach(c => {
+				c.classList.toggle('active', c.id === langId);
+			});
+		}
+	});
 </script>
