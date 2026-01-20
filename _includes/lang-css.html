@@ -29,13 +29,22 @@
         font-weight: bold;
     }
 
-    body.lang-en .lang-toggle .toggle-en {
-        text-decoration: underline;
+
+    /* Active State Formatting */
+    body.lang-en .lang-toggle-en,
+    body.lang-it .lang-toggle-it {
         font-weight: 800;
+        text-decoration: underline;
+        color: #000;
+        border-color: #000;
+        background-color: #f0f0f0;
     }
 
-    body.lang-it .lang-toggle .toggle-it {
-        text-decoration: underline;
-        font-weight: 800;
+    /* Inactive State Formatting */
+    body.lang-en .lang-toggle-it,
+    body.lang-it .lang-toggle-en {
+        color: #666;
+        font-weight: normal;
+        text-decoration: none;
     }
 </style>
