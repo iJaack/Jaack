@@ -1,7 +1,7 @@
 ---
-title: <span class="lang-en">Millennial Life - Podcast</span><span class="lang-it">Vita da Millennial - Podcast</span>
+title: Millennial Life - Podcast
 layout: page
-description: <span class="lang-en">A podcast about millennial challenges, by Giacomo Barbieri</span><span class="lang-it">Un podcast per raccontare le sfide di un millennial, registrato da Giacomo Barbieri</span>
+description: A podcast about millennial challenges, by Giacomo Barbieri
 ---
 <div class="side-by-side">
 <div class="toleft">

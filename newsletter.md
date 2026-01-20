@@ -1,7 +1,7 @@
 ---
-title: <span class="lang-en">In Three Words - Newsletter</span><span class="lang-it">In tre parole - Newsletter</span>
+title: In Three Words - Newsletter
 layout: page
-description: <span class="lang-en">Sunday newsletter for busy people</span><span class="lang-it">Newsletter domenicale per persone sempre troppo occupate</span>
+description: Sunday newsletter for busy people
 ---
 <a href="https://www.producthunt.com/posts/questa-settimana-in-tre-parole?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-questa-settimana-in-tre-parole" target="_blank">
   <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=181982&theme=light" alt="Questa settimana in tre parole - The best of the week in your inbox, every Sunday (italian) | Product Hunt Embed" style="width: 250px; height: 54px;" width="250px" height="54px" />

@@ -1,7 +1,7 @@
 ---
-title: <span class="lang-en">About me</span><span class="lang-it">Chi sono</span>
+title: About me
 layout: page
-description: <span class="lang-en">Who is Giacomo Barbieri</span><span class="lang-it">Chi è Giacomo Barbieri</span>
+description: Who is Giacomo Barbieri
 ---
 
 <img class="image" src="{{base}}/assets/images/Foto-profilo-2020.jpg">

@@ -1,7 +1,7 @@
 ---
 layout: page
-Title: <span class="lang-en">Workflows</span><span class="lang-it">Workflows</span>
-description: <span class="lang-en">Routines and workflows for a more efficient and productive life</span><span class="lang-it">Routine e workflows per una vita più efficiente e produttiva</span>
+Title: Workflows
+description: Routines and workflows for a more efficient and productive life
 ---
 
 <div class="lang-it">
