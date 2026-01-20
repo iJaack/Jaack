@@ -7,7 +7,8 @@ headerImage: true
 tag:
 - blockchain
 - ai
-category: projects
+category: blog
+tags: [research]
 author: jaack
 description: Report of the event held at the Talent Garden in Rome on December 17, 2019
 published: true

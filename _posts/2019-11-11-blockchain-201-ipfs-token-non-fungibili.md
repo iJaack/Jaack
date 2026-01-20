@@ -6,7 +6,8 @@ image: /assets/images/projects/blockchain-201/Blockchain-201.jpg
 headerImage: true
 tag:
 - blockchain
-category: projects
+category: blog
+tags: [research]
 author: jaack
 description: Un approfondimento su due casi d'uso blockchain che ho particolarmente a cuore
 published: true

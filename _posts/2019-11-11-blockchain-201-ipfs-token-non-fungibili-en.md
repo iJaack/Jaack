@@ -6,7 +6,8 @@ image: /assets/images/projects/blockchain-201/Blockchain-201.jpg
 headerImage: true
 tag:
 - blockchain
-category: projects
+category: blog
+tags: [research]
 author: jaack
 description: An in-depth look at two blockchain use cases that I particularly care about
 published: true

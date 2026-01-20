@@ -1,0 +1,23 @@
+- name: Avax Price
+  url: https://avax-price.vercel.com
+  image: /assets/images/projects/avax-price.png
+  description_en: "Real-time Avalanche price tracking and analytics."
+  description_it: "Tracciamento e analisi in tempo reale del prezzo di Avalanche."
+
+- name: Yields World
+  url: https://yields.world
+  image: /assets/images/projects/yields-world.png
+  description_en: "Stablecoin Yield Voyager - Track DeFi Lending Rates Live."
+  description_it: "Stablecoin Yield Voyager - Traccia i tassi DeFi in tempo reale."
+
+- name: Podcast
+  url: /podcast
+  image: /assets/images/projects/podcast-cover.png
+  description_en: "My podcast about tech, life, and the future."
+  description_it: "Il mio podcast su tecnologia, vita e futuro."
+
+- name: Newsletter
+  url: /newsletter
+  image: /assets/images/projects/newsletter-cover.png
+  description_en: "Weekly insights delivered to your inbox."
+  description_it: "Approfondimenti settimanali direttamente nella tua casella di posta."

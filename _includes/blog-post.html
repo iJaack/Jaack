@@ -3,5 +3,9 @@
         <aside class="date"><time datetime="{{ post.date | date:" %d-%m-%Y" }}">{{ post.date | date: "%b %d %Y"
                 }}</time></aside>
         <h3 class="title">{{ post.title }}</h3>
+        {% if post.tags contains 'research' %}
+        <span class="badge research"
+            style="background: #e1e4e8; color: #586069; font-size: 0.7em; padding: 2px 6px; border-radius: 4px; margin-left: 8px; vertical-align: middle;">Research</span>
+        {% endif %}
     </a>
 </div>

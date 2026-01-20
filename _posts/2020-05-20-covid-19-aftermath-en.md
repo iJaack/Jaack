@@ -6,7 +6,8 @@ image: /assets/images/projects/Covid-19-aftermath-communites/covid-19-aftermath-
 headerImage: true
 tag:
 - culture
-category: projects
+category: blog
+tags: [research]
 author: jaack
 description: Why are people enjoying watching are people talking random all day long?
 published: true

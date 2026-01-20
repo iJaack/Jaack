@@ -7,7 +7,8 @@ headerImage: false
 tag:
 - tech
 - blockchain
-category: projects
+category: blog
+tags: [research]
 author: jaack
 description: Guides, comments, updates
 published: true

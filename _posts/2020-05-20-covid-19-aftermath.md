@@ -6,7 +6,8 @@ image: /assets/images/projects/Covid-19-aftermath-communites/covid-19-aftermath-
 headerImage: true
 tag:
 - culture
-category: projects
+category: blog
+tags: [research]
 author: jaack
 description: Perché alla gente piace guardare persone che parlano a caso tutto il giorno?
 published: true

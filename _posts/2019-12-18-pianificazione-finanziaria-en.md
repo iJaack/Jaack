@@ -6,7 +6,8 @@ image: assets/images/projects/pianificazione-finanziaria/mappa.png
 headerImage: false
 tag:
 - culture
-category: projects
+category: blog
+tags: [research]
 author: jaack
 description: How I will save without giving up anything
 published: true

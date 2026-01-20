@@ -6,7 +6,8 @@ image: /assets/images/projects/IAB-Forum-2019/iab-podcast-giacomo.png
 headerImage: true
 tag:
 - culture
-category: projects
+category: blog
+tags: [research]
 author: jaack
 description: Schedule for the Innovation Arena at IAB Forum 2019
 published: true

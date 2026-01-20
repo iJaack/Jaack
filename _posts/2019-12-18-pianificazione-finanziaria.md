@@ -6,7 +6,8 @@ image: assets/images/projects/pianificazione-finanziaria/mappa.png
 headerImage: false
 tag:
 - culture
-category: projects
+category: blog
+tags: [research]
 author: jaack
 description: Come risparmierò senza rinunciare a nulla
 published: true

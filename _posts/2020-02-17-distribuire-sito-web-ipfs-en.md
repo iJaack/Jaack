@@ -6,7 +6,8 @@ image: /assets/images/projects/IPFS/decentralizzare-web-ipfs.svg
 headerImage: true
 tag:
 - blockchain
-category: projects
+category: blog
+tags: [research]
 author: jaack
 description: It works with static sites and is almost entirely user-friendly
 published: true
