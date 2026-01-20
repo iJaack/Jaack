@@ -76,21 +76,18 @@ layout: compress
 
                         try {
                             localStorage.setItem('site-lang', lang);
-                            localStorage.setItem('blog-lang', lang === 'it' ? 'italian' : 'english'); // Sync with blog
+                            localStorage.setItem('blog-lang', lang === 'it' ? 'italian' : 'english');
                         } catch (e) { }
                     }
 
-                    // Init
                     if (preferredLang) {
                         setLang(preferredLang);
                     } else {
                         setLang(defaultLang);
                     }
 
-                    // Expose global toggler
                     window.toggleGlobalLang = function (lang) {
                         setLang(lang);
-                        // Dispatch event for other components (like Blog)
                         var event = new CustomEvent('languageChanged', { detail: { lang: lang } });
                         window.dispatchEvent(event);
                     };
