@@ -1,32 +1,41 @@
-/* Global Language Visibility */
-body.lang-en .lang-it {
-display: none !important;
-}
+<style>
+    /* Global Language Visibility */
+    body.lang-en .lang-it {
+        display: none !important;
+    }
 
-body.lang-it .lang-en {
-display: none !important;
-}
+    body.lang-it .lang-en {
+        display: none !important;
+    }
 
-/* Toggle Button Style */
-.lang-toggle {
-background: none;
-border: 1px solid #e1e4e8;
-padding: 5px 10px;
-border-radius: 4px;
-cursor: pointer;
-font-size: 0.9em;
-margin-left: 10px;
-transition: all 0.2s;
-}
+    /* Toggle Button Style */
+    .lang-toggle {
+        background: none;
+        border: 1px solid #e1e4e8;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 0.9em;
+        margin-left: 10px;
+        transition: all 0.2s;
+    }
 
-.lang-toggle:hover {
-background: #f6f8fa;
-border-color: #d1d5da;
-}
+    .lang-toggle:hover {
+        background: #f6f8fa;
+        border-color: #d1d5da;
+    }
 
-.lang-toggle span {
-font-weight: bold;
-}
+    .lang-toggle span {
+        font-weight: bold;
+    }
 
-body.lang-en .lang-toggle .toggle-en { text-decoration: underline; font-weight: 800; }
-body.lang-it .lang-toggle .toggle-it { text-decoration: underline; font-weight: 800; }
+    body.lang-en .lang-toggle .toggle-en {
+        text-decoration: underline;
+        font-weight: 800;
+    }
+
+    body.lang-it .lang-toggle .toggle-it {
+        text-decoration: underline;
+        font-weight: 800;
+    }
+</style>
