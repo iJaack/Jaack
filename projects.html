@@ -73,8 +73,9 @@ description: A collection of research and experiments
 
 <div class="projects-grid">
 	{% for project in site.data.projects %}
-	<a href="{{ project.url }}" class="project-card" {% if project.url contains 'http' %}target="_blank" {% endif %}>
-		<img src="{{base}}{{ project.image }}" alt="{{ project.name }}" class="project-image">
+	<a href="{% if project.url contains 'http' %}{{ project.url }}{% else %}{{ project.url | relative_url }}{% endif %}"
+		class="project-card" {% if project.url contains 'http' %}target="_blank" {% endif %}>
+		<img src="{{ project.image | relative_url }}" alt="{{ project.name }}" class="project-image">
 		<div class="project-content">
 			<h3 class="project-title">{{ project.name }}</h3>
 			<p class="project-desc lang-en">{{ project.description_en }}</p>
