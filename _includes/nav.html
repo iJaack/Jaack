@@ -1,27 +1,45 @@
 <nav class="{% if page.title == " Home" %}nav-home{% else %}nav{% endif %}">
   <ul class="list">
     <li class="item">
-      <a class="link" href="{{base}}/podcast">Listen</a>
+      <a class="link" href="{{base}}/podcast">
+        <span class="lang-it">{{ site.data.ui_text.nav.listen.it }}</span>
+        <span class="lang-en">{{ site.data.ui_text.nav.listen.en }}</span>
+      </a>
     </li>
 
     <li class="item">
-      <a class="link" href="{{base}}/blog">Read</a>
+      <a class="link" href="{{base}}/blog">
+        <span class="lang-it">{{ site.data.ui_text.nav.read.it }}</span>
+        <span class="lang-en">{{ site.data.ui_text.nav.read.en }}</span>
+      </a>
     </li>
 
     <li class="item">
-      <a class="link" href="{{base}}/workflows">Work</a>
+      <a class="link" href="{{base}}/workflows">
+        <span class="lang-it">{{ site.data.ui_text.nav.work.it }}</span>
+        <span class="lang-en">{{ site.data.ui_text.nav.work.en }}</span>
+      </a>
     </li>
 
     <li class="item">
-      <a class="link" href="{{base}}/about">About</a>
+      <a class="link" href="{{base}}/about">
+        <span class="lang-it">{{ site.data.ui_text.nav.about.it }}</span>
+        <span class="lang-en">{{ site.data.ui_text.nav.about.en }}</span>
+      </a>
     </li>
 
     <li class="item">
-      <a class="link" href="{{base}}/projects">Projects</a>
+      <a class="link" href="{{base}}/projects">
+        <span class="lang-it">{{ site.data.ui_text.nav.projects.it }}</span>
+        <span class="lang-en">{{ site.data.ui_text.nav.projects.en }}</span>
+      </a>
     </li>
 
     <li class="item">
-      <a class="link" href="{{base}}/newsletter">Know</a>
+      <a class="link" href="{{base}}/newsletter">
+        <span class="lang-it">{{ site.data.ui_text.nav.know.it }}</span>
+        <span class="lang-en">{{ site.data.ui_text.nav.know.en }}</span>
+      </a>
     </li>
   </ul>
 </nav>

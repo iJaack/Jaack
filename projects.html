@@ -1,18 +1,33 @@
+```
 ---
 layout: page
-title: Projects
-description: A collection of research and experiments
+title: <span class="lang-en">Projects</span><span class="lang-it">Progetti</span>
+description: <span class="lang-en">A collection of research and experiments</span><span class="lang-it">Una raccolta di
+	ricerche ed esperimenti</span>
 ---
 
-<p>Over time, I find myself studying certain topics in depth but not producing
-	suitable documentation that is useful to me (if I forget what I have studied) or to others,
-	in the spirit of decentralization and free information.</p>
-<p>This page is a periodically updated collection of research that I have conducted alone
-	or together with others, appropriately mentioned.</p>
+<div class="lang-en">
+	<p>Over time, I find myself studying certain topics in depth but not producing
+		suitable documentation that is useful to me (if I forget what I have studied) or to others,
+		in the spirit of decentralization and free information.</p>
+	<p>This page is a periodically updated collection of research that I have conducted alone
+		or together with others, appropriately mentioned.</p>
+</div>
+
+<div class="lang-it">
+	<p>Nel tempo, mi trovo ad approfondire certi argomenti ma a non produrre
+		documentazione adeguata che sia utile a me (se dimentico cosa ho studiato) o agli altri,
+		nello spirito della decentralizzazione e della libera informazione.</p>
+	<p>Questa pagina è una raccolta periodicamente aggiornata di ricerche che ho condotto da solo
+		o insieme ad altri, opportunamente menzionati.</p>
+</div>
 
 <section class="list">
 	{% if site.posts.size == 0 %}
-	<p class="text-center">No projects yet :)</p>
+	<p class="text-center">
+		<span class="lang-en">No projects yet :)</span>
+		<span class="lang-it">Nessun progetto per ora :)</span>
+	</p>
 	{% else %}
 	{% for post in site.posts %}
 	{% if post.category == 'projects' %}

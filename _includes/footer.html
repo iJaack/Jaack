@@ -1,5 +1,17 @@
 <footer class="footer-main">
-    <p align="center">Navigando, accetti le condizioni della <a href="{{base}}/cookies">Cookie Policy</a></p>
-    <p align="center">Distribuito su licenza <a href="http://creativecommons.org/licenses/by-sa/3.0/it/">CC-BY-SA 3.0 IT</a></p>
+    <p align="center">
+        <span class="lang-it">{{ site.data.ui_text.footer.browsing.it }} <a href="{{base}}/cookies">{{
+                site.data.ui_text.footer.cookie_policy.it }}</a></span>
+        <span class="lang-en">{{ site.data.ui_text.footer.browsing.en }} <a href="{{base}}/cookies">{{
+                site.data.ui_text.footer.cookie_policy.en }}</a></span>
+    </p>
+    <p align="center">
+        <span class="lang-it">{{ site.data.ui_text.footer.distributed.it }} <a
+                href="http://creativecommons.org/licenses/by-sa/3.0/it/">{{ site.data.ui_text.footer.license.it
+                }}</a></span>
+        <span class="lang-en">{{ site.data.ui_text.footer.distributed.en }} <a
+                href="http://creativecommons.org/licenses/by-sa/3.0/it/">{{ site.data.ui_text.footer.license.en
+                }}</a></span>
+    </p>
     <p align="center"><a href="{{base}}/">Jaack.me</a> © 2019 - {{ site.time | date: '%Y' }} v1.5</p>
 </footer>

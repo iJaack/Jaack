@@ -1,27 +1,37 @@
 {% if page.title == "Home"
-   or page.title == "Blog"
-   or page.title == "Progetti"
-   or page.title == "Podcast"
-   or page.Title == "Newsletter"
-   or page.Title == "Routine"
+or page.title == "Blog"
+or page.title == "Progetti"
+or page.title == "Podcast"
+or page.Title == "Newsletter"
+or page.Title == "Routine"
 %}{% assign showHeader = true %}{% endif %}
 
 {% if showHeader == true %}
-  <header class="header-home {% if site.animation %}animated{% endif %}">
-    {% if site.about%}
-      <a class="link" href="{{base}}/about">
-        <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{base}}/{{ site.picture }}{% endif %}" />
-      </a>
-    {% endif %}
+<header class="header-home {% if site.animation %}animated{% endif %}">
+  {% if site.about%}
+  <a class="link" href="{{base}}/about">
+    <img class="selfie" alt="{{ site.name }}"
+      src="{% if site.external-image %}{{ site.picture }}{% else %}{{base}}/{{ site.picture }}{% endif %}" />
+  </a>
+  {% endif %}
 
-    <h1 class="title">{{ site.name }}</h1>
-    <h2 class="description">{{ site.bio }}</h2>
-    {% if page.description %}
-      <meta name="description" content="{{ page.description }}">
-    {% endif %}
+  <h1 class="title">{{ site.name }}</h1>
+  <h2 class="description">{{ site.bio }}</h2>
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}">
+  {% endif %}
 
-    {% include social-links.html %}
-  </header>
+  {% include social-links.html %}
+
+  <div style="display: flex; justify-content: center; margin-top: 10px;">
+    <button class="lang-toggle" onclick="window.toggleGlobalLang('it')">
+      <span class="toggle-it">IT</span>
+    </button>
+    <button class="lang-toggle" onclick="window.toggleGlobalLang('en')" style="margin-left: 5px;">
+      <span class="toggle-en">EN</span>
+    </button>
+  </div>
+</header>
 {% endif %}
 
 {% include nav.html %}

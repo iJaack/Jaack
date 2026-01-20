@@ -30,6 +30,7 @@ layout: compress
     <link href="mailto:giacomobarbieri94@gmail.com" rel="me">
 
     {% include critical-css.liquid %}
+    {% include lang-css.html %}
 
 </head>
 
@@ -57,6 +58,44 @@ layout: compress
 
             <script src="/assets/beeline/beeline-button.min.js"></script>
 
+            <script>
+                (function () {
+                    var validLangs = ['en', 'it'];
+                    var defaultLang = 'en';
+                    var preferredLang = null;
+
+                    try {
+                        preferredLang = localStorage.getItem('site-lang');
+                    } catch (e) { }
+
+                    function setLang(lang) {
+                        if (validLangs.indexOf(lang) === -1) lang = defaultLang;
+
+                        document.body.classList.remove('lang-en', 'lang-it');
+                        document.body.classList.add('lang-' + lang);
+
+                        try {
+                            localStorage.setItem('site-lang', lang);
+                            localStorage.setItem('blog-lang', lang === 'it' ? 'italian' : 'english'); // Sync with blog
+                        } catch (e) { }
+                    }
+
+                    // Init
+                    if (preferredLang) {
+                        setLang(preferredLang);
+                    } else {
+                        setLang(defaultLang);
+                    }
+
+                    // Expose global toggler
+                    window.toggleGlobalLang = function (lang) {
+                        setLang(lang);
+                        // Dispatch event for other components (like Blog)
+                        var event = new CustomEvent('languageChanged', { detail: { lang: lang } });
+                        window.dispatchEvent(event);
+                    };
+                })();
+            </script>
 </body>
 
 </html>

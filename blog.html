@@ -58,7 +58,7 @@ description: Lo 'Zibaldone' - raccolta di pensieri senza censure
 	<button id="btn-it" class="tab-button" data-tab="italian">Italiano</button>
 </div>
 
-<section id="english" class="tab-content active list">
+<section id="english" class="tab-content active list lang-en">
 	{% assign en_posts = site.posts | where: "lang", "en" %}
 	{% if en_posts.size == 0 %}
 	{% assign en_posts = site.posts | where_exp: "item", "item.lang != 'it'" %}
@@ -75,7 +75,7 @@ description: Lo 'Zibaldone' - raccolta di pensieri senza censure
 	{% endif %}
 </section>
 
-<section id="italian" class="tab-content list">
+<section id="italian" class="tab-content list lang-it">
 	{% assign it_posts = site.posts | where: "lang", "it" %}
 	{% if it_posts.size == 0 %}
 	<p class="text-center">Nessun post in Italiano per ora.</p>
@@ -89,6 +89,7 @@ description: Lo 'Zibaldone' - raccolta di pensieri senza censure
 </section>
 
 <script>
+	/* Blog Tabs Logic */
 	document.addEventListener('DOMContentLoaded', function () {
 		var buttons = document.querySelectorAll('.tab-button');
 		var contents = document.querySelectorAll('.tab-content');
@@ -108,6 +109,14 @@ description: Lo 'Zibaldone' - raccolta di pensieri senza censure
 		if (langParam === 'en') preferredLang = 'english';
 
 		var validLangs = ['english', 'italian'];
+
+		/* Sync with Global Toggle on Load */
+		try {
+			var globalLang = localStorage.getItem('site-lang');
+			if (globalLang === 'it') preferredLang = 'italian';
+			if (globalLang === 'en') preferredLang = 'english';
+		} catch (e) { }
+
 		if (preferredLang && validLangs.indexOf(preferredLang) !== -1) {
 			activateTab(preferredLang);
 		}
@@ -118,8 +127,18 @@ description: Lo 'Zibaldone' - raccolta di pensieri senza censure
 				activateTab(lang);
 				try {
 					localStorage.setItem('blog-lang', lang);
+					// Sync Global
+					var globalLang = lang === 'italian' ? 'it' : 'en';
+					localStorage.setItem('site-lang', globalLang);
+					if (window.toggleGlobalLang) window.toggleGlobalLang(globalLang);
 				} catch (e) { }
 			});
+		});
+
+		window.addEventListener('languageChanged', function (e) {
+			var newGlobal = e.detail.lang;
+			var newBlog = newGlobal === 'it' ? 'italian' : 'english';
+			activateTab(newBlog);
 		});
 
 		function activateTab(langId) {

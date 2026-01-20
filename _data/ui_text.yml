@@ -1,0 +1,32 @@
+nav:
+  listen:
+    en: Listen
+    it: Ascolta
+  read:
+    en: Read
+    it: Leggi
+  work:
+    en: Work
+    it: Lavoro
+  about:
+    en: About
+    it: Chi sono
+  projects:
+    en: Projects
+    it: Progetti
+  know:
+    en: Know
+    it: Sappi
+footer:
+  cookie_policy:
+    en: Cookie Policy
+    it: Cookie Policy
+  license:
+    en: CC-BY-SA 3.0 IT
+    it: CC-BY-SA 3.0 IT
+  browsing:
+    en: By browsing, you accept the
+    it: Navigando, accetti le condizioni della
+  distributed:
+    en: Distributed under license
+    it: Distribuito su licenza
