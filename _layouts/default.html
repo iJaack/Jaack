@@ -80,10 +80,16 @@ layout: compress
                         } catch (e) { }
                     }
 
+                    // Init
                     if (preferredLang) {
                         setLang(preferredLang);
                     } else {
-                        setLang(defaultLang);
+                        var browserLang = navigator.language || navigator.userLanguage;
+                        if (browserLang && browserLang.startsWith('it')) {
+                            setLang('it');
+                        } else {
+                            setLang(defaultLang);
+                        }
                     }
 
                     window.toggleGlobalLang = function (lang) {
