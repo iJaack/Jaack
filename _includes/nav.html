@@ -1,4 +1,4 @@
-<nav class="{% if page.title == " Home" %}nav-home{% else %}nav{% endif %}">
+<nav class="{% if page.title == 'Home' %}nav-home{% else %}nav{% endif %}">
   <ul class="list">
     <li class="item">
       <a class="link" href="{{base}}/podcast">
@@ -40,6 +40,12 @@
         <span class="lang-it">{{ site.data.ui_text.nav.know.it }}</span>
         <span class="lang-en">{{ site.data.ui_text.nav.know.en }}</span>
       </a>
+    </li>
+
+    <li class="item lang-switch">
+      <button class="lang-toggle" onclick="window.toggleGlobalLang('it')">IT</button>
+      <span style="color: #ccc;">|</span>
+      <button class="lang-toggle" onclick="window.toggleGlobalLang('en')">EN</button>
     </li>
   </ul>
 </nav>

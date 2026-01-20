@@ -3,62 +3,8 @@ layout: page
 title: Blog
 description: Lo 'Zibaldone' - raccolta di pensieri senza censure
 ---
-<style>
-	.tabs {
-		display: flex;
-		justify-content: center;
-		margin-bottom: 2rem;
-		border-bottom: 1px solid #e1e4e8;
-		gap: 1rem;
-	}
 
-	.tab-button {
-		background: none;
-		border: none;
-		padding: 0.5rem 1rem;
-		cursor: pointer;
-		font-size: 1.1em;
-		font-weight: 500;
-		color: #586069;
-		border-bottom: 2px solid transparent;
-		transition: all 0.2s ease;
-	}
-
-	.tab-button:hover {
-		color: #24292e;
-	}
-
-	.tab-button.active {
-		color: #24292e;
-		border-bottom: 2px solid #24292e;
-	}
-
-	.tab-content {
-		display: none;
-		animation: fadeIn 0.3s ease;
-	}
-
-	.tab-content.active {
-		display: block;
-	}
-
-	@keyframes fadeIn {
-		from {
-			opacity: 0;
-		}
-
-		to {
-			opacity: 1;
-		}
-	}
-</style>
-
-<div class="tabs">
-	<button id="btn-en" class="tab-button active" data-tab="english">English</button>
-	<button id="btn-it" class="tab-button" data-tab="italian">Italiano</button>
-</div>
-
-<section id="english" class="tab-content active list lang-en">
+<section class="list lang-en">
 	{% assign en_posts = site.posts | where: "lang", "en" %}
 	{% if en_posts.size == 0 %}
 	{% assign en_posts = site.posts | where_exp: "item", "item.lang != 'it'" %}
@@ -75,7 +21,7 @@ description: Lo 'Zibaldone' - raccolta di pensieri senza censure
 	{% endif %}
 </section>
 
-<section id="italian" class="tab-content list lang-it">
+<section class="list lang-it">
 	{% assign it_posts = site.posts | where: "lang", "it" %}
 	{% if it_posts.size == 0 %}
 	<p class="text-center">Nessun post in Italiano per ora.</p>
@@ -87,77 +33,3 @@ description: Lo 'Zibaldone' - raccolta di pensieri senza censure
 	{% endfor %}
 	{% endif %}
 </section>
-
-<script>
-	/* Blog Tabs Logic */
-	document.addEventListener('DOMContentLoaded', function () {
-		var buttons = document.querySelectorAll('.tab-button');
-		var contents = document.querySelectorAll('.tab-content');
-
-		/* Safe local storage access */
-		var preferredLang = null;
-		try {
-			preferredLang = localStorage.getItem('blog-lang');
-		} catch (e) {
-			console.log('LS access failed');
-		}
-
-		/* Check URL params */
-		var urlParams = new URLSearchParams(window.location.search);
-		var langParam = urlParams.get('lang');
-		if (langParam === 'it') preferredLang = 'italian';
-		if (langParam === 'en') preferredLang = 'english';
-
-		var validLangs = ['english', 'italian'];
-
-		/* Sync with Global Toggle on Load */
-		try {
-			var globalLang = localStorage.getItem('site-lang');
-			if (globalLang === 'it') preferredLang = 'italian';
-			if (globalLang === 'en') preferredLang = 'english';
-		} catch (e) { }
-
-		if (preferredLang && validLangs.indexOf(preferredLang) !== -1) {
-			activateTab(preferredLang);
-		}
-
-		buttons.forEach(function (button) {
-			button.addEventListener('click', function () {
-				var lang = button.getAttribute('data-tab');
-				activateTab(lang);
-				try {
-					localStorage.setItem('blog-lang', lang);
-					// Sync Global
-					var globalLang = lang === 'italian' ? 'it' : 'en';
-					localStorage.setItem('site-lang', globalLang);
-					if (window.toggleGlobalLang) window.toggleGlobalLang(globalLang);
-				} catch (e) { }
-			});
-		});
-
-		window.addEventListener('languageChanged', function (e) {
-			var newGlobal = e.detail.lang;
-			var newBlog = newGlobal === 'it' ? 'italian' : 'english';
-			activateTab(newBlog);
-		});
-
-		function activateTab(langId) {
-			buttons.forEach(function (b) {
-				var isActive = b.getAttribute('data-tab') === langId;
-				if (isActive) {
-					b.classList.add('active');
-				} else {
-					b.classList.remove('active');
-				}
-			});
-			contents.forEach(function (c) {
-				var isActive = c.id === langId;
-				if (isActive) {
-					c.classList.add('active');
-				} else {
-					c.classList.remove('active');
-				}
-			});
-		}
-	});
-</script>
