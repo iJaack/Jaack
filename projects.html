@@ -1,25 +1,25 @@
 ---
 layout: page
-title: Progetti
-description: IAB Forum, blockchain, IPFS, pianificazione finanziaria e altro
+title: Projects
+description: A collection of research and experiments
 ---
 
-<p>Over time, I find myself studying certain topics in depth but not producing 
-	suitable documentation that is useful to me (if I forget what I have studied) or to others, 
+<p>Over time, I find myself studying certain topics in depth but not producing
+	suitable documentation that is useful to me (if I forget what I have studied) or to others,
 	in the spirit of decentralization and free information.</p>
-<p>This page is a periodically updated collection of research that I have conducted alone 
+<p>This page is a periodically updated collection of research that I have conducted alone
 	or together with others, appropriately mentioned.</p>
 
 <section class="list">
 	{% if site.posts.size == 0 %}
-		<p class="text-center">Nessun post per ora :)</p>
+	<p class="text-center">No projects yet :)</p>
 	{% else %}
-		{% for post in site.posts %}
-			{% if post.category == 'projects' %}
-				{% if post.hidden != true %}
-					{% include blog-post.html %}
-				{% endif %}
-			{% endif %}
-		{% endfor %}
+	{% for post in site.posts %}
+	{% if post.category == 'projects' %}
+	{% if post.hidden != true %}
+	{% include blog-post.html %}
+	{% endif %}
+	{% endif %}
+	{% endfor %}
 	{% endif %}
 </section>
