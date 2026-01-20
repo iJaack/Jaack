@@ -20,18 +20,27 @@ description: A collection of research and experiments
 		o insieme ad altri, opportunamente menzionati.</p>
 </div>
 
-<section class="list">
-	{% if site.posts.size == 0 %}
-	<p class="text-center">
-		<span class="lang-en">No projects yet :)</span>
-		<span class="lang-it">Nessun progetto per ora :)</span>
-	</p>
+<section class="list lang-en">
+	{% assign en_posts = site.posts | where: "lang", "en" %}
+	{% if en_posts.size == 0 %}
+	<p class="text-center">No projects yet :)</p>
 	{% else %}
-	{% for post in site.posts %}
-	{% if post.category == 'projects' %}
-	{% if post.hidden != true %}
+	{% for post in en_posts %}
+	{% if post.category == 'projects' and post.hidden != true %}
 	{% include blog-post.html %}
 	{% endif %}
+	{% endfor %}
+	{% endif %}
+</section>
+
+<section class="list lang-it">
+	{% assign it_posts = site.posts | where: "lang", "it" %}
+	{% if it_posts.size == 0 %}
+	<p class="text-center">Nessun progetto per ora :)</p>
+	{% else %}
+	{% for post in it_posts %}
+	{% if post.category == 'projects' and post.hidden != true %}
+	{% include blog-post.html %}
 	{% endif %}
 	{% endfor %}
 	{% endif %}
