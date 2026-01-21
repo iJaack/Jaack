@@ -94,6 +94,9 @@ layout: compress
 
                     window.toggleGlobalLang = function (lang) {
                         setLang(lang);
+                        if (window.alternateLangUrl && window.alternateLangUrl !== "" && window.alternateLangCode === lang) {
+                            window.location.href = window.alternateLangUrl;
+                        }
                         var event = new CustomEvent('languageChanged', { detail: { lang: lang } });
                         window.dispatchEvent(event);
                     };

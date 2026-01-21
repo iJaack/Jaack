@@ -4,6 +4,27 @@ layout: page
 
 {%- include progress-bar.html -%}
 
+{% assign alternate_post = nil %}
+{% if page.lang == 'en' %}
+{% assign search_slug_it = page.slug | remove: "-en" | append: "-it" %}
+{% assign search_slug = page.slug | remove: "-en" %}
+
+{% assign alternate_post = site.posts | where: "slug", search_slug_it | first %}
+{% unless alternate_post %}
+{% assign alternate_post = site.posts | where: "slug", search_slug | first %}
+{% endunless %}
+
+{% elsif page.lang == 'it' %}
+{% assign search_slug_en = page.slug | remove: "-it" | append: "-en" %}
+
+{% assign alternate_post = site.posts | where: "slug", search_slug_en | first %}
+{% endif %}
+
+<script>
+  window.alternateLangUrl = "{{ alternate_post.url }}";
+  window.alternateLangCode = "{% if page.lang == 'en' %}it{% else %}en{% endif %}";
+</script>
+
 {% if page.image and page.headerImage %}
 <img class="title-image" src="{{ page.image }}" alt="{{ page.title }}">
 <!---<img class="featured-image" src="{{page.headerImage}}" alt="{{ page.title }}"-->
