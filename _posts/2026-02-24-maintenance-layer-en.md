@@ -11,7 +11,7 @@ tag:
 category: blog
 author: jaack
 description: "How I built a self-maintaining agent infrastructure with one nightly cron job"
-published: false
+published: true
 lang: en
 ---
 
