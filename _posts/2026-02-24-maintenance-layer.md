@@ -1,7 +1,7 @@
 ---
 title: "The maintenance layer: what my AI agents do while I sleep"
 layout: post
-date: 2026-02-24 16:00
+date: 2026-02-24 12:00
 image: /assets/images/photo_2026-02-24_15-54-53.jpg
 headerImage: true
 tag:
@@ -12,7 +12,6 @@ category: blog
 author: jaack
 description: "How I built a self-maintaining agent infrastructure with one nightly cron job"
 published: true
-lang: en
 ---
 
 Most people building with AI agents focus on the fun part: make it tweet, make it trade, make it write code. I did too, for months. But I kept waking up to broken things. A cron job silently failing for 3 days. State files referencing platforms I'd already abandoned. Daily logs piling up forever. Todo items sitting at "active" for weeks because nobody was looking.
