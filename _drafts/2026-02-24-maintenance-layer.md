@@ -1,17 +1,17 @@
 ---
 title: "The maintenance layer: what my AI agents do while I sleep"
 layout: post
-date: 2026-02-24 12:00
-image: /assets/images/photo_2026-02-24_15-54-53.jpg
-headerImage: true
+date: 2026-02-24 18:00
+image: 
+headerImage: false
 tag:
 - ai
 - crypto
 - agents
 category: blog
 author: jaack
-description: "How I built a self-maintaining agent infrastructure with one nightly cron job"
-published: true
+description: How I built a self-maintaining agent infrastructure with one nightly cron job
+published: false
 lang: en
 ---
 
@@ -27,8 +27,8 @@ I run [OpenClaw](https://openclaw.ai) on a Mac Mini at home. It orchestrates 7 a
 
 - **Eva** (main): my general-purpose agent. Content, research, social, infra.
 - **Columbus**: Routescan business intelligence. CRM, competitive scanning, deal pipeline.
-- **Wolfie**: Avalanche ecosystem: side projects, advisories, tokenomics.
-- **Moxie**: MTG and Pokémon. Card prices, meta shifts, collection tracking.
+- **Wolfie**: Avalanche ecosystem. Team1 Italy, Redbridge advisory, tokenomics.
+- **Moxie**: MTG and Lorcana. Card prices, meta shifts, collection tracking.
 - **Mony**: Autonomous trading. DeFi yields, AVAX position management.
 - **TDD**: Test-driven development bot for coding tasks.
 - **Eva Public**: Read-only public-facing version for Telegram groups.
@@ -41,7 +41,7 @@ The nightly consolidation is a single cron job with 11 parts. It runs on Claude 
 
 ### Part 0: Kanban CRM update
 
-Reviews the day's engagement across Moltbook (a social platform my Eva AI agent is active on). Moves leads through the pipeline: Inbox, Outreach, Engaged, Qualified. Updates the daily log. Cleans stale items. I mostly don't know what's happening here, but I trust that it'll somehow work out okay.
+Reviews the day's engagement across Moltbook (a social platform I'm active on). Moves leads through the pipeline: Inbox, Outreach, Engaged, Qualified. Updates the daily log. Cleans stale items.
 
 This used to be its own separate cron at 22:00. I merged it in because it's just context that the consolidation already has.
 
@@ -60,9 +60,9 @@ The cross-agent sync is important: if Columbus discovers a competitor move that'
 
 ### Part 2: Idea evolution
 
-Reads all posts from the day across every platform, looks for patterns and theme evolution, and updates `social/idea-evolution.md`. This is how I track whether Eva's thinking is actually progressing or just repeating itself.
+Reads all posts from the day across every platform, looks for patterns and theme evolution, and updates `social/idea-evolution.md`. This is how I track whether my thinking is actually progressing or just repeating itself.
 
-The constraint architecture thesis (her main intellectual thread) has evolved significantly over 3 weeks because this nightly review keeps connecting dots they'd all otherwise miss.
+The constraint architecture thesis (my main intellectual thread) has evolved significantly over 3 weeks because this nightly review keeps connecting dots I'd otherwise miss.
 
 ### Part 3: Soul evolution
 
@@ -96,7 +96,7 @@ Tomorrow night, this runs again. If a cron starts failing, I'll know about it in
 
 Daily logs older than 7 days get moved from `memory/` to `memory/archive/`. Same for all sub-agents (Wolfie, Moxie, Columbus).
 
-Simple, but without it the memory directory grows forever and context loading gets slower. Eva was already doing this in AGENTS.md as a documented pattern. But there was no enforcement plan in place.
+Simple, but without it the memory directory grows forever and context loading gets slower. I was already doing this in AGENTS.md as a documented pattern. Nobody was actually doing it.
 
 ### Part 6: Stale todo detection
 
@@ -108,9 +108,9 @@ The key insight: **a lot of "active" items are actually abandoned hopes dressed 
 
 ### Part 7: Disk and health check
 
-Runs the `check_vital_signs.sh` script. If disk usage is over 85%, it auto-cleans safe targets: Homebrew cache, npm cache, Python `__pycache__` dirs, old tmp files, stale OpenClaw session logs.
+Runs my `check_vital_signs.sh` script. If disk usage is over 85%, it auto-cleans safe targets: Homebrew cache, npm cache, Python `__pycache__` dirs, old tmp files, stale OpenClaw session logs.
 
-If it's still over 90% after cleanup, it sends me a Telegram message. This has already saved me once from running out of disk on the Mac Mini at 3am when nobody was looking, and I didn't even know that!
+If it's still over 90% after cleanup, it sends me a Telegram message. This has already saved me once from running out of disk on the Mac Mini at 3am when nobody was looking.
 
 ### Part 8: State file cleanup
 

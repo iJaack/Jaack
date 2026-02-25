@@ -10,7 +10,7 @@ tag:
 category: blog
 author: jaack
 description: Come scala una blockchain? Qual'è la differenza tra bitcoin, ethereum e avalanche e cosmos? Un breve viaggio nel futuro delle reti multi-blockchain e delle implicazioni per l’utente finale
-published: true
+published: false
 lang: it
 ---
 

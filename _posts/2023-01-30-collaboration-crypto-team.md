@@ -10,7 +10,7 @@ tag:
 category: blog
 author: jaack
 description: Team collaboration is still highly undervalued, especially in crypto.
-published: true
+published: false
 ---
 
 I think team collaboration is still highly undervalued, especially in crypto.

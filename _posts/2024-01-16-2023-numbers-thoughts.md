@@ -9,7 +9,7 @@ tag:
 category: blog
 author: jaack
 description: And goals for 2024
-published: true
+published: false
 ---
 
 I was kind of waiting to write the best 2023 review that I could. I postponed, moved the task for days in a row, hoping that I would find the inspiration and that I would connect the dots even better than I did last year.

@@ -9,7 +9,7 @@ tag:
 category: blog
 author: jaack
 description: Review of the 2009 book by Norm Brodsky and Bo Burlingham
-published: true
+published: false
 ---
 
 I just finished reading ['**The Knack: how Street-Smart Entrepreneurs Learn to Handle Whatever Comes Up**'](https://amzn.to/3QvYD9Z).
