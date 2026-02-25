@@ -24,14 +24,11 @@ description: Routines and workflows for a more efficient and productive life
 <h3>iPhone</h3>
 <p>L'iPhone rimane il centro di tutto quello che accade in mobilità. Lo uso per leggere (Readwise Reader), per le comunicazioni (Telegram, Mail), per il fitness (Apple Health + Strava) e per monitorare le mie posizioni crypto. È il terminale da cui ricevo le notifiche degli agenti quando succede qualcosa di importante.</p>
 
-<h3>iPad</h3>
-<p>L'iPad è il dispositivo con cui leggo in profondità — libri, articoli lunghi, ricerche. Quando lavoro da casa lo uso come secondo schermo. Non lo uso per produrre contenuti.</p>
+<h3>iPad Pro M4 12.9"</h3>
+<p>Ha sostituito sia il vecchio iPad che il MacBook Pro. In mobilità è il mio dispositivo principale per lavorare — con la Magic Keyboard diventa un laptop a tutti gli effetti. A casa lo uso per leggere in profondità, come secondo schermo, e per le videochiamate. È il device che ha cambiato di più il mio modo di lavorare negli ultimi anni.</p>
 
 <h3>Apple Watch</h3>
 <p>Fitness tracker glorificato, e lo dico con affetto. Traccia tutto: passi, allenamenti, frequenza cardiaca, sonno. I dati vanno in Apple Health e da lì li analizzo ogni settimana.</p>
-
-<h3>MacBook Pro</h3>
-<p>Il MacBook è per il lavoro in mobilità e per le riunioni. Quando sono a casa lo uso raramente — la maggior parte del lavoro creativo e di sviluppo avviene tramite terminale e agenti.</p>
 
 <h3>Mac Mini (sempre acceso)</h3>
 <p>Il vero cuore dell'infrastruttura. Non si spegne mai. Ci girano sette agenti AI, ventinove cron job automatici, e un server Telegram che smista le notifiche. È come avere un collaboratore silenzioso che lavora 24 ore su 24 — solo che non ha bisogno di pause caffè.</p>
@@ -138,14 +135,11 @@ description: Routines and workflows for a more efficient and productive life
 <h3>iPhone</h3>
 <p>The iPhone is still the center of everything that happens on the go. I use it for reading (Readwise Reader), communication (Telegram, Mail), fitness (Apple Health + Strava), and monitoring my crypto positions. It's the terminal where I receive agent notifications when something important happens.</p>
 
-<h3>iPad</h3>
-<p>The iPad is where I read in depth — books, long articles, research. When I work from home I use it as a second screen. I don't use it to produce content.</p>
+<h3>iPad Pro M4 12.9"</h3>
+<p>It replaced both my old iPad and my MacBook Pro. On the go it's my main work device — with the Magic Keyboard it's a laptop in all but name. At home I use it for deep reading, as a second screen, and for video calls. It's the device that's changed how I work the most in recent years.</p>
 
 <h3>Apple Watch</h3>
 <p>A glorified fitness tracker, and I mean that affectionately. It tracks everything: steps, workouts, heart rate, sleep. Data flows into Apple Health and I analyze it weekly.</p>
-
-<h3>MacBook Pro</h3>
-<p>The MacBook is for mobile work and meetings. When I'm at home I rarely use it — most creative and development work happens through the terminal and agents.</p>
 
 <h3>Mac Mini (always on)</h3>
 <p>The real heart of the infrastructure. It never turns off. It runs seven AI agents, twenty-nine automated cron jobs, and a Telegram server that routes notifications. It's like having a silent collaborator working 24/7 — except it doesn't need coffee breaks.</p>
