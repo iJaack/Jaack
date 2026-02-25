@@ -96,6 +96,8 @@ description: Routines and workflows for a more efficient and productive life
 <h3>Notte (00:45)</h3>
 <p>Consolidamento della memoria: Eva scrive il log del giorno, aggiorna i file di memoria a lungo termine, sincronizza gli apprendimenti tra gli agenti. Mi sveglio il giorno dopo con il contesto già pronto.</p>
 
+<img class="image" src="{{base}}/assets/images/mission-control-jobs-2026.png" alt="I cron job attivi su Mission Control, febbraio 2026">
+
 <h2 id="agenti-it">Agenti AI</h2>
 
 <p>La parte più insolita del mio setup. Ho sette agenti AI che girano in parallelo su un Mac Mini, ciascuno con il proprio spazio di lavoro, file di memoria e cron job autonomi.</p>
@@ -109,8 +111,6 @@ description: Routines and workflows for a more efficient and productive life
 </ul>
 
 <p>Ogni agente ha accesso solo a quello che gli serve. Nessuno ha accesso alle chiavi private del wallet principale. Il principio è: <em>autonomia massima nell'ambito definito, nessun accesso fuori da quell'ambito</em>.</p>
-
-<img class="image" src="{{base}}/assets/images/mission-control-jobs-2026.png" alt="I cron job attivi su Mission Control, febbraio 2026">
 
 <img class="image" src="{{base}}/assets/images/mission-control-sessions-2026.png" alt="Le sessioni agenti attive su Mission Control, febbraio 2026">
 
@@ -210,6 +210,8 @@ description: Routines and workflows for a more efficient and productive life
 <h3>Night (00:45)</h3>
 <p>Memory consolidation: Eva writes the day's log, updates long-term memory files, syncs learnings across agents. I wake up the next day with full context already loaded.</p>
 
+<img class="image" src="{{base}}/assets/images/mission-control-jobs-2026.png" alt="Active cron jobs on Mission Control, February 2026">
+
 <h2 id="agents-en">AI agents</h2>
 
 <p>The most unusual part of my setup. I run seven AI agents in parallel on a Mac Mini, each with its own workspace, memory files, and autonomous cron jobs.</p>
@@ -223,8 +225,6 @@ description: Routines and workflows for a more efficient and productive life
 </ul>
 
 <p>Each agent only has access to what it needs. None have access to the main wallet's private keys. The principle: <em>maximum autonomy within a defined scope, no access outside that scope</em>.</p>
-
-<img class="image" src="{{base}}/assets/images/mission-control-jobs-2026.png" alt="Active cron jobs on Mission Control, February 2026">
 
 <img class="image" src="{{base}}/assets/images/mission-control-sessions-2026.png" alt="Active agent sessions on Mission Control, February 2026">
 
