@@ -27,6 +27,14 @@ description: Who is Giacomo Barbieri
 <ul>
   <li><a href="https://routescan.io">Routescan — Explorer-as-a-Service, crescita e partnership</a></li>
   <li>Eva — infrastruttura di fiducia per agenti AI autonomi</li>
+  <li><a href="https://gm10.xyz">gm10.xyz — portafoglio tokenizzato di carte Pokémon Gem Mint su Avalanche</a></li>
+</ul>
+
+<h2>Advisory</h2>
+<ul>
+  <li><a href="https://redbridge.finance">Redbridge</a> — bridge ZCash ↔ Avalanche</li>
+  <li><a href="https://inframarkets.io">Inframarkets</a> — prediction market su energia e meteo, Solana</li>
+  <li>Avalanche Team1 Italy — capitolo italiano di Avalanche</li>
 </ul>
 
 <h2>Apparizioni</h2>
@@ -69,6 +77,14 @@ description: Who is Giacomo Barbieri
 <ul>
   <li><a href="https://routescan.io">Routescan — Explorer-as-a-Service, growth and partnerships</a></li>
   <li>Eva — trust infrastructure for autonomous AI agents</li>
+  <li><a href="https://gm10.xyz">gm10.xyz — tokenized Gem Mint Pokémon card portfolio on Avalanche</a></li>
+</ul>
+
+<h2>Advisory</h2>
+<ul>
+  <li><a href="https://redbridge.finance">Redbridge</a> — ZCash ↔ Avalanche bridge</li>
+  <li><a href="https://inframarkets.io">Inframarkets</a> — energy and weather prediction markets on Solana</li>
+  <li>Avalanche Team1 Italy — Italian chapter of Avalanche</li>
 </ul>
 
 <h2>Appearances</h2>
