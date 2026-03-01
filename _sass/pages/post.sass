@@ -1,67 +1,82 @@
 .post
-    margin-top: 70px
+	margin-top: 70px
 
-    > .title
-        text-align: center
-        margin-bottom: 2.3rem
+	> .title
+		text-align: left
+		margin-bottom: 2rem
+		font-family: $fontSans
+		font-style: normal
 
-    > .date,
-    > .post-tags
-        color: $gama
-        font-weight: 400
-        font-size: 1.4rem
-        text-transform: uppercase
-        text-align: center
-        display: block
-        margin-bottom: 3.5rem
-        letter-spacing: 1px
-        -webkit-font-smoothing: antialiased
-        text-rendering: optimizeLegibility
+	> .date,
+	> .post-tags
+		color: $muted
+		font-family: $fontMono
+		font-weight: 400
+		font-size: 1.3rem
+		text-transform: uppercase
+		text-align: left
+		display: block
+		margin-bottom: 3rem
+		letter-spacing: 0.08em
+		-webkit-font-smoothing: antialiased
+		text-rendering: optimizeLegibility
 
-    > .date
-        margin-bottom: 1.6rem
+	> .date
+		margin-bottom: 1.2rem
 
-    > .post-tags > .item
-        padding: 2px 8px
-        border-radius: 3px
-        font-size: 1.1rem
-        background: $epsilon
-        color: $alpha
-        letter-spacing: 1px
-        margin: 3px 1px
-        text-decoration: none
-        display: inline-block
+	> .post-tags > .item
+		padding: 2px 8px
+		border-radius: 3px
+		font-size: 1.1rem
+		background: $surface
+		color: $muted
+		letter-spacing: 0.05em
+		margin: 3px 1px
+		text-decoration: none
+		display: inline-block
+		border: 1px solid $border
 
-    // general style
-    > h2,
-    > h3,
-    > h4
-        margin-top: 40px
+		&:hover
+			color: $accent
+			border-color: $accent
 
-        a
-            text-decoration: none
+	> h2,
+	> h3,
+	> h4
+		margin-top: 40px
 
-    > .title-image
-        display: block
-        max-height: 100%
-        max-width: 100%
-        margin: 0 auto
+		a
+			text-decoration: none
 
-    > .blog-navigation
-        font-size: 1.4rem
-        display: block
-        width: auto
-        overflow: hidden
-        a
-            display: block
-            width: 50%
-            float: left
-            margin: 1em 0
-        .next
-            text-align: right
-    > img
-        display: block
-        margin-left: auto
-        margin-right: auto
-        width: 90%
-        align-content: center
+	> .title-image
+		display: block
+		max-height: 100%
+		max-width: 100%
+		margin: 0 auto
+
+	> .blog-navigation
+		font-size: 1.4rem
+		display: block
+		width: auto
+		overflow: hidden
+
+		a
+			display: block
+			width: 50%
+			float: left
+			margin: 1em 0
+			color: $muted
+			text-decoration: none
+
+			&:hover
+				color: $accent
+
+		.next
+			text-align: right
+
+	> img
+		display: block
+		margin-left: auto
+		margin-right: auto
+		width: 90%
+		align-content: center

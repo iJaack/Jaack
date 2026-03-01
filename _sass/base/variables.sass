@@ -1,14 +1,28 @@
-$fontSans: "Helvetica", Verdana, Arial, sans-serif
-$fontMonospace: "Consolas", Liberation Mono, Menlo, Courier, monospace
+// Typography
+$fontDisplay: 'Instrument Serif', Georgia, serif
+$fontSans: 'Geist', 'Inter', system-ui, sans-serif
+$fontMono: 'Geist Mono', 'Consolas', monospace
+// Legacy alias (kept for component compatibility)
+$fontMonospace: $fontMono
 
-$alpha: #666
-$beta: #222
-$gama: #aaa
-$delta: #4b0082
-$epsilon: #ededed
+// Color system
+$bg: #0c0c0c
+$surface: #141414
+$text: #f0ede8
+$muted: #888888
+$accent: #e8c547
+$border: #222222
 $black: #000000
 $white: #ffffff
 
+// Legacy aliases (kept for component compatibility)
+$alpha: #666
+$beta: #222
+$gama: #888888
+$delta: $accent
+$epsilon: #222222
+
+// Breakpoints
 $mobile: "only screen and (max-width: 400px)"
 $tablet: "only screen and (min-width: 400px) and (max-width: 1050px)"
 $above: "only screen and (min-width: 780px)"

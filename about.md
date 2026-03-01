@@ -4,7 +4,7 @@ layout: page
 description: Who is Giacomo Barbieri
 ---
 
-<img class="image" src="{{base}}/assets/images/Foto-profilo-2020.jpg">
+<img class="image" src="{{base}}/assets/images/profilo-2026.jpg">
 
 <div class="lang-it">
 <p>Ho sempre avuto difficoltà a definire me stesso. Poi ho smesso di provarci e ho iniziato a costruire cose.</p>

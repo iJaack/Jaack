@@ -1,48 +1,71 @@
 .nav,
 .nav-home
-    > .list
-        list-style: none
-        margin: 0
-        padding: 0 10px 0
+	> .list
+		list-style: none
+		margin: 0
+		padding: 0
 
-        > .item
-            display: inline-block
+		> .item
+			display: inline-block
 
-        > .item > .link
-            display: inline-block
-            font-weight: 300
-            font-size: 1.6rem
-            padding: 12px 5px
-            text-decoration: none
-            white-space: nowrap
+		> .item > .link
+			display: inline-block
+			font-family: $fontSans
+			font-weight: 400
+			font-size: 1.5rem
+			text-decoration: none
+			white-space: nowrap
+			color: $muted
+			transition: color 0.15s ease
+
+			&:hover
+				color: $text
 
 .nav
-    position: absolute
-    right: 0
-    top: 0
+	position: absolute
+	right: 0
+	top: 0
 
-    > .list
-        padding: 0 13px 0
+	> .list
+		padding: 0
 
-        > .item > .link
-            font-size: 1.4rem
-            padding: 15px 8px
+		> .item
+			margin-left: 24px
+
+		> .item > .link
+			font-size: 1.4rem
+			padding: 15px 0
 
 .nav-home
-    margin-top: 40px
-    text-align: center
+	margin-top: 40px
+	text-align: left
 
-    > .list
-        padding: 0
+	> .list
+		padding: 0
 
-        > .item > .link
-            font-size: 2rem
-            padding: 3px 3px
-            margin: 0
-            border-radius: 4%
-            transition: all .4s ease-in-out
-            width: auto
-            white-space: nowrap
+		> .item
+			margin-right: 24px
 
-            &:hover
-                color: $alpha
+		> .item > .link
+			font-size: 1.5rem
+			padding: 4px 0
+
+.lang-switch
+	margin-left: 8px
+
+.lang-toggle
+	background: none
+	border: none
+	cursor: pointer
+	font-family: $fontMono
+	font-size: 1.2rem
+	font-weight: 400
+	color: $muted
+	padding: 0 2px
+	transition: color 0.15s ease
+
+	&:hover
+		color: $text
+
+	&.active
+		color: $accent

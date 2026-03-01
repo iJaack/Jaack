@@ -4,62 +4,28 @@ body, html
 body
 	line-height: 1
 	font: 17px $fontSans
+	background-color: $bg
+	color: $text
 
-@media (prefers-color-scheme: light)
-	body
-		color: black
+a,
+a:link
+	color: $text
+	text-decoration: underline
 
-@media (prefers-color-scheme: dark)
-	body
-		color: white
-		background-color: black
+a:visited
+	color: $muted
 
-	a,
-	a:link
-		color: red
-
-@media (prefers-color-scheme: light)
-	a,
-	a:link
-		color: black
-
-@media (prefers-color-scheme: dark)
-	a,
-	a:link
-		color: white
-
-	a:visited,
-	a:focus,
-	a:hover,
-	a:active
-		color: red
-
-@media (prefers-color-scheme: light)
-	a:visited,
-	a:focus,
-	a:hover,
-	a:active
-		color: $delta
-
-@media (prefers-color-scheme: dark)
-	a:visited,
-	a:focus,
-	a:hover,
-	a:active
-		color: white
+a:hover,
+a:focus,
+a:active
+	color: $accent
+	text-decoration: none
 
 h1, h2, h3, h4
 	font-family: $fontSans
+	color: $text
 	-webkit-font-smoothing: antialiased
 	text-rendering: optimizeLegibility
-
-@media (prefers-color-scheme: light)
-	h1, h2, h3, h4
-	color: black
-
-@media (prefers-color-scheme: dark)
-		h1, h2, h3, h4
-		color: white
 
 h1
 	font-size: 2.8rem
@@ -75,31 +41,12 @@ h3
 h4
 	font-size: 1.9rem
 
-a
-	color: $black
-	text-decoration: underline
-
-@media (prefers-color-scheme: light)
-	a
-		color: $black
-
-@media (prefers-color-scheme: dark)
-	a
-		color: $white
-
 p
 	line-height: 1.7
 	font-weight: 300
 	margin-bottom: 20px
 	letter-spacing: 0.4px
-
-@media(prefers-color-scheme: light)
-	p
-		color: $black
-
-@media(prefers-color-scheme: dark)
-	p
-		color: $white
+	color: $text
 
 	@media #{$mobile}
 		letter-spacing: 0.2px
@@ -112,18 +59,7 @@ ol
 	li
 		line-height: 2.4rem
 		font-weight: 300
-
-	@media(prefers-color-scheme: light)
-	ul,
-	ol
-		li
-			color: black
-
-	@media(prefers-color-scheme: light)
-	ul,
-	ol
-		li
-			color: white
+		color: $text
 
 img,
 pre,
@@ -146,7 +82,7 @@ figcaption
 	width: 100%
 	text-align: center
 	font-size: 1.3rem
-	color: white
+	color: $muted
 	font-weight: 300
 
 	@media #{$mobile}
@@ -154,16 +90,16 @@ figcaption
 
 blockquote
 	padding-left: 15px
-	border-left: 3px solid #eee
+	border-left: 3px solid $border
 	font-style: italic
 	font-weight: 600
-	color: $gama
+	color: $muted
 
 hr
 	border: none
 	height: 1px
 	margin: 40px auto
-	background: #eee
+	background: $border
 	width: 100%
 
 figure.highlight
@@ -172,26 +108,27 @@ figure.highlight
 
 code,
 tt
-	padding: 1px 0
-	font-family: $fontMonospace
+	padding: 1px 4px
+	font-family: $fontMono
 	font-size: 12px
 	line-height: 20px
-	background: #fff
-	border-radius: 2px
-	border-radius: 2px
+	background: $surface
+	border-radius: 4px
+	color: $accent
 
 pre
 	box-sizing: border-box
 	margin: 0 0 1.75em 0
 	width: 100%
-	padding: 5px 10px
-	font-family: $fontMonospace
+	padding: 12px 16px
+	font-family: $fontMono
 	font-size: 1.2rem
 	line-height: 2rem
 	overflow: auto
-	background: #fff
-	border: 1px solid $epsilon
-	border-radius: 2px
+	background: $surface
+	border: 1px solid $border
+	border-radius: 6px
+	color: $text
 
 .wrapper-normal,
 .wrapper-large
@@ -211,6 +148,14 @@ pre
 .wrapper-large
 	max-width: 810px
 
-@media (prefers-color-scheme: dark)
-	svg
-		filter: invert(100%)
+
+// SVG icons default to light (white) for dark bg
+.icon
+	fill: $muted
+
+.social-links .icon
+	fill: $muted
+	transition: fill 0.15s ease
+
+.social-links .link:hover .icon
+	fill: $accent

@@ -1,9 +1,9 @@
 # main text of home
 name: Giacomo Barbieri
-bio: Millennial Blogger, Community Expert
+bio: Head of Growth. Builder on the side.
 
 # twitter summary info
-description: Community, Tech e Crypto
+description: Crypto infrastructure, blockchain explorers, and whatever I am obsessed with this month.
 
 # if it's an external image, update below for true
 # better with square images
@@ -22,7 +22,7 @@ baseurl: ""
 permalink: /:title/
 
 # To enable google analytics, supply your token below
-analytics-google: 'UA-50794519-4'
+# analytics-google: 'UA-50794519-4' # UA is deprecated
 
 # if you don't want comments in your posts, leave categories empty
 disqus:
@@ -47,7 +47,7 @@ medium: ijaack94
 authors:
     jaack:
         name: Giacomo Barbieri
-        bio: Blogger with over 5 years of experience in blogs and newspapers,passionate about AI, 5G and blockchain. Never-ending learner of new technologies and approaches, I believe in the decentralized government and in the Internet of Money.
+        bio: Head of Growth at Routescan. Building at the intersection of crypto infrastructure and AI agents.
         external-image: false
         picture: assets/images/profilo-homepage-ig.png
         twitter: ijaack94

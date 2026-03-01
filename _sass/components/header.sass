@@ -1,34 +1,55 @@
 .header-home
-    display: block
-    margin: 0 auto
-    text-align: center
-    position: relative
-    z-index: 99
+	display: block
+	margin: 0 auto
+	padding: 60px 0 40px
+	text-align: left
+	position: relative
+	z-index: 99
 
-    > .link > .selfie
-        width: 125px
-        margin-bottom: 25px
-        border-radius: 100%
-        transition: all .1s
-        box-shadow: 0
-        opacity: 1
+	.hero-label
+		font-family: $fontMono
+		font-size: 1.3rem
+		color: $muted
+		text-transform: uppercase
+		letter-spacing: 0.12em
+		margin-bottom: 20px
 
-        &:hover
-            box-shadow: 0 0px 4px 0 rgba(0,0,0,0.18), 0 0px 12px 0 rgba(0,0,0,0.15)
-            opacity: .8
+	.hero-title
+		font-family: $fontSans
+		font-size: 5.5rem
+		font-weight: 700
+		line-height: 1.1
+		letter-spacing: -2px
+		color: $text
+		margin: 0 0 24px
+		font-style: normal
 
-    > .title
-        font-size: 4rem
-        margin: 0 0 13px
+		@media #{$mobile}
+			font-size: 3.8rem
 
-    > .description
-        font-size: 2.1rem
-        font-weight: 400
-        font-style: normal
-        color: $gama
-        width: 70%
-        margin: 0 auto 20px
+		@media #{$tablet}
+			font-size: 4.5rem
 
-        // if you put some links in your bio. ;)
-        a
-            font-weight: 200
+	.hero-sub
+		font-family: $fontSans
+		font-size: 1.7rem
+		font-weight: 300
+		color: $muted
+		line-height: 1.6
+		margin: 0 0 32px
+		max-width: 480px
+
+	.hero-cta
+		display: inline-block
+		font-family: $fontSans
+		font-size: 1.4rem
+		font-weight: 500
+		color: $accent
+		text-decoration: none
+		border-bottom: 1px solid $accent
+		padding-bottom: 2px
+		transition: opacity 0.15s ease
+
+		&:hover
+			opacity: 0.75
+			color: $accent

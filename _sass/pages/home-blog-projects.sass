@@ -1,74 +1,59 @@
 .home,
 .blog,
 .projects
-    margin-top: 100px
+	margin-top: 80px
 
-    > .list
-        border-top: 1px solid $epsilon
-        margin-top: 30px
-        padding-top: 40px
-        position: relative
-
-        &:before
-            display: block
-            content: " "
-            width: 7px
-            height: 7px
-            border: $epsilon 1px solid
-            position: absolute
-            top: -5px
-            left: 50%
-            margin-left: -5px
-            background: #FFF
-            box-shadow: #FFF 0 0 0 5px
-            border-radius: 3px
+	> .list
+		border-top: 1px solid $border
+		margin-top: 30px
+		padding-top: 0
+		position: relative
 
 .home > .list,
 .blog > .list,
 .projects > .list
-    > .item
-        display: block
-        width: 95%
-        margin: 0 auto
+	> .item
+		display: block
+		width: 100%
+		margin: 0 auto
+		border-bottom: 1px solid $border
 
-    > .item > .url
-        width: 100%
-        display: block
-        padding: 20px 0
-        text-decoration: none
+	> .item > .url
+		width: 100%
+		display: flex
+		align-items: baseline
+		gap: 24px
+		padding: 20px 0
+		text-decoration: none
 
-    > .item > .url > .title
-        margin: 0
-        width: 75%
-        font-weight: 500
-        transition: all ease-in-out .2s
+	> .item > .url > .title
+		margin: 0
+		font-family: $fontSans
+		font-size: 1.7rem
+		font-weight: 400
+		color: $text
+		flex: 1
+		transition: color 0.15s ease
 
-    > .item:hover > .url > .title
-        color: $delta
+	> .item:hover > .url > .title
+		color: $accent
 
-    // maybe we can't nest html5 elements
-    // can you help me?
-    aside
-        position: relative
-        top: 2px
-        margin: 0
-        width: 25%
-        float: right
-        font-weight: 300
-        color: $gama
-        text-align: right
-        transition: all ease-in-out .2s
+	aside
+		font-family: $fontMono
+		font-size: 1.2rem
+		font-weight: 400
+		color: $muted
+		white-space: nowrap
+		flex-shrink: 0
+		transition: color 0.15s ease
 
-    .item:hover .url aside
-        color: $alpha
+	.item:hover .url aside
+		color: $muted
 
 .blog > .list > .item > .url,
 .projects > .list > .item > .url
-    > .title
-        display: inline
+	> .title
+		display: inline
 
-    > .emoji
-        display: inline
-        position: relative
-        top: -4px
-        margin-right: 10px
+	> .emoji
+		display: none
