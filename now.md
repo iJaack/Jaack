@@ -10,36 +10,41 @@ permalink: /now/
 
 **Building**
 
-Running growth at [Routescan](https://routescan.io) — the explorer infrastructure layer for Avalanche and beyond. Spending most of my time on partnerships and enterprise deals.
+Running growth at [Routescan](https://routescan.io) — explorer infrastructure for Avalanche and beyond. Focused on partnerships and enterprise deals; the L1 explorer space is growing faster than expected.
 
-On the side: working on Eva, a trust infrastructure layer for AI agents. Think verifiable identity + payment receipts for autonomous agents. Early but real.
+On the side: working on [Eva](https://eva.jaack.me), a trust infrastructure layer for AI agents. Verifiable identity, execution receipts, and economic accountability for autonomous systems. Phase 1.5 is live on Avalanche mainnet.
+
+Also just launched [Gem Mint Strategy](https://gm10.xyz) ($CATCH) — a tokenized Pokémon card portfolio on Avalanche. It's a real portfolio thesis, not a meme.
 
 ---
 
 **Thinking about**
 
-The gap between "AI can do X" and "AI is trusted to do X in production." That's where the interesting problems are. Constraints, identity, accountability — not raw capability.
+The gap between "AI can do X" and "AI is trusted to do X in production." Constraints, identity, accountability — not raw capability. That's where the interesting problems are.
 
-Also: how stablecoins quietly moved $12T last year and most people still think they're a crypto casino.
+Also: stablecoin rails are quietly becoming payments infrastructure. Mastercard + Visa both moving there, $12T in volume last year. Most people still think it's a crypto casino.
+
+And the AI agent adoption paradox — payment volumes are lower than the hype suggests, but the adoption curve is real and early. Being early here matters.
 
 ---
 
 **Reading**
 
-Working through the EigenLayer research on restaking and sovereign agents. Vitalik's recent posts on DAO governance and transaction simulation. A lot of Avalanche ACP proposals.
+Avalanche ACP proposals. Vitalik's DAO governance posts. The a16z piece on AI agent payment volumes. A lot of research on trust layers and x402 payment protocols.
 
 ---
 
 **Listening**
 
-Mostly whatever's on Apple Music. Rarely interesting enough to mention.
+Whatever's on Apple Music. Nothing interesting enough to mention.
 
 ---
 
 **Side bets**
 
-- $CATCH — tokenized Pokémon card portfolio. Gem Mint strategy on Avalanche. Longer story.
-- Routescan growing faster than expected in the L1 explorer space.
+- $CATCH — tokenized Pokémon card portfolio. Gem Mint Strategy on Avalanche. Now public at [gm10.xyz](https://gm10.xyz).
+- Routescan L1 space is expanding. More chains, more demand for explorer infra.
+- Eva Protocol: onchain trust graph for AI agents. Early, but infrastructure first.
 
 ---
 
