@@ -8,43 +8,41 @@ permalink: /now/
 
 ---
 
-**Building**
+**building**
 
-Running growth at [Routescan](https://routescan.io) — explorer infrastructure for Avalanche and beyond. Focused on partnerships and enterprise deals; the L1 explorer space is growing faster than expected.
+Running growth at [Routescan](https://routescan.io). Partnerships, enterprise conversations, and making sure explorer infrastructure is positioned where new chains actually need it.
 
-On the side: working on [Eva](https://eva.jaack.me), a trust infrastructure layer for AI agents. Verifiable identity, execution receipts, and economic accountability for autonomous systems. Phase 1.5 is live on Avalanche mainnet.
+Building [Eva](https://eva.jaack.me), which is really me pulling on the same question from every angle: what does trust infrastructure for AI agents actually look like in production? Identity, receipts, accountability, payment rails. Less demo magic, more systems that survive contact with reality.
 
-Also just launched [Gem Mint Strategy](https://gm10.xyz) ($CATCH) — a tokenized Pokémon card portfolio on Avalanche. It's a real portfolio thesis, not a meme.
+Working on [Gem Mint Strategy](https://gm10.xyz) ($CATCH), a tokenized Pokémon card portfolio on Avalanche. It's a serious long-duration bet disguised as something niche.
 
----
+I also spend a non-trivial amount of time on Avalanche ecosystem work through advisory and community lanes, especially the stuff that sits between infrastructure, distribution, and narrative.
 
-**Thinking about**
-
-The gap between "AI can do X" and "AI is trusted to do X in production." Constraints, identity, accountability — not raw capability. That's where the interesting problems are.
-
-Also: stablecoin rails are quietly becoming payments infrastructure. Mastercard + Visa both moving there, $12T in volume last year. Most people still think it's a crypto casino.
-
-And the AI agent adoption paradox — payment volumes are lower than the hype suggests, but the adoption curve is real and early. Being early here matters.
+And under all of it: building agent workflows, automations, and internal systems so I can operate at a higher bandwidth without turning my life into productivity theatre.
 
 ---
 
-**Reading**
+**thinking about**
 
-Avalanche ACP proposals. Vitalik's DAO governance posts. The a16z piece on AI agent payment volumes. A lot of research on trust layers and x402 payment protocols.
+The gap between "AI can do X" and "AI is trusted to do X in production." That's still the most important problem in the room.
 
----
+Also: stablecoin rails becoming default internet payments infrastructure while most people are still mentally stuck in 2021 crypto casino mode.
 
-**Listening**
-
-Whatever's on Apple Music. Nothing interesting enough to mention.
+And a simpler personal question: how do you build more leverage without sacrificing the parts of life that actually make the leverage worth having?
 
 ---
 
-**Side bets**
+**reading**
 
-- $CATCH — tokenized Pokémon card portfolio. Gem Mint Strategy on Avalanche. Now public at [gm10.xyz](https://gm10.xyz).
-- Routescan L1 space is expanding. More chains, more demand for explorer infra.
-- Eva Protocol: onchain trust graph for AI agents. Early, but infrastructure first.
+Avalanche ecosystem material, ACPs, agent infrastructure research, x402/payment-rail work, and whatever sharpens the trust thesis.
+
+---
+
+**side bets**
+
+- Routescan keeps benefiting from chain proliferation. More chains means more need for credible explorer infra.
+- Eva only gets more interesting if agents become economically active. If that happens, trust infrastructure becomes mandatory.
+- $CATCH works if conviction and structure beat noise.
 
 ---
 

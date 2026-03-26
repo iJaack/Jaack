@@ -17,17 +17,18 @@ description: Who is Giacomo Barbieri
 
 <p>A metà 2020 sono entrato in <a href="https://avascan.info">Avascan</a>, l'explorer di riferimento per la rete Avalanche. In un anno abbiamo raggiunto il milione di utenti. Nel 2023 Avascan è diventata <a href="https://routescan.io">Routescan</a>, una piattaforma Explorer-as-a-Service che oggi supporta più di 100 blockchain. Sono il responsabile della crescita, e Routescan è diventata uno dei principali provider nel settore.</p>
 
-<p>Dal 2025 in poi, il mio focus si è spostato verso qualcosa di più grande: come si costruisce un'infrastruttura di fiducia per agenti AI autonomi. Sto lavorando a Eva — una piattaforma che prova a rispondere a questa domanda.</p>
+<p>Dal 2025 in poi, il mio focus si è spostato verso qualcosa di più grande: come si costruisce un'infrastruttura di fiducia per agenti AI autonomi. Sto lavorando a Eva — una piattaforma che prova a rispondere a questa domanda. Mi interessa molto di più la parte difficile del problema (identità, vincoli, ricevute di esecuzione, accountability economica) rispetto alla solita magia da demo.</p>
 
-<p>Sono anche l'orgoglioso proprietario di un Mac Mini che non si spegne mai, su cui girano 7 agenti AI, 29 cron job e un trading agent chiamato Mony che opera in autonomia mentre dormo.</p>
+<p>Sono anche l'orgoglioso proprietario di un Mac Mini che non si spegne mai, su cui girano 7 agenti AI, 29 cron job e un trading agent chiamato Mony che opera in autonomia mentre dormo. Negli ultimi mesi ho speso parecchio tempo anche a costruire workflow, automazioni e sistemi interni per aumentare il mio bandwidth senza trasformare tutto in teatro della produttività.</p>
 
 <p>Qui scrivo i miei pensieri, senza filtri.</p>
 
 <h2>Su cui sto lavorando ora</h2>
 <ul>
-  <li><a href="https://routescan.io">Routescan — Explorer-as-a-Service, crescita e partnership</a></li>
-  <li>Eva — infrastruttura di fiducia per agenti AI autonomi</li>
+  <li><a href="https://routescan.io">Routescan — Explorer-as-a-Service, crescita, partnership e posizionamento</a></li>
+  <li>Eva — infrastruttura di fiducia per agenti AI autonomi, tra blockchain, pagamenti e accountability</li>
   <li><a href="https://gm10.xyz">gm10.xyz — portafoglio tokenizzato di carte Pokémon Gem Mint su Avalanche</a></li>
+  <li>Workflow agentici e automazioni personali per operare a più alta leva</li>
 </ul>
 
 <h2>Advisory</h2>
@@ -67,17 +68,18 @@ description: Who is Giacomo Barbieri
 
 <p>In mid-2020 I joined <a href="https://avascan.info">Avascan</a>, the reference blockchain explorer for the Avalanche network. Within a year we hit one million users. In 2023, Avascan became <a href="https://routescan.io">Routescan</a>, an Explorer-as-a-Service platform that now powers more than 100 blockchains. I lead growth, and Routescan has grown into one of the top providers in the space.</p>
 
-<p>Since 2025, my focus has shifted toward something bigger: how do you build trust infrastructure for autonomous AI agents? I'm working on Eva — a platform trying to answer that question.</p>
+<p>Since 2025, my focus has shifted toward something bigger: how do you build trust infrastructure for autonomous AI agents? I'm working on Eva — a platform trying to answer that question. I'm much more interested in the hard part of the problem (identity, constraints, execution receipts, economic accountability) than in the usual demo magic.</p>
 
-<p>I'm also the proud owner of a Mac Mini that never turns off, running 7 AI agents, 29 cron jobs, and a trading agent called Mony that operates on its own while I sleep.</p>
+<p>I'm also the proud owner of a Mac Mini that never turns off, running 7 AI agents, 29 cron jobs, and a trading agent called Mony that operates on its own while I sleep. Lately I've also been spending a lot of time building agent workflows, automations, and internal systems that let me operate at higher bandwidth without turning life into productivity theatre.</p>
 
 <p>Here are my thoughts, unlocked.</p>
 
 <h2>What I'm working on now</h2>
 <ul>
-  <li><a href="https://routescan.io">Routescan — Explorer-as-a-Service, growth and partnerships</a></li>
-  <li>Eva — trust infrastructure for autonomous AI agents</li>
+  <li><a href="https://routescan.io">Routescan — Explorer-as-a-Service, growth, partnerships, and positioning</a></li>
+  <li>Eva — trust infrastructure for autonomous AI agents across blockchain, payments, and accountability</li>
   <li><a href="https://gm10.xyz">gm10.xyz — tokenized Gem Mint Pokémon card portfolio on Avalanche</a></li>
+  <li>Agent workflows and personal automation systems to operate with more leverage</li>
 </ul>
 
 <h2>Advisory</h2>

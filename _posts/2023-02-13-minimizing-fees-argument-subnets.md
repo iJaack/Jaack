@@ -10,7 +10,7 @@ tag:
 category: blog
 author: jaack
 description: And app-chains in general
-published: false
+published: true
 ---
 
 I think [Vector Finance](https://vectorfinance.io) (and many other similar apps) should be on their own subnet.

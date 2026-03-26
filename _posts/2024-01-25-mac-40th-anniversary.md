@@ -9,7 +9,7 @@ tag:
 category: blog
 author: jaack
 description: A 10-year older brother
-published: false
+published: true
 ---
 
 I was born in 1994, so the Macintosh would be like an _older brother to me_. I'm a Mac owner since 2013, so just more than 10 years, but I've been an Apple user for much longer - got my first iPod around 2005.
