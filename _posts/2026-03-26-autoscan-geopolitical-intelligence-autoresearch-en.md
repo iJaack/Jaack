@@ -6,7 +6,7 @@ image: /assets/images/2026/cover-autoscan.jpg
 headerImage: true
 tag:
 - ai
-category: AI
+category: blog
 author: jaack
 description: "Predictie runs on a game-theory model borrowed from Predictive History's civilizational framework. After two weeks of running an autonomous feedback loop on source selection, the data told me something my gut never would have: half my sources weren't predicting anything."
 published: true
