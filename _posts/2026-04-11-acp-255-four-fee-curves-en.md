@@ -1,7 +1,7 @@
 ---
 title: "ACP-255 Needs Better Fee Curves. So I Mapped Four of Them."
 layout: post
-date: 2026-04-11 00:36
+date: 2026-04-11 00:36:00 +0200
 image: /assets/images/2026/acp-255-fee-curves-cover.svg
 headerImage: true
 tag:
