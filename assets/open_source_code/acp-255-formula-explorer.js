@@ -1,6 +1,3 @@
-import * as THREE from 'https://unpkg.com/three@0.161.0/build/three.module.js';
-import { OrbitControls } from 'https://unpkg.com/three@0.161.0/examples/jsm/controls/OrbitControls.js';
-
 const roots = document.querySelectorAll('.acp255-explorer-shell');
 
 function formatFee(value) {
@@ -10,7 +7,18 @@ function formatFee(value) {
   return `${value.toFixed(2)} AVAX`;
 }
 
-roots.forEach((root) => {
+async function loadThree() {
+  try {
+    const THREE = await import('https://unpkg.com/three@0.161.0/build/three.module.js');
+    const controlsModule = await import('https://unpkg.com/three@0.161.0/examples/jsm/controls/OrbitControls.js');
+    return { THREE, OrbitControls: controlsModule.OrbitControls };
+  } catch (error) {
+    console.warn('ACP-255 explorer: 3D modules unavailable', error);
+    return null;
+  }
+}
+
+roots.forEach(async (root) => {
   const colors = {
     acp77: '#ffcc66',
     current: '#ff7a90',
@@ -100,13 +108,6 @@ roots.forEach((root) => {
     acp77Days: 30
   };
 
-  const formulas = {
-    acp77: (V, n) => acp77Total(V, n, state.acp77Days),
-    current: current255,
-    mono: (_V, n) => monotonic255(n),
-    hybrid: hybrid255
-  };
-
   function getEl(id) {
     return root.querySelector(`#${id}`);
   }
@@ -123,106 +124,6 @@ roots.forEach((root) => {
     getEl('live-current').textContent = formatFee(liveValues.current);
     getEl('live-mono').textContent = formatFee(liveValues.mono);
     getEl('live-hybrid').textContent = formatFee(liveValues.hybrid);
-  }
-
-  function makeSurface(containerId, color, formulaKey) {
-    const container = getEl(containerId);
-    if (!container) return { rebuild: () => {}, resize: () => {} };
-
-    let renderer;
-    try {
-      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
-    } catch (error) {
-      container.innerHTML = '<div style="padding:24px;color:#a8b5d8">3D surface unavailable in this browser. The 2D comparison charts still work below.</div>';
-      return { rebuild: () => {}, resize: () => {} };
-    }
-
-    const scene = new THREE.Scene();
-    scene.background = new THREE.Color('#091321');
-    const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
-    camera.position.set(42, 32, 42);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-    container.appendChild(renderer.domElement);
-
-    const controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
-    controls.target.set(0, 6, 0);
-
-    scene.add(new THREE.AmbientLight(0xffffff, 0.9));
-    const directional = new THREE.DirectionalLight(0xffffff, 0.7);
-    directional.position.set(18, 30, 8);
-    scene.add(directional);
-    scene.add(new THREE.GridHelper(40, 10, 0x33507c, 0x1b2f54));
-
-    const material = new THREE.LineBasicMaterial({ color });
-    const linesGroup = new THREE.Group();
-    scene.add(linesGroup);
-
-    const axisMat = new THREE.LineBasicMaterial({ color: 0x8ea3cf });
-    const axes = new THREE.Group();
-    const axisPoints = [
-      new THREE.Vector3(-20, 0, -20), new THREE.Vector3(20, 0, -20),
-      new THREE.Vector3(-20, 0, -20), new THREE.Vector3(-20, 16, -20),
-      new THREE.Vector3(-20, 0, -20), new THREE.Vector3(-20, 0, 20)
-    ];
-    for (let i = 0; i < axisPoints.length; i += 2) {
-      axes.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([axisPoints[i], axisPoints[i + 1]]), axisMat));
-    }
-    scene.add(axes);
-
-    function resize() {
-      const width = Math.max(container.clientWidth, 100);
-      const height = Math.max(container.clientHeight, 240);
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
-      renderer.setSize(width, height, false);
-    }
-
-    function build() {
-      while (linesGroup.children.length) {
-        const obj = linesGroup.children.pop();
-        obj.geometry.dispose();
-      }
-
-      const Vvals = Array.from({ length: 21 }, (_, i) => i * 1000);
-      const Nvals = Array.from({ length: 20 }, (_, i) => i + 1);
-      const samples = [];
-      for (const V of Vvals) {
-        for (const n of Nvals) {
-          samples.push(formulas[formulaKey](V, n));
-        }
-      }
-      const maxFee = Math.max(...samples) || 1;
-      const mapX = (V) => -20 + (V / 20000) * 40;
-      const mapZ = (n) => -20 + ((n - 1) / 19) * 40;
-      const mapY = (fee) => (fee / maxFee) * 16;
-
-      for (const n of Nvals) {
-        const points = Vvals.map((V) => new THREE.Vector3(mapX(V), mapY(formulas[formulaKey](V, n)), mapZ(n)));
-        linesGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), material));
-      }
-      for (const V of Vvals) {
-        const points = Nvals.map((n) => new THREE.Vector3(mapX(V), mapY(formulas[formulaKey](V, n)), mapZ(n)));
-        linesGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), material));
-      }
-    }
-
-    resize();
-    build();
-
-    let rafId;
-    function render() {
-      controls.update();
-      renderer.render(scene, camera);
-      rafId = requestAnimationFrame(render);
-    }
-    render();
-
-    return {
-      rebuild: build,
-      resize,
-      destroy: () => cancelAnimationFrame(rafId)
-    };
   }
 
   function drawCanvas(canvasId, datasets, xLabel, tickValues) {
@@ -288,7 +189,7 @@ roots.forEach((root) => {
       ctx.stroke();
     });
 
-    const legendX = width - 166;
+    const legendX = Math.max(width - 166, pad.left + 10);
     let legendY = 22;
     ctx.textAlign = 'left';
     datasets.forEach((set) => {
@@ -301,13 +202,6 @@ roots.forEach((root) => {
       legendY += 18;
     });
   }
-
-  const surfaces = [
-    makeSurface('surface-acp77', colors.acp77, 'acp77'),
-    makeSurface('surface-current', colors.current, 'current'),
-    makeSurface('surface-mono', colors.mono, 'mono'),
-    makeSurface('surface-hybrid', colors.hybrid, 'hybrid')
-  ];
 
   function redrawSlices() {
     const nData = Array.from({ length: 20 }, (_, i) => i + 1);
@@ -343,16 +237,6 @@ roots.forEach((root) => {
     });
   }
 
-  function rebuildAll() {
-    syncLabels();
-    updateLiveCards();
-    surfaces.forEach((surface) => {
-      surface.resize();
-      surface.rebuild();
-    });
-    redrawSlices();
-  }
-
   const fixedV = getEl('fixedV');
   const fixedN = getEl('fixedN');
   const acp77Days = getEl('acp77Days');
@@ -373,15 +257,151 @@ roots.forEach((root) => {
 
   acp77Days?.addEventListener('input', () => {
     state.acp77Days = Number(acp77Days.value);
-    rebuildAll();
+    syncLabels();
+    updateLiveCards();
+    redrawSlices();
+    surfaces.forEach((surface) => surface.rebuild?.());
   });
 
-  let resizeTimer;
+  let surfaces = [];
+
+  function fallback3D(containerId) {
+    const container = getEl(containerId);
+    if (!container) return;
+    container.innerHTML = '<div class="three-fallback">3D surface unavailable in this browser, but the live fee cards and 2D comparison charts below still work.</div>';
+  }
+
+  function buildSurfaceFactory(THREE, OrbitControls) {
+    return function makeSurface(containerId, color, formula) {
+      const container = getEl(containerId);
+      if (!container) return { rebuild: () => {}, resize: () => {} };
+
+      let renderer;
+      try {
+        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+      } catch (error) {
+        fallback3D(containerId);
+        return { rebuild: () => {}, resize: () => {} };
+      }
+
+      const scene = new THREE.Scene();
+      scene.background = new THREE.Color('#091321');
+      const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
+      camera.position.set(42, 32, 42);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+      container.innerHTML = '';
+      container.appendChild(renderer.domElement);
+
+      const controls = new OrbitControls(camera, renderer.domElement);
+      controls.enableDamping = true;
+      controls.target.set(0, 6, 0);
+
+      scene.add(new THREE.AmbientLight(0xffffff, 0.9));
+      const directional = new THREE.DirectionalLight(0xffffff, 0.7);
+      directional.position.set(18, 30, 8);
+      scene.add(directional);
+      scene.add(new THREE.GridHelper(40, 10, 0x33507c, 0x1b2f54));
+
+      const material = new THREE.LineBasicMaterial({ color });
+      const linesGroup = new THREE.Group();
+      scene.add(linesGroup);
+
+      const axisMat = new THREE.LineBasicMaterial({ color: 0x8ea3cf });
+      const axes = new THREE.Group();
+      const axisPoints = [
+        new THREE.Vector3(-20, 0, -20), new THREE.Vector3(20, 0, -20),
+        new THREE.Vector3(-20, 0, -20), new THREE.Vector3(-20, 16, -20),
+        new THREE.Vector3(-20, 0, -20), new THREE.Vector3(-20, 0, 20)
+      ];
+      for (let i = 0; i < axisPoints.length; i += 2) {
+        axes.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([axisPoints[i], axisPoints[i + 1]]), axisMat));
+      }
+      scene.add(axes);
+
+      function resize() {
+        const width = Math.max(container.clientWidth, 100);
+        const height = Math.max(container.clientHeight, 240);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+        renderer.setSize(width, height, false);
+      }
+
+      function build() {
+        while (linesGroup.children.length) {
+          const obj = linesGroup.children.pop();
+          obj.geometry.dispose();
+        }
+
+        const Vvals = Array.from({ length: 21 }, (_, i) => i * 1000);
+        const Nvals = Array.from({ length: 20 }, (_, i) => i + 1);
+        const samples = [];
+        for (const V of Vvals) {
+          for (const n of Nvals) {
+            samples.push(formula(V, n));
+          }
+        }
+        const maxFee = Math.max(...samples) || 1;
+        const mapX = (V) => -20 + (V / 20000) * 40;
+        const mapZ = (n) => -20 + ((n - 1) / 19) * 40;
+        const mapY = (fee) => (fee / maxFee) * 16;
+
+        for (const n of Nvals) {
+          const points = Vvals.map((V) => new THREE.Vector3(mapX(V), mapY(formula(V, n)), mapZ(n)));
+          linesGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), material));
+        }
+        for (const V of Vvals) {
+          const points = Nvals.map((n) => new THREE.Vector3(mapX(V), mapY(formula(V, n)), mapZ(n)));
+          linesGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), material));
+        }
+      }
+
+      resize();
+      build();
+
+      function render() {
+        controls.update();
+        renderer.render(scene, camera);
+        requestAnimationFrame(render);
+      }
+      render();
+
+      return { rebuild: build, resize };
+    };
+  }
+
+  function rebuildAll() {
+    syncLabels();
+    updateLiveCards();
+    redrawSlices();
+    surfaces.forEach((surface) => {
+      surface.resize?.();
+      surface.rebuild?.();
+    });
+  }
+
   const observer = new ResizeObserver(() => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(rebuildAll, 80);
+    clearTimeout(root.__acp255ResizeTimer);
+    root.__acp255ResizeTimer = setTimeout(rebuildAll, 80);
   });
   observer.observe(root);
+
+  syncLabels();
+  updateLiveCards();
+  redrawSlices();
+
+  const threeBundle = await loadThree();
+  if (threeBundle) {
+    const makeSurface = buildSurfaceFactory(threeBundle.THREE, threeBundle.OrbitControls);
+    surfaces = [
+      makeSurface('surface-acp77', colors.acp77, (V, n) => acp77Total(V, n, state.acp77Days)),
+      makeSurface('surface-current', colors.current, current255),
+      makeSurface('surface-mono', colors.mono, (_V, n) => monotonic255(n)),
+      makeSurface('surface-hybrid', colors.hybrid, hybrid255)
+    ];
+    surfaces.forEach((surface) => surface.resize?.());
+  } else {
+    ['surface-acp77', 'surface-current', 'surface-mono', 'surface-hybrid'].forEach(fallback3D);
+  }
 
   rebuildAll();
 });

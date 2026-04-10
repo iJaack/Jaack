@@ -45,8 +45,8 @@ layout: compress
 
 <body class="lang-en">
 
-    {% assign width_class = "normal" %}
-    {% if site.width == "large" %}{% assign width_class = "large" %}{% endif %}
+    {% assign width_class = page.width | default: site.width | default: "normal" %}
+    {% if width_class != "large" and width_class != "xwide" %}{% assign width_class = "normal" %}{% endif %}
     <div class="wrapper-{{ width_class }}">
         {% if page.tag %}
         <div class="post">
