@@ -52,8 +52,6 @@ And I turned them into an interactive explorer.
 
 ---
 
-## The Explorer
-
 {% include acp255-explorer.html %}
 
 If you want the explorer on its own page too, [open it directly](/assets/open_source_code/acp-255-formula-explorer.html).
