@@ -9,8 +9,8 @@ function formatFee(value) {
 
 async function loadThree() {
   try {
-    const THREE = await import('https://unpkg.com/three@0.161.0/build/three.module.js');
-    const controlsModule = await import('https://unpkg.com/three@0.161.0/examples/jsm/controls/OrbitControls.js');
+    const THREE = await import('https://esm.sh/three@0.161.0');
+    const controlsModule = await import('https://esm.sh/three@0.161.0/examples/jsm/controls/OrbitControls.js');
     return { THREE, OrbitControls: controlsModule.OrbitControls };
   } catch (error) {
     console.warn('ACP-255 explorer: 3D modules unavailable', error);
