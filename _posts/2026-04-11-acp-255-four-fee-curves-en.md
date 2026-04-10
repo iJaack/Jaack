@@ -13,6 +13,11 @@ author: jaack
 description: "I took the current ACP-77 fee model and three different ACP-255 variants, then turned them into an interactive chart explorer. The hybrid model is the one I would defend today."
 published: true
 lang: en
+custom_stylesheets:
+- /assets/open_source_code/acp-255-formula-explorer.css
+custom_scripts:
+- path: /assets/open_source_code/acp-255-formula-explorer.js
+  type: module
 ---
 
 *This started as ACP work, then turned into a chart problem. The more I looked at the formulas, the less I wanted to argue about them in the abstract. So I built the thing I actually needed: a way to inspect the curves.*
@@ -49,16 +54,9 @@ And I turned them into an interactive explorer.
 
 ## The Explorer
 
-<div style="margin: 2rem 0; border: 1px solid #222; border-radius: 18px; overflow: hidden; background: #0b1020;">
-  <iframe
-    src="/assets/open_source_code/acp-255-formula-explorer.html"
-    title="ACP-255 Formula Explorer"
-    style="width: 100%; min-height: 2500px; border: 0; background: #0b1020;"
-    loading="lazy"
-  ></iframe>
-</div>
+{% include acp255-explorer.html %}
 
-If the iframe is too cramped on your device, [open the explorer directly](/assets/open_source_code/acp-255-formula-explorer.html).
+If you want the explorer on its own page too, [open it directly](/assets/open_source_code/acp-255-formula-explorer.html).
 
 The charts are the post.
 

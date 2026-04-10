@@ -1,0 +1,90 @@
+<div class="acp255-explorer-shell acp255-full-bleed"><div class="wrap">
+    <section class="hero">
+      <h1>ACP-255 Formula Explorer</h1>
+      <p>This is the interactive version of my ACP-255 note. It compares four fee regimes side by side: <strong>ACP-77</strong>, the <strong>current ACP-255 Gaussian proposal</strong>, a <strong>pure monotonic replacement</strong>, and a <strong>hybrid transition model</strong>. The charts are the point. Drag to rotate, scroll to zoom, and change the slices.</p>
+      <div class="legend">
+        <span><i class="dot" style="background:#ffcc66"></i>ACP-77</span>
+        <span><i class="dot" style="background:#ff7a90"></i>ACP-255 Gaussian</span>
+        <span><i class="dot" style="background:#5dd39e"></i>ACP-255 monotonic</span>
+        <span><i class="dot" style="background:#7aa2ff"></i>ACP-255 hybrid</span>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="panel controls">
+        <h2>Controls</h2>
+        <div class="row">
+          <label for="fixedV">Fixed total network validators (V) for the n-slice</label>
+          <strong id="fixedVLabel">800</strong>
+        </div>
+        <input id="fixedV" type="range" min="0" max="20000" step="100" value="800" />
+
+        <div class="row">
+          <label for="fixedN">Fixed L1 validator count (n) for the V-slice</label>
+          <strong id="fixedNLabel">10</strong>
+        </div>
+        <input id="fixedN" type="range" min="1" max="20" step="1" value="10" />
+
+        <div class="row">
+          <label for="acp77Days">ACP-77 sustained days above target</label>
+          <strong id="acp77DaysLabel">30</strong>
+        </div>
+        <input id="acp77Days" type="range" min="1" max="180" step="1" value="30" />
+
+        <p class="small">ACP-77 is not a simple static curve. Its fee depends on how long the network stays above the target. So for the ACP-77 surface I expose that assumption directly. Below the target it stays at the minimum. Above the target it compounds according to the public ACP-77 / Build.avax description.</p>
+
+        <div class="badge b-red">Current ACP-255: strongest original thesis, weakest against the aggregate-fee objection</div>
+        <div class="badge b-green">Monotonic: cleanest safety story, biggest redesign</div>
+        <div class="badge b-blue">Hybrid: best compromise if the goal is to preserve the 0→10k growth story and still clean up the post-threshold economics</div>
+      </div>
+
+      <div class="panel controls">
+        <h2>How to read the explorer</h2>
+        <ul>
+          <li><strong>3D surfaces:</strong> X = total network validators V, Z = L1 validator count n, Y = monthly L1 fee.</li>
+          <li><strong>First 2D chart:</strong> compare all four formulas across n while holding V fixed.</li>
+          <li><strong>Second 2D chart:</strong> compare all four formulas across V while holding n fixed.</li>
+          <li><strong>Hybrid model:</strong> uses the current ACP-255 formula up to 9k validators, blends through 9k→11k, then switches to a fitted monotonic curve.</li>
+        </ul>
+        <p class="small">The hybrid is the version I find most defensible today. Not because it is mathematically prettier than the pure monotonic curve, but because it preserves the original intuition of ACP-255 where it matters most, then gets stricter exactly where reviewers are right to worry.</p>
+      </div>
+    </section>
+
+    <section class="formula-grid">
+      <div class="panel">
+        <h2>ACP-77</h2>
+        <p><code>feeRate = M * exp(x / K)</code>, with <code>x = max(x + V - T, 0)</code>. For the explorer I convert that into a monthly fee under a sustained-over-target assumption.</p>
+        <div id="surface-acp77" class="surface"></div>
+      </div>
+      <div class="panel">
+        <h2>ACP-255, current Gaussian version</h2>
+        <p><code>total = n * M * multiplier(n) * networkFactor(V)</code>. This is the proposal exactly as drafted in the ACP review cycle.</p>
+        <div id="surface-current" class="surface"></div>
+      </div>
+      <div class="panel">
+        <h2>ACP-255, pure monotonic replacement</h2>
+        <p><code>total = 50 + 35 * log2(n)</code>. This is the cleanest response to the resource-pricing objection, but also the sharpest departure from the current ACP-255 story.</p>
+        <div id="surface-mono" class="surface"></div>
+      </div>
+      <div class="panel">
+        <h2>ACP-255, hybrid transition model</h2>
+        <p><code>current</code> below 9k, <code>blend</code> between 9k and 11k, <code>monotonic fitted branch</code> above 11k. This is the version that seems to work best.</p>
+        <div id="surface-hybrid" class="surface"></div>
+      </div>
+    </section>
+
+    <section class="formula-grid slices">
+      <div class="panel">
+        <h2>Slice 1, varying n at fixed V</h2>
+        <p>How expensive is the L1 as it grows its own validator set while the network stays at the selected total validator count?</p>
+        <canvas id="sliceN" class="chart2d"></canvas>
+        <div class="note">X-axis = L1 validator count n, Y-axis = monthly L1 fee.</div>
+      </div>
+      <div class="panel">
+        <h2>Slice 2, varying V at fixed n</h2>
+        <p>How do the four formulas behave as Avalanche grows from 0 to 20,000 total validators for a fixed L1 size?</p>
+        <canvas id="sliceV" class="chart2d"></canvas>
+        <div class="note">X-axis = total network validators V, Y-axis = monthly L1 fee.</div>
+      </div>
+    </section>
+  </div></div>

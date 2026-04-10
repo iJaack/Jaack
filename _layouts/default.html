@@ -35,6 +35,12 @@ layout: compress
     {% include critical-css.liquid %}
     {% include lang-css.html %}
 
+    {% if page.custom_stylesheets %}
+    {% for stylesheet in page.custom_stylesheets %}
+    <link rel="stylesheet" href="{{ stylesheet }}"> 
+    {% endfor %}
+    {% endif %}
+
 </head>
 
 <body class="lang-en">
@@ -105,6 +111,12 @@ layout: compress
                     };
                 })();
             </script>
+
+            {% if page.custom_scripts %}
+            {% for script in page.custom_scripts %}
+            <script src="{{ script.path | default: script }}"{% if script.type %} type="{{ script.type }}"{% endif %}{% if script.defer %} defer{% endif %}></script>
+            {% endfor %}
+            {% endif %}
 </body>
 
 </html>
