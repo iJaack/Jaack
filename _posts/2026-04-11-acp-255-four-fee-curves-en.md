@@ -2,12 +2,13 @@
 title: "ACP-255 Needs Better Fee Curves. So I Mapped Four of Them."
 layout: post
 date: 2026-04-11 00:36
-category: blog
-author: jaack
+headerImage: false
 tag:
 - avalanche
 - research
 - crypto
+category: blog
+author: jaack
 description: "I took the current ACP-77 fee model and three different ACP-255 variants, then turned them into an interactive chart explorer. The hybrid model is the one I would defend today."
 published: true
 lang: en
