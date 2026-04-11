@@ -1,4 +1,4 @@
-const roots = document.querySelectorAll('.acp255-section');
+const roots = document.querySelectorAll('.acp255-story');
 
 function formatFee(value) {
   if (!Number.isFinite(value)) return '—';

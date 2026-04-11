@@ -83,22 +83,26 @@
 
 
 .wrapper-xwide .post
-	> p,
-	> ul,
-	> ol,
-	> blockquote,
-	> pre,
-	> h2,
-	> h3,
-	> h4,
-	> .date,
 	> .title,
-	> hr,
-	> div:not(.acp255-story):not(.blog-navigation)
-		max-width: 760px
-
+	> .date,
 	> .title-image,
-	> .acp255-story,
-	> .blog-navigation,
-	> img
+	> .blog-navigation
 		max-width: 100%
+
+	> .post-body
+		> p,
+		> ul,
+		> ol,
+		> blockquote,
+		> pre,
+		> h2,
+		> h3,
+		> h4,
+		> hr
+			max-width: 760px
+
+		> .acp255-story,
+		> img,
+		> div,
+		> figure
+			max-width: 100%
