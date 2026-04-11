@@ -15,10 +15,9 @@ description: "I took the current ACP-77 fee model and three different ACP-255 va
 published: true
 lang: en
 custom_stylesheets:
-- /assets/open_source_code/acp-255-formula-explorer.css?v=19564b
+- /assets/open_source_code/acp-255-formula-explorer.css?v=plain2d
 custom_scripts:
-- path: /assets/open_source_code/acp-255-formula-explorer.js?v=19564b
-  type: module
+- path: /assets/open_source_code/acp-255-formula-explorer.js?v=plain2d
 ---
 
 *This started as ACP work, then turned into a chart problem. The more I looked at the formulas, the less I wanted to argue about them in the abstract. So I built the thing I actually needed: a way to inspect the curves.*
