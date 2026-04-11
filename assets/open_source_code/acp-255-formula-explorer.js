@@ -332,3 +332,14 @@ roots.forEach(async (root) => {
 
   rebuildAll();
 });
+
+
+const revealObserver = typeof IntersectionObserver !== "undefined" ? new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) entry.target.classList.add("is-visible");
+  });
+}, { threshold: 0.18 }) : null;
+
+document.querySelectorAll(".reveal-card").forEach((card) => {
+  if (revealObserver) revealObserver.observe(card); else card.classList.add("is-visible");
+});

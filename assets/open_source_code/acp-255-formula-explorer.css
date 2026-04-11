@@ -12,7 +12,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  opacity: 0.28;
+  opacity: 0.22;
   pointer-events: none;
 }
 
@@ -21,15 +21,12 @@
   z-index: 1;
 }
 
-.acp255-story-intro,
-.acp255-chapter,
-.acp255-models,
-.acp255-sticky-band {
+.acp255-story-block {
   border-top: 1px solid #222;
 }
 
 .acp255-story-intro {
-  padding: 2.2rem 0 2.4rem;
+  padding: 2.4rem 0 2.8rem;
 }
 
 .acp255-kicker {
@@ -55,9 +52,9 @@
 }
 
 .acp255-story h3 {
-  margin: 0 0 0.9rem;
-  font-size: clamp(2.2rem, 2.6vw, 3.2rem);
-  line-height: 1.05;
+  margin: 0 0 1rem;
+  font-size: clamp(2.25rem, 2.8vw, 3.4rem);
+  line-height: 1.03;
 }
 
 .acp255-story p,
@@ -71,20 +68,16 @@
 .acp255-dek,
 .acp255-chapter-copy p,
 .acp255-model-copy p {
-  max-width: 760px;
-  font-size: 1.8rem;
-  line-height: 1.6;
+  max-width: 780px;
+  font-size: 1.85rem;
+  line-height: 1.62;
 }
 
 .acp255-sticky-band {
   display: grid;
   grid-template-columns: 320px minmax(0, 1fr);
-  gap: 2.2rem;
-  padding: 2rem 0 2.6rem;
-}
-
-.acp255-sticky-copy {
-  min-width: 0;
+  gap: 2.4rem;
+  padding: 2.2rem 0 3rem;
 }
 
 .acp255-sticky-inner {
@@ -100,39 +93,31 @@
 
 .acp255-reading-points div {
   display: grid;
-  gap: 0.3rem;
+  gap: 0.35rem;
 }
 
-.acp255-reading-points strong {
-  color: #f0ede8;
-  font-size: 1.35rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+.acp255-reading-points strong,
+.live-label,
+.acp255-control label {
+  color: #888;
   font-family: 'Geist Mono', monospace;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .acp255-toolbar {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.2rem;
+  gap: 1rem;
 }
 
 .acp255-control {
-  padding: 1.15rem 1.2rem;
-  background: rgba(20, 20, 20, 0.52);
+  padding: 1.1rem 1.15rem;
+  background: rgba(20, 20, 20, 0.42);
   border: 1px solid rgba(255,255,255,0.05);
   border-radius: 14px;
   backdrop-filter: blur(4px);
-}
-
-.acp255-control label,
-.live-label {
-  display: block;
-  color: #888;
-  font-family: 'Geist Mono', monospace;
-  font-size: 1.05rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 .acp255-control-head {
@@ -140,7 +125,7 @@
   justify-content: space-between;
   gap: 1rem;
   align-items: baseline;
-  margin: 0.55rem 0 0.85rem;
+  margin: 0.55rem 0 0.8rem;
 }
 
 .acp255-control-head span {
@@ -151,7 +136,7 @@
 .acp255-control-head strong,
 .acp255-live-card strong {
   color: #f0ede8;
-  font-size: 2.6rem;
+  font-size: 2.45rem;
   line-height: 1;
 }
 
@@ -168,8 +153,8 @@
 }
 
 .acp255-live-card {
-  padding: 1rem 1.15rem;
-  background: rgba(20, 20, 20, 0.45);
+  padding: 1rem 1.1rem;
+  background: rgba(20, 20, 20, 0.38);
   border: 1px solid rgba(255,255,255,0.04);
 }
 
@@ -181,29 +166,36 @@
 .acp255-chapter {
   display: grid;
   grid-template-columns: 320px minmax(0, 1fr);
-  gap: 2.2rem;
+  gap: 2.4rem;
   align-items: start;
-  padding: 2.2rem 0 2.6rem;
+  padding: 2.8rem 0;
 }
 
-.acp255-chapter-visual,
-.acp255-model .surface {
-  min-width: 0;
+.acp255-callout {
+  color: #f0ede8 !important;
+  font-style: italic;
 }
 
 .acp255-models {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
-  padding-top: 2.2rem;
-}
-
-.acp255-model {
-  padding-top: 0.2rem;
+  padding: 2.8rem 0 0;
 }
 
 .acp255-model-copy {
   margin-bottom: 1rem;
+}
+
+.reveal-card {
+  opacity: 0.55;
+  transform: translateY(18px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.reveal-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .acp255-story code {
@@ -220,7 +212,7 @@
   width: 100%;
   border-radius: 16px;
   border: 1px solid #222;
-  background: rgba(8, 8, 8, 0.62);
+  background: rgba(8, 8, 8, 0.56);
 }
 
 .surface {
@@ -229,7 +221,7 @@
 
 .chart2d {
   display: block;
-  height: 360px;
+  height: 380px;
 }
 
 .three-fallback {

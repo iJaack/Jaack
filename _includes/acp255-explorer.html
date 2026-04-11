@@ -1,20 +1,21 @@
 <section class="acp255-story">
   <div class="acp255-ambient" id="acp255-ambient" aria-hidden="true"></div>
 
-  <header class="acp255-story-intro">
+  <header class="acp255-story-intro acp255-story-block">
     <div class="acp255-kicker">Interactive research</div>
     <h2>The Explorer</h2>
-    <p>The point of this section is simple: stop arguing about the curves abstractly and inspect them directly. Move the sliders, watch the surfaces, and compare what each model actually prices.</p>
+    <p>This section is the argument, rendered instead of asserted. Move through it top to bottom, adjust the assumptions, and watch how each pricing philosophy bends under the same validator reality.</p>
   </header>
 
-  <section class="acp255-sticky-band">
+  <section class="acp255-sticky-band acp255-story-block">
     <aside class="acp255-sticky-copy">
       <div class="acp255-sticky-inner">
-        <p class="acp255-dek">The key tension is whether decentralization can be rewarded without making total validator load look artificially cheap.</p>
+        <div class="acp255-kicker">How to read it</div>
+        <p class="acp255-dek">The live controls stay fixed while the story advances. That way the narrative changes, but the assumptions stay in your hands.</p>
         <div class="acp255-reading-points">
           <div><strong>3D surfaces</strong><span>X = network validators, Z = L1 validators, Y = monthly fee.</span></div>
           <div><strong>2D slices</strong><span>One slice fixes V, the other fixes n.</span></div>
-          <div><strong>Interpretation</strong><span>The real question is pricing added work without killing decentralization incentives.</span></div>
+          <div><strong>Interpretation</strong><span>The real question is whether decentralization can be rewarded without underpricing added validator load.</span></div>
         </div>
       </div>
     </aside>
@@ -59,30 +60,32 @@
     </div>
   </section>
 
-  <section class="acp255-chapter acp255-chapter-slice">
+  <section class="acp255-chapter acp255-story-block acp255-chapter-slice">
     <div class="acp255-chapter-copy">
-      <div class="acp255-kicker">Slice 1</div>
-      <h3>What happens as one L1 adds validators?</h3>
-      <p>This view holds total network size fixed and asks whether an L1 gets cheaper, more expensive, or more efficiently priced as it decentralizes.</p>
+      <div class="acp255-kicker">Chapter 1</div>
+      <h3>If one L1 decentralizes, what should happen to total cost?</h3>
+      <p>This is the cleanest lens on the objection. Hold total network size fixed. Then ask whether moving from a tight validator set to a broader one should reduce total price, increase total price, or just change efficiency per validator.</p>
+      <p class="acp255-callout">This is where the monotonic and hybrid models become easier to defend than the pure Gaussian draft.</p>
     </div>
     <div class="acp255-chapter-visual">
       <canvas id="sliceN" class="chart2d"></canvas>
     </div>
   </section>
 
-  <section class="acp255-chapter acp255-chapter-slice">
+  <section class="acp255-chapter acp255-story-block acp255-chapter-slice">
     <div class="acp255-chapter-copy">
-      <div class="acp255-kicker">Slice 2</div>
-      <h3>What happens as Avalanche itself grows?</h3>
-      <p>This view holds one L1 fixed and shows how each model behaves as the network grows toward and beyond the 10k validator region.</p>
+      <div class="acp255-kicker">Chapter 2</div>
+      <h3>Now keep one L1 fixed and let Avalanche mature.</h3>
+      <p>This is the network-growth lens. The 10k region matters politically and economically, because that is where the original ACP-255 story has the most intuitive force, but also where reviewers start asking harder pricing questions.</p>
+      <p class="acp255-callout">The hybrid exists for this exact transition zone. It preserves the growth story, then gets stricter once that story becomes harder to justify.</p>
     </div>
     <div class="acp255-chapter-visual">
       <canvas id="sliceV" class="chart2d"></canvas>
     </div>
   </section>
 
-  <section class="acp255-models">
-    <article class="acp255-model">
+  <section class="acp255-models acp255-story-block">
+    <article class="acp255-model reveal-card">
       <div class="acp255-model-copy">
         <div class="acp255-kicker">Baseline</div>
         <h3>ACP-77</h3>
@@ -91,7 +94,7 @@
       <div id="surface-acp77" class="surface"></div>
     </article>
 
-    <article class="acp255-model">
+    <article class="acp255-model reveal-card">
       <div class="acp255-model-copy">
         <div class="acp255-kicker">Current draft</div>
         <h3>ACP-255, Gaussian</h3>
@@ -100,7 +103,7 @@
       <div id="surface-current" class="surface"></div>
     </article>
 
-    <article class="acp255-model">
+    <article class="acp255-model reveal-card">
       <div class="acp255-model-copy">
         <div class="acp255-kicker">Strict replacement</div>
         <h3>ACP-255, monotonic</h3>
@@ -109,7 +112,7 @@
       <div id="surface-mono" class="surface"></div>
     </article>
 
-    <article class="acp255-model">
+    <article class="acp255-model reveal-card">
       <div class="acp255-model-copy">
         <div class="acp255-kicker">Compromise</div>
         <h3>ACP-255, hybrid</h3>
