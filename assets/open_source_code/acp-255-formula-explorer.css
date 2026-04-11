@@ -26,7 +26,7 @@
   line-height: 0.95;
 }
 .acp255-story-intro p, .acp255-chart-copy p {
-  max-width: 760px;
+  max-width: 880px;
   font-size: 1.8rem;
   line-height: 1.6;
 }
@@ -89,4 +89,62 @@
 @media (max-width: 980px) {
   .acp255-toolbar, .acp255-live-strip, .acp255-summary-grid { grid-template-columns: 1fr; }
   .chart2d { height: 320px; }
+}
+
+
+@media (min-width: 981px) {
+  .acp255-story-intro {
+    max-width: 980px;
+    margin-bottom: 2.4rem;
+  }
+
+  .acp255-toolbar {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.2rem;
+  }
+
+  .acp255-live-strip {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .acp255-chart-block {
+    display: grid;
+    grid-template-columns: minmax(240px, 320px) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .acp255-chart-copy {
+    position: sticky;
+    top: 88px;
+  }
+
+  .chart2d {
+    margin-top: 0;
+    height: 460px;
+  }
+
+  .acp255-summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (min-width: 981px) and (max-width: 1180px) {
+  .acp255-chart-block {
+    grid-template-columns: minmax(220px, 280px) minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  .chart2d {
+    height: 420px;
+  }
+
+  .acp255-control-head strong,
+  .acp255-live-card strong {
+    font-size: 2rem;
+  }
 }
