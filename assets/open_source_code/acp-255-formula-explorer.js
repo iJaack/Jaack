@@ -1,4 +1,4 @@
-const roots = document.querySelectorAll('.acp255-explorer-shell');
+const roots = document.querySelectorAll('.acp255-section');
 
 function formatFee(value) {
   if (!Number.isFinite(value)) return '—';
@@ -20,7 +20,7 @@ async function loadThree() {
 
 roots.forEach(async (root) => {
   const colors = {
-    acp77: '#ffcc66',
+    acp77: '#e8c547',
     current: '#ff7a90',
     mono: '#5dd39e',
     hybrid: '#7aa2ff'
@@ -32,43 +32,27 @@ roots.forEach(async (root) => {
   const ACP77_T = 10000;
   const SECONDS_PER_MONTH = 30 * 24 * 60 * 60;
 
-  function currentMultiplier(n) {
-    return 1 + 17.84 * Math.exp(-0.3 * (n - 1));
-  }
+  const state = { fixedV: 800, fixedN: 10, acp77Days: 30 };
 
-  function networkFactor(V) {
-    return 1 + 2.84 * Math.exp(-Math.pow((V - 10000) / 7500, 2));
-  }
-
-  function current255(V, n) {
-    return n * M255 * currentMultiplier(n) * networkFactor(V);
-  }
-
-  function monotonic255(n) {
-    return 50 + 35 * Math.log2(n);
-  }
+  const currentMultiplier = (n) => 1 + 17.84 * Math.exp(-0.3 * (n - 1));
+  const networkFactor = (V) => 1 + 2.84 * Math.exp(-Math.pow((V - 10000) / 7500, 2));
+  const current255 = (V, n) => n * M255 * currentMultiplier(n) * networkFactor(V);
+  const monotonic255 = (n) => 50 + 35 * Math.log2(n);
 
   function acp77PerValidatorMonthly(V, sustainedDays) {
-    if (V <= ACP77_T) {
-      return (ACP77_M * SECONDS_PER_MONTH) / 1e9;
-    }
+    if (V <= ACP77_T) return (ACP77_M * SECONDS_PER_MONTH) / 1e9;
     const x = (V - ACP77_T) * sustainedDays * 24 * 60 * 60;
     const feeRate = ACP77_M * Math.exp(x / ACP77_K);
     return (feeRate * SECONDS_PER_MONTH) / 1e9;
   }
 
-  function acp77Total(V, n, sustainedDays) {
-    return n * acp77PerValidatorMonthly(V, sustainedDays);
-  }
+  const acp77Total = (V, n, sustainedDays) => n * acp77PerValidatorMonthly(V, sustainedDays);
 
-  const anchors = [3, 10, 15].map((n) => [n, current255(10000, n)]);
   function solve3x3(rows, values) {
     const a = rows.map((row, i) => [...row, values[i]]);
     for (let i = 0; i < 3; i++) {
       let pivot = i;
-      for (let r = i + 1; r < 3; r++) {
-        if (Math.abs(a[r][i]) > Math.abs(a[pivot][i])) pivot = r;
-      }
+      for (let r = i + 1; r < 3; r++) if (Math.abs(a[r][i]) > Math.abs(a[pivot][i])) pivot = r;
       [a[i], a[pivot]] = [a[pivot], a[i]];
       const div = a[i][i];
       for (let j = i; j < 4; j++) a[i][j] /= div;
@@ -81,49 +65,38 @@ roots.forEach(async (root) => {
     return [a[0][3], a[1][3], a[2][3]];
   }
 
+  const anchors = [3, 10, 15].map((n) => [n, current255(10000, n)]);
   const [HYB_A, HYB_B, HYB_C] = solve3x3(
     anchors.map(([n]) => [1, Math.log2(n), Math.sqrt(n)]),
     anchors.map(([, y]) => y)
   );
 
-  function hybridBranch(n) {
-    return HYB_A + HYB_B * Math.log2(n) + HYB_C * Math.sqrt(n);
-  }
-
-  function hybridWeight(V) {
-    if (V <= 9000) return 0;
-    if (V >= 11000) return 1;
-    const t = (V - 9000) / 2000;
-    return t * t * (3 - 2 * t);
-  }
-
-  function hybrid255(V, n) {
-    const w = hybridWeight(V);
-    return (1 - w) * current255(V, n) + w * hybridBranch(n);
-  }
-
-  const state = {
-    fixedV: 800,
-    fixedN: 10,
-    acp77Days: 30
-  };
+  const hybridBranch = (n) => HYB_A + HYB_B * Math.log2(n) + HYB_C * Math.sqrt(n);
+  const hybridWeight = (V) => V <= 9000 ? 0 : V >= 11000 ? 1 : ((t) => t * t * (3 - 2 * t))((V - 9000) / 2000);
+  const hybrid255 = (V, n) => (1 - hybridWeight(V)) * current255(V, n) + hybridWeight(V) * hybridBranch(n);
 
   function getEl(id) {
     return root.querySelector(`#${id}`);
   }
 
+  function syncLabels() {
+    [['fixedVLabel', state.fixedV], ['fixedNLabel', state.fixedN], ['acp77DaysLabel', state.acp77Days]].forEach(([id, value]) => {
+      const el = getEl(id);
+      if (el) el.textContent = String(value);
+    });
+  }
+
   function updateLiveCards() {
-    const liveValues = {
+    const values = {
       acp77: acp77Total(state.fixedV, state.fixedN, state.acp77Days),
       current: current255(state.fixedV, state.fixedN),
       mono: monotonic255(state.fixedN),
       hybrid: hybrid255(state.fixedV, state.fixedN)
     };
-
-    getEl('live-acp77').textContent = formatFee(liveValues.acp77);
-    getEl('live-current').textContent = formatFee(liveValues.current);
-    getEl('live-mono').textContent = formatFee(liveValues.mono);
-    getEl('live-hybrid').textContent = formatFee(liveValues.hybrid);
+    getEl('live-acp77').textContent = formatFee(values.acp77);
+    getEl('live-current').textContent = formatFee(values.current);
+    getEl('live-mono').textContent = formatFee(values.mono);
+    getEl('live-hybrid').textContent = formatFee(values.hybrid);
   }
 
   function drawCanvas(canvasId, datasets, xLabel, tickValues) {
@@ -131,14 +104,14 @@ roots.forEach(async (root) => {
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     const ratio = Math.min(window.devicePixelRatio || 1, 2);
-    const width = canvas.clientWidth || canvas.parentElement.clientWidth || 600;
+    const width = canvas.clientWidth || 600;
     const height = canvas.clientHeight || 320;
     canvas.width = width * ratio;
     canvas.height = height * ratio;
     ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
     ctx.clearRect(0, 0, width, height);
 
-    const pad = { top: 20, right: 18, bottom: 44, left: 60 };
+    const pad = { top: 20, right: 20, bottom: 42, left: 58 };
     const plotW = width - pad.left - pad.right;
     const plotH = height - pad.top - pad.bottom;
     const ys = datasets.flatMap((d) => d.data.map((p) => p.y));
@@ -148,72 +121,51 @@ roots.forEach(async (root) => {
     const sx = (x) => pad.left + ((x - minX) / (maxX - minX || 1)) * plotW;
     const sy = (y) => pad.top + plotH - (y / maxY) * plotH;
 
-    ctx.strokeStyle = 'rgba(255,255,255,0.08)';
-    ctx.lineWidth = 1;
+    ctx.strokeStyle = 'rgba(255,255,255,0.06)';
     for (let i = 0; i <= 4; i++) {
       const y = pad.top + (plotH / 4) * i;
-      ctx.beginPath();
-      ctx.moveTo(pad.left, y);
-      ctx.lineTo(width - pad.right, y);
-      ctx.stroke();
+      ctx.beginPath(); ctx.moveTo(pad.left, y); ctx.lineTo(width - pad.right, y); ctx.stroke();
     }
 
-    ctx.strokeStyle = '#6f7db0';
+    ctx.strokeStyle = '#333';
     ctx.beginPath();
     ctx.moveTo(pad.left, pad.top);
     ctx.lineTo(pad.left, pad.top + plotH);
     ctx.lineTo(width - pad.right, pad.top + plotH);
     ctx.stroke();
 
-    ctx.fillStyle = '#a8b5d8';
-    ctx.font = '12px Inter, sans-serif';
+    ctx.fillStyle = '#888';
+    ctx.font = '12px Geist Mono, monospace';
     ctx.textAlign = 'center';
-    tickValues.forEach((tick) => ctx.fillText(String(tick), sx(tick), height - 16));
+    tickValues.forEach((tick) => ctx.fillText(String(tick), sx(tick), height - 12));
     ctx.textAlign = 'right';
     for (let i = 0; i <= 4; i++) {
-      const value = Math.round((maxY / 4) * (4 - i));
-      ctx.fillText(String(value), pad.left - 8, pad.top + (plotH / 4) * i + 4);
+      ctx.fillText(String(Math.round((maxY / 4) * (4 - i))), pad.left - 8, pad.top + (plotH / 4) * i + 4);
     }
     ctx.textAlign = 'center';
     ctx.fillText(xLabel, width / 2, height - 2);
 
     datasets.forEach((set) => {
       ctx.strokeStyle = set.color;
-      ctx.lineWidth = 2.5;
+      ctx.lineWidth = 2.4;
       ctx.beginPath();
       set.data.forEach((p, i) => {
-        const x = sx(p.x);
-        const y = sy(p.y);
+        const x = sx(p.x), y = sy(p.y);
         if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
       });
       ctx.stroke();
-    });
-
-    const legendX = Math.max(width - 166, pad.left + 10);
-    let legendY = 22;
-    ctx.textAlign = 'left';
-    datasets.forEach((set) => {
-      ctx.fillStyle = set.color;
-      ctx.beginPath();
-      ctx.arc(legendX, legendY, 5, 0, Math.PI * 2);
-      ctx.fill();
-      ctx.fillStyle = '#dce6ff';
-      ctx.fillText(set.label, legendX + 12, legendY + 4);
-      legendY += 18;
     });
   }
 
   function redrawSlices() {
     const nData = Array.from({ length: 20 }, (_, i) => i + 1);
     const vData = Array.from({ length: 21 }, (_, i) => i * 1000);
-
     drawCanvas('sliceN', [
       { label: 'ACP-77', color: colors.acp77, data: nData.map((n) => ({ x: n, y: acp77Total(state.fixedV, n, state.acp77Days) })) },
       { label: 'Gaussian', color: colors.current, data: nData.map((n) => ({ x: n, y: current255(state.fixedV, n) })) },
       { label: 'Monotonic', color: colors.mono, data: nData.map((n) => ({ x: n, y: monotonic255(n) })) },
       { label: 'Hybrid', color: colors.hybrid, data: nData.map((n) => ({ x: n, y: hybrid255(state.fixedV, n) })) }
     ], 'L1 validator count (n)', [1, 5, 10, 15, 20]);
-
     drawCanvas('sliceV', [
       { label: 'ACP-77', color: colors.acp77, data: vData.map((V) => ({ x: V, y: acp77Total(V, state.fixedN, state.acp77Days) })) },
       { label: 'Gaussian', color: colors.current, data: vData.map((V) => ({ x: V, y: current255(V, state.fixedN) })) },
@@ -222,108 +174,88 @@ roots.forEach(async (root) => {
     ], 'Total network validators (V)', [0, 5000, 10000, 15000, 20000]);
   }
 
-  function syncLabels() {
-    const pairs = [
-      ['fixedVLabel', state.fixedV],
-      ['fixedVControlLabel', state.fixedV],
-      ['fixedNLabel', state.fixedN],
-      ['fixedNControlLabel', state.fixedN],
-      ['acp77DaysLabel', state.acp77Days],
-      ['acp77DaysControlLabel', state.acp77Days]
-    ];
-    pairs.forEach(([id, value]) => {
-      const el = getEl(id);
-      if (el) el.textContent = String(value);
-    });
-  }
-
-  const fixedV = getEl('fixedV');
-  const fixedN = getEl('fixedN');
-  const acp77Days = getEl('acp77Days');
-
-  fixedV?.addEventListener('input', () => {
-    state.fixedV = Number(fixedV.value);
-    syncLabels();
-    updateLiveCards();
-    redrawSlices();
-  });
-
-  fixedN?.addEventListener('input', () => {
-    state.fixedN = Number(fixedN.value);
-    syncLabels();
-    updateLiveCards();
-    redrawSlices();
-  });
-
-  acp77Days?.addEventListener('input', () => {
-    state.acp77Days = Number(acp77Days.value);
-    syncLabels();
-    updateLiveCards();
-    redrawSlices();
-    surfaces.forEach((surface) => surface.rebuild?.());
-  });
-
-  let surfaces = [];
-
   function fallback3D(containerId) {
     const container = getEl(containerId);
-    if (!container) return;
-    container.innerHTML = '<div class="three-fallback">3D surface unavailable in this browser, but the live fee cards and 2D comparison charts below still work.</div>';
+    if (container) container.innerHTML = '<div class="three-fallback">3D view unavailable here. The fee cards and 2D comparisons still work below.</div>';
+  }
+
+  function buildAmbient(THREE) {
+    const mount = root.querySelector('.acp255-ambient');
+    if (!mount) return null;
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
+    camera.position.set(0, 0, 18);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+    mount.appendChild(renderer.domElement);
+
+    const particles = 180;
+    const positions = new Float32Array(particles * 3);
+    for (let i = 0; i < particles; i++) {
+      positions[i * 3] = (Math.random() - 0.5) * 28;
+      positions[i * 3 + 1] = (Math.random() - 0.5) * 18;
+      positions[i * 3 + 2] = (Math.random() - 0.5) * 10;
+    }
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    const material = new THREE.PointsMaterial({ color: 0xe8c547, size: 0.06, transparent: true, opacity: 0.55 });
+    const points = new THREE.Points(geometry, material);
+    scene.add(points);
+
+    const lineMaterial = new THREE.LineBasicMaterial({ color: 0x2d2d2d, transparent: true, opacity: 0.35 });
+    const lineGeom = new THREE.BufferGeometry().setFromPoints([
+      new THREE.Vector3(-12, -4, -2), new THREE.Vector3(12, 3, -3),
+      new THREE.Vector3(-10, 5, -1), new THREE.Vector3(10, -2, -2)
+    ]);
+    scene.add(new THREE.LineSegments(lineGeom, lineMaterial));
+
+    function resize() {
+      const w = Math.max(mount.clientWidth, 10);
+      const h = Math.max(mount.clientHeight, 10);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      renderer.setSize(w, h, false);
+    }
+
+    let raf;
+    function render() {
+      points.rotation.y += 0.0008;
+      points.rotation.x += 0.0003;
+      renderer.render(scene, camera);
+      raf = requestAnimationFrame(render);
+    }
+    resize(); render();
+    return { resize, destroy: () => cancelAnimationFrame(raf) };
   }
 
   function buildSurfaceFactory(THREE, OrbitControls) {
     return function makeSurface(containerId, color, formula) {
       const container = getEl(containerId);
       if (!container) return { rebuild: () => {}, resize: () => {} };
-
       let renderer;
-      try {
-        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
-      } catch (error) {
-        fallback3D(containerId);
-        return { rebuild: () => {}, resize: () => {} };
-      }
+      try { renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true }); }
+      catch { fallback3D(containerId); return { rebuild: () => {}, resize: () => {} }; }
 
       const scene = new THREE.Scene();
-      scene.background = new THREE.Color('#091321');
       const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 1000);
-      camera.position.set(42, 32, 42);
+      camera.position.set(42, 30, 42);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
       container.innerHTML = '';
       container.appendChild(renderer.domElement);
 
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.enableDamping = true;
-      controls.target.set(0, 6, 0);
-
+      controls.target.set(0, 5, 0);
       scene.add(new THREE.AmbientLight(0xffffff, 0.9));
-      const directional = new THREE.DirectionalLight(0xffffff, 0.7);
-      directional.position.set(18, 30, 8);
-      scene.add(directional);
-      scene.add(new THREE.GridHelper(40, 10, 0x33507c, 0x1b2f54));
-
+      const light = new THREE.DirectionalLight(0xffffff, 0.5); light.position.set(10, 20, 10); scene.add(light);
+      scene.add(new THREE.GridHelper(40, 10, 0x333333, 0x222222));
+      const linesGroup = new THREE.Group(); scene.add(linesGroup);
       const material = new THREE.LineBasicMaterial({ color });
-      const linesGroup = new THREE.Group();
-      scene.add(linesGroup);
-
-      const axisMat = new THREE.LineBasicMaterial({ color: 0x8ea3cf });
-      const axes = new THREE.Group();
-      const axisPoints = [
-        new THREE.Vector3(-20, 0, -20), new THREE.Vector3(20, 0, -20),
-        new THREE.Vector3(-20, 0, -20), new THREE.Vector3(-20, 16, -20),
-        new THREE.Vector3(-20, 0, -20), new THREE.Vector3(-20, 0, 20)
-      ];
-      for (let i = 0; i < axisPoints.length; i += 2) {
-        axes.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([axisPoints[i], axisPoints[i + 1]]), axisMat));
-      }
-      scene.add(axes);
 
       function resize() {
-        const width = Math.max(container.clientWidth, 100);
-        const height = Math.max(container.clientHeight, 240);
-        camera.aspect = width / height;
-        camera.updateProjectionMatrix();
-        renderer.setSize(width, height, false);
+        const w = Math.max(container.clientWidth, 100);
+        const h = Math.max(container.clientHeight, 240);
+        camera.aspect = w / h; camera.updateProjectionMatrix(); renderer.setSize(w, h, false);
       }
 
       function build() {
@@ -331,57 +263,52 @@ roots.forEach(async (root) => {
           const obj = linesGroup.children.pop();
           obj.geometry.dispose();
         }
-
         const Vvals = Array.from({ length: 21 }, (_, i) => i * 1000);
         const Nvals = Array.from({ length: 20 }, (_, i) => i + 1);
         const samples = [];
-        for (const V of Vvals) {
-          for (const n of Nvals) {
-            samples.push(formula(V, n));
-          }
-        }
+        for (const V of Vvals) for (const n of Nvals) samples.push(formula(V, n));
         const maxFee = Math.max(...samples) || 1;
         const mapX = (V) => -20 + (V / 20000) * 40;
         const mapZ = (n) => -20 + ((n - 1) / 19) * 40;
         const mapY = (fee) => (fee / maxFee) * 16;
-
         for (const n of Nvals) {
-          const points = Vvals.map((V) => new THREE.Vector3(mapX(V), mapY(formula(V, n)), mapZ(n)));
-          linesGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), material));
+          const pts = Vvals.map((V) => new THREE.Vector3(mapX(V), mapY(formula(V, n)), mapZ(n)));
+          linesGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), material));
         }
         for (const V of Vvals) {
-          const points = Nvals.map((n) => new THREE.Vector3(mapX(V), mapY(formula(V, n)), mapZ(n)));
-          linesGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(points), material));
+          const pts = Nvals.map((n) => new THREE.Vector3(mapX(V), mapY(formula(V, n)), mapZ(n)));
+          linesGroup.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), material));
         }
       }
 
-      resize();
-      build();
-
-      function render() {
-        controls.update();
-        renderer.render(scene, camera);
-        requestAnimationFrame(render);
-      }
-      render();
-
-      return { rebuild: build, resize };
+      let raf;
+      function render() { controls.update(); renderer.render(scene, camera); raf = requestAnimationFrame(render); }
+      resize(); build(); render();
+      return { rebuild: build, resize, destroy: () => cancelAnimationFrame(raf) };
     };
   }
+
+  const fixedV = getEl('fixedV');
+  const fixedN = getEl('fixedN');
+  const acp77Days = getEl('acp77Days');
+  let surfaces = [];
+  let ambient = null;
 
   function rebuildAll() {
     syncLabels();
     updateLiveCards();
     redrawSlices();
-    surfaces.forEach((surface) => {
-      surface.resize?.();
-      surface.rebuild?.();
-    });
+    surfaces.forEach((s) => { s.resize?.(); s.rebuild?.(); });
+    ambient?.resize?.();
   }
 
+  fixedV?.addEventListener('input', () => { state.fixedV = Number(fixedV.value); rebuildAll(); });
+  fixedN?.addEventListener('input', () => { state.fixedN = Number(fixedN.value); rebuildAll(); });
+  acp77Days?.addEventListener('input', () => { state.acp77Days = Number(acp77Days.value); rebuildAll(); });
+
   const observer = new ResizeObserver(() => {
-    clearTimeout(root.__acp255ResizeTimer);
-    root.__acp255ResizeTimer = setTimeout(rebuildAll, 80);
+    clearTimeout(root.__acpResize);
+    root.__acpResize = setTimeout(rebuildAll, 80);
   });
   observer.observe(root);
 
@@ -391,6 +318,7 @@ roots.forEach(async (root) => {
 
   const threeBundle = await loadThree();
   if (threeBundle) {
+    ambient = buildAmbient(threeBundle.THREE);
     const makeSurface = buildSurfaceFactory(threeBundle.THREE, threeBundle.OrbitControls);
     surfaces = [
       makeSurface('surface-acp77', colors.acp77, (V, n) => acp77Total(V, n, state.acp77Days)),
@@ -398,7 +326,6 @@ roots.forEach(async (root) => {
       makeSurface('surface-mono', colors.mono, (_V, n) => monotonic255(n)),
       makeSurface('surface-hybrid', colors.hybrid, hybrid255)
     ];
-    surfaces.forEach((surface) => surface.resize?.());
   } else {
     ['surface-acp77', 'surface-current', 'surface-mono', 'surface-hybrid'].forEach(fallback3D);
   }

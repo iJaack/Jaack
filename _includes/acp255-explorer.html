@@ -1,157 +1,94 @@
-<section class="acp255-explorer-shell acp255-full-bleed">
-  <div class="wrap">
-    <div class="eyebrow">Interactive research section</div>
+<section class="acp255-section">
+  <div class="acp255-ambient" id="acp255-ambient" aria-hidden="true"></div>
 
-    <header class="hero panel">
-      <div class="hero-copy">
-        <h2>The Explorer</h2>
-        <p>This section turns the fee argument into something you can inspect instead of just debate. Compare <strong>ACP-77</strong>, the <strong>current ACP-255 Gaussian draft</strong>, a <strong>pure monotonic replacement</strong>, and a <strong>hybrid transition model</strong> across both validator-count axes.</p>
-        <div class="legend">
-          <span><i class="dot" style="background:#ffcc66"></i>ACP-77</span>
-          <span><i class="dot" style="background:#ff7a90"></i>ACP-255 Gaussian</span>
-          <span><i class="dot" style="background:#5dd39e"></i>ACP-255 monotonic</span>
-          <span><i class="dot" style="background:#7aa2ff"></i>ACP-255 hybrid</span>
-        </div>
-      </div>
-      <div class="hero-metrics">
-        <div class="metric-card">
-          <span class="metric-label">Fixed V for n-slice</span>
-          <strong id="fixedVLabel">800</strong>
-        </div>
-        <div class="metric-card">
-          <span class="metric-label">Fixed n for V-slice</span>
-          <strong id="fixedNLabel">10</strong>
-        </div>
-        <div class="metric-card">
-          <span class="metric-label">ACP-77 days above target</span>
-          <strong id="acp77DaysLabel">30</strong>
-        </div>
+  <div class="acp255-flow">
+    <header class="acp255-lead">
+      <div class="acp255-kicker">Interactive research</div>
+      <h2>The Explorer</h2>
+      <p>This is the interactive layer of the argument. Instead of treating fee curves as static formulas, you can inspect how <strong>ACP-77</strong>, the <strong>current ACP-255 Gaussian draft</strong>, a <strong>monotonic replacement</strong>, and a <strong>hybrid transition model</strong> behave as validator counts move.</p>
+      <div class="acp255-legend">
+        <span><i class="dot" style="background:#e8c547"></i>ACP-77</span>
+        <span><i class="dot" style="background:#ff7a90"></i>Gaussian</span>
+        <span><i class="dot" style="background:#5dd39e"></i>Monotonic</span>
+        <span><i class="dot" style="background:#7aa2ff"></i>Hybrid</span>
       </div>
     </header>
 
-    <section class="story-grid">
-      <aside class="panel controls-rail">
-        <div class="sticky-box">
-          <h3>Controls</h3>
-
-          <div class="control-group">
-            <div class="row">
-              <label for="fixedV">Total network validators (V)</label>
-              <strong id="fixedVControlLabel">800</strong>
-            </div>
-            <input id="fixedV" type="range" min="0" max="20000" step="100" value="800" />
-          </div>
-
-          <div class="control-group">
-            <div class="row">
-              <label for="fixedN">L1 validator count (n)</label>
-              <strong id="fixedNControlLabel">10</strong>
-            </div>
-            <input id="fixedN" type="range" min="1" max="20" step="1" value="10" />
-          </div>
-
-          <div class="control-group">
-            <div class="row">
-              <label for="acp77Days">ACP-77 sustained days above target</label>
-              <strong id="acp77DaysControlLabel">30</strong>
-            </div>
-            <input id="acp77Days" type="range" min="1" max="180" step="1" value="30" />
-          </div>
-
-          <p class="small">ACP-77 is path-dependent, so the explorer exposes that assumption directly. Below target it sits at the minimum. Above target it compounds with time.</p>
-
-          <div class="badge-stack">
-            <div class="badge b-red">Current ACP-255: strongest original thesis, weakest against the aggregate-fee objection</div>
-            <div class="badge b-green">Monotonic: cleanest safety story, biggest redesign</div>
-            <div class="badge b-blue">Hybrid: best compromise if you want the 0→10k growth story without the post-threshold pricing problem</div>
-          </div>
-        </div>
-      </aside>
-
-      <div class="story-stage">
-        <section class="panel explainer-card">
-          <div class="eyebrow">How to read it</div>
-          <div class="formula-grid compact-grid">
-            <div>
-              <h3>3D surfaces</h3>
-              <p>X = total network validators V, Z = L1 validator count n, Y = monthly L1 fee.</p>
-            </div>
-            <div>
-              <h3>2D slices</h3>
-              <p>One slice holds V fixed while n changes. The other holds n fixed while V changes.</p>
-            </div>
-            <div>
-              <h3>Hybrid model</h3>
-              <p>Current ACP-255 below 9k, blended from 9k→11k, then switched onto a fitted monotonic branch.</p>
-            </div>
-            <div>
-              <h3>Why it matters</h3>
-              <p>The question is whether decentralization lowers concentration risk without accidentally underpricing extra validator load.</p>
-            </div>
-          </div>
-        </section>
-
-        <section class="live-comparison formula-grid">
-          <article class="panel live-card live-acp77">
-            <div class="live-label">ACP-77</div>
-            <strong id="live-acp77">-</strong>
-            <span class="live-note">monthly fee at current sliders</span>
-          </article>
-          <article class="panel live-card live-current">
-            <div class="live-label">Gaussian</div>
-            <strong id="live-current">-</strong>
-            <span class="live-note">monthly fee at current sliders</span>
-          </article>
-          <article class="panel live-card live-mono">
-            <div class="live-label">Monotonic</div>
-            <strong id="live-mono">-</strong>
-            <span class="live-note">monthly fee at current sliders</span>
-          </article>
-          <article class="panel live-card live-hybrid">
-            <div class="live-label">Hybrid</div>
-            <strong id="live-hybrid">-</strong>
-            <span class="live-note">monthly fee at current sliders</span>
-          </article>
-        </section>
-
-        <section class="formula-grid surface-grid">
-          <div class="panel">
-            <h3>ACP-77</h3>
-            <p><code>feeRate = M * exp(x / K)</code>, with sustained-over-target behavior folded into a monthly fee.</p>
-            <div id="surface-acp77" class="surface"></div>
-          </div>
-          <div class="panel">
-            <h3>ACP-255, current Gaussian version</h3>
-            <p><code>total = n * M * multiplier(n) * networkFactor(V)</code>.</p>
-            <div id="surface-current" class="surface"></div>
-          </div>
-          <div class="panel">
-            <h3>ACP-255, pure monotonic replacement</h3>
-            <p><code>total = 50 + 35 * log2(n)</code>.</p>
-            <div id="surface-mono" class="surface"></div>
-          </div>
-          <div class="panel">
-            <h3>ACP-255, hybrid transition model</h3>
-            <p><code>current</code> below 9k, <code>blend</code> between 9k and 11k, <code>monotonic fitted branch</code> above 11k.</p>
-            <div id="surface-hybrid" class="surface"></div>
-          </div>
-        </section>
-
-        <section class="formula-grid slices">
-          <div class="panel">
-            <h3>Slice 1, varying n at fixed V</h3>
-            <p>How expensive is the L1 as it grows its own validator set while the network stays at the selected total validator count?</p>
-            <canvas id="sliceN" class="chart2d"></canvas>
-            <div class="note">X-axis = L1 validator count n, Y-axis = monthly L1 fee.</div>
-          </div>
-          <div class="panel">
-            <h3>Slice 2, varying V at fixed n</h3>
-            <p>How do the four formulas behave as Avalanche grows from 0 to 20,000 total validators for a fixed L1 size?</p>
-            <canvas id="sliceV" class="chart2d"></canvas>
-            <div class="note">X-axis = total network validators V, Y-axis = monthly L1 fee.</div>
-          </div>
-        </section>
+    <section class="acp255-toolbar">
+      <div class="acp255-control">
+        <label for="fixedV">Network validators (V)</label>
+        <div class="acp255-control-head"><span>for the n-slice</span><strong id="fixedVLabel">800</strong></div>
+        <input id="fixedV" type="range" min="0" max="20000" step="100" value="800" />
       </div>
+      <div class="acp255-control">
+        <label for="fixedN">L1 validators (n)</label>
+        <div class="acp255-control-head"><span>for the V-slice</span><strong id="fixedNLabel">10</strong></div>
+        <input id="fixedN" type="range" min="1" max="20" step="1" value="10" />
+      </div>
+      <div class="acp255-control">
+        <label for="acp77Days">ACP-77 sustained days</label>
+        <div class="acp255-control-head"><span>above target</span><strong id="acp77DaysLabel">30</strong></div>
+        <input id="acp77Days" type="range" min="1" max="180" step="1" value="30" />
+      </div>
+    </section>
+
+    <section class="acp255-live-strip">
+      <article class="acp255-live-card live-acp77">
+        <div class="live-label">ACP-77</div>
+        <strong id="live-acp77">-</strong>
+      </article>
+      <article class="acp255-live-card live-current">
+        <div class="live-label">Gaussian</div>
+        <strong id="live-current">-</strong>
+      </article>
+      <article class="acp255-live-card live-mono">
+        <div class="live-label">Monotonic</div>
+        <strong id="live-mono">-</strong>
+      </article>
+      <article class="acp255-live-card live-hybrid">
+        <div class="live-label">Hybrid</div>
+        <strong id="live-hybrid">-</strong>
+      </article>
+    </section>
+
+    <section class="acp255-reading-note">
+      <div><strong>3D surfaces:</strong> X = total network validators, Z = L1 validator count, Y = monthly fee.</div>
+      <div><strong>2D slices:</strong> one slice varies n, one varies V, so the tradeoffs are obvious.</div>
+      <div><strong>Interpretation:</strong> the core question is whether decentralization can become cheaper without underpricing added validator load.</div>
+    </section>
+
+    <section class="acp255-surface-grid">
+      <article class="acp255-model">
+        <h3>ACP-77</h3>
+        <p><code>feeRate = M * exp(x / K)</code>, folded into a monthly fee under a sustained-over-target assumption.</p>
+        <div id="surface-acp77" class="surface"></div>
+      </article>
+      <article class="acp255-model">
+        <h3>ACP-255, current Gaussian</h3>
+        <p><code>total = n * M * multiplier(n) * networkFactor(V)</code>.</p>
+        <div id="surface-current" class="surface"></div>
+      </article>
+      <article class="acp255-model">
+        <h3>ACP-255, monotonic</h3>
+        <p><code>total = 50 + 35 * log2(n)</code>.</p>
+        <div id="surface-mono" class="surface"></div>
+      </article>
+      <article class="acp255-model">
+        <h3>ACP-255, hybrid</h3>
+        <p><code>current</code> below 9k, <code>blend</code> through 9k→11k, then a fitted monotonic branch.</p>
+        <div id="surface-hybrid" class="surface"></div>
+      </article>
+    </section>
+
+    <section class="acp255-slices">
+      <article>
+        <h3>Slice 1, varying n at fixed V</h3>
+        <canvas id="sliceN" class="chart2d"></canvas>
+      </article>
+      <article>
+        <h3>Slice 2, varying V at fixed n</h3>
+        <canvas id="sliceV" class="chart2d"></canvas>
+      </article>
     </section>
   </div>
 </section>
