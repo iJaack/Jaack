@@ -15,9 +15,9 @@ description: "I took the current ACP-77 fee model and three different ACP-255 va
 published: true
 lang: en
 custom_stylesheets:
-- /assets/open_source_code/acp-255-formula-explorer.css
+- /assets/open_source_code/acp-255-formula-explorer.css?v=19564b
 custom_scripts:
-- path: /assets/open_source_code/acp-255-formula-explorer.js
+- path: /assets/open_source_code/acp-255-formula-explorer.js?v=19564b
   type: module
 ---
 
