@@ -1,0 +1,85 @@
+<section class="acp255-story draft-v2" id="acp255-explorer-root">
+  <header class="acp255-story-intro">
+    <div class="acp255-kicker">Fee curve explorer</div>
+    <h2>The Playground</h2>
+    <p>Four models. Two charts. Three knobs. Go.</p>
+  </header>
+
+  <section class="acp255-board">
+    <aside class="acp255-sidebar">
+      <div class="acp255-sidebar-block">
+        <div class="acp255-kicker">Controls</div>
+        <div class="acp255-control">
+          <label for="fixedV">Network validators (V)</label>
+          <div class="acp255-control-head"><span>for the n-slice</span><strong id="fixedVLabel">800</strong></div>
+          <input id="fixedV" type="range" min="0" max="20000" step="100" value="800" />
+          <span class="acp255-control-hint">Total number of validators across the entire Avalanche network. This is what drives the global fee pressure in ACP-77 and the network factor in the Gaussian model.</span>
+        </div>
+        <div class="acp255-control">
+          <label for="fixedN">L1 validators (n)</label>
+          <div class="acp255-control-head"><span>for the V-slice</span><strong id="fixedNLabel">10</strong></div>
+          <input id="fixedN" type="range" min="1" max="20" step="1" value="10" />
+          <span class="acp255-control-hint">How many validators your specific L1 runs. This is where the decentralization discount kicks in. More validators means a lower per-validator fee, but a higher total.</span>
+        </div>
+        <div class="acp255-control">
+          <label for="acp77Days">ACP-77 sustained days</label>
+          <div class="acp255-control-head"><span>above target</span><strong id="acp77DaysLabel">30</strong></div>
+          <input id="acp77Days" type="range" min="1" max="180" step="1" value="30" />
+          <span class="acp255-control-hint">How many consecutive days the network has stayed above the 10k validator target. ACP-77 is path-dependent: the longer the pressure lasts, the higher it compounds. Only affects the ACP-77 curve when V is set above 10,000.</span>
+        </div>
+      </div>
+
+      <div class="acp255-sidebar-block acp255-metrics">
+        <article class="acp255-live-card live-acp77" data-formula="acp77"><div class="live-label">ACP-77</div><strong id="live-acp77">-</strong></article>
+        <article class="acp255-live-card live-current" data-formula="gaussian"><div class="live-label">Gaussian</div><strong id="live-current">-</strong></article>
+        <article class="acp255-live-card live-mono" data-formula="mono"><div class="live-label">Monotonic</div><strong id="live-mono">-</strong></article>
+        <article class="acp255-live-card live-hybrid" data-formula="hybrid"><div class="live-label">Hybrid</div><strong id="live-hybrid">-</strong></article>
+      </div>
+    </aside>
+
+    <div class="acp255-main">
+      <section class="acp255-chart-grid">
+        <article class="acp255-chart-panel">
+          <div class="acp255-chart-copy">
+            <div class="acp255-kicker">Slice 1</div>
+            <h3>If one L1 decentralizes, what happens to total cost?</h3>
+            <p>Hold total network size fixed, then vary the L1 validator count.</p>
+          </div>
+          <canvas id="sliceN" class="chart2d"></canvas>
+        </article>
+
+        <article class="acp255-chart-panel">
+          <div class="acp255-chart-copy">
+            <div class="acp255-kicker">Slice 2</div>
+            <h3>If Avalanche matures, what happens to one fixed L1?</h3>
+            <p>Hold one L1 fixed, then vary the total network validator count.</p>
+          </div>
+          <canvas id="sliceV" class="chart2d"></canvas>
+        </article>
+      </section>
+
+      <section class="acp255-summary-grid">
+        <article>
+          <div class="acp255-kicker">Baseline</div>
+          <h3>ACP-77</h3>
+          <p>Mostly about global network pressure, not L1 structure.</p>
+        </article>
+        <article>
+          <div class="acp255-kicker">Current draft</div>
+          <h3>Gaussian</h3>
+          <p>Best expression of the original thesis, but hardest to defend on aggregate-fee grounds.</p>
+        </article>
+        <article>
+          <div class="acp255-kicker">Clean replacement</div>
+          <h3>Monotonic</h3>
+          <p>Much easier to defend because total fees always rise with validator count.</p>
+        </article>
+        <article>
+          <div class="acp255-kicker">Best compromise</div>
+          <h3>Hybrid</h3>
+          <p>Preserves the growth-phase story, then becomes stricter when the network gets large.</p>
+        </article>
+      </section>
+    </div>
+  </section>
+</section>

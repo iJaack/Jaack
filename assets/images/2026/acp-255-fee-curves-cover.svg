@@ -1,105 +1,111 @@
-<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="1600" height="500" viewBox="0 0 1600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="200" y1="40" x2="1400" y2="860" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="200" y1="20" x2="1400" y2="480" gradientUnits="userSpaceOnUse">
       <stop stop-color="#16284C"/>
       <stop offset="0.5" stop-color="#0C1730"/>
       <stop offset="1" stop-color="#070C18"/>
     </linearGradient>
-    <radialGradient id="glow1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1180 180) rotate(140) scale(420 620)">
+    <radialGradient id="glow1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1180 100) rotate(140) scale(420 400)">
       <stop stop-color="#7AA2FF" stop-opacity="0.20"/>
       <stop offset="1" stop-color="#7AA2FF" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(460 700) rotate(-20) scale(520 320)">
+    <radialGradient id="glow2" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(460 400) rotate(-20) scale(520 200)">
       <stop stop-color="#FF7A90" stop-opacity="0.18"/>
       <stop offset="1" stop-color="#FF7A90" stop-opacity="0"/>
     </radialGradient>
-    <filter id="soft" x="-100" y="-100" width="1800" height="1100" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feGaussianBlur stdDeviation="18"/>
+    <filter id="soft" x="-100" y="-100" width="1800" height="700" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="14"/>
     </filter>
-    <linearGradient id="gold" x1="270" y1="588" x2="1360" y2="588" gradientUnits="userSpaceOnUse">
+    <linearGradient id="gold" x1="200" y1="300" x2="1420" y2="300" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFCC66"/>
       <stop offset="1" stop-color="#FFE2A0"/>
     </linearGradient>
-    <linearGradient id="red" x1="270" y1="520" x2="1360" y2="520" gradientUnits="userSpaceOnUse">
+    <linearGradient id="red" x1="200" y1="250" x2="1420" y2="250" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FF7A90"/>
       <stop offset="1" stop-color="#FFB0BC"/>
     </linearGradient>
-    <linearGradient id="green" x1="270" y1="638" x2="1360" y2="638" gradientUnits="userSpaceOnUse">
+    <linearGradient id="green" x1="200" y1="340" x2="1420" y2="340" gradientUnits="userSpaceOnUse">
       <stop stop-color="#5DD39E"/>
       <stop offset="1" stop-color="#A4F3CE"/>
     </linearGradient>
-    <linearGradient id="blue" x1="270" y1="684" x2="1360" y2="684" gradientUnits="userSpaceOnUse">
+    <linearGradient id="blue" x1="200" y1="360" x2="1420" y2="360" gradientUnits="userSpaceOnUse">
       <stop stop-color="#7AA2FF"/>
       <stop offset="1" stop-color="#B5CCFF"/>
     </linearGradient>
   </defs>
 
-  <rect width="1600" height="900" rx="28" fill="url(#bg)"/>
-  <rect width="1600" height="900" rx="28" fill="url(#glow1)"/>
-  <rect width="1600" height="900" rx="28" fill="url(#glow2)"/>
+  <rect width="1600" height="500" rx="20" fill="url(#bg)"/>
+  <rect width="1600" height="500" rx="20" fill="url(#glow1)"/>
+  <rect width="1600" height="500" rx="20" fill="url(#glow2)"/>
 
+  <!-- Grid -->
   <g opacity="0.32">
-    <path d="M250 744H1360" stroke="#2C426B"/>
-    <path d="M250 664H1360" stroke="#23385B"/>
-    <path d="M250 584H1360" stroke="#23385B"/>
-    <path d="M250 504H1360" stroke="#23385B"/>
-    <path d="M250 424H1360" stroke="#23385B"/>
-    <path d="M250 344H1360" stroke="#23385B"/>
-    <path d="M250 264H1360" stroke="#23385B"/>
-    <path d="M250 184H1360" stroke="#2C426B"/>
-    <path d="M250 744V184" stroke="#2C426B"/>
-    <path d="M472 744V184" stroke="#23385B"/>
-    <path d="M694 744V184" stroke="#23385B"/>
-    <path d="M916 744V184" stroke="#23385B"/>
-    <path d="M1138 744V184" stroke="#23385B"/>
-    <path d="M1360 744V184" stroke="#2C426B"/>
+    <path d="M200 420H1420" stroke="#2C426B"/>
+    <path d="M200 350H1420" stroke="#23385B"/>
+    <path d="M200 280H1420" stroke="#23385B"/>
+    <path d="M200 210H1420" stroke="#23385B"/>
+    <path d="M200 140H1420" stroke="#23385B"/>
+    <path d="M200 70H1420" stroke="#2C426B"/>
+    <path d="M200 420V70" stroke="#2C426B"/>
+    <path d="M444 420V70" stroke="#23385B"/>
+    <path d="M688 420V70" stroke="#23385B"/>
+    <path d="M932 420V70" stroke="#23385B"/>
+    <path d="M1176 420V70" stroke="#23385B"/>
+    <path d="M1420 420V70" stroke="#2C426B"/>
   </g>
 
+  <!-- Ghost lines -->
   <g opacity="0.18">
-    <path d="M330 742L470 632L610 640L750 534L890 486L1030 412L1170 422L1310 326" stroke="#7AA2FF" stroke-width="2"/>
-    <path d="M330 742L470 610L610 558L750 544L890 452L1030 448L1170 374L1310 372" stroke="#5DD39E" stroke-width="2"/>
-    <path d="M330 742L470 560L610 444L750 374L890 318L1030 270L1170 238L1310 214" stroke="#FF7A90" stroke-width="2"/>
+    <path d="M260 418L400 340L540 346L680 268L820 240L960 190L1100 196L1240 142" stroke="#7AA2FF" stroke-width="2"/>
+    <path d="M260 418L400 318L540 286L680 276L820 216L960 212L1100 162L1240 160" stroke="#5DD39E" stroke-width="2"/>
+    <path d="M260 418L400 280L540 200L680 152L820 118L960 86L1100 68L1240 54" stroke="#FF7A90" stroke-width="2"/>
   </g>
 
+  <!-- Glow curves -->
   <g filter="url(#soft)">
-    <path d="M286 610C344 610 394 566 452 566C510 566 568 632 626 632C684 632 742 498 800 498C858 498 916 588 974 588C1032 588 1090 410 1148 410C1206 410 1264 480 1322 480" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"/>
-    <path d="M286 574C344 574 394 468 452 468C510 468 568 526 626 526C684 526 742 316 800 316C858 316 916 392 974 392C1032 392 1090 252 1148 252C1206 252 1264 302 1322 302" stroke="url(#red)" stroke-width="11" stroke-linecap="round"/>
-    <path d="M286 652C344 652 394 618 452 618C510 618 568 572 626 572C684 572 742 540 800 540C858 540 916 514 974 514C1032 514 1090 496 1148 496C1206 496 1264 482 1322 482" stroke="url(#green)" stroke-width="10" stroke-linecap="round"/>
-    <path d="M286 700C344 700 394 676 452 676C510 676 568 658 626 658C684 658 742 628 800 628C858 628 916 584 974 584C1032 584 1090 518 1148 518C1206 518 1264 438 1322 438" stroke="url(#blue)" stroke-width="10" stroke-linecap="round"/>
+    <path d="M230 330C290 330 340 300 400 300C460 300 520 340 580 340C640 340 700 260 760 260C820 260 880 310 940 310C1000 310 1060 210 1120 210C1180 210 1240 250 1300 250" stroke="url(#gold)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M230 310C290 310 340 240 400 240C460 240 520 274 580 274C640 274 700 160 760 160C820 160 880 206 940 206C1000 206 1060 120 1120 120C1180 120 1240 150 1300 150" stroke="url(#red)" stroke-width="9" stroke-linecap="round"/>
+    <path d="M230 358C290 358 340 336 400 336C460 336 520 306 580 306C640 306 700 284 760 284C820 284 880 266 940 266C1000 266 1060 254 1120 254C1180 254 1240 246 1300 246" stroke="url(#green)" stroke-width="8" stroke-linecap="round"/>
+    <path d="M230 380C290 380 340 364 400 364C460 364 520 350 580 350C640 350 700 330 760 330C820 330 880 302 940 302C1000 302 1060 262 1120 262C1180 262 1240 210 1300 210" stroke="url(#blue)" stroke-width="8" stroke-linecap="round"/>
   </g>
 
+  <!-- Sharp curves -->
   <g>
-    <path d="M286 610C344 610 394 566 452 566C510 566 568 632 626 632C684 632 742 498 800 498C858 498 916 588 974 588C1032 588 1090 410 1148 410C1206 410 1264 480 1322 480" stroke="url(#gold)" stroke-width="4" stroke-linecap="round"/>
-    <path d="M286 574C344 574 394 468 452 468C510 468 568 526 626 526C684 526 742 316 800 316C858 316 916 392 974 392C1032 392 1090 252 1148 252C1206 252 1264 302 1322 302" stroke="url(#red)" stroke-width="5" stroke-linecap="round"/>
-    <path d="M286 652C344 652 394 618 452 618C510 618 568 572 626 572C684 572 742 540 800 540C858 540 916 514 974 514C1032 514 1090 496 1148 496C1206 496 1264 482 1322 482" stroke="url(#green)" stroke-width="4" stroke-linecap="round"/>
-    <path d="M286 700C344 700 394 676 452 676C510 676 568 658 626 658C684 658 742 628 800 628C858 628 916 584 974 584C1032 584 1090 518 1148 518C1206 518 1264 438 1322 438" stroke="url(#blue)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M230 330C290 330 340 300 400 300C460 300 520 340 580 340C640 340 700 260 760 260C820 260 880 310 940 310C1000 310 1060 210 1120 210C1180 210 1240 250 1300 250" stroke="url(#gold)" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M230 310C290 310 340 240 400 240C460 240 520 274 580 274C640 274 700 160 760 160C820 160 880 206 940 206C1000 206 1060 120 1120 120C1180 120 1240 150 1300 150" stroke="url(#red)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M230 358C290 358 340 336 400 336C460 336 520 306 580 306C640 306 700 284 760 284C820 284 880 266 940 266C1000 266 1060 254 1120 254C1180 254 1240 246 1300 246" stroke="url(#green)" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M230 380C290 380 340 364 400 364C460 364 520 350 580 350C640 350 700 330 760 330C820 330 880 302 940 302C1000 302 1060 262 1120 262C1180 262 1240 210 1300 210" stroke="url(#blue)" stroke-width="3.5" stroke-linecap="round"/>
   </g>
 
+  <!-- Title box -->
   <g>
-    <rect x="106" y="92" width="452" height="170" rx="22" fill="#0C1830" fill-opacity="0.90" stroke="#22385F"/>
-    <text x="144" y="150" fill="#EDF3FF" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700">ACP-255</text>
-    <text x="144" y="198" fill="#BCC8E8" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="500">four fee curves</text>
-    <text x="144" y="232" fill="#85A5EA" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="500">ACP-77 and three variants</text>
+    <rect x="60" y="36" width="440" height="160" rx="16" fill="#0C1830" fill-opacity="0.90" stroke="#22385F"/>
+    <text x="88" y="82" fill="#EDF3FF" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700">L1 validator fees</text>
+    <text x="88" y="120" fill="#FFCC66" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600">AVAX buy pressure</text>
+    <text x="88" y="150" fill="#BCC8E8" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="500">four fee curves compared</text>
+    <text x="88" y="176" fill="#85A5EA" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="500">ACP-77 + three ACP-255 variants</text>
   </g>
 
+  <!-- Legend -->
   <g>
-    <rect x="1124" y="92" width="306" height="194" rx="20" fill="#0C1830" fill-opacity="0.88" stroke="#22385F"/>
-    <circle cx="1160" cy="132" r="7" fill="#FFCC66"/>
-    <text x="1180" y="138" fill="#E2EBFF" font-family="Inter, Arial, sans-serif" font-size="22">ACP-77</text>
-    <circle cx="1160" cy="172" r="7" fill="#FF7A90"/>
-    <text x="1180" y="178" fill="#E2EBFF" font-family="Inter, Arial, sans-serif" font-size="22">Gaussian 255</text>
-    <circle cx="1160" cy="212" r="7" fill="#5DD39E"/>
-    <text x="1180" y="218" fill="#E2EBFF" font-family="Inter, Arial, sans-serif" font-size="22">Monotonic 255</text>
-    <circle cx="1160" cy="252" r="7" fill="#7AA2FF"/>
-    <text x="1180" y="258" fill="#E2EBFF" font-family="Inter, Arial, sans-serif" font-size="22">Hybrid 255</text>
+    <rect x="1166" y="36" width="240" height="152" rx="14" fill="#0C1830" fill-opacity="0.88" stroke="#22385F"/>
+    <circle cx="1196" cy="70" r="6" fill="#FFCC66"/>
+    <text x="1212" y="75" fill="#E2EBFF" font-family="Inter, Arial, sans-serif" font-size="18">ACP-77</text>
+    <circle cx="1196" cy="102" r="6" fill="#FF7A90"/>
+    <text x="1212" y="107" fill="#E2EBFF" font-family="Inter, Arial, sans-serif" font-size="18">Gaussian 255</text>
+    <circle cx="1196" cy="134" r="6" fill="#5DD39E"/>
+    <text x="1212" y="139" fill="#E2EBFF" font-family="Inter, Arial, sans-serif" font-size="18">Monotonic 255</text>
+    <circle cx="1196" cy="166" r="6" fill="#7AA2FF"/>
+    <text x="1212" y="171" fill="#E2EBFF" font-family="Inter, Arial, sans-serif" font-size="18">Hybrid 255</text>
   </g>
 
+  <!-- X-axis labels -->
   <g opacity="0.9">
-    <text x="245" y="792" fill="#97ABDA" font-family="Inter, Arial, sans-serif" font-size="18">0</text>
-    <text x="462" y="792" fill="#97ABDA" font-family="Inter, Arial, sans-serif" font-size="18">5k</text>
-    <text x="684" y="792" fill="#97ABDA" font-family="Inter, Arial, sans-serif" font-size="18">10k</text>
-    <text x="906" y="792" fill="#97ABDA" font-family="Inter, Arial, sans-serif" font-size="18">15k</text>
-    <text x="1128" y="792" fill="#97ABDA" font-family="Inter, Arial, sans-serif" font-size="18">20k</text>
-    <text x="1080" y="836" fill="#B4C4EA" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="500">total network validators</text>
+    <text x="195" y="448" fill="#97ABDA" font-family="Inter, Arial, sans-serif" font-size="15">0</text>
+    <text x="434" y="448" fill="#97ABDA" font-family="Inter, Arial, sans-serif" font-size="15">5k</text>
+    <text x="678" y="448" fill="#97ABDA" font-family="Inter, Arial, sans-serif" font-size="15">10k</text>
+    <text x="922" y="448" fill="#97ABDA" font-family="Inter, Arial, sans-serif" font-size="15">15k</text>
+    <text x="1166" y="448" fill="#97ABDA" font-family="Inter, Arial, sans-serif" font-size="15">20k</text>
+    <text x="1040" y="478" fill="#B4C4EA" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="500">total network validators (V)</text>
   </g>
 </svg>

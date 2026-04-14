@@ -16,7 +16,9 @@
     var ACP77_T = 10000;
     var SECONDS_PER_MONTH = 30 * 24 * 60 * 60;
     var state = { fixedV: 800, fixedN: 10, acp77Days: 30 };
+    var activeFormula = null;
     var colors = { acp77: '#e8c547', current: '#ff7a90', mono: '#5dd39e', hybrid: '#7aa2ff' };
+    var formulaKeyMap = { acp77: 'acp77', gaussian: 'current', mono: 'mono', hybrid: 'hybrid' };
 
     function getEl(id) { return root.querySelector('#' + id); }
     function currentMultiplier(n) { return 1 + 17.84 * Math.exp(-0.3 * (n - 1)); }
@@ -101,11 +103,17 @@
       ctx.textAlign = 'right';
       for (var y = 0; y <= 4; y++) ctx.fillText(String(Math.round((maxY / 4) * (4 - y))), pad.left - 8, pad.top + (plotH / 4) * y + 4);
       ctx.textAlign = 'center'; ctx.fillText(xLabel, width / 2, height - 2);
+      var activeColorKey = activeFormula ? formulaKeyMap[activeFormula] : null;
       datasets.forEach(function (set) {
-        ctx.strokeStyle = set.color; ctx.lineWidth = 2.4; ctx.beginPath();
+        var isActive = !activeColorKey || set.color === colors[activeColorKey];
+        ctx.globalAlpha = isActive ? 1 : 0.15;
+        ctx.strokeStyle = set.color;
+        ctx.lineWidth = (activeColorKey && isActive) ? 3.2 : 2.4;
+        ctx.beginPath();
         set.data.forEach(function (p, idx) { var x = sx(p.x), y = sy(p.y); if (idx === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y); });
         ctx.stroke();
       });
+      ctx.globalAlpha = 1;
     }
 
     function redraw() {
@@ -134,5 +142,32 @@
     var resizeTimer;
     window.addEventListener('resize', function () { clearTimeout(resizeTimer); resizeTimer = setTimeout(redraw, 80); });
     redraw();
+
+    // Public API for scroll-sync and mini-charts
+    window.acp255Explorer = {
+      compute: {
+        current255: current255,
+        monotonic255: monotonic255,
+        hybrid255: hybrid255,
+        acp77Total: acp77Total,
+        hybridBranch: hybridBranch
+      },
+      highlightFormula: function (name) {
+        activeFormula = name;
+        root.setAttribute('data-active-formula', name || '');
+        redraw();
+      },
+      clearHighlight: function () {
+        activeFormula = null;
+        root.removeAttribute('data-active-formula');
+        redraw();
+      },
+      setParams: function (params) {
+        if (params.fixedV !== undefined) { state.fixedV = params.fixedV; var el = getEl('fixedV'); if (el) el.value = params.fixedV; }
+        if (params.fixedN !== undefined) { state.fixedN = params.fixedN; var el2 = getEl('fixedN'); if (el2) el2.value = params.fixedN; }
+        if (params.acp77Days !== undefined) { state.acp77Days = params.acp77Days; var el3 = getEl('acp77Days'); if (el3) el3.value = params.acp77Days; }
+        redraw();
+      }
+    };
   });
 })();

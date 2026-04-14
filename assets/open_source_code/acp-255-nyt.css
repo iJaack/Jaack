@@ -1,0 +1,446 @@
+/* ============================================================
+   ACP-255 NYT-style article components
+   Scoped under .acp255-nyt to avoid site-wide leakage
+   ============================================================ */
+
+/* --- Title image: full-bleed with gradient fade -------------- */
+.wrapper-xwide .post > .title-image {
+  width: 100vw;
+  max-width: none;
+  max-height: none;
+  margin-left: calc(-50vw + 50%);
+  margin-top: -70px;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
+}
+
+/* --- H1 title: centered, overlapping the fade ---------------- */
+.wrapper-xwide .post > .title {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin-top: -4rem;
+  font-family: 'Geist', 'Inter', system-ui, sans-serif;
+  font-size: clamp(2.6rem, 4vw, 3.8rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* --- Date: center to match title ----------------------------- */
+.wrapper-xwide .post > .date {
+  text-align: center;
+}
+
+/* --- Body font reset for NYT wrapper ------------------------- */
+.acp255-nyt {
+  font-size: 1.7rem;
+  line-height: 1.72;
+  color: #c4beb6;
+}
+.acp255-nyt p {
+  font-size: 1.7rem;
+  line-height: 1.72;
+  font-weight: 350;
+  letter-spacing: 0.2px;
+}
+.acp255-nyt h2 {
+  font-family: 'Geist', 'Inter', system-ui, sans-serif;
+  font-size: clamp(2.2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #f0ede8;
+  margin-top: 0.5rem;
+  margin-bottom: 1.2rem;
+}
+.acp255-nyt strong { color: #f0ede8; }
+.acp255-nyt em { color: #d4cfc8; }
+.acp255-nyt blockquote {
+  border-left: 3px solid #333;
+  padding-left: 1.4rem;
+  margin: 1.8rem 0;
+  color: #f0ede8;
+  font-style: italic;
+}
+.acp255-nyt blockquote p { font-size: 1.7rem; }
+
+/* --- Dropcap ------------------------------------------------ */
+.acp255-nyt .dropcap::first-letter {
+  float: left;
+  font-family: 'Geist', 'Inter', system-ui, sans-serif;
+  font-size: 4.2em;
+  line-height: 0.78;
+  padding-right: 0.08em;
+  margin-top: 0.05em;
+  color: #f0ede8;
+  font-weight: 700;
+}
+
+/* --- Pull quote --------------------------------------------- */
+.acp255-nyt .pull-quote {
+  max-width: 100%;
+  margin: 3rem -2rem;
+  padding: 2rem 2.4rem;
+  border-left: 3px solid #e8c547;
+  font-family: 'Geist Mono', 'Consolas', monospace;
+  font-size: clamp(1.45rem, 2vw, 1.8rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.55;
+  letter-spacing: -0.01em;
+  color: #e8c547;
+  background: rgba(232, 197, 71, 0.04);
+  border-radius: 0 10px 10px 0;
+}
+.acp255-nyt .pull-quote cite {
+  display: block;
+  margin-top: 0.8rem;
+  font-family: 'Geist Mono', monospace;
+  font-style: normal;
+  font-size: 1.1rem;
+  color: #666;
+  letter-spacing: 0.04em;
+}
+@media (max-width: 780px) {
+  .acp255-nyt .pull-quote { margin: 2rem 0; padding: 1.4rem 1.6rem; }
+}
+
+/* --- Callout box -------------------------------------------- */
+.acp255-nyt .callout {
+  max-width: 820px;
+  margin: 2.4rem 0;
+  padding: 1.4rem 1.6rem;
+  border-left: 3px solid #e8c547;
+  border-radius: 0 10px 10px 0;
+  background: rgba(232, 197, 71, 0.06);
+  font-size: 1.6rem;
+  line-height: 1.65;
+  color: #c4beb6;
+}
+.acp255-nyt .callout strong { color: #f0ede8; }
+.acp255-nyt .callout.callout-warning { border-left-color: #ff7a90; background: rgba(255, 122, 144, 0.06); }
+.acp255-nyt .callout.callout-insight { border-left-color: #7aa2ff; background: rgba(122, 162, 255, 0.06); }
+.acp255-nyt .callout p { margin: 0.5rem 0; }
+.acp255-nyt .callout p:first-child { margin-top: 0; }
+.acp255-nyt .callout p:last-child { margin-bottom: 0; }
+
+/* --- Formula badge (inline pill) ----------------------------- */
+.acp255-nyt .formula-badge {
+  display: inline-block;
+  padding: 0.15em 0.55em;
+  border-radius: 6px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.88em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+.acp255-nyt .formula-badge.acp77   { background: rgba(232, 197, 71, 0.18); color: #e8c547; }
+.acp255-nyt .formula-badge.gaussian { background: rgba(255, 122, 144, 0.18); color: #ff7a90; }
+.acp255-nyt .formula-badge.mono    { background: rgba(93, 211, 158, 0.18); color: #5dd39e; }
+.acp255-nyt .formula-badge.hybrid  { background: rgba(122, 162, 255, 0.18); color: #7aa2ff; }
+
+/* --- Full-bleed section -------------------------------------- */
+.acp255-nyt .full-bleed {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 3.5rem 2rem;
+  background: rgba(122, 162, 255, 0.04);
+  border-top: 1px solid rgba(122, 162, 255, 0.12);
+  border-bottom: 1px solid rgba(122, 162, 255, 0.12);
+}
+.acp255-nyt .full-bleed > * {
+  max-width: 820px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.acp255-nyt .full-bleed > .mini-chart,
+.acp255-nyt .full-bleed > .phase-timeline {
+  max-width: 960px !important;
+}
+
+/* --- Fade-in (scroll-triggered) ------------------------------ */
+.acp255-nyt .fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.acp255-nyt .fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Stat highlight (hero number) ---------------------------- */
+.acp255-nyt .stat-highlight {
+  margin: 2.4rem 0;
+  text-align: center;
+}
+.acp255-nyt .stat-highlight .stat-number {
+  display: block;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  font-weight: 400;
+  line-height: 1;
+  color: #e8c547;
+}
+.acp255-nyt .stat-highlight .stat-label {
+  display: block;
+  margin-top: 0.6rem;
+  font-family: 'Geist Mono', monospace;
+  font-size: 1.1rem;
+  color: #888;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* --- Margin note --------------------------------------------- */
+.acp255-nyt .margin-note {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #888;
+  font-style: italic;
+}
+@media (min-width: 1080px) {
+  .acp255-nyt .margin-note {
+    float: right;
+    clear: right;
+    width: 220px;
+    margin: 0.2rem -260px 1rem 1.5rem;
+    padding-left: 1rem;
+    border-left: 2px solid #333;
+  }
+}
+@media (max-width: 1079px) {
+  .acp255-nyt .margin-note {
+    display: block;
+    margin: 1.2rem 0;
+    padding: 0.8rem 1rem;
+    border-left: 2px solid #333;
+    background: rgba(20, 20, 20, 0.3);
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+/* --- Formula section (color-coded top border) ---------------- */
+.acp255-nyt .section-formula {
+  margin: 3.5rem 0;
+  padding-top: 2rem;
+  border-top: 3px solid #333;
+}
+.acp255-nyt .section-formula[data-formula="acp77"]    { border-top-color: #e8c547; }
+.acp255-nyt .section-formula[data-formula="gaussian"]  { border-top-color: #ff7a90; }
+.acp255-nyt .section-formula[data-formula="mono"]      { border-top-color: #5dd39e; }
+.acp255-nyt .section-formula[data-formula="hybrid"]    { border-top-color: #7aa2ff; }
+
+/* Section label */
+.acp255-nyt .section-formula .section-label {
+  font-family: 'Geist Mono', monospace;
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+.acp255-nyt .section-formula[data-formula="acp77"]   .section-label { color: #e8c547; }
+.acp255-nyt .section-formula[data-formula="gaussian"] .section-label { color: #ff7a90; }
+.acp255-nyt .section-formula[data-formula="mono"]     .section-label { color: #5dd39e; }
+.acp255-nyt .section-formula[data-formula="hybrid"]   .section-label { color: #7aa2ff; }
+
+/* --- Formula display (styled code) --------------------------- */
+.acp255-nyt .formula-display {
+  max-width: 820px;
+  margin: 2rem 0;
+  padding: 1.4rem 1.6rem;
+  font-family: 'Geist Mono', monospace;
+  font-size: 1.35rem;
+  line-height: 1.7;
+  color: #f0ede8;
+  background: rgba(20, 20, 20, 0.5);
+  border: 1px solid #222;
+  border-radius: 12px;
+}
+.acp255-nyt .formula-hero {
+  max-width: 100%;
+  margin: 2.5rem 0;
+  padding: 2.2rem 2rem;
+  text-align: center;
+  font-family: 'Geist Mono', monospace;
+  font-size: clamp(1.6rem, 2.5vw, 2.4rem);
+  line-height: 1.5;
+  color: #f0ede8;
+  background: rgba(20, 20, 20, 0.5);
+  border: 1px solid #222;
+  border-radius: 16px;
+}
+
+/* --- Mini-chart ---------------------------------------------- */
+.acp255-nyt .mini-chart {
+  max-width: 100%;
+  margin: 2rem 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.acp255-nyt .mini-chart canvas {
+  display: block;
+  width: 100%;
+  height: 200px;
+  background: rgba(8, 8, 8, 0.56);
+  border: 1px solid #222;
+  border-radius: 16px;
+}
+@media (max-width: 780px) {
+  .acp255-nyt .mini-chart canvas { height: 160px; }
+}
+
+/* --- Progressive disclosure (styled <details>) --------------- */
+.acp255-nyt .disclosure {
+  max-width: 820px;
+  margin: 1.8rem 0;
+  border: 1px solid #222;
+  border-radius: 12px;
+  background: rgba(20, 20, 20, 0.34);
+  overflow: hidden;
+}
+.acp255-nyt .disclosure summary {
+  padding: 1rem 1.4rem;
+  cursor: pointer;
+  font-family: 'Geist Mono', monospace;
+  font-size: 1.15rem;
+  color: #888;
+  letter-spacing: 0.04em;
+  list-style: none;
+  user-select: none;
+}
+.acp255-nyt .disclosure summary::-webkit-details-marker { display: none; }
+.acp255-nyt .disclosure summary::before {
+  content: '+ ';
+  color: #e8c547;
+  font-weight: 700;
+}
+.acp255-nyt .disclosure[open] summary::before { content: '− '; }
+.acp255-nyt .disclosure .disclosure-body {
+  padding: 0.4rem 1.4rem 1.4rem;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #c4beb6;
+}
+.acp255-nyt .disclosure .disclosure-body code {
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.92em;
+  padding: 0.15em 0.4em;
+  background: rgba(255,255,255,0.06);
+  border-radius: 4px;
+}
+
+/* --- Phase timeline ------------------------------------------ */
+.acp255-nyt .phase-timeline {
+  display: flex;
+  max-width: 820px;
+  margin: 2.4rem 0;
+  gap: 0;
+}
+.acp255-nyt .phase-timeline .phase {
+  flex: 1;
+  padding: 1.2rem 1rem;
+  border-top: 3px solid #333;
+  text-align: center;
+}
+.acp255-nyt .phase-timeline .phase:first-child { border-radius: 12px 0 0 12px; }
+.acp255-nyt .phase-timeline .phase:last-child  { border-radius: 0 12px 12px 0; }
+.acp255-nyt .phase-timeline .phase-label {
+  display: block;
+  font-family: 'Geist Mono', monospace;
+  font-size: 0.95rem;
+  color: #888;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.acp255-nyt .phase-timeline .phase-value {
+  display: block;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1.6rem;
+  color: #f0ede8;
+  line-height: 1.2;
+}
+.acp255-nyt .phase-timeline .phase-desc {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: 1.15rem;
+  color: #888;
+  line-height: 1.4;
+}
+.acp255-nyt .phase-timeline .phase.phase-gaussian  { border-top-color: #ff7a90; background: rgba(255, 122, 144, 0.05); }
+.acp255-nyt .phase-timeline .phase.phase-blend     { border-top-color: #c08fd4; background: rgba(192, 143, 212, 0.05); }
+.acp255-nyt .phase-timeline .phase.phase-monotonic { border-top-color: #5dd39e; background: rgba(93, 211, 158, 0.05); }
+@media (max-width: 600px) {
+  .acp255-nyt .phase-timeline { flex-direction: column; gap: 0.5rem; }
+  .acp255-nyt .phase-timeline .phase { border-radius: 8px !important; border-top: 3px solid; border-left: none; }
+}
+
+/* --- Section transition -------------------------------------- */
+.acp255-nyt .section-break {
+  margin: 4rem 0;
+  border: none;
+  border-top: 1px solid #222;
+}
+
+/* --- Explorer intro (v2) ------------------------------------- */
+.acp255-nyt .explorer-intro {
+  max-width: 100%;
+  margin: 3rem 0 0.5rem;
+  font-family: 'Geist', 'Inter', system-ui, sans-serif;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: #f0ede8;
+}
+.acp255-nyt .explorer-howto {
+  max-width: 100%;
+  margin: 0.8rem 0 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.acp255-nyt .explorer-howto .howto-step {
+  padding: 1.1rem 1.2rem;
+  border: 1px solid #222;
+  border-radius: 12px;
+  background: rgba(20, 20, 20, 0.34);
+}
+.acp255-nyt .explorer-howto .howto-step-num {
+  display: inline-block;
+  width: 2.2rem;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  text-align: center;
+  border-radius: 50%;
+  background: rgba(232, 197, 71, 0.15);
+  color: #e8c547;
+  font-family: 'Geist Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+.acp255-nyt .explorer-howto .howto-step p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: #888;
+  margin: 0;
+}
+.acp255-nyt .explorer-howto .howto-step strong {
+  color: #c4beb6;
+}
+@media (max-width: 780px) {
+  .acp255-nyt .explorer-howto { grid-template-columns: 1fr; }
+}
+
+/* --- Verdict section ----------------------------------------- */
+.acp255-nyt .verdict {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 2px solid #f0ede8;
+}

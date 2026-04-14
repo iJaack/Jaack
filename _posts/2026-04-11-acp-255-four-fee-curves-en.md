@@ -1,5 +1,5 @@
 ---
-title: "ACP-255 Needs Better Fee Curves. So I Mapped Four of Them."
+title: "Four Ways to Turn L1 Validator Fees Into AVAX Buy Pressure"
 layout: post
 width: xwide
 date: 2026-04-11 00:36:00 +0200
@@ -11,265 +11,280 @@ tag:
 - crypto
 category: blog
 author: jaack
-description: "I took the current ACP-77 fee model and three different ACP-255 variants, then turned them into an interactive chart explorer. The hybrid model is the one I would defend today."
+description: "Every L1 on Avalanche pays validator fees in AVAX. The fee model decides how much gets burned. I mapped four different curves and built an interactive explorer to compare them."
 published: true
 lang: en
 custom_stylesheets:
-- /assets/open_source_code/acp-255-formula-explorer.css?v=plain2d
+- https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css
+- /assets/open_source_code/acp-255-formula-explorer.css?v=nyt1
+- /assets/open_source_code/acp-255-nyt.css?v=1
 custom_scripts:
-- path: /assets/open_source_code/acp-255-formula-explorer.js?v=plain2d
+- path: https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js
+- path: https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js
+- path: /assets/open_source_code/acp-255-formula-explorer.js?v=nyt1
+- path: /assets/open_source_code/acp-255-nyt.js?v=1
 ---
 
-*This started as ACP work, then turned into a chart problem. The more I looked at the formulas, the less I wanted to argue about them in the abstract. So I built the thing I actually needed: a way to inspect the curves.*
+<div class="acp255-nyt" markdown="1">
 
----
+<p class="dropcap">Every L1 running on Avalanche pays a continuous fee to keep its validators active. Those fees are denominated in AVAX. And every AVAX spent on validator fees is burned. Gone. Permanently removed from the supply. That makes the fee model one of the most direct levers for AVAX buy pressure that exists in the protocol today.</p>
 
-## The Setup
+The question isn't whether L1 fees should create buy pressure. They already do. The question is whether the current model does it well enough, and whether a smarter design could do it better.
 
-ACP-255 is my attempt to redesign Avalanche L1 validator fees.
+That's what [ACP-255](https://github.com/avalanche-foundation/ACPs/pull/255) is really about. Not just repricing validators. **Redesigning how Avalanche captures value from its own growth.** The more L1s launch, the more validators they need, the more AVAX gets burned. But the shape of that burn depends entirely on the fee curve.
 
-The original idea is directionally simple: **charge centralized L1s more, make decentralization economically legible, and increase burn meaningfully during the network's growth phase**.
+<div class="callout fade-in" markdown="1">
 
-The problem is that once you move from intuition to formulas, things get slippery very quickly.
+**Two objections forced me to think harder about the fee design:**
 
-During review, two different objections started to matter a lot:
+1. ACP-77 (the current model) is not actually a flat fee. It's dynamic, path-dependent, and only *looks* flat below the target most of the time. Any replacement has to be compared honestly.
 
-1. **ACP-77 is not actually a flat fee.** It is dynamic, path-dependent, and only looks flat below the target most of the time.
-2. **If adding validators can ever make an L1 cheaper in aggregate, you open yourself up to a valid resource-pricing objection.** More validators impose more work on the system, so total fees should not fall just because an L1 decentralizes.
+2. If adding validators can ever make an L1 **cheaper** in aggregate, total AVAX burn goes down as the network grows. That's the opposite of what you want. More validators impose more work on the network. Total fees should never drop just because an L1 decentralizes.
 
-That second point is the one that changed how I think about ACP-255.
+</div>
 
-Not because it kills the proposal. It doesn't. But it forces a harder requirement: **the fee model has to reward decentralization without underpricing added validator load**.
+That second point matters a lot for buy pressure. If the fee model lets L1s game their way into lower total costs by adding validators, you lose burn exactly when the network is growing fastest.
 
-So I mapped four fee regimes instead of one.
+<div class="pull-quote fade-in">
+The fee model has to reward decentralization without reducing total AVAX burn.
+</div>
 
-- **ACP-77**, the current implemented baseline
-- **ACP-255 Gaussian**, the current draft direction
-- **ACP-255 Monotonic**, the cleanest replacement I could think of
-- **ACP-255 Hybrid**, the compromise that currently feels strongest
+So instead of defending one formula, I mapped four. And I built an interactive explorer so you can see exactly how each one turns validator growth into buy pressure.
 
-And I turned them into an interactive explorer.
-
----
-
-{% include acp255-explorer.html %}
-
-If you want the explorer on its own page too, [open it directly](/assets/open_source_code/acp-255-formula-explorer.html).
-
-The charts are the post.
-
-They let you inspect the formulas across both dimensions that matter:
-
-- **V**, total network validators, from 0 to 20,000
-- **n**, validator count of a specific L1
-
-And they let you compare three different instincts that sound similar in prose but are very different in shape.
+<div class="stat-highlight fade-in">
+  <span class="stat-number">4</span>
+  <span class="stat-label">fee models, each with a different burn profile</span>
+</div>
 
 ---
 
-## Formula 1: ACP-77, the Real Baseline
+<div class="section-formula fade-in" data-formula="acp77" markdown="1">
 
-One mistake I made early on was talking about ACP-77 as if it were basically a flat fee.
+<div class="section-label">Formula 1: The baseline</div>
 
-That is not quite right.
+## Everyone Is Wrong About <span class="formula-badge acp77">ACP-77</span>
 
-ACP-77 uses a dynamic validator fee algorithm. In public docs, it is described roughly as:
+Before you can talk about improving AVAX burn, you have to understand what the current model actually does. And one mistake I made early on was talking about ACP-77 as if it were basically a flat fee.
 
-```text
-feeRate = M * exp(x / K)
-x = max(x + V - T, 0)
-```
+It's not.
 
-Where:
+ACP-77 uses a dynamic validator fee algorithm. Below the target, it mostly behaves like a minimum fee floor, which means minimal burn. Above the target, it compounds upward depending on how long the network stays above that threshold. That's when the burn gets serious.
 
-- `M` is the minimum fee rate
-- `T` is the target validator count, 10,000
-- `K` controls how fast price changes
-- `V` is the total number of active L1 validators
+<div class="formula-display fade-in">
 
-Below the target, it mostly behaves like a minimum fee floor.
-Above the target, it compounds upward depending on how long the network stays over target.
+$$\text{feeRate} = M \cdot e^{\,x / K}$$
 
-That is why in the explorer I made ACP-77 explicitly **time-sensitive**: you can change the number of sustained days above target. I did not want to flatten a path-dependent system into a fake static line.
+$$x = \max(x + V - T,\; 0)$$
 
-The practical takeaway is still simple though:
+</div>
 
-- below 10,000 validators, ACP-77 feels almost flat
-- above 10,000, it becomes increasingly punitive
-- it says very little about the *shape* of a single L1's validator set, because it mostly prices the global network load
+<aside class="margin-note">
+This is why the explorer lets you change "sustained days" for ACP-77. You can't honestly flatten a path-dependent system into a static line. The curve changes shape depending on how long pressure has been building.
+</aside>
 
-That is exactly the opening ACP-255 tries to exploit.
+The key variable is **T**, the target validator count.
 
----
+<div class="stat-highlight fade-in">
+  <span class="stat-number">10,000</span>
+  <span class="stat-label">target validators. everything pivots around this number</span>
+</div>
 
-## Formula 2: ACP-255 Gaussian, the Current Draft
+Below 10,000 validators, ACP-77 feels almost flat. Burn is low. Above 10,000, it becomes increasingly punitive and burn ramps up fast. But it says almost nothing about the *shape* of a single L1's validator set. It prices global network load, not individual L1 structure.
 
-The current draft of ACP-255 adds two extra ideas on top of the base fee:
+That's the gap. An L1 running 1 validator and an L1 running 15 pay almost the same per-validator rate. There's no mechanism to capture more value from centralized setups or reward decentralized ones. That's where ACP-255 comes in.
 
-1. an **L1-size multiplier**
-2. a **Gaussian network factor** centered around 10,000 validators
+{% include acp255-mini-chart.html formula="acp77" v=10000 %}
 
-In compact form:
+</div>
 
-```text
-total = n * M * multiplier(n) * networkFactor(V)
-```
+<hr class="section-break">
 
-Where:
+<div class="section-formula fade-in" data-formula="gaussian" markdown="1">
 
-```text
-multiplier(n) = 1 + 17.84 * e^(-0.3 * (n - 1))
-networkFactor(V) = 1 + 2.84 * e^(-((V - 10000) / 7500)^2)
-```
+<div class="section-label">Formula 2: The current draft</div>
 
-The intuition is good.
+## The Instinct Is Right. The Shape Betrays It. <span class="formula-badge gaussian">Gaussian</span>
 
-- small validator sets get taxed hard
-- the network gets a growth-phase burn curve
-- the 10-15 validator zone becomes economically attractive relative to 1-3 validator setups
+The first ACP-255 variant adds two ideas designed to maximize burn during the network's most important growth phase: an **L1-size multiplier** that taxes centralized setups harder, and a **Gaussian network factor** that peaks around 10,000 validators.
 
-But the current Gaussian version has a real weakness: **it is too easy to read it as making bigger validator sets cheaper in aggregate**.
+<div class="formula-display fade-in">
 
-That is the point reviewers are right to push on.
+$$\text{total} = n \cdot M \cdot \text{multiplier}(n) \cdot \text{networkFactor}(V)$$
 
-If an additional validator creates more work for the P-Chain and the Primary Network, then the protocol should be very careful about any structure that makes aggregate pricing fall as an L1 grows.
+</div>
 
-So even though the current Gaussian version is the most faithful to the original ACP-255 instinct, it is not the easiest one to defend.
+<details class="disclosure fade-in">
+<summary>Show the full multiplier and network factor math</summary>
+<div class="disclosure-body" markdown="1">
 
----
+The multiplier punishes small validator sets exponentially:
 
-## Formula 3: ACP-255 Monotonic, the Clean Replacement
+$$\text{multiplier}(n) = 1 + 17.84 \cdot e^{-0.3 \cdot (n - 1)}$$
+
+At n = 1, the multiplier is roughly 18.84x. By n = 10, it's dropped to about 1.84x. The curve flattens quickly. The penalty is almost entirely about discouraging single-digit validator counts.
+
+The network factor creates a growth-phase burn curve:
+
+$$\text{networkFactor}(V) = 1 + 2.84 \cdot e^{-\left(\frac{V - 10000}{7500}\right)^2}$$
+
+This peaks near V = 10,000 and tapers off in both directions. During the most important growth phase, the network captures more fee revenue.
+
+</div>
+</details>
+
+The intuition behind this is good for buy pressure. Small validator sets get taxed hard, which means higher burn per L1. The network gets a growth-phase burn curve that peaks exactly when Avalanche is scaling fastest. The 10 to 15 validator zone becomes economically attractive relative to 1 to 3 validator setups, pushing L1s toward decentralization.
+
+But the current Gaussian version has a real weakness.
+
+<div class="callout callout-warning fade-in" markdown="1">
+
+**The aggregate-fee problem:** Depending on how per-validator fees interact with total validator count, an L1 adding validators can actually see its total fee burden *fall*. That means less AVAX burned as the network grows. That's backwards. More validators should mean higher total fees and more burn, because more validators impose more cost on the network. The current curve fails this test in places.
+
+</div>
+
+Even though this version is the most faithful to the original ACP-255 instinct, it's not the easiest one to defend.
+
+<div class="pull-quote fade-in">
+The problem is not the instinct. The problem is the shape.
+</div>
+
+{% include acp255-mini-chart.html formula="gaussian" v=10000 %}
+
+</div>
+
+<hr class="section-break">
+
+<div class="section-formula fade-in" data-formula="mono" markdown="1">
+
+<div class="section-label">Formula 3: The clean replacement</div>
+
+## Easier to Defend Than to Love <span class="formula-badge mono">Monotonic</span>
 
 The pure monotonic replacement does one thing very clearly:
 
-> **total L1 fees always increase as an L1 adds validators**
+> **Total L1 fees always increase as an L1 adds validators.**
 
 That lets you preserve a resource-pricing safety property while still making larger validator sets more efficient on a per-validator basis.
 
-A simple review curve for that looks like:
+<div class="formula-hero fade-in">
 
-```text
-L1TotalFee(n) = 50 + 35 * log2(n)
-```
+$$\text{L1TotalFee}(n) = 50 + 35 \cdot \log_2(n)$$
 
-This version is easy to explain.
+</div>
 
-- 1 validator is expensive
-- 10 validators cost more in total than 1 validator
-- but the average cost per validator drops
-- decentralization still gets rewarded
-- aggregate underpricing becomes much harder to argue
+<aside class="margin-note">
+Why $\log_2$? Because logarithmic growth rewards each additional validator less than the last. The jump from 1 to 2 validators matters a lot. The jump from 19 to 20 barely registers. That's exactly how you want to price validator additions: diminishing marginal discount, never a decrease.
+</aside>
 
-If all I cared about was clean economics in isolation, this is probably the version I would choose.
+One validator is expensive, which means high burn per L1. Ten validators cost more in total, which means even more burn. But the average cost per validator drops, so decentralization still gets rewarded. The key property: **total AVAX burned always increases as the network grows.** No loopholes.
 
-But governance is not only about elegance. It is also about transition, continuity, and how much of the original design intent you preserve.
+If all I cared about was guaranteeing that burn never decreases, this is the version I'd choose.
 
-That is where the hybrid starts to matter.
+But governance isn't only about clean guarantees. It's about capturing the most value during the growth phase, when buy pressure matters most.
 
----
+{% include acp255-mini-chart.html formula="mono" v=10000 %}
 
-## Formula 4: ACP-255 Hybrid, the One I Like Best Right Now
+</div>
 
-The hybrid model keeps the original ACP-255 shape where its story is strongest, then becomes stricter exactly where the review pressure is strongest.
+<hr class="section-break">
 
-The version in the explorer works like this:
+<div class="section-formula fade-in" data-formula="hybrid" markdown="1">
 
-- **up to 9,000 total validators:** use the current ACP-255 Gaussian formula
-- **from 9,000 to 11,000:** blend smoothly
-- **above 11,000:** switch to a fitted monotonic branch
+<div class="full-bleed" markdown="1">
+
+<div class="section-label" style="color: #7aa2ff;">Formula 4: The one I like best</div>
+
+## The Compromise That Feels Like a Phase Change <span class="formula-badge hybrid">Hybrid</span>
+
+The hybrid model maximizes burn during the growth phase, then switches to strict resource pricing once the network is large enough. Best of both worlds for AVAX buy pressure.
+
+<div class="phase-timeline fade-in">
+  <div class="phase phase-gaussian">
+    <span class="phase-label">Phase 1</span>
+    <span class="phase-value">&lt; 9,000 V</span>
+    <span class="phase-desc">Full Gaussian, growth-phase pricing</span>
+  </div>
+  <div class="phase phase-blend">
+    <span class="phase-label">Blend</span>
+    <span class="phase-value">9k &ndash; 11k</span>
+    <span class="phase-desc">Smooth transition zone</span>
+  </div>
+  <div class="phase phase-monotonic">
+    <span class="phase-label">Phase 2</span>
+    <span class="phase-value">&gt; 11,000 V</span>
+    <span class="phase-desc">Monotonic, strict resource pricing</span>
+  </div>
+</div>
 
 Why do I like this more than the pure monotonic version?
 
-Because it preserves the main political and economic story of ACP-255:
+Because the growth phase is when buy pressure matters most. That's when new L1s are launching, when AVAX demand is building, when the burn should be aggressive. The Gaussian model captures that energy. But once the network matures past 11k validators, you need a model that's airtight on resource pricing. No loopholes, no aggregate-fee problems.
 
-- early growth matters
-- decentralization should be encouraged early and visibly
-- the 10k region is still treated as a special phase in network maturity
+The hybrid gives you both: aggressive burn early, clean economics later.
 
-But it also concedes something important:
+<div class="pull-quote fade-in">
+Not the prettiest one. The pure monotonic curve is prettier. But in terms of "what I could actually defend in front of reviewers and still call ACP-255", the hybrid is the best answer I have right now.
+</div>
 
-- once the network gets large enough, the fee model should become easier to defend on strict resource-pricing grounds
+{% include acp255-mini-chart.html formula="hybrid" v=10000 %}
 
-That feels like the right compromise.
+</div>
 
-Not the prettiest one. The pure monotonic curve is prettier.
+</div>
 
-But in terms of **"what could I actually defend in front of reviewers and still call ACP-255"**, the hybrid is the best answer I have right now.
+<hr class="section-break">
+
+<h2 class="explorer-intro fade-in">You've seen the argument. Now break it.</h2>
+
+<div class="explorer-howto fade-in">
+  <div class="howto-step">
+    <div class="howto-step-num">1</div>
+    <p><strong>Drag the sliders</strong> on the left to change the network size (V), how many validators your L1 runs (n), and how long ACP-77 has been above target.</p>
+  </div>
+  <div class="howto-step">
+    <div class="howto-step-num">2</div>
+    <p><strong>Watch the curves</strong> update in real time. The left chart shows what happens when one L1 decentralizes. The right chart shows what happens as the whole network matures.</p>
+  </div>
+  <div class="howto-step">
+    <div class="howto-step-num">3</div>
+    <p><strong>Compare the four numbers</strong> in the sidebar. Those are the monthly fees each model would charge your L1 under the exact conditions you just set.</p>
+  </div>
+</div>
+
+{% include acp255-explorer-v2.html %}
 
 ---
+
+<div class="verdict" markdown="1">
 
 ## What the Charts Show More Clearly Than Words
 
-A few observations jump out once you rotate the surfaces and move the slices around.
+A few things jump out once you move the sliders around, especially if you think about them in terms of AVAX buy pressure.
 
-### 1. ACP-77 is mostly about global pressure, not L1 structure
+<span class="formula-badge acp77">ACP-77</span> burns almost nothing below 10k validators. It only gets interesting once the network is already large and stays above target for a while. For buy pressure during the growth phase, it's basically invisible.
 
-ACP-77 does not really care whether an L1 has 3 validators or 15, except linearly. The interesting variable is the global validator count and how long the network stays above target.
+<span class="formula-badge gaussian">Gaussian</span> is the most aggressive on burn during the growth phase. It taxes centralized L1s hard, peaks around 10k validators, and captures the most value from early network expansion. But it has a hole: total burn can actually decrease when L1s add validators. That undermines the whole thesis.
 
-That makes it robust in one sense, but not very expressive in another.
+<span class="formula-badge mono">Monotonic</span> guarantees burn always increases. No exceptions, no loopholes. But it doesn't have a growth-phase boost. The burn is steady, predictable, and less aggressive where it matters most.
 
-### 2. The current Gaussian ACP-255 is genuinely interesting
+<span class="formula-badge hybrid">Hybrid</span> gives you growth-phase aggression from the Gaussian plus the monotonic guarantee once the network matures. Early burn is maximized. Late burn is airtight. The transition happens around 10k validators, exactly where the network starts caring more about long-term sustainability.
 
-I still think the current ACP-255 draft captures something important that a purely global fee misses.
+<div class="callout callout-insight fade-in" markdown="1">
 
-It encodes the idea that **small, tightly controlled validator sets should pay a premium**.
+**If I had to pick one model for maximizing AVAX buy pressure today, it would be the hybrid.** Not because it's perfect. The transition band can be tuned, the post-threshold curve can still be argued over, and ACP-77 comparisons should be treated carefully because it's path-dependent, not a simple static fee. But it captures the most value during the growth phase while guaranteeing that burn never decreases as the network scales.
 
-That is a valid instinct. The problem is not the instinct. The problem is the shape.
+</div>
 
-### 3. The monotonic replacement is much easier to defend than to love
+## Why I Wrote It This Way
 
-The monotonic version solves the main objection quickly.
+I didn't want this post to be another governance thread where the formulas are hidden in paragraphs and everyone argues off memory.
 
-But it also strips away a lot of the original ambition. It becomes cleaner, safer, and less distinctive.
+When a proposal lives or dies by curve shape, and the curve shape determines how much AVAX gets burned, you should be able to see the curves.
 
-### 4. The hybrid looks like a real governance compromise
+So that's what this is. Not a final ACP. Not a vote solicitation. Just the most honest version of the work at this stage: **here are four fee models, here is how each one turns validator growth into AVAX buy pressure, and here is the one that currently works best.**
 
-This is the most important one.
+If you want to discuss ACP-255 seriously, [start with the PR](https://github.com/avalanche-foundation/ACPs/pull/255). Then come back here and break the charts.
 
-Once you look at the surfaces, the hybrid does not feel like a hack. It feels like a phase change:
+</div>
 
-- early network growth gets one pricing logic
-- mature network resource pricing gets another
-- the transition happens where the system starts to care much more about capacity and sustainability
-
-That is exactly the kind of design I usually trust more than single-regime models.
-
----
-
-## If I Had to Defend One Version Today
-
-It would be the hybrid.
-
-Not because it is perfect.
-
-It still needs work:
-
-- the transition band can be tuned better
-- the post-threshold curve can still be argued over
-- ACP-77 comparisons should be treated carefully because ACP-77 is path-dependent, not a simple static fee schedule
-
-But if the question is:
-
-> which version best preserves the original intent of ACP-255 while answering the strongest reviewer concern?
-
-my answer today is the hybrid.
-
-That is the version I would push further.
-
----
-
-## Why I Wrote This This Way
-
-I did not want this post to be another governance article where the formulas are hidden in paragraphs and everyone argues off memory.
-
-When a proposal lives or dies by curve shape, you should be able to see the curves.
-
-So that is what this is.
-
-Not a final ACP.
-Not a vote solicitation.
-Not even a finished argument.
-
-Just the most honest version of the work at this stage: **here are the fee regimes, here is how they behave, and here is the one that currently seems to work best.**
-
-If you want to discuss ACP-255 seriously, start with the charts.
+</div>
