@@ -1,34 +1,23 @@
 <nav class="{% if page.title == 'Home' %}nav-home{% else %}nav{% endif %}">
   <ul class="list">
+    {% for link in site.data.ui_text.nav_links %}
     <li class="item">
-      <a class="link" href="{{base}}/blog">
-        <span class="lang-it">{{ site.data.ui_text.nav.read.it }}</span>
-        <span class="lang-en">{{ site.data.ui_text.nav.read.en }}</span>
+      <a class="link" href="{{base}}{{ link.url }}">
+        <span class="lang-it">{{ site.data.ui_text.nav[link.key].it }}</span>
+        <span class="lang-en">{{ site.data.ui_text.nav[link.key].en }}</span>
       </a>
     </li>
-
-    <li class="item">
-      <a class="link" href="{{base}}/projects">
-        <span class="lang-it">{{ site.data.ui_text.nav.projects.it }}</span>
-        <span class="lang-en">{{ site.data.ui_text.nav.projects.en }}</span>
-      </a>
-    </li>
-
-    <li class="item">
-      <a class="link" href="{{base}}/about">
-        <span class="lang-it">{{ site.data.ui_text.nav.about.it }}</span>
-        <span class="lang-en">{{ site.data.ui_text.nav.about.en }}</span>
-      </a>
-    </li>
+    {% endfor %}
 
     <li class="item">
       <a class="link" href="{{base}}/now">now</a>
     </li>
 
     <li class="item lang-switch">
-      <button class="lang-toggle lang-toggle-it" onclick="window.toggleGlobalLang('it')">IT</button>
-      <span style="color: #444;">|</span>
-      <button class="lang-toggle lang-toggle-en" onclick="window.toggleGlobalLang('en')">EN</button>
+      {% assign toggle_langs = site.data.ui_text.languages | map: "code" %}
+      {% for lang in toggle_langs %}
+      <button class="lang-toggle lang-toggle-{{ lang }}" onclick="window.toggleGlobalLang('{{ lang }}')">{{ lang | upcase }}</button>{% unless forloop.last %}<span class="lang-toggle-separator">|</span>{% endunless %}
+      {% endfor %}
     </li>
   </ul>
 </nav>

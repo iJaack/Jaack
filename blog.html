@@ -4,32 +4,21 @@ title: Blog
 description: Lo 'Zibaldone' - raccolta di pensieri senza censure
 ---
 
-<section class="list lang-en">
-	{% assign en_posts = site.posts | where: "lang", "en" %}
-	{% if en_posts.size == 0 %}
-	{% assign en_posts = site.posts | where_exp: "item", "item.lang != 'it'" %}
+{% for lang in site.data.ui_text.languages %}
+<section class="list lang-{{ lang.code }}">
+	{% assign posts = site.posts | where: "lang", lang.code %}
+	{% if lang.code == "en" and posts.size == 0 %}
+	{% assign posts = site.posts | where_exp: "item", "item.lang != 'it'" %}
 	{% endif %}
 
-	{% if en_posts.size == 0 %}
-	<p class="text-center">No English posts yet.</p>
+	{% if posts.size == 0 %}
+	<p class="text-center">{{ lang.posts_empty }}</p>
 	{% else %}
-	{% for post in en_posts %}
+	{% for post in posts %}
 	{% if post.category == 'blog' and post.hidden != true %}
 	{% include blog-post.html %}
 	{% endif %}
 	{% endfor %}
 	{% endif %}
 </section>
-
-<section class="list lang-it">
-	{% assign it_posts = site.posts | where: "lang", "it" %}
-	{% if it_posts.size == 0 %}
-	<p class="text-center">Nessun post in Italiano per ora.</p>
-	{% else %}
-	{% for post in it_posts %}
-	{% if post.category == 'blog' and post.hidden != true %}
-	{% include blog-post.html %}
-	{% endif %}
-	{% endfor %}
-	{% endif %}
-</section>
+{% endfor %}

@@ -30,3 +30,27 @@ footer:
   distributed:
     en: Distributed under license
     it: Distribuito su licenza
+
+nav_links:
+  - key: read
+    url: /blog
+  - key: projects
+    url: /projects
+  - key: about
+    url: /about
+
+languages:
+  - code: en
+    label: EN
+    posts_empty: No English posts yet.
+  - code: it
+    label: IT
+    posts_empty: Nessun post in Italiano per ora.
+
+projects_intro:
+  en:
+    - Over time, I find myself studying certain topics in depth but not producing suitable documentation that is useful to me (if I forget what I have studied) or to others, in the spirit of decentralization and free information.
+    - This page is a periodically updated collection of research that I have conducted alone or together with others, appropriately mentioned.
+  it:
+    - Nel tempo, mi trovo ad approfondire certi argomenti ma a non produrre documentazione adeguata che sia utile a me (se dimentico cosa ho studiato) o agli altri, nello spirito della decentralizzazione e della libera informazione.
+    - Questa pagina è una raccolta periodicamente aggiornata di ricerche che ho condotto da solo o insieme ad altri, opportunamente menzionati.

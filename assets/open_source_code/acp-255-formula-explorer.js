@@ -1,6 +1,13 @@
+/// <reference path="./acp-255-types.d.ts" />
+
 (function () {
   var roots = document.querySelectorAll('.acp255-story');
   if (!roots.length) return;
+
+  /** @type {Record<Acp255ChartColorKey, string>} */
+  var colors = { acp77: '#e8c547', current: '#ff7a90', mono: '#5dd39e', hybrid: '#7aa2ff' };
+  /** @type {Record<Acp255FormulaKey, Acp255ChartColorKey>} */
+  var formulaKeyMap = { acp77: 'acp77', gaussian: 'current', mono: 'mono', hybrid: 'hybrid' };
 
   function formatFee(value) {
     if (!isFinite(value)) return '—';
@@ -15,10 +22,10 @@
     var ACP77_K = 1246488515;
     var ACP77_T = 10000;
     var SECONDS_PER_MONTH = 30 * 24 * 60 * 60;
+    /** @type {Acp255State} */
     var state = { fixedV: 800, fixedN: 10, acp77Days: 30 };
+    /** @type {Acp255FormulaKey | null} */
     var activeFormula = null;
-    var colors = { acp77: '#e8c547', current: '#ff7a90', mono: '#5dd39e', hybrid: '#7aa2ff' };
-    var formulaKeyMap = { acp77: 'acp77', gaussian: 'current', mono: 'mono', hybrid: 'hybrid' };
 
     function getEl(id) { return root.querySelector('#' + id); }
     function currentMultiplier(n) { return 1 + 17.84 * Math.exp(-0.3 * (n - 1)); }
@@ -31,7 +38,7 @@
       var feeRate = ACP77_M * Math.exp(x / ACP77_K);
       return (feeRate * SECONDS_PER_MONTH) / 1e9;
     }
-    function acp77Total(V, n, sustainedDays) { return n * acp77PerValidatorMonthly(V, n ? sustainedDays : sustainedDays); }
+    function acp77Total(V, n, sustainedDays) { return n * acp77PerValidatorMonthly(V, sustainedDays); }
 
     function solve3x3(rows, values) {
       var a = rows.map(function (row, i) { return row.concat([values[i]]); });
@@ -79,9 +86,17 @@
       getEl('live-hybrid').textContent = formatFee(vals.hybrid);
     }
 
+    /**
+     * @param {string} id
+     * @param {Acp255Series[]} datasets
+     * @param {string} xLabel
+     * @param {number[]} tickValues
+     */
     function drawCanvas(id, datasets, xLabel, tickValues) {
-      var canvas = getEl(id); if (!canvas) return;
+      var canvas = getEl(id);
+      if (!(canvas instanceof HTMLCanvasElement)) return;
       var ctx = canvas.getContext('2d');
+      if (!ctx) return;
       var ratio = Math.min(window.devicePixelRatio || 1, 2);
       var width = canvas.clientWidth || 600;
       var height = canvas.clientHeight || 320;
@@ -135,15 +150,16 @@
     }
 
     ['fixedV','fixedN','acp77Days'].forEach(function (id) {
-      var el = getEl(id); if (!el) return;
-      el.addEventListener('input', function () { state[id === 'fixedV' ? 'fixedV' : id === 'fixedN' ? 'fixedN' : 'acp77Days'] = Number(el.value); redraw(); });
+      var el = getEl(id); if (!(el instanceof HTMLInputElement)) return;
+      var input = /** @type {HTMLInputElement} */ (el);
+      input.addEventListener('input', function () { state[id === 'fixedV' ? 'fixedV' : id === 'fixedN' ? 'fixedN' : 'acp77Days'] = Number(input.value); redraw(); });
     });
 
     var resizeTimer;
     window.addEventListener('resize', function () { clearTimeout(resizeTimer); resizeTimer = setTimeout(redraw, 80); });
     redraw();
 
-    // Public API for scroll-sync and mini-charts
+    /** @type {Acp255ExplorerApi} */
     window.acp255Explorer = {
       compute: {
         current255: current255,
@@ -152,7 +168,7 @@
         acp77Total: acp77Total,
         hybridBranch: hybridBranch
       },
-      highlightFormula: function (name) {
+      highlightFormula: function (/** @type {Acp255FormulaKey | null} */ name) {
         activeFormula = name;
         root.setAttribute('data-active-formula', name || '');
         redraw();
@@ -163,9 +179,21 @@
         redraw();
       },
       setParams: function (params) {
-        if (params.fixedV !== undefined) { state.fixedV = params.fixedV; var el = getEl('fixedV'); if (el) el.value = params.fixedV; }
-        if (params.fixedN !== undefined) { state.fixedN = params.fixedN; var el2 = getEl('fixedN'); if (el2) el2.value = params.fixedN; }
-        if (params.acp77Days !== undefined) { state.acp77Days = params.acp77Days; var el3 = getEl('acp77Days'); if (el3) el3.value = params.acp77Days; }
+        if (params.fixedV !== undefined) {
+          state.fixedV = params.fixedV;
+          var el = /** @type {HTMLInputElement | null} */ (getEl('fixedV'));
+          if (el) el.value = String(params.fixedV);
+        }
+        if (params.fixedN !== undefined) {
+          state.fixedN = params.fixedN;
+          var el2 = /** @type {HTMLInputElement | null} */ (getEl('fixedN'));
+          if (el2) el2.value = String(params.fixedN);
+        }
+        if (params.acp77Days !== undefined) {
+          state.acp77Days = params.acp77Days;
+          var el3 = /** @type {HTMLInputElement | null} */ (getEl('acp77Days'));
+          if (el3) el3.value = String(params.acp77Days);
+        }
         redraw();
       }
     };

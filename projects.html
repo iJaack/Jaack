@@ -4,21 +4,13 @@ title: Projects
 description: A collection of research and experiments
 ---
 
-<div class="lang-en">
-	<p>Over time, I find myself studying certain topics in depth but not producing
-		suitable documentation that is useful to me (if I forget what I have studied) or to others,
-		in the spirit of decentralization and free information.</p>
-	<p>This page is a periodically updated collection of research that I have conducted alone
-		or together with others, appropriately mentioned.</p>
+{% for lang in site.data.ui_text.languages %}
+<div class="lang-{{ lang.code }}">
+	{% for paragraph in site.data.ui_text.projects_intro[lang.code] %}
+	<p>{{ paragraph }}</p>
+	{% endfor %}
 </div>
-
-<div class="lang-it">
-	<p>Nel tempo, mi trovo ad approfondire certi argomenti ma a non produrre
-		documentazione adeguata che sia utile a me (se dimentico cosa ho studiato) o agli altri,
-		nello spirito della decentralizzazione e della libera informazione.</p>
-	<p>Questa pagina è una raccolta periodicamente aggiornata di ricerche che ho condotto da solo
-		o insieme ad altri, opportunamente menzionati.</p>
-</div>
+{% endfor %}
 
 <style>
 	.projects-grid {
@@ -78,8 +70,10 @@ description: A collection of research and experiments
 		<img src="{{ project.image | relative_url }}" alt="{{ project.name }}" class="project-image">
 		<div class="project-content">
 			<h3 class="project-title">{{ project.name }}</h3>
-			<p class="project-desc lang-en">{{ project.description_en }}</p>
-			<p class="project-desc lang-it">{{ project.description_it }}</p>
+			{% for lang in site.data.ui_text.languages %}
+			{% assign desc_key = "description_" | append: lang.code %}
+			<p class="project-desc lang-{{ lang.code }}">{{ project[desc_key] }}</p>
+			{% endfor %}
 		</div>
 	</a>
 	{% endfor %}

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Jekyll website source for Jaack",
   "scripts": {
-    "build": "jekyll build"
+    "build": "bundle exec jekyll build"
   },
   "dependencies": {}
 }
