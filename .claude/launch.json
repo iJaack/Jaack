@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Jekyll Dev Server",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "4000", "--directory", "/Users/jaack/Desktop/Github/Jaack/_site"],
+      "port": 4000
+    },
+    {
+      "name": "Jekyll Production Preview",
+      "runtimeExecutable": "bundle",
+      "runtimeArgs": ["exec", "jekyll", "serve"],
+      "port": 4000
+    }
+  ]
+}
