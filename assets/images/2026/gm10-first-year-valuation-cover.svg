@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">GM10 first-year valuation case cover</title>
+  <desc id="desc">Abstract blog cover showing graded card slabs, valuation math, AVAX treasury flow, and a 30th anniversary bull-case return curve.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111111"/>
+      <stop offset="0.43" stop-color="#202019"/>
+      <stop offset="0.68" stop-color="#19382f"/>
+      <stop offset="1" stop-color="#741f28"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff0a8"/>
+      <stop offset="0.42" stop-color="#f3c84d"/>
+      <stop offset="1" stop-color="#b57b18"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f7f2"/>
+      <stop offset="0.55" stop-color="#dfe7e2"/>
+      <stop offset="1" stop-color="#a9b8b4"/>
+    </linearGradient>
+    <linearGradient id="avax" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff6b6b"/>
+      <stop offset="1" stop-color="#e84142"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+      <path d="M 64 0 L 0 0 0 64" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.055"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="1260" cy="210" r="270" fill="#f3c84d" opacity="0.12" filter="url(#softGlow)"/>
+  <circle cx="230" cy="720" r="230" fill="#38c172" opacity="0.12" filter="url(#softGlow)"/>
+
+  <g opacity="0.28" stroke="#ffffff" stroke-width="3" fill="none">
+    <path d="M180 660 C420 480 530 560 710 390 S1030 190 1330 260"/>
+    <path d="M180 710 C430 610 560 660 750 500 S1100 350 1400 410" opacity="0.45"/>
+  </g>
+
+  <g transform="translate(146 136) rotate(-9)" filter="url(#shadow)">
+    <rect x="0" y="0" width="330" height="470" rx="18" fill="#141414" stroke="#ffffff" stroke-opacity="0.24"/>
+    <rect x="22" y="24" width="286" height="76" rx="10" fill="#efefea"/>
+    <text x="44" y="72" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#111111">PSA 10</text>
+    <rect x="28" y="124" width="274" height="312" rx="12" fill="url(#card)"/>
+    <rect x="54" y="154" width="222" height="136" rx="10" fill="#d73b42" opacity="0.9"/>
+    <circle cx="165" cy="222" r="50" fill="#f6d34a"/>
+    <path d="M85 338 H245 M105 374 H225" stroke="#111111" stroke-width="14" stroke-linecap="round" opacity="0.72"/>
+  </g>
+
+  <g transform="translate(344 190) rotate(7)" filter="url(#shadow)">
+    <rect x="0" y="0" width="300" height="430" rx="18" fill="#1f1e1a" stroke="#ffffff" stroke-opacity="0.22"/>
+    <rect x="24" y="24" width="252" height="68" rx="10" fill="#efefea"/>
+    <text x="44" y="68" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" fill="#111111">GRADED</text>
+    <rect x="28" y="116" width="244" height="280" rx="12" fill="url(#card)"/>
+    <rect x="56" y="150" width="188" height="106" rx="8" fill="#278f7c" opacity="0.92"/>
+    <path d="M78 318 H222 M94 352 H206" stroke="#111111" stroke-width="12" stroke-linecap="round" opacity="0.72"/>
+  </g>
+
+  <g transform="translate(1044 132)" filter="url(#shadow)">
+    <path d="M214 0 L428 124 L428 372 L214 496 L0 372 L0 124 Z" fill="#121212" stroke="url(#gold)" stroke-width="5"/>
+    <path d="M214 56 L380 152 L380 344 L214 440 L48 344 L48 152 Z" fill="#1f2d25" stroke="#ffffff" stroke-opacity="0.15" stroke-width="2"/>
+    <text x="214" y="172" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="900" fill="#f8e18a">12-MONTH</text>
+    <text x="214" y="226" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="70" font-weight="900" fill="#ffffff">FLOAT</text>
+    <text x="214" y="286" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" fill="#7ef2b4">3.74M CATCH</text>
+    <text x="214" y="342" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="800" fill="#f3c84d">~$124K</text>
+  </g>
+
+  <g transform="translate(690 172)">
+    <rect x="0" y="0" width="312" height="88" rx="8" fill="#ffffff" fill-opacity="0.09" stroke="#ffffff" stroke-opacity="0.17"/>
+    <text x="30" y="38" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity="0.78">Round 2 price</text>
+    <text x="30" y="70" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="900" fill="#f3c84d">0.0035 AVAX</text>
+
+    <rect x="0" y="112" width="312" height="88" rx="8" fill="#ffffff" fill-opacity="0.09" stroke="#ffffff" stroke-opacity="0.17"/>
+    <text x="30" y="150" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity="0.78">Bull return case</text>
+    <text x="30" y="182" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="900" fill="#7ef2b4">30% annual</text>
+
+    <rect x="0" y="224" width="312" height="88" rx="8" fill="#ffffff" fill-opacity="0.09" stroke="#ffffff" stroke-opacity="0.17"/>
+    <text x="30" y="262" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff" opacity="0.78">Card NAV hurdle</text>
+    <text x="30" y="294" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="900" fill="#ffb4b7">$10K-$21K</text>
+  </g>
+
+  <g transform="translate(876 602)" filter="url(#shadow)">
+    <path d="M84 0 L168 145 H0 Z" fill="url(#avax)"/>
+    <path d="M84 42 L126 118 H42 Z" fill="#ffffff" opacity="0.92"/>
+    <path d="M188 145 L246 42 L304 145 Z" fill="url(#avax)" opacity="0.88"/>
+  </g>
+
+  <g transform="translate(108 704)">
+    <text x="0" y="0" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" fill="#f3c84d">GM10 / $CATCH</text>
+    <text x="0" y="66" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="950" fill="#ffffff">The first-year valuation case</text>
+    <text x="2" y="114" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="700" fill="#d8e7df">Treasury, trophy cards, and counted supply.</text>
+  </g>
+</svg>
