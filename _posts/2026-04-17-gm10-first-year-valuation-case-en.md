@@ -1,7 +1,7 @@
 ---
 title: "The First-Year Valuation Case for GM10"
 layout: post
-date: 2026-04-17 16:30
+date: 2026-04-17 14:30
 headerImage: false
 tag:
 - "\"crypto\""

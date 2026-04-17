@@ -1,6 +1,10 @@
 ---
 title: "Minimum Market Fit"
+layout: post
 date: 2026-04-17
+category: blog
+author: jaack
+published: true
 lang: en
 ---
 
