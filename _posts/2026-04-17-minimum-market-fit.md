@@ -2,6 +2,8 @@
 title: "Minimum Market Fit"
 layout: post
 date: 2026-04-17
+image: /assets/images/2026/minimum-market-fit-cover.png
+headerImage: true
 category: blog
 author: jaack
 published: true
