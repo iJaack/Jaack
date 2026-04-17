@@ -1,26 +1,25 @@
 ---
 title: "The First-Year Valuation Case for GM10"
 layout: post
-date: 2026-04-17 14:30
-image: /assets/images/2026/gm10-first-year-valuation-cover.svg
-headerImage: true
+date: 2026-04-17 16:30
+headerImage: false
 tag:
-- crypto
-- avalanche
-- pokemon
-- tokenomics
-category: blog
-author: jaack
-description: A conservative model for valuing GM10 against first-year circulating supply, treasury deployment, and Pokemon card appreciation.
+- "\"crypto\""
+- "\"avalanche\""
+- "\"pokemon\""
+- "\"tokenomics\""
+category: "blog"
+author: "jaack"
+description: "A conservative model for valuing GM10 against first-year circulating supply, treasury deployment, and Pokemon card appreciation."
 published: true
-lang: en
+lang: "en"
 ---
 
 Most token valuation arguments start from the wrong number.
 
 They take the full max supply, multiply it by the latest round price, call that FDV, and then argue from there. Sometimes that is useful. Most of the time it is lazy.
 
-For GM10, I think the cleaner way to model the first year is to ask a simpler question:
+For [GM10](https://gm10.xyz), my Pokémon card treasury onchain protocol, I think the cleaner way to model the first year is to ask a simpler question:
 
 **What supply is actually relevant in the next 12 months, and can the card treasury reasonably support that valuation?**
 
@@ -36,7 +35,7 @@ For the conservative 12-month model, I only count:
 - Round 2 public supply at full cap
 - The team allocation that actually vests by month 12
 
-I do **not** count community, partnerships, advisors, governance treasury, or liquidity allocations in this base case. The argument is simple: if the goal is to model the first year, count what is public or vested, not every possible future bucket.
+I do **not** count community, partnerships, advisors, governance treasury, or liquidity allocations in this base case. The argument is simple: if the goal is to model the first year, count what is public or vested, not every possible future bucket. This is because all these other allocations are _minted when necessary_.
 
 The numbers:
 
@@ -44,17 +43,11 @@ The numbers:
 - Round 2 full cap: **1,428,571.43 CATCH**
 - Team vested by month 12: **2,142,857.14 CATCH**
 
-That gives a counted first-year supply of:
+That gives a counted first-year supply of **3,738,095.24 CATCH**.
 
-**3,738,095.24 CATCH**
+At the Round 2 price of **0.0035 AVAX per CATCH**, that implies **13,083.33 AVAX**.
 
-At the Round 2 price of **0.0035 AVAX per CATCH**, that implies:
-
-**13,083.33 AVAX**
-
-Using AVAX at roughly **$9.48**, that is about:
-
-**$124,000**
+Using AVAX at roughly **$9.48**, that is about **$124,000**.
 
 This is the valuation I care about for the first year. Not the theoretical full FDV. The counted valuation.
 
@@ -62,52 +55,23 @@ This is the valuation I care about for the first year. Not the theoretical full 
 
 If we use a 20-40x revenue multiple, the revenue requirement is not aggressive.
 
-That multiple is not meant to describe a mature collectibles business. It is a venture-style sanity check for a small, high-upside strategy with narrative momentum and tokenized liquidity. For context, high-growth SaaS companies at the 2021 market peak traded around **20-40x forward revenue**. That range compressed hard after 2022, and normal public-company revenue multiples are usually much lower. So this is intentionally a bull-market, high-growth multiple, not a conservative private-business multiple.
+- At a **20x** revenue multiple: **$124,000 / 20 = ~$6,200 annual revenue**
+- At a **40x** revenue multiple: **$124,000 / 40 = ~$3,100 annual revenue**
 
-At a **20x** revenue multiple:
-
-**$124,000 / 20 = ~$6,200 annual revenue**
-
-At a **40x** revenue multiple:
-
-**$124,000 / 40 = ~$3,100 annual revenue**
-
-So the first-year counted supply valuation needs roughly:
-
-**$3,100-$6,200 of annualized revenue**
-
-That is tiny compared with what even a modest card treasury can produce if the thesis works.
+So the first-year counted supply valuation needs roughly **$3,100-$6,200 of annualized revenue**. That is tiny compared with what even a modest card treasury can produce if the thesis works.
 
 ## The Pokemon anniversary bull case
 
-This year is Pokemon's 30th anniversary. That matters.
-
-Anniversary cycles create attention. Attention creates liquidity. Liquidity pulls collectors, speculators, grading demand, auction volume, and social proof into the same window.
-
-I do not want to pretend that a 30% return is guaranteed. It is not. Cards are illiquid, comps can be stale, spreads can be ugly, and not every slab moves with the headline index.
+This year is Pokemon's 30th anniversary. That matters. Anniversary cycles create attention. Attention creates liquidity. Liquidity pulls collectors, speculators, grading demand, auction volume, and social proof into the same window. I do not want to pretend that a 30% return is guaranteed. It is not. Cards are illiquid, comps can be stale, spreads can be ugly, and not every slab moves with the headline index.
 
 But as a bull-case assumption for trophy-grade Pokemon exposure in an anniversary year, **30% annual appreciation** is a reasonable scenario to underwrite.
-
-There is enough market evidence to make that assumption discussable:
-
-- Card Ladder data cited by the Wall Street Journal and Washington Post put Pokemon cards at roughly **3,821% cumulative returns since 2004**. Over about 21 years, that is roughly **19% annualized** before fees, taxes, spreads, and selection bias.
-- 2026 Pokemon market guides are already pointing to the 30th anniversary as a real demand catalyst, especially for vintage, PSA 10, Japanese, and mascot/trophy cards.
-- Several current market writeups cite **15-20% gains in parts of the vintage market ahead of the anniversary**, with some graded or high-demand categories moving faster.
-
-So the model uses three layers:
-
-1. **19%** as the long-run Pokemon-index proxy.
-2. **30%** as the anniversary-year bull case.
-3. **No guarantee** that GM10 captures either number, because execution, card selection, grading quality, entry price, custody, and exit liquidity matter more than the headline index.
 
 If the required annual revenue is **$3,100-$6,200**, and the card portfolio returns **30%**, the card NAV needed is:
 
 - **$3,100 / 30% = ~$10,300**
 - **$6,200 / 30% = ~$20,700**
 
-So even a modest **$25,000 trophy-card base** can support the first-year counted supply valuation under this model.
-
-That is the important part: the first-year valuation hurdle is not high.
+So even a modest **$25,000 trophy-card base** can support the first-year counted supply valuation under this model. That is the important part: the first-year valuation hurdle is not high.
 
 ## Why Round 2 can already sustain it
 
@@ -125,15 +89,11 @@ At full cap, that means:
 - Liquidity: **500 AVAX**
 - Team wallet: **250 AVAX**
 
-At roughly **$9.48 per AVAX**, the strategy treasury alone is about:
-
-**$40,000**
+At roughly **$9.48 per AVAX**, the strategy treasury alone is about **$40,000**.
 
 That is already above the **$10,000-$21,000** card NAV needed to support the conservative first-year valuation model at a 30% annual return assumption.
 
-So the base case is straightforward:
-
-**If Round 2 fills, the raise can very reasonably sustain the first-year counted valuation.**
+So the base case is straightforward: **If Round 2 fills, the raise can very reasonably sustain the first-year counted valuation.**
 
 It gives enough card acquisition capital to support the implied revenue target, while the counted supply remains small because most allocations are not included in the first-year float model.
 
@@ -141,7 +101,7 @@ It gives enough card acquisition capital to support the implied revenue target, 
 
 Now consider a more aggressive scenario.
 
-Within four months, GM10 opens another round:
+Within four months, GM10 opens another round, let's say with these parameters:
 
 - Raise: **50,000 AVAX**
 - Price: **0.00425 AVAX per CATCH**
@@ -153,29 +113,19 @@ That price is higher than Round 2:
 
 That is a **~21.4% price increase**.
 
-The new round would mint:
+The new round would mint **50,000 AVAX / 0.00425 = 11,764,705.88 CATCH**.
 
-**50,000 AVAX / 0.00425 = 11,764,705.88 CATCH**
+Add that to the conservative first-year counted supply: **3,738,095.24 + 11,764,705.88 = 15,502,801.12 CATCH**.
 
-Add that to the conservative first-year counted supply:
-
-**3,738,095.24 + 11,764,705.88 = 15,502,801.12 CATCH**
-
-So the counted 12-month supply becomes about:
-
-**15.5M CATCH**
+So the counted 12-month supply becomes about **15.5M CATCH**.
 
 Still only about **15.5%** of the full 100,000,000 CATCH allocation.
 
 ## Valuation after the larger round
 
-At the new round price of **0.00425 AVAX per CATCH**, the counted valuation becomes:
+At the new round price of **0.00425 AVAX per CATCH**, the counted valuation becomes **15,502,801.12 CATCH × 0.00425 AVAX = 65,886.9 AVAX**.
 
-**15,502,801.12 CATCH × 0.00425 AVAX = 65,886.9 AVAX**
-
-At roughly **$9.48 per AVAX**, that is about:
-
-**$624,000**
+At roughly **$9.48 per AVAX**, that is about **$624,000**.
 
 Using the same 20-40x revenue multiple:
 
@@ -187,17 +137,11 @@ At a 30% card return assumption, the card NAV needed is:
 - **$15,600 / 30% = ~$52,000**
 - **$31,200 / 30% = ~$104,000**
 
-So even after a much larger round, the model only needs roughly:
-
-**$52,000-$104,000 of productive card NAV**
-
-to support the counted 12-month valuation under the 30% bull-case return model.
+So even after a much larger round, the model only needs roughly **$52,000-$104,000 of productive card NAV** to support the counted 12-month valuation under the 30% bull-case return model.
 
 ## What the larger round does to treasury
 
-The 50,000 AVAX round dramatically changes treasury capacity.
-
-Using the same proceeds allocation:
+The 50,000 AVAX round dramatically changes treasury capacity. Using the same proceeds allocation:
 
 - **85%** strategy/card acquisition treasury: **42,500 AVAX**
 - **10%** liquidity: **5,000 AVAX**
@@ -209,13 +153,7 @@ At roughly **$9.48 per AVAX**, that is:
 - Liquidity: **~$47,400**
 - Team wallet: **~$23,700**
 
-Add the full Round 2 strategy treasury of **4,250 AVAX**, and the combined card acquisition treasury becomes:
-
-**46,750 AVAX**
-
-Or about:
-
-**$443,000**
+Add the full Round 2 strategy treasury of **4,250 AVAX**, and the combined card acquisition treasury becomes **46,750 AVAX**, or about **$443,000**.
 
 This is the asymmetry I like.
 
@@ -270,20 +208,3 @@ The clean conclusion:
 Not because the FDV says so.
 
 Because the first-year float, the treasury, and the required return hurdle can actually line up.
-
-## Sources and caveats
-
-The math above depends on assumptions. The important ones:
-
-- **Revenue multiple:** 20-40x is a high-growth venture-style range. It is supported historically by peak public SaaS/venture conditions, but it is not the normal multiple for mature companies. Normal public market revenue multiples are often far lower, and collectibles funds can deserve lower multiples if growth, liquidity, or trust is weak.
-- **Pokemon card returns:** the 3,821% long-run figure comes from Card Ladder data cited by mainstream financial press. It is useful as a directional market proxy, but it does not mean every Pokemon card, or even every graded Pokemon card, returned that much.
-- **30% return assumption:** this is the bull case for Pokemon's 30th anniversary year, not the base case. It depends on buying the right assets at the right entry prices and being able to exit into real liquidity.
-- **Revenue framing:** card appreciation is not cash revenue until assets are sold or otherwise monetized. In this model, "revenue" means annualized economic gain supporting valuation, not guaranteed cash flow.
-
-References:
-
-- Acquiry, **SaaS Valuation Multiples in 2026**, for context that 20-40x forward revenue existed at the 2021 high-growth SaaS peak and later compressed: <https://www.acquiry.com/saas-valuation-multiples-2026/>
-- Equidam, **Revenue Multiples by Industry in 2026**, for the caution that revenue multiples are crude and vary heavily by industry: <https://www.equidam.com/revenue-multiples-by-industry-trbc/>
-- Wall Street Journal, **The Hot Investment With a 3,000% Return? Pokemon Cards**, citing Card Ladder's long-run Pokemon card return index: <https://www.wsj.com/finance/pokemon-cards-investment-0163e058>
-- Economic Times summary of the same Card Ladder / Washington Post figure: <https://m.economictimes.com/news/new-updates/what-are-pokemon-cards-that-gave-a-3821-pc-return-in-the-last-20-years/articleshow/123829877.cms>
-- PokeTrace, **Pokemon 30th Anniversary Collecting & Investment Guide 2026**, for current anniversary-cycle market framing: <https://poketrace.com/blog/pokemon-30-zhounian-shoucang-touzi-zhinan-2026>
