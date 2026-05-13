@@ -1,0 +1,826 @@
+{
+  "meta": {
+    "title": "Team1 Catania Uni Tour",
+    "subtitle": "Tre giorni per passare da AI agents a trust infrastructure e prodotti reali.",
+    "updated": "2026-05-13",
+    "days": 3,
+    "totalSlides": 62
+  },
+  "days": [
+    {
+      "slug": "day-1",
+      "label": "giorno 1",
+      "title": "Dalla chat all’azione",
+      "strap": "agenti AI, harness, skill, memoria, sistemi multi-agent",
+      "icon": "logic",
+      "slides": [
+        {
+          "number": 1,
+          "title": "Dalla chat all’azione: perché gli agenti AI cambiano il lavoro",
+          "lead": "La lezione parte da un punto preciso: l’AI non va più spiegata soltanto come “chatbot che risponde”. Il passaggio importante è verso sistemi che ricevono un obiettivo, usano strumenti, tengono memoria e producono output operativi.",
+          "points": [
+            "Obiettivo della lezione: Capire la differenza tra modello linguistico, agente, harness, skill e sistema multi-agent.",
+            "Perché conta: Se il costo di esecuzione scende, il valore si sposta verso progettazione, direzione e verifica.",
+            "Output atteso: Alla fine lo studente deve saper descrivere un workflow AI affidabile e i suoi punti di rischio.",
+            "Domanda guida: Che cosa cambia quando non chiediamo più “come si fa?”, ma “fallo tu”?",
+            "Metodo: Definizioni → architettura → casi reali → esercizio.",
+            "Ponte: Questa base servirà per capire identità, trust e pagamenti nel Day 2."
+          ],
+          "cards": []
+        },
+        {
+          "number": 2,
+          "title": "Il percorso didattico: dal modello al sistema operativo di agenti",
+          "lead": "Per evitare confusione, separiamo livelli diversi: il modello genera linguaggio; l’agente opera; il sistema multi-agent coordina più ruoli; il layer di controllo verifica che il processo resti affidabile.",
+          "points": [
+            "1. Fondamenti: Turing, software deterministico, reti neurali e LLM.",
+            "2. Agente: Agency, tool, memoria, identità e contesto.",
+            "3. Sistema: Più agenti specializzati che si passano task e responsabilità.",
+            "4. Applicazioni: Marketing, sviluppo web, SEO, dashboard e automazione continua.",
+            "Per la classe: Non memorizzare solo tool names: memorizza il modello mentale.",
+            "Errore comune: Confondere “AI potente” con “sistema affidabile”.",
+            "Criterio di qualità: Un buon sistema produce output verificabili, non solo belli."
+          ],
+          "cards": []
+        },
+        {
+          "number": 3,
+          "title": "Da uso consultivo a uso esecutivo dell’AI",
+          "lead": "Nel transcript, gennaio 2026 viene raccontato come una soglia simbolica: non nasce l’AI, ma diventa evidente che l’integrazione tra modelli e strumenti rende possibile delegare parti intere del lavoro.",
+          "points": [
+            "Prima: L’utente chiedeva spiegazioni, bozze, suggerimenti o riassunti. Poi eseguiva manualmente.",
+            "Ora: L’utente specifica risultato, vincoli e materiale. L’agente prova a completare più step.",
+            "Conseguenza: La competenza si sposta da manualità ripetitiva a design del sistema e controllo qualità.",
+            "Takeaway: Il salto non è solo “modello migliore”: è “modello inserito in un processo”.",
+            "Esempio: Da “scrivimi un outline” a “leggi questi file e costruisci il deck”.",
+            "Rischio: Delegare senza criteri produce errori più rapidi, non lavoro migliore."
+          ],
+          "cards": []
+        },
+        {
+          "number": 4,
+          "title": "Da Turing agli LLM: la lunga domanda sull’interazione intelligente",
+          "lead": "Il riferimento a Turing serve a dare contesto: il problema dell’intelligenza artificiale non è mai stato solo calcolo, ma capacità di sostenere interazioni utili, coerenti e apparentemente ragionate.",
+          "points": [
+            "Turing test: Misura se una macchina può sostenere una conversazione indistinguibile da quella umana.",
+            "Computer classico: Segue istruzioni deterministiche: stesso input, stesso output.",
+            "LLM moderno: Genera risposte plausibili usando pattern statistici appresi su enormi quantità di testo.",
+            "Perché è importante: Oggi molti sistemi superano il piano conversazionale, ma restano fragili sul piano della verità.",
+            "Nota critica: Interazione credibile non significa comprensione perfetta.",
+            "Domanda: Quale parte del ragionamento umano è imitata? Quale resta fuori?"
+          ],
+          "cards": []
+        },
+        {
+          "number": 5,
+          "title": "Il software classico e i modelli neurali risolvono problemi diversi",
+          "lead": "Un punto utile per studenti tecnici: non bisogna opporre software tradizionale e AI. Il software deterministico è eccellente per regole chiare; l’AI probabilistica è utile quando input, linguaggio e contesto sono ambigui.",
+          "points": [
+            "Deterministico: Regole esplicite, output prevedibile, alta verificabilità. Ideale per pagamenti, validazioni, calcoli.",
+            "Probabilistico: Gestisce ambiguità, testo, sintesi e classificazione semantica. Ideale per linguaggio naturale.",
+            "Sistema robusto: Combina i due: LLM per interpretare/generare, codice deterministico per verificare/eseguire.",
+            "Formula pratica: LLM per “capire e proporre”; software per “validare e garantire”.",
+            "Errore comune: Usare l’LLM per fare ciò che un controllo deterministico farebbe meglio.",
+            "Applicazione: Un agente serio deve spesso chiamare tool esterni per controllare i propri output."
+          ],
+          "cards": []
+        },
+        {
+          "number": 6,
+          "title": "Che cos’è un LLM: motore linguistico, non oracolo",
+          "lead": "Un Large Language Model predice e trasforma sequenze linguistiche. È potente perché comprime pattern concettuali, ma non deve essere trattato come una fonte infallibile o come un soggetto responsabile.",
+          "points": [
+            "È forte su: Sintesi, riformulazione, analogie, struttura, codice, brainstorming, spiegazioni progressive.",
+            "È fragile su: Fatti non verificati, numeri, fonti, memoria precisa, giudizio finale in contesti ad alto rischio.",
+            "Uso corretto: Affiancarlo a contesto, strumenti, verifica e responsabilità umana.",
+            "Regola didattica: Quando l’output sembra troppo sicuro, controllare le assunzioni.",
+            "Esempio: Un riassunto può essere utile anche se non è una prova.",
+            "Domanda: Come distinguiamo plausibilità, accuratezza e utilità?"
+          ],
+          "cards": []
+        },
+        {
+          "number": 7,
+          "title": "Il prompt singolo è solo l’inizio: il valore sta nel workflow",
+          "lead": "Molti imparano l’AI partendo dal prompt. È corretto, ma incompleto. Un prompt produce una risposta; un workflow produce un processo ripetibile, osservabile e migliorabile.",
+          "points": [
+            "Prompt: Istruzione puntuale: “riassumi questo testo”, “scrivi una mail”, “crea un outline”.",
+            "Workflow: Sequenza: acquisisci input → trasforma → verifica → pubblica → misura → migliora.",
+            "Skill: Procedura salvata che rende il workflow più stabile e riutilizzabile nel tempo.",
+            "Mini-esercizio: Trasforma un prompt che usi spesso in una procedura di 5 step.",
+            "Criterio: Se puoi ripeterlo e migliorarlo, è workflow.",
+            "Rischio: Prompt casuali producono qualità casuale."
+          ],
+          "cards": []
+        },
+        {
+          "number": 8,
+          "title": "Quando il modello diventa agente: responsabilità operativa limitata",
+          "lead": "Nel transcript, “agent” viene collegato ad “agency”: capacità di prendere in carico un obiettivo. L’agente non è solo testo: è modello + strumenti + memoria + regole di azione.",
+          "points": [
+            "Legge: Documenti, appunti, email, pagine web, file di progetto.",
+            "Agisce: Usa tool: browser, editor, shell, calendar, email, database, API.",
+            "Ricorda: Mantiene stato: decisioni, preferenze, vincoli, errori precedenti.",
+            "Consegna: Produce output finali: deck, sito, issue, report, messaggi, checklist.",
+            "Definizione breve: Agente = LLM inserito in un ambiente operativo controllato.",
+            "Controllo: Più azione significa più bisogno di permessi e audit.",
+            "Domanda: Quali azioni non dovrebbe mai fare senza conferma umana?"
+          ],
+          "cards": []
+        },
+        {
+          "number": 9,
+          "title": "I quattro layer dell’agente: harness, identità, contesto, utente",
+          "lead": "La lezione organizza l’agente in quattro livelli. Questa divisione serve perché quando il sistema sbaglia bisogna diagnosticare il layer giusto, invece di dire genericamente “l’AI ha sbagliato”.",
+          "points": [
+            "Harness: Regole, limiti, policy, tool disponibili e confini di sicurezza.",
+            "Identità: Ruolo operativo: assistant, trader, writer, researcher, operator.",
+            "Contesto: File, memoria, stato della conversazione, obiettivo corrente.",
+            "Utente: Richiesta, feedback, priorità, correzioni e autorizzazioni.",
+            "Diagnosi: Errore di output può dipendere da ruolo, contesto, tool o richiesta.",
+            "Principio: Separare i layer rende il sistema migliorabile.",
+            "Esercizio: Dato un fallimento, quale layer correggeresti per primo?"
+          ],
+          "cards": []
+        },
+        {
+          "number": 10,
+          "title": "L’harness non è accessorio: è il contenitore del comportamento",
+          "lead": "Il modello grezzo non basta. L’harness orienta come il modello parla, quali azioni può compiere, che limiti deve rispettare e quanto deve essere autonomo.",
+          "points": [
+            "Tono e formato: Risposta breve o dettagliata, didattica o operativa, cauta o assertiva.",
+            "Permessi: Quali tool può usare, quando deve chiedere approvazione, cosa non può toccare.",
+            "Sicurezza: Riduce comportamenti dannosi o non desiderati, ma può anche limitare creatività.",
+            "Osservabilità: Registra azioni e decisioni per debugging, audit e apprendimento.",
+            "Tradeoff: Harness rigido = più sicurezza; harness aperto = più potenza ma più rischio.",
+            "Esempio: Un agente email deve distinguere bozza, invio e invio con allegati.",
+            "Domanda: Quali permessi dareste a un agente universitario?"
+          ],
+          "cards": []
+        },
+        {
+          "number": 11,
+          "title": "L’identità dell’agente riduce ambiguità e aumenta coerenza",
+          "lead": "Un agente senza identità operativa produce output generici. Un agente con ruolo chiaro sa quali criteri privilegiare: accuratezza, velocità, tono, prudenza, stile, costo, o scalabilità.",
+          "points": [
+            "Writer: Ottimizza voce, coerenza, ritmo, audience e struttura narrativa.",
+            "Trader: Ottimizza rischio, segnali, timing, esposizione e logging decisionale.",
+            "Operator: Ottimizza completamento task, handoff, priorità e blocchi.",
+            "Researcher: Ottimizza fonti, confronto, incertezza e sintesi verificabile.",
+            "Principio: Ruoli diversi devono avere policy diverse.",
+            "Rischio: Un agente “fa tutto” tende a fare tutto mediocremente.",
+            "Applicazione: Definire identità è progettazione organizzativa, non solo prompt engineering."
+          ],
+          "cards": []
+        },
+        {
+          "number": 12,
+          "title": "La qualità dell’output dipende dalla qualità del contesto",
+          "lead": "Molti errori non nascono dal modello ma da contesto povero, sporco o contraddittorio. Il contesto è il materiale su cui l’agente lavora: senza quello, l’agente riempie i buchi con supposizioni.",
+          "points": [
+            "Contesto minimo: Obiettivo, audience, input, vincoli, formato richiesto, criteri di successo.",
+            "Contesto ricco: Esempi precedenti, preferenze, fonti, log, memoria progetto, feedback accumulato.",
+            "Contesto sporco: Informazioni obsolete, istruzioni contraddittorie, file non rilevanti, memoria errata.",
+            "Contesto eccessivo: Troppo materiale senza priorità può peggiorare il risultato quanto troppo poco.",
+            "Regola pratica: Prima di cambiare modello, correggi contesto.",
+            "Domanda: Quali informazioni servono per far creare un buon deck a un agente?",
+            "Takeaway: Context engineering è una competenza reale."
+          ],
+          "cards": []
+        },
+        {
+          "number": 13,
+          "title": "ChatGPT, Claude, Perplexity: non sono interfacce equivalenti",
+          "lead": "Nel transcript il relatore mostra che modelli/prodotti diversi rispondono in modo diverso. Questa differenza deriva da training, obiettivi, policy, tool disponibili e prodotto che incapsula il modello.",
+          "points": [
+            "ChatGPT: Generalista forte, buono per interazione rapida, coding, multimodalità e task quotidiani.",
+            "Claude: Spesso molto forte su testo lungo, struttura, editing e collaborazione su documenti complessi.",
+            "Perplexity: Più vicino a risposta + ricerca: utile quando servono fonti, orientamento e browsing informativo.",
+            "Lezione: Non scegliere il modello “migliore”; scegli il sistema adatto al task.",
+            "Rischio: Usare un prodotto da ricerca come agente operativo o viceversa.",
+            "Esercizio: Quale useresti per: tesi, coding, market research, email?"
+          ],
+          "cards": []
+        },
+        {
+          "number": 14,
+          "title": "Dal bot universale a un’organizzazione di agenti specializzati",
+          "lead": "Il relatore non descrive un singolo assistente onnipotente, ma un sistema di 15–17 agenti. Questa è una scelta architetturale: specializzare ruoli, separare responsabilità e rendere i passaggi verificabili.",
+          "points": [
+            "Eva: Assistente principale: email, calendario, Notion, organizzazione personale.",
+            "Predicti: Business intelligence: analizza fonti e produce segnali/previsioni.",
+            "Moni: Esecuzione su Polymarket: usa segnali per cercare opportunità operative.",
+            "Ops/Wolfie/Scribe: Controllo operativo, Avalanche/deck, scrittura nello stile del relatore.",
+            "Idea chiave: Multi-agent non significa “più bot”, ma divisione del lavoro.",
+            "Rischio: Senza coordinamento, più agenti creano più confusione.",
+            "Domanda: Quale agente aggiungeresti per uno studente universitario?"
+          ],
+          "cards": []
+        },
+        {
+          "number": 15,
+          "title": "Il passaggio di contesto tra agenti è il cuore del coordinamento",
+          "lead": "In un sistema multi-agent, il momento fragile è l’handoff: ciò che un agente passa al successivo. Se il passaggio è incompleto, l’agente successivo agisce su premesse sbagliate.",
+          "points": [
+            "Input definito: Che cosa riceve l’agente? File, messaggio, obiettivo, vincolo, priorità.",
+            "Output atteso: Che cosa deve restituire? Report, decisione, azione, bozza, log.",
+            "Criterio di verifica: Come sappiamo che l’handoff è riuscito?",
+            "Owner: Chi è responsabile se il passaggio produce errore?",
+            "Esempio: Predicti → Moni: segnale di mercato, confidenza, fonti, orizzonte temporale.",
+            "Pattern: Ogni handoff dovrebbe sembrare una mini-specifica.",
+            "Esercizio: Scrivere un handoff tra “Researcher” e “Writer”."
+          ],
+          "cards": []
+        },
+        {
+          "number": 16,
+          "title": "Perché serve un agente/ruolo che osserva gli altri agenti",
+          "lead": "Quando gli agenti iniziano ad agire, il controllo non può essere improvvisato. Serve un layer che osserva, registra e segnala cosa succede: nel transcript questo ruolo è attribuito a Ops.",
+          "points": [
+            "Logging: Registra decisioni, azioni, errori e risultati.",
+            "Audit: Permette di capire perché un agente ha fatto qualcosa.",
+            "Priorità: Coordina task e riduce conflitti tra agenti.",
+            "Safety: Intercetta azioni rischiose o incoerenti prima che diventino dannose.",
+            "Takeaway: Autonomia senza osservabilità non è produttività: è rischio nascosto.",
+            "Domanda: Quali azioni vanno sempre loggate?",
+            "Applicazione: Ogni workflow AI importante dovrebbe avere un audit trail."
+          ],
+          "cards": []
+        },
+        {
+          "number": 17,
+          "title": "Le skill trasformano esperienza operativa in procedura riutilizzabile",
+          "lead": "OpenClaw e Hermes vengono presentati come ambienti in cui procedure testuali guidano gli agenti. Una skill non è un prompt occasionale: è una descrizione persistente di come svolgere un compito.",
+          "points": [
+            "Trigger: Quando va usata la skill e per quale tipo di richiesta.",
+            "Procedura: Passaggi operativi ordinati, strumenti da usare, controlli da fare.",
+            "Stile: Voce, formato, tono e preferenze del contesto/progetto.",
+            "Quality gate: Condizioni minime prima di dire “fatto”.",
+            "Esempio: Skill “writing style”: lunghezza frasi, punteggiatura, ritmo, lessico, struttura.",
+            "Principio: Una buona skill rende il comportamento meno casuale.",
+            "Esercizio: Scrivere una skill per creare appunti universitari."
+          ],
+          "cards": []
+        },
+        {
+          "number": 18,
+          "title": "Un sistema migliora solo se gli errori diventano memoria operativa",
+          "lead": "Nel transcript compare l’idea che quando una skill non funziona, il sistema possa imparare dall’errore. Questo non significa coscienza: significa aggiornare procedure, contesto o controlli.",
+          "points": [
+            "Fallimento: Uno step produce output sbagliato, incompleto o non utilizzabile.",
+            "Diagnosi: Si identifica se mancavano tool, contesto, permessi, esempi o criteri.",
+            "Aggiornamento: Si modifica skill, harness, memoria o formato di handoff.",
+            "Riesecuzione: Il sistema riprova con istruzioni migliori e verifica il nuovo output.",
+            "Takeaway: Errore osservato = dato utile. Errore ignorato = debito operativo.",
+            "Rischio: Senza log, il sistema ripete pattern sbagliati.",
+            "Domanda: Come progetteresti una retrospettiva per agenti AI?"
+          ],
+          "cards": []
+        },
+        {
+          "number": 19,
+          "title": "Marketing: non un post, ma una pipeline di contenuti e test",
+          "lead": "Il transcript usa il marketing come esempio chiaro: l’AI non riduce solo il tempo per scrivere un post; cambia la scala dell’esperimento. Si possono generare, adattare e testare molte varianti.",
+          "points": [
+            "Brief: Obiettivo, target, canale, tono, vincoli e call to action.",
+            "Generazione: Hook, email, tweet, long-form, headline, descrizioni e varianti.",
+            "Adattamento: Stesso contenuto riconfigurato per audience e canali diversi.",
+            "Misurazione: CTR, conversioni, engagement, ranking e segnali qualitativi.",
+            "Lezione: Il marketer diventa designer di sistemi di distribuzione e apprendimento.",
+            "Rischio: Più contenuti non significa contenuti migliori.",
+            "Esercizio: Disegna una pipeline AI per promuovere un evento universitario."
+          ],
+          "cards": []
+        },
+        {
+          "number": 20,
+          "title": "Dal PDF al sito: compressione tra materiale grezzo e prodotto spedibile",
+          "lead": "Il demo del sito immobiliare costruito da un PDF mostra la natura multi-step degli agenti: leggere un documento, estrarre dati, generare copy, creare layout, trattare immagini e costruire un output navigabile.",
+          "points": [
+            "Input: PDF della proprietà con testo, immagini, dettagli commerciali.",
+            "Trasformazione: Estrazione informazioni, struttura pagine, copy, visual, sezioni e asset.",
+            "Output: Landing page o sito navigabile, con contenuto organizzato e presentabile.",
+            "Controllo umano: Verifica accuratezza, branding, qualità visuale e coerenza commerciale.",
+            "Takeaway: Il valore non è solo generare: è collegare generazione e shipping.",
+            "Domanda: Quali parti del processo dovrebbero restare umane?",
+            "Applicazione: Da PDF universitario a mini-sito didattico o report interattivo."
+          ],
+          "cards": []
+        },
+        {
+          "number": 21,
+          "title": "SEO e A/B testing: l’AI come motore di iterazione continua",
+          "lead": "Il transcript descrive un sistema in cui l’AI produce micro-varianti, misura risultati, elimina ciò che non funziona e promuove ciò che performa meglio. Qui l’AI non è solo creativa: è sperimentale.",
+          "points": [
+            "Generazione: Titoli, meta description, H1/H2, abstract, tag, call to action.",
+            "Esperimento: Varianti controllate con ipotesi chiare.",
+            "Misura: Ranking, traffico, conversione, tempo di lettura, engagement.",
+            "Ottimizzazione: Promozione delle varianti migliori e scarto delle peggiori.",
+            "Concetto chiave: Feedback loop: output → dati → nuova strategia → nuovo output.",
+            "Rischio: Automazione senza metrica crea rumore.",
+            "Esercizio: Definire una metrica per valutare un articolo generato da AI."
+          ],
+          "cards": []
+        },
+        {
+          "number": 22,
+          "title": "Quando le pipeline crescono serve una dashboard di regia",
+          "lead": "Il transcript cita Mission Control come modo di vedere, coordinare e interpretare molte attività automatiche. Quando i workflow aumentano, il problema non è più solo generare output: è sapere cosa sta succedendo.",
+          "points": [
+            "Visibilità: Quali agenti stanno lavorando? Su quali task? Con quali risultati?",
+            "Priorità: Che cosa è urgente, bloccato, completato o da verificare?",
+            "Decisioni: Quali insight richiedono azione umana?",
+            "Memoria: Che cosa deve restare come conoscenza operativa per il futuro?",
+            "Takeaway: Dashboard e agenti sono complementari: automazione + osservabilità.",
+            "Domanda: Quali metriche metteresti in una dashboard per agenti universitari?",
+            "Ponte: Qui nasce il bisogno di trust, identità e responsabilità verificabile."
+          ],
+          "cards": []
+        },
+        {
+          "number": 23,
+          "title": "La competenza cambia: da esecutori manuali a progettisti di workflow",
+          "lead": "Per una lezione universitaria, il messaggio finale non deve essere “l’AI farà tutto”. Deve essere più preciso: chi sa progettare workflow, verificare output e usare strumenti avrà un vantaggio enorme.",
+          "points": [
+            "Studiare: Trasformare appunti in guide, quiz, flashcard, mappe e spiegazioni personalizzate.",
+            "Costruire: Passare da idea a prototipo più rapidamente, anche senza padroneggiare ogni tool manuale.",
+            "Comunicare: Adattare lo stesso contenuto a slide, post, email, articolo, pitch.",
+            "Verificare: Sviluppare senso critico su fonti, dati, bias, privacy e responsabilità.",
+            "Nuova alfabetizzazione: Prompting è solo l’inizio; workflow design è la competenza più importante.",
+            "Rischio: Chi delega senza capire perde controllo.",
+            "Opportunità: Chi capisce il sistema moltiplica capacità."
+          ],
+          "cards": []
+        },
+        {
+          "number": 24,
+          "title": "Esercizio in aula: progettare un agente per un task universitario",
+          "lead": "Per trasformare la lezione in apprendimento attivo, gli studenti possono progettare un agente semplice. Non serve implementarlo: serve descriverne architettura, input, output e controlli.",
+          "points": [
+            "Task: Scegliere un compito: riassumere appunti, preparare quiz, cercare fonti, creare slide.",
+            "Identità: Definire il ruolo: tutor, researcher, editor, project manager.",
+            "Tool e contesto: Specificare file, fonti, memoria, strumenti e limiti.",
+            "Verifica: Definire come controllare accuratezza, completezza e qualità finale.",
+            "Output esercizio: Una scheda agente in 8 righe.",
+            "Domanda guida: Che cosa può fare da solo e quando deve chiedere conferma?",
+            "Criterio: Un buon agente è utile, controllabile e valutabile."
+          ],
+          "cards": []
+        },
+        {
+          "number": 25,
+          "title": "Takeaway: l’AI utile è una stack, non un prompt",
+          "lead": "Il messaggio finale del Day 1 è che un agente AI non coincide con il modello linguistico. È una composizione di modello, harness, identità, contesto, memoria, strumenti, skill e coordinamento.",
+          "points": [
+            "Da ricordare: Modello ≠ agente. Agente ≠ sistema. Sistema utile = architettura + controllo.",
+            "Da applicare: Partire da un workflow reale e chiedersi quali step l’AI può accelerare, verificare o automatizzare.",
+            "Da discutere domani: Quando gli agenti agiscono nel mondo reale servono identità, trust, pagamenti e coordinamento.",
+            "Ponte ad Avalanche: Blockchain e AI non sono la stessa cosa: l’AI agisce, le rails danno identità e verificabilità.",
+            "Prossima lezione: Perché agenti autonomi hanno bisogno di infrastruttura, pagamenti e reputazione.",
+            "Domanda finale: Che cosa rende affidabile un agente che lavora per noi?"
+          ],
+          "cards": []
+        }
+      ],
+      "highlights": [
+        "separare modello, agente, harness e sistema",
+        "capire perché il contesto conta più della magia",
+        "trattare l’AI come workflow, non come prompt singolo"
+      ]
+    },
+    {
+      "slug": "day-2",
+      "label": "giorno 2",
+      "title": "Avalanche come infrastruttura",
+      "strap": "identità, pagamenti, stato condiviso, finalità, coordinamento",
+      "icon": "infra",
+      "slides": [
+        {
+          "number": 1,
+          "title": "Perché Avalanche conta per i sistemi AI",
+          "lead": "Questa è la lezione ponte: non solo cosa fa l’AI, ma quale infrastruttura serve quando il software inizia ad agire nel mondo reale.",
+          "points": [],
+          "cards": []
+        },
+        {
+          "number": 2,
+          "title": "AI e blockchain risolvono problemi diversi",
+          "lead": "",
+          "points": [
+            "L’AI è forte in linguaggio, ragionamento, generazione e pianificazione.",
+            "Le blockchain sono forti in identità, ownership, pagamenti, coordinamento e stato condiviso.",
+            "I sistemi interessanti combinano entrambe."
+          ],
+          "cards": []
+        },
+        {
+          "number": 3,
+          "title": "Cosa manca all’AI da sola",
+          "lead": "",
+          "points": [
+            "Un modello può rispondere a domande, ma non possiede asset in modo nativo.",
+            "Non ha rail di pagamento nativi.",
+            "Non offre di default una storia pubblica condivisa.",
+            "Non crea fiducia tra sconosciuti su internet."
+          ],
+          "cards": []
+        },
+        {
+          "number": 4,
+          "title": "Cosa aggiungono le blockchain all’AI",
+          "lead": "",
+          "points": [],
+          "cards": [
+            "Identità | Chi ha agito, quale wallet ha firmato e quale storia esiste. | Importante quando un agente è più di un output anonimo in chat.",
+            "Pagamenti | Settlement digitale nativo per API, servizi, reward e commercio. | Importante quando il software deve pagare o essere pagato.",
+            "Stato condiviso | Più utenti e agenti possono coordinarsi sulla stessa fonte di verità. | Importante quando i sistemi devono restare sincronizzati."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Cos’è davvero Avalanche",
+          "lead": "",
+          "points": [
+            "Avalanche è un ecosistema blockchain ad alte prestazioni.",
+            "È progettato per bassa latenza, finalità rapida e applicazioni reali.",
+            "Supporta smart contract e ambienti chain personalizzati per use case diversi."
+          ],
+          "cards": []
+        },
+        {
+          "number": 6,
+          "title": "Avalanche in una slide",
+          "lead": "",
+          "points": [],
+          "cards": [
+            "Primary Network | Il layer di coordinamento centrale che protegge l’ecosistema. | Pensalo come la base condivisa a cui si collegano i validator.",
+            "C-Chain | L’ambiente smart contract dove vivono molte app e wallet. | È il punto in cui spesso gli utenti interagiscono direttamente.",
+            "L1 | Ambienti blockchain application-specific con regole e design propri. | Utili quando un progetto ha bisogno di personalizzazione."
+          ]
+        },
+        {
+          "number": 7,
+          "title": "Perché i sistemi AI guardano il design della chain",
+          "lead": "",
+          "points": [
+            "Se un agente deve aspettare troppo, il workflow si rompe.",
+            "Se ogni azione costa troppo, l’automazione non regge economicamente.",
+            "Se la conferma non è affidabile, gli utenti non si fidano del risultato.",
+            "Un’infrastruttura veloce e prevedibile rende pratico il coordinamento software."
+          ],
+          "cards": []
+        },
+        {
+          "number": 8,
+          "title": "Di cosa può aver bisogno un agente AI onchain",
+          "lead": "",
+          "points": [
+            "Un wallet per detenere asset.",
+            "Un modo per pagare servizi.",
+            "Un modo per ricevere reward o ricavi.",
+            "Un’identità persistente e una track record.",
+            "Una storia trasparente delle azioni quando la verifica conta."
+          ],
+          "cards": []
+        },
+        {
+          "number": 9,
+          "title": "Perché Avalanche è un buon fit per gli agenti",
+          "lead": "",
+          "points": [
+            "Conferme rapide mantengono i workflow reattivi.",
+            "Costi bassi rendono più realistica l’automazione frequente.",
+            "Gli smart contract permettono regole programmabili e coordinamento.",
+            "Ambienti personalizzabili facilitano applicazioni specializzate."
+          ],
+          "cards": []
+        },
+        {
+          "number": 10,
+          "title": "Esempi che studenti possono capire",
+          "lead": "",
+          "points": [
+            "Agenti di ricerca che pagano accesso a dati premium.",
+            "Sistemi universitari o di associazioni con wallet e registri condivisi.",
+            "Marketplace in cui il software compra servizi digitali automaticamente.",
+            "Sistemi di trust in cui claim, prove e reputazione contano nel tempo."
+          ],
+          "cards": []
+        },
+        {
+          "number": 11,
+          "title": "Dove stiamo andando",
+          "lead": "",
+          "points": [
+            "Prima ondata: gli umani usano tool AI.",
+            "Seconda ondata: agenti AI eseguono azioni tra software diversi.",
+            "Terza ondata: gli agenti hanno bisogno di identità, pagamenti, trust e coordinamento.",
+            "È qui che Avalanche diventa infrastruttura, non solo finanza."
+          ],
+          "cards": []
+        },
+        {
+          "number": 12,
+          "title": "Il takeaway",
+          "lead": "L’AI rende il software più capace. Avalanche rende programmabile il coordinamento digitale. La combinazione conta quando i sistemi devono agire, pagare, provare e coordinarsi su scala internet. Domani passiamo a prodotti reali e use case concreti.",
+          "points": [],
+          "cards": []
+        }
+      ],
+      "highlights": [
+        "l’AI pensa, la blockchain coordina",
+        "wallet, pagamenti e track record rendono gli agenti utili",
+        "bassa latenza e costi bassi cambiano la praticità dei workflow"
+      ]
+    },
+    {
+      "slug": "day-3",
+      "label": "giorno 3",
+      "title": "Prodotti reali e casi d’uso",
+      "strap": "consumer, execution, trust, operations",
+      "icon": "product",
+      "slides": [
+        {
+          "number": 1,
+          "title": "Cover",
+          "lead": "Day 3 — Dall'infrastruttura alle applicazioni pratiche: Avalanche, AI e il ruolo dei costruttori",
+          "points": [],
+          "cards": []
+        },
+        {
+          "number": 2,
+          "title": "Il Percorso Fino a Qui",
+          "lead": "Un rapido recap per unire i puntini.",
+          "points": [
+            "Day 1: Logica (Agenti AI, LLM, ragionamento e pianificazione).",
+            "Day 2: Azione (Avalanche, wallet, settlement, stato condiviso).",
+            "Day 3: Mercato (Oggi: Prodotti reali che fondono logica e azione in casi d'uso concreti)."
+          ],
+          "cards": []
+        },
+        {
+          "number": 3,
+          "title": "Anatomia di un Sistema Reale",
+          "lead": "I sistemi reali non sono solo un prompt. Richiedono un'architettura completa per funzionare in produzione.",
+          "points": [
+            "Prodotto: UX, distribuzione e risoluzione di un problema di mercato.",
+            "Esecuzione: Il \"motore\" che permette agli agenti di agire onchain.",
+            "Trust: Meccanismi di verifica e reputazione per fidarsi dell'output.",
+            "Operations: Visibilità, compliance e controllo per gli operatori."
+          ],
+          "cards": []
+        },
+        {
+          "number": 4,
+          "title": "Lo Stack in Azione",
+          "lead": "In questa lezione esploreremo un prodotto reale per ciascuno di questi quattro layer fondamentali.",
+          "points": [
+            "Layer 1: Consumer. Prodotto: gm10.xyz. Focus: Distribuzione e UX.",
+            "Layer 2: Execution. Prodotto: Evalanche. Focus: Wallet e azioni agentiche.",
+            "Layer 3: Trust. Prodotto: Eva Protocol. Focus: Verificabilità e reputazione.",
+            "Layer 4: Operations. Prodotto: Mission Control. Focus: Coordinamento e human-in-the-loop."
+          ],
+          "cards": []
+        },
+        {
+          "number": 5,
+          "title": "Layer 1 - Consumer (gm10.xyz)",
+          "lead": "gm10 porta i collezionabili fisici nel mondo digitale tramite il token $CATCH su Avalanche.",
+          "points": [
+            "Asset Reali: Le carte Pokémon fisiche gradate sono custodite nel caveau di un'azienda partner.",
+            "Frazionamento: $CATCH rappresenta un'esposizione frazionata al valore della collezione.",
+            "UX Fluida: Un mercato altrimenti illiquido diventa accessibile 24/7 senza frizioni."
+          ],
+          "cards": []
+        },
+        {
+          "number": 6,
+          "title": "Costruire con l'AI: Il Caso gm10",
+          "lead": "GM10 è stato costruito con il forte supporto dell'AI, ma richiede una visione e un'iterazione umana.",
+          "points": [
+            "Sviluppo Accelerato: L'AI scrive codice, struttura database e imposta l'interfaccia molto velocemente.",
+            "Limite dell'AI: L'output degli LLM non è sempre perfetto e necessita di correzioni.",
+            "Il Tocco Umano: L'iterazione creativa, il design e la strategia di business restano in mano all'uomo."
+          ],
+          "cards": []
+        },
+        {
+          "number": 7,
+          "title": "Layer 2 - Execution (Evalanche)",
+          "lead": "Evalanche fornisce wallet ed esecuzione onchain per agenti AI, spostandoli dalla chat all'azione.",
+          "points": [
+            "SDK Avalanche-first: Strumenti nativi per far interagire il codice AI con la blockchain.",
+            "Server MCP: Protocolli standard per esporre tool onchain e offchain agli LLM.",
+            "Operatività Pratica: Gli agenti eseguono pagamenti e accedono alla DeFi in modo indipendente."
+          ],
+          "cards": []
+        },
+        {
+          "number": 8,
+          "title": "La Sfida dell'Esecuzione: Non-Determinismo",
+          "lead": "Gli LLM sono creativi e non deterministici. L'esecuzione onchain richiede regole rigide.",
+          "points": [
+            "Output Variabile: A parità di prompt, un LLM può generare risposte diverse ogni volta.",
+            "Contratti Deterministici: La blockchain richiede parametri esatti (costi, fee, address).",
+            "Il Ponte: Evalanche traduce l'intento creativo in transazioni codificate, esatte e sicure."
+          ],
+          "cards": []
+        },
+        {
+          "number": 9,
+          "title": "Costi e Specificità nell'Era AI",
+          "lead": "Come pensare ai costi operativi quando gli agenti lavorano per noi 24/7.",
+          "points": [
+            "Costo dei Token LLM: Generare pensiero ha un costo minimo in frazioni di centesimo (costo API).",
+            "Costi Onchain: Eseguire su blockchain comporta gas fee; Avalanche minimizza questi costi.",
+            "Specificità dei Task: Maggiore è la complessità, maggiore il costo cognitivo e onchain."
+          ],
+          "cards": []
+        },
+        {
+          "number": 10,
+          "title": "Il Workflow di Produzione Assistita",
+          "lead": "Come agenti e strumenti automatizzati si coordinano per task complessi.",
+          "points": [
+            "Acquisizione: Trascrizione (transcript) automatica da audio o testo grezzo.",
+            "Elaborazione: Overhaul strutturale e iterazione dei contenuti sfruttando la logica LLM.",
+            "Revisione: Cicli iterativi di aggiustamento finché l'output non rispetta i criteri voluti.",
+            "Delivery: Consegna automatizzata del file finale (es. slide inviate via email)."
+          ],
+          "cards": []
+        },
+        {
+          "number": 11,
+          "title": "Layer 3 - Trust (Eva Protocol)",
+          "lead": "eva.jaack.me è un trust graph: un sistema per valutare claim, certificare news e costruire reputazione onchain.",
+          "points": [
+            "Verità Decentralizzata: Non scommesse, ma verifica accurata delle fonti e delle notizie (certified news).",
+            "Claim Verification: Gli agenti processano informazioni e richiedono prove crittografiche a supporto.",
+            "Grafo di Fiducia: Mappa logica che collega informazioni, validatori e gradi di affidabilità."
+          ],
+          "cards": []
+        },
+        {
+          "number": 12,
+          "title": "Semplicità e Sicurezza al Centro",
+          "lead": "Un sistema potente può e deve avere un'architettura intelligente e sicura.",
+          "points": [
+            "Hardware Leggero: Eva gira fluidamente su un modesto Mac Mini domestico.",
+            "Interfaccia Utente: Usa thread Telegram organizzati per la gestione dei task e l'interazione degli agenti.",
+            "Rete Isolata: Utilizzo di Tailscale e VPN private per limitare la superficie di attacco.",
+            "Postura di Sicurezza: Dispositivi limitati e controllo accessi stringente per prevenire intrusioni."
+          ],
+          "cards": []
+        },
+        {
+          "number": 13,
+          "title": "Prediction Market vs Trust Graph",
+          "lead": "Due approcci complementari ma fondamentalmente diversi.",
+          "points": [
+            "Prediction Market (Truth Betting): Scommettono sull'esito futuro. Guidati da incentivi finanziari aggregati.",
+            "Trust Graph (Eva): Valutano le prove e i dati passati. Costruiscono un grafo logico basato sulla reputazione."
+          ],
+          "cards": []
+        },
+        {
+          "number": 14,
+          "title": "Layer 4 - Operations (Mission Control)",
+          "lead": "La dashboard centrale per la supervisione operativa e la compliance degli agenti.",
+          "points": [
+            "Activity Log: Monitoraggio in tempo reale delle sessioni e delle azioni degli agenti autonomi.",
+            "Gestione Plugin: Attivazione e revoca dei tool (MCP) a disposizione delle intelligenze artificiali.",
+            "Protocol Compliance: Assicurare che le azioni rispettino le regole di governance aziendale."
+          ],
+          "cards": []
+        },
+        {
+          "number": 15,
+          "title": "L'Importanza della Supervisione (HITL)",
+          "lead": "L'autonomia totale è un mito. I sistemi in produzione richiedono la capacità di intervento umano.",
+          "points": [
+            "Delega a Basso Rischio: Gli agenti svolgono i task routinari (data entry, esecuzioni base).",
+            "Intervento Umano (Override): Possibilità di bloccare o correggere manualmente l'agente in caso di anomalie.",
+            "Coordinamento: L'umano agisce da orchestratore e validatore finale per i task critici o ad alto valore."
+          ],
+          "cards": []
+        },
+        {
+          "number": 16,
+          "title": "Vincoli Legali e Privacy",
+          "lead": "Costruire prodotti reali significa non poter ignorare le normative e le regole di privacy.",
+          "points": [
+            "Protezione Dati (GDPR): Gli agenti AI non possono ingerire dati personali sensibili senza consenso esplicito.",
+            "Tracciamento e Consenso: Necessità di gestire policy privacy e cookies anche in interfacce agentiche.",
+            "Legal AI Assistance: L'uso di LLM per assistere la redazione di Termini di Servizio (TOS) e policy."
+          ],
+          "cards": []
+        },
+        {
+          "number": 17,
+          "title": "Un Workflow End-to-End Reale",
+          "lead": "Come i 4 layer si fondono per risolvere un problema concreto per gli studenti universitari.",
+          "points": [
+            "Consumer & Execution: L'agente genera un piano di studio dinamico, interroga gli orari e calendarizza sessioni.",
+            "Trust: Valida gli appunti o le fonti condivise con altri studenti tramite il sistema di reputazione (Eva).",
+            "Operations (HITL): Lo studente supervisiona costantemente il piano per correggere la rotta o bloccare azioni indesiderate."
+          ],
+          "cards": []
+        },
+        {
+          "number": 18,
+          "title": "La Rilevanza per i Builders",
+          "lead": "La nostra missione a Catania non è solo spiegarvi la teoria, ma darvi gli strumenti per costruire.",
+          "points": [
+            "Documentazione: Guide tecniche complete per integrare rapidamente l'ecosistema Avalanche ed LLM.",
+            "Accelerazione: Supporto e mentorship diretta per trasformare i vostri concept in veri prodotti.",
+            "Grants: Opportunità concrete di finanziamento (Avalanche Grants) per i migliori progetti sviluppati dagli studenti."
+          ],
+          "cards": []
+        },
+        {
+          "number": 19,
+          "title": "L'Importanza di Registrarsi",
+          "lead": "Entrare nel circuito Team1 vi dà un vantaggio competitivo e operativo per il futuro.",
+          "points": [
+            "Accesso Immediato: Registrazione tramite QR code per sbloccare risorse esclusive e tool per builder.",
+            "Eventi Futuri: Inviti prioritari ad hackathon, workshop avanzati e preziose sessioni di recruiting.",
+            "Community: L'ingresso in un network solido di sviluppatori, fondatori ed esperti Avalanche in Italia."
+          ],
+          "cards": []
+        },
+        {
+          "number": 20,
+          "title": "Principi di Design (1)",
+          "lead": "Regole fondamentali quando si uniscono AI e Blockchain in produzione per l'utente finale.",
+          "points": [
+            "Semplicità: L'utente non vuole sapere cos'è un L1, un RPC o quanto costa il gas. Vuole il risultato.",
+            "Esperienza Fluida: L'infrastruttura (Execution e Trust) deve agire silenziosamente in background.",
+            "Affidabilità: Sforzatevi di tradurre un output probabilistico (AI) in esecuzioni prevedibili."
+          ],
+          "cards": []
+        },
+        {
+          "number": 21,
+          "title": "Principi di Design (2)",
+          "lead": "Costruire \"recinti di sabbia\" (guardrails) rigidi attorno agli agenti è l'unico modo per scalarli.",
+          "points": [
+            "Spend Limits: Limitare l'impatto economico di un errore imponendo rigidi tetti di spesa giornalieri.",
+            "Whitelist Onchain: Consentire l'esecuzione di contratti solo verso indirizzi verificati e ultra-sicuri.",
+            "TEE e KMS: Gestire le chiavi private degli agenti in ambienti di esecuzione completamente isolati e cifrati."
+          ],
+          "cards": []
+        },
+        {
+          "number": 22,
+          "title": "Unire i Pezzi",
+          "lead": "Nessuno di questi prodotti vive nel vuoto. Formano uno stack applicativo completo e interdipendente.",
+          "points": [
+            "1. L'utente interagisce con l'interfaccia Consumer (es. gm10 o lo Student Planner).",
+            "2. L'interfaccia attiva un Agente (Execution) che sfrutta MCP ed Evalanche per le azioni onchain.",
+            "3. I risultati vengono validati e certificati tramite il trust graph (Eva Protocol).",
+            "4. Il sistema è monitorato dagli operatori (Mission Control) mantenendo l'intervento umano (HITL)."
+          ],
+          "cards": []
+        },
+        {
+          "number": 23,
+          "title": "Spazio per Costruire",
+          "lead": "Questo stack Avalanche x AI è ancora agli albori ed è pieno di spazi bianchi.",
+          "points": [
+            "Nuovi Front-end: Creare UX eccezionali per casi d'uso che sono ancora bloccati nel Web2.",
+            "Plugin per Agenti: Sviluppare e scrivere nuovi tool (server MCP) che gli agenti possono richiamare.",
+            "Oracoli di Trust: Costruire feed verificabili che alimentano dati reali affidabili in Eva Protocol."
+          ],
+          "cards": []
+        },
+        {
+          "number": 24,
+          "title": "Il Percorso Completo",
+          "lead": "Il futuro non è fatto di affascinanti demo tecnologiche, ma di prodotti che risolvono problemi reali.",
+          "points": [
+            "Studiate: Padroneggiate l'intersezione tra AI e Web3, non ignorando i limiti legali e di sicurezza.",
+            "Costruite: Sperimentate con Evalanche e le risorse messe a disposizione dalla piattaforma (usate il QR!).",
+            "Risolvete: Puntate a intercettare i problemi concreti di tutti i giorni, ignorando l'hype a breve termine."
+          ],
+          "cards": []
+        },
+        {
+          "number": 25,
+          "title": "Closing",
+          "lead": "Scansionate il QR Code per accedere alla piattaforma builder e candidarvi ai grants.",
+          "points": [
+            "Spazio aperto per Q&A, dubbi e approfondimenti finali.",
+            "Trovate contatti, risorse e la community sui nostri canali Telegram.",
+            "Ci vediamo al prossimo hackathon per costruire insieme!"
+          ],
+          "cards": []
+        }
+      ],
+      "highlights": [
+        "gm10 come layer consumer",
+        "Evalanche come execution layer",
+        "Eva Protocol e Mission Control come trust + operations"
+      ]
+    }
+  ]
+}
