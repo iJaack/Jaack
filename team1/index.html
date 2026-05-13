@@ -1,0 +1,727 @@
+---
+layout: page
+title: Team1
+permalink: /team1/
+width: xwide
+---
+{% assign deck = site.data.team1_catania %}
+
+<style>
+  .team1-page {
+    --bg-soft: #111111;
+    --bg-card: #171717;
+    --bg-card-2: #1d1d1d;
+    --text: #f2efe9;
+    --muted: #a7a19a;
+    --line: rgba(255,255,255,0.08);
+    --accent: #ff394a;
+    --accent-soft: rgba(255,57,74,0.12);
+    --accent-2: #ff8a94;
+    --shadow: 0 20px 50px rgba(0,0,0,0.28);
+    color: var(--text);
+  }
+
+  .team1-page a {
+    color: var(--text);
+    text-decoration-color: rgba(255,255,255,0.28);
+  }
+
+  .team1-hero {
+    padding: 2rem 0 1rem;
+  }
+
+  .team1-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.45rem 0.85rem;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: #ffdfe2;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.2rem;
+  }
+
+  .team1-title {
+    margin: 0;
+    font-family: var(--fontDisplay, 'Instrument Serif', Georgia, serif);
+    font-size: clamp(2.7rem, 7vw, 5.8rem);
+    line-height: 0.94;
+    letter-spacing: -0.04em;
+  }
+
+  .team1-subtitle {
+    max-width: 52rem;
+    margin: 1.25rem 0 0;
+    color: var(--muted);
+    font-size: 1.1rem;
+    line-height: 1.75;
+  }
+
+  .team1-meta,
+  .team1-overview,
+  .team1-toc,
+  .team1-controls,
+  .team1-day,
+  .team1-bottom {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    box-shadow: var(--shadow);
+  }
+
+  .team1-meta {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    display: grid;
+    gap: 0.9rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .team1-stat {
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: 1rem;
+  }
+
+  .team1-stat strong {
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .team1-stat span {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .team1-grid {
+    display: grid;
+    gap: 1.1rem;
+  }
+
+  .team1-overview {
+    margin-top: 1.2rem;
+    padding: 1.4rem;
+  }
+
+  .team1-section-title {
+    margin: 0 0 0.4rem;
+    font-size: 1.6rem;
+  }
+
+  .team1-section-copy {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.75;
+  }
+
+  .team1-journey {
+    margin-top: 1.2rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .journey-card {
+    position: relative;
+    overflow: hidden;
+    padding: 1.2rem;
+    border-radius: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+  }
+
+  .journey-card::after {
+    content: "";
+    position: absolute;
+    inset: auto -20% -40% auto;
+    width: 160px;
+    height: 160px;
+    background: radial-gradient(circle, rgba(255,57,74,0.18), transparent 65%);
+    pointer-events: none;
+  }
+
+  .journey-card .kicker,
+  .day-kicker {
+    color: var(--accent-2);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.76rem;
+    font-weight: 700;
+  }
+
+  .journey-card h3,
+  .day-head h2 {
+    margin: 0.45rem 0;
+    font-size: 1.35rem;
+  }
+
+  .journey-card p,
+  .day-head p,
+  .infographic-copy,
+  .slide-copy,
+  .slide-points li,
+  .team1-bottom p {
+    color: var(--muted);
+    line-height: 1.72;
+  }
+
+  .tag-row,
+  .chip-row,
+  .slide-jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+  }
+
+  .tag,
+  .filter-button,
+  .slide-jump a,
+  .expand-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    padding: 0.58rem 0.88rem;
+    background: var(--bg-card);
+    color: var(--text);
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 160ms ease;
+  }
+
+  .tag {
+    background: rgba(255,255,255,0.04);
+    color: #e8e0d8;
+  }
+
+  .filter-button:hover,
+  .filter-button.is-active,
+  .slide-jump a:hover,
+  .expand-button:hover {
+    border-color: rgba(255,57,74,0.45);
+    background: var(--accent-soft);
+  }
+
+  .team1-toc {
+    position: sticky;
+    top: 1rem;
+    z-index: 5;
+    margin-top: 1.2rem;
+    padding: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(14px);
+  }
+
+  .team1-controls {
+    margin-top: 1.2rem;
+    padding: 1rem;
+  }
+
+  .controls-top {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .team1-search {
+    width: min(100%, 420px);
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background: #101010;
+    color: var(--text);
+    padding: 0.82rem 1rem;
+    font: inherit;
+  }
+
+  .team1-search:focus {
+    outline: 2px solid rgba(255,57,74,0.35);
+    border-color: rgba(255,57,74,0.5);
+  }
+
+  .team1-day {
+    margin-top: 1.2rem;
+    padding: 1.2rem;
+  }
+
+  .day-head {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+    align-items: start;
+  }
+
+  .day-rail {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .day-rail .mini {
+    padding: 0.85rem;
+    border-radius: 18px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+  }
+
+  .day-rail .mini strong {
+    display: block;
+    font-size: 1.25rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .day-rail .mini span {
+    color: var(--muted);
+    font-size: 0.92rem;
+  }
+
+  .infographic-panel {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 22px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+  }
+
+  .logic-flow,
+  .infra-grid,
+  .stack-layers {
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .logic-flow {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .logic-node,
+  .infra-grid .infra-card,
+  .stack-layer {
+    position: relative;
+    padding: 1rem;
+    border-radius: 18px;
+    background: var(--bg-card-2);
+    border: 1px solid var(--line);
+  }
+
+  .logic-node::after {
+    content: "→";
+    position: absolute;
+    top: 50%;
+    right: -0.7rem;
+    transform: translateY(-50%);
+    color: var(--accent-2);
+    font-size: 1.15rem;
+  }
+
+  .logic-node:last-child::after {
+    display: none;
+  }
+
+  .logic-node strong,
+  .infra-card strong,
+  .stack-layer strong {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 1rem;
+  }
+
+  .infra-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stack-layer {
+    padding-left: 1.2rem;
+    border-left: 4px solid var(--accent);
+  }
+
+  .stack-layer:nth-child(1) { border-left-color: #ff6976; }
+  .stack-layer:nth-child(2) { border-left-color: #ff5362; }
+  .stack-layer:nth-child(3) { border-left-color: #ff394a; }
+  .stack-layer:nth-child(4) { border-left-color: #d81f31; }
+
+  .mission-control-shot {
+    margin-top: 1rem;
+    overflow: hidden;
+    border-radius: 18px;
+    border: 1px solid var(--line);
+  }
+
+  .mission-control-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .slide-jump {
+    margin-top: 1rem;
+  }
+
+  .slide-browser {
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .slide-card {
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: var(--bg-card);
+    overflow: hidden;
+  }
+
+  .slide-card[hidden] {
+    display: none !important;
+  }
+
+  .slide-card summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1rem 1.1rem;
+    display: grid;
+    gap: 0.6rem;
+    grid-template-columns: auto 1fr auto;
+    align-items: start;
+  }
+
+  .slide-card summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .slide-number {
+    width: 2rem;
+    height: 2rem;
+    display: inline-grid;
+    place-items: center;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: #ffd4d8;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .slide-summary-title {
+    margin: 0;
+    font-size: 1.02rem;
+  }
+
+  .slide-summary-icon {
+    color: var(--accent-2);
+    font-size: 1.1rem;
+    padding-top: 0.12rem;
+  }
+
+  .slide-detail {
+    padding: 0 1.1rem 1.05rem 4.2rem;
+  }
+
+  .slide-points,
+  .slide-cards {
+    margin: 0.85rem 0 0;
+    padding-left: 1.1rem;
+  }
+
+  .slide-cards li {
+    margin-bottom: 0.65rem;
+    color: #e9e2dc;
+  }
+
+  .team1-bottom {
+    margin-top: 1.2rem;
+    padding: 1.35rem;
+  }
+
+  .builder-grid {
+    margin-top: 1rem;
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .builder-card {
+    padding: 1rem;
+    border-radius: 18px;
+    background: var(--bg-card);
+    border: 1px solid var(--line);
+  }
+
+  .builder-card strong {
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  @media (max-width: 980px) {
+    .team1-meta,
+    .team1-journey,
+    .day-head,
+    .builder-grid,
+    .logic-flow,
+    .infra-grid,
+    .day-rail {
+      grid-template-columns: 1fr;
+    }
+
+    .team1-toc {
+      position: static;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .team1-title {
+      font-size: 2.5rem;
+    }
+
+    .slide-card summary {
+      grid-template-columns: auto 1fr;
+    }
+
+    .slide-summary-icon {
+      display: none;
+    }
+
+    .slide-detail {
+      padding-left: 1.1rem;
+    }
+  }
+</style>
+
+<div class="team1-page">
+  <section class="team1-hero" id="top">
+    <div class="team1-eyebrow">team1 uni tour · catania · 3-day track</div>
+    <h1 class="team1-title">from AI agents to real products.</h1>
+    <p class="team1-subtitle">
+      This page turns the full Team1 Catania material into something actually readable on the web.
+      Not a slide dump. A browseable path through the three days: how AI agents work, why Avalanche matters,
+      and what real products look like when you combine execution, trust, and operations.
+    </p>
+
+    <div class="team1-meta">
+      <div class="team1-stat"><strong>{{ deck.meta.days }}</strong><span>days stitched together</span></div>
+      <div class="team1-stat"><strong>{{ deck.meta.totalSlides }}</strong><span>slides re-mapped for the web</span></div>
+      <div class="team1-stat"><strong>4</strong><span>product layers on day 3</span></div>
+      <div class="team1-stat"><strong>1</strong><span>mental model from logic → infra → products</span></div>
+    </div>
+  </section>
+
+  <section class="team1-overview" id="overview">
+    <h2 class="team1-section-title">the arc</h2>
+    <p class="team1-section-copy">
+      Day 1 explains the agent stack. Day 2 explains why blockchains matter once software starts acting.
+      Day 3 closes the loop with actual products: consumer interfaces, execution engines, trust rails, and ops surfaces.
+    </p>
+
+    <div class="team1-journey">
+      {% for day in deck.days %}
+      <article class="journey-card">
+        <div class="kicker">{{ day.label }}</div>
+        <h3>{{ day.title }}</h3>
+        <p>{{ day.strap }}</p>
+        <div class="tag-row">
+          {% for item in day.highlights %}
+          <span class="tag">{{ item }}</span>
+          {% endfor %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="team1-toc">
+    <div class="chip-row">
+      <a class="tag" href="#overview">overview</a>
+      {% for day in deck.days %}
+      <a class="tag" href="#{{ day.slug }}">{{ day.label }}</a>
+      {% endfor %}
+      <a class="tag" href="#builder-map">builder map</a>
+    </div>
+    <span class="day-kicker">search, filter, expand, skim</span>
+  </section>
+
+  <section class="team1-controls">
+    <div class="controls-top">
+      <input id="team1-search" class="team1-search" type="search" placeholder="search slides, concepts, examples...">
+      <div class="chip-row">
+        <button class="filter-button is-active" data-filter="all">all days</button>
+        {% for day in deck.days %}
+        <button class="filter-button" data-filter="{{ day.slug }}">{{ day.label }}</button>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  {% for day in deck.days %}
+  <section class="team1-day" id="{{ day.slug }}" data-day="{{ day.slug }}">
+    <div class="day-head">
+      <div>
+        <div class="day-kicker">{{ day.label }}</div>
+        <h2>{{ day.title }}</h2>
+        <p>{{ day.strap }}</p>
+        <div class="tag-row">
+          {% for item in day.highlights %}
+          <span class="tag">{{ item }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="day-rail">
+        <div class="mini"><strong>{{ day.slides | size }}</strong><span>slides</span></div>
+        <div class="mini"><strong>{{ day.highlights | size }}</strong><span>core ideas</span></div>
+        <div class="mini"><strong>{{ forloop.index }}</strong><span>step in the sequence</span></div>
+      </div>
+    </div>
+
+    <div class="infographic-panel">
+      {% if day.slug == 'day-1' %}
+      <div class="day-kicker">infographic</div>
+      <h3 class="team1-section-title">an agent is not just a model</h3>
+      <p class="infographic-copy">The cleanest mental model from day 1 is a stack. Language model at the core, then agency, then tools, then memory, then orchestration.</p>
+      <div class="logic-flow">
+        <div class="logic-node"><strong>model</strong><span class="slide-copy">predicts tokens, transforms language, generates options</span></div>
+        <div class="logic-node"><strong>agent</strong><span class="slide-copy">takes a goal, not just a prompt</span></div>
+        <div class="logic-node"><strong>skills</strong><span class="slide-copy">reads files, calls APIs, executes workflows</span></div>
+        <div class="logic-node"><strong>memory</strong><span class="slide-copy">holds context, state, history, constraints</span></div>
+        <div class="logic-node"><strong>system</strong><span class="slide-copy">multiple roles, verification, handoffs, recovery</span></div>
+      </div>
+      {% elsif day.slug == 'day-2' %}
+      <div class="day-kicker">infographic</div>
+      <h3 class="team1-section-title">AI and blockchain solve different problems</h3>
+      <p class="infographic-copy">Day 2 is the bridge. AI is strong at reasoning and language. Avalanche is strong at coordination, identity, payments, and shared state.</p>
+      <div class="infra-grid">
+        <div class="infra-card"><strong>AI side</strong><span class="slide-copy">planning, generation, classification, interaction, compression of complexity</span></div>
+        <div class="infra-card"><strong>chain side</strong><span class="slide-copy">wallets, ownership, settlement, public history, programmable coordination</span></div>
+        <div class="infra-card"><strong>why Avalanche</strong><span class="slide-copy">lower latency, lower cost, faster finality, customizable environments</span></div>
+        <div class="infra-card"><strong>why it matters</strong><span class="slide-copy">software that acts in the world needs trust and rails, not just answers</span></div>
+      </div>
+      {% else %}
+      <div class="day-kicker">infographic</div>
+      <h3 class="team1-section-title">the product stack from day 3</h3>
+      <p class="infographic-copy">The sharpest frame from the final deck is a four-layer map: consumer surface, execution engine, trust layer, and operations layer.</p>
+      <div class="stack-layers">
+        <div class="stack-layer"><strong>consumer</strong><span class="slide-copy">gm10, dashboards, onboarding, interfaces people actually touch</span></div>
+        <div class="stack-layer"><strong>execution</strong><span class="slide-copy">Evalanche and agent workflows that move tasks forward</span></div>
+        <div class="stack-layer"><strong>trust</strong><span class="slide-copy">identity, receipts, attestations, verifiable history</span></div>
+        <div class="stack-layer"><strong>operations</strong><span class="slide-copy">Mission Control, monitoring, queueing, memory, guardrails</span></div>
+      </div>
+      <div class="mission-control-shot">
+        <img src="/assets/images/mission-control-2026.png" alt="Mission Control interface screenshot">
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="slide-jump">
+      <button class="expand-button" data-expand="{{ day.slug }}">expand all {{ day.label }}</button>
+      {% for slide in day.slides limit: 8 %}
+      <a href="#{{ day.slug }}-slide-{{ slide.number }}">{{ slide.number }}</a>
+      {% endfor %}
+      {% if day.slides.size > 8 %}<span class="tag">+ {{ day.slides.size | minus: 8 }} more</span>{% endif %}
+    </div>
+
+    <div class="slide-browser">
+      {% for slide in day.slides %}
+      <details class="slide-card" id="{{ day.slug }}-slide-{{ slide.number }}" data-day="{{ day.slug }}" data-search="{{ day.slug }} {{ day.title | downcase | escape }} {{ slide.title | downcase | escape }} {{ slide.lead | downcase | escape }} {% for point in slide.points %} {{ point | downcase | escape }} {% endfor %} {% for card in slide.cards %} {{ card | downcase | escape }} {% endfor %}">
+        <summary>
+          <span class="slide-number">{{ slide.number }}</span>
+          <div>
+            <h3 class="slide-summary-title">{{ slide.title }}</h3>
+            {% if slide.lead != '' %}<p class="slide-copy">{{ slide.lead }}</p>{% endif %}
+          </div>
+          <span class="slide-summary-icon">+</span>
+        </summary>
+        <div class="slide-detail">
+          {% if slide.points.size > 0 %}
+          <ul class="slide-points">
+            {% for point in slide.points %}
+            <li>{{ point }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          {% if slide.cards.size > 0 %}
+          <ul class="slide-cards">
+            {% for card in slide.cards %}
+            <li>{{ card }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </details>
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+
+  <section class="team1-bottom" id="builder-map">
+    <div class="day-kicker">builder map</div>
+    <h2 class="team1-section-title">what a student should walk away with</h2>
+    <p>
+      The three days are really one argument. AI without workflow discipline is theatre. Blockchain without product thinking is infra with no user.
+      The interesting territory is the overlap: agents that can act, pay, prove, and stay accountable over time.
+    </p>
+    <div class="builder-grid">
+      <div class="builder-card"><strong>day 1 → design the workflow</strong><span class="slide-copy">separate model, tools, memory, and orchestration before you ship anything that matters.</span></div>
+      <div class="builder-card"><strong>day 2 → add the rails</strong><span class="slide-copy">if software is going to transact or coordinate, wallets and state stop being optional.</span></div>
+      <div class="builder-card"><strong>day 3 → build the product</strong><span class="slide-copy">wrap it in interfaces, trust receipts, and operations surfaces so it survives contact with real users.</span></div>
+    </div>
+  </section>
+</div>
+
+<script>
+  (function () {
+    const search = document.getElementById('team1-search');
+    const filterButtons = Array.from(document.querySelectorAll('.filter-button'));
+    const daySections = Array.from(document.querySelectorAll('.team1-day'));
+    const slideCards = Array.from(document.querySelectorAll('.slide-card'));
+    const expandButtons = Array.from(document.querySelectorAll('[data-expand]'));
+    let activeFilter = 'all';
+
+    function applyFilters() {
+      const query = (search.value || '').trim().toLowerCase();
+
+      slideCards.forEach((card) => {
+        const haystack = (card.dataset.search || '').toLowerCase();
+        const cardDay = card.dataset.day;
+        const matchesDay = activeFilter === 'all' || cardDay === activeFilter;
+        const matchesQuery = !query || haystack.includes(query);
+        card.hidden = !(matchesDay && matchesQuery);
+      });
+
+      daySections.forEach((section) => {
+        const sectionDay = section.dataset.day;
+        const visibleCards = Array.from(section.querySelectorAll('.slide-card')).some((card) => !card.hidden);
+        const matchesDay = activeFilter === 'all' || sectionDay === activeFilter;
+        section.hidden = !(matchesDay && visibleCards);
+      });
+    }
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        activeFilter = button.dataset.filter;
+        filterButtons.forEach((item) => item.classList.toggle('is-active', item === button));
+        applyFilters();
+      });
+    });
+
+    search.addEventListener('input', applyFilters);
+
+    expandButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const day = button.dataset.expand;
+        document.querySelectorAll(`.slide-card[data-day="${day}"]`).forEach((card) => {
+          if (!card.hidden) card.open = true;
+        });
+      });
+    });
+
+    applyFilters();
+  })();
+</script>
