@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="920" viewBox="0 0 1600 920" role="img" aria-labelledby="title desc">
+  <title id="title">Two hidden capital loops</title>
+  <desc id="desc">A light theme diagram showing the Predictie to Mony macro loop and the Wolfie to Mony protocol reality loop feeding treasury posture.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fbfaf6"/>
+      <stop offset="100%" stop-color="#f1eee5"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#666257"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="920" fill="url(#bg)"/>
+  <text x="120" y="118" fill="#1f1f1b" font-family="Helvetica, Arial, sans-serif" font-size="54" font-weight="700">Two hidden capital loops</text>
+  <text x="120" y="163" fill="#625d53" font-family="Helvetica, Arial, sans-serif" font-size="24">Both loops end in treasury posture, but they start from different truths and need different skepticism.</text>
+
+  <rect x="120" y="250" width="1360" height="250" rx="30" fill="#ffffff" stroke="#d8d3c7" stroke-width="2"/>
+  <text x="170" y="315" fill="#3f7f73" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700">Loop 1</text>
+  <text x="170" y="353" fill="#1f1f1b" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="700">Predictie -> Mony</text>
+  <text x="170" y="392" fill="#5f5a50" font-family="Helvetica, Arial, sans-serif" font-size="22">Macro loop: forecast truth -> treasury posture</text>
+
+  <rect x="170" y="420" width="230" height="120" rx="22" fill="#f3f7ff" stroke="#7ea3dd" stroke-width="2"/>
+  <text x="285" y="470" text-anchor="middle" fill="#1f1f1b" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">Predictie</text>
+  <text x="285" y="503" text-anchor="middle" fill="#4f6482" font-family="Helvetica, Arial, sans-serif" font-size="18">probabilities + triggers</text>
+
+  <rect x="512" y="420" width="220" height="120" rx="22" fill="#fff8ef" stroke="#e2b16f" stroke-width="2"/>
+  <text x="622" y="470" text-anchor="middle" fill="#1f1f1b" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">Policy gate</text>
+  <text x="622" y="503" text-anchor="middle" fill="#6d5a3d" font-family="Helvetica, Arial, sans-serif" font-size="18">freshness + approval</text>
+
+  <rect x="844" y="420" width="220" height="120" rx="22" fill="#f0fbf7" stroke="#7ab9ab" stroke-width="2"/>
+  <text x="954" y="470" text-anchor="middle" fill="#1f1f1b" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">Mony</text>
+  <text x="954" y="503" text-anchor="middle" fill="#47625d" font-family="Helvetica, Arial, sans-serif" font-size="18">posture, sizing, hedge</text>
+
+  <rect x="1176" y="420" width="230" height="120" rx="22" fill="#fff3f1" stroke="#d78f83" stroke-width="2"/>
+  <text x="1291" y="470" text-anchor="middle" fill="#1f1f1b" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">Receipt</text>
+  <text x="1291" y="503" text-anchor="middle" fill="#7a514a" font-family="Helvetica, Arial, sans-serif" font-size="18">rebalance or no-op</text>
+
+  <path d="M400 480H512" fill="none" stroke="#666257" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M732 480H844" fill="none" stroke="#666257" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1064 480H1176" fill="none" stroke="#666257" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <rect x="120" y="560" width="1360" height="250" rx="30" fill="#ffffff" stroke="#d8d3c7" stroke-width="2"/>
+  <text x="170" y="625" fill="#8a4c42" font-family="Helvetica, Arial, sans-serif" font-size="30" font-weight="700">Loop 2</text>
+  <text x="170" y="663" fill="#1f1f1b" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="700">Wolfie -> Mony</text>
+  <text x="170" y="702" fill="#5f5a50" font-family="Helvetica, Arial, sans-serif" font-size="22">Protocol reality loop: ecosystem traction, governance progress, fee-capture reality -> treasury posture</text>
+
+  <rect x="170" y="730" width="230" height="120" rx="22" fill="#f6f4ff" stroke="#a295d6" stroke-width="2"/>
+  <text x="285" y="780" text-anchor="middle" fill="#1f1f1b" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">Wolfie</text>
+  <text x="285" y="813" text-anchor="middle" fill="#675f88" font-family="Helvetica, Arial, sans-serif" font-size="18">protocol context + signal</text>
+
+  <rect x="512" y="730" width="220" height="120" rx="22" fill="#fff8ef" stroke="#e2b16f" stroke-width="2"/>
+  <text x="622" y="780" text-anchor="middle" fill="#1f1f1b" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">Policy gate</text>
+  <text x="622" y="813" text-anchor="middle" fill="#6d5a3d" font-family="Helvetica, Arial, sans-serif" font-size="18">bias check + approval</text>
+
+  <rect x="844" y="730" width="220" height="120" rx="22" fill="#f0fbf7" stroke="#7ab9ab" stroke-width="2"/>
+  <text x="954" y="780" text-anchor="middle" fill="#1f1f1b" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">Mony</text>
+  <text x="954" y="813" text-anchor="middle" fill="#47625d" font-family="Helvetica, Arial, sans-serif" font-size="18">rotation, hedge, no-op</text>
+
+  <rect x="1176" y="730" width="230" height="120" rx="22" fill="#fff3f1" stroke="#d78f83" stroke-width="2"/>
+  <text x="1291" y="780" text-anchor="middle" fill="#1f1f1b" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700">Receipt</text>
+  <text x="1291" y="813" text-anchor="middle" fill="#7a514a" font-family="Helvetica, Arial, sans-serif" font-size="18">recorded capital posture</text>
+
+  <path d="M400 790H512" fill="none" stroke="#666257" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M732 790H844" fill="none" stroke="#666257" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M1064 790H1176" fill="none" stroke="#666257" stroke-width="3" marker-end="url(#arrow)"/>
+</svg>

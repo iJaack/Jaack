@@ -2,7 +2,7 @@
 title: "The loops I set up so my agent system doesn't lie to me"
 layout: post
 date: 2026-06-09 19:00
-image: /assets/images/2026/loops-cover-anygen.png
+image: /assets/images/2026/loops-cover-codex.svg
 headerImage: true
 tag:
 - ai
@@ -31,7 +31,7 @@ Mission Control is the UI layer. Telegram is just the human input surface.
 
 The system works because work moves through a few hard loops with explicit ownership.
 
-![Three loops around the agent system core](/assets/images/2026/loops-overview.png)
+![Three loops around the agent system core](/assets/images/2026/loops-overview-codex.svg)
 
 ## The architecture, in one sentence
 
@@ -76,7 +76,7 @@ This is the OpenClaw health loop:
 
 **observe runtime -> classify health -> choose repair or degrade -> verify route/log/cron truth -> update loop state**
 
-![OpenClaw health loop diagram](/assets/images/2026/openclaw-health-loop.png)
+![OpenClaw health loop diagram](/assets/images/2026/openclaw-health-loop-codex.svg)
 
 It checks practical things: gateway health, auth profile routing, Telegram delivery path, cron freshness, session state, listeners, and log quality.
 
@@ -110,7 +110,7 @@ Its contract is:
 
 **observe app/runtime truth -> compare dashboard/API claims -> degrade stale state or prepare fix -> run route/API/verifier gates -> update loop state -> report only actionable truth**
 
-![Mission Control truth loop diagram](/assets/images/2026/mission-control-truth-loop.png)
+![Mission Control truth loop diagram](/assets/images/2026/mission-control-truth-loop-codex.svg)
 
 The key rule is simple:
 
@@ -140,7 +140,7 @@ The contract is:
 
 **forecast artifact -> decision artifact -> policy gate -> execution/no-op receipt -> calibration artifact**
 
-![Predictie to Mony forecast-to-action loop](/assets/images/2026/forecast-to-action-loop.png)
+![Predictie to Mony forecast-to-action loop](/assets/images/2026/forecast-to-action-loop-codex.svg)
 
 This is a manual-first contract, not a trading bot.
 
@@ -178,6 +178,8 @@ The second is **Wolfie -> Mony**.
 That one is more like protocol reality -> treasury posture.
 Wolfie carries the Avalanche context: ecosystem traction, governance progress, fee-capture reality, whether value accrual is actually improving or just being narrated.
 Mony then decides whether that deserves capital rotation, sizing, hedging, or no-op.
+
+![Two hidden capital loops](/assets/images/2026/dual-capital-loop-codex.svg)
 
 That split matters.
 It stops ecosystem proximity from turning into automatic treasury bias.
