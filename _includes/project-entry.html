@@ -1,13 +1,13 @@
-<article class="work-entry"{% unless include.compact %} id="{{ project.id }}"{% endunless %}>
+{% assign entry = include.project | default: project %}
+<article class="work-entry{% if entry.group == 'apps' %} app-entry{% endif %}" id="{{ entry.id }}">
   <div class="work-heading">
-    <p class="work-meta"><span class="lang-en" lang="en">{{ project.role_en }} · {{ project.stage_en }}</span><span class="lang-it" lang="it">{{ project.role_it }} · {{ project.stage_it }}</span></p>
-    <h3>{% if include.compact %}<a href="{{ '/projects/' | relative_url }}#{{ project.id }}">{{ project.name }} <span aria-hidden="true">↗</span></a>{% else %}{{ project.name }}{% endif %}</h3>
+    {% if entry.icon %}<img class="app-icon" src="{{ entry.icon | relative_url }}" width="52" height="52" alt="" loading="lazy">{% elsif entry.id == 'hundred' %}<span class="app-monogram" aria-hidden="true">100</span>{% endif %}
+    <p class="work-meta"><span class="lang-en" lang="en">{{ entry.role_en }} · {{ entry.stage_en }}</span><span class="lang-it" lang="it">{{ entry.role_it }} · {{ entry.stage_it }}</span></p>
+    <h3>{{ entry.name }}</h3>
   </div>
   <div class="work-description">
-    <p><span class="lang-en" lang="en">{{ project.description_en }}</span><span class="lang-it" lang="it">{{ project.description_it }}</span></p>
-    {% unless include.compact %}
-    <p class="work-detail"><span class="lang-en" lang="en">{{ project.detail_en }}</span><span class="lang-it" lang="it">{{ project.detail_it }}</span></p>
-    {% if project.url %}<a class="text-link" href="{% if project.url contains '://' %}{{ project.url }}{% else %}{{ project.url | relative_url }}{% endif %}"><span class="lang-en" lang="en">{{ project.link_en }}</span><span class="lang-it" lang="it">{{ project.link_it }}</span> →</a>{% endif %}
-    {% endunless %}
+    <p><span class="lang-en" lang="en">{{ entry.description_en }}</span><span class="lang-it" lang="it">{{ entry.description_it }}</span></p>
+    <p class="work-detail"><span class="lang-en" lang="en">{{ entry.detail_en }}</span><span class="lang-it" lang="it">{{ entry.detail_it }}</span></p>
+    {% if entry.url %}<a class="text-link" href="{% if entry.url contains '://' %}{{ entry.url }}{% else %}{{ entry.url | relative_url }}{% endif %}"><span class="lang-en" lang="en">{{ entry.link_en }}</span><span class="lang-it" lang="it">{{ entry.link_it }}</span> →</a>{% endif %}
   </div>
 </article>

@@ -1,17 +1,28 @@
 ---
 layout: page
 title: Work
+width: large
 title_it: Progetti
 permalink: /projects/
 description: Products, infrastructure, AI systems, and community work by Giacomo Barbieri. Roles, context, and development stages.
 ---
 <p class="page-intro"><span class="lang-en" lang="en">My own ventures and apps, alongside ecosystem coordination, advisory, and research.</span><span class="lang-it" lang="it">I miei progetti e le mie app, insieme al coordinamento di community, all’advisory e alla ricerca.</span></p>
 {% assign groups = 'ventures|apps|ecosystem|systems|research|past' | split: '|' %}
+<nav class="work-jumps" aria-label="Project categories / Categorie dei progetti">{% for group in groups %}<a href="#group-{{ group }}"><span class="lang-en" lang="en">{{ site.data.ui_text.work_groups[group].en }}</span><span class="lang-it" lang="it">{{ site.data.ui_text.work_groups[group].it }}</span></a>{% endfor %}</nav>
 {% for group in groups %}
 <section class="work-group" aria-labelledby="group-{{ group }}">
   <h2 id="group-{{ group }}"><span class="lang-en" lang="en">{{ site.data.ui_text.work_groups[group].en }}</span><span class="lang-it" lang="it">{{ site.data.ui_text.work_groups[group].it }}</span></h2>
+  <div{% if group == 'apps' %} class="app-grid"{% endif %}>
   {% assign projects = site.data.projects | where: 'group', group %}
-  {% for project in projects %}{% include project-entry.html %}{% endfor %}
+  {% for project in projects %}{% unless project.parent %}
+    {% if project.id == 'eva' %}<div class="project-family">{% endif %}
+    {% include project-entry.html %}
+    {% if project.id == 'eva' %}
+      <p class="family-label"><span class="lang-en" lang="en">A product within Eva</span><span class="lang-it" lang="it">Un prodotto all’interno di Eva</span> ↓</p>
+      {% assign child = site.data.projects | where: 'id', 'eva-protocol' | first %}{% include project-entry.html project=child %}
+    </div>{% endif %}
+  {% endunless %}{% endfor %}
+  </div>
 </section>
 {% endfor %}
 <section class="home-section"><h2><span class="lang-en" lang="en">Earlier experiments</span><span class="lang-it" lang="it">Esperimenti precedenti</span></h2><p><a href="https://avax-price.vercel.com">Avax Price</a> · <a href="https://yields.world">Yields World</a> · <a href="{{ '/podcast/' | relative_url }}">Podcast</a> · <a href="{{ '/newsletter/' | relative_url }}"><span class="lang-en" lang="en">Newsletter archive</span><span class="lang-it" lang="it">Archivio newsletter</span></a></p></section>

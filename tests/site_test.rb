@@ -95,6 +95,24 @@ class SiteTest < Minitest::Test
     refute_includes page.text, 'coming months'
   end
 
+  def test_visual_portfolio_preserves_navigation_and_project_relationships
+    home = doc('index.html')
+    assert_equal 1, home.css('.feature-lead').length
+    assert_includes home.at_css('.feature-lead h3').text, 'Gem Mint Strategy'
+    assert_equal 4, home.css('.app-links a').length
+    home.css('.project-feature img, .app-gallery img, .hero-portrait').each do |img|
+      assert img.key?('alt'), 'Image needs an accessible text alternative'
+      assert img['width'].to_i > 0
+      assert img['height'].to_i > 0
+    end
+    work = doc('projects/index.html')
+    assert_equal 6, work.css('.work-jumps a').length
+    assert_equal 4, work.css('.app-grid .app-entry').length
+    assert_equal %w[eva eva-protocol], work.css('.project-family .work-entry').map { |entry| entry['id'] }
+    ids = work.css('[id]').map { |entry| entry['id'] }
+    assert_equal ids.uniq, ids, 'Project anchors must remain unique'
+  end
+
   def test_existing_special_pages_and_article_assets_survive
     %w[team1/index.html hundred/privacy/index.html hundred/support/index.html].each do |route|
       assert File.file?(File.join(ROOT, route)), route

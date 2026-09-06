@@ -52,7 +52,12 @@ A Cloudflare HTTP 526 response cannot be fixed by changing page content.
 Check the origin certificate and GitHub Pages custom-domain health before
 calling a deployment available. Keep HTTPS verification enabled.
 
-On 6 September 2026, the domain returned 526, GitHub Pages reported no
-certificate and HTTPS ineligibility behind the Cloudflare proxy, and the
-renewed Cloudflare login could read the zone but was denied access to DNS records and SSL settings (403). These are diagnostic observations,
-not proof of the exact origin configuration.
+On 6 September 2026, a Cloudflare 526 was resolved by making the four GitHub
+Pages apex A records DNS-only and setting www to a DNS-only CNAME to
+ijaack.github.io. Re-registering the custom domain provisioned a certificate
+for both names. GitHub Pages enforces HTTPS. Keep the website records DNS-only
+so certificate validation and renewal can reach GitHub directly.
+
+Homepage visuals use the existing GMS brand cover, Eva mark, app icons, and a
+Pommidoro iPhone screenshot. Hundred uses a text monogram. Images are resized
+for the site; the screenshot is a product preview, not a live timer.

@@ -204,3 +204,217 @@ a.text-link
 
 .prBarHeader
   left: 0
+
+// Portfolio showcases and native-app gallery.
+.featured-grid
+  display: grid
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr)
+  gap: 24px
+
+.featured-secondary
+  display: grid
+  gap: 24px
+
+.project-feature
+  min-width: 0
+  background: $surface
+  border: 1px solid $border
+  border-radius: 8px
+  overflow: hidden
+  h3
+    margin: 10px 0 14px
+    font-size: 2.5rem
+    line-height: 1.25
+    font-weight: 500
+    a
+      text-decoration: none
+    span
+      color: $accent
+      font-size: 1.6rem
+  p
+    font-size: 1.6rem
+    letter-spacing: 0
+    margin: 0
+  .work-meta
+    font-size: 1.2rem
+  .feature-copy
+    padding: 24px
+    position: relative
+  .feature-image
+    display: block
+    line-height: 0
+    img
+      width: 100%
+      height: auto
+      border-radius: 0
+  .feature-mark
+    display: block
+    margin-top: 16px
+    width: 40px
+    height: 40px
+
+.feature-lead h3
+  font-family: $fontDisplay
+  font-size: 3.5rem
+  font-weight: 400
+
+.app-gallery
+  display: grid
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr)
+  align-items: center
+  gap: 48px
+  padding: 38px
+  background: #191a17
+  border-radius: 8px
+  h2
+    font-family: $fontDisplay
+    font-weight: 400
+    font-size: 4.4rem
+    line-height: 1.08
+    margin: 18px 0
+  .section-intro
+    max-width: 40ch
+
+.app-links
+  display: grid
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+  gap: 14px 22px
+  margin-top: 26px
+  a
+    display: flex
+    align-items: center
+    gap: 10px
+    min-height: 48px
+    font-size: 1.35rem
+    text-decoration: none
+    span:last-child
+      margin-left: auto
+      color: $accent
+  img
+    width: 36px
+    height: 36px
+    border-radius: 9px
+
+.app-monogram
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  flex-shrink: 0
+  width: 36px
+  height: 36px
+  background: #e8c547
+  color: #171710
+  border-radius: 9px
+  font-family: $fontSans
+  font-weight: 700
+  letter-spacing: -1px
+  font-size: 1.6rem
+
+.app-preview
+  margin: 0
+  text-align: center
+  img
+    width: 210px
+    height: auto
+    border-radius: 24px
+    display: block
+    margin: 0 auto
+  figcaption
+    position: static
+    font-size: 1.2rem
+    color: $muted
+    margin-top: 14px
+
+.work-jumps
+  display: flex
+  flex-wrap: wrap
+  gap: 8px 24px
+  border-top: 1px solid $border
+  border-bottom: 1px solid $border
+  padding: 14px 0
+  margin-top: 32px
+  a
+    display: inline-flex
+    align-items: center
+    min-height: 36px
+    font-size: 1.4rem
+    color: $muted
+    text-decoration: none
+    &:hover, &:focus-visible
+      color: $accent
+
+.work-group h2
+  font-family: $fontSans
+  font-size: 2.4rem
+  font-weight: 500
+  color: $text
+  scroll-margin-top: 24px
+
+.work-entry .work-meta
+  font-size: 1.2rem
+
+.app-grid
+  display: grid
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+  gap: 24px
+
+.app-entry
+  display: block
+  padding: 24px
+  background: $surface
+  border: 1px solid $border
+  border-radius: 8px
+  .app-icon, .app-monogram
+    display: flex
+    width: 52px
+    height: 52px
+    border-radius: 12px
+    margin-bottom: 20px
+  .work-description
+    margin-top: 16px
+  .work-detail
+    font-size: 1.45rem
+
+.project-family
+  border-left: 2px solid $accent
+  padding-left: 24px
+  margin-top: 12px
+  .work-entry:first-child
+    border-top: 0
+  .family-label
+    color: $accent
+    font-size: 1.25rem
+    margin: 0 0 8px
+  #eva-protocol
+    border-top-style: dashed
+
+@media only screen and (max-width: 760px)
+  .featured-grid
+    grid-template-columns: 1fr
+  .featured-secondary
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+  .app-gallery
+    gap: 24px
+    padding: 26px
+  .app-links
+    grid-template-columns: 1fr
+
+@media only screen and (max-width: 520px)
+  .featured-secondary, .app-grid, .app-gallery
+    grid-template-columns: 1fr
+  .featured-secondary, .featured-grid, .app-grid
+    gap: 16px
+  .project-feature .feature-copy
+    padding: 22px
+  .app-gallery
+    padding: 24px
+    h2
+      font-size: 3.8rem
+  .app-links
+    grid-template-columns: 1fr
+  .app-preview img
+    width: 180px
+  .work-jumps
+    gap: 4px 18px
+  .project-family
+    padding-left: 16px

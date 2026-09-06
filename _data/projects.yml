@@ -14,6 +14,7 @@
   link_it: Leggi come funziona il sistema (EN)
 
 - id: sea-temperature
+  icon: /assets/images/work/sea-temperature.png
   name: Sea Temperature
   group: apps
   role_en: Product and development
@@ -67,6 +68,7 @@
   detail_it: "Lavoro su come un'identità AI possa costruire fiducia e raggiungere le persone. Eva Protocol fa parte di questo progetto e traduce il lavoro in un prodotto per previsioni pubbliche ed evidenze."
 
 - id: eva-protocol
+  parent: eva
   name: Eva Protocol
   featured: true
   group: ventures
@@ -107,6 +109,7 @@
   link_it: Dettagli e supporto (EN)
 
 - id: pommidoro
+  icon: /assets/images/work/pommidoro.png
   name: Pommidoro
   group: apps
   role_en: Product and development
@@ -119,6 +122,7 @@
   detail_it: "Sessioni di concentrazione, pause, storico e monitoraggio del tempo sui dispositivi Apple. Lavoro sull'affidabilità del timer e sulla distinzione tra tempo pianificato e tempo effettivamente dedicato."
 
 - id: parcelpilot
+  icon: /assets/images/work/parcelpilot.png
   name: ParcelPilot
   group: apps
   role_en: Product and development
