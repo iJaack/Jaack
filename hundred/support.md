@@ -31,6 +31,6 @@ Stop a workout and seek qualified medical advice if pain changes your movement o
 
 ## Contact
 
-For support, email [giacomobarbieri94@gmail.com](mailto:giacomobarbieri94@gmail.com) and include your iPhone model, iOS version, and a short description of what happened. Do not include private health information.
+For support, email [{{ site.email }}](mailto:{{ site.email }}) and include your iPhone model, iOS version, and a short description of what happened. Do not include private health information.
 
 Read the [Hundred Privacy Policy](/hundred/privacy/).

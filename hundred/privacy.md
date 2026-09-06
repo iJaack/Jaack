@@ -45,5 +45,5 @@ This policy may be updated as Hundred changes. The effective date at the top of 
 
 ## Contact
 
-Questions about Hundred or this policy can be sent to [giacomobarbieri94@gmail.com](mailto:giacomobarbieri94@gmail.com).
+Questions about Hundred or this policy can be sent to [{{ site.email }}](mailto:{{ site.email }}).
 
