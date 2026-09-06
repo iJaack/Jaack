@@ -1,8 +1,8 @@
 <article class="project-feature feature-{{ project.id }}{% if include.lead %} feature-lead{% endif %}">
-  {% if project.id == 'gm10' %}<a class="feature-image" href="{{ '/projects/#gm10' | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ '/assets/images/work/gms.jpg' | relative_url }}" width="1200" height="630" alt="" fetchpriority="high"></a>{% endif %}
+  {% if project.id == 'gm10' %}<a class="feature-image" href="{{ '/projects/gm10/' | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ '/assets/images/work/gms.jpg' | relative_url }}" width="1200" height="630" alt="" fetchpriority="high"></a>{% endif %}
   <div class="feature-copy">
     <p class="work-meta"><span class="lang-en" lang="en">{{ project.stage_en }}</span><span class="lang-it" lang="it">{{ project.stage_it }}</span></p>
-    <h3><a href="{{ '/projects/' | relative_url }}#{{ project.id }}">{{ project.name }} <span aria-hidden="true">↗</span></a></h3>
+    <h3><a href="{{ '/projects/' | relative_url }}{{ project.id }}/">{{ project.name }} <span aria-hidden="true">↗</span></a></h3>
     <p><span class="lang-en" lang="en">{{ project.description_en }}</span><span class="lang-it" lang="it">{{ project.description_it }}</span></p>
     {% if project.id == 'eva-protocol' %}<img class="feature-mark" src="{{ '/assets/images/work/eva.png' | relative_url }}" width="56" height="56" alt="" loading="lazy">{% endif %}
   </div>

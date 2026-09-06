@@ -5,7 +5,7 @@
     <p class="section-intro"><span class="lang-en" lang="en">The sea, a workout, a focused hour, a delivery. Four native apps I’m working on.</span><span class="lang-it" lang="it">Il mare, un allenamento, un’ora di concentrazione, una consegna. Quattro app native a cui sto lavorando.</span></p>
     <div class="app-links">
       {% assign apps = site.data.projects | where: 'group', 'apps' %}{% for app in apps %}
-      <a href="{{ '/projects/' | relative_url }}#{{ app.id }}">{% if app.icon %}<img src="{{ app.icon | relative_url }}" width="40" height="40" alt="" loading="lazy">{% else %}<span class="app-monogram" aria-hidden="true">100</span>{% endif %}<span>{{ app.name }}</span><span aria-hidden="true">↗</span></a>
+      <a href="{{ '/projects/' | relative_url }}{{ app.id }}/">{% if app.icon %}<img src="{{ app.icon | relative_url }}" width="40" height="40" alt="" loading="lazy">{% else %}<span class="app-monogram" aria-hidden="true">100</span>{% endif %}<span>{{ app.name }}</span><span aria-hidden="true">↗</span></a>
       {% endfor %}
     </div>
   </div>

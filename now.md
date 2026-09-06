@@ -3,42 +3,36 @@ layout: page
 title: Now
 title_it: Ora
 permalink: /now/
-description: What Giacomo Barbieri is building independently and thinking about. Updated September 2026.
+description: Current priorities and recent changes from Giacomo Barbieri. Updated 6 September 2026.
 ---
-<p class="work-meta"><span class="lang-en" lang="en">Updated 6 September 2026</span><span class="lang-it" lang="it">Aggiornato il 6 settembre 2026</span></p>
-
+<p class="work-meta"><time datetime="2026-09-06"><span class="lang-en" lang="en">Updated 6 September 2026</span><span class="lang-it" lang="it">Aggiornato il 6 settembre 2026</span></time></p>
 <div class="lang-en" lang="en">
-<p class="page-intro">I'm working independently across my own products, ecosystem coordination, and advisory.</p>
-<h2>The main projects</h2>
-<p><a href="/projects/#gm10">Gem Mint Strategy</a>, the tokenized Pokémon card portfolio on Avalanche, and <a href="/projects/#thicc">THICC</a>, which I'm preparing for launch. THICC examines liquidity and market structure, including what the evidence can and cannot tell you about buying or selling a token.</p>
-<p>Within <a href="/projects/#eva">Eva Identity &amp; Distribution</a>, I'm building <a href="/projects/#eva-protocol">Eva Protocol</a>: public prediction theses that can be revised as evidence changes, with a record of the reasoning behind them.</p>
-<h2>The apps</h2>
-<p><a href="/projects/#sea-temperature">Sea Temperature</a> for sea-surface-temperature maps. <a href="/projects/#hundred">Hundred</a> for bodyweight training. <a href="/projects/#pommidoro">Pommidoro</a> for focus sessions and time tracking. <a href="/projects/#parcelpilot">ParcelPilot</a> for shipment tracking across Apple devices.</p>
-<p>Each has its own development and release work. I want useful, focused products with clear behavior when data or a platform capability is unavailable.</p>
-<h2>Team1 and advisory</h2>
-<p>I coordinate <a href="/projects/#team1">Team1 Italy</a>, working with local organizers on Avalanche workshops, events, and educational material. I also advise <a href="/projects/#redbridge">Redbridge</a> on token design and ecosystem work, and study <a href="/projects/#acps">Avalanche proposals</a>.</p>
-<h2>The system behind it</h2>
-<p>I'm developing my <a href="/projects/#portfolio-os">Portfolio OS</a> around OpenClaw: project context, specialist agents, decisions, and follow-through. I want the system to show what's stale, what actually happened, and where I need to step in.</p>
-<p>I wrote about <a href="/the-loops-i-set-up-so-my-agent-system-doesnt-lie-to-me/">the loops behind the system</a>. The implementation keeps changing; the need to check outcomes doesn't.</p>
-<h2>Thinking about</h2>
-<p>Which products deserve another month of work. What makes agent output trustworthy. How to get more done without making life worse.</p>
-<p>This is a <a href="https://nownownow.com/about">now page</a>. I update it when my focus changes.</p>
+<p class="page-intro">What has my attention right now.</p>
+<h2>Three priorities</h2>
+<ol class="now-priorities">
+<li><strong>Prepare THICC for launch.</strong> Keep liquidity estimates and their uncertainty understandable. <a href="/projects/thicc/">The project →</a></li>
+<li><strong>Refine Eva’s public thesis workflow.</strong> Make the relationship between a prediction, its evidence, and later revisions clear. <a href="/projects/eva-protocol/">The project →</a></li>
+<li><strong>Work through the apps’ release details.</strong> Focus on reliable behavior across devices, data availability, and the small interactions people use every day. <a href="/projects/#group-apps">The app portfolio →</a></li>
+</ol>
+<h2>Recently</h2>
+<p><time datetime="2026-09-06">6 September 2026</time> — Refreshed this website around my independent work, added a visual portfolio, and fixed its HTTPS configuration.</p>
+<p><time datetime="2026-05">May 2026</time> — Left Routescan. My work is now independent, alongside Team1 Italy coordination and advisory.</p>
+<h2>A question I’m working through</h2>
+<p>Which products deserve another month of work—and what evidence would change my mind?</p>
+<p>For the wider picture, see <a href="/projects/">my work</a> or <a href="/about/">how I got here</a>. I update this <a href="https://nownownow.com/about">now page</a> when my focus changes.</p>
 </div>
-
 <div class="lang-it" lang="it">
-<p class="page-intro">Lavoro in modo indipendente tra i miei prodotti, il coordinamento di community e l'advisory.</p>
-<h2>I progetti principali</h2>
-<p><a href="/projects/#gm10">Gem Mint Strategy</a>, il portafoglio tokenizzato di carte Pokémon su Avalanche, e <a href="/projects/#thicc">THICC</a>, che sto preparando al lancio. THICC studia liquidità e struttura dei mercati, compreso ciò che le evidenze possono e non possono dirti sull'acquisto o sulla vendita di un token.</p>
-<p>All'interno di <a href="/projects/#eva">Eva Identity &amp; Distribution</a>, sto costruendo <a href="/projects/#eva-protocol">Eva Protocol</a>: tesi previsionali pubbliche da aggiornare quando cambiano le evidenze, mantenendo traccia del ragionamento.</p>
-<h2>Le app</h2>
-<p><a href="/projects/#sea-temperature">Sea Temperature</a> per le mappe della temperatura superficiale del mare. <a href="/projects/#hundred">Hundred</a> per l'allenamento a corpo libero. <a href="/projects/#pommidoro">Pommidoro</a> per la concentrazione e il monitoraggio del tempo. <a href="/projects/#parcelpilot">ParcelPilot</a> per seguire le spedizioni sui dispositivi Apple.</p>
-<p>Ciascuna ha il proprio lavoro di sviluppo e rilascio. Voglio prodotti utili e mirati, con un comportamento chiaro anche quando mancano dati o funzionalità della piattaforma.</p>
-<h2>Team1 e advisory</h2>
-<p>Coordino <a href="/projects/#team1">Team1 Italy</a>, lavorando con organizzatori locali a workshop, eventi e materiali didattici su Avalanche. Faccio anche advisory per <a href="/projects/#redbridge">Redbridge</a> sul design del token e sull'ecosistema e studio le <a href="/projects/#acps">proposte per Avalanche</a>.</p>
-<h2>Il sistema dietro al lavoro</h2>
-<p>Sto sviluppando il mio <a href="/projects/#portfolio-os">Portfolio OS</a> intorno a OpenClaw: contesto dei progetti, agenti specializzati, decisioni ed esecuzione. Voglio che il sistema mostri cosa è superato, cosa è successo davvero e dove devo intervenire.</p>
-<p>Ho scritto dei <a href="/the-loops-i-set-up-so-my-agent-system-doesnt-lie-to-me/">cicli alla base del sistema (EN)</a>. L'implementazione cambia; la necessità di verificare i risultati resta.</p>
-<h2>A cosa penso</h2>
-<p>Quali prodotti meritino un altro mese di lavoro. Cosa renda affidabile il risultato di un agente. Come fare di più senza vivere peggio.</p>
-<p>Questa è una <a href="https://nownownow.com/about">pagina now</a>. La aggiorno quando cambia ciò a cui mi dedico.</p>
+<p class="page-intro">A cosa sto dedicando attenzione adesso.</p>
+<h2>Tre priorità</h2>
+<ol class="now-priorities">
+<li><strong>Preparare THICC al lancio.</strong> Rendere comprensibili le stime di liquidità e la loro incertezza. <a href="/projects/thicc/">Il progetto →</a></li>
+<li><strong>Affinare il flusso delle tesi pubbliche di Eva.</strong> Chiarire il legame tra una previsione, le sue evidenze e le revisioni successive. <a href="/projects/eva-protocol/">Il progetto →</a></li>
+<li><strong>Curare i dettagli di rilascio delle app.</strong> Concentrarmi su affidabilità tra dispositivi, disponibilità dei dati e piccole interazioni quotidiane. <a href="/projects/#group-apps">Le app →</a></li>
+</ol>
+<h2>Di recente</h2>
+<p><time datetime="2026-09-06">6 settembre 2026</time> — Ho aggiornato questo sito intorno al mio lavoro indipendente, aggiunto un portafoglio visivo e risolto la configurazione HTTPS.</p>
+<p><time datetime="2026-05">Maggio 2026</time> — Ho lasciato Routescan. Oggi lavoro in modo indipendente, insieme al coordinamento di Team1 Italy e all’advisory.</p>
+<h2>Una domanda su cui sto ragionando</h2>
+<p>Quali prodotti meritano un altro mese di lavoro, e quali evidenze mi farebbero cambiare idea?</p>
+<p>Per il quadro completo, trovi <a href="/projects/">i progetti qui</a> e <a href="/about/">il mio percorso qui</a>. Aggiorno questa <a href="https://nownownow.com/about">pagina now</a> quando cambia ciò a cui mi dedico.</p>
 </div>

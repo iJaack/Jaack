@@ -21,6 +21,8 @@ before running these commands.
 
 - Homepage: index.html
 - Work entries: _data/projects.yml (English and Italian, with role and stage)
+- Project pages: projects/*/index.md, _layouts/project.html, and _data/project_notes.yml
+- Curated reading paths: _data/reading_paths.yml; the full archive remains in blog.html
 - Current focus: now.md and the homepage summary
 - Biography: _includes/about-body.html, shared by both existing About URLs
 - Writing: _posts; homepage selections use their existing slugs

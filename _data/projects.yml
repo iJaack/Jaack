@@ -27,6 +27,9 @@
   detail_it: "Un'app nativa costruita intorno a una domanda pratica: quanto è caldo il mare? Lavoro sulla mappa, sulla copertura dei dati e su come rendere comprensibile una stima del modello, anche dove i dati non sono disponibili."
 
 - id: thicc
+  url: https://thicc.market
+  link_en: Explore the public interface
+  link_it: Esplora l’interfaccia pubblica
   featured: true
   name: THICC
   group: ventures
@@ -68,6 +71,9 @@
   detail_it: "Lavoro su come un'identità AI possa costruire fiducia e raggiungere le persone. Eva Protocol fa parte di questo progetto e traduce il lavoro in un prodotto per previsioni pubbliche ed evidenze."
 
 - id: eva-protocol
+  url: https://eva.jaack.me
+  link_en: Explore the thesis platform
+  link_it: Esplora la piattaforma
   parent: eva
   name: Eva Protocol
   featured: true
@@ -109,6 +115,9 @@
   link_it: Dettagli e supporto (EN)
 
 - id: pommidoro
+  url: https://pommidoro.jaack.me
+  link_en: Visit the product site
+  link_it: Visita il sito del prodotto
   icon: /assets/images/work/pommidoro.png
   name: Pommidoro
   group: apps

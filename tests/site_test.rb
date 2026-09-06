@@ -5,7 +5,8 @@ require 'cgi'
 
 class SiteTest < Minitest::Test
   ROOT = File.expand_path('../_site', __dir__)
-  ROUTES = %w[index.html projects/index.html blog/index.html about/index.html now/index.html newsletter/index.html en/about/index.html 404.html]
+  PROJECT_IDS = %w[portfolio-os sea-temperature thicc gm10 eva eva-protocol team1 hundred pommidoro parcelpilot redbridge acps routescan]
+  ROUTES = %w[index.html projects/index.html blog/index.html about/index.html now/index.html newsletter/index.html en/about/index.html 404.html] + PROJECT_IDS.map { |id| "projects/#{id}/index.html" }
   def doc(route)
     Nokogiri::HTML(File.read(File.join(ROOT, route)))
   end
@@ -71,8 +72,8 @@ class SiteTest < Minitest::Test
     assert_includes former.at_css('.work-meta .lang-en').text, 'May 2026'
     assert_includes former.at_css('.work-detail .lang-it').text, 'Ho lasciato'
     featured = doc('index.html').css('#selected-work h3 a').map { |link| link['href'] }
-    refute_includes featured, '/projects/#routescan'
-    assert_includes featured, '/projects/#eva-protocol'
+    refute_includes featured, '/projects/routescan/'
+    assert_includes featured, '/projects/eva-protocol/'
     assert_includes work.at_css('#team1 .work-meta .lang-en').text, 'Italy Coordinator'
     assert_includes work.at_css('#redbridge .work-meta .lang-en').text, 'Active advisory'
     apps = work.css('section[aria-labelledby="group-apps"] .work-entry').map { |entry| entry['id'] }
@@ -124,6 +125,34 @@ class SiteTest < Minitest::Test
     assert page.at_css('main.post')
     assert page.at_css('script[src*="beeline-button"]')
     assert_match /\A\d{4}-\d{2}-\d{2}\z/, page.at_css('time')['datetime']
+  end
+
+  def test_project_pages_have_roles_context_and_a_next_step
+    PROJECT_IDS.each do |id|
+      page = doc("projects/#{id}/index.html")
+      assert_equal 2, page.css('.project-facts dd').length, id
+      assert page.at_css('.project-next a[href]'), id
+      %w[en it].each do |lang|
+        assert page.css(".project-page p .lang-#{lang}").length >= 3, "#{id}: translated context"
+      end
+      assert page.at_css("a[href='/projects/##{id}']"), id
+    end
+  end
+
+  def test_reading_paths_preserve_the_archive_and_real_articles
+    page = doc('blog/index.html')
+    assert_equal 3, page.css('.reading-path').length
+    assert_equal 6, page.css('.reading-pick').length
+    assert_equal 3, page.css('.reading-pick .work-meta').length
+    assert page.at_css('#archive')
+    %w[en it].each do |lang|
+      assert page.css("section.list.lang-#{lang} .item").length > 0
+    end
+    page.css('.reading-pick h3 a').each do |link|
+      article = doc(link['href'].delete_prefix('/') + 'index.html')
+      assert article.at_css('main.post'), link['href']
+    end
+    assert_equal 6, doc('now/index.html').css('.now-priorities li').length
   end
 
   def test_build_does_not_publish_development_files

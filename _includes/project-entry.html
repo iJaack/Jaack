@@ -3,7 +3,7 @@
   <div class="work-heading">
     {% if entry.icon %}<img class="app-icon" src="{{ entry.icon | relative_url }}" width="52" height="52" alt="" loading="lazy">{% elsif entry.id == 'hundred' %}<span class="app-monogram" aria-hidden="true">100</span>{% endif %}
     <p class="work-meta"><span class="lang-en" lang="en">{{ entry.role_en }} · {{ entry.stage_en }}</span><span class="lang-it" lang="it">{{ entry.role_it }} · {{ entry.stage_it }}</span></p>
-    <h3>{{ entry.name }}</h3>
+    <h3><a href="{{ '/projects/' | relative_url }}{{ entry.id }}/">{{ entry.name }} <span aria-hidden="true">↗</span></a></h3>
   </div>
   <div class="work-description">
     <p><span class="lang-en" lang="en">{{ entry.description_en }}</span><span class="lang-it" lang="it">{{ entry.description_it }}</span></p>

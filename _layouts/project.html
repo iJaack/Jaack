@@ -1,0 +1,23 @@
+---
+layout: default
+---
+{% assign project = site.data.projects | where: 'id', page.project_id | first %}
+{% assign note = site.data.project_notes[page.project_id] %}
+<div class="project-page">
+<a class="text-link" href="{{ '/projects/' | relative_url }}#{{ project.id }}">← <span class="lang-en" lang="en">All work</span><span class="lang-it" lang="it">Tutti i progetti</span></a>
+<h1 class="page-title">{{ project.name }}</h1>
+<p class="page-intro"><span class="lang-en" lang="en">{{ project.description_en }}</span><span class="lang-it" lang="it">{{ project.description_it }}</span></p>
+<dl class="project-facts"><div><dt><span class="lang-en" lang="en">My role</span><span class="lang-it" lang="it">Il mio ruolo</span></dt><dd><span class="lang-en" lang="en">{{ project.role_en }}</span><span class="lang-it" lang="it">{{ project.role_it }}</span></dd></div><div><dt><span class="lang-en" lang="en">Stage</span><span class="lang-it" lang="it">Stato</span></dt><dd><span class="lang-en" lang="en">{{ project.stage_en }}</span><span class="lang-it" lang="it">{{ project.stage_it }}</span></dd></div></dl>
+<h2><span class="lang-en" lang="en">The work</span><span class="lang-it" lang="it">Il lavoro</span></h2>
+<p><span class="lang-en" lang="en">{{ project.detail_en }}</span><span class="lang-it" lang="it">{{ project.detail_it }}</span></p>
+<h2><span class="lang-en" lang="en">What to explore</span><span class="lang-it" lang="it">Cosa esplorare</span></h2>
+<p><span class="lang-en" lang="en">{{ note.en }}</span><span class="lang-it" lang="it">{{ note.it }}</span></p>
+{% if project.id == 'pommidoro' %}<figure class="project-screen"><img src="{{ '/assets/images/work/pommidoro-screen.jpg' | relative_url }}" width="462" height="1000" alt="Pommidoro: focus timer and session controls on iPhone." loading="lazy"><figcaption><span class="lang-en" lang="en">iPhone interface preview</span><span class="lang-it" lang="it">Anteprima dell’interfaccia iPhone</span></figcaption></figure>{% endif %}
+{% if project.id == 'gm10' %}<figure class="project-art"><img src="{{ '/assets/images/work/gms.jpg' | relative_url }}" width="1200" height="630" alt="Gem Mint Strategy project artwork with graded Pokémon cards." loading="lazy"><figcaption><span class="lang-en" lang="en">Project artwork</span><span class="lang-it" lang="it">Immagine del progetto</span></figcaption></figure>{% endif %}
+<div class="project-next">
+{% if project.url %}<a class="text-link" href="{{ project.url }}"><span class="lang-en" lang="en">{{ project.link_en }}</span><span class="lang-it" lang="it">{{ project.link_it }}</span> →</a>{% else %}<a class="text-link" href="mailto:giacomobarbieri94@gmail.com?subject={{ project.name | url_encode }}"><span class="lang-en" lang="en">Ask me about {{ project.name }}</span><span class="lang-it" lang="it">Scrivimi di {{ project.name }}</span> →</a>{% endif %}
+{% if project.id == 'gm10' %}<a class="text-link" href="{{ '/gm10-first-year-valuation-case-en/' | relative_url }}"><span class="lang-en" lang="en">Read the valuation essay (April 2026)</span><span class="lang-it" lang="it">Leggi il saggio sulla valutazione (aprile 2026, EN)</span> →</a>{% endif %}
+{% if project.id == 'eva' %}<a class="text-link" href="{{ '/projects/eva-protocol/' | relative_url }}">Eva Protocol →</a>{% endif %}
+{% if project.parent %}<a class="text-link" href="{{ '/projects/eva/' | relative_url }}">Eva Identity &amp; Distribution →</a>{% endif %}
+</div>
+</div>

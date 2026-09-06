@@ -1,0 +1,24 @@
+- id: crypto
+  title_en: Crypto research
+  title_it: Ricerca crypto
+  description_en: Incentives, market structure, and the assumptions behind a model.
+  description_it: Incentivi, struttura dei mercati e ipotesi alla base dei modelli.
+  slugs:
+    - acp-255-four-fee-curves-en
+    - gm10-first-year-valuation-case-en
+- id: products
+  title_en: Building products
+  title_it: Costruire prodotti
+  description_en: Deciding what deserves to exist, and what deserves another iteration.
+  description_it: Capire cosa valga la pena costruire e cosa meriti un’altra iterazione.
+  slugs:
+    - minimum-market-fit
+- id: ai
+  title_en: AI systems
+  title_it: Sistemi AI
+  description_en: Agents, maintenance, and checking what actually happened.
+  description_it: Agenti, manutenzione e verifiche su ciò che è successo davvero.
+  slugs:
+    - the-loops-i-set-up-so-my-agent-system-doesnt-lie-to-me
+    - maintenance-layer
+    - autoscan-geopolitical-intelligence-autoresearch-en

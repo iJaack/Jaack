@@ -3,9 +3,15 @@ layout: page
 title: Writing
 title_it: Articoli
 permalink: /blog/
-description: Lo 'Zibaldone' - raccolta di pensieri senza censure
+description: Reading paths through crypto research, building products, and AI systems, plus the complete dated archive.
 ---
 
+<p class="page-intro"><span class="lang-en" lang="en">Start with a question, or browse the archive.</span><span class="lang-it" lang="it">Parti da una domanda, oppure esplora l’archivio.</span></p>
+<nav class="work-jumps" aria-label="Reading paths / Percorsi di lettura">{% for topic in site.data.reading_paths %}<a href="#{{ topic.id }}"><span class="lang-en" lang="en">{{ topic.title_en }}</span><span class="lang-it" lang="it">{{ topic.title_it }}</span></a>{% endfor %}<a href="#archive"><span class="lang-en" lang="en">Full archive</span><span class="lang-it" lang="it">Archivio completo</span></a></nav>
+<p class="section-intro"><span class="lang-en" lang="en">These selected essays are in English. The archive below follows your language choice.</span><span class="lang-it" lang="it">Questi saggi selezionati sono in inglese. L’archivio qui sotto segue la lingua scelta.</span></p>
+{% for topic in site.data.reading_paths %}<section class="reading-path" aria-labelledby="{{ topic.id }}"><h2 id="{{ topic.id }}"><span class="lang-en" lang="en">{{ topic.title_en }}</span><span class="lang-it" lang="it">{{ topic.title_it }}</span></h2><p class="section-intro"><span class="lang-en" lang="en">{{ topic.description_en }}</span><span class="lang-it" lang="it">{{ topic.description_it }}</span></p>
+{% for slug in topic.slugs %}{% assign post = site.posts | where: 'slug', slug | first %}{% if post %}<article class="reading-pick">{% if forloop.first %}<p class="work-meta"><span class="lang-en" lang="en">Start here</span><span class="lang-it" lang="it">Parti da qui</span></p>{% endif %}<h3 lang="{{ post.lang }}"><a href="{{ post.url | relative_url }}">{{ post.title }} ↗</a></h3><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %Y' }} · {{ post.lang | upcase }}</time></article>{% endif %}{% endfor %}</section>{% endfor %}
+<h2 id="archive"><span class="lang-en" lang="en">Full archive</span><span class="lang-it" lang="it">Archivio completo</span></h2>
 {% for lang in site.data.ui_text.languages %}
 <section class="list lang-{{ lang.code }}">
 	{% assign posts = site.posts | where: "lang", lang.code %}
