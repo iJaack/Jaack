@@ -1,9 +1,9 @@
 # main text of home
 name: Giacomo Barbieri
-bio: Head of Growth at Routescan. Building trust infrastructure, AI agents, and weird high-conviction side bets.
+bio: Growth at Routescan. Building products, blockchain infrastructure, and practical AI systems.
 
 # twitter summary info
-description: Routescan growth, AI trust infrastructure, Avalanche, and the systems I'm building around all of it.
+description: "Giacomo Barbieri: growth at Routescan, products, practical AI systems, and writing."
 
 # if it's an external image, update below for true
 # better with square images
@@ -16,7 +16,7 @@ picture: assets/images/profilo-homepage-ig.png
 # resume-external: true
 # resume-url: https://google.com/?q=my+resume
 
-url: "https://ijaack.github.io"
+url: "https://jaack.me"
 baseurl: ""
 
 permalink: /:title/
@@ -94,4 +94,11 @@ compress_html:
         - development
         - stage
 
-exclude: ["Rakefile", "README.md", "Gemfile", "Gemfile.lock", "vendor", "node_modules"]
+exclude: ["tests", "scripts", "package.json", "team1/.claude", "Rakefile", "README.md", "Gemfile", "Gemfile.lock", "vendor", "node_modules"]
+
+title: Giacomo Barbieri / Jaack
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/profilo-2026.jpg

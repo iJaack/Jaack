@@ -17,7 +17,7 @@ lang: en
 custom_stylesheets:
 - https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css
 - /assets/open_source_code/acp-255-formula-explorer.css?v=nyt1
-- /assets/open_source_code/acp-255-nyt.css?v=1
+- /assets/open_source_code/acp-255-nyt.css?v=2
 custom_scripts:
 - path: https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js
 - path: https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js

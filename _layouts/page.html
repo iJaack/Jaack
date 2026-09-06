@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
-{% include header.html %}
-{{content}}
-{% include footer.html %}
+{% unless page.title == 'Home' or page.layout == 'post' or page.category == 'blog' %}
+<h1 class="page-title">{% if page.title_it %}<span class="lang-en" lang="en">{{ page.title }}</span><span class="lang-it" lang="it">{{ page.title_it }}</span>{% else %}{{ page.title }}{% endif %}</h1>
+{% endunless %}
+{{ content }}

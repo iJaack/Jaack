@@ -1,13 +1,6 @@
-{% assign header_pages = "Home|Blog|Projects|Podcast|Newsletter" | split: "|" %}
-{% if header_pages contains page.title %}{% assign showHeader = true %}{% endif %}
-
-{% if showHeader == true %}
-<header class="header-home {% if site.animation %}animated{% endif %}">
-  <div class="hero-label">Giacomo Barbieri — Roma</div>
-  <h1 class="hero-title">Head of Growth.<br>Builder on the side.</h1>
-  <p class="hero-sub">Crypto infrastructure, blockchain explorers,<br>and whatever I'm obsessed with this month.</p>
-  <a href="/now" class="hero-cta">what i'm doing now →</a>
+<header class="header-home">
+  <p class="hero-label">Giacomo Barbieri / Jaack <span class="lang-en" lang="en">/ Rome</span><span class="lang-it" lang="it">/ Roma</span></p>
+  <h1 class="hero-title"><span class="lang-en" lang="en">I grow businesses.<br>I build products<br>and AI systems.</span><span class="lang-it" lang="it">Faccio crescere imprese.<br>Costruisco prodotti<br>e sistemi AI.</span></h1>
+  <p class="hero-sub"><span class="lang-en" lang="en">Head of Growth at Routescan. Building across blockchain infrastructure, native apps, and the systems that help me run several projects at once.</span><span class="lang-it" lang="it">Responsabile della crescita in Routescan. Lavoro tra infrastruttura blockchain, app native e sistemi che mi aiutano a seguire più progetti insieme.</span></p>
+  <a class="hero-cta" href="#selected-work"><span class="lang-en" lang="en">Explore my work</span><span class="lang-it" lang="it">Scopri il mio lavoro</span> →</a>
 </header>
-{% endif %}
-
-{% include nav.html %}

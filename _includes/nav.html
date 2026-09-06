@@ -1,23 +1,13 @@
-<nav class="{% if page.title == 'Home' %}nav-home{% else %}nav{% endif %}">
-  <ul class="list">
+<nav class="site-nav" aria-label="Main">
+  <a class="site-wordmark" href="{{ '/' | relative_url }}" aria-label="Jaack home">jaack<span aria-hidden="true">.</span></a>
+  <ul class="nav-links">
     {% for link in site.data.ui_text.nav_links %}
-    <li class="item">
-      <a class="link" href="{{base}}{{ link.url }}">
-        <span class="lang-it">{{ site.data.ui_text.nav[link.key].it }}</span>
-        <span class="lang-en">{{ site.data.ui_text.nav[link.key].en }}</span>
-      </a>
-    </li>
+    <li><a href="{{ link.url | relative_url }}"{% if page.url contains link.url %} aria-current="page"{% endif %}><span class="lang-en" lang="en">{{ site.data.ui_text.nav[link.key].en }}</span><span class="lang-it" lang="it">{{ site.data.ui_text.nav[link.key].it }}</span></a></li>
     {% endfor %}
-
-    <li class="item">
-      <a class="link" href="{{base}}/now">now</a>
-    </li>
-
-    <li class="item lang-switch">
-      {% assign toggle_langs = site.data.ui_text.languages | map: "code" %}
-      {% for lang in toggle_langs %}
-      <button class="lang-toggle lang-toggle-{{ lang }}" onclick="window.toggleGlobalLang('{{ lang }}')">{{ lang | upcase }}</button>{% unless forloop.last %}<span class="lang-toggle-separator">|</span>{% endunless %}
-      {% endfor %}
-    </li>
+    <li><a href="{{ '/#contact' | relative_url }}"><span class="lang-en" lang="en">Contact</span><span class="lang-it" lang="it">Contatti</span></a></li>
   </ul>
+  <div class="lang-switch" role="group" aria-label="Language / Lingua">
+    <button type="button" class="lang-toggle" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
+    <button type="button" class="lang-toggle" data-lang="it" lang="it" aria-label="Italiano" aria-pressed="false">IT</button>
+  </div>
 </nav>

@@ -1,0 +1,206 @@
+.page, .post, .home, .writing, .projects
+  margin-top: 48px
+
+.page.home
+  margin-top: 0
+
+.page > .page-title
+  text-align: left
+  font-family: $fontDisplay
+  font-weight: 400
+  font-size: 5.2rem
+  letter-spacing: -1px
+  margin: 0 0 24px
+
+.page-intro
+  font-size: 1.9rem
+  max-width: 65ch
+  color: $muted
+
+.home-section
+  margin: 0 0 60px
+  scroll-margin-top: 24px
+
+.section-heading
+  display: flex
+  justify-content: space-between
+  align-items: baseline
+  flex-wrap: wrap
+  gap: 12px
+  margin-bottom: 22px
+
+  h2
+    margin: 0
+
+.text-link
+  font-size: 1.4rem
+  text-underline-offset: 4px
+
+a.text-link
+  color: $accent
+
+.section-intro
+  color: $muted
+  font-size: 1.5rem
+
+.work-entry
+  display: grid
+  grid-template-columns: 0.9fr 1.1fr
+  gap: 30px
+  border-top: 1px solid $border
+  padding: 26px 0
+  scroll-margin-top: 24px
+
+  h3
+    font-size: 2.2rem
+    margin: 8px 0 0
+    font-weight: 500
+    a
+      text-decoration: none
+    span
+      color: $accent
+      font-size: 1.6rem
+
+  p
+    margin: 0
+    font-size: 1.6rem
+    letter-spacing: 0
+  .work-meta
+    font-family: $fontMono
+    font-size: 1.1rem
+    color: $muted
+    line-height: 1.6
+  .work-detail
+    color: $muted
+    margin: 14px 0 18px
+
+.work-group
+  margin: 50px 0
+  h2
+    font-family: $fontMono
+    font-size: 1.3rem
+    color: $accent
+    font-weight: 400
+    margin-bottom: 20px
+
+.work-meta
+  color: $muted
+  font-family: $fontMono
+  font-size: 1.2rem
+
+.writing-entry
+  display: grid
+  grid-template-columns: 100px 1fr
+  gap: 20px
+  align-items: baseline
+  padding: 22px 0
+  border-top: 1px solid $border
+  time
+    color: $muted
+    font-family: $fontMono
+    font-size: 1.1rem
+  h3
+    margin: 0
+    font-size: 1.8rem
+    line-height: 1.5
+    font-weight: 400
+  a
+    text-decoration: none
+    span
+      color: $accent
+
+.now-summary
+  padding: 28px 30px
+  background: $surface
+  border-left: 2px solid $accent
+  p
+    max-width: 65ch
+
+.contact-section
+  border-top: 1px solid $border
+  padding-top: 36px
+  h2
+    font-family: $fontDisplay
+    font-weight: 400
+    font-size: 4.5rem
+    margin: 0 0 18px
+  p
+    max-width: 62ch
+    color: $muted
+
+.contact-links, .footer-links
+  display: flex
+  flex-wrap: wrap
+  gap: 24px
+
+.contact-links a
+  display: inline-flex
+  align-items: center
+  min-height: 44px
+  color: $accent
+  text-underline-offset: 5px
+
+.about-body .about-portrait
+  float: right
+  width: 160px
+  height: 190px
+  object-fit: cover
+  margin: 0 0 24px 28px
+
+.about-body
+  display: flow-root
+  h2
+    margin-top: 36px
+
+*:focus-visible
+  outline: 2px solid $accent
+  outline-offset: 5px
+
+.skip-link
+  position: absolute
+  top: 8px
+  left: 12px
+  padding: 12px
+  background: $bg
+  z-index: 100
+  transform: translateY(-200%)
+  &:focus
+    transform: translateY(0)
+
+@media only screen and (max-width: 600px)
+  .page, .post, .writing, .projects
+    margin-top: 32px
+  .work-entry
+    grid-template-columns: 1fr
+    gap: 14px
+  .writing-entry
+    grid-template-columns: 1fr
+    gap: 6px
+  .home-section
+    margin-bottom: 44px
+  .now-summary
+    padding: 22px
+  .about-body .about-portrait
+    float: none
+    width: 110px
+    height: 130px
+    margin: 0 0 22px
+  .writing > .list > .item > .url
+    flex-direction: column
+    gap: 8px
+
+@media (prefers-reduced-motion: reduce)
+  *, *::before, *::after
+    animation: none !important
+    transition: none !important
+    scroll-behavior: auto !important
+
+// Keep wide equations scrollable without widening the article.
+.post .katex-display
+  max-width: 100%
+  overflow-x: auto
+  overflow-y: hidden
+  padding: 4px 0
+
+.prBarHeader
+  left: 0

@@ -1,23 +1,95 @@
-- name: Avax Price
-  url: https://avax-price.vercel.com
-  image: /assets/images/projects/avax-price.png
-  description_en: "Real-time Avalanche price tracking and analytics."
-  description_it: "Tracciamento e analisi in tempo reale del prezzo di Avalanche."
+- id: routescan
+  name: Routescan
+  featured: true
+  group: infrastructure
+  role_en: Head of Growth
+  role_it: Responsabile della crescita
+  stage_en: Ongoing role
+  stage_it: Ruolo attuale
+  description_en: "Making blockchain infrastructure useful, understandable, and easier to adopt."
+  description_it: "Rendere l'infrastruttura blockchain utile, comprensibile e più facile da adottare."
+  detail_en: "I work on growth, partnerships, and positioning for Explorer-as-a-Service. My work connects what chain teams need with the infrastructure that helps their ecosystems get used."
+  detail_it: "Mi occupo di crescita, partnership e posizionamento per Explorer-as-a-Service. Collego le esigenze dei team blockchain all'infrastruttura che aiuta i loro ecosistemi a essere utilizzati."
+  url: https://routescan.io
+  link_en: Explore Routescan
+  link_it: Esplora Routescan
 
-- name: Yields World
-  url: https://yields.world
-  image: /assets/images/projects/yields-world.png
-  description_en: "Stablecoin Yield Voyager - Track DeFi Lending Rates Live."
-  description_it: "Stablecoin Yield Voyager - Traccia i tassi DeFi in tempo reale."
+- id: portfolio-os
+  name: Portfolio OS
+  featured: true
+  group: systems
+  role_en: Builder
+  role_it: Sviluppo e progettazione
+  stage_en: Internal system
+  stage_it: Sistema interno
+  description_en: "A working system for coordinating projects, context, and AI agents."
+  description_it: "Un sistema per coordinare progetti, contesto e agenti AI."
+  detail_en: "I build the workflows behind my own work: collecting context, tracking decisions, and checking whether an agent's output matches what actually happened. The useful part is the oversight, including knowing when a person needs to step in."
+  detail_it: "Costruisco i flussi alla base del mio lavoro: raccogliere contesto, seguire le decisioni e verificare che il risultato di un agente corrisponda a ciò che è successo davvero. La parte utile è la supervisione, compreso capire quando deve intervenire una persona."
+  url: /the-loops-i-set-up-so-my-agent-system-doesnt-lie-to-me/
+  link_en: Read how the system works
+  link_it: Leggi come funziona il sistema (EN)
 
-- name: Podcast
-  url: /podcast
-  image: /assets/images/projects/podcast-cover.png
-  description_en: "My podcast about tech, life, and the future."
-  description_it: "Il mio podcast su tecnologia, vita e futuro."
+- id: sea-temperature
+  name: Sea Temperature
+  featured: true
+  group: products
+  role_en: Product and development
+  role_it: Prodotto e sviluppo
+  stage_en: In development
+  stage_it: In sviluppo
+  description_en: "An iPhone app for exploring sea-surface temperature on a map."
+  description_it: "Un'app per iPhone per esplorare la temperatura superficiale del mare su una mappa."
+  detail_en: "A focused native app built around a practical question: how warm is the sea? I work on the map, data coverage, and the experience of understanding a model estimate, including where data is unavailable."
+  detail_it: "Un'app nativa costruita intorno a una domanda pratica: quanto è caldo il mare? Lavoro sulla mappa, sulla copertura dei dati e su come rendere comprensibile una stima del modello, anche dove i dati non sono disponibili."
 
-- name: Newsletter
-  url: /newsletter
-  image: /assets/images/projects/newsletter-cover.png
-  description_en: "Weekly insights delivered to your inbox."
-  description_it: "Approfondimenti settimanali direttamente nella tua casella di posta."
+- id: thicc
+  name: THICC
+  group: products
+  role_en: Product and development
+  role_it: Prodotto e sviluppo
+  stage_en: In development
+  stage_it: In sviluppo
+  description_en: "Market-structure research that looks beyond a token's displayed price."
+  description_it: "Ricerca sulla struttura dei mercati che va oltre il prezzo mostrato di un token."
+  detail_en: "I build tools for examining liquidity, modeled buy and sell outcomes, and the evidence behind a market snapshot. A core product decision: show uncertainty when the available data cannot support a result."
+  detail_it: "Costruisco strumenti per esaminare liquidità, simulazioni di acquisto e vendita e le evidenze dietro un mercato. Una scelta centrale di prodotto: mostrare l'incertezza quando i dati non consentono una risposta."
+
+- id: gm10
+  name: Gem Mint Strategy
+  group: products
+  role_en: Builder
+  role_it: Sviluppo e progettazione
+  stage_en: In development
+  stage_it: In sviluppo
+  description_en: "Exploring how graded Pokémon cards and onchain accounting fit together."
+  description_it: "Esplorare il rapporto tra carte Pokémon certificate e contabilità onchain."
+  detail_en: "A project on Avalanche bringing together collectible assets, portfolio mechanics, and transparent accounting. I work across the product, its public explanation, and the systems needed to track the underlying cards."
+  detail_it: "Un progetto su Avalanche che unisce beni da collezione, gestione di portafoglio e contabilità trasparente. Lavoro sul prodotto, sulla sua comunicazione e sui sistemi per seguire le carte sottostanti."
+  url: https://www.gm10.xyz
+  link_en: Explore the project
+  link_it: Esplora il progetto
+
+- id: eva
+  name: Eva
+  group: systems
+  role_en: Builder and research
+  role_it: Sviluppo e ricerca
+  stage_en: In development
+  stage_it: In sviluppo
+  description_en: "Identity, accountability, and trust for economically active AI agents."
+  description_it: "Identità, responsabilità e fiducia per agenti AI economicamente attivi."
+  detail_en: "I explore how agents can act with explicit limits and verifiable records of what they did. This work connects identity and distribution with the development of Eva Protocol."
+  detail_it: "Esploro come gli agenti possano agire entro limiti espliciti e lasciare tracce verificabili delle proprie azioni. Questo lavoro collega identità e distribuzione allo sviluppo di Eva Protocol."
+
+- id: team1
+  name: Team1 Italy
+  group: community
+  role_en: Community and ecosystem work
+  role_it: Community ed ecosistema
+  stage_en: Ongoing work
+  stage_it: Attività in corso
+  description_en: "Helping people in Italy learn, meet, and build with Avalanche."
+  description_it: "Aiutare le persone in Italia a imparare, incontrarsi e costruire su Avalanche."
+  detail_en: "I contribute to workshops, events, educational material, and connections between builders. It brings together the infrastructure work and the communication skills I developed through journalism."
+  detail_it: "Contribuisco a workshop, eventi, materiali didattici e connessioni tra chi costruisce. È il punto di incontro tra il lavoro sull'infrastruttura e la comunicazione che ho imparato con il giornalismo."
