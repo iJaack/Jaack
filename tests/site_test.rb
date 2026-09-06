@@ -54,13 +54,38 @@ class SiteTest < Minitest::Test
 
   def test_work_states_are_present_in_both_languages
     entries = doc('projects/index.html').css('.work-entry')
-    assert_equal 7, entries.length
+    assert_equal 13, entries.length
     entries.each do |entry|
       %w[en it].each do |lang|
         refute_empty entry.at_css(".work-meta .lang-#{lang}").text.strip
         refute_empty entry.at_css(".work-detail .lang-#{lang}").text.strip
       end
     end
+  end
+
+  def test_current_work_and_former_employment_are_kept_distinct
+    work = doc('projects/index.html')
+    former = work.at_css('section[aria-labelledby="group-past"] #routescan')
+    refute_nil former
+    assert_includes former.at_css('.work-meta .lang-en').text, 'Former Head of Growth'
+    assert_includes former.at_css('.work-meta .lang-en').text, 'May 2026'
+    assert_includes former.at_css('.work-detail .lang-it').text, 'Ho lasciato'
+    featured = doc('index.html').css('#selected-work h3 a').map { |link| link['href'] }
+    refute_includes featured, '/projects/#routescan'
+    assert_includes featured, '/projects/#eva-protocol'
+    assert_includes work.at_css('#team1 .work-meta .lang-en').text, 'Italy Coordinator'
+    assert_includes work.at_css('#redbridge .work-meta .lang-en').text, 'Active advisory'
+    apps = work.css('section[aria-labelledby="group-apps"] .work-entry').map { |entry| entry['id'] }
+    assert_equal %w[hundred parcelpilot pommidoro sea-temperature], apps.sort
+
+    %w[about/index.html en/about/index.html].each do |route|
+      page = doc(route)
+      assert_includes page.at_css('.about-body .lang-en').text, 'I left in May 2026'
+      assert_includes page.at_css('.about-body .lang-it').text, "Ho lasciato l'azienda"
+    end
+    bio = doc('acp-255-four-fee-curves-en/index.html').at_css('.author .bio').text
+    assert_includes bio, 'Independent builder'
+    assert_includes bio, 'Former Head of Growth at Routescan'
   end
 
   def test_archived_newsletter_does_not_collect_signups

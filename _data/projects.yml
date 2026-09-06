@@ -1,22 +1,5 @@
-- id: routescan
-  name: Routescan
-  featured: true
-  group: infrastructure
-  role_en: Head of Growth
-  role_it: Responsabile della crescita
-  stage_en: Ongoing role
-  stage_it: Ruolo attuale
-  description_en: "Making blockchain infrastructure useful, understandable, and easier to adopt."
-  description_it: "Rendere l'infrastruttura blockchain utile, comprensibile e più facile da adottare."
-  detail_en: "I work on growth, partnerships, and positioning for Explorer-as-a-Service. My work connects what chain teams need with the infrastructure that helps their ecosystems get used."
-  detail_it: "Mi occupo di crescita, partnership e posizionamento per Explorer-as-a-Service. Collego le esigenze dei team blockchain all'infrastruttura che aiuta i loro ecosistemi a essere utilizzati."
-  url: https://routescan.io
-  link_en: Explore Routescan
-  link_it: Esplora Routescan
-
 - id: portfolio-os
   name: Portfolio OS
-  featured: true
   group: systems
   role_en: Builder
   role_it: Sviluppo e progettazione
@@ -32,8 +15,7 @@
 
 - id: sea-temperature
   name: Sea Temperature
-  featured: true
-  group: products
+  group: apps
   role_en: Product and development
   role_it: Prodotto e sviluppo
   stage_en: In development
@@ -44,26 +26,28 @@
   detail_it: "Un'app nativa costruita intorno a una domanda pratica: quanto è caldo il mare? Lavoro sulla mappa, sulla copertura dei dati e su come rendere comprensibile una stima del modello, anche dove i dati non sono disponibili."
 
 - id: thicc
+  featured: true
   name: THICC
-  group: products
+  group: ventures
   role_en: Product and development
   role_it: Prodotto e sviluppo
-  stage_en: In development
-  stage_it: In sviluppo
+  stage_en: Preparing for launch
+  stage_it: In preparazione al lancio
   description_en: "Market-structure research that looks beyond a token's displayed price."
   description_it: "Ricerca sulla struttura dei mercati che va oltre il prezzo mostrato di un token."
   detail_en: "I build tools for examining liquidity, modeled buy and sell outcomes, and the evidence behind a market snapshot. A core product decision: show uncertainty when the available data cannot support a result."
   detail_it: "Costruisco strumenti per esaminare liquidità, simulazioni di acquisto e vendita e le evidenze dietro un mercato. Una scelta centrale di prodotto: mostrare l'incertezza quando i dati non consentono una risposta."
 
 - id: gm10
-  name: Gem Mint Strategy
-  group: products
+  featured: true
+  name: Gem Mint Strategy ($CATCH)
+  group: ventures
   role_en: Builder
   role_it: Sviluppo e progettazione
-  stage_en: In development
-  stage_it: In sviluppo
-  description_en: "Exploring how graded Pokémon cards and onchain accounting fit together."
-  description_it: "Esplorare il rapporto tra carte Pokémon certificate e contabilità onchain."
+  stage_en: Active venture
+  stage_it: Progetto attivo
+  description_en: "A tokenized Pokémon card portfolio on Avalanche."
+  description_it: "Un portafoglio tokenizzato di carte Pokémon su Avalanche."
   detail_en: "A project on Avalanche bringing together collectible assets, portfolio mechanics, and transparent accounting. I work across the product, its public explanation, and the systems needed to track the underlying cards."
   detail_it: "Un progetto su Avalanche che unisce beni da collezione, gestione di portafoglio e contabilità trasparente. Lavoro sul prodotto, sulla sua comunicazione e sui sistemi per seguire le carte sottostanti."
   url: https://www.gm10.xyz
@@ -71,25 +55,119 @@
   link_it: Esplora il progetto
 
 - id: eva
-  name: Eva
-  group: systems
-  role_en: Builder and research
-  role_it: Sviluppo e ricerca
+  name: Eva Identity & Distribution
+  group: ventures
+  role_en: Builder
+  role_it: Sviluppo e progettazione
+  stage_en: Active venture
+  stage_it: Progetto attivo
+  description_en: "The broader Eva initiative across AI identity, content, and distribution."
+  description_it: "Il progetto Eva tra identità AI, contenuti e distribuzione."
+  detail_en: "I work on how an AI identity earns trust and reaches people. Eva Protocol is part of this initiative, turning that work into a product for public predictions and evidence."
+  detail_it: "Lavoro su come un'identità AI possa costruire fiducia e raggiungere le persone. Eva Protocol fa parte di questo progetto e traduce il lavoro in un prodotto per previsioni pubbliche ed evidenze."
+
+- id: eva-protocol
+  name: Eva Protocol
+  featured: true
+  group: ventures
+  role_en: Product and development
+  role_it: Prodotto e sviluppo
   stage_en: In development
   stage_it: In sviluppo
-  description_en: "Identity, accountability, and trust for economically active AI agents."
-  description_it: "Identità, responsabilità e fiducia per agenti AI economicamente attivi."
-  detail_en: "I explore how agents can act with explicit limits and verifiable records of what they did. This work connects identity and distribution with the development of Eva Protocol."
-  detail_it: "Esploro come gli agenti possano agire entro limiti espliciti e lasciare tracce verificabili delle proprie azioni. Questo lavoro collega identità e distribuzione allo sviluppo di Eva Protocol."
+  description_en: "Public prediction theses with evidence, revision history, and reputation."
+  description_it: "Tesi previsionali pubbliche con evidenze, cronologia delle revisioni e reputazione."
+  detail_en: "An X-native platform where people connect a wallet, write a thesis, attach market and fact signals, and revise their reasoning as evidence changes. I am building it within the Eva initiative, with thesis records anchored to Avalanche."
+  detail_it: "Una piattaforma legata a X dove collegare un wallet, scrivere una tesi, aggiungere segnali di mercato e fatti e aggiornare il ragionamento quando cambiano le evidenze. La sto costruendo all'interno di Eva, con registrazioni delle tesi ancorate ad Avalanche."
 
 - id: team1
   name: Team1 Italy
-  group: community
-  role_en: Community and ecosystem work
-  role_it: Community ed ecosistema
+  group: ecosystem
+  role_en: Italy Coordinator
+  role_it: Coordinatore per l’Italia
   stage_en: Ongoing work
   stage_it: Attività in corso
   description_en: "Helping people in Italy learn, meet, and build with Avalanche."
   description_it: "Aiutare le persone in Italia a imparare, incontrarsi e costruire su Avalanche."
-  detail_en: "I contribute to workshops, events, educational material, and connections between builders. It brings together the infrastructure work and the communication skills I developed through journalism."
-  detail_it: "Contribuisco a workshop, eventi, materiali didattici e connessioni tra chi costruisce. È il punto di incontro tra il lavoro sull'infrastruttura e la comunicazione che ho imparato con il giornalismo."
+  detail_en: "I coordinate Team1 Italy: connecting local organizers and builders, developing workshops and educational material, and helping people find a practical way into the Avalanche ecosystem."
+  detail_it: "Coordino Team1 Italy: metto in contatto organizzatori locali e builder, sviluppo workshop e materiali didattici e aiuto le persone a trovare un punto di ingresso pratico nell'ecosistema Avalanche."
+
+- id: hundred
+  name: Hundred
+  group: apps
+  role_en: Product and development
+  role_it: Prodotto e sviluppo
+  stage_en: Active development
+  stage_it: Sviluppo attivo
+  description_en: "A bodyweight training app for iPhone and Apple Watch."
+  description_it: "Un'app di allenamento a corpo libero per iPhone e Apple Watch."
+  detail_en: "Day-by-day plans toward 100 push-ups, sit-ups, or squats in one workout. I work on the training experience, workout history, and the connection between iPhone and Apple Watch."
+  detail_it: "Piani giorno per giorno per arrivare a 100 piegamenti, addominali o squat in un allenamento. Lavoro sull'esperienza di allenamento, sullo storico e sul collegamento tra iPhone e Apple Watch."
+  url: /hundred/support/
+  link_en: Product details and support
+  link_it: Dettagli e supporto (EN)
+
+- id: pommidoro
+  name: Pommidoro
+  group: apps
+  role_en: Product and development
+  role_it: Prodotto e sviluppo
+  stage_en: Active development
+  stage_it: Sviluppo attivo
+  description_en: "A focus timer for iPhone, iPad, and Mac."
+  description_it: "Un timer per la concentrazione su iPhone, iPad e Mac."
+  detail_en: "Focus sessions, breaks, session history, and time tracking across Apple devices. I work on making the timer dependable and keeping planned time distinct from time actually spent."
+  detail_it: "Sessioni di concentrazione, pause, storico e monitoraggio del tempo sui dispositivi Apple. Lavoro sull'affidabilità del timer e sulla distinzione tra tempo pianificato e tempo effettivamente dedicato."
+
+- id: parcelpilot
+  name: ParcelPilot
+  group: apps
+  role_en: Product and development
+  role_it: Prodotto e sviluppo
+  stage_en: Active development
+  stage_it: Sviluppo attivo
+  description_en: "A native shipment tracker across Apple devices."
+  description_it: "Un'app nativa per seguire le spedizioni sui dispositivi Apple."
+  detail_en: "It turns delivery emails into a shipment list with tracking history. I work on bringing updates together, making the status easy to read, and keeping the experience consistent across iPhone, iPad, Mac, and Apple Watch."
+  detail_it: "Trasforma le email di consegna in un elenco di spedizioni con lo storico del tracking. Lavoro per riunire gli aggiornamenti, rendere leggibile lo stato e mantenere coerente l'esperienza su iPhone, iPad, Mac e Apple Watch."
+
+- id: redbridge
+  name: Redbridge
+  group: ecosystem
+  role_en: Advisor
+  role_it: Advisor
+  stage_en: Active advisory
+  stage_it: Advisory attiva
+  description_en: "Advisory work on privacy-preserving infrastructure connecting Zcash and Avalanche."
+  description_it: "Advisory sull'infrastruttura che collega Zcash e Avalanche preservando la privacy."
+  detail_en: "I contribute to the project's token-design and ecosystem work. It is an advisory engagement, alongside my own product portfolio."
+  detail_it: "Contribuisco al lavoro sul design del token e sull'ecosistema del progetto. È un incarico di advisory, in parallelo al portafoglio dei miei prodotti."
+
+- id: acps
+  name: Avalanche research
+  group: research
+  role_en: Research and analysis
+  role_it: Ricerca e analisi
+  stage_en: Ongoing research
+  stage_it: Ricerca in corso
+  description_en: "Examining the incentives and trade-offs behind Avalanche proposals."
+  description_it: "Studiare incentivi e compromessi nelle proposte per Avalanche."
+  detail_en: "I study Avalanche Community Proposals and turn the mechanics into explanations and interactive tools. My fee-curve explorer compares how different validator-fee models change AVAX burn."
+  detail_it: "Studio le Avalanche Community Proposals e ne traduco i meccanismi in spiegazioni e strumenti interattivi. Il mio esploratore delle curve confronta come diversi modelli di commissioni per i validatori cambino il burn di AVAX."
+  url: /acp-255-four-fee-curves-en/
+  link_en: Explore the fee models
+  link_it: Esplora i modelli di commissioni (EN)
+
+- id: routescan
+  name: Avascan / Routescan
+  group: past
+  role_en: Former Head of Growth
+  role_it: Già responsabile della crescita
+  stage_en: 2020–May 2026
+  stage_it: 2020–maggio 2026
+  description_en: "My previous chapter in blockchain explorer infrastructure."
+  description_it: "Il mio percorso precedente nell'infrastruttura degli explorer blockchain."
+  detail_en: "I joined Avascan in 2020 and later led growth at Routescan, working on partnerships and Explorer-as-a-Service positioning. I left in May 2026 and now work independently on my own projects and advisory."
+  detail_it: "Sono entrato in Avascan nel 2020 e ho poi guidato la crescita di Routescan, lavorando su partnership e posizionamento di Explorer-as-a-Service. Ho lasciato l'azienda a maggio 2026 e oggi lavoro in modo indipendente sui miei progetti e nell'advisory."
+  url: https://routescan.io
+  link_en: Visit Routescan
+  link_it: Visita Routescan

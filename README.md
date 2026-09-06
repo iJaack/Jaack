@@ -29,6 +29,10 @@ before running these commands.
 Keep release claims grounded in the relevant public product or release system.
 A development entry does not imply an App Store release or protocol launch.
 Older articles retain their original dates and describe the system at that time.
+Review the current profile and initiative registry before changing roles or
+project status. Routescan is a former role, ending in May 2026; its older
+articles are historical context. The shared author biography describes the
+current role and is separate from those article bodies.
 
 ## Checks
 

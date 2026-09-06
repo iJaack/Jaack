@@ -1,9 +1,9 @@
 # main text of home
 name: Giacomo Barbieri
-bio: Growth at Routescan. Building products, blockchain infrastructure, and practical AI systems.
+bio: Independent builder and operator across crypto, AI, and native apps.
 
 # twitter summary info
-description: "Giacomo Barbieri: growth at Routescan, products, practical AI systems, and writing."
+description: "Giacomo Barbieri: independent crypto builder, native apps, AI systems, Team1 Italy, and advisory."
 
 # if it's an external image, update below for true
 # better with square images
@@ -39,7 +39,7 @@ medium: ijaack94
 authors:
     jaack:
         name: Giacomo Barbieri
-        bio: Head of Growth at Routescan. Building at the intersection of crypto infrastructure and AI agents.
+        bio: Independent builder and operator across crypto, AI, and native apps. Former Head of Growth at Routescan.
         external-image: false
         picture: assets/images/profilo-homepage-ig.png
         twitter: ijaack94

@@ -5,8 +5,8 @@ title_it: Progetti
 permalink: /projects/
 description: Products, infrastructure, AI systems, and community work by Giacomo Barbieri. Roles, context, and development stages.
 ---
-<p class="page-intro"><span class="lang-en" lang="en">Some things I build, some things I help grow. My work spans infrastructure, focused consumer products, and the systems that connect them.</span><span class="lang-it" lang="it">Alcune cose le costruisco, altre le aiuto a crescere. Il mio lavoro va dall'infrastruttura ai prodotti di uso quotidiano, fino ai sistemi che li collegano.</span></p>
-{% assign groups = 'infrastructure|products|systems|community' | split: '|' %}
+<p class="page-intro"><span class="lang-en" lang="en">My own ventures and apps, alongside ecosystem coordination, advisory, and research.</span><span class="lang-it" lang="it">I miei progetti e le mie app, insieme al coordinamento di community, all’advisory e alla ricerca.</span></p>
+{% assign groups = 'ventures|apps|ecosystem|systems|research|past' | split: '|' %}
 {% for group in groups %}
 <section class="work-group" aria-labelledby="group-{{ group }}">
   <h2 id="group-{{ group }}"><span class="lang-en" lang="en">{{ site.data.ui_text.work_groups[group].en }}</span><span class="lang-it" lang="it">{{ site.data.ui_text.work_groups[group].it }}</span></h2>

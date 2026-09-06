@@ -53,15 +53,21 @@ languages:
     posts_empty: Nessun post in Italiano per ora.
 
 work_groups:
-  infrastructure:
-    en: Infrastructure
-    it: Infrastruttura
-  products:
-    en: Products
-    it: Prodotti
+  ventures:
+    en: Ventures
+    it: Progetti
+  apps:
+    en: Native apps
+    it: App native
+  ecosystem:
+    en: Ecosystem and advisory
+    it: Ecosistema e advisory
   systems:
-    en: AI and internal systems
-    it: AI e sistemi interni
-  community:
-    en: Community
-    it: Community
+    en: The system behind the work
+    it: Il sistema dietro al lavoro
+  research:
+    en: Research
+    it: Ricerca
+  past:
+    en: Previously
+    it: In precedenza
