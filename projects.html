@@ -1,80 +1,17 @@
 ---
 layout: page
-title: Projects
-description: A collection of research and experiments
+title: Work
+title_it: Progetti
+permalink: /projects/
+description: Products, infrastructure, AI systems, and community work by Giacomo Barbieri. Roles, context, and development stages.
 ---
-
-{% for lang in site.data.ui_text.languages %}
-<div class="lang-{{ lang.code }}">
-	{% for paragraph in site.data.ui_text.projects_intro[lang.code] %}
-	<p>{{ paragraph }}</p>
-	{% endfor %}
-</div>
+<p class="page-intro"><span class="lang-en" lang="en">My own ventures and apps, alongside ecosystem coordination, advisory, and research.</span><span class="lang-it" lang="it">I miei progetti e le mie app, insieme al coordinamento di community, all’advisory e alla ricerca.</span></p>
+{% assign groups = 'ventures|apps|ecosystem|systems|research|past' | split: '|' %}
+{% for group in groups %}
+<section class="work-group" aria-labelledby="group-{{ group }}">
+  <h2 id="group-{{ group }}"><span class="lang-en" lang="en">{{ site.data.ui_text.work_groups[group].en }}</span><span class="lang-it" lang="it">{{ site.data.ui_text.work_groups[group].it }}</span></h2>
+  {% assign projects = site.data.projects | where: 'group', group %}
+  {% for project in projects %}{% include project-entry.html %}{% endfor %}
+</section>
 {% endfor %}
-
-<style>
-	.projects-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-		gap: 20px;
-		margin-top: 30px;
-	}
-
-	.project-card {
-		border: 1px solid #eaeaea;
-		border-radius: 8px;
-		overflow: hidden;
-		transition: transform 0.2s, box-shadow 0.2s;
-		text-decoration: none;
-		color: inherit;
-		display: flex;
-		flex-direction: column;
-		background: #fff;
-	}
-
-	.project-card:hover {
-		transform: translateY(-4px);
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	}
-
-	.project-image {
-		width: 100%;
-		height: 160px;
-		object-fit: cover;
-		border-bottom: 1px solid #eaeaea;
-	}
-
-	.project-content {
-		padding: 15px;
-		flex-grow: 1;
-	}
-
-	.project-title {
-		margin: 0 0 8px 0;
-		font-size: 1.1em;
-		font-weight: bold;
-	}
-
-	.project-desc {
-		font-size: 0.9em;
-		color: #666;
-		margin: 0;
-		line-height: 1.5;
-	}
-</style>
-
-<div class="projects-grid">
-	{% for project in site.data.projects %}
-	<a href="{% if project.url contains 'http' %}{{ project.url }}{% else %}{{ project.url | relative_url }}{% endif %}"
-		class="project-card" {% if project.url contains 'http' %}target="_blank" {% endif %}>
-		<img src="{{ project.image | relative_url }}" alt="{{ project.name }}" class="project-image">
-		<div class="project-content">
-			<h3 class="project-title">{{ project.name }}</h3>
-			{% for lang in site.data.ui_text.languages %}
-			{% assign desc_key = "description_" | append: lang.code %}
-			<p class="project-desc lang-{{ lang.code }}">{{ project[desc_key] }}</p>
-			{% endfor %}
-		</div>
-	</a>
-	{% endfor %}
-</div>
+<section class="home-section"><h2><span class="lang-en" lang="en">Earlier experiments</span><span class="lang-it" lang="it">Esperimenti precedenti</span></h2><p><a href="https://avax-price.vercel.com">Avax Price</a> · <a href="https://yields.world">Yields World</a> · <a href="{{ '/podcast/' | relative_url }}">Podcast</a> · <a href="{{ '/newsletter/' | relative_url }}"><span class="lang-en" lang="en">Newsletter archive</span><span class="lang-it" lang="it">Archivio newsletter</span></a></p></section>

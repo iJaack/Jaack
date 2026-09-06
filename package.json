@@ -1,9 +1,10 @@
 {
   "name": "jaack-website",
   "version": "1.0.0",
-  "description": "Jekyll website source for Jaack",
+  "private": true,
   "scripts": {
-    "build": "bundle exec jekyll build"
-  },
-  "dependencies": {}
+    "build": "bundle exec jekyll build",
+    "test": "node --test tests/language.test.cjs && bundle exec ruby tests/site_test.rb",
+    "check": "node --check assets/js/language.js && npm run build && npm test"
+  }
 }

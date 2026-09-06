@@ -1,18 +1,58 @@
-<h1>Chi sono</h1>
-<p>Ho sempre avuto difficoltà a definire la mia persona.</p>
+# Jaack
 
-<p>Credo questo sia un grosso problema, ma mi piace pensare che voglio rimanere con questo problema fino ai 30 anni. Credo che non sapersi descrivere, alla mia età, sia un modo per poter dire di saper fare un po' di tutto. Di essere in grado di adattarsi velocemente.</p>
+Personal website for Giacomo Barbieri, published at https://jaack.me.
+Jekyll builds the site; GitHub Pages publishes the root of the master branch.
 
-<p>Sento di non essere nato nel 1994, mio anagrafico anno di nascita, ma nel 2014, precisamente il 27 gennaio. Quello è il giorno in cui ho dato vita, insieme a dei colleghi in università, tweaknology.org, la mia prima creatura sul web.</p>
+## Local development
 
-<p>Ora Tweaknology non esiste più, ma tutto quello che ho imparato sul web lo devo a quella esperienza. Ed è per questo che oggi ho bisogno di uno spazio mio, sul web. Ho un bisogno di esprimere i miei pensieri, molto egoisticamente. Spesso trovo che i miei pensieri sono accolti positivamente dal pubblico che mi segue, che è molto piccolo.</p>
+Use Ruby 3.3 and Bundler, plus Node.js 18 or later for the JavaScript checks.
+No npm dependencies are required.
 
-<p>Da qualche anno ho intensificato i miei sforzi nella ricerca su AI, blockchain e soprattutto 5G, di cui parlo periodicamente su Webnews.it, la testata per cui scrivo dal 2015.</p>
+```sh
+bundle install
+npm run check
+bundle exec jekyll serve --config _config.yml,_config-dev.yml --host 127.0.0.1
+```
 
-<p>Qui ci sono i miei pensieri, unlocked.</p>
+On macOS with Homebrew's Ruby 3.3, add its bin directory to your shell's PATH
+before running these commands.
 
-<h2>A cosa sto lavorando</h2>
-<ul>
-  <li><a href="https://italia.campus-party.org/community/">Campus Party Italia 2020 (CPIT4)</a></li>
-  <li><a href="https://www.webnews.it/author/g-barbieri/">Recensioni e approfondimenti su Webnews.it</a></li>
-</ul>
+## Content
+
+- Homepage: index.html
+- Work entries: _data/projects.yml (English and Italian, with role and stage)
+- Current focus: now.md and the homepage summary
+- Biography: _includes/about-body.html, shared by both existing About URLs
+- Writing: _posts; homepage selections use their existing slugs
+- Navigation: _data/ui_text.yml
+
+Keep release claims grounded in the relevant public product or release system.
+A development entry does not imply an App Store release or protocol launch.
+Older articles retain their original dates and describe the system at that time.
+Review the current profile and initiative registry before changing roles or
+project status. Routescan is a former role, ending in May 2026; its older
+articles are historical context. The shared author biography describes the
+current role and is separate from those article bodies.
+
+## Checks
+
+`npm run check` validates JavaScript syntax, builds the full site, runs
+language-switch unit tests, and checks the generated pages for navigation,
+local links and anchors, metadata, content states, and retained special pages.
+
+Inspect English and Italian at desktop and phone widths after layout changes.
+The existing wide research articles have their own styles and scripts.
+
+## Hosting
+
+The canonical domain is jaack.me. Its Cloudflare configuration and the GitHub
+Pages certificate are managed outside this repository.
+
+A Cloudflare HTTP 526 response cannot be fixed by changing page content.
+Check the origin certificate and GitHub Pages custom-domain health before
+calling a deployment available. Keep HTTPS verification enabled.
+
+On 6 September 2026, the domain returned 526, GitHub Pages reported no
+certificate and HTTPS ineligibility behind the Cloudflare proxy, and the
+renewed Cloudflare login could read the zone but was denied access to DNS records and SSL settings (403). These are diagnostic observations,
+not proof of the exact origin configuration.

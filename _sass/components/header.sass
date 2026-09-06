@@ -1,55 +1,39 @@
 .header-home
-	display: block
-	margin: 0 auto
-	padding: 60px 0 40px
-	text-align: left
-	position: relative
-	z-index: 99
+  padding: 70px 0 64px
 
-	.hero-label
-		font-family: $fontMono
-		font-size: 1.3rem
-		color: $muted
-		text-transform: uppercase
-		letter-spacing: 0.12em
-		margin-bottom: 20px
+  .hero-label
+    font-family: $fontMono
+    font-size: 1.2rem
+    color: $muted
+    letter-spacing: 0.04em
+    margin: 0 0 26px
 
-	.hero-title
-		font-family: $fontSans
-		font-size: 5.5rem
-		font-weight: 700
-		line-height: 1.1
-		letter-spacing: -2px
-		color: $text
-		margin: 0 0 24px
-		font-style: normal
+  .hero-title
+    font-family: $fontDisplay
+    font-size: clamp(4.2rem, 7vw, 7.4rem)
+    font-weight: 400
+    line-height: 1.04
+    letter-spacing: -1.5px
+    margin: 0 0 28px
+    text-wrap: balance
 
-		@media #{$mobile}
-			font-size: 3.8rem
+  .hero-sub
+    max-width: 580px
+    font-size: 1.8rem
+    color: $muted
+    line-height: 1.65
+    margin: 0 0 28px
 
-		@media #{$tablet}
-			font-size: 4.5rem
+  .hero-cta
+    font-size: 1.5rem
+    font-weight: 500
+    color: $accent
+    text-underline-offset: 5px
 
-	.hero-sub
-		font-family: $fontSans
-		font-size: 1.7rem
-		font-weight: 300
-		color: $muted
-		line-height: 1.6
-		margin: 0 0 32px
-		max-width: 480px
-
-	.hero-cta
-		display: inline-block
-		font-family: $fontSans
-		font-size: 1.4rem
-		font-weight: 500
-		color: $accent
-		text-decoration: none
-		border-bottom: 1px solid $accent
-		padding-bottom: 2px
-		transition: opacity 0.15s ease
-
-		&:hover
-			opacity: 0.75
-			color: $accent
+@media only screen and (max-width: 600px)
+  .header-home
+    padding: 42px 0 44px
+    .hero-title
+      letter-spacing: -0.8px
+    .hero-label
+      font-size: 1.1rem
