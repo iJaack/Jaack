@@ -25,7 +25,8 @@ permalink: /harness-companion/
   <p>Save the script on your computer, then initialize and start a local broker:</p>
   <pre><code>python3 companion.py init
 python3 companion.py serve</code></pre>
-  <p>Loopback is the default. To connect an iPhone or iPad, follow the integration guide to configure a reachable LAN address and explicitly enable a LAN listener. Generate a worker pairing, paste or scan it in the app, and tap Start sharing.</p>
+  <p>Loopback is the default. To connect an iPhone or iPad, follow the integration guide to configure a reachable LAN address and explicitly enable a LAN listener. Generate a worker pairing, paste it, import its JSON file or scan its QR representation in the app, and tap Start sharing.</p>
+  <p>The downloadable Python reference broker is available under the <a href="/harness-companion/downloads/LICENSE">MIT License</a>. This license applies to the broker; the native app source is not included in this download.</p>
   <h2>Fits your harness</h2>
   <p>The open HTTPS protocol, CLI and stdio MCP adapter provide the integration boundary. Any compatible harness can discover devices, submit work, inspect status, cancel jobs and retrieve artifacts. Configuration differs by harness; this does not imply certification of every harness or version.</p>
   <p>Pairing pins the broker’s TLS certificate. Separate worker and harness credentials keep job submission apart from device execution. Jobs have leases, cancellation and verifiable artifact hashes.</p>
