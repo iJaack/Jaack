@@ -1,0 +1,27 @@
+---
+layout: page
+title: Harness Companion support
+description: Setup, connection troubleshooting and support for Harness Companion.
+permalink: /harness-companion/support/
+---
+<article>
+  <p>Contact <a href="mailto:hey@jaack.me">hey@jaack.me</a> for setup help, bug reports or privacy questions. Include your device model, operating system version, app version and the steps that produced the issue. Do not send pairing JSON, tokens, private keys or sensitive job contents.</p>
+  <h2>Connect a device</h2>
+  <ol>
+    <li><a href="/harness-companion/downloads/companion.py" download>Download the broker</a> and follow the <a href="/harness-companion/downloads/integrations.md">CLI and MCP guide</a>. Use Python 3.10 or later and OpenSSL.</li>
+    <li>For mobile devices, initialize the broker with your computer’s reachable LAN address. Explicitly start its LAN listener and allow the connection through your firewall.</li>
+    <li>Run the broker’s <code>pair</code> command. Verify the address and certificate fingerprint, then paste its JSON or scan its QR representation in the app. Keep this credential private.</li>
+    <li>Tap Start sharing. Discover the device from your harness before submitting a supported job.</li>
+    <li>Retrieve the result with <code>artifact</code> or <code>companion_artifact</code>. The broker checks the artifact fingerprint.</li>
+  </ol>
+  <h2>If the connection fails</h2>
+  <p>Check that the broker is running, the address and port are correct, and both devices can reach each other. Grant local network permission if prompted. A loopback address such as 127.0.0.1 points to the device itself, not another computer.</p>
+  <p>A changed certificate requires a new pairing. Never bypass pin verification. If a worker was revoked, create a new pairing and use Forget connection before reconnecting.</p>
+  <h2>If work stops</h2>
+  <p>On iPhone and iPad, keep the app visible. Backgrounding, Stop sharing, loss of connectivity or critical thermal pressure can interrupt the session. Return to the app and start sharing again. An interrupted job may be retried when its lease expires; interruption is not proof of completion.</p>
+  <p>Only text analysis, text chunking and image OCR are supported. Check input limits in the <a href="/harness-companion/downloads/protocol.md">protocol</a>. OCR can make recognition errors; review its output before relying on it.</p>
+  <h2>Remove data or access</h2>
+  <p>Clear Activity deletes the local activity history. Forget connection removes the local Keychain pairing credential and rotates the registration identifier. Revoke the device in the broker to invalidate its remote access. These actions do not erase the broker’s stored jobs or results.</p>
+  <p>The broker operator manages server retention. To erase a broker you operate, stop it and delete its private configuration directory. This also deletes its identity and invalidates existing pairings. Keep any records you need before deletion.</p>
+  <p><a href="/harness-companion/">Harness Companion</a> · <a href="/harness-companion/privacy/">Privacy policy</a></p>
+</article>

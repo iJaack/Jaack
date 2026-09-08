@@ -1,0 +1,35 @@
+---
+layout: page
+title: Harness Companion
+description: Native text and image processing for your AI harness, through an open CLI and MCP adapter.
+permalink: /harness-companion/
+---
+<article>
+  <p>Use your iPhone, iPad or Mac for native text and image processing from your AI harness.</p>
+  <p>Harness Companion connects to a broker you run. Your harness submits a typed job through the command line or MCP; your device processes it and returns an output with a SHA-256 fingerprint.</p>
+  <p><strong>The first App Store release is being prepared.</strong> The reference broker and protocol are available below. There is no App Store download available here yet.</p>
+  <h2>Three built-in operations</h2>
+  <ul>
+    <li><code>text.analyze</code> — Unicode scalar, word and line counts, plus an input fingerprint.</li>
+    <li><code>text.chunk</code> — lossless chunks that join back into the original text.</li>
+    <li><code>image.ocr</code> — native Apple Vision text recognition from PNG or JPEG images.</li>
+  </ul>
+  <p>Text inputs are limited to 200,000 UTF-8 bytes. Images are limited to 1 MiB and 20 megapixels. Request and response JSON is limited to 2 MiB.</p>
+  <h2>Get the broker</h2>
+  <p>The reference broker uses Python 3.10 or later and its standard library. Initial certificate creation also requires the system <code>openssl</code> command.</p>
+  <ul>
+    <li><a href="/harness-companion/downloads/companion.py" download>Download companion.py</a></li>
+    <li><a href="/harness-companion/downloads/integrations.md" download>Download the CLI and MCP integration guide</a></li>
+    <li><a href="/harness-companion/downloads/protocol.md" download>Download Protocol 1</a></li>
+  </ul>
+  <p>Save the script on your computer, then initialize and start a local broker:</p>
+  <pre><code>python3 companion.py init
+python3 companion.py serve</code></pre>
+  <p>Loopback is the default. To connect an iPhone or iPad, follow the integration guide to configure a reachable LAN address and explicitly enable a LAN listener. Generate a worker pairing, paste or scan it in the app, and tap Start sharing.</p>
+  <h2>Fits your harness</h2>
+  <p>The open HTTPS protocol, CLI and stdio MCP adapter provide the integration boundary. Any compatible harness can discover devices, submit work, inspect status, cancel jobs and retrieve artifacts. Configuration differs by harness; this does not imply certification of every harness or version.</p>
+  <p>Pairing pins the broker’s TLS certificate. Separate worker and harness credentials keep job submission apart from device execution. Jobs have leases, cancellation and verifiable artifact hashes.</p>
+  <h2>You control the session</h2>
+  <p>Sharing starts only when you choose. Keep the app in the foreground on iPhone and iPad; sharing stops when it moves to the background. Harness Companion runs these built-in operations, not shell commands, downloaded scripts or a general coding agent. It does not provide always-on mobile computing or a hosted relay.</p>
+  <p><a href="/harness-companion/support/">Setup and support</a> · <a href="/harness-companion/privacy/">Privacy policy</a></p>
+</article>

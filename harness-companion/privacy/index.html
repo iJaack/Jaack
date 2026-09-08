@@ -1,0 +1,27 @@
+---
+layout: page
+title: Harness Companion privacy policy
+description: How Harness Companion handles credentials, device information and job results.
+permalink: /harness-companion/privacy/
+---
+<article>
+  <p><strong>Effective September 8, 2026.</strong> Publisher: Giacomo Barbieri.</p>
+  <h2>Your devices, your data</h2>
+  <p>Harness Companion processes jobs received from the broker you choose. Inputs and results travel over certificate-pinned HTTPS between your device and that broker.</p>
+  <p>The publisher does not receive your jobs, pairing credentials, analytics or advertising identifiers through the app. There is no publisher-operated account or cloud service, advertising, tracking or publisher telemetry.</p>
+  <h2>Stored on your device</h2>
+  <p>Your pairing credential is stored in Apple Keychain. A random device identifier is stored in app preferences. The app retains up to 30 local activity entries, including result previews truncated to 16,000 characters and artifact fingerprints. Pairing credentials are not stored with activity history.</p>
+  <p>Clear Activity deletes local history. Forget connection deletes the local pairing credential and rotates the registration identifier. Revoke the device in your broker to invalidate its remote access. Broker data is managed separately.</p>
+  <h2>Information sent to your broker</h2>
+  <p>Registration sends the device’s random identifier, display name, platform and supported capabilities. During sharing, the app polls for work and sends job progress, completion results or failure reports. The reference broker stores device registrations, job inputs and full outputs in its local database; the app’s preview limit does not limit those server records.</p>
+  <p>The broker operator controls server storage and retention. If you connect to someone else’s broker, review that operator’s policies and only process information you intend to share with them. The publisher has no access to your independently operated broker.</p>
+  <h2>Permissions and sharing</h2>
+  <p>Local network access connects to your broker. Camera access is used only when you choose to scan a pairing QR code. Selected images are read only for the OCR operation you request.</p>
+  <p>Share result sends data through the destination you explicitly choose. That destination’s privacy practices then apply. The app does not sell data or send it to advertising networks.</p>
+  <h2>Retention and deletion</h2>
+  <p>Local history is bounded and can be cleared in the app. Forgetting a connection does not delete the broker’s records. Ask its operator to remove server-side information. If you operate the reference broker, stopping it and deleting its private configuration directory removes its database and credentials and invalidates existing pairings.</p>
+  <h2>Support and changes</h2>
+  <p>If you email support, the publisher receives the information you include in that email to respond to your request. Do not include secrets or sensitive job contents. Contact <a href="mailto:hey@jaack.me">hey@jaack.me</a> for privacy questions or deletion requests concerning support correspondence.</p>
+  <p>This policy may change as the app changes. The effective date above identifies this version.</p>
+  <p><a href="/harness-companion/">Harness Companion</a> · <a href="/harness-companion/support/">Support</a></p>
+</article>
