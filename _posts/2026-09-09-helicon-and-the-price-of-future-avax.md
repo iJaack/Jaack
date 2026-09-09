@@ -11,52 +11,40 @@ tag:
 - tokenomics
 category: blog
 author: jaack
-description: "Ahead of Helicon, I compared ten tokens from 2020 to test whether future supply deserves a valuation discount—and what the evidence can say about slower AVAX issuance."
+description: "Ahead of Helicon, I compared ten tokens from 2020 to test whether future supply deserves a valuation discount, and what the evidence can say about slower AVAX issuance."
 published: true
 lang: en
 custom_stylesheets:
 - /assets/research/helicon/article.css
 ---
 
-Avalanche’s upcoming Helicon upgrade is what made me question whether lower token issuance is always better for valuation.
+I was discussing Helicon’s proposed reduction in AVAX issuance, and my reaction was: yes, less dilution today may be good. But AVAX has a max supply. Slowing issuance also means leaving more tokens to enter circulation further into the future.
 
-Mainnet activation is scheduled for 22 September 2026. Helicon includes changes to staking and C-Chain execution, but the part that started this discussion is ACP-285: a change to the staking reward curve intended to reduce AVAX inflation and extend the network’s security budget.[^7]
+I called this the “pressure of the last token.” My concern is that investors may keep discounting AVAX while a substantial part of its supply remains ahead of them. They may prefer a token whose major releases have finished.
 
-The mechanism matters. The minimum consumption-rate parameter falls from 10% to 7.5% over 90 days, while the maximum stays unchanged. Those percentages are inputs to the reward formula, not AVAX inflation rates or the yield every staker receives. The proposal projects a reduction of 0.5–1 percentage point in annual inflation under its modelling assumptions.[^7]
+Issuing the remaining AVAX faster could make the price much worse in the meantime. My thesis is that, as circulating supply approaches max supply, investors could then accept a higher valuation because they have less future supply to worry about. I wanted to find evidence for that second part before treating it as a reason to oppose lower issuance.
 
-My first reaction was: lower dilution today sounds good, but AVAX still has a 720M ceiling. Slowing issuance leaves more of the reward budget for later. Could investors discount AVAX for longer because that future supply is still there?
+Helicon is scheduled for mainnet on 22 September 2026. Alongside changes to staking and C-Chain execution, ACP-285 lowers the minimum consumption-rate parameter from 10% to 7.5% over 90 days. The maximum stays unchanged. These are parameters in the staking reward formula. A staker’s yield also depends on the rest of that formula; a 2.5-point parameter cut does not mean a 2.5-point cut in token inflation. The authors project 0.5–1 percentage point less annual inflation under their modelling assumptions.[^7]
 
-That is the question behind this research.
+That leaves more of the finite reward budget available for later. I understand the argument for doing this: Avalanche can pay less in rewards now and sustain them for longer. My concern was whether investors would attach a cost to that longer distribution period.
 
-My intuition had two stages. Issuing the remaining tokens faster could make the price much worse during distribution. Once circulating supply approached the ceiling, a smaller future supply overhang could make the token more attractive. Investors might prefer an asset whose substantial releases are already behind it, even if getting there was painful.
+I also wanted to compare tokens without a fixed cap. With ETH, for example, you don’t have a final token to wait for. You can adjust expectations around issuance and burns, then estimate net inflation over the period you plan to hold it. I thought that might make uncapped tokens easier to value, despite the absence of a supply limit.
 
-I was not assuming those stages would cancel each other out. The possible benefit comes later; the additional dilution arrives first. To argue that slower issuance is a problem, I need evidence that the later improvement is real and worth that earlier cost.
+I compared AVAX with BTC, ETH, SOL, APT, SUI, ADA, DOT, ATOM and NEAR, going back to 2020. I found results that supported my intuition, but I could reverse them by changing the starting date.
 
-I also thought uncapped tokens might have an advantage here. With ETH, there is no final token to wait for. Expectations can focus on issuance, burns and net inflation over the holding period. That seemed easier to reason about than the distant end of a capped token’s distribution.
+I’m writing this on 9 September 2026, before mainnet activation. The dataset ends on 6 September. None of the returns below measures Helicon’s effect.
 
-So I compared AVAX with BTC, ETH, SOL, APT, SUI, ADA, DOT, ATOM and NEAR, extending the history back to 2020. I wanted to know whether tokens closer to their supply ceilings subsequently performed better, and whether uncapped tokens behaved differently.
+I used 81 monthly snapshot dates, from 5 January 2020 to 6 September 2026, giving me 705 prices and 704 circulating-supply observations. AVAX enters the monthly sample in October 2020, APT in November 2022 and SUI in May 2023. Those are the first observations in this dataset, not their exact launch dates.[^1]
 
-Some windows supported my intuition. Changing the starting date was enough to reverse the result. That weakens the case for treating Helicon’s longer issuance runway as a valuation problem by itself.
+I kept CoinMarketCap as the historical source to avoid mixing providers’ definitions of circulating supply. Even then, the numbers include more than new issuance: existing allocations can enter circulation, and the provider can change its classification. The first SOL price observation has no circulating-supply value, so I left that cell empty.
 
-This is research ahead of the upgrade. As of 9 September 2026, Helicon has not activated on mainnet, and the historical dataset ends on 6 September. None of the returns below measures its realized effect.
+In the original discussion, I used “unlocked” to cover too many things. Investor vesting, new staking issuance and circulating supply measure different things. Vesting releases existing allocations; minting creates tokens. Burns reduce supply. Unstaking can make tokens liquid without creating any. Staking APR measures rewards relative to staked capital, which also makes it different from inflation across the whole supply.
 
-The full dataset contains 81 monthly snapshot dates, from 5 January 2020 to 6 September 2026. There are 705 price observations and 704 reported circulating-supply observations. Tokens enter when observations become available. AVAX starts in October 2020, APT in November 2022 and SUI in May 2023 on this monthly grid. These are observation dates, not exact launch dates.[^1]
+For AVAX, the gap between reported circulation and 720M includes existing allocations outside circulation as well as tokens yet to be minted. Helicon changes staking rewards. It doesn’t reschedule that entire gap as one unlock.
 
-For the historical comparison, I used CoinMarketCap throughout. Mixing supply definitions across providers would introduce another variable into an already small sample. Even with one provider, circulating supply is a reported classification. It can change because tokens are minted, existing allocations become available, or the provider changes how it counts them.
+I started with circulating supply divided by the supply ceiling. That gives me a percentage to compare, but it leaves out who receives the remaining tokens and when they receive them. I would expect different selling pressure from an allocation released next month and the same quantity issued over years.
 
-One early SOL observation has a price but no reported circulation. I left the supply blank. A missing number cannot become evidence just because the table looks better when every cell is filled.
-
-To connect this comparison to Helicon, I had to separate a few things that get compressed into the word “emissions.”
-
-Minting creates tokens. Vesting makes existing allocations available. Staking rewards can come from issuance or existing revenue, depending on the protocol. Burns destroy tokens. Unstaking changes liquidity without necessarily changing total supply. A staking APR measures rewards against staked capital; it is not automatically the inflation rate of the whole token supply.
-
-This matters for “99% unlocked.” That could describe investor vesting, the share of existing tokens considered circulating, or the share of an eventual ceiling already in circulation. Each tells you something different about future supply pressure.
-
-For AVAX, the gap between reported circulation and 720M also cannot be treated as one future unlock: it includes distinctions between existing allocations and tokens yet to be minted. Helicon changes the staking-reward mechanism. It does not accelerate or postpone every allocation release.
-
-I used circulating supply divided by the policy ceiling as the first measure of supply maturity. It is easy to understand, but it says very little about timing or recipients. The same remaining quantity can arrive next month, over several years, or through a long reward schedule.
-
-Here is the ten-token comparison on a common price window. Supply shares use the 6 September 2026 snapshot. Returns run from 7 May 2023 to 6 September 2026, so APT and SUI are not being compared against years when they did not exist. These are USD price returns, excluding staking rewards.[^2]
+The table uses circulation on 6 September 2026 and a common return period, 7 May 2023 to 6 September 2026. This lets me include APT and SUI without comparing them with years before they existed. Returns are in USD and exclude staking rewards.[^2]
 
 | Token | Supply ceiling | Circulating / ceiling | Price return, common period |
 |---|---:|---:|---:|
@@ -71,15 +59,13 @@ Here is the ten-token comparison on a common price window. Supply shares use the
 | ATOM | No fixed cap | N/A | −85.5% |
 | NEAR | No fixed cap | N/A | +39.9% |
 
-*APT’s cap was approved, but subsequent protocol enforcement was not verified in this research. The ratio is conditional on that approved ceiling. †DOT introduced its cap during 2026. Both stay in the comparison table, but neither enters the historical correlations that require a consistent cap policy. An uncapped ratio is undefined; assigning it 100% would manufacture a comparison.[^3]
+*APT’s cap has approval, but I haven’t verified its subsequent protocol enforcement. Its ratio assumes that approved ceiling. †DOT introduced its cap during 2026. I kept both in this table and excluded them from historical tests that need a consistent cap policy. For uncapped tokens, circulating/max is undefined.[^3]
 
-There is another trap here. If market cap is price multiplied by circulating supply, and cap-based FDV is price multiplied by maximum supply, then market cap divided by FDV is already circulating supply divided by maximum supply. Finding a relationship between those ratios would prove an accounting identity.
+I also avoided comparing circulating/max with market cap/FDV. If you calculate market cap as price × circulating supply and FDV as price × max supply, those two ratios are identical. A correlation between them would add nothing.
 
-I compared supply maturity with subsequent price performance instead. That still does not directly measure a valuation discount. Price is the outcome available in this study; a discount is an explanation that needs more evidence.
+I compared the starting supply ratio with the price return that followed. That lets me test an implication of my thesis, but a price return alone can’t tell me how much of a valuation discount investors assigned to future supply.
 
-The starting-date test made that clear.
-
-For BTC, AVAX and ADA, I kept the tokens and September 2026 endpoint fixed. I then compared the supply ratio at the start with the cumulative price return afterward.
+For BTC, AVAX and ADA, I kept the September 2026 endpoint and changed the starting date:
 
 | Starting snapshot | Correlation with subsequent price return |
 |---|---:|
@@ -87,60 +73,48 @@ For BTC, AVAX and ADA, I kept the tokens and September 2026 endpoint fixed. I th
 | January 2021 | −0.16 |
 | January 2022 | +0.75 |
 
-A positive value means the tokens closer to their caps generally did better in that comparison. Moving the start from October 2020 to January 2021 changed the sign. Moving it to January 2022 made it positive again.
+Positive means the tokens closer to their caps tended to perform better in that comparison. Starting in October 2020 or January 2022 supports my intuition; starting in January 2021 gives me the opposite sign.
 
-There are only three tokens in that test. Bitcoin’s performance, AVAX’s entry price and Cardano’s cycle can each move the result substantially. January 2020 is even thinner: only BTC and ADA qualify from the selected capped tokens. I did not turn a two-point correlation into a research finding.
+With three tokens, Bitcoin’s performance and AVAX’s entry price can move the result a lot. Going back to January 2020 leaves me with BTC and ADA from this capped group, which is too little to make a correlation useful.
 
-The annual comparisons also alternate. Higher starting supply maturity accompanies worse returns in the 2021, 2023 and 2024 intervals, and better returns in 2022, 2025 and 2026 through early September. Those comparisons contain three capped tokens initially and four once SUI has a full starting observation. They are January-to-January snapshot intervals, with a partial 2026 period, rather than exact calendar-year returns.[^4]
-
-I can find a window that agrees with my intuition. I can also find one that disagrees. I cannot treat either as a stable rule.
+The annual comparisons have the same problem. Higher starting circulation/max goes with worse returns in the 2021, 2023 and 2024 intervals, and better returns in 2022, 2025 and 2026 through early September. I start with three capped tokens and add SUI once it has a full starting observation. These intervals run between the first January snapshots, with a partial period for 2026.[^4]
 
 <figure class="helicon-chart">
   <img src="/assets/research/helicon/avax-monthly.svg" width="820" height="360" alt="AVAX monthly USD price from October 2020 to September 2026, showing a large rally and collapse while reported supply maturity increased." loading="lazy">
   <figcaption>Monthly observations do not capture every daily high or low. The price path alone does not identify the effect of supply.</figcaption>
 </figure>
 
-AVAX makes the problem concrete. In October 2020, its reported circulating supply was 24.5M, about 3.4% of the 720M ceiling, and its price was $3.96. By January 2022, the ratio was 33.9% and the price was $113.19. In January 2023, the ratio was 43.3% and the price was $10.87. By September 2026, it was about 60.0% and $7.91.[^5]
+AVAX went from $3.96 and 24.5M circulating in October 2020, about 3.4% of the 720M ceiling, to $113.19 and 33.9% in January 2022. In January 2023, it was $10.87 and 43.3%. By September 2026, it was $7.91 and about 60.0%.[^5]
 
-Supply maturity increased through a large rally, a collapse and subsequent recoveries and declines. That does not show that dilution had no cost. It shows that other changes in demand and valuation were large enough that the supply ratio could not explain the price path by itself.
+Investors paid more and then much less per AVAX while the circulating share kept increasing. Dilution can still have a cost, but I can’t explain that price history from proximity to max supply.
 
-I then looked at the same tokens through time. Starting supply ratios were paired with returns three or twelve monthly snapshots later. Removing each token’s average and each shared starting period’s average helps separate the result from stable differences between tokens and common market conditions.
+I also compared the same tokens over time, pairing their starting supply ratios with returns three or twelve monthly snapshots later. I removed each token’s average and each shared starting period’s average to reduce the influence of persistent differences between tokens and common market conditions.
 
-For BTC, AVAX and ADA from October 2020, those adjusted correlations were −0.17 for three-month forward returns and −0.60 for twelve-month forward returns. The longer history did not reveal the positive maturity effect I was looking for.
+For BTC, AVAX and ADA from October 2020, the adjusted correlations were −0.17 for three-month returns and −0.60 for twelve-month returns. I didn’t find the positive relationship I expected.
 
-I would not use the negative coefficients to argue for faster issuance either. The windows overlap, there are only three assets, and the adjustment does not control changing adoption, liquidity, security or each token’s exposure to the market. More rows do not fix a small number of independent assets.
+I wouldn’t turn those negative numbers into a recommendation to issue faster. I still have three assets, overlapping return windows, and no control for changing adoption, liquidity or security. Adding months doesn’t give me more independent tokens.
 
-There is also a more basic limit: AVAX has not reached the stage my thesis is about. Neither AVAX, ADA nor SUI reaches 90% circulation against its ceiling in this sample. Bitcoin crosses high supply-maturity thresholds, but it starts 2020 already around 86% issued. That is a different experience from distributing most of a young token’s remaining supply.
+There’s another limit: AVAX hasn’t reached the part of the supply curve I’m talking about. Neither AVAX, ADA nor SUI reaches 90% of its ceiling in this sample. Bitcoin starts 2020 around 86% issued, so it gives me little evidence about what happens after a young token distributes most of its remaining supply. I can’t observe the AVAX recovery I’m hypothesizing.
 
-The proposed AVAX recovery after near-completion is still unobserved. The data puts limits on the argument without resolving that counterfactual.
+The uncapped comparison didn’t give me a consistent result either. From 2021, I kept BTC, AVAX and ADA as the capped group, and ETH, SOL, ATOM and NEAR as the uncapped group. The uncapped group has the higher average price return in three intervals and the lower return in three. Remove SOL and its advantage disappears in 2021 and 2023. The 2020 comparison has two tokens per group, so I kept it separate.[^4]
 
-The uncapped-token comparison needed a similar correction.
+I still prefer thinking about uncapped tokens through expected net inflation over my holding period. ETH combines issuance with fee burns. SOL has an issuance schedule with a continuing long-term rate.[^6] But an uncapped token can still have allocation releases, recipients who sell, or future policy changes. I haven’t built a comparable historical net-inflation series across these tokens, so I can’t say net inflation caused the differences in returns.
 
-From 2021, I kept a fixed capped group of BTC, AVAX and ADA, and a fixed uncapped group of ETH, SOL, ATOM and NEAR. On average price return, the uncapped group wins in three measured intervals and loses in three. Removing SOL reverses its advantage in 2021 and 2023. The separate 2020 comparison has only two tokens per group, so it cannot be silently added to the same series.[^4]
+A capped token also needs that analysis. Its max supply doesn’t tell me how many tokens could reach the market in the next two years.
 
-I still think the flow-based framing is useful. An uncapped token has no meaningful percentage of ultimate supply already issued. Expected net issuance over the holding period is a better starting point.
+For Helicon, I have to include what Avalanche gets in exchange for issuance. Auto-renewed validator staking and a shorter minimum staking period change how validators manage their commitments. ACP-285 adjusts the incentive to choose longer durations alongside those changes.[^7] Spending the reward budget faster would also mean having less of it available to pay for future security.
 
-But an uncapped design does not remove allocation releases, recipient selling or uncertainty about future policy. ETH’s issuance and fee burns need to be considered together. SOL’s issuance schedule has a continuing long-term rate. The economics depend on the rules and demand behind those flows.[^6]
+My argument has a discounting problem too. If I assume the same future cost and a positive discount rate, moving that cost further away reduces its present value. To argue that slower issuance hurts valuation, I need something else, such as uncertainty that deters buyers or a change in demand. A later release date alone isn’t enough.
 
-The same applies to capped tokens. A hard cap does not tell me whether the next two years contain heavy releases, or whether the remaining reward budget will be distributed slowly. I cannot rank those risks from the ceiling alone. This study also does not contain a harmonized historical net-inflation series, so it cannot attribute the uncapped group’s performance to net inflation.
+The cost of accelerating distribution could be large. Moving from 60% to 100% of an unchanged ceiling means about 67% more circulating units. Hold circulating market cap constant and the price per token falls about 40%. That calculation assumes a fixed market cap; it predicts neither investor demand nor whether AVAX reaches 720M circulating after burns.
 
-That brings me back to the decision Helicon puts in front of AVAX holders.
+For faster issuance to help holders, buyers would have to pay enough for the reduced future overhang to compensate for the earlier dilution. They could also price that improvement before distribution finishes. My thesis can’t depend on buyers waiting until the last token enters circulation.
 
-The projected inflation saving is only one part of the design. Auto-renewed validator staking and a shorter minimum staking period change how validators can manage their commitments. ACP-285 adjusts the reward incentive for choosing longer durations alongside those changes.[^7] I would evaluate issuance together with the security and participation it pays for.
+Keyrock’s study of more than 16,000 unlock events gives me some evidence of adverse price effects around releases.[^8] I can’t apply a vesting-event result to a change in AVAX’s long staking-reward schedule and claim I’ve proved the same effect.
 
-Lower issuance today can reduce near-term dilution while leaving more of the reward budget available for later. The unresolved question is how investors value that trade-off. Simply pushing the same quantity further into the future does not prove that its present burden rises; under a positive discount rate, deferring an otherwise identical future cost reduces its present value. An argument against slower issuance needs an additional mechanism, such as uncertainty about future releases or a change in demand.
+I still think investors may discount substantial future releases, especially if the timing or recipients make selling pressure hard to estimate. I haven’t found evidence here that issuing AVAX faster would remove enough of that discount to make holders better off.
 
-There is also a simple scale check. Moving from 60% to 100% of an unchanged ceiling would increase circulating units by roughly 67%. If circulating market capitalization stayed constant, price per token would fall roughly 40%. That is conditional arithmetic, not a forecast or a claim that AVAX will literally reach 720M circulating after accounting for burns.
-
-For accelerating issuance to make sense on valuation grounds, removing the future overhang would have to produce a benefit worth that earlier cost and the consequences for the network’s security budget. The eventual improvement could also be anticipated before distribution finishes. There is no reason to assume that the market waits for the last release before changing its expectations.
-
-Existing research on token unlocks gives a reason to take supply pressure seriously. Keyrock’s study of more than 16,000 unlock events reports adverse effects around many releases. But vesting events and a change to a long staking-reward schedule are different mechanisms; that evidence cannot establish the AVAX counterfactual on its own.[^8]
-
-The version of my thesis I can defend is narrower: a large, uncertain or concentrated future release schedule can deserve a valuation discount. Getting rid of that uncertainty could have value. The circulating/max ratio is too crude to tell me how much, when it would appear, or whether accelerating issuance would be worth it.
-
-For Helicon, I would now focus on expected supply becoming available over the next 12–36 months, who receives it, how much may reach the market, and what demand could absorb it. After activation, I would compare actual issuance and burns with the assumptions behind the projection, alongside staking durations and validator participation. A price move on its own would not isolate the upgrade’s effect.
-
-I still think investors can discount substantial future releases. What I cannot support from this research is the next step: that making AVAX reach its ceiling sooner would improve valuation enough to justify the extra dilution. Helicon leaves that question open. A longer reward runway, by itself, is not evidence that holders are worse off.
+After Helicon, I’d look at issuance and burns against the projection, and check how validators change their staking durations and participation. For valuation, I’d estimate how much supply could become available over the next 12–36 months, who gets it and how much demand could absorb it. Circulating/max supply was where I started. I’d need those other estimates before using it to argue against reducing AVAX issuance.
 
 [^1]: [Download the monthly observations](/assets/research/helicon/monthly-snapshots.csv) or the [reproduction bundle](/assets/research/helicon/reproduction.zip), including the input data and calculation script. [Data notes](/assets/research/helicon/README.txt). Original calculations from 81 CoinMarketCap first-Sunday monthly snapshots, 5 January 2020–6 September 2026, with supplemental early SOL listings. The companion dataset retains every source URL, first observation, missing value and calculation. [First historical snapshot](https://coinmarketcap.com/historical/20200105/). This is a selected ten-token sample, not the full historical investment universe; it excludes staking income and does not correct for survivorship bias.
 

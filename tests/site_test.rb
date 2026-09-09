@@ -162,7 +162,7 @@ class SiteTest < Minitest::Test
     assert_equal 10, page.css('.post-body table').first.css('tbody tr').length
     assert_equal 8, page.css('.footnotes > ol > li').length
     assert_equal '2026-09-09', page.at_css('time')['datetime']
-    assert_includes page.at_css('.post-body').text, 'None of the returns below measures its realized effect.'
+    assert_includes page.at_css('.post-body').text, 'None of the returns below measures Helicon’s effect.'
     assert page.at_css('a[href="/assets/research/helicon/reproduction.zip"]')
     assert page.at_css('img[src="/assets/research/helicon/avax-monthly.svg"]')
     picks = doc('blog/index.html').at_css('section[aria-labelledby="crypto"]')
