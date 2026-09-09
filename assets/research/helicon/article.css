@@ -1,0 +1,6 @@
+.post-body table { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 1.5em 0; font-size: .88em; }
+.post-body th, .post-body td { padding: .55em .65em; border-bottom: 1px solid #ddd; }
+.helicon-chart { margin: 2em 0; }
+.helicon-chart img { display: block; width: 100%; height: auto; }
+.helicon-chart figcaption { font-size: .85em; line-height: 1.5; color: #666; margin-top: .65em; }
+.post-body .footnotes { overflow-wrap: anywhere; }

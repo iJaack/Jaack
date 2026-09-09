@@ -6,7 +6,7 @@ require 'cgi'
 class SiteTest < Minitest::Test
   ROOT = File.expand_path('../_site', __dir__)
   PROJECT_IDS = %w[portfolio-os sea-temperature thicc gm10 eva eva-protocol team1 hundred pommidoro parcelpilot redbridge acps routescan]
-  ROUTES = %w[index.html projects/index.html blog/index.html about/index.html now/index.html newsletter/index.html en/about/index.html 404.html] + PROJECT_IDS.map { |id| "projects/#{id}/index.html" }
+  ROUTES = %w[helicon-and-the-price-of-future-avax/index.html index.html projects/index.html blog/index.html about/index.html now/index.html newsletter/index.html en/about/index.html 404.html] + PROJECT_IDS.map { |id| "projects/#{id}/index.html" }
   def doc(route)
     Nokogiri::HTML(File.read(File.join(ROOT, route)))
   end
@@ -142,7 +142,7 @@ class SiteTest < Minitest::Test
   def test_reading_paths_preserve_the_archive_and_real_articles
     page = doc('blog/index.html')
     assert_equal 3, page.css('.reading-path').length
-    assert_equal 6, page.css('.reading-pick').length
+    assert_equal 7, page.css('.reading-pick').length
     assert_equal 3, page.css('.reading-pick .work-meta').length
     assert page.at_css('#archive')
     %w[en it].each do |lang|
@@ -153,6 +153,20 @@ class SiteTest < Minitest::Test
       assert article.at_css('main.post'), link['href']
     end
     assert_equal 6, doc('now/index.html').css('.now-priorities li').length
+  end
+
+  def test_helicon_research_keeps_evidence_and_is_discoverable
+    page = doc('helicon-and-the-price-of-future-avax/index.html')
+    assert_equal 'helicon and the price of future AVAX', page.at_css('h1').text
+    assert_equal 2, page.css('.post-body table').length
+    assert_equal 10, page.css('.post-body table').first.css('tbody tr').length
+    assert_equal 8, page.css('.footnotes > ol > li').length
+    assert_equal '2026-09-09', page.at_css('time')['datetime']
+    assert_includes page.at_css('.post-body').text, 'None of the returns below measures its realized effect.'
+    assert page.at_css('a[href="/assets/research/helicon/reproduction.zip"]')
+    assert page.at_css('img[src="/assets/research/helicon/avax-monthly.svg"]')
+    picks = doc('blog/index.html').at_css('section[aria-labelledby="crypto"]')
+    assert picks.at_css('a[href="/helicon-and-the-price-of-future-avax/"]')
   end
 
   def test_build_does_not_publish_development_files

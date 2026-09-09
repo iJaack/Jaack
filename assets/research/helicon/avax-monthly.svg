@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 360" role="img" aria-labelledby="title desc">
+<title id="title">AVAX price at monthly snapshots, 2020–2026</title>
+<desc id="desc">Seventy-two observations from October 2020 to September 2026. USD price rose from 3.96 to 113.19 in January 2022 and ended at 7.91. Monthly observations do not show every daily high or low.</desc>
+<rect width="820" height="360" fill="#fff"/>
+<g font-family="system-ui,sans-serif" font-size="14" fill="#444">
+<text x="65" y="23">AVAX price · USD</text>
+<path d="M65 300.00H785" stroke="#e4e4e4"/>
+<text x="52" y="305.00" text-anchor="end">0</text>
+<path d="M65 248.40H785" stroke="#e4e4e4"/>
+<text x="52" y="253.40" text-anchor="end">25</text>
+<path d="M65 196.80H785" stroke="#e4e4e4"/>
+<text x="52" y="201.80" text-anchor="end">50</text>
+<path d="M65 145.20H785" stroke="#e4e4e4"/>
+<text x="52" y="150.20" text-anchor="end">75</text>
+<path d="M65 93.60H785" stroke="#e4e4e4"/>
+<text x="52" y="98.60" text-anchor="end">100</text>
+<path d="M65 42.00H785" stroke="#e4e4e4"/>
+<text x="52" y="47.00" text-anchor="end">125</text>
+<text x="94.63" y="327" text-anchor="middle">2021</text>
+<text x="216.12" y="327" text-anchor="middle">2022</text>
+<text x="337.62" y="327" text-anchor="middle">2023</text>
+<text x="459.12" y="327" text-anchor="middle">2024</text>
+<text x="580.95" y="327" text-anchor="middle">2025</text>
+<text x="702.45" y="327" text-anchor="middle">2026</text>
+<polyline points="65.00,291.82 74.32,292.40 85.97,292.57 95.29,292.83 106.94,250.04 116.26,244.99 125.58,239.46 134.90,235.39 146.55,264.09 155.87,274.51 165.19,273.42 176.84,200.56 186.17,158.17 197.82,118.98 207.14,122.93 216.46,66.38 228.11,137.45 237.43,150.30 246.75,97.57 256.07,178.52 267.72,250.13 277.04,265.61 288.69,242.44 298.01,260.77 307.33,265.88 318.98,262.27 328.30,271.26 337.62,277.57 349.27,258.50 358.59,266.65 367.91,264.37 379.56,266.05 388.88,269.49 398.20,272.92 409.85,274.05 419.17,279.60 428.50,279.90 440.15,274.48 449.47,254.66 461.12,230.59 470.44,228.08 479.76,212.06 491.41,198.06 500.73,222.80 510.05,227.90 521.70,246.94 531.02,256.19 540.34,255.73 551.99,244.42 561.31,251.42 570.63,206.93 582.28,211.08 591.60,243.08 600.92,248.52 612.57,266.99 621.89,258.92 631.21,256.92 642.86,262.23 652.18,255.87 663.83,249.03 673.16,237.90 682.48,261.07 694.13,272.23 703.45,270.63 712.77,279.53 722.09,281.36 733.74,281.31 743.06,281.25 754.71,285.97 764.03,285.72 773.35,286.50 785.00,283.68" fill="none" stroke="#b2382c" stroke-width="2.5"/>
+<text x="65" y="352" font-size="12">Source: CoinMarketCap dated monthly snapshots · 4 Oct 2020–6 Sep 2026</text>
+</g></svg>
