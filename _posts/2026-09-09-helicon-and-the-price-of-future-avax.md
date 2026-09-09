@@ -1,6 +1,8 @@
 ---
 title: "helicon and the price of future AVAX"
 layout: post
+image: /assets/research/helicon/cover.png
+headerImage: true
 date: 2026-09-09 09:00:00 +0200
 permalink: /helicon-and-the-price-of-future-avax/
 tag:
