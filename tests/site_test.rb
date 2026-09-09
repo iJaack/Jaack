@@ -165,6 +165,9 @@ class SiteTest < Minitest::Test
     assert_includes page.at_css('.post-body').text, 'None of the returns below measures Helicon’s effect.'
     assert page.at_css('a[href="/assets/research/helicon/reproduction.zip"]')
     assert page.at_css('img[src="/assets/research/helicon/avax-monthly.svg"]')
+    assert page.at_css('script[src*="/assets/research/helicon/chart.js"]')
+    assert page.at_css('input#avax-month[type="range"]')
+    assert page.at_css('script#avax-history-data[type="application/json"]')
     picks = doc('blog/index.html').at_css('section[aria-labelledby="crypto"]')
     assert picks.at_css('a[href="/helicon-and-the-price-of-future-avax/"]')
   end

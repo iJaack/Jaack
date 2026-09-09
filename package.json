@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "bundle exec jekyll build",
-    "test": "node --test tests/language.test.cjs && bundle exec ruby tests/site_test.rb",
-    "check": "node --check assets/js/language.js && npm run build && npm test"
+    "test": "node --test tests/language.test.cjs tests/helicon-chart.test.cjs && bundle exec ruby tests/site_test.rb",
+    "check": "node --check assets/js/language.js && node --check assets/research/helicon/chart.js && npm run build && npm test"
   }
 }

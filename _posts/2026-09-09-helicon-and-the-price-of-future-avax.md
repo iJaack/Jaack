@@ -14,8 +14,11 @@ author: jaack
 description: "Ahead of Helicon, I compared ten tokens from 2020 to test whether future supply deserves a valuation discount, and what the evidence can say about slower AVAX issuance."
 published: true
 lang: en
+custom_scripts:
+- path: /assets/research/helicon/chart.js?v=1
+  defer: true
 custom_stylesheets:
-- /assets/research/helicon/article.css
+- /assets/research/helicon/article.css?v=interactive1
 ---
 
 I was discussing Helicon’s proposed reduction in AVAX issuance, and my reaction was: yes, less dilution today may be good. But AVAX has a max supply. Slowing issuance also means leaving more tokens to enter circulation further into the future.
@@ -79,9 +82,23 @@ With three tokens, Bitcoin’s performance and AVAX’s entry price can move the
 
 The annual comparisons have the same problem. Higher starting circulation/max goes with worse returns in the 2021, 2023 and 2024 intervals, and better returns in 2022, 2025 and 2026 through early September. I start with three capped tokens and add SUI once it has a full starting observation. These intervals run between the first January snapshots, with a partial period for 2026.[^4]
 
-<figure class="helicon-chart">
-  <img src="/assets/research/helicon/avax-monthly.svg" width="820" height="360" alt="AVAX monthly USD price from October 2020 to September 2026, showing a large rally and collapse while reported supply maturity increased." loading="lazy">
-  <figcaption>Monthly observations do not capture every daily high or low. The price path alone does not identify the effect of supply.</figcaption>
+<figure class="helicon-chart" id="avax-history">
+  <img class="helicon-fallback" src="/assets/research/helicon/avax-monthly.svg" width="820" height="360" alt="AVAX monthly USD price from October 2020 to September 2026, showing a large rally and collapse while reported supply maturity increased." loading="lazy">
+  <div class="helicon-interactive" hidden>
+    <p class="helicon-chart-title">AVAX price and circulating supply</p>
+    <div class="helicon-plot"></div>
+    <dl class="helicon-values">
+      <div><dt>Snapshot</dt><dd data-value="date"></dd></div>
+      <div><dt>Price (USD)</dt><dd data-value="price"></dd></div>
+      <div><dt>Circulating AVAX</dt><dd data-value="circulating"></dd></div>
+      <div><dt>Share of 720M cap</dt><dd data-value="ratio"></dd></div>
+    </dl>
+    <label for="avax-month">Explore a monthly snapshot</label>
+    <input id="avax-month" type="range" min="0" max="71" step="1" value="71" aria-describedby="avax-chart-help">
+    <p class="helicon-chart-help" id="avax-chart-help">Hover or tap the line, or use the slider. Arrow keys move one month at a time.</p>
+  </div>
+  <script type="application/json" id="avax-history-data">{{ site.data.helicon_avax | jsonify }}</script>
+  <figcaption>Source: CoinMarketCap monthly snapshots, 4 October 2020–6 September 2026. Monthly observations do not capture every daily high or low. Circulating supply is provider-reported. The price path alone does not identify the effect of supply. <a href="/assets/research/helicon/monthly-snapshots.csv">Download the data</a>.</figcaption>
 </figure>
 
 AVAX went from $3.96 and 24.5M circulating in October 2020, about 3.4% of the 720M ceiling, to $113.19 and 33.9% in January 2022. In January 2023, it was $10.87 and 43.3%. By September 2026, it was $7.91 and about 60.0%.[^5]

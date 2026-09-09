@@ -2,5 +2,22 @@
 .post-body th, .post-body td { padding: .55em .65em; border-bottom: 1px solid #ddd; }
 .helicon-chart { margin: 2em 0; }
 .helicon-chart img { display: block; width: 100%; height: auto; }
-.helicon-chart figcaption { font-size: .85em; line-height: 1.5; color: #666; margin-top: .65em; }
+.helicon-chart figcaption { font-size: .85em; line-height: 1.5; color: #bbb; margin-top: .65em; }
 .post-body .footnotes { overflow-wrap: anywhere; }
+.helicon-chart [hidden] { display: none !important; }
+.helicon-chart-title { font-weight: 600; margin-bottom: .75em; }
+.helicon-plot svg { width: 100%; display: block; cursor: crosshair; touch-action: pan-y; }
+.helicon-plot text { font: 12px system-ui, sans-serif; fill: #bbb; }
+.helicon-grid { stroke: #3b3b3b; stroke-width: 1; }
+.helicon-price-line { fill: none; stroke: #ef6565; stroke-width: 2.5; stroke-linejoin: round; }
+.helicon-crosshair { stroke: #777; stroke-width: 1; stroke-dasharray: 3 3; }
+.helicon-selected { fill: #ef6565; stroke: #111; stroke-width: 2; }
+.helicon-values { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1em; margin: 1em 0; }
+.helicon-values dt { font-size: .75em; color: #bbb; }
+.helicon-values dd { margin: .3em 0 0; font-size: .95em; font-variant-numeric: tabular-nums; }
+.helicon-interactive label { font-size: .85em; }
+.helicon-interactive input { display: block; width: 100%; min-height: 44px; accent-color: #ef6565; cursor: pointer; }
+.helicon-interactive input:focus-visible { outline: 2px solid #ddd; outline-offset: 3px; }
+.helicon-chart-help { font-size: .8em; color: #bbb; margin-top: 0; }
+@media (max-width: 550px) { .helicon-values { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media print { .helicon-interactive input, .helicon-interactive label, .helicon-chart-help { display: none; } }
