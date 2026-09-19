@@ -177,4 +177,15 @@ class SiteTest < Minitest::Test
       refute File.exist?(File.join(ROOT, name)), name
     end
   end
+
+  def test_sitemap_lists_canonical_pages_without_the_legacy_about_duplicate
+    sitemap = Nokogiri::XML(File.read(File.join(ROOT, 'sitemap.xml')))
+    urls = sitemap.xpath('//*[local-name()="loc"]').map(&:text)
+    assert_includes urls, 'https://jaack.me/'
+    assert_includes urls, 'https://jaack.me/about/'
+    refute_includes urls, 'https://jaack.me/en/about/'
+    refute_includes urls, 'https://jaack.me/index'
+    assert_equal 'https://jaack.me/about/', doc('en/about/index.html').at_css('link[rel="canonical"]')['href']
+    assert_includes File.read(File.join(ROOT, 'robots.txt')), 'Sitemap: https://jaack.me/sitemap.xml'
+  end
 end
