@@ -1,0 +1,160 @@
+// Shared wide-screen layout: expand collections and media, constrain prose.
+.page > p, .page > ul, .page > ol,
+.page > .lang-en > p, .page > .lang-it > p
+  max-width: 72ch
+
+.post
+  > .title, > .date, > .blog-navigation, > .author, > .related
+    max-width: 720px
+    margin-left: auto
+    margin-right: auto
+  > .title
+    line-height: 1.2
+    text-wrap: balance
+  > .title-image
+    width: 100%
+    max-width: 1120px
+    max-height: 560px
+    object-fit: contain
+  > beeline-button
+    display: block
+    max-width: 720px
+    margin: 0 auto
+  .post-body
+    > p, > ul, > ol, > blockquote, > pre,
+    > h2, > h3, > h4, > hr, > .footnotes
+      box-sizing: border-box
+      max-width: 720px
+      margin-left: auto
+      margin-right: auto
+    > figure, > table, > img, > p:has(img, iframe, video)
+      max-width: 1120px
+      margin-left: auto
+      margin-right: auto
+    > img
+      display: block
+
+// Explicitly wide research posts retain their custom interactive layouts.
+.wrapper-xwide .post > .post-body
+  > p, > ul, > ol, > blockquote, > pre, > h2, > h3, > h4, > hr
+    max-width: 720px
+
+@media only screen and (min-width: 960px)
+  .header-home
+    display: grid
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr)
+    column-gap: 64px
+    padding: 64px 0 72px
+    .hero-intro
+      grid-column: 1 / -1
+    .hero-title
+      margin-bottom: 0
+    .hero-bottom
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-end
+      gap: 20px
+
+  .page > .page-title
+    font-size: clamp(5.2rem, 4vw, 7.2rem)
+
+  .home-section
+    margin-bottom: 80px
+
+  .contact-section
+    display: grid
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr)
+    gap: 0 64px
+    h2
+      grid-row: span 2
+      text-wrap: balance
+    p
+      margin-top: 0
+    .contact-links
+      grid-column: 2
+
+  .work-group
+    display: grid
+    grid-template-columns: minmax(160px, 0.55fr) minmax(0, 2fr)
+    gap: 48px
+    > h2
+      margin-top: 26px
+    .work-entry
+      gap: 32px
+
+  .reading-paths
+    display: grid
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+    gap: 40px
+  .reading-path
+    min-width: 0
+
+  .writing > .list
+    display: grid
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+    column-gap: 48px
+    > .item
+      min-width: 0
+      > .url
+        height: 100%
+        box-sizing: border-box
+
+  .about-body
+    display: grid
+    grid-template-columns: minmax(200px, 0.7fr) minmax(0, 1.65fr)
+    gap: 64px
+    .about-portrait
+      float: none
+      width: 100%
+      max-width: 340px
+      height: auto
+      margin: 0
+    > .lang-en, > .lang-it
+      grid-column: 2
+      grid-row: 1
+      max-width: 72ch
+
+  .now-priorities
+    display: grid
+    grid-template-columns: repeat(3, minmax(0, 1fr))
+    gap: 40px
+    max-width: none
+    li
+      padding-right: 16px
+
+  .project-details
+    display: grid
+    grid-template-columns: minmax(200px, 0.6fr) minmax(0, 1.8fr)
+    gap: 64px
+    align-items: start
+    margin-top: 36px
+  .project-facts
+    display: grid
+    gap: 28px
+    margin: 0
+  .project-content
+    min-width: 0
+    > h2:first-child
+      margin-top: 0
+  .project-screen img
+    width: 300px
+
+  .footer-main
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+    gap: 24px
+
+@media only screen and (min-width: 1280px)
+  .header-home .hero-title
+    font-size: clamp(6.6rem, 5vw, 8rem)
+  .featured-grid
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr)
+    gap: 32px
+  .featured-secondary
+    gap: 32px
+  .app-gallery
+    padding: 56px 64px
+  .app-preview img
+    width: 260px
