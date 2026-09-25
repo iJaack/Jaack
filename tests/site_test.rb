@@ -5,7 +5,7 @@ require 'cgi'
 
 class SiteTest < Minitest::Test
   ROOT = File.expand_path('../_site', __dir__)
-  PROJECT_IDS = %w[portfolio-os sea-temperature thicc gm10 eva eva-protocol team1 hundred pommidoro parcelpilot redbridge acps routescan]
+  PROJECT_IDS = %w[portfolio-os sea-temperature gm10 eva eva-protocol team1 hundred pommidoro parcelpilot redbridge acps routescan]
   ROUTES = %w[helicon-and-the-price-of-future-avax/index.html index.html projects/index.html blog/index.html about/index.html now/index.html newsletter/index.html en/about/index.html 404.html] + PROJECT_IDS.map { |id| "projects/#{id}/index.html" }
   def doc(route)
     Nokogiri::HTML(File.read(File.join(ROOT, route)))
@@ -47,7 +47,7 @@ class SiteTest < Minitest::Test
 
   def test_homepage_features_real_project_and_writing_destinations
     page = doc('index.html')
-    assert_equal 3, page.css('#selected-work article').length
+    assert_equal 2, page.css('#selected-work article').length
     assert_equal 3, page.css('.selected-writing article').length
     assert page.at_css('#contact a[href^="mailto:"]')
     refute_includes page.text, 'Builder on the side'
@@ -55,7 +55,7 @@ class SiteTest < Minitest::Test
 
   def test_work_states_are_present_in_both_languages
     entries = doc('projects/index.html').css('.work-entry')
-    assert_equal 13, entries.length
+    assert_equal 12, entries.length
     entries.each do |entry|
       %w[en it].each do |lang|
         refute_empty entry.at_css(".work-meta .lang-#{lang}").text.strip
@@ -152,7 +152,16 @@ class SiteTest < Minitest::Test
       article = doc(link['href'].delete_prefix('/') + 'index.html')
       assert article.at_css('main.post'), link['href']
     end
-    assert_equal 6, doc('now/index.html').css('.now-priorities li').length
+    assert_equal 4, doc('now/index.html').css('.now-priorities li').length
+  end
+
+  def test_stealth_project_is_absent_from_published_site
+    refute File.exist?(File.join(ROOT, 'projects/thicc/index.html'))
+    Dir.glob(File.join(ROOT, '**', '*.html')).each do |path|
+      refute_match(/thicc/i, File.read(path), path)
+    end
+    sitemap = File.join(ROOT, 'sitemap.xml')
+    refute_match(/thicc/i, File.read(sitemap)) if File.file?(sitemap)
   end
 
   def test_helicon_research_keeps_evidence_and_is_discoverable

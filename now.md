@@ -8,9 +8,8 @@ description: Current priorities and recent changes from Giacomo Barbieri. Update
 <p class="work-meta"><time datetime="2026-09-06"><span class="lang-en" lang="en">Updated 6 September 2026</span><span class="lang-it" lang="it">Aggiornato il 6 settembre 2026</span></time></p>
 <div class="lang-en" lang="en">
 <p class="page-intro">What has my attention right now.</p>
-<h2>Three priorities</h2>
+<h2>Two priorities</h2>
 <ol class="now-priorities">
-<li><strong>Prepare THICC for launch.</strong> Keep liquidity estimates and their uncertainty understandable. <a href="/projects/thicc/">The project →</a></li>
 <li><strong>Refine Eva’s public thesis workflow.</strong> Make the relationship between a prediction, its evidence, and later revisions clear. <a href="/projects/eva-protocol/">The project →</a></li>
 <li><strong>Work through the apps’ release details.</strong> Focus on reliable behavior across devices, data availability, and the small interactions people use every day. <a href="/projects/#group-apps">The app portfolio →</a></li>
 </ol>
@@ -23,9 +22,8 @@ description: Current priorities and recent changes from Giacomo Barbieri. Update
 </div>
 <div class="lang-it" lang="it">
 <p class="page-intro">A cosa sto dedicando attenzione adesso.</p>
-<h2>Tre priorità</h2>
+<h2>Due priorità</h2>
 <ol class="now-priorities">
-<li><strong>Preparare THICC al lancio.</strong> Rendere comprensibili le stime di liquidità e la loro incertezza. <a href="/projects/thicc/">Il progetto →</a></li>
 <li><strong>Affinare il flusso delle tesi pubbliche di Eva.</strong> Chiarire il legame tra una previsione, le sue evidenze e le revisioni successive. <a href="/projects/eva-protocol/">Il progetto →</a></li>
 <li><strong>Curare i dettagli di rilascio delle app.</strong> Concentrarmi su affidabilità tra dispositivi, disponibilità dei dati e piccole interazioni quotidiane. <a href="/projects/#group-apps">Le app →</a></li>
 </ol>

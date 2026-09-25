@@ -26,22 +26,6 @@
   detail_en: "A focused native app built around a practical question: how warm is the sea? I work on the map, data coverage, and the experience of understanding a model estimate, including where data is unavailable."
   detail_it: "Un'app nativa costruita intorno a una domanda pratica: quanto è caldo il mare? Lavoro sulla mappa, sulla copertura dei dati e su come rendere comprensibile una stima del modello, anche dove i dati non sono disponibili."
 
-- id: thicc
-  url: https://thicc.market
-  link_en: Explore the public interface
-  link_it: Esplora l’interfaccia pubblica
-  featured: true
-  name: THICC
-  group: ventures
-  role_en: Product and development
-  role_it: Prodotto e sviluppo
-  stage_en: Preparing for launch
-  stage_it: In preparazione al lancio
-  description_en: "Market-structure research that looks beyond a token's displayed price."
-  description_it: "Ricerca sulla struttura dei mercati che va oltre il prezzo mostrato di un token."
-  detail_en: "I build tools for examining liquidity, modeled buy and sell outcomes, and the evidence behind a market snapshot. A core product decision: show uncertainty when the available data cannot support a result."
-  detail_it: "Costruisco strumenti per esaminare liquidità, simulazioni di acquisto e vendita e le evidenze dietro un mercato. Una scelta centrale di prodotto: mostrare l'incertezza quando i dati non consentono una risposta."
-
 - id: gm10
   featured: true
   name: Gem Mint Strategy ($CATCH)

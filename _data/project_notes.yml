@@ -4,9 +4,6 @@ portfolio-os:
 sea-temperature:
   en: "The important distinction is between a model estimate and a measurement at your exact location. My development work includes making coverage and unavailable data understandable on the map."
   it: "La distinzione importante è tra una stima del modello e una misura nella tua posizione esatta. Il lavoro di sviluppo comprende rendere leggibili sulla mappa la copertura e l’assenza di dati."
-thicc:
-  en: "Open the public interface to explore a token’s liquidity and the evidence behind its market snapshot. Treat modeled outcomes as estimates; an unavailable result is not a zero balance."
-  it: "Apri l’interfaccia pubblica per esplorare la liquidità di un token e le evidenze dietro al mercato. I risultati simulati sono stime; un risultato non disponibile non è un saldo pari a zero."
 gm10:
   en: "Explore the project’s card portfolio and public explanation of the strategy. The associated valuation essay is dated research: its assumptions describe the model at the time of writing."
   it: "Esplora il portafoglio di carte e la spiegazione pubblica della strategia. Il saggio sulla valutazione è una ricerca datata: le sue ipotesi descrivono il modello al momento della scrittura."
