@@ -3,7 +3,8 @@ title: "How I built book.jaack.me with Jev"
 layout: post
 date: 2026-09-26 16:50:00 +0200
 permalink: /how-i-built-book-jaack-me-with-jev/
-headerImage: false
+image: /assets/images/2026/book-jev-cover.png
+headerImage: true
 tag:
 - ai
 - agents
