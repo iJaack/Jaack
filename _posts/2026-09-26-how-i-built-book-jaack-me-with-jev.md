@@ -1,5 +1,5 @@
 ---
-title: "My calendar was free. I wasn't."
+title: "I built a booking page that checks more than my calendar so I only offer time I can give"
 layout: post
 date: 2026-09-26 16:50:00 +0200
 permalink: /how-i-built-book-jaack-me-with-jev/
