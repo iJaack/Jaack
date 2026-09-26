@@ -1,5 +1,5 @@
 ---
-title: "How I built book.jaack.me with Jev"
+title: "My calendar was free. I wasn't."
 layout: post
 date: 2026-09-26 16:50:00 +0200
 permalink: /how-i-built-book-jaack-me-with-jev/
