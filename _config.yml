@@ -21,6 +21,9 @@ picture: assets/images/profilo-homepage-ig.png
 url: "https://jaack.me"
 baseurl: ""
 
+include:
+  - .well-known
+
 permalink: /:title/
 
 # if you don't have any of social below, comment the line

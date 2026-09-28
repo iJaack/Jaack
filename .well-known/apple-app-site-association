@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["R3UZ5ZH3DG.me.jaack.os.mobile.alpha"],
+        "components": [
+          {"/": "/open/mission-control/"},
+          {"/": "/open/mission-control/*"}
+        ]
+      }
+    ]
+  }
+}
