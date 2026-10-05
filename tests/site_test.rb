@@ -5,7 +5,7 @@ require 'cgi'
 
 class SiteTest < Minitest::Test
   ROOT = File.expand_path('../_site', __dir__)
-  PROJECT_IDS = %w[portfolio-os sea-temperature gm10 eva eva-protocol team1 hundred pommidoro parcelpilot redbridge acps routescan]
+  PROJECT_IDS = %w[portfolio-os lg-tv-use sea-temperature gm10 eva eva-protocol team1 hundred pommidoro parcelpilot redbridge acps routescan]
   ROUTES = %w[helicon-and-the-price-of-future-avax/index.html index.html projects/index.html blog/index.html about/index.html now/index.html newsletter/index.html en/about/index.html 404.html] + PROJECT_IDS.map { |id| "projects/#{id}/index.html" }
   def doc(route)
     Nokogiri::HTML(File.read(File.join(ROOT, route)))
@@ -55,7 +55,7 @@ class SiteTest < Minitest::Test
 
   def test_work_states_are_present_in_both_languages
     entries = doc('projects/index.html').css('.work-entry')
-    assert_equal 12, entries.length
+    assert_equal 13, entries.length
     entries.each do |entry|
       %w[en it].each do |lang|
         refute_empty entry.at_css(".work-meta .lang-#{lang}").text.strip
@@ -137,6 +137,21 @@ class SiteTest < Minitest::Test
       end
       assert page.at_css("a[href='/projects/##{id}']"), id
     end
+  end
+
+  def test_lg_tv_use_links_public_release_and_describes_evidence_limits
+    page = doc('projects/lg-tv-use/index.html')
+    assert page.at_css('a[href="https://github.com/iJaack/lg-tv-use"]')
+    assert page.at_css('a[href="https://github.com/iJaack/lg-tv-use/releases/tag/v0.3.1"]')
+    assert_includes page.text, '17 MCP tools'
+    assert_includes page.text, '55 automated tests'
+    assert_includes page.text, 'Internal app navigation remains experimental'
+    assert_includes page.text, 'power-off and wake were verified on one'
+    assert_includes page.text, 'navigazione interna delle app resta sperimentale'
+    image = page.at_css('meta[property="og:image"]')
+    assert_equal 'https://jaack.me/assets/images/work/lg-tv-use-cover.png', image['content']
+    assert page.at_css('img[src="/assets/images/work/lg-tv-use-cover.png"][alt]')
+    assert doc('projects/index.html').at_css('#lg-tv-use h3 a[href="/projects/lg-tv-use/"]')
   end
 
   def test_reading_paths_preserve_the_archive_and_real_articles

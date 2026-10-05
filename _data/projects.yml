@@ -13,6 +13,22 @@
   link_en: Read how the system works
   link_it: Leggi come funziona il sistema (EN)
 
+- id: lg-tv-use
+  icon: /assets/images/work/lg-tv-use-logo.png
+  name: LG TV Use
+  group: systems
+  role_en: Builder
+  role_it: Sviluppo e progettazione
+  stage_en: Open source · Experimental
+  stage_it: Open source · Sperimentale
+  description_en: "Computer use for LG webOS TVs, through a local MCP server."
+  description_it: "Computer use per TV LG webOS, attraverso un server MCP locale."
+  detail_en: "I built a tool that lets an AI agent use TV apps, remote keys, pointer, text and power over the local network. After an agent inspects a new route, the tool turns it into reusable code. Known routes can then run without a screenshot at every step, with visual fallback when the context is uncertain."
+  detail_it: "Ho costruito un tool che permette a un agente AI di usare app, telecomando, puntatore, testo e alimentazione della TV sulla rete locale. Dopo che l’agente ha ispezionato un nuovo percorso, il tool lo trasforma in codice riutilizzabile. I percorsi conosciuti possono così evitare gli screenshot a ogni passaggio, tornando alle immagini quando il contesto è incerto."
+  url: https://github.com/iJaack/lg-tv-use
+  link_en: Code and documentation on GitHub
+  link_it: Codice e documentazione su GitHub
+
 - id: sea-temperature
   icon: /assets/images/work/sea-temperature.png
   name: Sea Temperature

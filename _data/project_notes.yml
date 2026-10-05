@@ -1,6 +1,9 @@
 portfolio-os:
   en: "Start with the article on verification loops. It explains how I check agent outcomes and keep stale context from becoming an operational decision. This is my internal working system."
   it: "Parti dall’articolo sui cicli di verifica. Spiega come controllo i risultati degli agenti ed evito che un contesto superato diventi una decisione operativa. È il mio sistema di lavoro interno."
+lg-tv-use:
+  en: "Version 0.3.1 is public under the MIT license, with 17 MCP tools and 55 automated tests. Start with the README for installation and pairing. Internal app navigation remains experimental: a tracked state is a prediction, and external remote input requires a fresh observation."
+  it: "La versione 0.3.1 è pubblica con licenza MIT, 17 tool MCP e 55 test automatici. Parti dal README per installazione e associazione. La navigazione interna delle app resta sperimentale: lo stato tracciato è una previsione e l’uso del telecomando fisico richiede una nuova osservazione."
 sea-temperature:
   en: "The important distinction is between a model estimate and a measurement at your exact location. My development work includes making coverage and unavailable data understandable on the map."
   it: "La distinzione importante è tra una stima del modello e una misura nella tua posizione esatta. Il lavoro di sviluppo comprende rendere leggibili sulla mappa la copertura e l’assenza di dati."
