@@ -5,8 +5,8 @@ require 'cgi'
 
 class SiteTest < Minitest::Test
   ROOT = File.expand_path('../_site', __dir__)
-  PROJECT_IDS = %w[portfolio-os lg-tv-use sea-temperature gm10 eva eva-protocol team1 hundred pommidoro parcelpilot redbridge acps routescan]
-  ROUTES = %w[helicon-and-the-price-of-future-avax/index.html index.html projects/index.html blog/index.html about/index.html now/index.html newsletter/index.html en/about/index.html 404.html] + PROJECT_IDS.map { |id| "projects/#{id}/index.html" }
+  PROJECT_IDS = %w[portfolio-os ideas lg-tv-use sea-temperature gm10 eva eva-protocol team1 hundred pommidoro parcelpilot redbridge acps routescan]
+  ROUTES = %w[ideas/support/index.html ideas/privacy/index.html ideas/terms/index.html helicon-and-the-price-of-future-avax/index.html index.html projects/index.html blog/index.html about/index.html now/index.html newsletter/index.html en/about/index.html 404.html] + PROJECT_IDS.map { |id| "projects/#{id}/index.html" }
   def doc(route)
     Nokogiri::HTML(File.read(File.join(ROOT, route)))
   end
@@ -55,7 +55,7 @@ class SiteTest < Minitest::Test
 
   def test_work_states_are_present_in_both_languages
     entries = doc('projects/index.html').css('.work-entry')
-    assert_equal 13, entries.length
+    assert_equal 14, entries.length
     entries.each do |entry|
       %w[en it].each do |lang|
         refute_empty entry.at_css(".work-meta .lang-#{lang}").text.strip
@@ -115,7 +115,7 @@ class SiteTest < Minitest::Test
   end
 
   def test_existing_special_pages_and_article_assets_survive
-    %w[team1/index.html hundred/privacy/index.html hundred/support/index.html].each do |route|
+    %w[team1/index.html hundred/privacy/index.html hundred/support/index.html ideas/support/index.html ideas/privacy/index.html ideas/terms/index.html].each do |route|
       assert File.file?(File.join(ROOT, route)), route
     end
     page = doc('acp-255-four-fee-curves-en/index.html')

@@ -184,3 +184,18 @@
   url: https://routescan.io
   link_en: Visit Routescan
   link_it: Visita Routescan
+
+- id: ideas
+  name: Ideas
+  group: systems
+  role_en: Product and development
+  role_it: Prodotto e sviluppo
+  stage_en: Local source preview
+  stage_it: Anteprima del codice locale
+  description_en: "An ideas inbox and local MCP plugin for Codex, running on each installer's own Mac."
+  description_it: "Un'inbox per le idee e un plugin MCP locale per Codex, sul Mac di chi lo installa."
+  detail_en: "I wanted to turn a shared idea, Calendar event or Reminder into a chat when I choose to work on it. Ideas keeps an independent inbox on the user's computer, reads Apple sources with macOS permission and prepares context only after an explicit selection. I am working on portable setup and distribution for this local architecture."
+  detail_it: "Volevo trasformare un'idea condivisa, un evento del Calendario o un Promemoria in una chat quando decido di lavorarci. Ideas conserva un'inbox indipendente sul computer dell'utente, legge le fonti Apple con il consenso di macOS e prepara il contesto dopo una selezione esplicita. Lavoro sulla configurazione e distribuzione di questa architettura locale."
+  url: /ideas/support/
+  link_en: Setup and support
+  link_it: Configurazione e supporto

@@ -37,3 +37,7 @@ acps:
 routescan:
   en: "This is a previous role, ending in May 2026. The Routescan website is the destination for the company’s current product; my independent work is listed in the rest of this portfolio."
   it: "È un ruolo precedente, concluso a maggio 2026. Il sito di Routescan è il riferimento per il prodotto attuale dell’azienda; il mio lavoro indipendente è nel resto di questo portafoglio."
+
+ideas:
+  en: "Download the source preview below and read the support page before connecting Apple sources. The local plugin is working on the development Mac; a signed installer, clean-machine acceptance and the OpenAI public-directory route remain pending."
+  it: "Scarica l’anteprima del codice qui sotto e leggi il supporto prima di collegare le fonti Apple. Il plugin locale funziona sul Mac di sviluppo; restano da completare un installer firmato, la verifica su un computer pulito e il percorso per la directory pubblica OpenAI."
