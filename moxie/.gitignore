@@ -1,0 +1,15 @@
+# Build output: Vercel runs `python3 build_hub.py` and serves dist/.
+dist/
+__pycache__/
+*.pyc
+.vercel
+.env*
+# Private collection data must never be committed (see tests/moxie-leak.test.cjs).
+collection*.csv
+collection_hydrated.json
+collection_sanity.json
+cardmarket_prices.json
+purchases*
+scryfall_cache*.json
+price-update-runs/
+moxfield/

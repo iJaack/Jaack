@@ -1,0 +1,48 @@
+{
+  "counts": {
+    "main": 60,
+    "side": 15
+  },
+  "date": "2026-09-10",
+  "deck_id": "mono-green-landfall",
+  "id": "mono-green-2026-09-10-warg",
+  "label": {
+    "en": "The list prepared for Galactus",
+    "it": "La lista preparata per Galactus"
+  },
+  "mainboard": {
+    "Ba Sing Se": 3,
+    "Demolition Field": 1,
+    "Earthbender Ascension": 4,
+    "Elven Passage": 1,
+    "Escape Tunnel": 3,
+    "Esper Origins // Summon: Esper Maduin": 4,
+    "Fabled Passage": 4,
+    "Forest": 14,
+    "Icetill Explorer": 4,
+    "Llanowar Elves": 4,
+    "Lumbering Worldwagon": 1,
+    "Meltstrider's Resolve": 1,
+    "Mightform Harmonizer": 3,
+    "Ouroboroid": 1,
+    "Sapling Nursery": 3,
+    "Sazh's Chocobo": 4,
+    "Shared Roots": 4,
+    "Surrak, Elusive Hunter": 1
+  },
+  "note": {
+    "en": "Final choice: 3 Leatherhead, 2 Warg Tactics and 1 Soul-Guide Lantern in the sideboard. No September 11 tournament result has been recorded.",
+    "it": "Scelta finale: 3 Leatherhead, 2 Warg Tactics e 1 Soul-Guide Lantern in side. Il risultato del torneo dell’11 settembre non è ancora registrato."
+  },
+  "sideboard": {
+    "Leatherhead, Swamp Stalker": 3,
+    "Meltstrider's Resolve": 2,
+    "Mossborn Hydra": 3,
+    "Sapling Nursery": 1,
+    "Soul-Guide Lantern": 1,
+    "Surrak, Elusive Hunter": 1,
+    "Warg Tactics": 2,
+    "Webstrike Elite": 2
+  },
+  "status": "current"
+}

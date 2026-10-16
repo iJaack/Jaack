@@ -7,3 +7,15 @@ vendor/
 *.env
 .env
 .env
+
+# Moxie (moxie.jaack.me, deployed by Vercel from moxie/): private data and local state
+moxie/dist/
+moxie/.vercel/
+**/__pycache__/
+.env*
+collection*.csv
+collection_hydrated.json
+cardmarket_prices.json
+purchases*.json
+purchases*.jsonl
+scryfall_cache*.json
