@@ -74,4 +74,11 @@ class CollectionTests(unittest.TestCase):
   text=json.dumps(out);self.assertNotRegex(text,'|'.join([r'9\.99','golden'+'-store','Near Mint','Excellent','2026-01-01','trade'+'list']))
   c=out['cards'][0];self.assertEqual((c['count'],c['finish'],c['language'],c['price_eur'],c['value_eur'],c['price_source']),(4,'foil','it',1.5,6.0,'snapshot'))
   self.assertIsNone(out['prices_as_of'])
+  with tempfile.TemporaryDirectory() as tmp:
+   src=Path(tmp)/'collection_hydrated.json';src.write_text(json.dumps({'cards':[dict(row,language='English'),dict(row,language=''),dict(row,language=None,foil=False)]}))
+   blank=bc.build(src,refresh=False)['cards']
+  self.assertEqual(sorted((c['finish'],c['language'],c['count']) for c in blank),[('foil','en',4),('nonfoil','en',2)])
+ def test_no_blank_languages_or_duplicate_printings(self):
+  cards=self.data['cards'];self.assertTrue(all(c['language'] for c in cards))
+  keys=[(c['set'],c['collector_number'],c['finish'],c['language']) for c in cards];self.assertEqual(len(keys),len(set(keys)))
 if __name__=='__main__':unittest.main()

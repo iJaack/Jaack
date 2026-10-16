@@ -4,6 +4,7 @@
   "installCommand": "",
   "buildCommand": "python3 build_hub.py",
   "outputDirectory": "dist",
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- .",
   "headers": [
     {
       "source": "/(.*)",

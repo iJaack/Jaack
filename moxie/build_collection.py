@@ -77,13 +77,19 @@ def faces_from(api,row_sf):
   return [{'name':f['name'],'image':card_image(f['image_uris']['normal']),'small':card_image(f['image_uris']['small'])} for f in api['card_faces']]
  return [{'name':row_sf['name'],'image':card_image(row_sf['image_uri']),'small':card_image(row_sf['image_uri_small'])}]
 
+def language_code(value):
+ """Moxfield leaves Language blank for its default (English); treat blank as 'en' so those rows merge with their English twins."""
+ value=(value or '').strip()
+ return LANG.get(value,value.lower()) if value else 'en'
+
 def build(source,refresh=True):
  rows=json.loads(Path(source).read_text())['cards']
  api=fetch_prices(sorted({r['scryfall']['scryfall_id'] for r in rows})) if refresh else {}
  today=datetime.date.today().isoformat();merged={}
  for r in rows:
   sf=r['scryfall'];finish=(r.get('foil_type') or 'foil') if r.get('foil') else 'nonfoil'
-  key='|'.join([sf['scryfall_id'],finish,LANG.get(r.get('language') or '',r.get('language') or '')])
+  lang=language_code(r.get('language'))
+  key='|'.join([sf['scryfall_id'],finish,lang])
   if key in merged:merged[key]['count']+=int(r['count']);continue
   live=api.get(sf['scryfall_id'])
   price=finish_price(live.get('prices',{}),finish) if live else None
@@ -91,7 +97,7 @@ def build(source,refresh=True):
   if price is None:
    snap=r.get('current_price_eur')
    if snap is not None:price=float(snap);source_tag='snapshot'
-  merged[key]={'key':key,'name':sf['name'],'set':sf['set'],'collector_number':sf['collector_number'],'language':LANG.get(r.get('language') or '',r.get('language') or ''),'finish':finish,'count':int(r['count']),
+  merged[key]={'key':key,'name':sf['name'],'set':sf['set'],'collector_number':sf['collector_number'],'language':lang,'finish':finish,'count':int(r['count']),
    'type_line':sf.get('type_line') or '','colors':sf.get('colors') or [],'color_identity':sf.get('color_identity') or [],'rarity':sf.get('rarity') or '','mana_value':sf.get('cmc') or 0,
    'scryfall_uri':scryfall_page(sf['scryfall_uri']),'faces':faces_from(live,sf),'price_eur':price,'price_source':source_tag,'_set_name':sf.get('set_name') or sf['set']}
  sets={};cards=[]
