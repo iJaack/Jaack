@@ -4,6 +4,7 @@ __pycache__/
 *.pyc
 .vercel
 .env*
+!.env.example
 # Private collection data must never be committed (see tests/moxie-leak.test.cjs).
 collection*.csv
 collection_hydrated.json

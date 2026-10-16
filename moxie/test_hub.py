@@ -19,11 +19,14 @@ class HubTests(unittest.TestCase):
  def setUpClass(cls):
   cls.routes=json.loads((P/'routes.json').read_text());cls.hub=json.loads((P/'data/hub.json').read_text());cls.versions={f.stem:json.loads(f.read_text()) for f in (P/'data/versions').glob('*.json')}
  def test_every_page_has_equivalent_languages(self):
-  self.assertEqual(len(self.routes),44)
-  self.assertEqual({x[3:] for x in self.routes if x.startswith('/it/')},{x[3:] for x in self.routes if x.startswith('/en/')})
+  self.assertEqual(len(self.routes),46)
+  # Localized slugs: the collection lives at /it/collezione/ and /en/collection/.
+  slug={'it':{'collection/':'collezione/'},'en':{'collezione/':'collection/'}}
+  local=lambda l,rest:slug[l].get(rest,rest)
+  self.assertEqual({local('en',x[4:]) for x in self.routes if x.startswith('/it/')},{x[4:] for x in self.routes if x.startswith('/en/')})
   for route in self.routes:
    page=Doc();page.feed((D/route.lstrip('/')/'index.html').read_text());self.assertEqual(page.lang,route.split('/')[1]);self.assertEqual(len(page.languages),2)
-   self.assertEqual(set(page.languages),{'/it/'+route[4:],'/en/'+route[4:]})
+   self.assertEqual(set(page.languages),{'/it/'+local('it',route[4:]),'/en/'+local('en',route[4:])})
  def test_internal_links_resolve(self):
   for route in self.routes+['/']:
    f=D/route.lstrip('/')/'index.html';page=Doc();page.feed(f.read_text());self.assertEqual(len(page.ids),len(set(page.ids)),route)
