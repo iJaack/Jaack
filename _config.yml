@@ -99,7 +99,7 @@ compress_html:
         - development
         - stage
 
-exclude: ["tests", "scripts", "package.json", "team1/.claude", "Rakefile", "README.md", "Gemfile", "Gemfile.lock", "vendor", "node_modules"]
+exclude: ["moxie", "tests", "scripts", "package.json", "team1/.claude", "Rakefile", "README.md", "Gemfile", "Gemfile.lock", "vendor", "node_modules"]
 
 title: Giacomo Barbieri / Jaack
 defaults:

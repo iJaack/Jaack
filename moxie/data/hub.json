@@ -1,0 +1,333 @@
+{
+  "decks": [
+    {
+      "id": "mono-green-landfall",
+      "name": "Mono Green Landfall",
+      "status": "active",
+      "colors": [
+        "G"
+      ],
+      "format": {
+        "it": "Standard",
+        "en": "Standard"
+      },
+      "latest_version": "mono-green-2026-10-01-torpor",
+      "aliases": [
+        "The Last Stand"
+      ],
+      "summary": {
+        "it": "La side ora include due Torpor Orb al posto di Warg Tactics. Il piano di terre, segnalini e attacchi esplosivi resta da 60 + 15.",
+        "en": "The sideboard now includes two Torpor Orbs instead of Warg Tactics. The lands, counters and explosive-attacks plan stays at 60 + 15."
+      },
+      "story": {
+        "it": "L’archivio locale collega Bending Aggro e The Last Stand all’attuale Mono Green. Qui le liste datate restano separate, così una modifica futura non riscrive il passato.",
+        "en": "The local archive connects Bending Aggro and The Last Stand to the current Mono Green deck. Dated lists stay separate here, so later changes do not rewrite the past."
+      },
+      "guide": true,
+      "related": [
+        "bending-aggro"
+      ],
+      "guide_path": "guides/mono-green-landfall-torpor-orb",
+      "guide_sections": [
+        {
+          "id": "changes",
+          "title": {
+            "it": "Il cambio: due slot nella side",
+            "en": "The change: two sideboard slots"
+          },
+          "paragraphs": [
+            {
+              "it": "Dentro 2 Torpor Orb; fuori 2 Warg Tactics. Il main resta identico alla lista del 10 settembre. Mantengo 2 Webstrike Elite per reach e per rimuovere artefatti o incantesimi con cycling; restano anche 3 Leatherhead, 3 Mossborn Hydra, 2 Meltstrider’s Resolve, 1 Sapling Nursery, 1 Soul-Guide Lantern e 1 Surrak in side.",
+              "en": "In: 2 Torpor Orb. Out: 2 Warg Tactics. The main stays identical to the September 10 list. I keep 2 Webstrike Elite for reach and artifact or enchantment removal through cycling; the sideboard also retains 3 Leatherhead, 3 Mossborn Hydra, 2 Meltstrider’s Resolve, 1 Sapling Nursery, 1 Soul-Guide Lantern and 1 Surrak."
+            },
+            {
+              "it": "È un punto di partenza da provare: rinunci alle due magie flessibili che uccidono un volante oppure danno un segnalino, trample e hexproof. In cambio impedisci che si inneschino le abilità di entrata delle creature avversarie, purché Orb sia già sul campo.",
+              "en": "This is a starting point to test: you give up two flexible spells that kill a flyer or grant a counter, trample and hexproof. In exchange, you can prevent opposing creatures’ enter triggers before they happen."
+            }
+          ]
+        },
+        {
+          "id": "when",
+          "title": {
+            "it": "Quando portare dentro Orb",
+            "en": "When to bring Orb in"
+          },
+          "paragraphs": [
+            {
+              "it": "Porta dentro entrambe le copie quando hai visto creature con abilità di entrata decisive. Sunderflock è l’esempio concreto del resoconto Izzet: con Orb già sul campo non si innesca il ritorno delle creature non Elementali in mano. Sunderflock resta però un volante e può ancora attaccare o bloccare.",
+              "en": "Bring in both copies after seeing creatures with important enter triggers. Sunderflock is the concrete example from the Izzet report: with Orb already on the battlefield, its non-Elemental bounce ability does not trigger. Sunderflock is still a flyer and can attack or block."
+            },
+            {
+              "it": "Come primo piano contro una lista centrata su Sunderflock: +2 Torpor Orb, −1 Ouroboroid e −1 Lumbering Worldwagon. Conservi Chocobo, Explorer e Harmonizer e togli due motori più lenti. È una raccomandazione per questa versione, da adattare alle carte viste e al ritmo della partita; non un risultato di test.",
+              "en": "As an initial plan against a Sunderflock-focused list: +2 Torpor Orb, −1 Ouroboroid and −1 Lumbering Worldwagon. Keep Chocobo, Explorer and Harmonizer while trimming two slower engines. This is a recommendation for this version, to adjust to the cards seen and the pace of the game; it is not a tested result."
+            },
+            {
+              "it": "Contro aggro o control senza entrate rilevanti, lasciale in side. Il colore del mazzo avversario da solo non basta: Orb non ferma rimozioni, counterspell, abilità di lancio o abilità attivate.",
+              "en": "Against aggro or control without relevant enter triggers, leave them in the sideboard. The opponent’s colors alone are not enough: Orb does not stop removal, counterspells, cast triggers or activated abilities."
+            }
+          ]
+        },
+        {
+          "id": "timing",
+          "title": {
+            "it": "Il momento giusto",
+            "en": "Timing"
+          },
+          "paragraphs": [
+            {
+              "it": "Orb costa due mana e va risolta prima che entri la creatura da bloccare. Non annulla un’abilità già in pila e non rimuove una creatura già sul campo. Con Llanowar Elves puoi sviluppare una minaccia e tenere il turno utile per Orb; non rallentare una mano aggressiva quando l’avversario non presenta il bersaglio giusto.",
+              "en": "Orb costs two mana and must resolve before the creature you want to stop enters. It does not cancel an ability already on the stack or remove a creature already on the battlefield. With Llanowar Elves, you can develop a threat while keeping a useful turn for Orb; do not slow an aggressive hand when the opponent has no relevant target."
+            },
+            {
+              "it": "Una Orb attiva basta. La seconda copia aumenta la probabilità di pescarla e serve da ricambio se la prima viene rimossa; giocarla subito non raddoppia l’effetto.",
+              "en": "One active Orb is enough. The second copy improves your chance of drawing one and replaces the first if removed; playing it immediately does not double the effect."
+            }
+          ]
+        },
+        {
+          "id": "interactions",
+          "title": {
+            "it": "Le tue sinergie restano attive",
+            "en": "Your synergies stay active"
+          },
+          "paragraphs": [
+            {
+              "it": "Chocobo, Icetill Explorer e Mightform Harmonizer continuano a innescare landfall quando entrano terre non creatura. Restano attive le abilità statiche di Explorer, i segnalini di Ouroboroid all’inizio del combattimento e la mana ability di Llanowar Elves. Se una terra entra già come creatura, Orb può fermare i landfall causati da quell’entrata.",
+              "en": "Chocobo, Icetill Explorer and Mightform Harmonizer still trigger landfall when noncreature lands enter. Explorer’s static abilities, Ouroboroid’s beginning-of-combat counters and Llanowar Elves’ mana ability remain active. If a land enters as a creature, Orb can stop the landfall triggers caused by that entry."
+            },
+            {
+              "it": "Leatherhead entra comunque con il segnalino hexproof: è un effetto che modifica l’entrata, non un’abilità innescata. La distruzione di artefatti o incantesimi si innesca dai danni da combattimento e continua a funzionare. Anche il cycling di Webstrike Elite funziona.",
+              "en": "Leatherhead still enters with a hexproof counter: this modifies how it enters rather than triggering from the entry. Its artifact or enchantment destruction triggers from combat damage and still works. Webstrike Elite’s cycling also works."
+            },
+            {
+              "it": "Summon: Esper Maduin continua a funzionare, incluso il capitolo I quando entra: i capitoli si innescano dall’aggiunta dei segnalini lore, non dall’entrata della creatura. Orb è simmetrica: se aggiungi in futuro creature con vere abilità di entrata, bloccherà anche le tue.",
+              "en": "Summon: Esper Maduin still works, including chapter I as it enters: chapters trigger from lore counters being added rather than from the creature entering. Orb is symmetrical: if you later add creatures with actual enter triggers, it will stop yours too."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bending-aggro",
+      "name": "Bending Aggro",
+      "status": "archived",
+      "colors": [
+        "R",
+        "G"
+      ],
+      "format": {
+        "it": "Archivio Gruul",
+        "en": "Gruul archive"
+      },
+      "latest_version": "bending-aggro-2026-01-16",
+      "summary": {
+        "it": "Creature economiche, danni diretti e sinergie con i segnalini: una delle tappe precedenti al Mono Green.",
+        "en": "Cheap creatures, direct damage and counter synergies: an earlier step on the way to Mono Green."
+      },
+      "story": {
+        "it": "Lista salvata il 16 gennaio 2026. L’indice dei mazzi la conserva tra le versioni ritirate, legata alla transizione verso The Last Stand.",
+        "en": "List saved on January 16, 2026. The deck index retains it among the retired builds, linked to the transition toward The Last Stand."
+      },
+      "related": [
+        "mono-green-landfall"
+      ]
+    },
+    {
+      "id": "arachnid-blitz",
+      "name": "Arachnid Blitz",
+      "status": "archived",
+      "colors": [
+        "G",
+        "U"
+      ],
+      "format": {
+        "it": "Archivio Simic",
+        "en": "Simic archive"
+      },
+      "latest_version": "arachnid-blitz-2025-12-21",
+      "summary": {
+        "it": "Un mazzo a tema Spider-Man, con creature e magie di supporto verdi e blu.",
+        "en": "A Spider-Man-themed deck with green and blue creatures and support spells."
+      },
+      "story": {
+        "it": "Snapshot del 21 dicembre 2025. Il conteggio del vecchio documento non coincide con le righe: lo segnaliamo accanto alla lista, senza correggere il passato per supposizione.",
+        "en": "Snapshot from December 21, 2025. The old document’s stated count differs from its rows. The discrepancy is shown beside the list rather than silently changing the past."
+      },
+      "related": []
+    },
+    {
+      "id": "avatar-prerelease",
+      "name": "Avatar Prerelease",
+      "status": "incomplete",
+      "colors": [
+        "G"
+      ],
+      "format": {
+        "it": "Prerelease / Limited",
+        "en": "Prerelease / Limited"
+      },
+      "latest_version": "avatar-prerelease-2025-11-16",
+      "summary": {
+        "it": "Il materiale conservato dal prerelease di Avatar, come punto di partenza della storia.",
+        "en": "The material preserved from the Avatar prerelease, as an early chapter in the story."
+      },
+      "story": {
+        "it": "Il file del 16 novembre 2025 conserva carte e un numero incompleto di terre. È un ricordo del pool, non una ricostruzione certa delle quaranta carte giocate.",
+        "en": "The November 16, 2025 file preserves cards and an incomplete land count. It records the pool rather than confidently reconstructing the forty cards played."
+      },
+      "related": []
+    }
+  ],
+  "events": [
+    {
+      "id": "torpor-orb-update-2026-10-01",
+      "date": "2026-10-01",
+      "title": {
+        "it": "Torpor Orb entra nella side",
+        "en": "Torpor Orb joins the sideboard"
+      },
+      "deck_id": "mono-green-landfall",
+      "version_id": "mono-green-2026-10-01-torpor",
+      "status": "preparation",
+      "result": null,
+      "summary": {
+        "it": "Due Torpor Orb inglesi non foil, Mystery Booster 2 #236. La nuova lista preparata sostituisce i due Warg Tactics; main invariato.",
+        "en": "Two English non-foil Torpor Orbs, Mystery Booster 2 #236. The new prepared list replaces the two Warg Tactics; main unchanged."
+      },
+      "notes": [
+        {
+          "it": "Il cambio consigliato dà uno strumento contro Sunderflock e altre creature con abilità di entrata. Le partite della nuova versione non sono ancora registrate.",
+          "en": "The recommended change provides a tool against Sunderflock and other creatures with enter triggers. No games with this version have been recorded yet."
+        }
+      ],
+      "version_relation": "prepared"
+    },
+    {
+      "id": "reality-fracture-prerelease-2026-09-25",
+      "date": "2026-09-25",
+      "title": {
+        "it": "Prerelease di Reality Fracture",
+        "en": "Reality Fracture prerelease"
+      },
+      "deck_id": null,
+      "version_id": null,
+      "status": "reported",
+      "result": {
+        "it": "2 vittorie, 3 sconfitte · 19° su 31",
+        "en": "2 wins, 3 losses · 19th of 31"
+      },
+      "summary": {
+        "it": "Ho chiuso 2–3, al 19° posto su 31. Mi sono trovato bene con il sealed bianco verde: le due Ghalta, le sinergie con Jace e le pedine volanti hanno reso interessanti anche le partite perse.",
+        "en": "I finished 2–3, 19th out of 31. Green-white Sealed felt good to play: the two Ghaltas, Jace synergies and flying tokens made even the losses interesting."
+      },
+      "notes": [
+        {
+          "it": "Il pool mi ha portato verso bianco verde. Sono abituato a giocare molti drop a uno; qui ne ricordo tre bianchi. In cima alla curva avevo Ghalta the Unstoppable e Ghalta the Immovable, entrambe a nove mana.",
+          "en": "My pool pushed me towards green-white. I usually play plenty of one-drops; I remember having three white ones here. At the top of the curve were Ghalta the Unstoppable and Ghalta the Immovable, both nine-mana cards."
+        },
+        {
+          "it": "Ho vinto il primo match 1–0; la seconda partita non è finita. Tra il secondo e il terzo match ricordo una vittoria 1–0 e una sconfitta 0–1, ma non sono sicuro dell’ordine. Delle altre due sconfitte non ho annotato il punteggio dei game.",
+          "en": "I won the first match 1–0; game two did not finish. Across rounds two and three, I remember one 1–0 win and one 0–1 loss, but I am unsure of the order. I did not record the game scores for the other two losses."
+        },
+        {
+          "it": "Mi sono trovato bene con empower Jace 2, 5 e 7, le carte Way e le pedine volanti. In una sconfitta ho bloccato l’avversario per buona parte della partita: anche lui pensava che potessi vincere. Non ricordo con certezza il round né il nome di una delle pedine.",
+          "en": "Empower Jace 2, 5 and 7, the Way cards and flying tokens worked well for me. In one loss I held my opponent back for much of the game; he, too, thought I could win. I cannot place the round or confidently name one of the tokens."
+        },
+        {
+          "it": "Arcane Amphisbaena è stata una buona inclusione: con tocco letale metteva pressione e mi dava anche empower Jace 2. Non ho conservato la lista completa del mazzo.",
+          "en": "Arcane Amphisbaena was a good inclusion: deathtouch put pressure on the opponent, and it also gave me empower Jace 2. I did not preserve the full decklist."
+        }
+      ],
+      "version_relation": "unknown"
+    },
+    {
+      "id": "galactus-2026-09-11",
+      "date": "2026-09-11",
+      "time": "21:15",
+      "title": {
+        "it": "Standard Showdown a Galactus",
+        "en": "Standard Showdown at Galactus"
+      },
+      "venue": "Galactus Tiburtina",
+      "deck_id": "mono-green-landfall",
+      "version_id": "mono-green-2026-09-10-warg",
+      "status": "planned",
+      "result": null,
+      "summary": {
+        "it": "Lista preparata e guida pronta. Il resoconto della serata verrà aggiunto dopo aver giocato.",
+        "en": "Deck prepared and guide ready. The session report will be added after the games."
+      },
+      "notes": [],
+      "version_relation": "prepared"
+    },
+    {
+      "id": "galactus-preparation-2026-09-10",
+      "date": "2026-09-10",
+      "title": {
+        "it": "La side prende forma",
+        "en": "The sideboard takes shape"
+      },
+      "venue": "Galactus Tiburtina",
+      "deck_id": "mono-green-landfall",
+      "version_id": "mono-green-2026-09-10-warg",
+      "status": "preparation",
+      "result": null,
+      "summary": {
+        "it": "Dopo il ritiro delle carte, la side cambia: fuori 2 Origin of Metalbending e 1 Lantern; dentro 1 Leatherhead e 2 Warg Tactics.",
+        "en": "After picking up the cards, the sideboard changes: out go 2 Origin of Metalbending and 1 Lantern; in come 1 Leatherhead and 2 Warg Tactics."
+      },
+      "notes": [
+        {
+          "it": "Il main resta da 60 carte; la side resta da 15.",
+          "en": "The main deck stays at 60 cards and the sideboard at 15."
+        }
+      ],
+      "version_relation": "prepared"
+    },
+    {
+      "id": "fnm-2026-03-13",
+      "date": "2026-03-13",
+      "title": {
+        "it": "Primo FNM con Leatherhead",
+        "en": "First FNM with Leatherhead"
+      },
+      "venue": "Golden Store Talenti",
+      "deck_id": "mono-green-landfall",
+      "version_id": null,
+      "status": "reported",
+      "result": {
+        "it": "5° posto riportato nelle note",
+        "en": "5th place reported in the notes"
+      },
+      "summary": {
+        "it": "Il resoconto conserva un bye, una vittoria 2-0 contro control quattro colori e una sconfitta contro Izzet Spellementals. Il record completo del torneo non è ricostruito.",
+        "en": "The report preserves a bye, a 2-0 win against four-color control and a loss against Izzet Spellementals. The full tournament record has not been reconstructed."
+      },
+      "notes": [
+        {
+          "it": "Leatherhead viene ricordata come decisiva nella vittoria contro control.",
+          "en": "Leatherhead is remembered as decisive in the win against control."
+        },
+        {
+          "it": "Le ripetute entrate di Sunderflock hanno interrotto il piano contro Izzet.",
+          "en": "Repeated Sunderflock entries disrupted the plan against Izzet."
+        },
+        {
+          "it": "La nota originale puntava a una lista modificabile, non a uno snapshot. Non colleghiamo quindi questa serata alla lista di settembre.",
+          "en": "The original note linked to a mutable deck file rather than a snapshot. This session is therefore not linked to the September list."
+        }
+      ],
+      "version_relation": "unknown"
+    }
+  ],
+  "updated": "2026-10-01",
+  "version_ids": [
+    "mono-green-2026-10-01-torpor",
+    "mono-green-2026-09-10-warg",
+    "mono-green-2026-09-10-proposal",
+    "mono-green-2026-06-02",
+    "bending-aggro-2026-01-16",
+    "arachnid-blitz-2025-12-21",
+    "avatar-prerelease-2025-11-16"
+  ]
+}

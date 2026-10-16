@@ -1,0 +1,122 @@
+[
+  {
+    "page": 1,
+    "key": "index",
+    "content_bottom": 99.1
+  },
+  {
+    "page": 2,
+    "key": "main",
+    "content_bottom": 51.5
+  },
+  {
+    "page": 3,
+    "key": "side",
+    "content_bottom": 98.3
+  },
+  {
+    "page": 4,
+    "key": "opening",
+    "content_bottom": 67.5
+  },
+  {
+    "page": 5,
+    "key": "icetill",
+    "content_bottom": 129.5
+  },
+  {
+    "page": 6,
+    "key": "fetch",
+    "content_bottom": 114.4
+  },
+  {
+    "page": 7,
+    "key": "kill",
+    "content_bottom": 161.7
+  },
+  {
+    "page": 8,
+    "key": "wagon",
+    "content_bottom": 180.5
+  },
+  {
+    "page": 9,
+    "key": "esper",
+    "content_bottom": 186.2
+  },
+  {
+    "page": 10,
+    "key": "maduin",
+    "content_bottom": 128.5
+  },
+  {
+    "page": 11,
+    "key": "engines",
+    "content_bottom": 130.7
+  },
+  {
+    "page": 12,
+    "key": "lands",
+    "content_bottom": 115.3
+  },
+  {
+    "page": 13,
+    "key": "answers",
+    "content_bottom": 122.9
+  },
+  {
+    "page": 14,
+    "key": "matchups",
+    "content_bottom": 132.8
+  },
+  {
+    "page": 15,
+    "key": "ground",
+    "content_bottom": 118.8
+  },
+  {
+    "page": 16,
+    "key": "blue",
+    "content_bottom": 49.4
+  },
+  {
+    "page": 17,
+    "key": "control",
+    "content_bottom": 87.3
+  },
+  {
+    "page": 18,
+    "key": "hands-1",
+    "content_bottom": 91.3
+  },
+  {
+    "page": 19,
+    "key": "hands-2",
+    "content_bottom": 125.1
+  },
+  {
+    "page": 20,
+    "key": "hands-3",
+    "content_bottom": 142.3
+  },
+  {
+    "page": 21,
+    "key": "hands-4",
+    "content_bottom": 73.8
+  },
+  {
+    "page": 22,
+    "key": "hands-5",
+    "content_bottom": 73.8
+  },
+  {
+    "page": 23,
+    "key": "hands-6",
+    "content_bottom": 142.3
+  },
+  {
+    "page": 24,
+    "key": "check",
+    "content_bottom": 97.0
+  }
+]

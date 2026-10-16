@@ -1,0 +1,48 @@
+{
+  "counts": {
+    "main": 60,
+    "side": 15
+  },
+  "date": "2026-09-10",
+  "deck_id": "mono-green-landfall",
+  "id": "mono-green-2026-09-10-proposal",
+  "label": {
+    "en": "After Galactus: initial proposal",
+    "it": "Dopo Galactus: proposta iniziale"
+  },
+  "mainboard": {
+    "Ba Sing Se": 3,
+    "Demolition Field": 1,
+    "Earthbender Ascension": 4,
+    "Elven Passage": 1,
+    "Escape Tunnel": 3,
+    "Esper Origins // Summon: Esper Maduin": 4,
+    "Fabled Passage": 4,
+    "Forest": 14,
+    "Icetill Explorer": 4,
+    "Llanowar Elves": 4,
+    "Lumbering Worldwagon": 1,
+    "Meltstrider's Resolve": 1,
+    "Mightform Harmonizer": 3,
+    "Ouroboroid": 1,
+    "Sapling Nursery": 3,
+    "Sazh's Chocobo": 4,
+    "Shared Roots": 4,
+    "Surrak, Elusive Hunter": 1
+  },
+  "note": {
+    "en": "Prepared before the user’s sideboard changes. This list is not documented as having been played.",
+    "it": "Proposta preparata prima delle sostituzioni scelte dall’utente. Non è una lista attestata come giocata."
+  },
+  "sideboard": {
+    "Leatherhead, Swamp Stalker": 2,
+    "Meltstrider's Resolve": 2,
+    "Mossborn Hydra": 3,
+    "Origin of Metalbending": 2,
+    "Sapling Nursery": 1,
+    "Soul-Guide Lantern": 2,
+    "Surrak, Elusive Hunter": 1,
+    "Webstrike Elite": 2
+  },
+  "status": "proposal"
+}

@@ -1,0 +1,219 @@
+[
+  {
+    "id": "ramp",
+    "title": "La curva ideale",
+    "verdict": "KEEP",
+    "context": "Prima partita, al play o al draw",
+    "cards": [
+      "Forest",
+      "Forest",
+      "Fabled Passage",
+      "Llanowar Elves",
+      "Earthbender Ascension",
+      "Icetill Explorer",
+      "Mightform Harmonizer"
+    ],
+    "reason": "Tre terre, Elfo, accelerazione e due motori: ogni turno ha un compito.",
+    "line": "T1 Forest + Elfo. T2 Forest + Ascension. T3 lanci Icetill con tre terre ed Elfo, prima di giocare Fabled. Se nessuno interrompe, inizi la sequenza di quattro landfall.",
+    "lesson": "Non giocare Fabled prima di Icetill se puoi già pagare quattro mana."
+  },
+  {
+    "id": "no-elf",
+    "title": "Buona anche senza Elfo",
+    "verdict": "KEEP",
+    "context": "Prima partita",
+    "cards": [
+      "Forest",
+      "Forest",
+      "Ba Sing Se",
+      "Sazh's Chocobo",
+      "Shared Roots",
+      "Icetill Explorer",
+      "Sapling Nursery"
+    ],
+    "reason": "Chocobo dà pressione, Roots accelera verso quattro mana e Nursery è un piano per dopo.",
+    "line": "T1 Forest + Chocobo. T2 Forest, poi Roots: due segnalini sul Chocobo. T3 Ba Sing Se entra STAPpata e dà il quarto mana per Icetill. Potrai giocare un'altra terra solo se ne avrai una disponibile.",
+    "lesson": "A volte devi giocare la terra prima di Icetill per riuscire a lanciarlo: va bene."
+  },
+  {
+    "id": "one-land",
+    "title": "La trappola dell'unica terra",
+    "verdict": "MULLIGAN",
+    "context": "Prima partita: scelta prudente per domani",
+    "cards": [
+      "Forest",
+      "Llanowar Elves",
+      "Sazh's Chocobo",
+      "Icetill Explorer",
+      "Mightform Harmonizer",
+      "Sapling Nursery",
+      "Esper Origins // Summon: Esper Maduin"
+    ],
+    "reason": "Sembra ricca, ma vive sulla sopravvivenza dell'Elfo e sulle prossime pescate. Troppe carte restano bloccate.",
+    "line": "Cercherei sei carte con almeno due terre e sviluppo. Al draw la possibilità di trovare terra migliora, ma non rende questa mano automaticamente buona.",
+    "lesson": "Conta le magie che puoi davvero lanciare, non quanto sono forti in astratto."
+  },
+  {
+    "id": "all-lands",
+    "title": "Sette terre",
+    "verdict": "MULLIGAN",
+    "context": "Prima partita",
+    "cards": [
+      "Forest",
+      "Forest",
+      "Forest",
+      "Fabled Passage",
+      "Fabled Passage",
+      "Escape Tunnel",
+      "Ba Sing Se"
+    ],
+    "reason": "Mana perfetto, ma nessun motore né minaccia: dipendi interamente dalle pescate.",
+    "line": "Mulligan. Ba Sing Se ha un uso nel lungo periodo, ma non basta a rendere buona questa apertura.",
+    "lesson": "Landfall richiede sia terre sia carte che ne ricavano qualcosa."
+  },
+  {
+    "id": "too-heavy",
+    "title": "Tre terre, nessuna partenza",
+    "verdict": "MULLIGAN",
+    "context": "Prima partita: soprattutto contro mazzi rapidi",
+    "cards": [
+      "Forest",
+      "Forest",
+      "Fabled Passage",
+      "Icetill Explorer",
+      "Icetill Explorer",
+      "Mightform Harmonizer",
+      "Sapling Nursery"
+    ],
+    "reason": "Hai tre terre ma nessuna giocata utile nei primi due turni. Il quarto mana non è garantito.",
+    "line": "Cercherei una mano con Elfo, Chocobo, Roots o almeno Origins. Non basta avere Icetill se arrivi troppo tardi.",
+    "lesson": "Una mano con la quantità giusta di terre può comunque essere troppo lenta."
+  },
+  {
+    "id": "four-lands",
+    "title": "Quattro terre possono andare",
+    "verdict": "KEEP",
+    "context": "Prima partita",
+    "cards": [
+      "Forest",
+      "Forest",
+      "Fabled Passage",
+      "Fabled Passage",
+      "Sazh's Chocobo",
+      "Earthbender Ascension",
+      "Esper Origins // Summon: Esper Maduin"
+    ],
+    "reason": "Le terre alimentano Chocobo e Ascension. Origins può selezionare le pescate e resta utilizzabile dal cimitero.",
+    "line": "T1 Forest + Chocobo. T2 Fabled, poi cerchi Forest: due landfall. T3 la seconda Forest dalla mano ti dà tre mana per Ascension.",
+    "lesson": "Quattro terre con una curva funzionante non equivalgono a quattro terre e tre carte costose."
+  },
+  {
+    "id": "no-basic",
+    "title": "Quattro terre, niente verde subito",
+    "verdict": "DIPENDE",
+    "context": "Keep possibile contro un mazzo lento; più prudente il mulligan contro aggro",
+    "cards": [
+      "Fabled Passage",
+      "Escape Tunnel",
+      "Ba Sing Se",
+      "Demolition Field",
+      "Llanowar Elves",
+      "Sazh's Chocobo",
+      "Icetill Explorer"
+    ],
+    "reason": "Hai terre e giocate, ma nessuna partenza al turno 1: le prime due fetch cercano TAPpato e Ba Sing Se entra TAPpata senza una base.",
+    "line": "Se tieni: T1 Fabled, cerchi Forest. T2 Ba Sing Se ora entra STAPpata: puoi giocare Elfo e Chocobo. Icetill può ancora arrivare tardi se non peschi mana STAPpato.",
+    "lesson": "Valuta quando il mana è utilizzabile, non solo quante terre ci sono."
+  },
+  {
+    "id": "elven",
+    "title": "Elven Passage con l'Elfo",
+    "verdict": "KEEP",
+    "context": "Prima partita",
+    "cards": [
+      "Elven Passage",
+      "Forest",
+      "Llanowar Elves",
+      "Sazh's Chocobo",
+      "Shared Roots",
+      "Icetill Explorer",
+      "Mightform Harmonizer"
+    ],
+    "reason": "Elven Passage può dare verde subito perché puoi rivelare Llanowar Elves dalla mano.",
+    "line": "T1 Elven: paghi 1 vita, cerchi Forest, riveli l'Elfo per STAPparla, poi lo lanci. T2 Forest: gioca prima Chocobo, poi Roots con il mana rimasto. T3 hai tre terre ed Elfo per Icetill.",
+    "lesson": "Rivelare l'Elfo non lo scarta e non lo consuma."
+  },
+  {
+    "id": "slow-value",
+    "title": "Risorse, ma poca pressione",
+    "verdict": "DIPENDE",
+    "context": "Più accettabile contro control; troppo lenta contro aggro rapido",
+    "cards": [
+      "Forest",
+      "Forest",
+      "Fabled Passage",
+      "Esper Origins // Summon: Esper Maduin",
+      "Esper Origins // Summon: Esper Maduin",
+      "Shared Roots",
+      "Sapling Nursery"
+    ],
+    "reason": "Roots sviluppa il mana e Origins cerca il motore, ma per ora non hai né creature economiche né Icetill.",
+    "line": "Contro lento puoi tenere e scegliere fra Roots per il mana e Origins per cercare azione. Contro veloce cercherei una partenza che interagisce o mette un bloccante.",
+    "lesson": "La stessa mano cambia valore quando sai chi hai davanti."
+  },
+  {
+    "id": "post-aggro",
+    "title": "Dopo la side contro aggro",
+    "verdict": "KEEP",
+    "context": "Con il piano aggro della guida",
+    "cards": [
+      "Forest",
+      "Forest",
+      "Fabled Passage",
+      "Llanowar Elves",
+      "Webstrike Elite",
+      "Meltstrider's Resolve",
+      "Sapling Nursery"
+    ],
+    "reason": "Puoi svilupparti e bloccare presto. Webstrike più Meltstrider può eliminare una creatura e lasciare un corpo robusto.",
+    "line": "T1 Forest + Elfo. T2 Forest: puoi lanciare Webstrike e, se il bersaglio è adatto, Meltstrider. Non forzare una lotta perdente; Nursery resta il piano per dopo.",
+    "lesson": "Contro aggro una mano che stabilizza può essere migliore di una mano da danni enormi."
+  },
+  {
+    "id": "post-izzet",
+    "title": "Risposte senza un piano",
+    "verdict": "MULLIGAN",
+    "context": "Dopo la side contro Izzet",
+    "cards": [
+      "Forest",
+      "Forest",
+      "Fabled Passage",
+      "Warg Tactics",
+      "Soul-Guide Lantern",
+      "Sapling Nursery",
+      "Sapling Nursery"
+    ],
+    "reason": "Hai due risposte, ma nessuna pressione né accelerazione. Izzet ha tempo di organizzarsi mentre aspetti Nursery.",
+    "line": "Cercherei una curva con una minaccia. Non tenere soltanto perché hai pescato carte della side.",
+    "lesson": "Le risposte devono sostenere il tuo piano, non sostituirlo."
+  },
+  {
+    "id": "six",
+    "title": "Dopo il mulligan: quali sei?",
+    "verdict": "KEEP A 6",
+    "context": "Hai rimescolato una volta e peschi di nuovo sette",
+    "cards": [
+      "Forest",
+      "Forest",
+      "Fabled Passage",
+      "Llanowar Elves",
+      "Shared Roots",
+      "Icetill Explorer",
+      "Sapling Nursery"
+    ],
+    "bottom": "Sapling Nursery",
+    "reason": "Metterei Nursery in fondo. Restano tre terre, accelerazione e Icetill: una mano da sei completa.",
+    "line": "T1 Forest + Elfo. T2 Forest + Roots. T3 puoi pagare Icetill prima della terra del turno. Con il mulligan di Londra scegli cosa mettere in fondo solo dopo aver deciso di tenere.",
+    "lesson": "Sei carte coerenti sono spesso meglio di sette che non fanno nulla."
+  }
+]

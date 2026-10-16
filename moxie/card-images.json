@@ -1,0 +1,1327 @@
+{
+  "Abrade": {
+    "name": "Abrade",
+    "url": "https://scryfall.com/card/soa/37/abrade",
+    "faces": [
+      {
+        "name": "Abrade",
+        "image": "https://cards.scryfall.io/normal/front/c/5/c5bb5307-e874-42c4-b85d-06b9f6c474c8.jpg?1775936634",
+        "small": "https://cards.scryfall.io/small/front/c/5/c5bb5307-e874-42c4-b85d-06b9f6c474c8.jpg?1775936634"
+      }
+    ]
+  },
+  "Airship Engine Room": {
+    "name": "Airship Engine Room",
+    "url": "https://scryfall.com/card/tla/265/airship-engine-room",
+    "faces": [
+      {
+        "name": "Airship Engine Room",
+        "image": "https://cards.scryfall.io/normal/front/0/b/0b98ba34-f251-4bd0-9d75-1d4445be5cfd.jpg?1764121949",
+        "small": "https://cards.scryfall.io/small/front/0/b/0b98ba34-f251-4bd0-9d75-1d4445be5cfd.jpg?1764121949"
+      }
+    ]
+  },
+  "Allies at Last": {
+    "name": "Allies at Last",
+    "url": "https://scryfall.com/card/tla/164/allies-at-last",
+    "faces": [
+      {
+        "name": "Allies at Last",
+        "image": "https://cards.scryfall.io/normal/front/1/1/11a77897-2aba-4a9b-bbe6-1768ca9f12cb.jpg?1764121122",
+        "small": "https://cards.scryfall.io/small/front/1/1/11a77897-2aba-4a9b-bbe6-1768ca9f12cb.jpg?1764121122"
+      }
+    ]
+  },
+  "Amazing Acrobatics": {
+    "name": "Amazing Acrobatics",
+    "url": "https://scryfall.com/card/spm/25/amazing-acrobatics",
+    "faces": [
+      {
+        "name": "Amazing Acrobatics",
+        "image": "https://cards.scryfall.io/normal/front/9/a/9a2f6d84-3d83-4f48-9906-11f681171930.jpg?1757376894",
+        "small": "https://cards.scryfall.io/small/front/9/a/9a2f6d84-3d83-4f48-9906-11f681171930.jpg?1757376894"
+      }
+    ]
+  },
+  "Archdruid's Charm": {
+    "name": "Archdruid's Charm",
+    "url": "https://scryfall.com/card/mkm/151/archdruids-charm",
+    "faces": [
+      {
+        "name": "Archdruid's Charm",
+        "image": "https://cards.scryfall.io/normal/front/5/c/5caae5ae-845f-42c2-b1ae-956df2739433.jpg?1706241943",
+        "small": "https://cards.scryfall.io/small/front/5/c/5caae5ae-845f-42c2-b1ae-956df2739433.jpg?1706241943"
+      }
+    ]
+  },
+  "Ashroot Animist": {
+    "name": "Ashroot Animist",
+    "url": "https://scryfall.com/card/fdn/345/ashroot-animist",
+    "faces": [
+      {
+        "name": "Ashroot Animist",
+        "image": "https://cards.scryfall.io/normal/front/0/5/05b39d89-9902-4a45-a774-bea1c17ca5e4.jpg?1730489891",
+        "small": "https://cards.scryfall.io/small/front/0/5/05b39d89-9902-4a45-a774-bea1c17ca5e4.jpg?1730489891"
+      }
+    ]
+  },
+  "Ba Sing Se": {
+    "name": "Ba Sing Se",
+    "url": "https://scryfall.com/card/tla/266/ba-sing-se",
+    "faces": [
+      {
+        "name": "Ba Sing Se",
+        "image": "https://cards.scryfall.io/normal/front/b/d/bdf3b2be-d0cd-4a3c-a10e-82d32c12d3bd.jpg?1764121955",
+        "small": "https://cards.scryfall.io/small/front/b/d/bdf3b2be-d0cd-4a3c-a10e-82d32c12d3bd.jpg?1764121955"
+      }
+    ]
+  },
+  "Beetle, Legacy Criminal": {
+    "name": "Beetle, Legacy Criminal",
+    "url": "https://scryfall.com/card/spm/26/beetle-legacy-criminal",
+    "faces": [
+      {
+        "name": "Beetle, Legacy Criminal",
+        "image": "https://cards.scryfall.io/normal/front/a/1/a194f930-c99f-4915-8a62-e20ab2b4ad1f.jpg?1757376901",
+        "small": "https://cards.scryfall.io/small/front/a/1/a194f930-c99f-4915-8a62-e20ab2b4ad1f.jpg?1757376901"
+      }
+    ]
+  },
+  "Bender's Waterskin": {
+    "name": "Bender's Waterskin",
+    "url": "https://scryfall.com/card/tla/255/benders-waterskin",
+    "faces": [
+      {
+        "name": "Bender's Waterskin",
+        "image": "https://cards.scryfall.io/normal/front/6/d/6d4a1712-d19e-4475-9614-a0b1af4da610.jpg?1764121885",
+        "small": "https://cards.scryfall.io/small/front/6/d/6d4a1712-d19e-4475-9614-a0b1af4da610.jpg?1764121885"
+      }
+    ]
+  },
+  "Boar-q-pine": {
+    "name": "Boar-q-pine",
+    "url": "https://scryfall.com/card/tla/124/boar-q-pine",
+    "faces": [
+      {
+        "name": "Boar-q-pine",
+        "image": "https://cards.scryfall.io/normal/front/0/8/087a445c-5f63-45d6-83e8-20d22650db20.jpg?1764120855",
+        "small": "https://cards.scryfall.io/small/front/0/8/087a445c-5f63-45d6-83e8-20d22650db20.jpg?1764120855"
+      }
+    ]
+  },
+  "Burst Lightning": {
+    "name": "Burst Lightning",
+    "url": "https://scryfall.com/card/fdn/192/burst-lightning",
+    "faces": [
+      {
+        "name": "Burst Lightning",
+        "image": "https://cards.scryfall.io/normal/front/a/e/aec5d380-d354-4750-931a-6c91853e2edc.jpg?1730489309",
+        "small": "https://cards.scryfall.io/small/front/a/e/aec5d380-d354-4750-931a-6c91853e2edc.jpg?1730489309"
+      }
+    ]
+  },
+  "Bushwhack": {
+    "name": "Bushwhack",
+    "url": "https://scryfall.com/card/fdn/215/bushwhack",
+    "faces": [
+      {
+        "name": "Bushwhack",
+        "image": "https://cards.scryfall.io/normal/front/0/3/03ebdb36-55e0-49dd-a514-785fbeb4ae19.jpg?1730489398",
+        "small": "https://cards.scryfall.io/small/front/0/3/03ebdb36-55e0-49dd-a514-785fbeb4ae19.jpg?1730489398"
+      }
+    ]
+  },
+  "Chameleon, Master of Disguise": {
+    "name": "Chameleon, Master of Disguise",
+    "url": "https://scryfall.com/card/spm/27/chameleon-master-of-disguise",
+    "faces": [
+      {
+        "name": "Chameleon, Master of Disguise",
+        "image": "https://cards.scryfall.io/normal/front/4/3/43892ce7-f63a-4294-922b-8f879f684033.jpg?1757376908",
+        "small": "https://cards.scryfall.io/small/front/4/3/43892ce7-f63a-4294-922b-8f879f684033.jpg?1757376908"
+      }
+    ]
+  },
+  "Cycle of Renewal": {
+    "name": "Cycle of Renewal",
+    "url": "https://scryfall.com/card/tla/170/cycle-of-renewal",
+    "faces": [
+      {
+        "name": "Cycle of Renewal",
+        "image": "https://cards.scryfall.io/normal/front/2/3/233f4a05-057b-48f4-8f56-8d4a060a40e4.jpg?1764121159",
+        "small": "https://cards.scryfall.io/small/front/2/3/233f4a05-057b-48f4-8f56-8d4a060a40e4.jpg?1764121159"
+      }
+    ]
+  },
+  "Damage Control Crew": {
+    "name": "Damage Control Crew",
+    "url": "https://scryfall.com/card/spm/99/damage-control-crew",
+    "faces": [
+      {
+        "name": "Damage Control Crew",
+        "image": "https://cards.scryfall.io/normal/front/a/d/ad2cab87-691d-44fe-ab2f-33760b1feb0f.jpg?1757377415",
+        "small": "https://cards.scryfall.io/small/front/a/d/ad2cab87-691d-44fe-ab2f-33760b1feb0f.jpg?1757377415"
+      }
+    ]
+  },
+  "Demolition Field": {
+    "name": "Demolition Field",
+    "url": "https://scryfall.com/card/fdn/687/demolition-field",
+    "faces": [
+      {
+        "name": "Demolition Field",
+        "image": "https://cards.scryfall.io/normal/front/0/c/0c7e51b6-4898-4632-b39c-3ce438caa882.jpg?1783908902",
+        "small": "https://cards.scryfall.io/small/front/0/c/0c7e51b6-4898-4632-b39c-3ce438caa882.jpg?1783908902"
+      }
+    ]
+  },
+  "Doc Ock's Henchmen": {
+    "name": "Doc Ock's Henchmen",
+    "url": "https://scryfall.com/card/spm/30/doc-ocks-henchmen",
+    "faces": [
+      {
+        "name": "Doc Ock's Henchmen",
+        "image": "https://cards.scryfall.io/normal/front/a/3/a383c442-3f4a-4115-97e4-23f0eb88465b.jpg?1757376927",
+        "small": "https://cards.scryfall.io/small/front/a/3/a383c442-3f4a-4115-97e4-23f0eb88465b.jpg?1757376927"
+      }
+    ]
+  },
+  "Earth Rumble Wrestlers": {
+    "name": "Earth Rumble Wrestlers",
+    "url": "https://scryfall.com/card/tla/218/earth-rumble-wrestlers",
+    "faces": [
+      {
+        "name": "Earth Rumble Wrestlers",
+        "image": "https://cards.scryfall.io/normal/front/7/4/74fca0b8-12e1-405f-b999-160d65fe0ade.jpg?1764121573",
+        "small": "https://cards.scryfall.io/small/front/7/4/74fca0b8-12e1-405f-b999-160d65fe0ade.jpg?1764121573"
+      }
+    ]
+  },
+  "Earthbender Ascension": {
+    "name": "Earthbender Ascension",
+    "url": "https://scryfall.com/card/tla/175/earthbender-ascension",
+    "faces": [
+      {
+        "name": "Earthbender Ascension",
+        "image": "https://cards.scryfall.io/normal/front/5/9/590a58ab-5e98-4031-8aa6-ce396dc1429f.jpg?1764121189",
+        "small": "https://cards.scryfall.io/small/front/5/9/590a58ab-5e98-4031-8aa6-ce396dc1429f.jpg?1764121189"
+      }
+    ]
+  },
+  "Electro's Bolt": {
+    "name": "Electro's Bolt",
+    "url": "https://scryfall.com/card/spm/77/electros-bolt",
+    "faces": [
+      {
+        "name": "Electro's Bolt",
+        "image": "https://cards.scryfall.io/normal/front/2/5/25fe063f-35e4-4fca-9889-06834a8ef9b9.jpg?1757377248",
+        "small": "https://cards.scryfall.io/small/front/2/5/25fe063f-35e4-4fca-9889-06834a8ef9b9.jpg?1757377248"
+      }
+    ]
+  },
+  "Elven Passage": {
+    "name": "Elven Passage",
+    "url": "https://scryfall.com/card/hob/181/elven-passage",
+    "faces": [
+      {
+        "name": "Elven Passage",
+        "image": "https://cards.scryfall.io/normal/front/d/d/dd1fd2ab-2565-4798-a832-fc849df82f74.jpg?1785323319",
+        "small": "https://cards.scryfall.io/small/front/d/d/dd1fd2ab-2565-4798-a832-fc849df82f74.jpg?1785323319"
+      }
+    ]
+  },
+  "Escape Tunnel": {
+    "name": "Escape Tunnel",
+    "url": "https://scryfall.com/card/mkm/261/escape-tunnel",
+    "faces": [
+      {
+        "name": "Escape Tunnel",
+        "image": "https://cards.scryfall.io/normal/front/9/3/93ddde4f-d35e-4128-8f43-d0eadbd715de.jpg?1706242339",
+        "small": "https://cards.scryfall.io/small/front/9/3/93ddde4f-d35e-4128-8f43-d0eadbd715de.jpg?1706242339"
+      }
+    ]
+  },
+  "Esper Origins // Summon: Esper Maduin": {
+    "name": "Esper Origins // Summon: Esper Maduin",
+    "url": "https://scryfall.com/card/fin/185/esper-origins-summon:-esper-maduin",
+    "faces": [
+      {
+        "name": "Esper Origins",
+        "image": "https://cards.scryfall.io/normal/front/0/f/0f503360-216a-4629-89b2-d32072850aef.jpg?1783906592",
+        "small": "https://cards.scryfall.io/small/front/0/f/0f503360-216a-4629-89b2-d32072850aef.jpg?1783906592"
+      },
+      {
+        "name": "Summon: Esper Maduin",
+        "image": "https://cards.scryfall.io/normal/back/0/f/0f503360-216a-4629-89b2-d32072850aef.jpg?1783906592",
+        "small": "https://cards.scryfall.io/small/back/0/f/0f503360-216a-4629-89b2-d32072850aef.jpg?1783906592"
+      }
+    ]
+  },
+  "Fabled Passage": {
+    "name": "Fabled Passage",
+    "url": "https://scryfall.com/card/eld/244/fabled-passage",
+    "faces": [
+      {
+        "name": "Fabled Passage",
+        "image": "https://cards.scryfall.io/normal/front/b/8/b841bfa8-7c17-4df2-8466-780ab9a4a53a.jpg?1572491204",
+        "small": "https://cards.scryfall.io/small/front/b/8/b841bfa8-7c17-4df2-8466-780ab9a4a53a.jpg?1572491204"
+      }
+    ]
+  },
+  "Fire Nation Cadets": {
+    "name": "Fire Nation Cadets",
+    "url": "https://scryfall.com/card/tla/134/fire-nation-cadets",
+    "faces": [
+      {
+        "name": "Fire Nation Cadets",
+        "image": "https://cards.scryfall.io/normal/front/1/a/1a3a862c-9c9a-41cd-94d1-2d0cff22a6cd.jpg?1764120921",
+        "small": "https://cards.scryfall.io/small/front/1/a/1a3a862c-9c9a-41cd-94d1-2d0cff22a6cd.jpg?1764120921"
+      }
+    ]
+  },
+  "Fire Nation Raider": {
+    "name": "Fire Nation Raider",
+    "url": "https://scryfall.com/card/tla/135/fire-nation-raider",
+    "faces": [
+      {
+        "name": "Fire Nation Raider",
+        "image": "https://cards.scryfall.io/normal/front/e/d/ede1bbdb-c726-46e3-aaf1-b8cf2be2c341.jpg?1764120927",
+        "small": "https://cards.scryfall.io/small/front/e/d/ede1bbdb-c726-46e3-aaf1-b8cf2be2c341.jpg?1764120927"
+      }
+    ]
+  },
+  "Fire Nation Warship": {
+    "name": "Fire Nation Warship",
+    "url": "https://scryfall.com/card/tla/256/fire-nation-warship",
+    "faces": [
+      {
+        "name": "Fire Nation Warship",
+        "image": "https://cards.scryfall.io/normal/front/4/1/41ecc1de-353e-4131-b735-d2ce18c9c2d5.jpg?1764121892",
+        "small": "https://cards.scryfall.io/small/front/4/1/41ecc1de-353e-4131-b735-d2ce18c9c2d5.jpg?1764121892"
+      }
+    ]
+  },
+  "Firebending Lesson": {
+    "name": "Firebending Lesson",
+    "url": "https://scryfall.com/card/tla/138/firebending-lesson",
+    "faces": [
+      {
+        "name": "Firebending Lesson",
+        "image": "https://cards.scryfall.io/normal/front/f/a/fa940e68-010e-4b68-be8a-555d7068f7b4.jpg?1764120947",
+        "small": "https://cards.scryfall.io/small/front/f/a/fa940e68-010e-4b68-be8a-555d7068f7b4.jpg?1764120947"
+      }
+    ]
+  },
+  "Firebending Student": {
+    "name": "Firebending Student",
+    "url": "https://scryfall.com/card/tla/139/firebending-student",
+    "faces": [
+      {
+        "name": "Firebending Student",
+        "image": "https://cards.scryfall.io/normal/front/3/b/3b366f59-16fe-43cb-888d-1f93ef8fd332.jpg?1764120954",
+        "small": "https://cards.scryfall.io/small/front/3/b/3b366f59-16fe-43cb-888d-1f93ef8fd332.jpg?1764120954"
+      }
+    ]
+  },
+  "Flying Octobot": {
+    "name": "Flying Octobot",
+    "url": "https://scryfall.com/card/spm/31/flying-octobot",
+    "faces": [
+      {
+        "name": "Flying Octobot",
+        "image": "https://cards.scryfall.io/normal/front/e/b/ebadcd4a-f58f-4328-a765-0ea8d8028417.jpg?1757376933",
+        "small": "https://cards.scryfall.io/small/front/e/b/ebadcd4a-f58f-4328-a765-0ea8d8028417.jpg?1757376933"
+      }
+    ]
+  },
+  "Foggy Swamp Vinebender": {
+    "name": "Foggy Swamp Vinebender",
+    "url": "https://scryfall.com/card/tla/180/foggy-swamp-vinebender",
+    "faces": [
+      {
+        "name": "Foggy Swamp Vinebender",
+        "image": "https://cards.scryfall.io/normal/front/7/8/78a75317-94f7-47a4-b4da-5a027fa73248.jpg?1764121222",
+        "small": "https://cards.scryfall.io/small/front/7/8/78a75317-94f7-47a4-b4da-5a027fa73248.jpg?1764121222"
+      }
+    ]
+  },
+  "Forest": {
+    "name": "Forest",
+    "url": "https://scryfall.com/card/hob/198/forest",
+    "faces": [
+      {
+        "name": "Forest",
+        "image": "https://cards.scryfall.io/normal/front/5/f/5f533364-0f91-4e49-aaeb-83c4c1f6d316.jpg?1783902781",
+        "small": "https://cards.scryfall.io/small/front/5/f/5f533364-0f91-4e49-aaeb-83c4c1f6d316.jpg?1783902781"
+      }
+    ]
+  },
+  "Gallant Citizen": {
+    "name": "Gallant Citizen",
+    "url": "https://scryfall.com/card/spm/129/gallant-citizen",
+    "faces": [
+      {
+        "name": "Gallant Citizen",
+        "image": "https://cards.scryfall.io/normal/front/4/3/43790471-6ec8-4c1d-b6d3-74c6cdf8ce43.jpg?1757377671",
+        "small": "https://cards.scryfall.io/small/front/4/3/43790471-6ec8-4c1d-b6d3-74c6cdf8ce43.jpg?1757377671"
+      }
+    ]
+  },
+  "Gene Pollinator": {
+    "name": "Gene Pollinator",
+    "url": "https://scryfall.com/card/eoe/186/gene-pollinator",
+    "faces": [
+      {
+        "name": "Gene Pollinator",
+        "image": "https://cards.scryfall.io/normal/front/c/e/ce7a8eec-a029-4ee1-b2d6-405d903d4640.jpg?1752947315",
+        "small": "https://cards.scryfall.io/small/front/c/e/ce7a8eec-a029-4ee1-b2d6-405d903d4640.jpg?1752947315"
+      }
+    ]
+  },
+  "Grow Extra Arms": {
+    "name": "Grow Extra Arms",
+    "url": "https://scryfall.com/card/spm/101/grow-extra-arms",
+    "faces": [
+      {
+        "name": "Grow Extra Arms",
+        "image": "https://cards.scryfall.io/normal/front/6/3/63fab399-00db-4398-922e-c3ca3356731a.jpg?1757377428",
+        "small": "https://cards.scryfall.io/small/front/6/3/63fab399-00db-4398-922e-c3ca3356731a.jpg?1757377428"
+      }
+    ]
+  },
+  "Guru Pathik": {
+    "name": "Guru Pathik",
+    "url": "https://scryfall.com/card/tla/223/guru-pathik",
+    "faces": [
+      {
+        "name": "Guru Pathik",
+        "image": "https://cards.scryfall.io/normal/front/2/2/224a2241-0dce-4008-8d9c-86db40ec5f8b.jpg?1764121623",
+        "small": "https://cards.scryfall.io/small/front/2/2/224a2241-0dce-4008-8d9c-86db40ec5f8b.jpg?1764121623"
+      }
+    ]
+  },
+  "Guy in the Chair": {
+    "name": "Guy in the Chair",
+    "url": "https://scryfall.com/card/spm/102/guy-in-the-chair",
+    "faces": [
+      {
+        "name": "Guy in the Chair",
+        "image": "https://cards.scryfall.io/normal/front/6/5/65e97c06-55a6-4841-be0f-055c015df90a.jpg?1757377435",
+        "small": "https://cards.scryfall.io/small/front/6/5/65e97c06-55a6-4841-be0f-055c015df90a.jpg?1757377435"
+      }
+    ]
+  },
+  "Halana and Alena, Partners": {
+    "name": "Halana and Alena, Partners",
+    "url": "https://scryfall.com/card/vow/239/halana-and-alena-partners",
+    "faces": [
+      {
+        "name": "Halana and Alena, Partners",
+        "image": "https://cards.scryfall.io/normal/front/6/0/608fa232-f5fe-4c58-9efe-fb780f454b19.jpg?1643594145",
+        "small": "https://cards.scryfall.io/small/front/6/0/608fa232-f5fe-4c58-9efe-fb780f454b19.jpg?1643594145"
+      }
+    ]
+  },
+  "Hide on the Ceiling": {
+    "name": "Hide on the Ceiling",
+    "url": "https://scryfall.com/card/spm/32/hide-on-the-ceiling",
+    "faces": [
+      {
+        "name": "Hide on the Ceiling",
+        "image": "https://cards.scryfall.io/normal/front/7/9/7977e448-01fa-4fa5-a275-0d6a1357b35c.jpg?1757376939",
+        "small": "https://cards.scryfall.io/small/front/7/9/7977e448-01fa-4fa5-a275-0d6a1357b35c.jpg?1757376939"
+      }
+    ]
+  },
+  "Hot Dog Cart": {
+    "name": "Hot Dog Cart",
+    "url": "https://scryfall.com/card/spm/164/hot-dog-cart",
+    "faces": [
+      {
+        "name": "Hot Dog Cart",
+        "image": "https://cards.scryfall.io/normal/front/6/e/6ee3b883-e9f5-426f-a2ea-96fe9ff3aba9.jpg?1757378016",
+        "small": "https://cards.scryfall.io/small/front/6/e/6ee3b883-e9f5-426f-a2ea-96fe9ff3aba9.jpg?1757378016"
+      }
+    ]
+  },
+  "How to Start a Riot": {
+    "name": "How to Start a Riot",
+    "url": "https://scryfall.com/card/tla/140/how-to-start-a-riot",
+    "faces": [
+      {
+        "name": "How to Start a Riot",
+        "image": "https://cards.scryfall.io/normal/front/2/3/23b3bf1e-ea85-47f5-8473-4d16615f68d7.jpg?1764120961",
+        "small": "https://cards.scryfall.io/small/front/2/3/23b3bf1e-ea85-47f5-8473-4d16615f68d7.jpg?1764120961"
+      }
+    ]
+  },
+  "Icetill Explorer": {
+    "name": "Icetill Explorer",
+    "url": "https://scryfall.com/card/eoe/192/icetill-explorer",
+    "faces": [
+      {
+        "name": "Icetill Explorer",
+        "image": "https://cards.scryfall.io/normal/front/d/9/d9482aab-6ddf-48e1-84fa-b13d5ff81e69.jpg?1783905935",
+        "small": "https://cards.scryfall.io/small/front/d/9/d9482aab-6ddf-48e1-84fa-b13d5ff81e69.jpg?1783905935"
+      }
+    ]
+  },
+  "Interdimensional Web Watch": {
+    "name": "Interdimensional Web Watch",
+    "url": "https://scryfall.com/card/spm/278/interdimensional-web-watch",
+    "faces": [
+      {
+        "name": "Interdimensional Web Watch",
+        "image": "https://cards.scryfall.io/normal/front/7/4/740cde32-57e6-4633-98e9-724c505eb008.jpg?1757379201",
+        "small": "https://cards.scryfall.io/small/front/7/4/740cde32-57e6-4633-98e9-724c505eb008.jpg?1757379201"
+      }
+    ]
+  },
+  "Island": {
+    "name": "Island",
+    "url": "https://scryfall.com/card/hob/195/island",
+    "faces": [
+      {
+        "name": "Island",
+        "image": "https://cards.scryfall.io/normal/front/7/3/739aaaac-c424-4ea7-a084-62a6fc0438b0.jpg?1783902783",
+        "small": "https://cards.scryfall.io/small/front/7/3/739aaaac-c424-4ea7-a084-62a6fc0438b0.jpg?1783902783"
+      }
+    ]
+  },
+  "Kyoshi Village": {
+    "name": "Kyoshi Village",
+    "url": "https://scryfall.com/card/tla/271/kyoshi-village",
+    "faces": [
+      {
+        "name": "Kyoshi Village",
+        "image": "https://cards.scryfall.io/normal/front/8/d/8d5f3008-2af8-4e81-8847-1c91f524e747.jpg?1764121985",
+        "small": "https://cards.scryfall.io/small/front/8/d/8d5f3008-2af8-4e81-8847-1c91f524e747.jpg?1764121985"
+      }
+    ]
+  },
+  "Leatherhead, Swamp Stalker": {
+    "name": "Leatherhead, Swamp Stalker",
+    "url": "https://scryfall.com/card/tmt/117/leatherhead-swamp-stalker",
+    "faces": [
+      {
+        "name": "Leatherhead, Swamp Stalker",
+        "image": "https://cards.scryfall.io/normal/front/b/1/b1f6b5b5-12ca-468d-bc53-dd0cde60e7b6.jpg?1769006176",
+        "small": "https://cards.scryfall.io/small/front/b/1/b1f6b5b5-12ca-468d-bc53-dd0cde60e7b6.jpg?1769006176"
+      }
+    ]
+  },
+  "Lightning Strike": {
+    "name": "Lightning Strike",
+    "url": "https://scryfall.com/card/tla/146/lightning-strike",
+    "faces": [
+      {
+        "name": "Lightning Strike",
+        "image": "https://cards.scryfall.io/normal/front/5/7/5787b0e0-9469-4a6d-8b81-c992628e28c0.jpg?1764121006",
+        "small": "https://cards.scryfall.io/small/front/5/7/5787b0e0-9469-4a6d-8b81-c992628e28c0.jpg?1764121006"
+      }
+    ]
+  },
+  "Llanowar Elves": {
+    "name": "Llanowar Elves",
+    "url": "https://scryfall.com/card/fdn/227/llanowar-elves",
+    "faces": [
+      {
+        "name": "Llanowar Elves",
+        "image": "https://cards.scryfall.io/normal/front/6/a/6a0b230b-d391-4998-a3f7-7b158a0ec2cd.jpg?1731652605",
+        "small": "https://cards.scryfall.io/small/front/6/a/6a0b230b-d391-4998-a3f7-7b158a0ec2cd.jpg?1731652605"
+      }
+    ]
+  },
+  "Loading Zone": {
+    "name": "Loading Zone",
+    "url": "https://scryfall.com/card/eoe/196/loading-zone",
+    "faces": [
+      {
+        "name": "Loading Zone",
+        "image": "https://cards.scryfall.io/normal/front/0/d/0d2c95bd-79af-4a23-b265-62cc0b164e3e.jpg?1752947354",
+        "small": "https://cards.scryfall.io/small/front/0/d/0d2c95bd-79af-4a23-b265-62cc0b164e3e.jpg?1752947354"
+      }
+    ]
+  },
+  "Lumbering Worldwagon": {
+    "name": "Lumbering Worldwagon",
+    "url": "https://scryfall.com/card/dft/168/lumbering-worldwagon",
+    "faces": [
+      {
+        "name": "Lumbering Worldwagon",
+        "image": "https://cards.scryfall.io/normal/front/9/f/9f989c59-7b2a-4036-9ea2-cd0c7e85c15b.jpg?1783907870",
+        "small": "https://cards.scryfall.io/small/front/9/f/9f989c59-7b2a-4036-9ea2-cd0c7e85c15b.jpg?1783907870"
+      }
+    ]
+  },
+  "Lurking Lizards": {
+    "name": "Lurking Lizards",
+    "url": "https://scryfall.com/card/spm/107/lurking-lizards",
+    "faces": [
+      {
+        "name": "Lurking Lizards",
+        "image": "https://cards.scryfall.io/normal/front/5/8/58b5b49c-ddd6-4d1b-9b61-6e02d8fc55ad.jpg?1758215804",
+        "small": "https://cards.scryfall.io/small/front/5/8/58b5b49c-ddd6-4d1b-9b61-6e02d8fc55ad.jpg?1758215804"
+      }
+    ]
+  },
+  "Madame Web, Clairvoyant": {
+    "name": "Madame Web, Clairvoyant",
+    "url": "https://scryfall.com/card/spm/36/madame-web-clairvoyant",
+    "faces": [
+      {
+        "name": "Madame Web, Clairvoyant",
+        "image": "https://cards.scryfall.io/normal/front/a/1/a16ca3fc-3cdf-4333-93e0-524afafe367b.jpg?1757376966",
+        "small": "https://cards.scryfall.io/small/front/a/1/a16ca3fc-3cdf-4333-93e0-524afafe367b.jpg?1757376966"
+      }
+    ]
+  },
+  "Mai, Jaded Edge": {
+    "name": "Mai, Jaded Edge",
+    "url": "https://scryfall.com/card/tla/147/mai-jaded-edge",
+    "faces": [
+      {
+        "name": "Mai, Jaded Edge",
+        "image": "https://cards.scryfall.io/normal/front/7/3/732e6bc9-0798-4c00-aea0-5ef4298b45f5.jpg?1764121013",
+        "small": "https://cards.scryfall.io/small/front/7/3/732e6bc9-0798-4c00-aea0-5ef4298b45f5.jpg?1764121013"
+      }
+    ]
+  },
+  "Mechanical Mobster": {
+    "name": "Mechanical Mobster",
+    "url": "https://scryfall.com/card/spm/168/mechanical-mobster",
+    "faces": [
+      {
+        "name": "Mechanical Mobster",
+        "image": "https://cards.scryfall.io/normal/front/6/c/6c6d9ecc-2dd1-471a-8678-a2461b1084fa.jpg?1757378049",
+        "small": "https://cards.scryfall.io/small/front/6/c/6c6d9ecc-2dd1-471a-8678-a2461b1084fa.jpg?1757378049"
+      }
+    ]
+  },
+  "Meditation Pools": {
+    "name": "Meditation Pools",
+    "url": "https://scryfall.com/card/tla/272/meditation-pools",
+    "faces": [
+      {
+        "name": "Meditation Pools",
+        "image": "https://cards.scryfall.io/normal/front/c/c/cc078fc6-4470-473f-9e24-d2c470e09141.jpg?1764121991",
+        "small": "https://cards.scryfall.io/small/front/c/c/cc078fc6-4470-473f-9e24-d2c470e09141.jpg?1764121991"
+      }
+    ]
+  },
+  "Meltstrider's Resolve": {
+    "name": "Meltstrider's Resolve",
+    "url": "https://scryfall.com/card/eoe/199/meltstriders-resolve",
+    "faces": [
+      {
+        "name": "Meltstrider's Resolve",
+        "image": "https://cards.scryfall.io/normal/front/5/3/53c08af4-b975-4d9d-baba-73e6727f2778.jpg?1752947367",
+        "small": "https://cards.scryfall.io/small/front/5/3/53c08af4-b975-4d9d-baba-73e6727f2778.jpg?1752947367"
+      }
+    ]
+  },
+  "Mightform Harmonizer": {
+    "name": "Mightform Harmonizer",
+    "url": "https://scryfall.com/card/eoe/200/mightform-harmonizer",
+    "faces": [
+      {
+        "name": "Mightform Harmonizer",
+        "image": "https://cards.scryfall.io/normal/front/f/3/f32302f1-b54f-4489-9d0b-9b771e59da06.jpg?1752947370",
+        "small": "https://cards.scryfall.io/small/front/f/3/f32302f1-b54f-4489-9d0b-9b771e59da06.jpg?1752947370"
+      }
+    ]
+  },
+  "Mob Lookout": {
+    "name": "Mob Lookout",
+    "url": "https://scryfall.com/card/spm/136/mob-lookout",
+    "faces": [
+      {
+        "name": "Mob Lookout",
+        "image": "https://cards.scryfall.io/normal/front/e/0/e0e3b660-d391-454b-ba57-bff4ddcf27b7.jpg?1757377743",
+        "small": "https://cards.scryfall.io/small/front/e/0/e0e3b660-d391-454b-ba57-bff4ddcf27b7.jpg?1757377743"
+      }
+    ]
+  },
+  "Mossborn Hydra": {
+    "name": "Mossborn Hydra",
+    "url": "https://scryfall.com/card/fdn/107/mossborn-hydra",
+    "faces": [
+      {
+        "name": "Mossborn Hydra",
+        "image": "https://cards.scryfall.io/normal/front/7/0/7054a0d7-396f-40b4-ab24-db591c3b08f0.jpg?1730488992",
+        "small": "https://cards.scryfall.io/small/front/7/0/7054a0d7-396f-40b4-ab24-db591c3b08f0.jpg?1730488992"
+      }
+    ]
+  },
+  "Mountain": {
+    "name": "Mountain",
+    "url": "https://scryfall.com/card/hob/197/mountain",
+    "faces": [
+      {
+        "name": "Mountain",
+        "image": "https://cards.scryfall.io/normal/front/5/1/51acfb01-4b0b-48fc-9704-a9b4a1e43a23.jpg?1783902782",
+        "small": "https://cards.scryfall.io/small/front/5/1/51acfb01-4b0b-48fc-9704-a9b4a1e43a23.jpg?1783902782"
+      }
+    ]
+  },
+  "Multiversal Passage": {
+    "name": "Multiversal Passage",
+    "url": "https://scryfall.com/card/spm/206/multiversal-passage",
+    "faces": [
+      {
+        "name": "Multiversal Passage",
+        "image": "https://cards.scryfall.io/normal/front/d/b/db88b6b6-7907-4c40-b712-4fa1456d8ad0.jpg?1757378406",
+        "small": "https://cards.scryfall.io/small/front/d/b/db88b6b6-7907-4c40-b712-4fa1456d8ad0.jpg?1757378406"
+      }
+    ]
+  },
+  "Origin of Metalbending": {
+    "name": "Origin of Metalbending",
+    "url": "https://scryfall.com/card/tla/187/origin-of-metalbending",
+    "faces": [
+      {
+        "name": "Origin of Metalbending",
+        "image": "https://cards.scryfall.io/normal/front/2/5/25749f9a-260d-4bdc-bd28-429c12faa4a5.jpg?1764121273",
+        "small": "https://cards.scryfall.io/small/front/2/5/25749f9a-260d-4bdc-bd28-429c12faa4a5.jpg?1764121273"
+      }
+    ]
+  },
+  "Oscorp Research Team": {
+    "name": "Oscorp Research Team",
+    "url": "https://scryfall.com/card/spm/40/oscorp-research-team",
+    "faces": [
+      {
+        "name": "Oscorp Research Team",
+        "image": "https://cards.scryfall.io/normal/front/a/8/a800ffb4-0c48-41eb-b221-cf1d855131d9.jpg?1757376999",
+        "small": "https://cards.scryfall.io/small/front/a/8/a800ffb4-0c48-41eb-b221-cf1d855131d9.jpg?1757376999"
+      }
+    ]
+  },
+  "Ostrich-Horse": {
+    "name": "Ostrich-Horse",
+    "url": "https://scryfall.com/card/tla/188/ostrich-horse",
+    "faces": [
+      {
+        "name": "Ostrich-Horse",
+        "image": "https://cards.scryfall.io/normal/front/5/c/5ca3fd45-9301-44ef-afc0-4d7999d66d36.jpg?1764121280",
+        "small": "https://cards.scryfall.io/small/front/5/c/5ca3fd45-9301-44ef-afc0-4d7999d66d36.jpg?1764121280"
+      }
+    ]
+  },
+  "Ouroboroid": {
+    "name": "Ouroboroid",
+    "url": "https://scryfall.com/card/eoe/201/ouroboroid",
+    "faces": [
+      {
+        "name": "Ouroboroid",
+        "image": "https://cards.scryfall.io/normal/front/2/0/209c591a-4ab2-4e89-9523-a7b766cf4e51.jpg?1752947376",
+        "small": "https://cards.scryfall.io/small/front/2/0/209c591a-4ab2-4e89-9523-a7b766cf4e51.jpg?1752947376"
+      }
+    ]
+  },
+  "Passenger Ferry": {
+    "name": "Passenger Ferry",
+    "url": "https://scryfall.com/card/spm/170/passenger-ferry",
+    "faces": [
+      {
+        "name": "Passenger Ferry",
+        "image": "https://cards.scryfall.io/normal/front/2/4/2495f477-b88c-4938-a86a-f72c3c861188.jpg?1757378062",
+        "small": "https://cards.scryfall.io/small/front/2/4/2495f477-b88c-4938-a86a-f72c3c861188.jpg?1757378062"
+      }
+    ]
+  },
+  "Platypus-Bear": {
+    "name": "Platypus-Bear",
+    "url": "https://scryfall.com/card/tla/236/platypus-bear",
+    "faces": [
+      {
+        "name": "Platypus-Bear",
+        "image": "https://cards.scryfall.io/normal/front/7/e/7ebf742a-3995-4b22-9dc7-b05f57889683.jpg?1764121750",
+        "small": "https://cards.scryfall.io/small/front/7/e/7ebf742a-3995-4b22-9dc7-b05f57889683.jpg?1764121750"
+      }
+    ]
+  },
+  "Promising Vein": {
+    "name": "Promising Vein",
+    "url": "https://scryfall.com/card/lci/279/promising-vein",
+    "faces": [
+      {
+        "name": "Promising Vein",
+        "image": "https://cards.scryfall.io/normal/front/e/9/e9681a54-6413-4ff4-b6b1-ee4decb25bfa.jpg?1699044695",
+        "small": "https://cards.scryfall.io/small/front/e/9/e9681a54-6413-4ff4-b6b1-ee4decb25bfa.jpg?1699044695"
+      }
+    ]
+  },
+  "Rampant Growth": {
+    "name": "Rampant Growth",
+    "url": "https://scryfall.com/card/blc/234/rampant-growth",
+    "faces": [
+      {
+        "name": "Rampant Growth",
+        "image": "https://cards.scryfall.io/normal/front/d/6/d6e4e354-dee5-4c9d-960d-9847fca97c7a.jpg?1721429355",
+        "small": "https://cards.scryfall.io/small/front/d/6/d6e4e354-dee5-4c9d-960d-9847fca97c7a.jpg?1721429355"
+      }
+    ]
+  },
+  "Raucous Audience": {
+    "name": "Raucous Audience",
+    "url": "https://scryfall.com/card/tla/190/raucous-audience",
+    "faces": [
+      {
+        "name": "Raucous Audience",
+        "image": "https://cards.scryfall.io/normal/front/c/c/ccd03ec3-0fae-48b2-9f04-9c57d2f94267.jpg?1764121294",
+        "small": "https://cards.scryfall.io/small/front/c/c/ccd03ec3-0fae-48b2-9f04-9c57d2f94267.jpg?1764121294"
+      }
+    ]
+  },
+  "Rebellious Captives": {
+    "name": "Rebellious Captives",
+    "url": "https://scryfall.com/card/tla/191/rebellious-captives",
+    "faces": [
+      {
+        "name": "Rebellious Captives",
+        "image": "https://cards.scryfall.io/normal/front/e/6/e64a4a8b-323c-4c8b-92af-1a3295799e65.jpg?1764121300",
+        "small": "https://cards.scryfall.io/small/front/e/6/e64a4a8b-323c-4c8b-92af-1a3295799e65.jpg?1764121300"
+      }
+    ]
+  },
+  "Robotics Mastery": {
+    "name": "Robotics Mastery",
+    "url": "https://scryfall.com/card/spm/41/robotics-mastery",
+    "faces": [
+      {
+        "name": "Robotics Mastery",
+        "image": "https://cards.scryfall.io/normal/front/d/0/d0e92939-6d86-44b4-8a43-1963e97a2bb3.jpg?1757377005",
+        "small": "https://cards.scryfall.io/small/front/d/0/d0e92939-6d86-44b4-8a43-1963e97a2bb3.jpg?1757377005"
+      }
+    ]
+  },
+  "Rockalanche": {
+    "name": "Rockalanche",
+    "url": "https://scryfall.com/card/tla/192/rockalanche",
+    "faces": [
+      {
+        "name": "Rockalanche",
+        "image": "https://cards.scryfall.io/normal/front/5/2/52b213d3-6f68-43e6-91e9-435d8fe1f34c.jpg?1764121307",
+        "small": "https://cards.scryfall.io/small/front/5/2/52b213d3-6f68-43e6-91e9-435d8fe1f34c.jpg?1764121307"
+      }
+    ]
+  },
+  "Rocky Rebuke": {
+    "name": "Rocky Rebuke",
+    "url": "https://scryfall.com/card/tla/193/rocky-rebuke",
+    "faces": [
+      {
+        "name": "Rocky Rebuke",
+        "image": "https://cards.scryfall.io/normal/front/5/2/52fd910f-6d42-41f5-a4be-f375aa254ea2.jpg?1764121313",
+        "small": "https://cards.scryfall.io/small/front/5/2/52fd910f-6d42-41f5-a4be-f375aa254ea2.jpg?1764121313"
+      }
+    ]
+  },
+  "Romantic Rendezvous": {
+    "name": "Romantic Rendezvous",
+    "url": "https://scryfall.com/card/spm/86/romantic-rendezvous",
+    "faces": [
+      {
+        "name": "Romantic Rendezvous",
+        "image": "https://cards.scryfall.io/normal/front/3/8/38120361-153f-414e-8a45-f86bb2e35a17.jpg?1757377322",
+        "small": "https://cards.scryfall.io/small/front/3/8/38120361-153f-414e-8a45-f86bb2e35a17.jpg?1757377322"
+      }
+    ]
+  },
+  "Royal Treatment": {
+    "name": "Royal Treatment",
+    "url": "https://scryfall.com/card/woe/183/royal-treatment",
+    "faces": [
+      {
+        "name": "Royal Treatment",
+        "image": "https://cards.scryfall.io/normal/front/b/6/b6516b8f-ecfb-401e-ba8e-bf561aa2be64.jpg?1692939004",
+        "small": "https://cards.scryfall.io/small/front/b/6/b6516b8f-ecfb-401e-ba8e-bf561aa2be64.jpg?1692939004"
+      }
+    ]
+  },
+  "Rugged Highlands": {
+    "name": "Rugged Highlands",
+    "url": "https://scryfall.com/card/tdm/265/rugged-highlands",
+    "faces": [
+      {
+        "name": "Rugged Highlands",
+        "image": "https://cards.scryfall.io/normal/front/3/1/31261eca-28ad-407c-84ef-0c124d0d7451.jpg?1743205049",
+        "small": "https://cards.scryfall.io/small/front/3/1/31261eca-28ad-407c-84ef-0c124d0d7451.jpg?1743205049"
+      }
+    ]
+  },
+  "Saber-Tooth Moose-Lion": {
+    "name": "Saber-Tooth Moose-Lion",
+    "url": "https://scryfall.com/card/tla/194/saber-tooth-moose-lion",
+    "faces": [
+      {
+        "name": "Saber-Tooth Moose-Lion",
+        "image": "https://cards.scryfall.io/normal/front/b/1/b15f302d-c451-4e79-a5af-75ee3ba4cadf.jpg?1764121320",
+        "small": "https://cards.scryfall.io/small/front/b/1/b15f302d-c451-4e79-a5af-75ee3ba4cadf.jpg?1764121320"
+      }
+    ]
+  },
+  "Sandman, Shifting Scoundrel": {
+    "name": "Sandman, Shifting Scoundrel",
+    "url": "https://scryfall.com/card/spm/266/sandman-shifting-scoundrel",
+    "faces": [
+      {
+        "name": "Sandman, Shifting Scoundrel",
+        "image": "https://cards.scryfall.io/normal/front/4/9/496864ab-bdba-4cfe-aa7b-b58d2954cf75.jpg?1783905269",
+        "small": "https://cards.scryfall.io/small/front/4/9/496864ab-bdba-4cfe-aa7b-b58d2954cf75.jpg?1783905269"
+      }
+    ]
+  },
+  "Sapling Nursery": {
+    "name": "Sapling Nursery",
+    "url": "https://scryfall.com/card/ecl/192/sapling-nursery",
+    "faces": [
+      {
+        "name": "Sapling Nursery",
+        "image": "https://cards.scryfall.io/normal/front/3/1/3199bea9-fef7-45fe-8777-2103d84a9347.jpg?1767862603",
+        "small": "https://cards.scryfall.io/small/front/3/1/3199bea9-fef7-45fe-8777-2103d84a9347.jpg?1767862603"
+      }
+    ]
+  },
+  "Savage Mansion": {
+    "name": "Savage Mansion",
+    "url": "https://scryfall.com/card/spm/183/savage-mansion",
+    "faces": [
+      {
+        "name": "Savage Mansion",
+        "image": "https://cards.scryfall.io/normal/front/8/5/855f59a5-17a8-4aca-8a4d-f98111eba14c.jpg?1757378170",
+        "small": "https://cards.scryfall.io/small/front/8/5/855f59a5-17a8-4aca-8a4d-f98111eba14c.jpg?1757378170"
+      }
+    ]
+  },
+  "Sazh's Chocobo": {
+    "name": "Sazh's Chocobo",
+    "url": "https://scryfall.com/card/fin/200/sazhs-chocobo",
+    "faces": [
+      {
+        "name": "Sazh's Chocobo",
+        "image": "https://cards.scryfall.io/normal/front/d/d/dda6b4d0-1b60-46b0-b321-b9ffe15afff4.jpg?1748706509",
+        "small": "https://cards.scryfall.io/small/front/d/d/dda6b4d0-1b60-46b0-b321-b9ffe15afff4.jpg?1748706509"
+      }
+    ]
+  },
+  "Scout the City": {
+    "name": "Scout the City",
+    "url": "https://scryfall.com/card/spm/113/scout-the-city",
+    "faces": [
+      {
+        "name": "Scout the City",
+        "image": "https://cards.scryfall.io/normal/front/9/0/90b9504d-d23d-402f-8b16-1964ebd8f6b9.jpg?1757377517",
+        "small": "https://cards.scryfall.io/small/front/9/0/90b9504d-d23d-402f-8b16-1964ebd8f6b9.jpg?1757377517"
+      }
+    ]
+  },
+  "Shared Roots": {
+    "name": "Shared Roots",
+    "url": "https://scryfall.com/card/tla/196/shared-roots",
+    "faces": [
+      {
+        "name": "Shared Roots",
+        "image": "https://cards.scryfall.io/normal/front/e/7/e7847ba5-e85e-417f-96c0-aef2e6f83994.jpg?1783904936",
+        "small": "https://cards.scryfall.io/small/front/e/7/e7847ba5-e85e-417f-96c0-aef2e6f83994.jpg?1783904936"
+      }
+    ]
+  },
+  "Shock": {
+    "name": "Shock",
+    "url": "https://scryfall.com/card/spm/88/shock",
+    "faces": [
+      {
+        "name": "Shock",
+        "image": "https://cards.scryfall.io/normal/front/7/6/760b41a1-c087-4b11-b8a0-fb01d8a4c0c6.jpg?1757377337",
+        "small": "https://cards.scryfall.io/small/front/7/6/760b41a1-c087-4b11-b8a0-fb01d8a4c0c6.jpg?1757377337"
+      }
+    ]
+  },
+  "Sinister Hideout": {
+    "name": "Sinister Hideout",
+    "url": "https://scryfall.com/card/spm/184/sinister-hideout",
+    "faces": [
+      {
+        "name": "Sinister Hideout",
+        "image": "https://cards.scryfall.io/normal/front/2/3/23190d7e-5165-49bd-b307-bf81877d228d.jpg?1757378180",
+        "small": "https://cards.scryfall.io/small/front/2/3/23190d7e-5165-49bd-b307-bf81877d228d.jpg?1757378180"
+      }
+    ]
+  },
+  "Skyward Spider": {
+    "name": "Skyward Spider",
+    "url": "https://scryfall.com/card/spm/146/skyward-spider",
+    "faces": [
+      {
+        "name": "Skyward Spider",
+        "image": "https://cards.scryfall.io/normal/front/f/5/f5cbb580-cd02-4c60-acb7-b7ed1f1fce59.jpg?1757377845",
+        "small": "https://cards.scryfall.io/small/front/f/5/f5cbb580-cd02-4c60-acb7-b7ed1f1fce59.jpg?1757377845"
+      }
+    ]
+  },
+  "Sleight of Hand": {
+    "name": "Sleight of Hand",
+    "url": "https://scryfall.com/card/slp/25/sleight-of-hand",
+    "faces": [
+      {
+        "name": "Sleight of Hand",
+        "image": "https://cards.scryfall.io/normal/front/4/1/41cb4b43-2688-4693-86fd-9429efb57068.jpg?1725887167",
+        "small": "https://cards.scryfall.io/small/front/4/1/41cb4b43-2688-4693-86fd-9429efb57068.jpg?1725887167"
+      }
+    ]
+  },
+  "Soul-Guide Lantern": {
+    "name": "Soul-Guide Lantern",
+    "url": "https://scryfall.com/card/fdn/680/soul-guide-lantern",
+    "faces": [
+      {
+        "name": "Soul-Guide Lantern",
+        "image": "https://cards.scryfall.io/normal/front/6/d/6d3ff537-86f0-405e-b96b-1250720af031.jpg?1783908903",
+        "small": "https://cards.scryfall.io/small/front/6/d/6d3ff537-86f0-405e-b96b-1250720af031.jpg?1783908903"
+      }
+    ]
+  },
+  "Sparring Dummy": {
+    "name": "Sparring Dummy",
+    "url": "https://scryfall.com/card/tla/197/sparring-dummy",
+    "faces": [
+      {
+        "name": "Sparring Dummy",
+        "image": "https://cards.scryfall.io/normal/front/5/2/520f5a03-ff5a-43ed-8f15-cf24596d60cd.jpg?1768338009",
+        "small": "https://cards.scryfall.io/small/front/5/2/520f5a03-ff5a-43ed-8f15-cf24596d60cd.jpg?1768338009"
+      }
+    ]
+  },
+  "Spider-Bot": {
+    "name": "Spider-Bot",
+    "url": "https://scryfall.com/card/spm/173/spider-bot",
+    "faces": [
+      {
+        "name": "Spider-Bot",
+        "image": "https://cards.scryfall.io/normal/front/2/4/24df824a-c1d6-4f09-b866-313b31fec5fb.jpg?1757378080",
+        "small": "https://cards.scryfall.io/small/front/2/4/24df824a-c1d6-4f09-b866-313b31fec5fb.jpg?1757378080"
+      }
+    ]
+  },
+  "Spider-Ham, Peter Porker": {
+    "name": "Spider-Ham, Peter Porker",
+    "url": "https://scryfall.com/card/spm/201/spider-ham-peter-porker",
+    "faces": [
+      {
+        "name": "Spider-Ham, Peter Porker",
+        "image": "https://cards.scryfall.io/normal/front/0/2/020426f0-ca38-4b0e-aa20-6fe12dc34853.jpg?1757378344",
+        "small": "https://cards.scryfall.io/small/front/0/2/020426f0-ca38-4b0e-aa20-6fe12dc34853.jpg?1757378344"
+      }
+    ]
+  },
+  "Spider-Man No More": {
+    "name": "Spider-Man No More",
+    "url": "https://scryfall.com/card/spm/45/spider-man-no-more",
+    "faces": [
+      {
+        "name": "Spider-Man No More",
+        "image": "https://cards.scryfall.io/normal/front/7/2/72dbab11-96ed-43db-8b59-ceca47c8cd22.jpg?1757377029",
+        "small": "https://cards.scryfall.io/small/front/7/2/72dbab11-96ed-43db-8b59-ceca47c8cd22.jpg?1757377029"
+      }
+    ]
+  },
+  "Spider-Rex, Daring Dino": {
+    "name": "Spider-Rex, Daring Dino",
+    "url": "https://scryfall.com/card/spm/116/spider-rex-daring-dino",
+    "faces": [
+      {
+        "name": "Spider-Rex, Daring Dino",
+        "image": "https://cards.scryfall.io/normal/front/5/b/5b6e0bea-f126-4adb-8808-901950a77c7b.jpg?1757377539",
+        "small": "https://cards.scryfall.io/small/front/5/b/5b6e0bea-f126-4adb-8808-901950a77c7b.jpg?1757377539"
+      }
+    ]
+  },
+  "Spider-Woman, Stunning Savior": {
+    "name": "Spider-Woman, Stunning Savior",
+    "url": "https://scryfall.com/card/spm/230/spider-woman-stunning-savior",
+    "faces": [
+      {
+        "name": "Spider-Woman, Stunning Savior",
+        "image": "https://cards.scryfall.io/normal/front/4/d/4d502370-a5d9-41b6-a1d3-fa9626b4fc8b.jpg?1757378695",
+        "small": "https://cards.scryfall.io/small/front/4/d/4d502370-a5d9-41b6-a1d3-fa9626b4fc8b.jpg?1757378695"
+      }
+    ]
+  },
+  "Spiders-Man, Heroic Horde": {
+    "name": "Spiders-Man, Heroic Horde",
+    "url": "https://scryfall.com/card/spm/117/spiders-man-heroic-horde",
+    "faces": [
+      {
+        "name": "Spiders-Man, Heroic Horde",
+        "image": "https://cards.scryfall.io/normal/front/1/1/1183262e-1f02-46b3-8cfa-fe30e0016c11.jpg?1757377549",
+        "small": "https://cards.scryfall.io/small/front/1/1/1183262e-1f02-46b3-8cfa-fe30e0016c11.jpg?1757377549"
+      }
+    ]
+  },
+  "Suburban Sanctuary": {
+    "name": "Suburban Sanctuary",
+    "url": "https://scryfall.com/card/spm/185/suburban-sanctuary",
+    "faces": [
+      {
+        "name": "Suburban Sanctuary",
+        "image": "https://cards.scryfall.io/normal/front/4/6/467df77a-a99c-4cfd-9af4-502eaa2eb2e3.jpg?1757378190",
+        "small": "https://cards.scryfall.io/small/front/4/6/467df77a-a99c-4cfd-9af4-502eaa2eb2e3.jpg?1757378190"
+      }
+    ]
+  },
+  "Supportive Parents": {
+    "name": "Supportive Parents",
+    "url": "https://scryfall.com/card/spm/119/supportive-parents",
+    "faces": [
+      {
+        "name": "Supportive Parents",
+        "image": "https://cards.scryfall.io/normal/front/d/3/d3fe8a5b-4166-46cc-b910-71cd1a19ae1b.jpg?1757377570",
+        "small": "https://cards.scryfall.io/small/front/d/3/d3fe8a5b-4166-46cc-b910-71cd1a19ae1b.jpg?1757377570"
+      }
+    ]
+  },
+  "Surrak, Elusive Hunter": {
+    "name": "Surrak, Elusive Hunter",
+    "url": "https://scryfall.com/card/tdm/161/surrak-elusive-hunter",
+    "faces": [
+      {
+        "name": "Surrak, Elusive Hunter",
+        "image": "https://cards.scryfall.io/normal/front/e/4/e4775a26-0b66-40e9-8f64-41d9308ca032.jpg?1783907332",
+        "small": "https://cards.scryfall.io/small/front/e/4/e4775a26-0b66-40e9-8f64-41d9308ca032.jpg?1783907332"
+      }
+    ]
+  },
+  "Symbiote Spider-Man": {
+    "name": "Symbiote Spider-Man",
+    "url": "https://scryfall.com/card/spm/217/symbiote-spider-man",
+    "faces": [
+      {
+        "name": "Symbiote Spider-Man",
+        "image": "https://cards.scryfall.io/normal/front/8/9/89e046ae-f27a-484f-986c-61c86e754c92.jpg?1757378552",
+        "small": "https://cards.scryfall.io/small/front/8/9/89e046ae-f27a-484f-986c-61c86e754c92.jpg?1757378552"
+      }
+    ]
+  },
+  "Terrific Team-Up": {
+    "name": "Terrific Team-Up",
+    "url": "https://scryfall.com/card/spm/120/terrific-team-up",
+    "faces": [
+      {
+        "name": "Terrific Team-Up",
+        "image": "https://cards.scryfall.io/normal/front/f/3/f3c587b0-66b9-46bf-90ee-a6163c006c9e.jpg?1757377580",
+        "small": "https://cards.scryfall.io/small/front/f/3/f3c587b0-66b9-46bf-90ee-a6163c006c9e.jpg?1757377580"
+      }
+    ]
+  },
+  "The Earth King": {
+    "name": "The Earth King",
+    "url": "https://scryfall.com/card/tla/172/the-earth-king",
+    "faces": [
+      {
+        "name": "The Earth King",
+        "image": "https://cards.scryfall.io/normal/front/a/8/a8d5dca6-381a-4361-b265-27de8d04335c.jpg?1764121171",
+        "small": "https://cards.scryfall.io/small/front/a/8/a8d5dca6-381a-4361-b265-27de8d04335c.jpg?1764121171"
+      }
+    ]
+  },
+  "The Last Agni Kai": {
+    "name": "The Last Agni Kai",
+    "url": "https://scryfall.com/card/tla/314/the-last-agni-kai",
+    "faces": [
+      {
+        "name": "The Last Agni Kai",
+        "image": "https://cards.scryfall.io/normal/front/5/1/51af6d52-bda7-40be-8a83-c19916320df5.jpg?1764122276",
+        "small": "https://cards.scryfall.io/small/front/5/1/51af6d52-bda7-40be-8a83-c19916320df5.jpg?1764122276"
+      }
+    ]
+  },
+  "Toph, Hardheaded Teacher": {
+    "name": "Toph, Hardheaded Teacher",
+    "url": "https://scryfall.com/card/tla/246/toph-hardheaded-teacher",
+    "faces": [
+      {
+        "name": "Toph, Hardheaded Teacher",
+        "image": "https://cards.scryfall.io/normal/front/e/3/e3ba3395-39db-4330-9801-53def924f253.jpg?1764121814",
+        "small": "https://cards.scryfall.io/small/front/e/3/e3ba3395-39db-4330-9801-53def924f253.jpg?1764121814"
+      }
+    ]
+  },
+  "Toph, the Blind Bandit": {
+    "name": "Toph, the Blind Bandit",
+    "url": "https://scryfall.com/card/tla/198/toph-the-blind-bandit",
+    "faces": [
+      {
+        "name": "Toph, the Blind Bandit",
+        "image": "https://cards.scryfall.io/normal/front/f/f/ff68fa7b-8065-407b-a8b4-bfbb14f1c99c.jpg?1764121345",
+        "small": "https://cards.scryfall.io/small/front/f/f/ff68fa7b-8065-407b-a8b4-bfbb14f1c99c.jpg?1764121345"
+      }
+    ]
+  },
+  "Treetop Freedom Fighters": {
+    "name": "Treetop Freedom Fighters",
+    "url": "https://scryfall.com/card/tla/156/treetop-freedom-fighters",
+    "faces": [
+      {
+        "name": "Treetop Freedom Fighters",
+        "image": "https://cards.scryfall.io/normal/front/a/9/a9394200-7ffc-440f-8b5f-c08b7930133c.jpg?1764121072",
+        "small": "https://cards.scryfall.io/small/front/a/9/a9394200-7ffc-440f-8b5f-c08b7930133c.jpg?1764121072"
+      }
+    ]
+  },
+  "Trusty Boomerang": {
+    "name": "Trusty Boomerang",
+    "url": "https://scryfall.com/card/tla/260/trusty-boomerang",
+    "faces": [
+      {
+        "name": "Trusty Boomerang",
+        "image": "https://cards.scryfall.io/normal/front/d/f/df99a166-6d58-4d92-9037-2fdfbaf65629.jpg?1764121919",
+        "small": "https://cards.scryfall.io/small/front/d/f/df99a166-6d58-4d92-9037-2fdfbaf65629.jpg?1764121919"
+      }
+    ]
+  },
+  "Turtle-Duck": {
+    "name": "Turtle-Duck",
+    "url": "https://scryfall.com/card/tla/200/turtle-duck",
+    "faces": [
+      {
+        "name": "Turtle-Duck",
+        "image": "https://cards.scryfall.io/normal/front/a/e/aefcd734-3916-4c77-9d98-3ea2c2795658.jpg?1764121358",
+        "small": "https://cards.scryfall.io/small/front/a/e/aefcd734-3916-4c77-9d98-3ea2c2795658.jpg?1764121358"
+      }
+    ]
+  },
+  "Uncle Iroh": {
+    "name": "Uncle Iroh",
+    "url": "https://scryfall.com/card/tla/248/uncle-iroh",
+    "faces": [
+      {
+        "name": "Uncle Iroh",
+        "image": "https://cards.scryfall.io/normal/front/5/c/5c88672c-0eba-4e93-a0ec-30bbb1bb7661.jpg?1764121831",
+        "small": "https://cards.scryfall.io/small/front/5/c/5c88672c-0eba-4e93-a0ec-30bbb1bb7661.jpg?1764121831"
+      }
+    ]
+  },
+  "Vibrant Cityscape": {
+    "name": "Vibrant Cityscape",
+    "url": "https://scryfall.com/card/spm/188/vibrant-cityscape",
+    "faces": [
+      {
+        "name": "Vibrant Cityscape",
+        "image": "https://cards.scryfall.io/normal/front/9/c/9c110fa1-2320-4652-b282-ed064a9ec9a9.jpg?1757378220",
+        "small": "https://cards.scryfall.io/small/front/9/c/9c110fa1-2320-4652-b282-ed064a9ec9a9.jpg?1757378220"
+      }
+    ]
+  },
+  "Vindictive Warden": {
+    "name": "Vindictive Warden",
+    "url": "https://scryfall.com/card/tla/249/vindictive-warden",
+    "faces": [
+      {
+        "name": "Vindictive Warden",
+        "image": "https://cards.scryfall.io/normal/front/0/f/0f34de05-39a9-425f-a3b4-3a9d46c917ac.jpg?1764121838",
+        "small": "https://cards.scryfall.io/small/front/0/f/0f34de05-39a9-425f-a3b4-3a9d46c917ac.jpg?1764121838"
+      }
+    ]
+  },
+  "Vulture, Scheming Scavenger": {
+    "name": "Vulture, Scheming Scavenger",
+    "url": "https://scryfall.com/card/spm/158/vulture-scheming-scavenger",
+    "faces": [
+      {
+        "name": "Vulture, Scheming Scavenger",
+        "image": "https://cards.scryfall.io/normal/front/e/2/e29281be-e722-4149-93a0-6dd3f0f64253.jpg?1757377958",
+        "small": "https://cards.scryfall.io/small/front/e/2/e29281be-e722-4149-93a0-6dd3f0f64253.jpg?1757377958"
+      }
+    ]
+  },
+  "Walltop Sentries": {
+    "name": "Walltop Sentries",
+    "url": "https://scryfall.com/card/tla/202/walltop-sentries",
+    "faces": [
+      {
+        "name": "Walltop Sentries",
+        "image": "https://cards.scryfall.io/normal/front/e/5/e55f1c63-58f6-4e2b-aaeb-f2d5faca47a2.jpg?1764122900",
+        "small": "https://cards.scryfall.io/small/front/e/5/e55f1c63-58f6-4e2b-aaeb-f2d5faca47a2.jpg?1764122900"
+      }
+    ]
+  },
+  "Wandering Musicians": {
+    "name": "Wandering Musicians",
+    "url": "https://scryfall.com/card/tla/250/wandering-musicians",
+    "faces": [
+      {
+        "name": "Wandering Musicians",
+        "image": "https://cards.scryfall.io/normal/front/3/d/3da81dbd-dc80-47ff-a33b-270d23a24e0a.jpg?1764121845",
+        "small": "https://cards.scryfall.io/small/front/3/d/3da81dbd-dc80-47ff-a33b-270d23a24e0a.jpg?1764121845"
+      }
+    ]
+  },
+  "Warg Tactics": {
+    "name": "Warg Tactics",
+    "url": "https://scryfall.com/card/hob/139/warg-tactics",
+    "faces": [
+      {
+        "name": "Warg Tactics",
+        "image": "https://cards.scryfall.io/normal/front/b/0/b06d9cee-bb0f-4fe7-ab2a-b55d36461aec.jpg?1785497168",
+        "small": "https://cards.scryfall.io/small/front/b/0/b06d9cee-bb0f-4fe7-ab2a-b55d36461aec.jpg?1785497168"
+      }
+    ]
+  },
+  "Webstrike Elite": {
+    "name": "Webstrike Elite",
+    "url": "https://scryfall.com/card/dft/186/webstrike-elite",
+    "faces": [
+      {
+        "name": "Webstrike Elite",
+        "image": "https://cards.scryfall.io/normal/front/0/6/064cc22d-d424-4bc9-b8f0-88b170fd6c28.jpg?1783907863",
+        "small": "https://cards.scryfall.io/small/front/0/6/064cc22d-d424-4bc9-b8f0-88b170fd6c28.jpg?1783907863"
+      }
+    ]
+  },
+  "Yuyan Archers": {
+    "name": "Yuyan Archers",
+    "url": "https://scryfall.com/card/tla/161/yuyan-archers",
+    "faces": [
+      {
+        "name": "Yuyan Archers",
+        "image": "https://cards.scryfall.io/normal/front/9/9/99244462-a996-4a5b-91fb-947045647d6d.jpg?1764121103",
+        "small": "https://cards.scryfall.io/small/front/9/9/99244462-a996-4a5b-91fb-947045647d6d.jpg?1764121103"
+      }
+    ]
+  },
+  "Zhao, Ruthless Admiral": {
+    "name": "Zhao, Ruthless Admiral",
+    "url": "https://scryfall.com/card/tla/252/zhao-ruthless-admiral",
+    "faces": [
+      {
+        "name": "Zhao, Ruthless Admiral",
+        "image": "https://cards.scryfall.io/normal/front/3/f/3fd48a57-b0bb-4177-a0f3-bd317a179cbe.jpg?1764121862",
+        "small": "https://cards.scryfall.io/small/front/3/f/3fd48a57-b0bb-4177-a0f3-bd317a179cbe.jpg?1764121862"
+      }
+    ]
+  },
+  "Zuko, Exiled Prince": {
+    "name": "Zuko, Exiled Prince",
+    "url": "https://scryfall.com/card/tla/163/zuko-exiled-prince",
+    "faces": [
+      {
+        "name": "Zuko, Exiled Prince",
+        "image": "https://cards.scryfall.io/normal/front/6/a/6a73b372-9c0e-4a85-89d2-440163330687.jpg?1764121115",
+        "small": "https://cards.scryfall.io/small/front/6/a/6a73b372-9c0e-4a85-89d2-440163330687.jpg?1764121115"
+      }
+    ]
+  },
+  "Torpor Orb": {
+    "name": "Torpor Orb",
+    "url": "https://scryfall.com/card/mb2/236/torpor-orb",
+    "faces": [
+      {
+        "name": "Torpor Orb",
+        "image": "https://cards.scryfall.io/normal/front/8/a/8a5b90f3-1a34-4dcb-90ee-e7cc2ceec256.jpg?1783910548",
+        "small": "https://cards.scryfall.io/small/front/8/a/8a5b90f3-1a34-4dcb-90ee-e7cc2ceec256.jpg?1783910548"
+      }
+    ]
+  }
+}

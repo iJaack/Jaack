@@ -1,0 +1,47 @@
+{
+  "counts": {
+    "main": 60,
+    "side": 15
+  },
+  "date": "2026-06-02",
+  "deck_id": "mono-green-landfall",
+  "id": "mono-green-2026-06-02",
+  "label": {
+    "en": "The list saved in June",
+    "it": "La lista salvata a giugno"
+  },
+  "mainboard": {
+    "Archdruid's Charm": 2,
+    "Ba Sing Se": 4,
+    "Bushwhack": 3,
+    "Earthbender Ascension": 4,
+    "Escape Tunnel": 4,
+    "Esper Origins // Summon: Esper Maduin": 2,
+    "Fabled Passage": 4,
+    "Forest": 10,
+    "Icetill Explorer": 3,
+    "Leatherhead, Swamp Stalker": 3,
+    "Llanowar Elves": 4,
+    "Mightform Harmonizer": 3,
+    "Mossborn Hydra": 3,
+    "Ouroboroid": 1,
+    "Promising Vein": 2,
+    "Sapling Nursery": 2,
+    "Sazh's Chocobo": 4,
+    "Webstrike Elite": 2
+  },
+  "note": {
+    "en": "Snapshot of the old deck, preserved before September’s reconciliation. It represents the list saved then, not the entire owned collection.",
+    "it": "Snapshot del vecchio mazzo, conservato prima della riconciliazione di settembre. Rappresenta la lista salvata allora, non l’intera collezione posseduta."
+  },
+  "sideboard": {
+    "Grow Extra Arms": 3,
+    "Loading Zone": 2,
+    "Meltstrider's Resolve": 3,
+    "Rocky Rebuke": 2,
+    "Royal Treatment": 2,
+    "Soul-Guide Lantern": 1,
+    "Surrak, Elusive Hunter": 2
+  },
+  "status": "archived"
+}

@@ -1,0 +1,1766 @@
+{
+  "pages": [
+    {
+      "key": "index",
+      "title": "Mono Green\nLandfall",
+      "kicker": "GALACTUS TIBURTINA / 11 SEPTEMBER 2026",
+      "blocks": [
+        [
+          "body",
+          "Your phone guide. Standard Showdown, <b>21:15</b>. Confirmed list: <b>60 main + 15 side</b>."
+        ],
+        [
+          "box",
+          "<b>Before every land:</b> can I play a landfall card first? Have I used my land plays already? Which creature needs to get through?"
+        ],
+        [
+          "nav",
+          [
+            [
+              "main",
+              "02  Main deck"
+            ],
+            [
+              "side",
+              "03  Sideboard"
+            ],
+            [
+              "opening",
+              "04  Hands and early turns"
+            ],
+            [
+              "hands-1",
+              "18  Twelve opening hands"
+            ],
+            [
+              "icetill",
+              "05  Icetill: four landfall events"
+            ],
+            [
+              "fetch",
+              "06  When to use fetch lands"
+            ],
+            [
+              "kill",
+              "07  Setting up lethal damage"
+            ],
+            [
+              "wagon",
+              "08  Worldwagon and crewing"
+            ],
+            [
+              "esper",
+              "09  Esper Origins"
+            ],
+            [
+              "maduin",
+              "10  Maduin’s three chapters"
+            ],
+            [
+              "engines",
+              "11  Ascension and Nursery"
+            ],
+            [
+              "lands",
+              "12  Lands and mana"
+            ],
+            [
+              "answers",
+              "13  Answers and protection"
+            ],
+            [
+              "matchups",
+              "14  Matchup map"
+            ],
+            [
+              "ground",
+              "15  Sideboard: ground and mirror"
+            ],
+            [
+              "blue",
+              "16  Sideboard: blue decks"
+            ],
+            [
+              "control",
+              "17  Sideboard: control and combo"
+            ],
+            [
+              "check",
+              "24  Reminders and sources"
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "main",
+      "title": "Your main deck",
+      "kicker": "LIST TO BUILD / 60 CARDS",
+      "blocks": [
+        [
+          "heading",
+          "CREATURES - 17"
+        ],
+        [
+          "row",
+          [
+            4,
+            "Llanowar Elves",
+            "https://scryfall.com/card/fdn/227/llanowar-elves"
+          ]
+        ],
+        [
+          "row",
+          [
+            4,
+            "Sazh's Chocobo",
+            "https://scryfall.com/card/fin/200/sazhs-chocobo"
+          ]
+        ],
+        [
+          "row",
+          [
+            4,
+            "Icetill Explorer",
+            "https://scryfall.com/card/eoe/192/icetill-explorer"
+          ]
+        ],
+        [
+          "row",
+          [
+            3,
+            "Mightform Harmonizer",
+            "https://scryfall.com/card/eoe/200/mightform-harmonizer"
+          ]
+        ],
+        [
+          "row",
+          [
+            1,
+            "Surrak, Elusive Hunter",
+            "https://scryfall.com/card/tdm/161/surrak-elusive-hunter"
+          ]
+        ],
+        [
+          "row",
+          [
+            1,
+            "Ouroboroid",
+            "https://scryfall.com/card/eoe/201/ouroboroid"
+          ]
+        ],
+        [
+          "heading",
+          "OTHER SPELLS - 17"
+        ],
+        [
+          "row",
+          [
+            4,
+            "Esper Origins",
+            "https://scryfall.com/card/fin/185/esper-origins-summon:-esper-maduin"
+          ]
+        ],
+        [
+          "row",
+          [
+            4,
+            "Shared Roots",
+            "https://scryfall.com/card/tla/196/shared-roots"
+          ]
+        ],
+        [
+          "row",
+          [
+            4,
+            "Earthbender Ascension",
+            "https://scryfall.com/card/tla/175/earthbender-ascension"
+          ]
+        ],
+        [
+          "row",
+          [
+            3,
+            "Sapling Nursery",
+            "https://scryfall.com/card/ecl/192/sapling-nursery"
+          ]
+        ],
+        [
+          "row",
+          [
+            1,
+            "Lumbering Worldwagon",
+            "https://scryfall.com/card/dft/168/lumbering-worldwagon"
+          ]
+        ],
+        [
+          "row",
+          [
+            1,
+            "Meltstrider's Resolve",
+            "https://scryfall.com/card/eoe/199/meltstriders-resolve"
+          ]
+        ],
+        [
+          "heading",
+          "LANDS - 26"
+        ],
+        [
+          "row",
+          [
+            14,
+            "Forest",
+            "https://scryfall.com/card/trk/325/forest"
+          ]
+        ],
+        [
+          "row",
+          [
+            4,
+            "Fabled Passage",
+            "https://scryfall.com/card/msc/242/fabled-passage"
+          ]
+        ],
+        [
+          "row",
+          [
+            3,
+            "Escape Tunnel",
+            "https://scryfall.com/card/tmt/184/escape-tunnel"
+          ]
+        ],
+        [
+          "row",
+          [
+            3,
+            "Ba Sing Se",
+            "https://scryfall.com/card/tla/266/ba-sing-se"
+          ]
+        ],
+        [
+          "row",
+          [
+            1,
+            "Demolition Field",
+            "https://scryfall.com/card/fdn/687/demolition-field"
+          ]
+        ],
+        [
+          "row",
+          [
+            1,
+            "Elven Passage",
+            "https://scryfall.com/card/hob/181/elven-passage"
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "side",
+      "title": "Your sideboard",
+      "kicker": "CHOSEN BY YOU / 15 CARDS",
+      "blocks": [
+        [
+          "row",
+          [
+            3,
+            "Leatherhead, Swamp Stalker",
+            "https://scryfall.com/card/tmt/117/leatherhead-swamp-stalker"
+          ]
+        ],
+        [
+          "row",
+          [
+            3,
+            "Mossborn Hydra",
+            "https://scryfall.com/card/fdn/107/mossborn-hydra"
+          ]
+        ],
+        [
+          "row",
+          [
+            2,
+            "Meltstrider's Resolve",
+            "https://scryfall.com/card/eoe/199/meltstriders-resolve"
+          ]
+        ],
+        [
+          "row",
+          [
+            2,
+            "Webstrike Elite",
+            "https://scryfall.com/card/dft/186/webstrike-elite"
+          ]
+        ],
+        [
+          "row",
+          [
+            2,
+            "Warg Tactics",
+            "https://scryfall.com/card/hob/139/warg-tactics"
+          ]
+        ],
+        [
+          "row",
+          [
+            1,
+            "Sapling Nursery",
+            "https://scryfall.com/card/ecl/192/sapling-nursery"
+          ]
+        ],
+        [
+          "row",
+          [
+            1,
+            "Soul-Guide Lantern",
+            "https://scryfall.com/card/eoc/143/soul-guide-lantern"
+          ]
+        ],
+        [
+          "row",
+          [
+            1,
+            "Surrak, Elusive Hunter",
+            "https://scryfall.com/card/tdm/161/surrak-elusive-hunter"
+          ]
+        ],
+        [
+          "box",
+          "<b>Totals across the 75</b><br/>Meltstrider 3 = 1 main + 2 side.<br/>Nursery 4 = 3 main + 1 side.<br/>Surrak 2 = 1 main + 1 side."
+        ],
+        [
+          "body",
+          "This is your version with <b>3 Leatherhead, 2 Warg Tactics and 1 Lantern</b>. Origin of Metalbending is not in the 75."
+        ],
+        [
+          "small",
+          "The plans on pages 15-17 always start from the original main deck. Do not automatically combine them."
+        ],
+        [
+          "heading",
+          "READING COSTS"
+        ],
+        [
+          "small",
+          "{G} = one green mana. {2} = two mana of any type. So {2}{G} costs three mana in total. Tap means turning the card sideways; untap means turning it upright."
+        ]
+      ]
+    },
+    {
+      "key": "opening",
+      "title": "A hand worth keeping",
+      "kicker": "START WITH A PLAN",
+      "blocks": [
+        [
+          "body",
+          "Look for <b>2-3 lands, an early play and ways to develop</b>: Llanowar Elves or Chocobo, then Shared Roots / Ascension and a threat."
+        ],
+        [
+          "body",
+          "For tomorrow, I would avoid one-land hands that depend on Llanowar Elves, or hands full of expensive cards with no early plays. Before deciding on a mulligan, check whether you have green mana available right away."
+        ],
+        [
+          "box",
+          "<b>A hand to keep</b><br/>2 Forest, Fabled Passage, Llanowar Elves, Earthbender Ascension, Icetill Explorer, Mightform Harmonizer."
+        ],
+        [
+          "heading",
+          "IDEAL SEQUENCE, WITH NO OPPOSING ANSWERS"
+        ],
+        [
+          "body",
+          "<b>T1:</b> Forest, Llanowar Elves.<br/><b>T2:</b> Forest, Ascension with three mana. Animate a land and search for Forest: you have three lands.<br/><b>T3:</b> three lands + Llanowar Elves pay for Icetill. Only then play Fabled Passage."
+        ],
+        [
+          "small",
+          "The animated land stays tapped if you tapped it to pay for Ascension. Llanowar Elves cannot produce mana on the turn it enters."
+        ],
+        [
+          "small",
+          "Another 12 examples with explanations: pages 18-23. KEEP = keep your hand; MULLIGAN = shuffle it back and look for a better hand."
+        ],
+        [
+          "ref",
+          [
+            "Ascension: text and rulings",
+            "https://scryfall.com/card/tla/175/earthbender-ascension"
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "icetill",
+      "title": "Icetill + Fabled",
+      "kicker": "THE SEQUENCE TO LEARN",
+      "blocks": [
+        [
+          "box",
+          "<b>Starting position</b><br/>Icetill is on the battlefield. You have not played any lands this turn. You have Fabled Passage in your hand or graveyard."
+        ],
+        [
+          "body",
+          "<b>1.</b> Play Fabled Passage.<br/>First land entering."
+        ],
+        [
+          "body",
+          "<b>2.</b> Tap and sacrifice it; search for Forest.<br/>Second land entering."
+        ],
+        [
+          "body",
+          "<b>3.</b> Play the same Fabled from your graveyard, using your additional land play.<br/>Third land entering."
+        ],
+        [
+          "body",
+          "<b>4.</b> Sacrifice it again and search for Forest.<br/>Fourth land entering."
+        ],
+        [
+          "heading",
+          "FOUR LANDFALL EVENTS, TWO LAND PLAYS"
+        ],
+        [
+          "body",
+          "The Forests you search for do not use up land plays. With one Icetill, you have two land plays in total on your turn, not two extra."
+        ],
+        [
+          "small",
+          "Resolve the triggers and mill one card for each land entering. To play a land again, it must be your main phase with an empty stack."
+        ],
+        [
+          "ref",
+          [
+            "Icetill Explorer",
+            "https://scryfall.com/card/eoe/192/icetill-explorer"
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "fetch",
+      "title": "Do not crack them out of habit",
+      "kicker": "CHOOSE WHEN THE FOREST ENTERS",
+      "blocks": [
+        [
+          "body",
+          "Playing a fetch land gives you one land entering. Sacrificing it to search for Forest gives you another: <b>you can save that second event for later</b>."
+        ],
+        [
+          "box",
+          "<b>Example</b><br/>You have enough mana this turn. Leave Escape Tunnel on the battlefield. Next turn, cast Mightform using your other lands, then sacrifice Tunnel: the Forest gives you a power doubling you would not have had last turn."
+        ],
+        [
+          "body",
+          "With Nursery you get a token; with Chocobo you get a counter. If you need mana to develop your board instead, search for the Forest right away."
+        ],
+        [
+          "heading",
+          "WITH ASCENSION: ANOTHER OPTION"
+        ],
+        [
+          "body",
+          "You can animate a fetch land already on the battlefield. When you sacrifice it, it dies as a creature: earthbend returns it tapped; the land you searched for enters too. That is two new lands entering."
+        ],
+        [
+          "small",
+          "You cannot immediately sacrifice the fetch again after it returns tapped. Do not confuse this line with the two land plays from Icetill."
+        ],
+        [
+          "ref",
+          [
+            "Earthbending: official rules",
+            "https://magic.wizards.com/en/news/feature/avatar-the-last-airbender-release-notes"
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "kill",
+      "title": "Setting up lethal damage",
+      "kicker": "POWER, TRAMPLE, AND CREATURES READY TO ATTACK",
+      "blocks": [
+        [
+          "body",
+          "<b>Mightform</b> doubles power whenever a land enters, until end of turn. A power of 4 becomes 8, then 16. Toughness does not double."
+        ],
+        [
+          "body",
+          "Choose a creature that can already attack. A freshly cast Mightform can boost your other creatures, but normally cannot attack. Warp costs {2}{G}, does not give haste, and exiles it at the beginning of the next end step."
+        ],
+        [
+          "box",
+          "<b>Chocobo + Mightform</b><br/>If a land triggers both, let the Chocobo counter resolve first, then the doubling. A power of 3 becomes 4, then 8."
+        ],
+        [
+          "body",
+          "<b>Ouroboroid:</b> play it before combat. Its ability distributes counters equal to its power as the ability resolves; that includes counters on itself."
+        ],
+        [
+          "body",
+          "Before attacking, check for <b>trample</b>: an active Ascension, Warg, or chapter III of Maduin. A huge creature without trample can be stopped by a token."
+        ],
+        [
+          "ref",
+          [
+            "Mightform Harmonizer",
+            "https://scryfall.com/card/eoe/200/mightform-harmonizer"
+          ]
+        ],
+        [
+          "ref",
+          [
+            "Ouroboroid",
+            "https://scryfall.com/card/eoe/201/ouroboroid"
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "wagon",
+      "title": "Lumbering Worldwagon",
+      "kicker": "COST {2}{G} / VEHICLE */4",
+      "blocks": [
+        [
+          "body",
+          "When it enters, search for a basic land and put it onto the battlefield tapped. <b>You do not need to crew it for this effect.</b>"
+        ],
+        [
+          "box",
+          "<b>CREW 4</b><br/>Tap other untapped creatures with total power of at least 4: one with power 4, two with power 2, or power 3 + Llanowar Elves. No mana; no sacrifices."
+        ],
+        [
+          "body",
+          "It becomes an artifact creature until end of turn: its power equals the number of lands you control, and its toughness is 4. Crewing does not tap the wagon."
+        ],
+        [
+          "body",
+          "<b>When it attacks</b>, search for another basic land and put it onto the battlefield tapped, before blockers. With five lands it is 5/4; after the search it becomes 6/4."
+        ],
+        [
+          "body",
+          "Creatures that just entered can crew. A wagon that just entered cannot attack without haste."
+        ],
+        [
+          "small",
+          "You can also crew during your opponent’s turn before blockers if the wagon is untapped. You must crew it again: the previous effect ends at end of turn."
+        ],
+        [
+          "ref",
+          [
+            "Lumbering Worldwagon",
+            "https://scryfall.com/card/dft/168/lumbering-worldwagon"
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "esper",
+      "title": "Esper Origins",
+      "kicker": "FIRST FROM YOUR HAND, THEN FROM YOUR GRAVEYARD",
+      "blocks": [
+        [
+          "heading",
+          "FROM YOUR HAND: {1}{G}"
+        ],
+        [
+          "body",
+          "Surveil 2: look at the top two cards, put any of them into your graveyard, and put the rest back on top in any order. <b>You do not draw them.</b> Then gain 2 life; Origins goes to your graveyard."
+        ],
+        [
+          "box",
+          "<b>How to choose</b><br/>Keep what you need now on top. A land in your graveyard can be useful with Icetill; another Origins can still be cast with flashback. Do not automatically bin lands if you are short on mana."
+        ],
+        [
+          "heading",
+          "FROM YOUR GRAVEYARD: FLASHBACK {3}{G}"
+        ],
+        [
+          "body",
+          "Cast it again: surveil 2 and gain another 2 life. Then it enters transformed as <b>Esper Maduin 4/4</b>, with a finality counter."
+        ],
+        [
+          "small",
+          "You can use flashback even if Icetill milled Origins directly. You do not have to cast it from your hand first. It is a sorcery: normally you cast it during your main phase with an empty stack."
+        ],
+        [
+          "ref",
+          [
+            "Esper Origins / Maduin",
+            "https://scryfall.com/card/fin/185/esper-origins-summon:-esper-maduin"
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "maduin",
+      "title": "Maduin’s three chapters",
+      "kicker": "EXAMPLE: FLASHBACK ON TURN 4",
+      "blocks": [
+        [
+          "heading",
+          "TURN 4: ENTERS, CHAPTER I"
+        ],
+        [
+          "body",
+          "Reveal the top card. If it is a permanent card, put it into your hand; otherwise it stays on top. Maduin is 4/4: it can block, but normally cannot attack yet."
+        ],
+        [
+          "heading",
+          "TURN 5: CHAPTER II"
+        ],
+        [
+          "body",
+          "At the beginning of your first main phase, after your draw, you get {G}{G}. Use it during that phase: you cannot save it for the next turn or for combat. Maduin can now attack."
+        ],
+        [
+          "heading",
+          "TURN 6: CHAPTER III"
+        ],
+        [
+          "body",
+          "The other creatures you control as it resolves get <b>+2/+2 and trample</b> until end of turn. Then sacrifice Maduin: finality exiles it. Maduin does not attack that turn."
+        ],
+        [
+          "box",
+          "<b>Prepare for turn 6</b><br/>Have creatures ready. The chapter bonus, followed by Mightform landfall triggers, can set up the decisive attack."
+        ],
+        [
+          "small",
+          "The finality counter is separate from the lore counters: it does not make the Saga start at chapter II."
+        ],
+        [
+          "ref",
+          [
+            "Maduin and Saga rules",
+            "https://magic.wizards.com/en/news/feature/final-fantasy-release-notes"
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "engines",
+      "title": "Ascension and Nursery",
+      "kicker": "THE CARDS THAT KEEP YOUR DECK GOING",
+      "blocks": [
+        [
+          "heading",
+          "EARTHBENDER ASCENSION"
+        ],
+        [
+          "body",
+          "When it enters, animate a land already on the battlefield and search for a basic land, which enters tapped. That basic land also starts its landfall count."
+        ],
+        [
+          "body",
+          "Each land entering adds a quest counter. <b>Starting with the fourth</b>, each land entering gives the chosen creature +1/+1 and trample. The counters stay; trample lasts until end of turn."
+        ],
+        [
+          "heading",
+          "SAPLING NURSERY"
+        ],
+        [
+          "body",
+          "It costs {6}{G}{G}, reduced by {1} for each <b>Forest</b>. With five Forests it costs {1}{G}{G}; with six it costs {G}{G}. Ba Sing Se and fetch lands are not Forests."
+        ],
+        [
+          "body",
+          "Each landfall trigger creates a <b>3/4 token with reach</b>. Newly created tokens normally cannot attack immediately."
+        ],
+        [
+          "box",
+          "<b>Protection: {1}{G} and exile Nursery</b><br/>Give Treefolk and Forests you control indestructible. This does not automatically protect Icetill, Chocobo, Surrak, or your entire board."
+        ],
+        [
+          "ref",
+          [
+            "Ascension",
+            "https://scryfall.com/card/tla/175/earthbender-ascension"
+          ]
+        ],
+        [
+          "ref",
+          [
+            "Sapling Nursery",
+            "https://scryfall.com/card/ecl/192/sapling-nursery"
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "lands",
+      "title": "Lands and mana",
+      "kicker": "WHAT TO REMEMBER AT THE TABLE",
+      "blocks": [
+        [
+          "body",
+          "<b>Fabled Passage:</b> search for a basic land, which enters tapped; then untap it if you control at least four lands. Count your lands after the search."
+        ],
+        [
+          "body",
+          "<b>Elven Passage:</b> pay 1 life and search for a basic land, which enters tapped. You can reveal an Elf from your hand or choose one you control to untap it. Llanowar Elves works."
+        ],
+        [
+          "body",
+          "<b>Escape Tunnel:</b> its second ability makes a creature with power 2 or less unblockable. Let it resolve before making the creature bigger: it will remain unblockable that turn. This mode does not search for a land."
+        ],
+        [
+          "body",
+          "<b>Ba Sing Se:</b> enters untapped if you control a basic land. To earthbend, pay {2}{G} and tap Ba Sing Se: it cannot also pay part of its own activation cost."
+        ],
+        [
+          "body",
+          "<b>Demolition Field:</b> produces colorless mana. To activate it, pay {2}, tap it and sacrifice it; your opponent must have a nonbasic land you can legally target."
+        ],
+        [
+          "box",
+          "An animated land tapped for mana cannot also attack or crew until it is untapped."
+        ],
+        [
+          "ref",
+          [
+            "Fabled Passage",
+            "https://scryfall.com/card/msc/242/fabled-passage"
+          ]
+        ],
+        [
+          "ref",
+          [
+            "Escape Tunnel",
+            "https://scryfall.com/card/tmt/184/escape-tunnel"
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "answers",
+      "title": "Your answers",
+      "kicker": "USE THE RIGHT CARD AT THE RIGHT TIME",
+      "blocks": [
+        [
+          "body",
+          "<b>Warg Tactics - {1}{G}:</b> destroys a creature with flying, or gives one of your creatures a +1/+1 counter, trample and hexproof. Respond to targeted removal before it resolves."
+        ],
+        [
+          "body",
+          "<b>Meltstrider - {G}:</b> the Aura gives +0/+2; when it enters, it makes your creature fight up to one opposing creature. Check power, damage and possible opposing responses. It does not give trample."
+        ],
+        [
+          "body",
+          "<b>Webstrike - {G}{G}:</b> a 3/3 with reach. Or cycle it for {X}{G}{G}: destroy an artifact/enchantment with mana value <b>exactly X</b>, then draw. Tablet needs X=3: you pay five mana."
+        ],
+        [
+          "body",
+          "<b>Leatherhead:</b> must hit the player to destroy an artifact/enchantment. You can remove a +1/+1 counter instead of its hexproof counter, if it has one."
+        ],
+        [
+          "body",
+          "<b>Surrak:</b> lets you draw when your opponent targets your creatures or creature spells; it does not stop their answer from resolving."
+        ],
+        [
+          "small",
+          "<b>Lantern:</b> exiles one card when it enters. Tap + sacrifice exiles the opposing graveyard; {1} + tap + sacrifice draws a card. These are alternative uses."
+        ],
+        [
+          "ref",
+          [
+            "Warg Tactics",
+            "https://scryfall.com/card/hob/139/warg-tactics"
+          ]
+        ],
+        [
+          "ref",
+          [
+            "Webstrike Elite",
+            "https://scryfall.com/card/dft/186/webstrike-elite"
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "matchups",
+      "title": "Who you want to face",
+      "kicker": "QUALITATIVE ASSESSMENTS, NOT WIN RATES",
+      "blocks": [
+        [
+          "body",
+          "<b>Mono-Green:</b> what matters is who starts stronger and who disrupts the opposing engine."
+        ],
+        [
+          "body",
+          "<b>Dimir Midrange:</b> generally good for the archetype; do not put everything into one creature."
+        ],
+        [
+          "body",
+          "<b>Izzet Spellementals:</b> unfavorable. Sunderflock turns the board around."
+        ],
+        [
+          "body",
+          "<b>Selesnya Landfall:</b> close; their removal helps in the mirror."
+        ],
+        [
+          "body",
+          "<b>Azorius Momo / fliers:</b> difficult before sideboarding. Warg and reach help."
+        ],
+        [
+          "body",
+          "<b>4C / Jeskai control:</b> depends on board wipes and answers to Nursery."
+        ],
+        [
+          "body",
+          "<b>Orzhov Lifegain:</b> generally good; power doubling can outpace the life they gain."
+        ],
+        [
+          "body",
+          "<b>Fast combo:</b> difficult; you need pressure and cannot afford much hesitation."
+        ],
+        [
+          "box",
+          "This is an assessment of your list, not a prediction of your percentages at Galactus. We do not know what decks the participants will bring."
+        ],
+        [
+          "ref",
+          [
+            "Competitive context: Karsten, 3 September",
+            "https://magic.gg/news/metagame-mentor-the-top-standard-decks-for-september-2026s-rcqs"
+          ]
+        ]
+      ]
+    },
+    {
+      "key": "ground",
+      "title": "Sideboard: ground and mirror",
+      "kicker": "STARTING PLANS / NOT AUTOMATIC RULES",
+      "blocks": [
+        [
+          "heading",
+          "FAST GROUND AGGRO"
+        ],
+        [
+          "plan",
+          "<b>IN:</b> 2 Meltstrider, 2 Webstrike Elite"
+        ],
+        [
+          "plan",
+          "<b>OUT:</b> 2 Nursery, 1 Ouroboroid, 1 Mightform"
+        ],
+        [
+          "body",
+          "Stabilize the board before trying to set up a huge attack. Webstrike is a two-mana blocker; Meltstrider removes a threat if the fight is safe."
+        ],
+        [
+          "heading",
+          "MONO-GREEN / SELESNYA LANDFALL"
+        ],
+        [
+          "plan",
+          "<b>IN:</b> 3 Mossborn Hydra, 2 Meltstrider"
+        ],
+        [
+          "plan",
+          "<b>OUT:</b> 2 Esper Origins, 1 Shared Roots, 1 Worldwagon, 1 Nursery"
+        ],
+        [
+          "body",
+          "Hydra adds pressure; Meltstrider can disrupt Icetill or Mightform. Against Erode, consider Warg: to add two, you can remove another 2 Esper Origins from this plan."
+        ],
+        [
+          "box",
+          "<b>In the mirror</b><br/>A new Hydra starts as a 1/1. A fetch land, followed by the basic land it finds, takes it to 2/2 and then 4/4, with no other modifiers."
+        ],
+        [
+          "small",
+          "Against Lifegain, keep Mightform. If their attackers fly, use the fliers plan on page 16 instead."
+        ]
+      ]
+    },
+    {
+      "key": "blue",
+      "title": "Sideboard: Izzet and Dimir",
+      "kicker": "DO NOT TREAT EVERY BLUE DECK THE SAME",
+      "blocks": [
+        [
+          "heading",
+          "IZZET SPELLEMENTALS"
+        ],
+        [
+          "plan",
+          "<b>IN:</b> 2 Warg Tactics, 1 Surrak, 1 Soul-Guide Lantern"
+        ],
+        [
+          "plan",
+          "<b>OUT:</b> 2 Esper Origins, 1 Worldwagon, 1 Mightform"
+        ],
+        [
+          "body",
+          "Apply pressure. Lantern can empty their graveyard <b>before</b> they use the cost reductions on Crab / Hearth: doing it after the spell is cast does not increase the cost they have already paid."
+        ],
+        [
+          "heading",
+          "DIMIR MIDRANGE"
+        ],
+        [
+          "plan",
+          "<b>IN:</b> 2 Warg Tactics, 1 Surrak, 2 Webstrike Elite"
+        ],
+        [
+          "plan",
+          "<b>OUT:</b> 1 Worldwagon, 1 Ouroboroid, 2 Shared Roots, 1 Mightform"
+        ],
+        [
+          "body",
+          "Surrak punishes targeted answers. Warg protects a creature or removes a flier; Webstrike can block to stop easy card draws."
+        ],
+        [
+          "heading",
+          "AZORIUS MOMO / FLIERS"
+        ],
+        [
+          "plan",
+          "<b>IN:</b> 2 Warg Tactics, 2 Webstrike Elite"
+        ],
+        [
+          "plan",
+          "<b>OUT:</b> 1 Ouroboroid, 1 Nursery, 2 Shared Roots"
+        ],
+        [
+          "box",
+          "<b>Wan Shi Tong on the battlefield?</b><br/>Your searches give it counters and let its controller draw cards. If possible, use Warg before chaining more fetch lands."
+        ],
+        [
+          "small",
+          "These suggestions are based on what the cards do and on your list, not plans tested over a sample of games."
+        ]
+      ]
+    },
+    {
+      "key": "control",
+      "title": "Sideboard: control and combo",
+      "kicker": "PRESSURE AND DIFFERENT ANSWERS",
+      "blocks": [
+        [
+          "heading",
+          "CONTROL WITH BOARD WIPES"
+        ],
+        [
+          "plan",
+          "<b>IN:</b> 2 Leatherhead, 1 Surrak, 1 Nursery"
+        ],
+        [
+          "plan",
+          "<b>OUT:</b> 1 Meltstrider, 2 Mightform, 1 Shared Roots"
+        ],
+        [
+          "body",
+          "Do not play every threat if your board already applies enough pressure. Save something to rebuild with. Nursery and animated lands can force them to have different answers."
+        ],
+        [
+          "heading",
+          "KEY ARTIFACTS / ENCHANTMENTS"
+        ],
+        [
+          "plan",
+          "<b>IN:</b> 2 Webstrike Elite, 3 Leatherhead"
+        ],
+        [
+          "plan",
+          "<b>OUT:</b> 1 Meltstrider, 2 Mightform, 2 Esper Origins"
+        ],
+        [
+          "body",
+          "Webstrike provides an answer from your hand; Leatherhead needs to hit the player. The second plan is for targets that are central to their strategy, not an incidental artifact."
+        ],
+        [
+          "heading",
+          "COMBO"
+        ],
+        [
+          "body",
+          "Keep Mightform and a fast curve. If the combo uses the graveyard: +1 Lantern, -1 Worldwagon. Bring in Warg only if it removes a relevant creature with flying."
+        ],
+        [
+          "box",
+          "Your 75 do not include Torpor Orb. You do not have a universal answer to combo: do not turn your deck into a hand full of useless answers."
+        ]
+      ]
+    },
+    {
+      "key": "hands-1",
+      "title": "Opening hands 1-2",
+      "kicker": "EXAMPLES WITH YOUR CARDS / KEEP AND MULLIGAN",
+      "blocks": [
+        [
+          "heading",
+          "The ideal curve - KEEP"
+        ],
+        [
+          "small",
+          "Game 1, on the play or on the draw"
+        ],
+        [
+          "handcards",
+          "2x Forest, Fabled Passage, Llanowar Elves, Earthbender Ascension, Icetill Explorer, Mightform"
+        ],
+        [
+          "handbody",
+          "Three lands, Llanowar Elves, ramp and two engines: every turn has a job."
+        ],
+        [
+          "handbody",
+          "T1 Forest + Llanowar Elves. T2 Forest + Ascension. T3 cast Icetill using three lands and Llanowar Elves, before playing Fabled. If nobody disrupts you, start the four-landfall sequence."
+        ],
+        [
+          "small",
+          "Do not play Fabled before Icetill if you can already pay four mana."
+        ],
+        [
+          "heading",
+          "Good even without Llanowar Elves - KEEP"
+        ],
+        [
+          "small",
+          "Game 1"
+        ],
+        [
+          "handcards",
+          "2x Forest, Ba Sing Se, Sazh's Chocobo, Shared Roots, Icetill Explorer, Nursery"
+        ],
+        [
+          "handbody",
+          "Chocobo applies pressure, Roots ramps you toward four mana, and Nursery is a plan for later."
+        ],
+        [
+          "handbody",
+          "T1 Forest + Chocobo. T2 Forest, then Roots: two counters on Chocobo. T3 Ba Sing Se enters untapped and provides the fourth mana for Icetill. You can play another land only if you have one available."
+        ],
+        [
+          "small",
+          "Sometimes you need to play your land before Icetill to cast it: that is fine."
+        ]
+      ]
+    },
+    {
+      "key": "hands-2",
+      "title": "Opening hands 3-4",
+      "kicker": "EXAMPLES WITH YOUR CARDS / KEEP AND MULLIGAN",
+      "blocks": [
+        [
+          "heading",
+          "The one-land trap - MULLIGAN"
+        ],
+        [
+          "small",
+          "Game 1: a cautious choice for tomorrow"
+        ],
+        [
+          "handcards",
+          "Forest, Llanowar Elves, Sazh's Chocobo, Icetill Explorer, Mightform, Nursery, Esper Origins"
+        ],
+        [
+          "handbody",
+          "It looks strong, but depends on Llanowar Elves surviving and on your next draws. Too many cards are stuck in your hand."
+        ],
+        [
+          "handbody",
+          "I would look for six cards with at least two lands and ways to develop. Being on the draw improves your chance of finding a land, but does not automatically make this a good hand."
+        ],
+        [
+          "small",
+          "Count the spells you can actually cast, not how strong they are in theory."
+        ],
+        [
+          "heading",
+          "Seven lands - MULLIGAN"
+        ],
+        [
+          "small",
+          "Game 1"
+        ],
+        [
+          "handcards",
+          "3x Forest, 2x Fabled Passage, Escape Tunnel, Ba Sing Se"
+        ],
+        [
+          "handbody",
+          "Perfect mana, but no engine or threat: you depend entirely on your draws."
+        ],
+        [
+          "handbody",
+          "Mulligan. Ba Sing Se has a use in the long game, but that is not enough to make this a good opening hand."
+        ],
+        [
+          "small",
+          "Landfall needs both lands and cards that get something from them."
+        ]
+      ]
+    },
+    {
+      "key": "hands-3",
+      "title": "Opening hands 5-6",
+      "kicker": "EXAMPLES WITH YOUR CARDS / KEEP AND MULLIGAN",
+      "blocks": [
+        [
+          "heading",
+          "Three lands, no start - MULLIGAN"
+        ],
+        [
+          "small",
+          "Game 1: especially against fast decks"
+        ],
+        [
+          "handcards",
+          "2x Forest, Fabled Passage, 2x Icetill Explorer, Mightform, Nursery"
+        ],
+        [
+          "handbody",
+          "You have three lands but no useful play in the first two turns. Your fourth mana is not guaranteed."
+        ],
+        [
+          "handbody",
+          "I would look for a hand with Llanowar Elves, Chocobo, Roots, or at least Origins. Having Icetill is not enough if it arrives too late."
+        ],
+        [
+          "small",
+          "A hand with the right number of lands can still be too slow."
+        ],
+        [
+          "heading",
+          "Four lands can work - KEEP"
+        ],
+        [
+          "small",
+          "Game 1"
+        ],
+        [
+          "handcards",
+          "2x Forest, 2x Fabled Passage, Sazh's Chocobo, Earthbender Ascension, Esper Origins"
+        ],
+        [
+          "handbody",
+          "The lands fuel Chocobo and Ascension. Origins can filter your draws and remains usable from the graveyard."
+        ],
+        [
+          "handbody",
+          "T1 Forest + Chocobo. T2 Fabled, then search for Forest: two landfall events. T3 the second Forest from your hand gives you three mana for Ascension."
+        ],
+        [
+          "small",
+          "Four lands with a working curve are not the same as four lands and three expensive cards."
+        ]
+      ]
+    },
+    {
+      "key": "hands-4",
+      "title": "Opening hands 7-8",
+      "kicker": "EXAMPLES WITH YOUR CARDS / KEEP AND MULLIGAN",
+      "blocks": [
+        [
+          "heading",
+          "Four lands, no green right away - DEPENDS"
+        ],
+        [
+          "small",
+          "A possible keep against a slow deck; a mulligan is safer against aggro"
+        ],
+        [
+          "handcards",
+          "Fabled Passage, Escape Tunnel, Ba Sing Se, Demolition Field, Llanowar Elves, Sazh's Chocobo, Icetill Explorer"
+        ],
+        [
+          "handbody",
+          "You have lands and plays, but no turn 1 start: the first two fetch lands find tapped lands, and Ba Sing Se enters tapped without a basic land."
+        ],
+        [
+          "handbody",
+          "If you keep: T1 Fabled, search for Forest. T2 Ba Sing Se now enters untapped: you can play Llanowar Elves and Chocobo. Icetill may still arrive late if you do not draw an untapped mana source."
+        ],
+        [
+          "small",
+          "Check when your mana is usable, not just how many lands you have."
+        ],
+        [
+          "heading",
+          "Elven Passage with Llanowar Elves - KEEP"
+        ],
+        [
+          "small",
+          "Game 1"
+        ],
+        [
+          "handcards",
+          "Elven Passage, Forest, Llanowar Elves, Sazh's Chocobo, Shared Roots, Icetill Explorer, Mightform"
+        ],
+        [
+          "handbody",
+          "Elven Passage can provide green right away because you can reveal Llanowar Elves from your hand."
+        ],
+        [
+          "handbody",
+          "T1 Elven: pay 1 life, search for Forest, reveal Llanowar Elves to untap it, then cast Llanowar Elves. T2 Forest: play Chocobo first, then Roots with the remaining mana. T3 you have three lands and Llanowar Elves for Icetill."
+        ],
+        [
+          "small",
+          "Revealing Llanowar Elves does not discard it or use it up."
+        ]
+      ]
+    },
+    {
+      "key": "hands-5",
+      "title": "Opening hands 9-10",
+      "kicker": "EXAMPLES WITH YOUR CARDS / KEEP AND MULLIGAN",
+      "blocks": [
+        [
+          "heading",
+          "Resources, but little pressure - DEPENDS"
+        ],
+        [
+          "small",
+          "More acceptable against control; too slow against fast aggro"
+        ],
+        [
+          "handcards",
+          "2x Forest, Fabled Passage, 2x Esper Origins, Shared Roots, Nursery"
+        ],
+        [
+          "handbody",
+          "Roots develops your mana and Origins looks for an engine, but for now you have neither cheap creatures nor Icetill."
+        ],
+        [
+          "handbody",
+          "Against a slow deck, you can keep and choose between Roots for mana and Origins to find action. Against a fast deck, I would look for an opening that interacts or provides a blocker."
+        ],
+        [
+          "small",
+          "The same hand changes value when you know what you are facing."
+        ],
+        [
+          "heading",
+          "After sideboarding against aggro - KEEP"
+        ],
+        [
+          "small",
+          "Using the guide’s aggro plan"
+        ],
+        [
+          "handcards",
+          "2x Forest, Fabled Passage, Llanowar Elves, Webstrike Elite, Meltstrider, Nursery"
+        ],
+        [
+          "handbody",
+          "You can develop and block early. Webstrike plus Meltstrider can remove a creature and leave you with a sturdy body."
+        ],
+        [
+          "handbody",
+          "T1 Forest + Llanowar Elves. T2 Forest: you can cast Webstrike and, if the target is suitable, Meltstrider. Do not force a losing fight; Nursery remains your plan for later."
+        ],
+        [
+          "small",
+          "Against aggro, a hand that stabilizes can be better than a hand built for huge damage."
+        ]
+      ]
+    },
+    {
+      "key": "hands-6",
+      "title": "Opening hands 11-12",
+      "kicker": "EXAMPLES WITH YOUR CARDS / KEEP AND MULLIGAN",
+      "blocks": [
+        [
+          "heading",
+          "Answers without a plan - MULLIGAN"
+        ],
+        [
+          "small",
+          "After sideboarding against Izzet"
+        ],
+        [
+          "handcards",
+          "2x Forest, Fabled Passage, Warg Tactics, Soul-Guide Lantern, 2x Nursery"
+        ],
+        [
+          "handbody",
+          "You have two answers, but no pressure or ramp. Izzet has time to set up while you wait for Nursery."
+        ],
+        [
+          "handbody",
+          "I would look for a curve with a threat. Do not keep just because you drew sideboard cards."
+        ],
+        [
+          "small",
+          "Your answers should support your plan, not replace it."
+        ],
+        [
+          "heading",
+          "After a mulligan: which six? - KEEP AT 6"
+        ],
+        [
+          "small",
+          "You have shuffled back once and drawn seven again"
+        ],
+        [
+          "handcards",
+          "2x Forest, Fabled Passage, Llanowar Elves, Shared Roots, Icetill Explorer, Nursery"
+        ],
+        [
+          "handbody",
+          "I would put Nursery on the bottom. You keep three lands, ramp and Icetill: a complete six-card hand."
+        ],
+        [
+          "handbody",
+          "T1 Forest + Llanowar Elves. T2 Forest + Roots. T3 you can pay for Icetill before playing your land for the turn. With the London mulligan, choose what to put on the bottom only after deciding to keep."
+        ],
+        [
+          "small",
+          "Six cards that work together are often better than seven that do nothing."
+        ]
+      ]
+    },
+    {
+      "key": "check",
+      "title": "Before you sit down",
+      "kicker": "REMINDERS / CLICKABLE SOURCES",
+      "blocks": [
+        [
+          "body",
+          "<b>Bring:</b> deck and sideboard kept separate, matching sleeves, dice, distinct counters, 3/4 Treefolk tokens, paper and a pen."
+        ],
+        [
+          "body",
+          "<b>Every turn:</b> Maduin’s chapter after the draw; how many lands you have played; landfall triggers and milling; Ouroboroid at the beginning of combat."
+        ],
+        [
+          "body",
+          "<b>After each game:</b> count the cards you sideboard in and out. Before the next match, restore the original 60. Follow the judge’s instructions on using your phone during the event."
+        ],
+        [
+          "box",
+          "<b>Do not mix up protections</b><br/>Hexproof does not stop global effects. Indestructible does not stop exile or bounce. Sunderflock also bounces animated lands; earthbend does not return them after a bounce."
+        ],
+        [
+          "small",
+          "Card texts checked on Scryfall on 10 September 2026. Tap names in the lists to open them. The rules come from the card texts; matchups and sideboard plans are reasoned advice for your version."
+        ],
+        [
+          "ref",
+          [
+            "Official Magic rules",
+            "https://magic.wizards.com/en/rules"
+          ]
+        ],
+        [
+          "ref",
+          [
+            "Notes: Icetill, Mightform, Warp",
+            "https://magic.wizards.com/en/news/feature/edge-of-eternities-release-notes"
+          ]
+        ],
+        [
+          "ref",
+          [
+            "Notes: Earthbending and Ascension",
+            "https://magic.wizards.com/en/news/feature/avatar-the-last-airbender-release-notes"
+          ]
+        ],
+        [
+          "ref",
+          [
+            "Notes: Esper Origins and Sagas",
+            "https://magic.wizards.com/en/news/feature/final-fantasy-release-notes"
+          ]
+        ],
+        [
+          "ref",
+          [
+            "Reference list: ice100, 6 September",
+            "https://mtgtop8.com/event?e=90592&d=887735&f=ST"
+          ]
+        ]
+      ]
+    }
+  ],
+  "hands": [
+    {
+      "id": "ramp",
+      "title": "The ideal curve",
+      "verdict": "KEEP",
+      "context": "Game 1, on the play or on the draw",
+      "cards": [
+        "Forest",
+        "Forest",
+        "Fabled Passage",
+        "Llanowar Elves",
+        "Earthbender Ascension",
+        "Icetill Explorer",
+        "Mightform Harmonizer"
+      ],
+      "reason": "Three lands, Llanowar Elves, ramp and two engines: every turn has a job.",
+      "line": "T1 Forest + Llanowar Elves. T2 Forest + Ascension. T3 cast Icetill using three lands and Llanowar Elves, before playing Fabled. If nobody disrupts you, start the four-landfall sequence.",
+      "lesson": "Do not play Fabled before Icetill if you can already pay four mana."
+    },
+    {
+      "id": "no-elf",
+      "title": "Good even without Llanowar Elves",
+      "verdict": "KEEP",
+      "context": "Game 1",
+      "cards": [
+        "Forest",
+        "Forest",
+        "Ba Sing Se",
+        "Sazh's Chocobo",
+        "Shared Roots",
+        "Icetill Explorer",
+        "Sapling Nursery"
+      ],
+      "reason": "Chocobo applies pressure, Roots ramps you toward four mana, and Nursery is a plan for later.",
+      "line": "T1 Forest + Chocobo. T2 Forest, then Roots: two counters on Chocobo. T3 Ba Sing Se enters untapped and provides the fourth mana for Icetill. You can play another land only if you have one available.",
+      "lesson": "Sometimes you need to play your land before Icetill to cast it: that is fine."
+    },
+    {
+      "id": "one-land",
+      "title": "The one-land trap",
+      "verdict": "MULLIGAN",
+      "context": "Game 1: a cautious choice for tomorrow",
+      "cards": [
+        "Forest",
+        "Llanowar Elves",
+        "Sazh's Chocobo",
+        "Icetill Explorer",
+        "Mightform Harmonizer",
+        "Sapling Nursery",
+        "Esper Origins // Summon: Esper Maduin"
+      ],
+      "reason": "It looks strong, but depends on Llanowar Elves surviving and on your next draws. Too many cards are stuck in your hand.",
+      "line": "I would look for six cards with at least two lands and ways to develop. Being on the draw improves your chance of finding a land, but does not automatically make this a good hand.",
+      "lesson": "Count the spells you can actually cast, not how strong they are in theory."
+    },
+    {
+      "id": "all-lands",
+      "title": "Seven lands",
+      "verdict": "MULLIGAN",
+      "context": "Game 1",
+      "cards": [
+        "Forest",
+        "Forest",
+        "Forest",
+        "Fabled Passage",
+        "Fabled Passage",
+        "Escape Tunnel",
+        "Ba Sing Se"
+      ],
+      "reason": "Perfect mana, but no engine or threat: you depend entirely on your draws.",
+      "line": "Mulligan. Ba Sing Se has a use in the long game, but that is not enough to make this a good opening hand.",
+      "lesson": "Landfall needs both lands and cards that get something from them."
+    },
+    {
+      "id": "too-heavy",
+      "title": "Three lands, no start",
+      "verdict": "MULLIGAN",
+      "context": "Game 1: especially against fast decks",
+      "cards": [
+        "Forest",
+        "Forest",
+        "Fabled Passage",
+        "Icetill Explorer",
+        "Icetill Explorer",
+        "Mightform Harmonizer",
+        "Sapling Nursery"
+      ],
+      "reason": "You have three lands but no useful play in the first two turns. Your fourth mana is not guaranteed.",
+      "line": "I would look for a hand with Llanowar Elves, Chocobo, Roots, or at least Origins. Having Icetill is not enough if it arrives too late.",
+      "lesson": "A hand with the right number of lands can still be too slow."
+    },
+    {
+      "id": "four-lands",
+      "title": "Four lands can work",
+      "verdict": "KEEP",
+      "context": "Game 1",
+      "cards": [
+        "Forest",
+        "Forest",
+        "Fabled Passage",
+        "Fabled Passage",
+        "Sazh's Chocobo",
+        "Earthbender Ascension",
+        "Esper Origins // Summon: Esper Maduin"
+      ],
+      "reason": "The lands fuel Chocobo and Ascension. Origins can filter your draws and remains usable from the graveyard.",
+      "line": "T1 Forest + Chocobo. T2 Fabled, then search for Forest: two landfall events. T3 the second Forest from your hand gives you three mana for Ascension.",
+      "lesson": "Four lands with a working curve are not the same as four lands and three expensive cards."
+    },
+    {
+      "id": "no-basic",
+      "title": "Four lands, no green right away",
+      "verdict": "DEPENDS",
+      "context": "A possible keep against a slow deck; a mulligan is safer against aggro",
+      "cards": [
+        "Fabled Passage",
+        "Escape Tunnel",
+        "Ba Sing Se",
+        "Demolition Field",
+        "Llanowar Elves",
+        "Sazh's Chocobo",
+        "Icetill Explorer"
+      ],
+      "reason": "You have lands and plays, but no turn 1 start: the first two fetch lands find tapped lands, and Ba Sing Se enters tapped without a basic land.",
+      "line": "If you keep: T1 Fabled, search for Forest. T2 Ba Sing Se now enters untapped: you can play Llanowar Elves and Chocobo. Icetill may still arrive late if you do not draw an untapped mana source.",
+      "lesson": "Check when your mana is usable, not just how many lands you have."
+    },
+    {
+      "id": "elven",
+      "title": "Elven Passage with Llanowar Elves",
+      "verdict": "KEEP",
+      "context": "Game 1",
+      "cards": [
+        "Elven Passage",
+        "Forest",
+        "Llanowar Elves",
+        "Sazh's Chocobo",
+        "Shared Roots",
+        "Icetill Explorer",
+        "Mightform Harmonizer"
+      ],
+      "reason": "Elven Passage can provide green right away because you can reveal Llanowar Elves from your hand.",
+      "line": "T1 Elven: pay 1 life, search for Forest, reveal Llanowar Elves to untap it, then cast Llanowar Elves. T2 Forest: play Chocobo first, then Roots with the remaining mana. T3 you have three lands and Llanowar Elves for Icetill.",
+      "lesson": "Revealing Llanowar Elves does not discard it or use it up."
+    },
+    {
+      "id": "slow-value",
+      "title": "Resources, but little pressure",
+      "verdict": "DEPENDS",
+      "context": "More acceptable against control; too slow against fast aggro",
+      "cards": [
+        "Forest",
+        "Forest",
+        "Fabled Passage",
+        "Esper Origins // Summon: Esper Maduin",
+        "Esper Origins // Summon: Esper Maduin",
+        "Shared Roots",
+        "Sapling Nursery"
+      ],
+      "reason": "Roots develops your mana and Origins looks for an engine, but for now you have neither cheap creatures nor Icetill.",
+      "line": "Against a slow deck, you can keep and choose between Roots for mana and Origins to find action. Against a fast deck, I would look for an opening that interacts or provides a blocker.",
+      "lesson": "The same hand changes value when you know what you are facing."
+    },
+    {
+      "id": "post-aggro",
+      "title": "After sideboarding against aggro",
+      "verdict": "KEEP",
+      "context": "Using the guide’s aggro plan",
+      "cards": [
+        "Forest",
+        "Forest",
+        "Fabled Passage",
+        "Llanowar Elves",
+        "Webstrike Elite",
+        "Meltstrider's Resolve",
+        "Sapling Nursery"
+      ],
+      "reason": "You can develop and block early. Webstrike plus Meltstrider can remove a creature and leave you with a sturdy body.",
+      "line": "T1 Forest + Llanowar Elves. T2 Forest: you can cast Webstrike and, if the target is suitable, Meltstrider. Do not force a losing fight; Nursery remains your plan for later.",
+      "lesson": "Against aggro, a hand that stabilizes can be better than a hand built for huge damage."
+    },
+    {
+      "id": "post-izzet",
+      "title": "Answers without a plan",
+      "verdict": "MULLIGAN",
+      "context": "After sideboarding against Izzet",
+      "cards": [
+        "Forest",
+        "Forest",
+        "Fabled Passage",
+        "Warg Tactics",
+        "Soul-Guide Lantern",
+        "Sapling Nursery",
+        "Sapling Nursery"
+      ],
+      "reason": "You have two answers, but no pressure or ramp. Izzet has time to set up while you wait for Nursery.",
+      "line": "I would look for a curve with a threat. Do not keep just because you drew sideboard cards.",
+      "lesson": "Your answers should support your plan, not replace it."
+    },
+    {
+      "id": "six",
+      "title": "After a mulligan: which six?",
+      "verdict": "KEEP AT 6",
+      "context": "You have shuffled back once and drawn seven again",
+      "cards": [
+        "Forest",
+        "Forest",
+        "Fabled Passage",
+        "Llanowar Elves",
+        "Shared Roots",
+        "Icetill Explorer",
+        "Sapling Nursery"
+      ],
+      "bottom": "Sapling Nursery",
+      "reason": "I would put Nursery on the bottom. You keep three lands, ramp and Icetill: a complete six-card hand.",
+      "line": "T1 Forest + Llanowar Elves. T2 Forest + Roots. T3 you can pay for Icetill before playing your land for the turn. With the London mulligan, choose what to put on the bottom only after deciding to keep.",
+      "lesson": "Six cards that work together are often better than seven that do nothing."
+    }
+  ],
+  "plans": {
+    "ground": [
+      {
+        "Meltstrider's Resolve": 2,
+        "Webstrike Elite": 2
+      },
+      {
+        "Sapling Nursery": 2,
+        "Ouroboroid": 1,
+        "Mightform Harmonizer": 1
+      }
+    ],
+    "mirror": [
+      {
+        "Mossborn Hydra": 3,
+        "Meltstrider's Resolve": 2
+      },
+      {
+        "Esper Origins // Summon: Esper Maduin": 2,
+        "Shared Roots": 1,
+        "Lumbering Worldwagon": 1,
+        "Sapling Nursery": 1
+      }
+    ],
+    "izzet": [
+      {
+        "Warg Tactics": 2,
+        "Surrak, Elusive Hunter": 1,
+        "Soul-Guide Lantern": 1
+      },
+      {
+        "Esper Origins // Summon: Esper Maduin": 2,
+        "Lumbering Worldwagon": 1,
+        "Mightform Harmonizer": 1
+      }
+    ],
+    "dimir": [
+      {
+        "Warg Tactics": 2,
+        "Surrak, Elusive Hunter": 1,
+        "Webstrike Elite": 2
+      },
+      {
+        "Lumbering Worldwagon": 1,
+        "Ouroboroid": 1,
+        "Shared Roots": 2,
+        "Mightform Harmonizer": 1
+      }
+    ],
+    "fliers": [
+      {
+        "Warg Tactics": 2,
+        "Webstrike Elite": 2
+      },
+      {
+        "Ouroboroid": 1,
+        "Sapling Nursery": 1,
+        "Shared Roots": 2
+      }
+    ],
+    "control": [
+      {
+        "Leatherhead, Swamp Stalker": 2,
+        "Surrak, Elusive Hunter": 1,
+        "Sapling Nursery": 1
+      },
+      {
+        "Meltstrider's Resolve": 1,
+        "Mightform Harmonizer": 2,
+        "Shared Roots": 1
+      }
+    ],
+    "artifacts": [
+      {
+        "Webstrike Elite": 2,
+        "Leatherhead, Swamp Stalker": 3
+      },
+      {
+        "Meltstrider's Resolve": 1,
+        "Mightform Harmonizer": 2,
+        "Esper Origins // Summon: Esper Maduin": 2
+      }
+    ]
+  },
+  "deck": {
+    "mainboard": {
+      "Llanowar Elves": {
+        "quantity": 4
+      },
+      "Sazh's Chocobo": {
+        "quantity": 4
+      },
+      "Icetill Explorer": {
+        "quantity": 4
+      },
+      "Mightform Harmonizer": {
+        "quantity": 3
+      },
+      "Surrak, Elusive Hunter": {
+        "quantity": 1
+      },
+      "Esper Origins // Summon: Esper Maduin": {
+        "quantity": 4
+      },
+      "Shared Roots": {
+        "quantity": 4
+      },
+      "Earthbender Ascension": {
+        "quantity": 4
+      },
+      "Lumbering Worldwagon": {
+        "quantity": 1
+      },
+      "Meltstrider's Resolve": {
+        "quantity": 1
+      },
+      "Sapling Nursery": {
+        "quantity": 3
+      },
+      "Forest": {
+        "quantity": 14
+      },
+      "Ba Sing Se": {
+        "quantity": 3
+      },
+      "Demolition Field": {
+        "quantity": 1
+      },
+      "Elven Passage": {
+        "quantity": 1
+      },
+      "Escape Tunnel": {
+        "quantity": 3
+      },
+      "Fabled Passage": {
+        "quantity": 4
+      },
+      "Ouroboroid": {
+        "quantity": 1
+      }
+    },
+    "sideboard": {
+      "Leatherhead, Swamp Stalker": {
+        "quantity": 3
+      },
+      "Meltstrider's Resolve": {
+        "quantity": 2
+      },
+      "Mossborn Hydra": {
+        "quantity": 3
+      },
+      "Sapling Nursery": {
+        "quantity": 1
+      },
+      "Soul-Guide Lantern": {
+        "quantity": 1
+      },
+      "Surrak, Elusive Hunter": {
+        "quantity": 1
+      },
+      "Webstrike Elite": {
+        "quantity": 2
+      },
+      "Warg Tactics": {
+        "quantity": 2
+      }
+    }
+  },
+  "updated": "2026-09-10",
+  "event_date": "2026-09-11"
+}

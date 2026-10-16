@@ -1,0 +1,45 @@
+{
+  "counts": {
+    "main": 60,
+    "side": 15
+  },
+  "date": "2026-01-16",
+  "deck_id": "bending-aggro",
+  "id": "bending-aggro-2026-01-16",
+  "label": {
+    "en": "January snapshot",
+    "it": "Snapshot di gennaio"
+  },
+  "mainboard": {
+    "Ashroot Animist": 2,
+    "Boar-q-pine": 3,
+    "Burst Lightning": 4,
+    "Bushwhack": 3,
+    "Electro's Bolt": 3,
+    "Firebending Student": 4,
+    "Forest": 7,
+    "Gene Pollinator": 4,
+    "Halana and Alena, Partners": 3,
+    "Lightning Strike": 4,
+    "Llanowar Elves": 4,
+    "Mountain": 8,
+    "Rocky Rebuke": 2,
+    "Rugged Highlands": 2,
+    "Shock": 4,
+    "The Last Agni Kai": 1,
+    "Toph, Hardheaded Teacher": 2
+  },
+  "note": {
+    "en": "Historical Gruul list. This is not a statement about current legality or metagame suitability.",
+    "it": "Lista storica Gruul. Non è una verifica della legalità o del metagame attuali."
+  },
+  "sideboard": {
+    "Abrade": 3,
+    "Grow Extra Arms": 4,
+    "Romantic Rendezvous": 3,
+    "Sandman, Shifting Scoundrel": 1,
+    "Scout the City": 1,
+    "Toph, the Blind Bandit": 3
+  },
+  "status": "archived"
+}

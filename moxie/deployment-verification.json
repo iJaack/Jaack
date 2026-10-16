@@ -1,0 +1,71 @@
+{
+  "verified_at": "2026-10-01T21:42:03.139555+00:00",
+  "deployment_url": "https://moxie-guide-j9anms8xa-jaack.vercel.app",
+  "public_url": "https://moxie.jaack.me",
+  "prepared_version": "mono-green-2026-10-01-torpor",
+  "tests": {
+    "passed": 16,
+    "failed": 0
+  },
+  "mobile_widths": [
+    320,
+    390,
+    430
+  ],
+  "checks": [
+    {
+      "url": "https://moxie.jaack.me/it/guides/mono-green-landfall-torpor-orb/",
+      "status": 200,
+      "sha256": "864f575b38219c39b67797105321a08f84498361e0ed7113cd895be7fc0febf5",
+      "matches_local": true
+    },
+    {
+      "url": "https://moxie.jaack.me/en/guides/mono-green-landfall-torpor-orb/",
+      "status": 200,
+      "sha256": "cef3feed24c0599ad88370ef64b274574323d7701d7e48788970a18f87c98228",
+      "matches_local": true
+    },
+    {
+      "url": "https://moxie.jaack.me/it/decks/mono-green-landfall/",
+      "status": 200,
+      "sha256": "489432d398aeda3799e41a837aa9229c2752cc9cfe3518cc38345426098b5ce2",
+      "matches_local": true
+    },
+    {
+      "url": "https://moxie.jaack.me/it/decks/mono-green-landfall/versions/mono-green-2026-10-01-torpor/",
+      "status": 200,
+      "sha256": "ce469676c5dc404023b5e8e1ad1092decca2aa31b94a8e0a20fd3cffe6517a63",
+      "matches_local": true
+    },
+    {
+      "url": "https://moxie.jaack.me/it/journal/torpor-orb-update-2026-10-01/",
+      "status": 200,
+      "sha256": "cca628349336928741c662809720eb6f2094844e568eeaaa91ac6639894b7ec2",
+      "matches_local": true
+    },
+    {
+      "url": "https://moxie.jaack.me/versions/mono-green-2026-10-01-torpor.txt",
+      "status": 200,
+      "sha256": "cb384fb5a620a15782ab031b767b7eddee1d5043bd9779f9efd2e666f943fd57",
+      "matches_local": true
+    },
+    {
+      "url": "https://moxie.jaack.me/card-images.json",
+      "status": 200,
+      "sha256": "c896b5bab7dba18160d43ca7c82fab6a104f5d5053f8ae61bd4140ec22780b1f",
+      "matches_local": true
+    },
+    {
+      "url": "https://moxie.jaack.me/mono-green-landfall-galactus-11-settembre-2026.pdf",
+      "status": 200,
+      "sha256": "8686e8ae5e476188ae4e440519b0ecb0455f3006befe1823734031d8e19c6f08",
+      "matches_local": true
+    },
+    {
+      "url": "https://moxie.jaack.me/mono-green-landfall-galactus-11-september-2026-en.pdf",
+      "status": 200,
+      "sha256": "a177ebd9f94b41cbb4b577edcefb68dfd0e35a17bbc7e4017e244cae199ead93",
+      "matches_local": true
+    }
+  ]
+}

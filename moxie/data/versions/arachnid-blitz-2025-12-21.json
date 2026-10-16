@@ -1,0 +1,68 @@
+{
+  "counts": {
+    "main": 61,
+    "side": 15
+  },
+  "date": "2025-12-21",
+  "deck_id": "arachnid-blitz",
+  "declared_counts": {
+    "main": 63,
+    "side": 15
+  },
+  "id": "arachnid-blitz-2025-12-21",
+  "label": {
+    "en": "The saved Spider-Man list",
+    "it": "La lista Spider-Man conservata"
+  },
+  "mainboard": {
+    "Amazing Acrobatics": 2,
+    "Beetle, Legacy Criminal": 2,
+    "Chameleon, Master of Disguise": 1,
+    "Damage Control Crew": 1,
+    "Doc Ock's Henchmen": 2,
+    "Flying Octobot": 1,
+    "Forest": 8,
+    "Gallant Citizen": 3,
+    "Grow Extra Arms": 4,
+    "Hide on the Ceiling": 2,
+    "Island": 6,
+    "Madame Web, Clairvoyant": 1,
+    "Mob Lookout": 4,
+    "Multiversal Passage": 1,
+    "Oscorp Research Team": 2,
+    "Rampant Growth": 1,
+    "Sandman, Shifting Scoundrel": 1,
+    "Savage Mansion": 2,
+    "Scout the City": 2,
+    "Sinister Hideout": 1,
+    "Skyward Spider": 1,
+    "Sleight of Hand": 1,
+    "Spider-Bot": 1,
+    "Spider-Ham, Peter Porker": 1,
+    "Spider-Rex, Daring Dino": 1,
+    "Spider-Woman, Stunning Savior": 1,
+    "Spiders-Man, Heroic Horde": 2,
+    "Suburban Sanctuary": 1,
+    "Symbiote Spider-Man": 1,
+    "Terrific Team-Up": 1,
+    "Toph, Hardheaded Teacher": 1,
+    "Vibrant Cityscape": 1,
+    "Vulture, Scheming Scavenger": 1
+  },
+  "note": {
+    "en": "The document states 63 main-deck cards, but the preserved rows total 61. The snapshot keeps the original rows; this discrepancy still needs reconciliation.",
+    "it": "Il documento indica 63 carte nel main, ma le righe conservate ne sommano 61. Lo snapshot mantiene le righe originali; la discrepanza resta da riconciliare."
+  },
+  "sideboard": {
+    "Guy in the Chair": 2,
+    "Hot Dog Cart": 1,
+    "Interdimensional Web Watch": 2,
+    "Lurking Lizards": 4,
+    "Mechanical Mobster": 1,
+    "Passenger Ferry": 2,
+    "Robotics Mastery": 1,
+    "Spider-Man No More": 1,
+    "Supportive Parents": 1
+  },
+  "status": "archived"
+}

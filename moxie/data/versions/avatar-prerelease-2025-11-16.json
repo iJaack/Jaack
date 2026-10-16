@@ -1,0 +1,65 @@
+{
+  "counts": {
+    "main": 43,
+    "side": 0
+  },
+  "date": "2025-11-16",
+  "deck_id": "avatar-prerelease",
+  "declared_counts": {
+    "main": 43,
+    "side": 0
+  },
+  "id": "avatar-prerelease-2025-11-16",
+  "label": {
+    "en": "The saved prerelease pool",
+    "it": "Il pool salvato del prerelease"
+  },
+  "mainboard": {
+    "Airship Engine Room": 1,
+    "Allies at Last": 1,
+    "Bender's Waterskin": 1,
+    "Boar-q-pine": 1,
+    "Cycle of Renewal": 1,
+    "Earth Rumble Wrestlers": 1,
+    "Fire Nation Cadets": 1,
+    "Fire Nation Raider": 1,
+    "Fire Nation Warship": 1,
+    "Firebending Lesson": 1,
+    "Firebending Student": 2,
+    "Foggy Swamp Vinebender": 1,
+    "Forest": 1,
+    "Guru Pathik": 1,
+    "How to Start a Riot": 1,
+    "Kyoshi Village": 1,
+    "Mai, Jaded Edge": 1,
+    "Meditation Pools": 1,
+    "Ostrich-Horse": 1,
+    "Platypus-Bear": 2,
+    "Raucous Audience": 1,
+    "Rebellious Captives": 1,
+    "Rockalanche": 1,
+    "Rocky Rebuke": 1,
+    "Saber-Tooth Moose-Lion": 1,
+    "Sparring Dummy": 1,
+    "The Earth King": 1,
+    "The Last Agni Kai": 1,
+    "Toph, Hardheaded Teacher": 1,
+    "Toph, the Blind Bandit": 1,
+    "Treetop Freedom Fighters": 1,
+    "Trusty Boomerang": 1,
+    "Turtle-Duck": 1,
+    "Uncle Iroh": 1,
+    "Vindictive Warden": 2,
+    "Walltop Sentries": 1,
+    "Wandering Musicians": 1,
+    "Yuyan Archers": 1,
+    "Zhao, Ruthless Admiral": 1,
+    "Zuko, Exiled Prince": 1
+  },
+  "note": {
+    "en": "This is the incomplete pool/list saved from the prerelease: the rows include only four lands. It is not presented as the complete played list or as a Standard deck.",
+    "it": "È il pool/lista incompleta conservata dal prerelease: le righe includono solo quattro terre. Non viene presentata come lista completa giocata né come mazzo Standard."
+  },
+  "sideboard": {},
+  "status": "incomplete"
+}
