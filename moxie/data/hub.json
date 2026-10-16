@@ -180,6 +180,45 @@
   ],
   "events": [
     {
+      "id": "league-talenti-2026-10-16",
+      "date": "2026-10-16",
+      "title": {
+        "it": "Lega al Golden Store Talenti",
+        "en": "League night at Golden Store Talenti"
+      },
+      "venue": "Golden Store Talenti",
+      "deck_id": "mono-green-landfall",
+      "version_id": "mono-green-2026-10-01-torpor",
+      "status": "reported",
+      "result": {
+        "it": "1 vittoria, 2 sconfitte · penultimo con 3 punti",
+        "en": "1 win, 2 losses · second to last with 3 points"
+      },
+      "summary": {
+        "it": "Tre round in lega: ho perso i primi due e vinto il terzo, chiudendo penultimo con 3 punti. È il primo risultato registrato con la lista del 1° ottobre, quella con Torpor Orb in side.",
+        "en": "Three league rounds: I lost the first two and won the third, finishing second to last with 3 points. This is the first recorded result with the October 1 list, the one with Torpor Orb in the sideboard."
+      },
+      "notes": [
+        {
+          "it": "Primo round, perso 2–0 contro un mono rosso molto aggressivo: creature rosse che facevano danno ogni turno, più una carta che mi faceva perdere 1 punto vita a ogni pescata. Ho perso entrambe le partite in circa sei turni.",
+          "en": "Round one, lost 2–0 to a very aggressive mono-red deck: red creatures dealing damage every turn, plus a card that made me lose 1 life every time I drew. I lost both games in about six turns."
+        },
+        {
+          "it": "Secondo round, perso 2–1 contro Izzet Spellementals. La prima partita l’ho vinta perché l’avversario non ha mai pescato né giocato Sunderflock: ho chiuso con Icetill Explorer e altre creature. Nella seconda e nella terza, invece, Sunderflock mi ha rimandato in mano tutte le creature. Mossborn Hydra non l’ho mai pescata, e Torpor Orb è stata distrutta.",
+          "en": "Round two, lost 2–1 to Izzet Spellementals. I won game one because my opponent never drew or cast Sunderflock: I closed it out with Icetill Explorer and other creatures. In games two and three, though, Sunderflock bounced all my creatures back to my hand. I never drew Mossborn Hydra, and Torpor Orb got destroyed."
+        },
+        {
+          "it": "Terzo round, vinto 2–0 contro un altro Izzet, questa volta senza Sunderflock. L’avversario non trovava terre: aveva i pezzi della combo in mano ma non riusciva a giocarli. La prima partita l’ho vinta in sei turni, facendo crescere Sazh’s Chocobo fino a 7 insieme a Icetill Explorer. La seconda in cinque o sei turni, con Leatherhead in campo e Mightform Harmonizer a raddoppiare la forza di una creatura.",
+          "en": "Round three, won 2–0 against another Izzet deck, this time without Sunderflock. My opponent could not find lands: they had combo pieces in hand but could not cast them. I won game one in six turns, growing Sazh’s Chocobo up to 7 with Icetill Explorer. Game two took five or six turns, with Leatherhead on the battlefield and Mightform Harmonizer doubling a creature’s power."
+        },
+        {
+          "it": "Classifica finale: penultimo con 3 punti. Il primo ha chiuso a 7, il secondo e il terzo a 6, il quarto a 4: era proprio l’avversario che ho battuto al terzo round.",
+          "en": "Final standings: second to last with 3 points. First place finished on 7, second and third on 6, and fourth on 4: that was the very opponent I beat in round three."
+        }
+      ],
+      "version_relation": "played"
+    },
+    {
       "id": "torpor-orb-update-2026-10-01",
       "date": "2026-10-01",
       "title": {
@@ -320,7 +359,7 @@
       "version_relation": "unknown"
     }
   ],
-  "updated": "2026-10-01",
+  "updated": "2026-10-16",
   "version_ids": [
     "mono-green-2026-10-01-torpor",
     "mono-green-2026-09-10-warg",

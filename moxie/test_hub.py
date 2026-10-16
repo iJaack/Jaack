@@ -19,7 +19,7 @@ class HubTests(unittest.TestCase):
  def setUpClass(cls):
   cls.routes=json.loads((P/'routes.json').read_text());cls.hub=json.loads((P/'data/hub.json').read_text());cls.versions={f.stem:json.loads(f.read_text()) for f in (P/'data/versions').glob('*.json')}
  def test_every_page_has_equivalent_languages(self):
-  self.assertEqual(len(self.routes),46)
+  self.assertEqual(len(self.routes),48)
   # Localized slugs: the collection lives at /it/collezione/ and /en/collection/.
   slug={'it':{'collection/':'collezione/'},'en':{'collezione/':'collection/'}}
   local=lambda l,rest:slug[l].get(rest,rest)
@@ -98,6 +98,14 @@ class HubTests(unittest.TestCase):
    self.assertIn('/versions/'+new['id']+'.txt',guide)
    for page in ['index.html','decks/mono-green-landfall/index.html','guides/index.html','guides/mono-green-landfall/index.html']:
     self.assertIn(url,(D/lang/page).read_text())
+ def test_league_report_2026_10_16(self):
+  event=self.hub['events'][0];self.assertEqual((event['id'],event['date'],event['status']),('league-talenti-2026-10-16','2026-10-16','reported'))
+  self.assertEqual((event['version_id'],event['version_relation']),('mono-green-2026-10-01-torpor','played'))
+  self.assertEqual(len(event['notes']),4)
+  for lang in ['it','en']:
+   page=(D/lang/'journal/league-talenti-2026-10-16/index.html').read_text()
+   for text in ['Golden Store Talenti','Sunderflock','Icetill Explorer','/versions/mono-green-2026-10-01-torpor/']:self.assertIn(text,page)
+   self.assertIn('/journal/league-talenti-2026-10-16/',(D/lang/'journal/index.html').read_text())
  def test_deck_color_themes(self):
   for lang in ['it','en']:
    for slug,theme in [('mono-green-landfall','theme-g'),('bending-aggro','theme-rg'),('arachnid-blitz','theme-gu')]:
