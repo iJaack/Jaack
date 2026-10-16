@@ -12,7 +12,10 @@ Public host: https://moxie.jaack.me. Existing Vercel project: moxie-guide.
 - build_hub.py: static multilingual page renderer. build_site.py delegates here for compatibility.
 - pdf_renderer.py: shared renderer for either PDF language.
 - style.css, hub.css, app.js: mobile reading UI, global hub shell and progressive enhancement.
-- seed_hub.py: initial provenance import only; normal builds do not rerun it or depend on temporary source backups.
+- seed_hub.py and build_guide.py (one-off provenance import and the original PDF builder) stay on the Mac: they read private local files and are not part of this repository or the build.
+- collection-copy.json: paired IT + EN copy for the collection page (its hash is in translation-state.json).
+- data/collection.json: sanitized public collection snapshot, written by build_collection.py.
+- moxie-collection.js and moxie-collection.css: the interactive collection page.
 
 ## Content rules
 Always ship IT | EN together on every page, entry and guide. Card names, counts,
@@ -67,3 +70,28 @@ images; assets load when Gallery or Deck is selected. Deck mode browses unique
 card entries with copy counts, not random draws. The native modal supports close,
 keyboard navigation, double-faced cards, focus restoration and image-error fallback.
 Run test_cards.py alongside the hub and guide regressions.
+
+## Collection page
+/it/collezione/ and /en/collection/ show the whole collection: totals (cards,
+unique names, sets, total EUR value and the prices date), search, filters (set,
+color, type, rarity, finish, language, deck), sorting (name, set, mana value,
+quantity, value) and list/grid views that reuse the cards.js lightbox. Images
+load lazily from cards.scryfall.io. Without JavaScript the page is a complete
+static table.
+
+Refresh the snapshot on a machine that has the private inventory, keeping the
+source outside this repository:
+
+    python3 build_collection.py /path/outside/repo/collection_hydrated.json
+
+It refreshes EUR prices from the Scryfall collection API by printing id
+(foil-aware, batches of 75, about 100 ms apart, with a User-Agent). If Scryfall
+has no price for a printing, the earlier cached price is kept and flagged
+price_source "snapshot". It writes only these card fields: name, set, collector
+number, language, finish, count, type line, colors, color identity, rarity,
+mana value, Scryfall page, card images, price and line value, price source and
+deck membership. Prices paid, tags/provenance, trade-list counts, timestamps
+and condition are never written. Commit data/collection.json; build_hub.py
+reads only that file (and recomputes deck membership from the current
+versions), so Vercel builds without any private data. test_collection.py and
+tests/moxie-leak.test.cjs enforce the boundary.

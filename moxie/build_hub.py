@@ -3,10 +3,13 @@ from pathlib import Path
 from collections import Counter
 import json,html,hashlib,shutil
 from card_views import card_browser, COPY as CARD_COPY
+from build_collection import attach_decks
 P=Path(__file__).resolve().parent;DIST=P/'dist';DIST.mkdir(exist_ok=True)
 H=json.loads((P/'data/hub.json').read_text());VERS={f.stem:json.loads(f.read_text()) for f in sorted((P/'data/versions').glob('*.json'))};DECKS={d['id']:d for d in H['decks']}
 G={l:json.loads((P/('guide.json' if l=='it' else 'guide.en.json')).read_text()) for l in ['it','en']}
 STATE=json.loads((P/'translation-state.json').read_text())
+CC=json.loads((P/'collection-copy.json').read_text());assert hashlib.sha256((P/'collection-copy.json').read_bytes()).hexdigest()==STATE['collection'],'Collection copy changed: review IT + EN and update translation-state.json'
+COLL=json.loads((P/'data/collection.json').read_text());attach_decks(COLL['cards'])
 for l in G:assert hashlib.sha256((P/('guide.json' if l=='it' else 'guide.en.json')).read_bytes()).hexdigest()==STATE[l],'Translation changed: review and update translation-state.json'
 assert G['it']['deck']==G['en']['deck'] and G['it']['plans']==G['en']['plans']
 for board_name in ['mainboard','sideboard']:
@@ -15,7 +18,7 @@ PDF={'it':'mono-green-landfall-galactus-11-settembre-2026.pdf','en':'mono-green-
 for f in PDF.values():shutil.copy2(P/'pdf'/f,DIST/f)
 esc=html.escape
 WORDS={
- 'decks':('Mazzi','Decks'),'journal':('Diario','Journal'),'guides':('Guide','Guides'),'skip':('Vai al contenuto','Skip to content'),'index':('Indice','Contents'),'top':('Torna all’inizio','Back to top'),
+ 'decks':('Mazzi','Decks'),'collection':('Collezione','Collection'),'journal':('Diario','Journal'),'guides':('Guide','Guides'),'skip':('Vai al contenuto','Skip to content'),'index':('Indice','Contents'),'top':('Torna all’inizio','Back to top'),
  'home_title':('I mazzi, e quello<br/><i>che mi insegnano.</i>','Decks, and what<br/><i>they teach me.</i>'),'home_intro':('Liste, cambi di idea e serate al tavolo. La storia dei miei mazzi di Magic, una versione alla volta.','Lists, changes of mind and nights at the table. The story of my Magic decks, one version at a time.'),
  'active':('Attivo','Active'),'archived':('Archiviato','Archived'),'incomplete':('Incompleto','Incomplete'),'proposal':('Proposta','Proposal'),'current':('Preparato','Prepared'),'planned':('In programma','Planned'),'reported':('Resoconto','Reported'),'preparation':('Preparazione','Preparation'),
  'latest_saved':('Ultima lista conservata','Latest saved list'),'latest':('La lista attuale','Current list'),'history':('Storia del mazzo','Deck history'),'read_guide':('Apri la guida','Read the guide'),'upcoming':('La prossima serata','Next session'),'recent':('Ultime dal diario','Latest journal entries'),'all_decks':('Tutti i mazzi','All decks'),'archive_intro':('Mazzi attivi e liste conservate. Ogni snapshot mantiene la propria data, anche quando il mazzo cambia.','Active decks and preserved lists. Each snapshot keeps its own date, even as the deck changes.'),
@@ -27,6 +30,8 @@ WORDS={
  'snapshot_guide':('Guida della versione del 10 settembre 2026','Guide for the September 10, 2026 version'),'related':('Da dove arriva','Where it came from'),'version_date':('Versione del','Version dated'),'footer':('Moxie raccoglie la storia dei miei mazzi. Le liste storiche e i resoconti incompleti mantengono i loro limiti.','Moxie collects the history of my decks. Historical lists and incomplete reports retain their limitations.'),'disclaimer':('Guida indipendente, non affiliata a Wizards of the Coast. Magic: The Gathering è un marchio di Wizards of the Coast.','Independent guide, not affiliated with Wizards of the Coast. Magic: The Gathering is a trademark of Wizards of the Coast.'),'counts_unit':('carte','cards'),'visit_deck':('Vai al mazzo','View deck'),'no_stats':('I resoconti disponibili non bastano per calcolare statistiche complessive attendibili.','The available reports are not enough to calculate reliable overall statistics.'),'language':('Lingua','Language')}
 def t(k,l):return WORDS[k][0 if l=='it' else 1]
 def tx(x,l):return x[l] if isinstance(x,dict) else x
+SLUGS={'collection':{'it':'collezione','en':'collection'}}
+def lpath(k,l):return SLUGS[k][l] if k in SLUGS else k
 def route(l,path=''):return '/'+l+'/'+path.strip('/')+('/' if path.strip('/') else '')
 def deckpath(d):return 'decks/'+d['id']
 def versionpath(v):return 'decks/'+v['deck_id']+'/versions/'+v['id']
@@ -40,18 +45,19 @@ def dates(date,l):
  return (f'{int(day)} {months[l][int(month)-1]} {year}' if l=='it' else f'{months[l][int(month)-1]} {int(day)}, {year}')
 ROUTES={}
 def theme(d):return 'theme-'+''.join(d['colors']).lower()
-def shell(l,path,title,body,nav=None,section='',deck_id=None):
+def shell(l,path,title,body,nav=None,section='',deck_id=None,paths=None):
+ paths=paths or {'it':path,'en':path};path=paths[l]
  page_theme=('deck-theme '+theme(DECKS[deck_id])) if deck_id else ''
- other='en' if l=='it' else 'it';canonical='https://moxie.jaack.me'+route(l,path)
- langs=''.join(f'<a data-language href="{route(ll,path)}" lang="{ll}" hreflang="{ll}"'+(' aria-current="page"' if ll==l else '')+f'>{ll.upper()}</a>' for ll in ['it','en'])
- globalnav=''.join(a(route(l,k),t(k,l),'selected' if section==k else '') for k in ['decks','journal','guides'])
+ other='en' if l=='it' else 'it';canonical='https://moxie.jaack.me'+route(l,paths[l])
+ langs=''.join(f'<a data-language href="{route(ll,paths[ll])}" lang="{ll}" hreflang="{ll}"'+(' aria-current="page"' if ll==l else '')+f'>{ll.upper()}</a>' for ll in ['it','en'])
+ globalnav=''.join(a(route(l,lpath(k,l)),t(k,l),'selected' if section==k else '') for k in ['decks','journal','guides','collection'])
  toc=''
  if nav:
   links='<nav aria-label="'+t('index',l)+'">'+''.join(a('#'+key,esc(label)) for key,label in nav)+'</nav>'
   toc=f'<details class="mobile-menu"><summary>{t("index",l)}</summary>{links}</details>'
   left=f'<aside class="sidebar"><p>{t("guide_nav",l)}</p>{links}</aside>'
  else:left=''
- document=f'''<!doctype html><html lang="{l}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0c0c0c"><meta name="description" content="{esc(title,quote=True)} - Moxie"><title>{esc(title)} | Moxie</title><link rel="canonical" href="{canonical}"><link rel="alternate" hreflang="it" href="https://moxie.jaack.me{route('it',path)}"><link rel="alternate" hreflang="en" href="https://moxie.jaack.me{route('en',path)}"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script><script src="/cards.js" defer></script></head><body id="top" class="{page_theme}" data-lang="{l}" data-page="{esc(path or 'home',quote=True)}"><a class="skip" href="#content">{t('skip',l)}</a><header class="hub-header"><div class="header-inner"><a class="brand" href="{route(l)}">moxie<span aria-hidden="true">.</span></a><nav class="global-nav" aria-label="Moxie">{globalnav}</nav><nav class="language" aria-label="{t('language',l)}">{langs}</nav></div></header>{toc}<div class="layout {'with-toc' if nav else 'hub-layout'}">{left}<main id="content">{body}<footer><p>{'Aggiornato il' if l=='it' else 'Updated'} {dates(H['updated'],l)} · IT | EN</p><p>{t('footer',l)}</p><p>{t('disclaimer',l)}</p></footer></main></div><a class="backtop" href="#top" aria-label="{t('top',l)}">↑</a></body></html>'''
+ document=f'''<!doctype html><html lang="{l}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0c0c0c"><meta name="description" content="{esc(title,quote=True)} - Moxie"><title>{esc(title)} | Moxie</title><link rel="canonical" href="{canonical}"><link rel="alternate" hreflang="it" href="https://moxie.jaack.me{route('it',paths['it'])}"><link rel="alternate" hreflang="en" href="https://moxie.jaack.me{route('en',paths['en'])}"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script><script src="/cards.js" defer></script>{'<script src="/moxie-collection.js" defer></script>' if section=='collection' else ''}</head><body id="top" class="{page_theme}" data-lang="{l}" data-page="{esc(path or 'home',quote=True)}"><a class="skip" href="#content">{t('skip',l)}</a><header class="hub-header"><div class="header-inner"><a class="brand" href="{route(l)}">moxie<span aria-hidden="true">.</span></a><nav class="global-nav" aria-label="Moxie">{globalnav}</nav><nav class="language" aria-label="{t('language',l)}">{langs}</nav></div></header>{toc}<div class="layout {'with-toc' if nav else 'hub-layout'}">{left}<main id="content">{body}<footer><p>{'Aggiornato il' if l=='it' else 'Updated'} {dates(H['updated'],l)} · IT | EN</p><p>{t('footer',l)}</p><p>{t('disclaimer',l)}</p></footer></main></div><a class="backtop" href="#top" aria-label="{t('top',l)}">↑</a></body></html>'''
  out=DIST/l/path/'index.html' if path else DIST/l/'index.html';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(document);ROUTES[route(l,path)]=out
  return document
 
@@ -133,6 +139,30 @@ def render_current_guide(l):
  sections.append('<section class="chapter"><h2>'+archive[l]+'</h2><p>'+('Il main è invariato. Gli esempi di mani restano utili; per la side usa il piano aggiornato sopra.' if l=='it' else 'The main is unchanged. The opening-hand examples remain useful; use the updated plan above for the sideboard.')+'</p>'+a(route(l,guidepath())+'#hands',t('hands_nav',l),'button')+'</section>')
  shell(l,currentguidepath(),title[l],intro+''.join(sections),nav,'guides',deck_id=d['id'])
 
+def money(x,l):
+ if x is None:return '—'
+ s=f'{x:,.2f}'
+ return ('€ '+s.replace(',','X').replace('.',',').replace('X','.')) if l=='it' else '€'+s
+def render_collection(l):
+ c=CC[l];T=COLL['totals'];asof=COLL.get('prices_as_of')
+ finish=lambda f:c[f]
+ stat=lambda v,label,cl='':f'<div class="stat {cl}"><strong>{v}</strong><span>{label}</span></div>'
+ asof_txt=(c['prices_as_of']+' '+dates(asof,l)) if asof else c['price_note']
+ totals='<div class="collection-totals" aria-label="'+esc(c['title'],quote=True)+'">'+stat(f"{T['cards']:,}".replace(',','.' if l=='it' else ','),c['cards'])+stat(T['unique'],c['unique'])+stat(T['sets'],c['sets'])+stat(money(T['value_eur'],l),c['total'],'stat-value')+'</div>'
+ note=f'<p class="small collection-note">{esc(asof_txt)}. {esc(c["price_note"])}'+(f' {T["unpriced_cards"]} {esc(c["unpriced"])}.' if T['unpriced_cards'] else '')+'</p>'
+ deckname={d['id']:d['name'] for d in H['decks']}
+ head=''.join(f'<th scope="col"{" class=num" if k in ("qty","price","value") else ""}>{esc(c[k])}</th>' for k in ['name','set','number','finish','language','qty','price','value'])
+ rows=[]
+ for x in COLL['cards']:
+  flag=' <span class="price-flag" title="'+esc(c['snapshot_note'],quote=True)+'">*</span>' if x['price_source']=='snapshot' else ''
+  decks=(' <span class="deck-tags">'+' · '.join(esc(deckname[d]) for d in x['decks'])+'</span>') if x['decks'] else ''
+  rows.append(f'<tr><th scope="row"><a href="{esc(x["scryfall_uri"],quote=True)}" target="_blank" rel="noopener noreferrer">{esc(x["name"])}</a>{decks}</th><td><abbr title="{esc(COLL["sets"].get(x["set"],x["set"]),quote=True)}">{esc(x["set"].upper())}</abbr></td><td>{esc(x["collector_number"])}</td><td>{esc(finish(x["finish"]))}</td><td>{esc(c["languages"].get(x["language"],x["language"]))}</td><td class="num">{x["count"]}</td><td class="num">{money(x["price_eur"],l)}{flag}</td><td class="num">{money(x["value_eur"],l)}</td></tr>')
+ table=f'<div class="collection-table-wrap"><table class="collection-table"><thead><tr>{head}</tr></thead><tbody>'+''.join(rows)+'</tbody></table></div>'
+ copy=json.dumps({k:v for k,v in c.items()},ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')
+ decks=json.dumps(deckname,ensure_ascii=False,separators=(',',':')).replace('<','\\u003c')
+ body=f'<header class="intro"><h1>{esc(c["title"])}</h1><p>{esc(c["intro"])}</p></header>{totals}{note}<section class="collection" data-collection data-src="/collection.json" id="collection"><script type="application/json" class="collection-copy">{copy}</script><script type="application/json" class="collection-decks">{decks}</script><div class="collection-app" hidden></div><p class="collection-status small" role="status" aria-live="polite"></p><div class="collection-static">{table}</div></section>'
+ shell(l,lpath('collection',l),c['nav'],body,section='collection',paths={'it':lpath('collection','it'),'en':lpath('collection','en')})
+
 for l in ['it','en']:
  active=DECKS['mono-green-landfall'];cv=VERS[active['latest_version']]
  intro=f'<header class="intro home-intro"><h1>{t("home_title",l)}</h1><p>{t("home_intro",l)}</p></header>'
@@ -177,6 +207,7 @@ for l in ['it','en']:
   shell(l,eventpath(e),tx(e['title'],l),body,section='journal',deck_id=d['id'] if d else None)
  render_guide(l)
  if currentguidepath()!=guidepath():render_current_guide(l)
+ render_collection(l)
 
 (DIST/'versions').mkdir(exist_ok=True)
 for v in VERS.values():(DIST/'versions'/(v['id']+'.txt')).write_text('Deck\n'+''.join(f'{q} {n}\n' for n,q in v['mainboard'].items())+'\nSideboard\n'+''.join(f'{q} {n}\n' for n,q in v['sideboard'].items()))
@@ -187,12 +218,14 @@ for colors in sorted({tuple(d['colors']) for d in H['decks']}):
  assert colors and all(c in palette for c in colors)
  shades=[palette[c] for c in colors];stripe=shades[0] if len(shades)==1 else 'linear-gradient(90deg,'+','.join(f'{color} {i*100/len(shades):g}% {(i+1)*100/len(shades):g}%' for i,color in enumerate(shades))+')'
  themes.append('.theme-'+''.join(colors).lower()+'{--accent:'+shades[0]+';--deck-stripe:'+stripe+'}')
-(DIST/'style.css').write_text((P/'style.css').read_text()+(P/'hub.css').read_text()+(P/'cards.css').read_text()+'\n'+'\n'.join(themes))
+(DIST/'style.css').write_text((P/'style.css').read_text()+(P/'hub.css').read_text()+(P/'cards.css').read_text()+(P/'moxie-collection.css').read_text()+'\n'+'\n'.join(themes))
 (DIST/'app.js').write_text((P/'app.js').read_text())
 (DIST/'cards.js').write_text((P/'cards.js').read_text())
+(DIST/'moxie-collection.js').write_text((P/'moxie-collection.js').read_text())
+(DIST/'collection.json').write_text(json.dumps(COLL,ensure_ascii=False,separators=(',',':')))
 shutil.copy2(P/'card-images.json',DIST/'card-images.json')
 (DIST/'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: https://moxie.jaack.me/sitemap.xml\n')
 (DIST/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>https://moxie.jaack.me'+u+'</loc></url>' for u in ROUTES)+'</urlset>')
 config={'version':2,'framework':None,'buildCommand':None,'outputDirectory':'.','headers':[{'source':'/(.*)','headers':[{'key':'X-Content-Type-Options','value':'nosniff'},{'key':'Referrer-Policy','value':'strict-origin-when-cross-origin'},{'key':'Cache-Control','value':'public, max-age=0, must-revalidate'}]}]};(DIST/'vercel.json').write_text(json.dumps(config,indent=2))
 (P/'routes.json').write_text(json.dumps(list(ROUTES),indent=2));(P/'build-manifest.json').write_text(json.dumps({str(f.relative_to(DIST)):hashlib.sha256(f.read_bytes()).hexdigest() for f in DIST.rglob('*') if f.is_file() and '.vercel' not in f.parts},indent=2))
-print('Built',len(ROUTES),'localized pages;',len(VERS),'versions;',len(H['events']),'journal entries; IT + EN guides and PDFs')
+print('Built',len(ROUTES),'localized pages;',len(VERS),'versions;',len(H['events']),'journal entries; IT + EN guides and PDFs; collection of',COLL['totals']['cards'],'cards')

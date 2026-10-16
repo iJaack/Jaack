@@ -1,7 +1,7 @@
 /* Card images are requested only after a reader chooses Gallery or Deck. */
 (()=>{
 'use strict';
-const browsers=[...document.querySelectorAll('.card-browser')];if(!browsers.length)return;
+const browsers=[...document.querySelectorAll('.card-browser')];if(!browsers.length&&!document.querySelector('[data-collection]'))return;
 const it=document.documentElement.lang==='it';
 const text=it?{loading:'Caricamento delle carte…',error:'Immagini non disponibili. Puoi riprovare o usare la lista.',missing:'Immagine non disponibile',open:'Apri il mazzo',closeDeck:'Richiudi il mazzo',browse:'Scorri le carte',previous:'Carta precedente',next:'Carta successiva',close:'Chiudi',flip:'Gira carta',source:'Apri su Scryfall',of:'di',copies:'copie',reference:'Immagine di riferimento',front:'Fronte',back:'Retro'}:{loading:'Loading cards…',error:'Images are unavailable. Try again or use the list.',missing:'Image unavailable',open:'Open the deck',closeDeck:'Close the deck',browse:'Swipe through the cards',previous:'Previous card',next:'Next card',close:'Close',flip:'Flip card',source:'Open on Scryfall',of:'of',copies:'copies',reference:'Reference image',front:'Front',back:'Back'};
 const copies=q=>q===1?(it?'copia':'copy'):text.copies;
@@ -60,6 +60,8 @@ function deckView(host,cards,data){
  rail.addEventListener('keydown',e=>{if(e.target!==rail)return;if(e.key==='ArrowRight'){e.preventDefault();jump(active+1);}if(e.key==='ArrowLeft'){e.preventDefault();jump(active-1);}});
  report();
 }
+// The collection page reuses the same accessible lightbox.
+window.MoxieCards={open:openModal,picture};
 for(const root of browsers){
  let cards;try{cards=JSON.parse(root.querySelector('.card-data').textContent);}catch{continue;}
  if(!Array.isArray(cards)||!cards.length)continue;

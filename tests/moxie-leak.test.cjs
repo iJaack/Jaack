@@ -17,9 +17,20 @@ const FORBIDDEN_NAMES = [
   /^cardmarket_prices\.json$/i,
   /^purchases.*$/i,
   /^scryfall_cache.*\.json$/i,
-  /^\.env.*$/i,
+  /^\.env(?!\.example$).*$/i,
 ];
 const FORBIDDEN_DIRS = ['.vercel', 'price-update-runs', 'moxfield'];
+// collection.<anything> is private inventory, except the sanitized public snapshot
+// (moxie/data/collection.json) and its build copy (moxie/dist/collection.json).
+const COLLECTION_NAME = /^collection\./i;
+const ALLOWED_COLLECTION = new Set(['moxie/data/collection.json', 'moxie/dist/collection.json']);
+const COLLECTION_CARD_FIELDS = new Set(['key', 'name', 'set', 'collector_number', 'language', 'finish', 'count',
+  'type_line', 'colors', 'color_identity', 'rarity', 'mana_value', 'scryfall_uri', 'faces', 'price_eur',
+  'value_eur', 'price_source', 'decks']);
+const COLLECTION_TOP_FIELDS = new Set(['schema', 'generated', 'prices_as_of', 'price_note', 'totals', 'sets', 'cards']);
+const PRIVATE_FIELD = /purchase|paid|tag|provenance|trade|modified|condition|alter|proxy/i;
+const rel = f => path.relative(ROOT, f).split(path.sep).join('/');
+const privateCollection = f => COLLECTION_NAME.test(path.basename(f)) && !ALLOWED_COLLECTION.has(rel(f));
 const FORBIDDEN_STRINGS = [
   /Purchase Price/i,
   /purchase_price/i,
@@ -27,6 +38,10 @@ const FORBIDDEN_STRINGS = [
   /golden-store-/i,
   /cardmarket-import-/i,
   /VERCEL_OIDC/,
+  /VERCEL_TOKEN/,
+  /\bprj_[A-Za-z0-9]{6,}/,
+  /\bteam_[A-Za-z0-9]{6,}/,
+  /price_?paid/i,
   /\/Users\/jaack/,
 ];
 const TEXT = new Set(['.py', '.json', '.js', '.cjs', '.mjs', '.css', '.html', '.md', '.txt', '.xml', '.svg', '.yml', '.yaml', '.csv', '']);
@@ -53,7 +68,7 @@ function trackedFiles() {
 
 test('no private Moxie files are tracked anywhere in the repository', () => {
   const bad = trackedFiles().filter(f => FORBIDDEN_NAMES.some(rx => rx.test(path.basename(f))) ||
-    FORBIDDEN_DIRS.some(d => f.split(path.sep).includes(d)));
+    privateCollection(f) || FORBIDDEN_DIRS.some(d => f.split(path.sep).includes(d)));
   assert.deepStrictEqual(bad.map(f => path.relative(ROOT, f)), []);
 });
 
@@ -61,7 +76,7 @@ test('moxie/ (source and build output) has no private file names', () => {
   const bad = walk(MOXIE).filter(f => {
     const name = path.basename(f.replace(/[\\/]$/, ''));
     if (f.endsWith(path.sep)) return FORBIDDEN_DIRS.includes(name);
-    return FORBIDDEN_NAMES.some(rx => rx.test(name));
+    return FORBIDDEN_NAMES.some(rx => rx.test(name)) || privateCollection(f);
   });
   assert.deepStrictEqual(bad.map(f => path.relative(ROOT, f)), []);
 });
@@ -74,4 +89,25 @@ test('moxie/ contains no purchase, trade-list or credential strings', () => {
     for (const rx of FORBIDDEN_STRINGS) if (rx.test(text)) hits.push(`${path.relative(ROOT, f)}: ${rx}`);
   }
   assert.deepStrictEqual(hits, []);
+});
+
+test('public collection snapshots carry only allowed fields', () => {
+  const files = [...ALLOWED_COLLECTION].map(f => path.join(ROOT, f)).filter(f => fs.existsSync(f));
+  assert.ok(files.some(f => rel(f) === 'moxie/data/collection.json'), 'moxie/data/collection.json is missing');
+  for (const f of files) {
+    const data = JSON.parse(fs.readFileSync(f, 'utf8'));
+    assert.deepStrictEqual(Object.keys(data).filter(k => !COLLECTION_TOP_FIELDS.has(k)), [], rel(f));
+    const walkKeys = (value, where) => {
+      if (Array.isArray(value)) value.forEach((v, i) => walkKeys(v, `${where}[${i}]`));
+      else if (value && typeof value === 'object') for (const [k, v] of Object.entries(value)) {
+        if (where !== 'sets') assert.ok(!PRIVATE_FIELD.test(k), `${rel(f)}: private field ${where}.${k}`);
+        walkKeys(v, where === '' ? k : `${where}.${k}`);
+      }
+    };
+    walkKeys(data, '');
+    for (const card of data.cards) {
+      assert.deepStrictEqual(Object.keys(card).filter(k => !COLLECTION_CARD_FIELDS.has(k)), [], `${rel(f)}: ${card.name}`);
+      for (const face of card.faces) for (const k of ['image', 'small']) assert.strictEqual(new URL(face[k]).hostname, 'cards.scryfall.io');
+    }
+  }
 });
