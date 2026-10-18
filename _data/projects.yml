@@ -29,6 +29,21 @@
   link_en: Code and documentation on GitHub
   link_it: Codice e documentazione su GitHub
 
+- id: evalanche
+  name: Evalanche
+  group: systems
+  role_en: Builder
+  role_it: Sviluppo e progettazione
+  stage_en: Open source · Published on npm
+  stage_it: Open source · Pubblicato su npm
+  description_en: "An Avalanche-first wallet and execution SDK for AI agents, with multi-EVM support."
+  description_it: "Un SDK di wallet ed esecuzione per agenti AI, pensato per Avalanche e con supporto multi-EVM."
+  detail_en: "I build the layer that lets an agent move from a request to an onchain action: wallet boot, holdings discovery, DeFi, bridge and swap flows, Polymarket, and perpetuals on Hyperliquid. It ships as an npm package and an MCP server. Avalanche is the default network, and other EVM networks such as Base, Ethereum, Arbitrum and Polygon are also supported."
+  detail_it: "Costruisco il livello che permette a un agente di passare da una richiesta a un’azione onchain: avvio del wallet, ricognizione dei saldi e delle posizioni, DeFi, bridge e swap, Polymarket e perpetual su Hyperliquid. È distribuito come pacchetto npm e come server MCP. Avalanche è la rete predefinita, e sono supportate anche altre reti EVM come Base, Ethereum, Arbitrum e Polygon."
+  url: https://github.com/iJaack/evalanche
+  link_en: Code and documentation on GitHub
+  link_it: Codice e documentazione su GitHub
+
 - id: sea-temperature
   icon: /assets/images/work/sea-temperature.png
   name: Sea Temperature
