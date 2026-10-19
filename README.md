@@ -88,4 +88,5 @@ venue photograph. The full illustration stays visible without cropping its text.
 Evalanche's cover is an unaltered screenshot of [its public homepage](https://evalanche.xyz/),
 captured on 19 October 2026 (1247 × 663). Its logo is an unmodified copy of the
 published [favicon](https://evalanche.xyz/favicon.svg), retrieved the same day.
-The preview is fitted without clipping and is a dated image of the product site.
+The preview is a dated image of the product site. A narrow CSS crop hides the
+source screenshot's white left edge and its contain-fit gutter.
