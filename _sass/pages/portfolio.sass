@@ -208,11 +208,12 @@ a.text-link
 // Portfolio showcases and native-app gallery.
 .featured-grid
   display: grid
-  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr)
+  grid-template-columns: minmax(0, 1fr)
   gap: 24px
 
 .featured-secondary
   display: grid
+  grid-template-columns: repeat(2, minmax(0, 1fr))
   gap: 24px
 
 .project-feature
@@ -389,10 +390,6 @@ a.text-link
     border-top-style: dashed
 
 @media only screen and (max-width: 760px)
-  .featured-grid
-    grid-template-columns: 1fr
-  .featured-secondary
-    grid-template-columns: repeat(2, minmax(0, 1fr))
   .app-gallery
     gap: 24px
     padding: 26px

@@ -103,7 +103,9 @@ class SiteTest < Minitest::Test
   def test_visual_portfolio_preserves_navigation_and_project_relationships
     home = doc('index.html')
     assert_equal 1, home.css('.feature-lead').length
-    assert_includes home.at_css('.feature-lead h3').text, 'Gem Mint Strategy'
+    assert_includes home.at_css('.feature-lead h3').text, 'Team1'
+    assert_equal %w[/projects/team1/ /projects/gm10/ /projects/eva-protocol/], home.css('#selected-work h3 a').map { |link| link['href'] }
+    assert_equal 2, home.css('.featured-secondary .project-feature').length
     assert_equal 4, home.css('.app-links a').length
     home.css('.project-feature img, .app-gallery img, .hero-portrait').each do |img|
       assert img.key?('alt'), 'Image needs an accessible text alternative'
