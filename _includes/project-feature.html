@@ -1,10 +1,11 @@
 <article class="project-feature feature-{{ project.id }}{% if include.lead %} feature-lead{% endif %}">
-  {% if project.id == 'team1' %}<div class="team1-feature-visual"><img src="{{ '/assets/images/work/team1-event.jpg' | relative_url }}" width="1280" height="720" alt="Avalanche event venue with red Avalanche banners." loading="lazy"></div>{% endif %}
+  {% if project.id == 'team1' %}<div class="team1-feature-visual"><img src="{{ '/assets/images/work/team1-announcement.jpg' | relative_url }}" width="1672" height="941" alt="DevRel announcement artwork with builders, code editors and the team1 wordmark." loading="lazy"></div>{% endif %}
   {% if project.id == 'gm10' %}<a class="feature-image" href="{{ '/projects/gm10/' | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ '/assets/images/work/gms.jpg' | relative_url }}" width="1200" height="630" alt="" fetchpriority="high"></a>{% endif %}
   {% if project.id == 'eva-protocol' %}<a class="feature-image" href="{{ '/projects/eva-protocol/' | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ '/assets/images/work/eva-protocol-preview.png' | relative_url }}" width="1425" height="748" alt="" loading="lazy"></a>{% endif %}
+  {% if project.id == 'evalanche' %}<a class="feature-image" href="{{ '/projects/evalanche/' | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ '/assets/images/work/evalanche-preview.png' | relative_url }}" width="1247" height="663" alt="" loading="lazy"></a>{% endif %}
   <div class="feature-copy">
     <p class="work-meta"><span class="lang-en" lang="en">{{ project.stage_en }}</span><span class="lang-it" lang="it">{{ project.stage_it }}</span></p>
-    <h3><a href="{{ '/projects/' | relative_url }}{{ project.id }}/">{% if project.id == 'team1' %}<img class="team1-wordmark" src="{{ '/assets/images/work/team1-wordmark.svg' | relative_url }}" width="1027" height="289" alt="team1">{% else %}{{ project.name }}{% endif %} <span aria-hidden="true">↗</span></a></h3>
+    <h3><a href="{{ '/projects/' | relative_url }}{{ project.id }}/">{% if project.id == 'team1' %}<img class="team1-wordmark" src="{{ '/assets/images/work/team1-wordmark.svg' | relative_url }}" width="1027" height="289" alt="team1">{% else %}{% if project.id == 'evalanche' %}<img class="evalanche-logo" src="{{ '/assets/images/work/evalanche-logo.svg' | relative_url }}" width="64" height="64" alt="">{% endif %}{{ project.name }}{% endif %} <span aria-hidden="true">↗</span></a></h3>
     <p><span class="lang-en" lang="en">{{ project.description_en }}</span><span class="lang-it" lang="it">{{ project.description_it }}</span></p>
   </div>
 </article>

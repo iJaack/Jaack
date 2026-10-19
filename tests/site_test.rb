@@ -47,7 +47,7 @@ class SiteTest < Minitest::Test
 
   def test_homepage_features_real_project_and_writing_destinations
     page = doc('index.html')
-    assert_equal 3, page.css('#selected-work article').length
+    assert_equal 4, page.css('#selected-work article').length
     assert_equal 3, page.css('.selected-writing article').length
     assert page.at_css('#contact a[href^="mailto:"]')
     refute_includes page.text, 'Builder on the side'
@@ -105,10 +105,12 @@ class SiteTest < Minitest::Test
     assert_equal 1, home.css('.feature-lead').length
     assert home.at_css('.feature-lead h3 a[href="/projects/team1/"]')
     assert_equal 'team1', home.at_css('.feature-lead h3 img')['alt']
-    assert home.at_css('.feature-lead .team1-feature-visual img[src="/assets/images/work/team1-event.jpg"]')
-    assert_equal %w[/projects/team1/ /projects/gm10/ /projects/eva-protocol/], home.css('#selected-work h3 a').map { |link| link['href'] }
-    assert_equal 2, home.css('.featured-secondary .project-feature').length
+    assert home.at_css('.feature-lead .team1-feature-visual img[src="/assets/images/work/team1-announcement.jpg"]')
+    assert_equal %w[/projects/team1/ /projects/gm10/ /projects/eva-protocol/ /projects/evalanche/], home.css('#selected-work h3 a').map { |link| link['href'] }
+    assert_equal 3, home.css('.featured-secondary .project-feature').length
     assert home.at_css('.feature-eva-protocol .feature-image img[src="/assets/images/work/eva-protocol-preview.png"]')
+    assert home.at_css('.feature-evalanche .feature-image img[src="/assets/images/work/evalanche-preview.png"]')
+    assert home.at_css('.feature-evalanche h3 .evalanche-logo[src="/assets/images/work/evalanche-logo.svg"]')
     assert_equal 4, home.css('.app-links a').length
     home.css('.project-feature img, .app-gallery img, .hero-portrait').each do |img|
       assert img.key?('alt'), 'Image needs an accessible text alternative'
