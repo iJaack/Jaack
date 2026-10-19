@@ -72,3 +72,10 @@ so certificate validation and renewal can reach GitHub directly.
 Homepage visuals use the existing GMS brand cover, Eva mark, app icons, and a
 Pommidoro iPhone screenshot. Hundred uses a text monogram. Images are resized
 for the site; the screenshot is a product preview, not a live timer.
+
+The team1 featured card uses the unmodified `Team1_MAIN_WHITE.svg` wordmark from
+`AvalancheTeam1/common`, `brand/assets/text/SVG/`, source commit
+`9d1b3d1a9d9e3e254149885605504c6dfd84ec54`. The photograph is the official
+team1 homepage's [event video poster](https://www.team1.network/og-poster.jpg),
+saved locally as `assets/images/work/team1-event.jpg`. It illustrates Avalanche
+community work; it is not a claim that Giacomo organized or attended that event.
