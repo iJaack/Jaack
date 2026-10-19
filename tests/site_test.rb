@@ -5,7 +5,7 @@ require 'cgi'
 
 class SiteTest < Minitest::Test
   ROOT = File.expand_path('../_site', __dir__)
-  PROJECT_IDS = %w[portfolio-os ideas lg-tv-use sea-temperature gm10 eva eva-protocol team1 hundred pommidoro parcelpilot redbridge acps routescan]
+  PROJECT_IDS = %w[portfolio-os ideas lg-tv-use evalanche sea-temperature gm10 eva eva-protocol team1 hundred pommidoro parcelpilot redbridge acps routescan]
   ROUTES = %w[ideas/support/index.html ideas/privacy/index.html ideas/terms/index.html helicon-and-the-price-of-future-avax/index.html index.html projects/index.html blog/index.html about/index.html now/index.html newsletter/index.html en/about/index.html 404.html] + PROJECT_IDS.map { |id| "projects/#{id}/index.html" }
   def doc(route)
     Nokogiri::HTML(File.read(File.join(ROOT, route)))
@@ -55,7 +55,7 @@ class SiteTest < Minitest::Test
 
   def test_work_states_are_present_in_both_languages
     entries = doc('projects/index.html').css('.work-entry')
-    assert_equal 14, entries.length
+    assert_equal 15, entries.length
     entries.each do |entry|
       %w[en it].each do |lang|
         refute_empty entry.at_css(".work-meta .lang-#{lang}").text.strip
@@ -108,6 +108,7 @@ class SiteTest < Minitest::Test
     assert home.at_css('.feature-lead .team1-feature-visual img[src="/assets/images/work/team1-event.jpg"]')
     assert_equal %w[/projects/team1/ /projects/gm10/ /projects/eva-protocol/], home.css('#selected-work h3 a').map { |link| link['href'] }
     assert_equal 2, home.css('.featured-secondary .project-feature').length
+    assert home.at_css('.feature-eva-protocol .feature-image img[src="/assets/images/work/eva-protocol-preview.png"]')
     assert_equal 4, home.css('.app-links a').length
     home.css('.project-feature img, .app-gallery img, .hero-portrait').each do |img|
       assert img.key?('alt'), 'Image needs an accessible text alternative'
@@ -160,6 +161,18 @@ class SiteTest < Minitest::Test
     assert_equal 'https://jaack.me/assets/images/work/lg-tv-use-cover.png', image['content']
     assert page.at_css('img[src="/assets/images/work/lg-tv-use-cover.png"][alt]')
     assert doc('projects/index.html').at_css('#lg-tv-use h3 a[href="/projects/lg-tv-use/"]')
+  end
+
+  def test_evalanche_links_public_code_package_and_release
+    page = doc('projects/evalanche/index.html')
+    assert page.at_css('a[href="https://github.com/iJaack/evalanche"]')
+    assert page.at_css('a[href="https://www.npmjs.com/package/evalanche"]')
+    assert page.at_css('a[href="https://github.com/iJaack/evalanche/releases/tag/v1.14.0"]')
+    assert page.at_css('a[href="https://evalanche.xyz"]')
+    assert_includes page.text, 'Node.js 20 or newer'
+    assert_includes page.text, 'Node.js 20 o successivo'
+    work = doc('projects/index.html')
+    assert work.at_css('section[aria-labelledby="group-systems"] #evalanche h3 a[href="/projects/evalanche/"]')
   end
 
   def test_reading_paths_preserve_the_archive_and_real_articles

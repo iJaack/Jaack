@@ -4,6 +4,9 @@ portfolio-os:
 lg-tv-use:
   en: "Version 0.3.1 is public under the MIT license, with 17 MCP tools and 55 automated tests. Start with the README for installation and pairing. Internal app navigation remains experimental: a tracked state is a prediction, and external remote input requires a fresh observation."
   it: "La versione 0.3.1 è pubblica con licenza MIT, 17 tool MCP e 55 test automatici. Parti dal README per installazione e associazione. La navigazione interna delle app resta sperimentale: lo stato tracciato è una previsione e l’uso del telecomando fisico richiede una nuova osservazione."
+evalanche:
+  en: "Start with the README for installation, the quick start and the MCP server. Version 1.14.0 is published on npm under the MIT license and requires Node.js 20 or newer. The Avalanche L1 helpers cover public EVM L1s with 18-decimal native tokens; they do not imply bridge, staking or non-EVM support on every L1."
+  it: "Parti dal README per installazione, avvio rapido e server MCP. La versione 1.14.0 è pubblicata su npm con licenza MIT e richiede Node.js 20 o successivo. Gli strumenti per le L1 di Avalanche coprono le L1 EVM pubbliche con token nativi a 18 decimali; non implicano supporto a bridge, staking o reti non EVM su ogni L1."
 sea-temperature:
   en: "The important distinction is between a model estimate and a measurement at your exact location. My development work includes making coverage and unavailable data understandable on the map."
   it: "La distinzione importante è tra una stima del modello e una misura nella tua posizione esatta. Il lavoro di sviluppo comprende rendere leggibili sulla mappa la copertura e l’assenza di dati."
