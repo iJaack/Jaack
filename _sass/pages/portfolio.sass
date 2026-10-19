@@ -299,7 +299,8 @@ a.text-link
   .feature-image img
     object-fit: contain
     background: #0c0d10
-    clip-path: inset(0 0 0 0.7%)
+    // Hide the source screenshot's white edge, including its contain-fit gutter.
+    clip-path: inset(0 0 0 1.5%)
   h3 a
     display: inline-flex
     align-items: center
