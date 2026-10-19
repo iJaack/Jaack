@@ -103,7 +103,9 @@ class SiteTest < Minitest::Test
   def test_visual_portfolio_preserves_navigation_and_project_relationships
     home = doc('index.html')
     assert_equal 1, home.css('.feature-lead').length
-    assert_includes home.at_css('.feature-lead h3').text, 'Team1'
+    assert home.at_css('.feature-lead h3 a[href="/projects/team1/"]')
+    assert_equal 'team1', home.at_css('.feature-lead h3 img')['alt']
+    assert home.at_css('.feature-lead .team1-feature-visual img[src="/assets/images/work/team1-event.jpg"]')
     assert_equal %w[/projects/team1/ /projects/gm10/ /projects/eva-protocol/], home.css('#selected-work h3 a').map { |link| link['href'] }
     assert_equal 2, home.css('.featured-secondary .project-feature').length
     assert_equal 4, home.css('.app-links a').length
