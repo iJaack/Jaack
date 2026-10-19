@@ -69,7 +69,7 @@ ijaack.github.io. Re-registering the custom domain provisioned a certificate
 for both names. GitHub Pages enforces HTTPS. Keep the website records DNS-only
 so certificate validation and renewal can reach GitHub directly.
 
-Homepage visuals use the existing GMS brand cover, Eva mark, app icons, and a
+Homepage visuals use the existing GMS brand cover, Eva interface preview, app icons, and a
 Pommidoro iPhone screenshot. Hundred uses a text monogram. Images are resized
 for the site; the screenshot is a product preview, not a live timer.
 
@@ -80,7 +80,12 @@ signals visible inside it are a dated interface preview, not live portfolio data
 
 The team1 featured card uses the unmodified `Team1_MAIN_WHITE.svg` wordmark from
 `AvalancheTeam1/common`, `brand/assets/text/SVG/`, source commit
-`9d1b3d1a9d9e3e254149885605504c6dfd84ec54`. The photograph is the official
-team1 homepage's [event video poster](https://www.team1.network/og-poster.jpg),
-saved locally as `assets/images/work/team1-event.jpg`. It illustrates Avalanche
-community work; it is not a claim that Giacomo organized or attended that event.
+`9d1b3d1a9d9e3e254149885605504c6dfd84ec54`. Its image is the unmodified artwork
+attached to [Giacomo's 16 October DevRel announcement](https://x.com/ijaack94/status/2111136683299054031/photo/1),
+saved as `assets/images/work/team1-announcement.jpg` (1672 × 941). It replaces the
+venue photograph. The full illustration stays visible without cropping its text.
+
+Evalanche's cover is an unaltered screenshot of [its public homepage](https://evalanche.xyz/),
+captured on 19 October 2026 (1247 × 663). Its logo is an unmodified copy of the
+published [favicon](https://evalanche.xyz/favicon.svg), retrieved the same day.
+The preview is fitted without clipping and is a dated image of the product site.

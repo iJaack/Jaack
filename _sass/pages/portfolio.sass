@@ -283,14 +283,35 @@ a.text-link
     grid-column: 2
     grid-row: 1
     min-height: 320px
+    background: #0c0c09
     img
       display: block
       width: 100%
       height: 100%
-      object-fit: cover
+      object-fit: contain
       border-radius: 0
 
+.feature-evalanche
+  grid-column: 1 / -1
+  display: grid
+  grid-template-columns: repeat(2, minmax(0, 1fr))
+  align-items: center
+  .feature-image img
+    object-fit: contain
+    background: #0c0d10
+    clip-path: inset(0 0 0 0.7%)
+  h3 a
+    display: inline-flex
+    align-items: center
+    gap: 12px
+  .evalanche-logo
+    width: 36px
+    height: 36px
+    border-radius: 8px
+
 @media only screen and (max-width: 760px)
+  .feature-evalanche
+    display: block
   .feature-team1
     display: block
     .team1-feature-visual
