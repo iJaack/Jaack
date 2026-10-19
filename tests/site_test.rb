@@ -47,7 +47,7 @@ class SiteTest < Minitest::Test
 
   def test_homepage_features_real_project_and_writing_destinations
     page = doc('index.html')
-    assert_equal 2, page.css('#selected-work article').length
+    assert_equal 3, page.css('#selected-work article').length
     assert_equal 3, page.css('.selected-writing article').length
     assert page.at_css('#contact a[href^="mailto:"]')
     refute_includes page.text, 'Builder on the side'
@@ -74,6 +74,8 @@ class SiteTest < Minitest::Test
     featured = doc('index.html').css('#selected-work h3 a').map { |link| link['href'] }
     refute_includes featured, '/projects/routescan/'
     assert_includes featured, '/projects/eva-protocol/'
+    assert_includes featured, '/projects/team1/'
+    assert_includes work.at_css('#team1 .work-meta .lang-en').text, 'DevRel'
     assert_includes work.at_css('#team1 .work-meta .lang-en').text, 'Italy Coordinator'
     assert_includes work.at_css('#redbridge .work-meta .lang-en').text, 'Active advisory'
     apps = work.css('section[aria-labelledby="group-apps"] .work-entry').map { |entry| entry['id'] }
@@ -87,6 +89,8 @@ class SiteTest < Minitest::Test
     bio = doc('acp-255-four-fee-curves-en/index.html').at_css('.author .bio').text
     assert_includes bio, 'Independent builder'
     assert_includes bio, 'Former Head of Growth at Routescan'
+    assert_includes bio, 'DevRel at Team1'
+    assert_includes doc('acp-255-four-fee-curves-en/index.html').at_css('.author .bio .lang-it').text, 'DevRel in Team1'
   end
 
   def test_archived_newsletter_does_not_collect_signups
@@ -167,7 +171,7 @@ class SiteTest < Minitest::Test
       article = doc(link['href'].delete_prefix('/') + 'index.html')
       assert article.at_css('main.post'), link['href']
     end
-    assert_equal 4, doc('now/index.html').css('.now-priorities li').length
+    assert_equal 6, doc('now/index.html').css('.now-priorities li').length
   end
 
   def test_stealth_project_is_absent_from_published_site

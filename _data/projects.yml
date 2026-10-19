@@ -88,16 +88,17 @@
   detail_it: "Una piattaforma legata a X dove collegare un wallet, scrivere una tesi, aggiungere segnali di mercato e fatti e aggiornare il ragionamento quando cambiano le evidenze. La sto costruendo all'interno di Eva, con registrazioni delle tesi ancorate ad Avalanche."
 
 - id: team1
-  name: Team1 Italy
+  name: Team1
+  featured: true
   group: ecosystem
-  role_en: Italy Coordinator
-  role_it: Coordinatore per l’Italia
+  role_en: DevRel · Italy Coordinator
+  role_it: DevRel · Coordinatore per l’Italia
   stage_en: Ongoing work
   stage_it: Attività in corso
-  description_en: "Helping people in Italy learn, meet, and build with Avalanche."
-  description_it: "Aiutare le persone in Italia a imparare, incontrarsi e costruire su Avalanche."
-  detail_en: "I coordinate Team1 Italy: connecting local organizers and builders, developing workshops and educational material, and helping people find a practical way into the Avalanche ecosystem."
-  detail_it: "Coordino Team1 Italy: metto in contatto organizzatori locali e builder, sviluppo workshop e materiali didattici e aiuto le persone a trovare un punto di ingresso pratico nell'ecosistema Avalanche."
+  description_en: "DevRel across Avalanche: builder support, grants, workshops, and hackathons."
+  description_it: "DevRel su Avalanche: supporto ai builder, grant, workshop e hackathon."
+  detail_en: "I joined Team1 in DevRel in October 2026, working with builders across Avalanche and Team1’s global chapters. My initial focus is grants review and the builder platform, helping teams find the resources, integrations, and partners they need after a prototype or a grant application. I also continue to coordinate Team1 Italy."
+  detail_it: "A ottobre 2026 sono entrato in Team1 in DevRel, lavorando con i builder su Avalanche e con i capitoli globali di Team1. Le prime priorità sono la revisione dei grant e la piattaforma per i builder: aiutare i team a trovare risorse, integrazioni e partner dopo un prototipo o una candidatura a un grant. Continuo anche a coordinare Team1 Italy."
 
 - id: hundred
   name: Hundred
@@ -179,8 +180,8 @@
   stage_it: 2020–maggio 2026
   description_en: "My previous chapter in blockchain explorer infrastructure."
   description_it: "Il mio percorso precedente nell'infrastruttura degli explorer blockchain."
-  detail_en: "I joined Avascan in 2020 and later led growth at Routescan, working on partnerships and Explorer-as-a-Service positioning. I left in May 2026 and now work independently on my own projects and advisory."
-  detail_it: "Sono entrato in Avascan nel 2020 e ho poi guidato la crescita di Routescan, lavorando su partnership e posizionamento di Explorer-as-a-Service. Ho lasciato l'azienda a maggio 2026 e oggi lavoro in modo indipendente sui miei progetti e nell'advisory."
+  detail_en: "I joined Avascan in 2020 and later led growth at Routescan, working on partnerships and Explorer-as-a-Service positioning. I left in May 2026. I now work in DevRel at Team1, alongside my own projects and advisory."
+  detail_it: "Sono entrato in Avascan nel 2020 e ho poi guidato la crescita di Routescan, lavorando su partnership e posizionamento di Explorer-as-a-Service. Ho lasciato l'azienda a maggio 2026. Oggi mi occupo di DevRel in Team1, insieme ai miei progetti e all’advisory."
   url: https://routescan.io
   link_en: Visit Routescan
   link_it: Visita Routescan
