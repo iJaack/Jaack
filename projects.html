@@ -4,10 +4,10 @@ title: Work
 width: large
 title_it: Progetti
 permalink: /projects/
-description: Products, infrastructure, AI systems, and community work by Giacomo Barbieri. Roles, context, and development stages.
+description: DevRel at Team1, independent products, AI systems, Avalanche research, and advisory by Giacomo Barbieri. Roles, context, and development stages.
 ---
-<p class="page-intro"><span class="lang-en" lang="en">My own ventures and apps, alongside ecosystem coordination, advisory, and research.</span><span class="lang-it" lang="it">I miei progetti e le mie app, insieme al coordinamento di community, all’advisory e alla ricerca.</span></p>
-{% assign groups = 'ventures|apps|ecosystem|systems|research|past' | split: '|' %}
+<p class="page-intro"><span class="lang-en" lang="en">DevRel at Team1, alongside my own ventures, native apps, AI systems, advisory, and research.</span><span class="lang-it" lang="it">DevRel in Team1, insieme ai miei progetti, alle app native, ai sistemi AI, all’advisory e alla ricerca.</span></p>
+{% assign groups = 'ecosystem|ventures|apps|systems|research|past' | split: '|' %}
 <nav class="work-jumps" aria-label="Project categories / Categorie dei progetti">{% for group in groups %}<a href="#group-{{ group }}"><span class="lang-en" lang="en">{{ site.data.ui_text.work_groups[group].en }}</span><span class="lang-it" lang="it">{{ site.data.ui_text.work_groups[group].it }}</span></a>{% endfor %}</nav>
 {% for group in groups %}
 <section class="work-group" aria-labelledby="group-{{ group }}">

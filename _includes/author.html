@@ -5,6 +5,6 @@
 
     <div class="toright">
         <h4 class="name">{{ site.authors[page.author].name }}</h4>
-        <p class="bio">{{ site.authors[page.author].bio }}</p>
+        <p class="bio"><span class="lang-en" lang="en">{{ site.authors[page.author].bio }}</span><span class="lang-it" lang="it">{{ site.authors[page.author].bio_it | default: site.authors[page.author].bio }}</span></p>
     </div>
 </section>

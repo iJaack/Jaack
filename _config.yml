@@ -2,10 +2,10 @@ email: hey@jaack.me
 booking_url: https://book.jaack.me/
 # main text of home
 name: Giacomo Barbieri
-bio: Independent builder and operator across crypto, AI, and native apps.
+bio: DevRel at Team1, working with builders across Avalanche. I also build native apps and AI systems.
 
 # twitter summary info
-description: "Giacomo Barbieri: independent crypto builder, native apps, AI systems, Team1 Italy, and advisory."
+description: "Giacomo Barbieri / Jaack. DevRel at Team1, supporting builders across Avalanche. Native apps, AI systems, research, and advisory."
 
 # if it's an external image, update below for true
 # better with square images
@@ -44,7 +44,8 @@ medium: ijaack94
 authors:
     jaack:
         name: Giacomo Barbieri
-        bio: Independent builder and operator across crypto, AI, and native apps. Former Head of Growth at Routescan.
+        bio: DevRel at Team1, working with builders across Avalanche. Independent builder of native apps and AI systems. Former Head of Growth at Routescan.
+        bio_it: DevRel in Team1, al fianco dei builder su Avalanche. Sviluppo app native e sistemi AI indipendenti. In precedenza Head of Growth in Routescan.
         external-image: false
         picture: assets/images/profilo-homepage-ig.png
         twitter: ijaack94
