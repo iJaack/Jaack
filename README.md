@@ -77,6 +77,7 @@ Eva's featured cover is an unaltered screenshot of the public
 [Eva Protocol homepage](https://eva.jaack.me/), captured on 19 October 2026
 (1425 × 748 image). Both featured covers use a 40:21 aspect ratio. The proof record and market
 signals visible inside it are a dated interface preview, not live portfolio data.
+A narrow CSS crop hides the captured scrollbar at the right edge.
 
 The team1 featured card uses the unmodified `Team1_MAIN_WHITE.svg` wordmark from
 `AvalancheTeam1/common`, `brand/assets/text/SVG/`, source commit
