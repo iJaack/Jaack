@@ -299,8 +299,8 @@ a.text-link
   .feature-image img
     object-fit: contain
     background: #0c0d10
-    // Hide the source screenshot's white edge, including its contain-fit gutter.
-    clip-path: inset(0 0 0 1.5%)
+    // Hide the screenshot's left edge and the code panel's bottom scrollbar.
+    clip-path: polygon(1.5% 0, 100% 0, 100% 94%, 52% 94%, 52% 100%, 1.5% 100%)
   h3 a
     display: inline-flex
     align-items: center
