@@ -73,6 +73,11 @@ Homepage visuals use the existing GMS brand cover, Eva mark, app icons, and a
 Pommidoro iPhone screenshot. Hundred uses a text monogram. Images are resized
 for the site; the screenshot is a product preview, not a live timer.
 
+Eva's featured cover is an unaltered screenshot of the public
+[Eva Protocol homepage](https://eva.jaack.me/), captured on 19 October 2026
+(1425 × 748 image). Both featured covers use a 40:21 aspect ratio. The proof record and market
+signals visible inside it are a dated interface preview, not live portfolio data.
+
 The team1 featured card uses the unmodified `Team1_MAIN_WHITE.svg` wordmark from
 `AvalancheTeam1/common`, `brand/assets/text/SVG/`, source commit
 `9d1b3d1a9d9e3e254149885605504c6dfd84ec54`. The photograph is the official
