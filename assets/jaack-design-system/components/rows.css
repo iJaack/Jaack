@@ -1,0 +1,19 @@
+/* hairline row list — tables without boxes: rows ≈ 36 px, hairline above each row and one below the list.
+   Set the columns per list with --jk-cols. Below 520 px of container width, columns marked .jk-opt are hidden. */
+.jk-rows{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--jk-hair);--jk-cols:56px 112px minmax(0,1fr) auto 96px}
+.jk-rows li{display:grid;grid-template-columns:var(--jk-cols);align-items:baseline;column-gap:var(--jk-s4);padding:var(--jk-row-pad) 0;border-top:1px solid var(--jk-hair);font-size:var(--jk-fs-body);line-height:1.4;min-width:0}
+.jk-rows li>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.jk-rows .t{color:var(--jk-t3);font-size:var(--jk-fs-note)}
+.jk-rows .m{font-size:var(--jk-fs-xs);font-weight:700;letter-spacing:var(--jk-track-label);text-transform:uppercase;color:var(--jk-t2)}
+.jk-rows .r{text-align:right;font-weight:650}
+.jk-rows .p{color:var(--jk-t3);font-weight:500;font-size:var(--jk-fs-note);text-align:right}
+.jk-rows li.tot{font-weight:650}
+.jk-rows.wrap li>span{white-space:normal}
+@container (max-width:520px){.jk-rows{--jk-cols:48px minmax(0,1fr) auto!important}.jk-rows .jk-opt{display:none}}
+/* alert rows: side by side when there is room */
+.jk-alerts li{grid-template-columns:120px minmax(0,1fr)}
+.jk-alerts li>span{white-space:normal}
+.jk-alerts .warn{color:var(--jk-amb);font-weight:700;text-transform:uppercase;font-size:var(--jk-fs-xs);letter-spacing:var(--jk-track-label)}
+.jk-alerts .info{color:var(--jk-t2);font-weight:700;text-transform:uppercase;font-size:var(--jk-fs-xs);letter-spacing:var(--jk-track-label)}
+@container (min-width:900px){.jk-alerts{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));column-gap:var(--jk-s6);border-bottom:0}.jk-alerts li{grid-template-columns:minmax(0,1fr);row-gap:2px;border-bottom:1px solid var(--jk-hair)}}
+@container (max-width:520px){.jk-alerts li{grid-template-columns:minmax(0,1fr)}}

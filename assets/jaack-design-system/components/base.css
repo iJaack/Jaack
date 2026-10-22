@@ -1,0 +1,25 @@
+/* base: page, type roles, fade-in, theme cross-fade, reduced motion */
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--jk-bg);color:var(--jk-ink);-webkit-text-size-adjust:100%}
+body{margin:0;font:var(--jk-fs-body)/1.4 var(--jk-font);color:var(--jk-ink);background:transparent;min-height:100vh;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+.jk-page{padding:calc(var(--jk-topbar-h) + env(safe-area-inset-top)) var(--jk-page-x) 0;max-width:var(--jk-max);margin:0 auto;font-variant-numeric:tabular-nums;text-shadow:var(--jk-text-shadow)}
+.jk-page svg text{text-shadow:none}
+/* type roles */
+.jk-lab{display:block;font-size:var(--jk-fs-xs);font-weight:700;letter-spacing:var(--jk-track-label);text-transform:uppercase;color:var(--jk-t2);margin:0}
+.jk-big{font-size:var(--jk-fs-big);font-weight:800;letter-spacing:var(--jk-track-big);line-height:.9;margin-top:var(--jk-s2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.jk-mid{font-size:var(--jk-fs-mid);font-weight:750;letter-spacing:var(--jk-track-mid);line-height:1;margin-top:var(--jk-s2);white-space:nowrap;font-variant-numeric:tabular-nums}
+.jk-u{font-size:max(15px,.28em);font-weight:600;letter-spacing:-.01em;margin-left:.12em;color:var(--jk-ink-2)}
+.jk-cmp{margin:var(--jk-s2) 0 0;font-size:var(--jk-fs-body);line-height:var(--jk-lh);color:var(--jk-t2);max-width:68ch}
+.jk-cmp b{color:var(--jk-ink);font-weight:650}
+.jk-note{margin:var(--jk-s2) 0 0;font-size:var(--jk-fs-note);line-height:var(--jk-lh);color:var(--jk-t3);max-width:68ch}
+.jk-na{color:var(--jk-t2);font-weight:650;font-size:22px;letter-spacing:0}
+.jk-placeholder{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--jk-amb);border:1px dashed currentColor;border-radius:var(--jk-r-pill);padding:2px 8px;text-shadow:none}
+:where(a){color:inherit}
+:where(button,a,[tabindex]):focus-visible{outline:2px solid var(--jk-accent);outline-offset:3px;border-radius:var(--jk-r-xs)}
+/* fade-in: opacity only — data never moves or scales */
+.jk-fx{opacity:0;transition:opacity var(--jk-d-fade) ease-out}.jk-fx.in{opacity:1}
+/* theme cross-fade (theme.js adds .jk-th-fade for 450 ms) */
+html.jk-th-fade,html.jk-th-fade *{transition:background-color var(--jk-d-theme) ease,color var(--jk-d-theme) ease,border-color var(--jk-d-theme) ease,fill var(--jk-d-theme) ease!important}
+@media (prefers-reduced-motion:reduce){.jk-fx{opacity:1;transition:none}html.jk-th-fade,html.jk-th-fade *{transition:none!important}}
+html.jk-rm .jk-fx{opacity:1;transition:none}
+.jk-end{text-align:center;padding:40px 16px calc(128px + env(safe-area-inset-bottom));font-size:13px;color:var(--jk-t3)}

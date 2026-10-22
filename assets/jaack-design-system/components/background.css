@@ -1,0 +1,13 @@
+/* animated soft gradient background — three blurred discs drifting slowly (transform only, no filters).
+   Markup: <div class="jk-bg" aria-hidden="true"><i></i><i></i><i></i></div> as the first child of <body>.
+   Layer 0 of the scroll model: background.js may translate it at 0.2× scroll (capped). Off under reduced motion. */
+.jk-bg{position:fixed;inset:0;bottom:-30vh;z-index:-1;overflow:hidden;pointer-events:none;contain:strict}
+.jk-bg i{position:absolute;display:block;width:var(--s);height:var(--s);left:var(--x);top:var(--y);margin:calc(var(--s)/-2) 0 0 calc(var(--s)/-2);border-radius:50%;
+  background:radial-gradient(closest-side,var(--c) 0%,var(--c2) 45%,transparent 100%);will-change:transform;animation:jkdrift var(--d) ease-in-out infinite alternate;animation-delay:var(--dl)}
+.jk-bg i:nth-child(1){--s:max(82vw,82vh);--x:14%;--y:10%;--d:38s;--dl:-6s;--tx:8vw;--ty:6vh;--c:var(--jk-bg-1);--c2:var(--jk-bg-1b)}
+.jk-bg i:nth-child(2){--s:max(74vw,74vh);--x:90%;--y:30%;--d:32s;--dl:-14s;--tx:-7vw;--ty:8vh;--c:var(--jk-bg-2);--c2:var(--jk-bg-2b)}
+.jk-bg i:nth-child(3){--s:max(88vw,88vh);--x:56%;--y:100%;--d:40s;--dl:-3s;--tx:-8vw;--ty:-7vh;--c:var(--jk-bg-3);--c2:var(--jk-bg-3b)}
+.jk-bg i:nth-child(n+4){display:none}
+@keyframes jkdrift{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(calc(var(--tx)*.6),calc(var(--ty)*-.5),0) scale(1.08)}100%{transform:translate3d(var(--tx),var(--ty),0) scale(.95)}}
+@media (prefers-reduced-motion:reduce){.jk-bg i{animation:none}}
+html.jk-rm .jk-bg i{animation:none}

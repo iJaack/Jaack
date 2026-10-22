@@ -1,0 +1,11 @@
+<!-- Glass panel (max one per screen besides the top bar) and a sheet (dialog). Needs sheet.js for the sheet. -->
+<aside class="jk-glass jk-panel" aria-labelledby="p-t">
+  <div class="jk-lab" id="p-t">Riepilogo</div>
+  <div class="jk-mid">Stabile</div>
+  <p class="jk-cmp">rispetto al mese scorso <b>+2 %</b></p>
+  <button type="button" class="jk-chip" data-jk-sheet="#sheet-1">Dettagli</button>
+</aside>
+<dialog class="jk-sheet jk-glass" id="sheet-1" aria-labelledby="s-t">
+  <button type="button" class="jk-x" aria-label="Chiudi">×</button>
+  <div class="jk-lab" id="s-t">Dettagli</div><p class="jk-cmp">Contenuto del foglio.</p>
+</dialog>

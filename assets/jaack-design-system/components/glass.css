@@ -1,0 +1,27 @@
+/* glass material — earned containers only: at most ONE glass block per screen besides the top bar.
+   Use it for a single summary/side panel, a sheet, a tooltip. Everything else is open layout with hairlines. */
+.jk-glass{position:relative;isolation:isolate;--r:var(--jk-r-l);border-radius:var(--r);
+  background:radial-gradient(130% 125% at 50% 45%,var(--jk-tint) 62%,var(--jk-tint-edge) 100%);
+  -webkit-backdrop-filter:blur(18px) saturate(1.8);backdrop-filter:blur(18px) saturate(1.8);box-shadow:var(--jk-drop);text-shadow:none}
+.jk-glass.hi{background:radial-gradient(130% 125% at 50% 45%,var(--jk-tint-hi) 62%,var(--jk-tint) 100%)}
+.jk-glass::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.6px;pointer-events:none;z-index:2;
+  background:conic-gradient(from 210deg at 50% 50%,var(--jk-rim),var(--jk-rim-lo) 22%,var(--jk-rim-lo) 45%,var(--jk-rim) 55%,var(--jk-rim-lo) 72%,var(--jk-rim-lo) 92%,var(--jk-rim));
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+.jk-glass::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;
+  background:radial-gradient(420px circle at 25% -10%,var(--jk-glow),transparent 46%),linear-gradient(180deg,rgba(255,255,255,.18),transparent 30%);
+  box-shadow:inset 0 1px 1px var(--jk-rim),inset 0 -10px 24px -18px rgba(0,0,0,.25)}
+html[data-theme="dark"] .jk-glass::after{background:radial-gradient(420px circle at 25% -10%,var(--jk-glow),transparent 46%),linear-gradient(180deg,rgba(255,255,255,.07),transparent 30%)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.jk-glass{background:var(--jk-surface)}}
+/* panel */
+.jk-panel{--r:var(--jk-r-panel);padding:var(--jk-s6);min-width:0}
+.jk-panel.warn::before{background:none}
+.jk-panel .jk-flag{position:absolute;left:var(--jk-s6);right:var(--jk-s6);top:0;height:2px;border-radius:2px;background:var(--jk-amb);z-index:3}
+@media (max-width:767px){.jk-panel{padding:var(--jk-s4)}.jk-panel .jk-flag{left:var(--jk-s4);right:var(--jk-s4)}}
+/* sheet: a <dialog class="jk-sheet jk-glass"> opened with sheet.js — bottom sheet on mobile, centred card on desktop */
+.jk-sheet{--r:var(--jk-r-xl);border:0;padding:var(--jk-s6);color:var(--jk-ink);width:min(560px,calc(100% - 24px));max-height:min(80vh,720px);overflow:auto}
+.jk-sheet::backdrop{background:rgba(0,0,0,.28);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.jk-sheet[open]{animation:jksheet var(--jk-d-fade) var(--jk-ease)}
+.jk-sheet .jk-x{position:absolute;right:var(--jk-s3);top:var(--jk-s3);z-index:4;width:36px;height:36px;border-radius:var(--jk-r-pill);border:0;background:var(--jk-tint-hi);color:var(--jk-ink);font:600 18px/1 var(--jk-font);cursor:pointer}
+@keyframes jksheet{from{opacity:0}to{opacity:1}}
+@media (max-width:767px){.jk-sheet{margin:auto auto 8px;width:calc(100% - 16px)}}
+@media (prefers-reduced-motion:reduce){.jk-sheet[open]{animation:none}}

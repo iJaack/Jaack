@@ -1,0 +1,165 @@
+/* jaack.me layout on top of the vendored design system.
+   Chrome uses the floating glass bar (the one glass panel). Content sits on the page. */
+
+nav.site-nav.jk-top {
+  width: min(calc(100% - 16px), 1120px);
+  flex-wrap: wrap;
+  row-gap: 2px;
+  padding: 6px 8px 6px 14px;
+  z-index: 40;
+}
+nav.site-nav .jk-mark { margin-right: 4px; }
+nav.site-nav .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav.site-nav.jk-top .nav-links a.jk-sw {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 6px 10px;
+  background: transparent;
+  color: var(--jk-ink-2);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+nav.site-nav .nav-links a.jk-sw:hover,
+nav.site-nav .nav-links a.jk-sw[aria-current="page"] {
+  color: var(--jk-ink);
+  background: var(--jk-tint-hi);
+}
+nav.site-nav .lang-switch { display: flex; gap: 0; margin-left: 4px; }
+nav.site-nav .lang-toggle {
+  min-width: 40px;
+  min-height: 40px;
+  padding: 6px 8px;
+  background: transparent;
+  border: 0;
+  border-radius: var(--jk-r-pill);
+  color: var(--jk-ink-2);
+  font-family: var(--jk-font);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+nav.site-nav .lang-toggle[aria-pressed="true"] {
+  color: var(--jk-ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.jk-thsw button { min-height: 40px; min-width: 40px; }
+
+.wrapper-normal.jk-page,
+.wrapper-large.jk-page,
+.wrapper-xwide.jk-page {
+  width: min(1120px, 100%);
+  max-width: 1120px;
+  height: auto;
+  margin: 0 auto;
+  padding: calc(var(--jk-topbar-h) + 12px) clamp(16px, 3vw, 28px) 0;
+}
+.wrapper-xwide.jk-page { max-width: 1240px; }
+
+@media (max-width: 760px) {
+  :root { --jk-topbar-h: 108px; }
+  nav.site-nav.jk-top { width: calc(100% - 12px); top: 8px; }
+  nav.site-nav .jk-mark { margin-right: auto; }
+  nav.site-nav .nav-links {
+    order: 5;
+    flex: 1 0 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+}
+
+h1,
+.header-home .hero-title,
+.page > .page-title,
+.post > .title,
+.project-page .page-title,
+.contact-section h2,
+.app-gallery h2,
+.wrapper-xwide .post > .title {
+  font-family: var(--jk-font);
+  font-weight: 750;
+  font-size: var(--jk-fs-title);
+  letter-spacing: var(--jk-track-title);
+  line-height: 1.08;
+}
+h2 { font-size: clamp(22px, 2vw, 28px); font-weight: 650; letter-spacing: -0.02em; }
+h3 { font-size: 18px; font-weight: 650; }
+p, li { line-height: 1.55; }
+.page-intro, .section-intro, .hero-sub { color: var(--jk-t2); font-size: var(--jk-fs-lede); }
+.work-meta, .post > .date, figcaption, .jk-note { color: var(--jk-t2); font-size: var(--jk-fs-sm); }
+
+.header-home { padding: 8px 0 20px; }
+.header-home .hero-title { margin: 0 0 12px; }
+.header-home .hero-bottom { gap: 16px; }
+.home-section { margin: 0 0 28px; }
+.page, .post, .home, .writing, .projects { margin-top: 8px; }
+.page > .page-title { margin: 0 0 12px; text-align: left; }
+.contact-section { padding-top: 16px; }
+.contact-section h2 { margin: 0 0 8px; }
+.footer-main { margin-top: 28px; padding: 16px 0 28px; }
+
+.home > .list > .item > .url,
+.writing > .list > .item > .url,
+.projects > .list > .item > .url { padding: 8px 0; }
+.writing-entry, .reading-pick, .work-entry { padding: 10px 0; }
+.project-feature .feature-copy { padding: 12px 0 16px; }
+.feature-lead h3, .project-feature h3 { font-size: clamp(22px, 2vw, 28px); }
+.app-gallery { padding: 16px 0; gap: 20px; }
+.app-gallery h2 { margin: 8px 0; }
+
+a, a:link { color: var(--jk-ink); }
+a:hover, a:focus, a:active { color: var(--jk-accent-text); }
+a.text-link, .contact-links a { color: var(--jk-accent-text); }
+
+.lost-container { padding: 24px 0 48px; }
+.lost-container .page-title,
+.lost-container h1 {
+  font-size: var(--jk-fs-big);
+  letter-spacing: var(--jk-track-big);
+  line-height: 0.9;
+  margin: 0;
+}
+.lost-note { color: var(--jk-t2); margin-top: 12px; }
+
+img, pre { border-radius: 0; }
+.app-preview img, .project-screen img { border-radius: 24px; }
+pre, code, tt {
+  background: var(--jk-surface-2);
+  color: var(--jk-ink);
+  border-color: var(--jk-hair);
+}
+blockquote {
+  border-left: 1px solid var(--jk-hair);
+  color: var(--jk-t2);
+  font-style: normal;
+  font-weight: 450;
+}
+
+/* Syntax colours that assume a light page stay readable when the theme is dark. */
+html[data-theme="dark"] .highlight { color: var(--jk-ink); }
+html[data-theme="dark"] .highlight .n,
+html[data-theme="dark"] .highlight .na,
+html[data-theme="dark"] .highlight .nf,
+html[data-theme="dark"] .highlight .nc,
+html[data-theme="dark"] .highlight .nx,
+html[data-theme="dark"] .highlight .s,
+html[data-theme="dark"] .highlight .s1,
+html[data-theme="dark"] .highlight .s2 { color: var(--jk-ink-2); }
+html[data-theme="dark"] .highlight .c,
+html[data-theme="dark"] .highlight .c1,
+html[data-theme="dark"] .highlight .cm,
+html[data-theme="dark"] .highlight .cp { color: var(--jk-t2); }
+
+.skip-link:focus { z-index: 50; }
+
+/* Old posts embed Instagram HTML with forced white cards. Keep them readable, don't restyle the embed internals. */
+.instagram-media { max-width: 100% !important; }
