@@ -1,0 +1,41 @@
+/* Moxie on the jaack design system. The top bar is the one glass panel.
+   Deck colours stay on the stripe, not on text. */
+body{background:transparent;color:var(--jk-ink);font-family:var(--jk-font)}
+h1,.version-title{font-size:var(--jk-fs-title);font-weight:750;letter-spacing:var(--jk-track-title);line-height:1.08;max-width:28ch}
+h2{font-size:clamp(22px,2vw,28px);font-weight:650;letter-spacing:-.02em;margin:0 0 12px}
+.home-intro h1{max-width:16ch}
+.layout{gap:40px;padding-top:calc(var(--jk-topbar-h) + 12px);padding-bottom:40px}
+.chapter{padding:20px 0}
+.intro{padding:4px 0 20px}
+header.jk-top.hub-header{position:fixed;top:calc(10px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);z-index:40;width:min(calc(100% - 16px),1120px);--r:var(--jk-r-pill);border-radius:var(--jk-r-pill);background:radial-gradient(130% 125% at 50% 45%,var(--jk-tint) 62%,var(--jk-tint-edge) 100%);border:0;min-height:0;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 10px 8px 18px}
+.hub-tools{display:contents}
+header.jk-top.hub-header .global-nav{display:flex;gap:2px;flex-wrap:wrap}
+header.jk-top.hub-header .global-nav a.jk-sw{display:inline-flex;min-height:44px;align-items:center;background:transparent;color:var(--jk-ink-2);font-size:13px;font-weight:600;padding:6px 10px;text-decoration:none}
+header.jk-top.hub-header .global-nav a.selected,header.jk-top.hub-header .global-nav a:hover{color:var(--jk-ink);background:var(--jk-tint-hi)}
+header.jk-top.hub-header .language a{min-height:44px;min-width:44px;color:var(--jk-ink-2);text-decoration:none}
+header.jk-top.hub-header .language a[aria-current=page]{color:var(--jk-ink)}
+.jk-thsw button{min-height:44px;min-width:44px}
+.note,.quantity,.verdict,select,.collection-filters input[type=search]{background:transparent;border-color:var(--jk-hair);border-radius:0}
+.note{border:0;border-left:2px solid var(--jk-accent);padding:4px 0 4px 12px;margin:12px 0}
+.backtop{background:var(--jk-bg);border-color:var(--jk-hair);color:var(--jk-ink)}
+.collection-totals{background:transparent;border:0;border-top:1px solid var(--jk-hair);border-bottom:1px solid var(--jk-hair);gap:0;border-radius:0}
+.collection-totals .stat{background:transparent}
+.collection-totals .stat+.stat{border-left:1px solid var(--jk-hair)}
+.collection-table-wrap{border:0;border-radius:0}
+.collection-table thead th{background:var(--jk-bg)}
+.card-dialog.jk-glass{color:var(--jk-ink)}
+.mobile-menu{background:var(--jk-bg)}
+@media(max-width:900px){
+  :root{--jk-topbar-h:112px;--header-height:112px}
+  header.jk-top.hub-header .global-nav{order:5;flex:1 0 100%;flex-wrap:nowrap;overflow-x:auto}
+  .layout{padding-top:calc(var(--jk-topbar-h) + 8px)}
+}
+@media(max-width:420px){
+  :root{--jk-topbar-h:132px;--header-height:132px}
+  header.jk-top.hub-header .jk-mark{flex:0 0 auto}
+  header.jk-top.hub-header .jk-thsw{order:2;margin-left:auto;flex:none}
+  header.jk-top.hub-header .hub-tools{display:flex;order:5;flex:1 0 100%;align-items:center;min-width:0;gap:2px}
+  header.jk-top.hub-header .hub-tools .global-nav{order:0;flex:1 1 auto;min-width:0;width:auto}
+  header.jk-top.hub-header .hub-tools .language{order:0;flex:0 0 auto}
+}
+@media(prefers-reduced-motion:reduce){.jk-bg i{animation:none}}

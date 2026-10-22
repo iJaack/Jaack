@@ -1,0 +1,16 @@
+/* nav pill — segmented control (chapter navigation at the bottom, or a period switch above a chart).
+   A sliding indicator follows the active item; it springs only when motion is allowed. */
+.jk-pill{position:relative;display:inline-flex;padding:4px;--r:var(--jk-r-pill)}
+.jk-pill button{position:relative;z-index:3;border:0;background:none;color:var(--jk-ink-2);font:500 14px/1 var(--jk-font);padding:11px 16px;border-radius:var(--jk-r-pill);cursor:pointer;white-space:nowrap;min-height:40px}
+.jk-pill button[aria-pressed="true"],.jk-pill button[aria-current="true"]{color:var(--jk-ink);font-weight:600}
+.jk-pill button:focus-visible{outline:2px solid var(--jk-accent);outline-offset:-2px}
+.jk-pill .jk-ind{position:absolute;z-index:2;top:4px;bottom:4px;left:0;width:0;border-radius:var(--jk-r-pill);background:var(--jk-tint-hi);box-shadow:0 1px 4px rgba(0,0,0,.12);transition:transform var(--jk-d-pill) var(--jk-spring),width var(--jk-d-pill) var(--jk-spring)}
+html[data-theme="dark"] .jk-pill .jk-ind{background:rgba(255,255,255,.12)}
+.jk-pill.flat{--r:var(--jk-r-pill);background:var(--jk-tint-hi);box-shadow:none}
+.jk-pill.flat::before,.jk-pill.flat::after{display:none}
+.jk-pill.flat button{padding:8px 12px;font-size:13px;min-height:32px}
+.jk-dock{position:fixed;z-index:45;left:50%;bottom:calc(16px + env(safe-area-inset-bottom));transform:translateX(-50%)}
+.jk-dock .jk-pill button{padding:12px 20px;font-size:15px}
+@media (min-width:1920px){.jk-dock{display:none}}   /* ultrawide shows every chapter at once */
+@media (prefers-reduced-motion:reduce){.jk-pill .jk-ind{transition:none}}
+html.jk-rm .jk-pill .jk-ind{transition:none}

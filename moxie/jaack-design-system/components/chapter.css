@@ -1,0 +1,34 @@
+/* editorial chapters — each page section is a chapter that answers one question:
+   numeral + eyebrow, the question as title, a one-line lede, then hero → figure → groups.
+   64 px between chapters on desktop (40 on mobile) with one hairline in the middle. */
+.jk-chs{display:grid;grid-template-columns:minmax(0,1fr);row-gap:calc(var(--jk-chapter-gap-m)/2)}
+.jk-ch{position:relative;min-width:0}
+.jk-ch+.jk-ch{border-top:1px solid var(--jk-hair);padding-top:calc(var(--jk-chapter-gap-m)/2)}
+.jk-ct{position:relative;z-index:0;padding-top:clamp(8px,1.5vw,24px)}
+.jk-ch+.jk-ch .jk-ct{padding-top:0}
+.jk-ct .jk-eb{font-size:var(--jk-fs-xs);font-weight:700;letter-spacing:var(--jk-track-label);text-transform:uppercase;color:var(--jk-t2)}
+.jk-ct .jk-eb b{color:var(--jk-ink)}
+.jk-ct .jk-q{margin:4px 0 0;font-size:var(--jk-fs-title);font-weight:750;letter-spacing:var(--jk-track-title);line-height:var(--jk-lh-tight)}
+.jk-ct .jk-lede{margin:var(--jk-s2) 0 0;font-size:var(--jk-fs-lede);line-height:var(--jk-lh);max-width:68ch;color:var(--jk-t2)}
+.jk-deco{position:absolute;z-index:-1;left:-.04em;top:-.08em;font-size:var(--jk-fs-deco);font-weight:800;letter-spacing:-.06em;line-height:1;color:var(--jk-ink);opacity:.06;pointer-events:none;user-select:none;text-shadow:none}
+.jk-cb{container-type:inline-size;min-width:0}
+.jk-group{margin-top:var(--jk-group-gap);container-type:inline-size;min-width:0}
+.jk-group>.jk-lab{margin-bottom:var(--jk-s2)}
+.jk-fig{margin:var(--jk-group-gap) 0 0;min-width:0}
+.jk-fig figcaption{font-size:var(--jk-fs-sm);font-weight:600;color:var(--jk-t2);margin:0 0 4px;line-height:1.4}
+/* two short groups side by side with a hairline between, when the chapter is wide enough */
+@container (min-width:700px){.jk-duo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:var(--jk-s6)}.jk-duo>*+*{border-left:1px solid var(--jk-hair);padding-left:var(--jk-s6)}}
+/* main + one glass side panel */
+@container (min-width:860px){.jk-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,36%);column-gap:var(--jk-s12);align-items:start}.jk-split>.jk-aside{position:sticky;top:88px}}
+.jk-aside{margin-top:var(--jk-group-gap)}
+@media (min-width:768px){.jk-chs{row-gap:calc(var(--jk-chapter-gap)/2)}.jk-ch+.jk-ch{padding-top:calc(var(--jk-chapter-gap)/2)}}
+/* title row: question left, lede beside it — no empty title column */
+@media (min-width:900px){.jk-ct{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:var(--jk-s12);align-items:end}.jk-ct .jk-eb{grid-column:1/-1}.jk-ct .jk-lede{margin:0 0 .3em;font-size:var(--jk-fs-body)}}
+/* ultrawide: chapters become columns so there are no wide empty strips */
+@media (min-width:1920px){.jk-chs{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:var(--jk-s16)}.jk-ch+.jk-ch{border-top:0;padding-top:0}
+  .jk-chs>.jk-ch:nth-child(2n){border-left:1px solid var(--jk-hair);padding-left:var(--jk-s8);margin-left:calc(-1*var(--jk-s8))}
+  .jk-chs>.jk-ch:nth-child(n+3){border-top:1px solid var(--jk-hair);padding-top:var(--jk-s8)}}
+@media (min-width:2560px){.jk-chs{grid-template-columns:repeat(3,minmax(0,1fr))}.jk-chs>.jk-ch:nth-child(2n){border-left:0;padding-left:0;margin-left:0}
+  .jk-chs>.jk-ch:nth-child(3n+2),.jk-chs>.jk-ch:nth-child(3n+3){border-left:1px solid var(--jk-hair);padding-left:var(--jk-s8);margin-left:calc(-1*var(--jk-s8))}
+  .jk-chs>.jk-ch:nth-child(n+3){border-top:0;padding-top:0}.jk-chs>.jk-ch:nth-child(n+4){border-top:1px solid var(--jk-hair);padding-top:var(--jk-s8)}}
+@media (max-width:767px){.jk-deco{font-size:88px}}

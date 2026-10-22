@@ -1,0 +1,9 @@
+/* stat row — open grid of 2 or 4 cells separated by vertical hairlines (no boxes).
+   Each cell: label, secondary number, comparison, optional small chart. Collapses with container queries. */
+.jk-stats{display:grid;grid-template-columns:repeat(var(--n,4),minmax(0,1fr))}
+.jk-stats.two{--n:2}
+.jk-cell{position:relative;min-width:0;padding:4px var(--jk-s6) var(--jk-s2);border-left:1px solid var(--jk-hair)}
+.jk-stats>.jk-cell:first-child{border-left:0;padding-left:0}
+.jk-cell .jk-viz{margin-top:var(--jk-s2)}.jk-cell .jk-viz svg{display:block;width:100%;height:auto}
+@container (max-width:880px){.jk-stats:not(.two){--n:2;row-gap:var(--jk-s6)}.jk-stats:not(.two)>.jk-cell:nth-child(3){border-left:0;padding-left:0}.jk-stats:not(.two)>.jk-cell:nth-child(n+3){border-top:1px solid var(--jk-hair);padding-top:var(--jk-s6)}}
+@container (max-width:440px){.jk-stats{--n:1!important;row-gap:var(--jk-s6)}.jk-stats>.jk-cell+.jk-cell{border-left:0;padding-left:0;border-top:1px solid var(--jk-hair);padding-top:var(--jk-s6)}.jk-cell{padding-right:0}}

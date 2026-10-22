@@ -1,0 +1,10 @@
+/* top bar — floating glass pill (the one permanent glass element). Content scrolls under it. */
+.jk-top{position:fixed;z-index:40;left:50%;top:calc(10px + env(safe-area-inset-top));transform:translateX(-50%);width:min(calc(100% - 20px),1180px);
+  display:flex;align-items:center;gap:var(--jk-s3);padding:8px 10px 8px 18px;--r:var(--jk-r-pill)}
+.jk-top .jk-mark{font-size:19px;font-weight:700;letter-spacing:-.02em;margin-right:auto;text-decoration:none;color:var(--jk-ink);white-space:nowrap}
+.jk-top .jk-mark .dot{color:var(--jk-accent)}            /* logo dot: brand mark, exempt from text contrast */
+.jk-top .jk-mark .dom{color:var(--jk-ink-2);font-weight:500}
+.jk-top .jk-tag{font-size:12px;color:var(--jk-ink-2);white-space:nowrap}
+.jk-top .jk-links{display:flex;gap:var(--jk-s2)}
+.jk-top a.jk-sw{font-size:13px;color:var(--jk-ink);text-decoration:none;padding:7px 12px;border-radius:var(--jk-r-pill);background:var(--jk-tint-hi);white-space:nowrap}
+@media (max-width:640px){.jk-top .jk-tag{display:none}.jk-top .jk-links .jk-sw:not(.keep){display:none}}

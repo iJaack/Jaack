@@ -1,0 +1,14 @@
+/* hero number + comparison — exactly one big number per chapter, always with a comparison beneath it
+   (target, yesterday, average, previous period). An optional secondary number sits beside it after a hairline. */
+.jk-hero{margin-top:var(--jk-hero-gap);container-type:inline-size}
+.jk-hero>.jk-hc{display:grid;grid-template-columns:minmax(0,1fr);row-gap:var(--jk-s6)}
+.jk-hero .jk-hm .jk-cmp{max-width:42ch}
+.jk-hero .jk-sec{padding-top:var(--jk-s4);border-top:1px solid var(--jk-hair);min-width:0}
+.jk-sec .jk-mid{display:flex;align-items:center}
+.jk-sec .jk-mark{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:14px;flex:none;background:var(--jk-t3)} /* non-text sign marker: colour never carries meaning alone */
+.jk-sec .jk-mark.neg{background:var(--jk-c-blue)}.jk-sec .jk-mark.pos{background:var(--jk-c-orange)}
+.jk-sec .jk-cmp{max-width:44ch}
+@container (min-width:820px){.jk-hero>.jk-hc{grid-template-columns:auto minmax(260px,1fr);column-gap:var(--jk-s8);align-items:end}.jk-hero .jk-sec{padding:0 0 4px var(--jk-s8);border-top:0;border-left:1px solid var(--jk-hair)}}
+/* chips for deltas next to a comparison */
+.jk-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:var(--jk-r-pill);font-size:var(--jk-fs-xs);font-weight:600;background:var(--jk-tint-hi);color:var(--jk-ink);white-space:nowrap;text-shadow:none;vertical-align:1px}
+.jk-chip.ok{color:var(--jk-ok)}.jk-chip.fail{color:var(--jk-fail)}

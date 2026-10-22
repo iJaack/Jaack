@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:,">
+<title>jaack design system — demo (contenuti segnaposto)</title>
+<!-- 1) theme first, blocking, so the theme is set before first paint (CSP: script-src 'self', no inline) -->
+<script src="theme.js"></script>
+<link rel="stylesheet" href="jaack.css">
+<script src="jaack.js" defer></script>
+<script src="demo.js" defer></script>
+</head>
+<body>
+<div class="jk-bg" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<header class="jk-top jk-glass">
+  <a class="jk-mark" href="#">jaack<span class="dot">.</span><span class="dom">me</span></a>
+  <span class="jk-tag">Design system · demo</span>
+  <nav class="jk-links" aria-label="Collegamenti"><a class="jk-sw keep" href="#c-1">Componenti</a><a class="jk-sw" href="README.md">Guida</a></nav>
+  <span data-jk-theme-switch></span>
+</header>
+
+<main class="jk-page">
+  <p class="jk-note" style="margin:0 0 8px"><span class="jk-placeholder">Esempio</span> Tutti i numeri, le etichette e i grafici in questa pagina sono <b>segnaposto</b> generati a caso per mostrare i componenti. Non sono dati reali.</p>
+  <div class="jk-chs">
+
+    <!-- CHAPTER 1 — hero + secondary, chart with tooltip, row list, duo, alerts -->
+    <section class="jk-ch" id="c-1" aria-labelledby="t-1">
+      <header class="jk-ct"><span class="jk-deco" aria-hidden="true">01</span>
+        <div class="jk-eb"><b>01</b> Oggi · esempio</div>
+        <h2 class="jk-q" id="t-1">Come sta andando oggi?</h2>
+        <p class="jk-lede">Segnaposto: 1.284 visite su un obiettivo di 2.000 · ieri 1.180.</p>
+      </header>
+      <div class="jk-cb">
+        <div class="jk-hero jk-fx"><div class="jk-hc">
+          <div class="jk-hm" data-jk-tip="Esempio di numero principale: uno solo per capitolo, sempre con un confronto.">
+            <div class="jk-lab">Visite oggi (segnaposto)</div>
+            <div class="jk-big">1.284<span class="jk-u">visite</span></div>
+            <p class="jk-cmp">obiettivo <b>2.000</b> · ieri <b>1.180</b> · media 30 gg <b>1.120</b></p>
+          </div>
+          <div class="jk-sec">
+            <div class="jk-lab">Rispetto all’obiettivo · finora</div>
+            <div class="jk-mid"><i class="jk-mark neg" aria-hidden="true"></i>Sotto di 716<span class="jk-u">visite</span></div>
+            <p class="jk-cmp">ieri <b>−820</b> · media 7 gg <b>−640</b> su 6 giorni completi</p>
+          </div>
+        </div></div>
+        <figure class="jk-fig jk-fx"><figcaption>Visite, ultimi 30 giorni (segnaposto) · barra tratteggiata = oggi, parziale</figcaption><div id="demo-bars"></div></figure>
+        <div class="jk-group jk-fx"><h3 class="jk-lab">Pubblicazioni di oggi (segnaposto)</h3>
+          <ul class="jk-rows">
+            <li><span class="t">08:40</span><span class="m jk-opt">Nota</span><span>Titolo di esempio numero uno</span><span class="r">312</span><span class="p jk-opt">letture</span></li>
+            <li><span class="t">11:15</span><span class="m jk-opt">Articolo</span><span>Un titolo più lungo per mostrare come il testo viene troncato quando non c’è spazio</span><span class="r">604</span><span class="p jk-opt">letture</span></li>
+            <li><span class="t">15:02</span><span class="m jk-opt">Link</span><span>Titolo di esempio numero tre</span><span class="r">368</span><span class="p jk-opt">letture</span></li>
+            <li class="tot"><span></span><span class="jk-opt"></span><span>3 voci</span><span class="r">1.284</span><span class="p jk-opt"></span></li>
+          </ul>
+        </div>
+        <div class="jk-duo">
+          <div class="jk-group jk-fx"><h3 class="jk-lab">Ultimi 7 giorni (segnaposto)</h3>
+            <ul class="jk-rows" style="--jk-cols:96px minmax(0,1fr) auto">
+              <li><span class="t">lun</span><span>Settimana tipo</span><span class="r">1.020</span></li>
+              <li><span class="t">mar</span><span>Settimana tipo</span><span class="r">1.140</span></li>
+              <li><span class="t">mer</span><span>Settimana tipo</span><span class="r">980</span></li>
+              <li><span class="t">gio</span><span>Settimana tipo</span><span class="r">1.310</span></li>
+            </ul>
+          </div>
+          <div class="jk-group jk-fx"><h3 class="jk-lab">Indicatori (segnaposto)</h3>
+            <div class="jk-stats two">
+              <div class="jk-cell"><div class="jk-lab">Nuovi iscritti</div><div class="jk-mid">24</div><p class="jk-cmp">media <b>18</b> <span class="jk-chip ok">▲ 6</span></p><div class="jk-viz" data-spark></div></div>
+              <div class="jk-cell"><div class="jk-lab">Tempo di lettura</div><div class="jk-mid">3:40<span class="jk-u">min</span></div><p class="jk-cmp">media <b>3:10</b></p><div class="jk-viz" data-spark></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="jk-group jk-fx"><h3 class="jk-lab">Avvisi (segnaposto)</h3>
+          <ul class="jk-rows jk-alerts">
+            <li><span class="warn">Attenzione</span><span>Esempio: una fonte non si aggiorna da 3 giorni.</span></li>
+            <li><span class="info">Nota</span><span>Esempio: la stima diventa affidabile con più misure.</span></li>
+            <li><span class="info">Nota</span><span>Esempio: oggi è parziale, i totali si chiudono a mezzanotte.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 2 — hero beside the one glass panel, 4-cell stat row -->
+    <section class="jk-ch" id="c-2" aria-labelledby="t-2">
+      <header class="jk-ct"><span class="jk-deco" aria-hidden="true">02</span>
+        <div class="jk-eb"><b>02</b> Settimana · esempio</div>
+        <h2 class="jk-q" id="t-2">Cosa è cambiato?</h2>
+        <p class="jk-lede">Segnaposto: settimana in linea con la media, picco giovedì.</p>
+      </header>
+      <div class="jk-cb">
+        <div class="jk-split">
+          <div>
+            <div class="jk-hero jk-fx"><div class="jk-hc"><div class="jk-hm">
+              <div class="jk-lab">Visite in 7 giorni (segnaposto)</div>
+              <div class="jk-big">8.412</div>
+              <p class="jk-cmp">settimana scorsa <b>7.960</b> <span class="jk-chip ok">▲ 5,7 %</span></p>
+            </div></div></div>
+            <div class="jk-group jk-fx"><h3 class="jk-lab">Dettaglio (segnaposto)</h3>
+              <div class="jk-stats">
+                <div class="jk-cell"><div class="jk-lab">Voce A</div><div class="jk-mid">42<span class="jk-u">%</span></div><p class="jk-cmp">media <b>38 %</b></p></div>
+                <div class="jk-cell"><div class="jk-lab">Voce B</div><div class="jk-mid">7,5<span class="jk-u">h</span></div><p class="jk-cmp">media <b>7,1 h</b></p></div>
+                <div class="jk-cell"><div class="jk-lab">Voce C</div><div class="jk-mid">310</div><p class="jk-cmp">ieri <b>295</b></p></div>
+                <div class="jk-cell"><div class="jk-lab">Voce D</div><div class="jk-mid"><span class="jk-na">nessun dato</span></div><p class="jk-cmp">ultimo valore 3 giorni fa</p></div>
+              </div>
+            </div>
+          </div>
+          <aside class="jk-aside jk-glass jk-panel jk-fx" aria-labelledby="p-t">
+            <div class="jk-lab" id="p-t">Stato (segnaposto)</div>
+            <div class="jk-mid" style="color:var(--jk-info)">Stabile</div>
+            <p class="jk-cmp">rispetto al mese scorso <b>+2 %</b> · l’unico pannello in vetro di questa schermata</p>
+            <p class="jk-note">Il vetro va guadagnato: un solo blocco per schermata, oltre alla barra in alto.</p>
+            <button type="button" class="jk-chip" data-jk-sheet="#sheet-1">Apri il foglio di esempio</button>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHAPTER 3 — line chart with period pill -->
+    <section class="jk-ch" id="c-3" aria-labelledby="t-3">
+      <header class="jk-ct"><span class="jk-deco" aria-hidden="true">03</span>
+        <div class="jk-eb"><b>03</b> Tendenza · esempio</div>
+        <h2 class="jk-q" id="t-3">Dove sta andando?</h2>
+        <p class="jk-lede">Segnaposto: andamento in lieve crescita negli ultimi 90 giorni.</p>
+      </header>
+      <div class="jk-cb">
+        <div class="jk-hero jk-fx"><div class="jk-hc"><div class="jk-hm">
+          <div class="jk-lab">Indice (segnaposto)</div>
+          <div class="jk-big">52,4</div>
+          <p class="jk-cmp">90 giorni fa <b>50,0</b> · <b>+2,4</b> <button type="button" class="jk-chip" data-jk-tip="Esempio di tooltip: spiega in una frase come è calcolato il numero.">Come si calcola?</button></p>
+        </div></div></div>
+        <div class="jk-pill flat jk-fx" id="demo-period" role="group" aria-label="Periodo" style="margin-top:16px">
+          <button type="button" aria-pressed="false" data-v="30">30 giorni</button><button type="button" aria-pressed="true" data-v="90">90 giorni</button>
+        </div>
+        <figure class="jk-fig jk-fx"><figcaption>Indice di esempio (segnaposto) · passa sopra al grafico per i valori</figcaption><div id="demo-line" data-p="90"></div></figure>
+      </div>
+    </section>
+  </div>
+  <footer class="jk-end"><p>Demo del design system jaack.me · contenuti segnaposto</p></footer>
+</main>
+
+<nav class="jk-dock" aria-label="Capitoli"><div class="jk-pill jk-glass" id="demo-nav" role="group" aria-label="Capitoli">
+  <button type="button" aria-pressed="true" data-v="c-1">Oggi</button><button type="button" aria-pressed="false" data-v="c-2">Settimana</button><button type="button" aria-pressed="false" data-v="c-3">Tendenza</button>
+</div></nav>
+
+<dialog class="jk-sheet jk-glass" id="sheet-1" aria-labelledby="s-t">
+  <button type="button" class="jk-x" aria-label="Chiudi">×</button>
+  <div class="jk-lab" id="s-t">Foglio di esempio</div>
+  <div class="jk-mid">Dettaglio</div>
+  <p class="jk-cmp">Contenuto segnaposto. Esc, la × o un clic fuori chiudono il foglio.</p>
+</dialog>
+</body>
+</html>

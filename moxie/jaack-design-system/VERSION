@@ -1,0 +1,16 @@
+name: jaack-design-system
+packaged: 2026-10-22
+source: jaack-design-system.zip (no upstream semver in the package)
+zip_sha256: 392f8949b5a5f7c7c5e459fcb431ed536fe6aaa90513e7e179cd49e2c6f5094a
+files:
+  jaack.css: 851ddfee589baec6b338dc2316835fc9315cdb5333dd5d5539dcaa0217273aba
+  jaack.js: ae7b50a6e19ac602101b0a8cf2094aa5466efabff2a952bf7785832c9062a622
+  theme.js: dac5df08bd80274badb4b58b603b7153d2842387dc134bed060c1ab8a998666a
+  tokens.css: 2dce38b92a02aa90bbf0c8b7c54b81fd80638bee5bc62262363f3811a6aece3f
+note: >
+  Copy for the moxie hub. Vercel’s project root is moxie/, so these files
+  live at moxie/jaack-design-system/ (the repo gitignore ignores vendor/).
+  Same zip sha as assets/jaack-design-system on the jaack.me site.
+  screenshots/ are omitted here; they ship with the jaack.me copy.
+  Do not edit jaack.css, jaack.js, theme.js or tokens.css by hand.
+  theme.js loads as a blocking script in <head>. Demo content is placeholder only.
