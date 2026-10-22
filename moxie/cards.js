@@ -15,7 +15,7 @@ function picture(face,eager=false){
  img.addEventListener('error',()=>{img.hidden=true;fallback.hidden=false;});wrap.append(img,fallback);return wrap;
 }
 // One accessible lightbox per page, shared by all card lists.
-const dialog=node('dialog','card-dialog');dialog.setAttribute('aria-labelledby','card-dialog-title');
+const dialog=node('dialog','card-dialog jk-glass');dialog.setAttribute('aria-labelledby','card-dialog-title');
 const dialogHeader=node('div','card-dialog-header');const title=node('h2',null,'');title.id='card-dialog-title';
 const closeButton=button('×','card-dialog-close',()=>dialog.close());closeButton.setAttribute('aria-label',text.close);dialogHeader.append(title,closeButton);
 const imageArea=node('div','card-dialog-image');const caption=node('p','card-dialog-caption');caption.setAttribute('aria-live','polite');

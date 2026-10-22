@@ -41,5 +41,5 @@ class GuideTests(unittest.TestCase):
    if link.startswith('#'):self.assertIn(link[1:],page.ids)
    if link.startswith('/'):self.assertTrue((P/'dist'/link[1:]).exists())
   self.assertNotRegex(text,r'/Users/|API_KEY|access_token|purchases\.json|collection\.csv')
-  self.assertEqual({x.name for x in (P/'dist').iterdir() if x.is_file()},{'index.html','style.css','app.js','cards.js','moxie-collection.js','collection.json','card-images.json','robots.txt','sitemap.xml','vercel.json','favicon.svg','mono-green-landfall-galactus-11-settembre-2026.pdf','mono-green-landfall-galactus-11-september-2026-en.pdf'})
+  self.assertEqual({x.name for x in (P/'dist').iterdir() if x.is_file()},{'index.html','style.css','app.js','cards.js','moxie-collection.js','collection.json','card-images.json','robots.txt','sitemap.xml','vercel.json','favicon.svg','theme.js','jaack.css','jaack.js','mono-green-landfall-galactus-11-settembre-2026.pdf','mono-green-landfall-galactus-11-september-2026-en.pdf'})
 if __name__=='__main__':unittest.main()

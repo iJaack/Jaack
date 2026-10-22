@@ -50,14 +50,14 @@ def shell(l,path,title,body,nav=None,section='',deck_id=None,paths=None):
  page_theme=('deck-theme '+theme(DECKS[deck_id])) if deck_id else ''
  other='en' if l=='it' else 'it';canonical='https://moxie.jaack.me'+route(l,paths[l])
  langs=''.join(f'<a data-language href="{route(ll,paths[ll])}" lang="{ll}" hreflang="{ll}"'+(' aria-current="page"' if ll==l else '')+f'>{ll.upper()}</a>' for ll in ['it','en'])
- globalnav=''.join(a(route(l,lpath(k,l)),t(k,l),'selected' if section==k else '') for k in ['decks','journal','guides','collection'])
+ globalnav=''.join(a(route(l,lpath(k,l)),t(k,l),'jk-sw keep selected' if section==k else 'jk-sw keep') for k in ['decks','journal','guides','collection'])
  toc=''
  if nav:
   links='<nav aria-label="'+t('index',l)+'">'+''.join(a('#'+key,esc(label)) for key,label in nav)+'</nav>'
   toc=f'<details class="mobile-menu"><summary>{t("index",l)}</summary>{links}</details>'
   left=f'<aside class="sidebar"><p>{t("guide_nav",l)}</p>{links}</aside>'
  else:left=''
- document=f'''<!doctype html><html lang="{l}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0c0c0c"><meta name="description" content="{esc(title,quote=True)} - Moxie"><title>{esc(title)} | Moxie</title><link rel="canonical" href="{canonical}"><link rel="alternate" hreflang="it" href="https://moxie.jaack.me{route('it',paths['it'])}"><link rel="alternate" hreflang="en" href="https://moxie.jaack.me{route('en',paths['en'])}"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script><script src="/cards.js" defer></script>{'<script src="/moxie-collection.js" defer></script>' if section=='collection' else ''}</head><body id="top" class="{page_theme}" data-lang="{l}" data-page="{esc(path or 'home',quote=True)}"><a class="skip" href="#content">{t('skip',l)}</a><header class="hub-header"><div class="header-inner"><a class="brand" href="{route(l)}">moxie<span aria-hidden="true">.</span></a><nav class="global-nav" aria-label="Moxie">{globalnav}</nav><nav class="language" aria-label="{t('language',l)}">{langs}</nav></div></header>{toc}<div class="layout {'with-toc' if nav else 'hub-layout'}">{left}<main id="content">{body}<footer><p>{'Aggiornato il' if l=='it' else 'Updated'} {dates(H['updated'],l)} · IT | EN</p><p>{t('footer',l)}</p><p>{t('disclaimer',l)}</p></footer></main></div><a class="backtop" href="#top" aria-label="{t('top',l)}">↑</a></body></html>'''
+ document=f'''<!doctype html><html lang="{l}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="color-scheme" content="light dark"><meta name="theme-color" content="#eef1f4"><meta name="description" content="{esc(title,quote=True)} - Moxie"><title>{esc(title)} | Moxie</title><link rel="canonical" href="{canonical}"><link rel="alternate" hreflang="it" href="https://moxie.jaack.me{route('it',paths['it'])}"><link rel="alternate" hreflang="en" href="https://moxie.jaack.me{route('en',paths['en'])}"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><script src="/theme.js" data-light-from="7" data-light-to="19" data-key="jaack.theme"></script><link rel="stylesheet" href="/jaack.css"><link rel="stylesheet" href="/style.css"><script src="/jaack.js" defer></script><script src="/app.js" defer></script><script src="/cards.js" defer></script>{'<script src="/moxie-collection.js" defer></script>' if section=='collection' else ''}</head><body id="top" class="{page_theme}" data-lang="{l}" data-page="{esc(path or 'home',quote=True)}"><div class="jk-bg" aria-hidden="true"><i></i><i></i><i></i></div><a class="skip" href="#content">{t('skip',l)}</a><header class="jk-top jk-glass hub-header"><a class="jk-mark brand" href="{route(l)}">moxie<span class="dot" aria-hidden="true">.</span></a><div class="hub-tools"><nav class="jk-links global-nav" aria-label="Moxie">{globalnav}</nav><nav class="language" aria-label="{t('language',l)}">{langs}</nav></div><span data-jk-theme-switch></span></header>{toc}<div class="layout {'with-toc' if nav else 'hub-layout'}">{left}<main id="content">{body}<footer><p>{'Aggiornato il' if l=='it' else 'Updated'} {dates(H['updated'],l)} · IT | EN</p><p>{t('footer',l)}</p><p>{t('disclaimer',l)}</p></footer></main></div><a class="backtop" href="#top" aria-label="{t('top',l)}">↑</a></body></html>'''
  out=DIST/l/path/'index.html' if path else DIST/l/'index.html';out.parent.mkdir(parents=True,exist_ok=True);out.write_text(document);ROUTES[route(l,path)]=out
  return document
 
@@ -211,14 +211,15 @@ for l in ['it','en']:
 
 (DIST/'versions').mkdir(exist_ok=True)
 for v in VERS.values():(DIST/'versions'/(v['id']+'.txt')).write_text('Deck\n'+''.join(f'{q} {n}\n' for n,q in v['mainboard'].items())+'\nSideboard\n'+''.join(f'{q} {n}\n' for n,q in v['sideboard'].items()))
-(DIST/'favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#0c0c0c"/><text x="10" y="45" font-family="Arial,sans-serif" font-size="44" font-weight="700" fill="#f0ede8">m<tspan fill="#e8c547">.</tspan></text></svg>')
+(DIST/'favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#101418"/><text x="10" y="45" font-family="Arial,sans-serif" font-size="44" font-weight="700" fill="#e7edf2">m<tspan fill="#8eb7e0">.</tspan></text></svg>')
 palette={'W':'#e5d8af','U':'#80b5e8','B':'#b6b2c4','R':'#ed887c','G':'#7fc49a','C':'#bec3c7'}
 themes=[]
 for colors in sorted({tuple(d['colors']) for d in H['decks']}):
  assert colors and all(c in palette for c in colors)
  shades=[palette[c] for c in colors];stripe=shades[0] if len(shades)==1 else 'linear-gradient(90deg,'+','.join(f'{color} {i*100/len(shades):g}% {(i+1)*100/len(shades):g}%' for i,color in enumerate(shades))+')'
  themes.append('.theme-'+''.join(colors).lower()+'{--accent:'+shades[0]+';--deck-stripe:'+stripe+'}')
-(DIST/'style.css').write_text((P/'style.css').read_text()+(P/'hub.css').read_text()+(P/'cards.css').read_text()+(P/'moxie-collection.css').read_text()+'\n'+'\n'.join(themes))
+(DIST/'style.css').write_text((P/'style.css').read_text()+(P/'hub.css').read_text()+(P/'cards.css').read_text()+(P/'moxie-collection.css').read_text()+(P/'jaack-moxie.css').read_text()+'\n'+'\n'.join(themes))
+for name in ('theme.js','jaack.css','jaack.js'):shutil.copy2(P/'jaack-design-system'/name,DIST/name)
 (DIST/'app.js').write_text((P/'app.js').read_text())
 (DIST/'cards.js').write_text((P/'cards.js').read_text())
 (DIST/'moxie-collection.js').write_text((P/'moxie-collection.js').read_text())

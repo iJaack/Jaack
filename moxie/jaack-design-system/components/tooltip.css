@@ -1,0 +1,8 @@
+/* tooltip — small glass label that follows the pointer over a chart (scrubber) or explains an element on hover/focus. */
+.jk-tipwrap{position:relative}
+.jk-tip{position:absolute;left:0;top:0;--r:var(--jk-r-s);padding:8px 12px;font-size:var(--jk-fs-sm);line-height:1.35;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity var(--jk-d-fast);z-index:30;color:var(--jk-ink);text-shadow:none;max-width:min(320px,90vw)}
+.jk-tip.on{opacity:1}.jk-tip b{font-weight:700}.jk-tip .d{color:var(--jk-ink-2);font-size:12px}
+.jk-tip.wrap{white-space:normal}
+.jk-hair{position:absolute;top:8px;bottom:26px;left:0;width:1px;background:var(--jk-ink);opacity:0;pointer-events:none;transition:opacity var(--jk-d-fast)}
+.jk-hair.on{opacity:.35}
+@media (prefers-reduced-motion:reduce){.jk-tip,.jk-hair{transition:none}}

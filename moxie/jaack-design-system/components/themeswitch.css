@@ -1,0 +1,7 @@
+/* theme switch — Auto / Chiaro / Scuro (mounted by theme.js: JaackTheme.mount(hostElement)) */
+.jk-thsw{display:inline-flex;gap:2px;padding:2px;border-radius:var(--jk-r-pill);background:var(--jk-tint-hi);flex:none}
+.jk-thsw button{font:600 12px/1 var(--jk-font);color:var(--jk-ink-2);background:none;border:0;border-radius:var(--jk-r-pill);padding:6px 9px;cursor:pointer;min-height:28px}
+.jk-thsw button[aria-pressed="true"]{background:var(--jk-bg);color:var(--jk-ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.jk-thsw button:focus-visible{outline:2px solid var(--jk-accent);outline-offset:1px}
+.jk-thsw .i{display:none}
+@media (max-width:760px){.jk-thsw .i{display:inline}.jk-thsw .l{display:none}.jk-thsw button{padding:6px 8px;font-size:13px}}
