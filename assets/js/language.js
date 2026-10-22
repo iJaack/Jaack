@@ -29,6 +29,15 @@
     }
     paintChrome();
     if (typeof window.addEventListener === 'function') window.addEventListener('jaacktheme', paintChrome);
+    var bar = document.querySelector('nav.site-nav');
+    if (bar && typeof ResizeObserver === 'function') {
+      var fitBar = function () {
+        var box = bar.getBoundingClientRect();
+        document.documentElement.style.setProperty('--jk-topbar-h', Math.ceil(box.top + box.height) + 'px');
+      };
+      fitBar();
+      new ResizeObserver(fitBar).observe(bar);
+    }
   }
   window.toggleGlobalLang = function (lang) {
     lang = setLang(lang);

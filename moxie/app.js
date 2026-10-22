@@ -24,3 +24,11 @@ function paintThemeColor(){
 }
 paintThemeColor();
 window.addEventListener('jaacktheme',paintThemeColor);
+(function(){
+  const bar=document.querySelector('header.hub-header');
+  if(!bar||typeof ResizeObserver!=='function')return;
+  const root=document.documentElement;
+  const fit=()=>{const box=bar.getBoundingClientRect();const h=Math.ceil(box.top+box.height);root.style.setProperty('--jk-topbar-h',h+'px');root.style.setProperty('--header-height',h+'px');};
+  fit();
+  new ResizeObserver(fit).observe(bar);
+})();

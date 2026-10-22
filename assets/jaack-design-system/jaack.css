@@ -156,20 +156,22 @@ html[data-theme="dark"] .jk-glass::after{background:radial-gradient(420px circle
 /* top bar — floating glass pill (the one permanent glass element). Content scrolls under it. */
 .jk-top{position:fixed;z-index:40;left:50%;top:calc(10px + env(safe-area-inset-top));transform:translateX(-50%);width:min(calc(100% - 20px),1180px);
   display:flex;align-items:center;gap:var(--jk-s3);padding:8px 10px 8px 18px;--r:var(--jk-r-pill)}
-.jk-top .jk-mark{font-size:19px;font-weight:700;letter-spacing:-.02em;margin-right:auto;text-decoration:none;color:var(--jk-ink);white-space:nowrap}
+.jk-top .jk-mark{font-size:19px;font-weight:700;letter-spacing:-.02em;margin-right:auto;text-decoration:none;color:var(--jk-ink);white-space:nowrap;min-width:0;flex-shrink:1}
 .jk-top .jk-mark .dot{color:var(--jk-accent)}            /* logo dot: brand mark, exempt from text contrast */
 .jk-top .jk-mark .dom{color:var(--jk-ink-2);font-weight:500}
 .jk-top .jk-tag{font-size:12px;color:var(--jk-ink-2);white-space:nowrap}
-.jk-top .jk-links{display:flex;gap:var(--jk-s2)}
+.jk-top .jk-links{display:flex;gap:var(--jk-s2);min-width:0;flex-shrink:1}
 .jk-top a.jk-sw{font-size:13px;color:var(--jk-ink);text-decoration:none;padding:7px 12px;border-radius:var(--jk-r-pill);background:var(--jk-tint-hi);white-space:nowrap}
-@media (max-width:640px){.jk-top .jk-tag{display:none}.jk-top .jk-links .jk-sw:not(.keep){display:none}}
+@media (max-width:640px){.jk-top{gap:4px}.jk-top>*{min-width:0;flex-shrink:1}.jk-top .jk-tag{display:none}.jk-top .jk-links .jk-sw:not(.keep){display:none}}
 /* theme switch — Auto / Chiaro / Scuro (mounted by theme.js: JaackTheme.mount(hostElement)) */
-.jk-thsw{display:inline-flex;gap:2px;padding:2px;border-radius:var(--jk-r-pill);background:var(--jk-tint-hi);flex:none}
-.jk-thsw button{font:600 12px/1 var(--jk-font);color:var(--jk-ink-2);background:none;border:0;border-radius:var(--jk-r-pill);padding:6px 9px;cursor:pointer;min-height:28px}
+.jk-thsw{display:inline-flex;gap:2px;padding:2px;border-radius:var(--jk-r-pill);background:var(--jk-tint-hi);flex:none;min-width:0;max-width:100%}
+.jk-thsw button{display:inline-flex;align-items:center;justify-content:center;font:600 12px/1 var(--jk-font);color:var(--jk-ink-2);background:none;border:0;border-radius:var(--jk-r-pill);padding:6px 9px;cursor:pointer;min-height:28px;min-width:0;flex:1 1 auto}
 .jk-thsw button[aria-pressed="true"]{background:var(--jk-bg);color:var(--jk-ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
 .jk-thsw button:focus-visible{outline:2px solid var(--jk-accent);outline-offset:1px}
 .jk-thsw .i{display:none}
-@media (max-width:760px){.jk-thsw .i{display:inline}.jk-thsw .l{display:none}.jk-thsw button{padding:6px 8px;font-size:13px}}
+[data-jk-theme-switch]{display:inline-flex;flex:none;min-width:0;max-width:100%}
+[data-jk-theme-switch]:empty{min-width:148px;min-height:32px}
+@media (max-width:760px){.jk-thsw{flex-shrink:1}.jk-thsw .i{display:inline}.jk-thsw .l{display:none}.jk-thsw button{padding:0;font-size:13px;min-width:36px;min-height:36px;flex:0 0 36px}[data-jk-theme-switch]{flex-shrink:1}[data-jk-theme-switch]:empty{min-width:116px;min-height:36px}}
 /* editorial chapters — each page section is a chapter that answers one question:
    numeral + eyebrow, the question as title, a one-line lede, then hero → figure → groups.
    64 px between chapters on desktop (40 on mobile) with one hairline in the middle. */
