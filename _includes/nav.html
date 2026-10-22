@@ -1,5 +1,6 @@
 <nav class="site-nav jk-top jk-glass" aria-label="Main">
   <a class="jk-mark site-wordmark" href="{{ '/' | relative_url }}" aria-label="Jaack home">jaack<span class="dot" aria-hidden="true">.</span><span class="dom">me</span></a>
+  <div class="nav-row">
   <ul class="nav-links jk-links">
     {% for link in site.data.ui_text.nav_links %}
     <li><a class="jk-sw keep" href="{{ link.url | relative_url }}"{% if page.url contains link.url %} aria-current="page"{% endif %}><span class="lang-en" lang="en">{{ site.data.ui_text.nav[link.key].en }}</span><span class="lang-it" lang="it">{{ site.data.ui_text.nav[link.key].it }}</span></a></li>
@@ -10,6 +11,7 @@
   <div class="lang-switch" role="group" aria-label="Language / Lingua">
     <button type="button" class="lang-toggle" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
     <button type="button" class="lang-toggle" data-lang="it" lang="it" aria-label="Italiano" aria-pressed="false">IT</button>
+  </div>
   </div>
   <span data-jk-theme-switch></span>
 </nav>
