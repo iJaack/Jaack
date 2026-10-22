@@ -1,14 +1,15 @@
-<nav class="site-nav" aria-label="Main">
-  <a class="site-wordmark" href="{{ '/' | relative_url }}" aria-label="Jaack home">jaack<span aria-hidden="true">.</span></a>
-  <ul class="nav-links">
+<nav class="site-nav jk-top jk-glass" aria-label="Main">
+  <a class="jk-mark site-wordmark" href="{{ '/' | relative_url }}" aria-label="Jaack home">jaack<span class="dot" aria-hidden="true">.</span><span class="dom">me</span></a>
+  <ul class="nav-links jk-links">
     {% for link in site.data.ui_text.nav_links %}
-    <li><a href="{{ link.url | relative_url }}"{% if page.url contains link.url %} aria-current="page"{% endif %}><span class="lang-en" lang="en">{{ site.data.ui_text.nav[link.key].en }}</span><span class="lang-it" lang="it">{{ site.data.ui_text.nav[link.key].it }}</span></a></li>
+    <li><a class="jk-sw keep" href="{{ link.url | relative_url }}"{% if page.url contains link.url %} aria-current="page"{% endif %}><span class="lang-en" lang="en">{{ site.data.ui_text.nav[link.key].en }}</span><span class="lang-it" lang="it">{{ site.data.ui_text.nav[link.key].it }}</span></a></li>
     {% endfor %}
-    <li><a href="{{ '/#contact' | relative_url }}"><span class="lang-en" lang="en">Contact</span><span class="lang-it" lang="it">Contatti</span></a></li>
-    <li><a href="{{ site.booking_url }}"><span class="lang-en" lang="en">Book a call</span><span class="lang-it" lang="it">Prenota una call</span></a></li>
+    <li><a class="jk-sw keep" href="{{ '/#contact' | relative_url }}"><span class="lang-en" lang="en">Contact</span><span class="lang-it" lang="it">Contatti</span></a></li>
+    <li><a class="jk-sw keep" href="{{ site.booking_url }}"><span class="lang-en" lang="en">Book a call</span><span class="lang-it" lang="it">Prenota una call</span></a></li>
   </ul>
   <div class="lang-switch" role="group" aria-label="Language / Lingua">
     <button type="button" class="lang-toggle" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
     <button type="button" class="lang-toggle" data-lang="it" lang="it" aria-label="Italiano" aria-pressed="false">IT</button>
   </div>
+  <span data-jk-theme-switch></span>
 </nav>

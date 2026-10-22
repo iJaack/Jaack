@@ -110,9 +110,10 @@ a.text-link
       color: $accent
 
 .now-summary
-  padding: 28px 30px
-  background: $surface
-  border-left: 2px solid $accent
+  padding: 16px 0
+  background: transparent
+  border-top: 1px solid $border
+  border-bottom: 1px solid $border
   p
     max-width: 65ch
 
@@ -218,10 +219,11 @@ a.text-link
 
 .project-feature
   min-width: 0
-  background: $surface
-  border: 1px solid $border
-  border-radius: 8px
-  overflow: hidden
+  background: transparent
+  border: 0
+  border-bottom: 1px solid $border
+  border-radius: 0
+  overflow: visible
   h3
     margin: 10px 0 14px
     font-size: 2.5rem
@@ -263,8 +265,8 @@ a.text-link
 .feature-team1
   display: grid
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr)
-  background: #161617
-  border-color: rgba(#E6212F, 0.45)
+  background: transparent
+  border-bottom: 1px solid $border
   .feature-copy
     grid-column: 1
     grid-row: 1
@@ -287,7 +289,7 @@ a.text-link
     grid-column: 2
     grid-row: 1
     min-height: 320px
-    background: #0c0c09
+    background: transparent
     img
       display: block
       width: 100%
@@ -302,7 +304,7 @@ a.text-link
   align-items: center
   .feature-image img
     object-fit: contain
-    background: #0c0d10
+    background: transparent
     // Hide the screenshot's left edge and the code panel's bottom scrollbar.
     clip-path: polygon(1.5% 0, 100% 0, 100% 94%, 52% 94%, 52% 100%, 1.5% 100%)
   h3 a
@@ -329,10 +331,12 @@ a.text-link
   display: grid
   grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr)
   align-items: center
-  gap: 48px
-  padding: 38px
-  background: #191a17
-  border-radius: 8px
+  gap: 28px
+  padding: 20px 0
+  background: transparent
+  border-radius: 0
+  border-top: 1px solid $border
+  border-bottom: 1px solid $border
   h2
     font-family: $fontSans
     font-weight: 500
@@ -369,8 +373,8 @@ a.text-link
   flex-shrink: 0
   width: 36px
   height: 36px
-  background: #e8c547
-  color: #171710
+  background: var(--jk-accent-wash)
+  color: var(--jk-accent-text)
   border-radius: 9px
   font-family: $fontSans
   font-weight: 700
@@ -427,10 +431,11 @@ a.text-link
 
 .app-entry
   display: block
-  padding: 24px
-  background: $surface
-  border: 1px solid $border
-  border-radius: 8px
+  padding: 16px 0
+  background: transparent
+  border: 0
+  border-bottom: 1px solid $border
+  border-radius: 0
   .app-icon, .app-monogram
     display: flex
     width: 52px

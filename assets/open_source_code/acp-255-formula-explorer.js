@@ -110,10 +110,13 @@
       var minX = Math.min.apply(null, xs), maxX = Math.max.apply(null, xs);
       function sx(x) { return pad.left + ((x - minX) / (maxX - minX || 1)) * plotW; }
       function sy(y) { return pad.top + plotH - (y / maxY) * plotH; }
-      ctx.strokeStyle = 'rgba(255,255,255,0.06)'; ctx.lineWidth = 1;
+      var themeInk = getComputedStyle(document.documentElement);
+      var grid = (themeInk.getPropertyValue('--jk-hair') || 'rgba(127,127,127,.25)').trim();
+      var label = (themeInk.getPropertyValue('--jk-ink-2') || '#444').trim();
+      ctx.strokeStyle = grid; ctx.lineWidth = 1;
       for (var i = 0; i <= 4; i++) { var gy = pad.top + (plotH / 4) * i; ctx.beginPath(); ctx.moveTo(pad.left, gy); ctx.lineTo(width - pad.right, gy); ctx.stroke(); }
-      ctx.strokeStyle = '#333'; ctx.beginPath(); ctx.moveTo(pad.left, pad.top); ctx.lineTo(pad.left, pad.top + plotH); ctx.lineTo(width - pad.right, pad.top + plotH); ctx.stroke();
-      ctx.fillStyle = '#888'; ctx.font = '12px Geist Mono, monospace'; ctx.textAlign = 'center';
+      ctx.strokeStyle = label; ctx.beginPath(); ctx.moveTo(pad.left, pad.top); ctx.lineTo(pad.left, pad.top + plotH); ctx.lineTo(width - pad.right, pad.top + plotH); ctx.stroke();
+      ctx.fillStyle = label; ctx.font = '12px ui-monospace, SFMono-Regular, Consolas, monospace'; ctx.textAlign = 'center';
       tickValues.forEach(function (tick) { ctx.fillText(String(tick), sx(tick), height - 14); });
       ctx.textAlign = 'right';
       for (var y = 0; y <= 4; y++) ctx.fillText(String(Math.round((maxY / 4) * (4 - y))), pad.left - 8, pad.top + (plotH / 4) * y + 4);
@@ -158,6 +161,7 @@
     var resizeTimer;
     window.addEventListener('resize', function () { clearTimeout(resizeTimer); resizeTimer = setTimeout(redraw, 80); });
     redraw();
+    window.addEventListener('jaacktheme', redraw);
 
     /** @type {Acp255ExplorerApi} */
     window.acp255Explorer = {

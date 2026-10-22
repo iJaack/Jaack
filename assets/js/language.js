@@ -16,6 +16,20 @@
     } catch (e) { /* The language switch also works without browser storage. */ }
     return lang;
   }
+  if (typeof document.querySelector === 'function') {
+    var alt = document.querySelector('[data-alt-url]');
+    if (alt && alt.getAttribute('data-alt-url')) {
+      window.alternateLangUrl = alt.getAttribute('data-alt-url');
+      window.alternateLangCode = alt.getAttribute('data-alt-lang');
+    }
+    var themeMeta = document.querySelector('meta[name="theme-color"]');
+    function paintChrome() {
+      if (!themeMeta) return;
+      themeMeta.setAttribute('content', document.documentElement.getAttribute('data-theme') === 'dark' ? '#161311' : '#f3eee6');
+    }
+    paintChrome();
+    if (typeof window.addEventListener === 'function') window.addEventListener('jaacktheme', paintChrome);
+  }
   window.toggleGlobalLang = function (lang) {
     lang = setLang(lang);
     if (window.alternateLangUrl && window.alternateLangCode === lang) {

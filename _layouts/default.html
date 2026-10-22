@@ -8,29 +8,37 @@ layout: compress
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="{{ site.name }}">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f3eee6">
   <meta name="google-site-verification" content="x-nbUh-DuOi6rEf6aBXH4CooJnz8OO1CupGC1qS2-Rk">
+  {% if page.redirect_to %}<meta http-equiv="refresh" content="0;url={{ page.redirect_to | relative_url }}">{% endif %}
   {% seo %}
   {% include favicon.html %}
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ '/feed.xml' | relative_url }}">
   <link rel="webmention" href="https://webmention.io/jaack.me/webmention">
   <link rel="pingback" href="https://webmention.io/jaack.me/xmlrpc">
   <link href="mailto:{{ site.email }}" rel="me">
+  <script src="{{ '/assets/jaack-design-system/theme.js' | relative_url }}" data-light-from="7" data-light-to="19" data-key="jaack.theme"></script>
+  <link rel="stylesheet" href="{{ '/assets/jaack-design-system/jaack.css' | relative_url }}">
   {% include critical-css.liquid %}
   {% include lang-css.html %}
+  <link rel="stylesheet" href="{{ '/assets/css/jaack-site.css' | relative_url }}">
   {% for stylesheet in page.custom_stylesheets %}<link rel="stylesheet" href="{{ stylesheet }}">{% endfor %}
 </head>
 <body class="lang-{{ page.lang | default: 'en' }}">
+  <div class="jk-bg" aria-hidden="true"><i></i><i></i><i></i></div>
   <a class="skip-link" href="#main-content"><span class="lang-en" lang="en">Skip to content</span><span class="lang-it" lang="it">Vai al contenuto</span></a>
+  {% include nav.html %}
   {% assign width_class = page.width | default: site.width | default: 'normal' %}
   {% unless width_class == 'large' or width_class == 'xwide' %}{% assign width_class = 'normal' %}{% endunless %}
-  <div class="wrapper-{{ width_class }}">
-    {% include nav.html %}
+  <div class="wrapper-{{ width_class }} jk-page">
     <main id="main-content" tabindex="-1" class="{% if page.layout == 'post' or page.category == 'blog' %}post{% else %}page {{ page.title | append: '' | slugify }}{% endif %}">
       {{ content }}
     </main>
     {% include footer.html %}
   </div>
   {% include icons.html %}
+  <script src="{{ '/assets/jaack-design-system/jaack.js' | relative_url }}" defer></script>
   {% if page.layout == 'post' %}<script src="{{ '/assets/beeline/beeline-button.min.js' | relative_url }}"></script>{% endif %}
   <script src="{{ '/assets/js/language.js' | relative_url }}"></script>
   {% for script in page.custom_scripts %}<script src="{{ script.path | default: script }}"{% if script.type %} type="{{ script.type }}"{% endif %}{% if script.defer %} defer{% endif %}></script>{% endfor %}
