@@ -15,3 +15,5 @@ note: >
   moxie/jaack-design-system with the same zip sha. vendor/ is gitignored.
   Demo content is placeholder only. screenshots/ and demo.html are kept
   in git and excluded from the Jekyll site output.
+  The packaged gold accent is Forma's shared default, not a site identity.
+  jaack.me overrides accent, paper and gradient in assets/css/jaack-site.css.

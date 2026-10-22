@@ -25,7 +25,7 @@
     var themeMeta = document.querySelector('meta[name="theme-color"]');
     function paintChrome() {
       if (!themeMeta) return;
-      themeMeta.setAttribute('content', document.documentElement.getAttribute('data-theme') === 'dark' ? '#121314' : '#f7f5f0');
+      themeMeta.setAttribute('content', document.documentElement.getAttribute('data-theme') === 'dark' ? '#161311' : '#f3eee6');
     }
     paintChrome();
     if (typeof window.addEventListener === 'function') window.addEventListener('jaacktheme', paintChrome);

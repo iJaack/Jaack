@@ -1,5 +1,8 @@
-/* jaack.me layout on top of the vendored design system.
-   Chrome uses the floating glass bar (the one glass panel). Content sits on the page. */
+/* jaack.me — editorial Forma.
+   Shared with other sites: token names, the type scale, the 4px spacing scale,
+   theme.js (light 07:00–18:59, Auto/Chiaro/Scuro) and the layout principles.
+   This site's own skin: warm paper, oxblood instead of Forma's gold, serif headlines,
+   a 66ch essay measure, and dated writing rows. Work titles stay in the system sans. */
 
 nav.site-nav.jk-top {
   width: min(calc(100% - 16px), 1120px);
@@ -83,13 +86,22 @@ h1,
 .post > .title,
 .project-page .page-title,
 .contact-section h2,
+.section-heading h2,
 .app-gallery h2,
 .wrapper-xwide .post > .title {
-  font-family: var(--jk-font);
-  font-weight: 750;
+  font-family: var(--jk-serif);
+  font-weight: 560;
   font-size: var(--jk-fs-title);
-  letter-spacing: var(--jk-track-title);
-  line-height: 1.08;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+  font-style: normal;
+}
+.project-feature h3,
+.feature-lead h3,
+.app-entry h3,
+.app-gallery h3 {
+  font-family: var(--jk-font);
+  font-weight: 650;
 }
 h2 { font-size: clamp(22px, 2vw, 28px); font-weight: 650; letter-spacing: -0.02em; }
 h3 { font-size: 18px; font-weight: 650; }
@@ -163,3 +175,81 @@ html[data-theme="dark"] .highlight .cp { color: var(--jk-t2); }
 
 /* Old posts embed Instagram HTML with forced white cards. Keep them readable, don't restyle the embed internals. */
 .instagram-media { max-width: 100% !important; }
+
+/* Editorial skin. Packaged gold stays in the shared files and is not this site's accent. */
+:root { --jk-serif: Iowan Old Style, Palatino, "Palatino Linotype", Georgia, serif; }
+html[data-theme="light"] {
+  --jk-bg: #f3eee6;
+  --jk-surface: #fffdf8;
+  --jk-surface-2: #e7dfd2;
+  --jk-ink: #1c1612;
+  --jk-ink-2: #5a4e45;
+  --jk-t2: rgba(28, 22, 18, .72);
+  --jk-t3: rgba(28, 22, 18, .64);
+  --jk-hair: rgba(28, 22, 18, .14);
+  --jk-accent: #8c3a48;
+  --jk-accent-text: #6e2432;
+  --jk-on-accent: #fffdf8;
+  --jk-accent-wash: rgba(140, 58, 72, .12);
+  --jk-bg-1: rgba(196, 122, 118, .22);
+  --jk-bg-1b: rgba(196, 122, 118, .08);
+  --jk-bg-2: rgba(214, 176, 130, .20);
+  --jk-bg-2b: rgba(214, 176, 130, .08);
+  --jk-bg-3: rgba(150, 158, 120, .16);
+  --jk-bg-3b: rgba(150, 158, 120, .06);
+}
+html[data-theme="dark"] {
+  --jk-bg: #161311;
+  --jk-surface: #1e1916;
+  --jk-surface-2: #261f1b;
+  --jk-ink: #f6f0e8;
+  --jk-ink-2: #d4c6ba;
+  --jk-t2: rgba(246, 240, 232, .72);
+  --jk-t3: rgba(246, 240, 232, .58);
+  --jk-hair: rgba(246, 240, 232, .14);
+  --jk-accent: #e7a8b4;
+  --jk-accent-text: #f0c0c8;
+  --jk-on-accent: #1c1214;
+  --jk-accent-wash: rgba(231, 168, 180, .14);
+  --jk-bg-1: rgba(180, 90, 100, .16);
+  --jk-bg-1b: rgba(180, 90, 100, .06);
+  --jk-bg-2: rgba(196, 150, 110, .12);
+  --jk-bg-2b: rgba(196, 150, 110, .05);
+  --jk-bg-3: rgba(140, 150, 110, .10);
+  --jk-bg-3b: rgba(140, 150, 110, .04);
+}
+.hero-label {
+  font-family: var(--jk-font);
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.hero-label span { color: var(--jk-accent-text); }
+.post { max-width: 66ch; }
+.post > .title {
+  max-width: 22ch;
+  padding-bottom: 12px;
+  box-shadow: inset 0 -2px 0 var(--jk-accent);
+}
+.post > .date {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  align-items: baseline;
+  margin-top: 10px;
+  font-family: var(--jk-font);
+  font-size: 12px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--jk-accent-text);
+}
+.post > .date p { margin: 0; color: var(--jk-t2); letter-spacing: 0; text-transform: none; font-size: 13px; }
+.post-body { font-size: var(--jk-fs-lede); line-height: 1.65; }
+.writing-entry { padding: 12px 0; gap: 16px; }
+.writing-entry time {
+  color: var(--jk-accent-text);
+  font-size: 12px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.writing-entry h3 { font-family: var(--jk-serif); font-weight: 560; }
