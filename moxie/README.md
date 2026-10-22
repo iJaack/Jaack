@@ -53,19 +53,21 @@ Check 320, 390 and 430 px widths: no horizontal overflow, 17 px reading text,
 44 px primary tap targets, visible IT | EN, fixed navigation, equivalent-page
 language switches with preserved hash, native expandable hand examples and a
 lightweight PDF download. Back navigation must preserve restored scroll position.
-Match the jaack design system vendored in jaack-design-system/ (same zip sha
-as the jaack.me copy): tokens in jaack.css, system sans, 17 px reading text,
-hairlines instead of filled cards, and one glass panel (the top bar; the card
-lightbox is the earned second glass while it is open). Theme follows the
-visitor's local clock, light from 07:00 to 18:59, with an Auto / Chiaro / Scuro
-switch stored in localStorage. The soft gradient background is static under
-prefers-reduced-motion. No heavy framework or remote font dependency. The root
-retains old guide anchors through a compatibility redirect.
+Use the shared Forma foundation vendored in jaack-design-system/ (same zip sha
+as jaack.me): token names, the type scale, 17 px reading text, hairlines, and
+one glass panel (the top bar; the card lightbox is the earned second glass
+while it is open). Theme follows the visitor's local clock, light from 07:00
+to 18:59, with an Auto / Chiaro / Scuro switch stored in localStorage. The
+soft gradient is static under prefers-reduced-motion. Moxie's own skin, in
+jaack-moxie.css, is a collector's catalog: cool paper, an indigo accent
+instead of Forma's gold, sans headlines, tabular counts, a thicker deck stripe
+and a denser card gallery. No remote font. The root retains old guide anchors
+through a compatibility redirect.
 
 Deck-specific pages (deck, version, journal entry and guide) keep their identity
 from data/hub.json colors on the stripe only (--deck-stripe). Multi-color
-identities show every color in that split rule. Links and other text use
---jk-accent-text so contrast stays WCAG AA on both themes.
+identities show every color in that split rule. Links and other text use the
+catalog's --jk-accent-text so contrast stays WCAG AA on both themes.
 
 ## Interactive card views
 Deck profiles, saved versions and guide boards offer List / Gallery / Deck views

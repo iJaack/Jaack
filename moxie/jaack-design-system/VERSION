@@ -14,3 +14,5 @@ note: >
   screenshots/ are omitted here; they ship with the jaack.me copy.
   Do not edit jaack.css, jaack.js, theme.js or tokens.css by hand.
   theme.js loads as a blocking script in <head>. Demo content is placeholder only.
+  The packaged gold accent is Forma's shared default. Moxie overrides accent,
+  paper and gradient in jaack-moxie.css; do not treat the gold as this hub's accent.

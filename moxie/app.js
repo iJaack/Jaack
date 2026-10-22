@@ -20,7 +20,7 @@ openHash();
 function paintThemeColor(){
   const meta=document.querySelector('meta[name="theme-color"]');
   if(!meta)return;
-  meta.content=document.documentElement.dataset.theme==='dark'?'#121314':'#f7f5f0';
+  meta.content=document.documentElement.dataset.theme==='dark'?'#101418':'#eef1f4';
 }
 paintThemeColor();
 window.addEventListener('jaacktheme',paintThemeColor);

@@ -1,7 +1,28 @@
-/* Moxie on the jaack design system. The top bar is the one glass panel.
+/* Moxie — collector's Forma.
+   Shared foundation: token names, type scale, 4px spacing, theme.js, one glass bar.
+   This hub's skin: cool catalog paper, indigo instead of Forma's gold, sans headlines
+   with tabular figures, a thicker deck stripe, and a denser card gallery.
    Deck colours stay on the stripe, not on text. */
+html[data-theme="light"]{
+  --jk-bg:#eef1f4;--jk-surface:#f7f9fb;--jk-surface-2:#e2e7ee;
+  --jk-ink:#14181d;--jk-ink-2:#4c5968;
+  --jk-t2:rgba(20,24,29,.72);--jk-t3:rgba(20,24,29,.64);--jk-hair:rgba(20,24,29,.14);
+  --jk-accent:#2a5f8a;--jk-accent-text:#1a4570;--jk-on-accent:#f7f9fb;--jk-accent-wash:rgba(26,69,112,.12);
+  --jk-bg-1:rgba(120,156,196,.22);--jk-bg-1b:rgba(120,156,196,.08);
+  --jk-bg-2:rgba(150,140,190,.16);--jk-bg-2b:rgba(150,140,190,.06);
+  --jk-bg-3:rgba(140,176,160,.16);--jk-bg-3b:rgba(140,176,160,.06);
+}
+html[data-theme="dark"]{
+  --jk-bg:#101418;--jk-surface:#171c22;--jk-surface-2:#1e252d;
+  --jk-ink:#e7edf2;--jk-ink-2:#c5d0db;
+  --jk-t2:rgba(231,237,242,.72);--jk-t3:rgba(231,237,242,.58);--jk-hair:rgba(231,237,242,.14);
+  --jk-accent:#8eb7e0;--jk-accent-text:#b7d4f5;--jk-on-accent:#101418;--jk-accent-wash:rgba(142,183,224,.16);
+  --jk-bg-1:rgba(90,130,180,.16);--jk-bg-1b:rgba(90,130,180,.06);
+  --jk-bg-2:rgba(130,120,180,.12);--jk-bg-2b:rgba(130,120,180,.05);
+  --jk-bg-3:rgba(110,160,140,.10);--jk-bg-3b:rgba(110,160,140,.04);
+}
 body{background:transparent;color:var(--jk-ink);font-family:var(--jk-font)}
-h1,.version-title{font-size:var(--jk-fs-title);font-weight:750;letter-spacing:var(--jk-track-title);line-height:1.08;max-width:28ch}
+h1,.version-title{font-family:var(--jk-font);font-size:var(--jk-fs-title);font-weight:720;letter-spacing:-.04em;line-height:1.05;max-width:22ch;font-variant-numeric:tabular-nums}
 h2{font-size:clamp(22px,2vw,28px);font-weight:650;letter-spacing:-.02em;margin:0 0 12px}
 .home-intro h1{max-width:16ch}
 .layout{gap:40px;padding-top:calc(var(--jk-topbar-h) + 12px);padding-bottom:40px}
@@ -38,4 +59,11 @@ header.jk-top.hub-header .language a[aria-current=page]{color:var(--jk-ink)}
   header.jk-top.hub-header .hub-tools .global-nav{order:0;flex:1 1 auto;min-width:0;width:auto}
   header.jk-top.hub-header .hub-tools .language{order:0;flex:0 0 auto}
 }
+.deck-theme .intro::before{height:5px;margin:0 0 14px}
+.archive-row,.journal-row,.version-row{padding:14px 0}
+.card-gallery,.collection-grid{gap:14px 10px}
+.card-label,.card-count,.quantity,.collection-totals strong{font-variant-numeric:tabular-nums}
+.card-count,.quantity{font-weight:650}
+.collection-totals{margin:16px 0 8px}
+.collection-totals strong{letter-spacing:-.03em}
 @media(prefers-reduced-motion:reduce){.jk-bg i{animation:none}}
