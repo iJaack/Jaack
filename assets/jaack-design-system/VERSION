@@ -12,6 +12,6 @@ note: >
   Do not edit jaack.css or jaack.js by hand; change the sources and run build.sh.
   theme.js stays separate and must load as a blocking script in <head>.
   The moxie hub (Vercel root directory moxie/) keeps a copy at
-  moxie/vendor/jaack-design-system with the same zip sha.
+  moxie/jaack-design-system with the same zip sha. vendor/ is gitignored.
   Demo content is placeholder only. screenshots/ and demo.html are kept
   in git and excluded from the Jekyll site output.
