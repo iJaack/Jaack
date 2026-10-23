@@ -49,10 +49,10 @@ npm test) fails on those file names and on purchase, trade-list or credential
 strings.
 
 ## Mobile-first contract
-Check 320, 390 and 430 px widths: no horizontal overflow, 17 px reading text,
+Check 320, 390 and 430 px widths, and the iPhone Duo window (about 466, 640–760 and 900–960 px): no horizontal overflow, 17 px reading text,
 44 px primary tap targets, visible IT | EN, fixed navigation, equivalent-page
 language switches with preserved hash, native expandable hand examples and a
-lightweight PDF download. Back navigation must preserve restored scroll position.
+lightweight PDF download. Guide pages keep the section sidebar from 640px up (a narrower column until 850px); below that, the section menu replaces it. The hub home places the next two chapters side by side from 900px. Back navigation must preserve restored scroll position.
 Use the shared Forma foundation vendored in jaack-design-system/ (same zip sha
 as jaack.me): token names, the type scale, 17 px reading text, hairlines, and
 one glass panel (the top bar; the card lightbox is the earned second glass

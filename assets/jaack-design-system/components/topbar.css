@@ -1,5 +1,5 @@
 /* top bar — floating glass pill (the one permanent glass element). Content scrolls under it. */
-.jk-top{position:fixed;z-index:40;left:50%;top:calc(10px + env(safe-area-inset-top));transform:translateX(-50%);width:min(calc(100% - 20px),1180px);
+.jk-top{position:fixed;z-index:40;left:50%;top:calc(10px + env(safe-area-inset-top));transform:translateX(-50%);width:min(1180px,calc(100% - 2 * max(10px,env(safe-area-inset-left),env(safe-area-inset-right))));
   display:flex;align-items:center;gap:var(--jk-s3);padding:8px 10px 8px 18px;--r:var(--jk-r-pill)}
 .jk-top .jk-mark{font-size:19px;font-weight:700;letter-spacing:-.02em;margin-right:auto;text-decoration:none;color:var(--jk-ink);white-space:nowrap;min-width:0;flex-shrink:1}
 .jk-top .jk-mark .dot{color:var(--jk-accent)}            /* logo dot: brand mark, exempt from text contrast */
