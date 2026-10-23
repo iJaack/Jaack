@@ -5,7 +5,7 @@
    a 66ch essay measure, and dated writing rows. Work titles stay in the system sans. */
 
 nav.site-nav.jk-top {
-  width: min(calc(100% - 16px), 1120px);
+  width: min(1120px, calc(100% - 2 * max(8px, env(safe-area-inset-left), env(safe-area-inset-right))));
   flex-wrap: wrap;
   gap: 2px 8px;
   padding: 6px 8px 6px 14px;
@@ -24,7 +24,7 @@ nav.site-nav .nav-links {
 nav.site-nav.jk-top .nav-links a.jk-sw {
   display: inline-flex;
   align-items: center;
-  min-height: 40px;
+  min-height: 44px;
   padding: 6px 10px;
   background: transparent;
   color: var(--jk-ink-2);
@@ -39,8 +39,8 @@ nav.site-nav .nav-links a.jk-sw[aria-current="page"] {
 }
 nav.site-nav .lang-switch { display: flex; gap: 0; margin-left: 4px; }
 nav.site-nav .lang-toggle {
-  min-width: 40px;
-  min-height: 40px;
+  min-width: 44px;
+  min-height: 44px;
   padding: 6px 8px;
   background: transparent;
   border: 0;
@@ -59,18 +59,15 @@ nav.site-nav .lang-toggle[aria-pressed="true"] {
 nav.site-nav .jk-mark {
   display: inline-flex;
   align-items: center;
-  min-height: 40px;
+  min-height: 44px;
   min-width: 0;
 }
-.jk-thsw button { min-height: 40px; }
-@media (min-width: 641px) {
-  .jk-thsw button { min-width: 40px; }
-}
+.jk-thsw button { min-height: 44px; min-width: 44px; }
 .author > .toright > .bio { color: var(--jk-ink-2); }
 .footer-main .footer-links a {
   display: inline-flex;
   align-items: center;
-  min-height: 40px;
+  min-height: 44px;
 }
 
 .wrapper-normal.jk-page,
@@ -80,15 +77,19 @@ nav.site-nav .jk-mark {
   max-width: 1120px;
   height: auto;
   margin: 0 auto;
-  padding: calc(var(--jk-topbar-h) + 12px) clamp(16px, 3vw, 28px) 0;
+  padding:
+    calc(var(--jk-topbar-h) + 12px)
+    max(clamp(16px, 3vw, 28px), env(safe-area-inset-right))
+    env(safe-area-inset-bottom)
+    max(clamp(16px, 3vw, 28px), env(safe-area-inset-left));
 }
 .wrapper-xwide.jk-page { max-width: 1240px; }
 
-@media (max-width: 760px) {
+@media (max-width: 880px) {
   :root { --jk-topbar-h: 112px; }
   nav.site-nav.jk-top {
-    width: calc(100% - 8px);
-    top: 8px;
+    width: min(1120px, calc(100% - 2 * max(4px, env(safe-area-inset-left), env(safe-area-inset-right))));
+    top: max(8px, env(safe-area-inset-top));
     gap: 2px 6px;
     padding: 4px 6px 4px 10px;
   }
@@ -151,7 +152,7 @@ p, li { line-height: 1.55; }
 .page > .page-title { margin: 0 0 12px; text-align: left; }
 .contact-section { padding-top: 16px; }
 .contact-section h2 { margin: 0 0 8px; }
-.footer-main { margin-top: 28px; padding: 16px 0 28px; }
+.footer-main { margin-top: 28px; padding: 16px 0 calc(28px + env(safe-area-inset-bottom)); }
 
 .home > .list > .item > .url,
 .writing > .list > .item > .url,

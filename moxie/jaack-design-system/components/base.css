@@ -1,8 +1,8 @@
 /* base: page, type roles, fade-in, theme cross-fade, reduced motion */
 *,*::before,*::after{box-sizing:border-box}
 html{background:var(--jk-bg);color:var(--jk-ink);-webkit-text-size-adjust:100%}
-body{margin:0;font:var(--jk-fs-body)/1.4 var(--jk-font);color:var(--jk-ink);background:transparent;min-height:100vh;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
-.jk-page{padding:calc(var(--jk-topbar-h) + env(safe-area-inset-top)) var(--jk-page-x) 0;max-width:var(--jk-max);margin:0 auto;font-variant-numeric:tabular-nums;text-shadow:var(--jk-text-shadow)}
+body{margin:0;font:var(--jk-fs-body)/1.4 var(--jk-font);color:var(--jk-ink);background:transparent;min-height:100vh;min-height:100dvh;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+.jk-page{padding:calc(var(--jk-topbar-h) + env(safe-area-inset-top)) max(var(--jk-page-x),env(safe-area-inset-right)) env(safe-area-inset-bottom) max(var(--jk-page-x),env(safe-area-inset-left));max-width:var(--jk-max);margin:0 auto;font-variant-numeric:tabular-nums;text-shadow:var(--jk-text-shadow)}
 .jk-page svg text{text-shadow:none}
 /* type roles */
 .jk-lab{display:block;font-size:var(--jk-fs-xs);font-weight:700;letter-spacing:var(--jk-track-label);text-transform:uppercase;color:var(--jk-t2);margin:0}

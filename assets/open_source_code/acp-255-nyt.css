@@ -206,7 +206,7 @@
   color: var(--jk-t3);
   font-style: italic;
 }
-@media (min-width: 1080px) {
+@media (min-width: 900px) {
   .acp255-nyt .margin-note {
     float: right;
     clear: right;
@@ -217,7 +217,7 @@
     border-left: 2px solid var(--jk-hair);
   }
 }
-@media (max-width: 1079px) {
+@media (max-width: 899px) {
   .acp255-nyt .margin-note {
     display: block;
     margin: 1.2rem 0;
@@ -437,7 +437,10 @@
 .acp255-nyt .explorer-howto .howto-step strong {
   color: var(--jk-t2);
 }
-@media (max-width: 780px) {
+@media (max-width: 899px) {
+  .acp255-nyt .explorer-howto { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 639px) {
   .acp255-nyt .explorer-howto { grid-template-columns: 1fr; }
 }
 

@@ -61,7 +61,7 @@ html[data-theme="dark"] .team1-page { --team1: #ffb4bc; }
 .tag, .filter-button, .slide-jump a, .expand-button {
   display: inline-flex;
   align-items: center;
-  min-height: 40px;
+  min-height: 44px;
   border-radius: var(--jk-r-pill);
   border: 1px solid var(--jk-hair);
   padding: 6px 12px;
@@ -129,8 +129,24 @@ html[data-theme="dark"] .team1-page { --team1: #ffb4bc; }
 .slide-detail { padding: 0 0 12px 28px; }
 .slide-points, .slide-cards { margin: 8px 0 0; padding-left: 18px; }
 .slide-cards li { margin-bottom: 6px; color: var(--jk-ink-2); }
-@media (max-width: 980px) {
+@media (max-width: 1199px) {
+  .logic-flow { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .logic-node:nth-child(3n)::after { display: none; }
+}
+@media (max-width: 899px) {
+  .team1-meta, .day-rail { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .team1-journey, .builder-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .team1-journey > :last-child:nth-child(odd),
+  .builder-grid > :last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .day-head { grid-template-columns: 1fr; }
+  .logic-flow { grid-template-columns: 1fr; }
+  .logic-node::after { display: none; }
+  .team1-stat:nth-child(2n+1) { border-left: 0; padding-left: 0; }
+  .team1-stat:nth-child(n+3) { border-top: 1px solid var(--jk-hair); }
+}
+@media (max-width: 639px) {
   .team1-meta, .team1-journey, .day-head, .builder-grid, .logic-flow, .infra-grid, .day-rail { grid-template-columns: 1fr; }
+  .team1-journey > :last-child, .builder-grid > :last-child { grid-column: auto; }
   .team1-stat + .team1-stat { border-left: 0; padding-left: 0; border-top: 1px solid var(--jk-hair); }
   .team1-toc { position: static; }
   .logic-node::after { display: none; }

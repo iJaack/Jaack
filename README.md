@@ -48,9 +48,8 @@ local links and anchors, metadata, content states, and retained special pages.
 Inspect English and Italian at desktop and phone widths after layout changes.
 The existing wide research articles have their own styles and scripts.
 
-All shared pages use a fluid shell capped at 1440px. Desktop layouts in
-`_sass/pages/wide-layout.sass` add columns for collections, priorities and project
-details at 960px; smaller screens keep the stacked layouts. Article prose stays
+All shared pages use a fluid shell capped at 1440px. Layouts in
+`_sass/pages/wide-layout.sass` stay stacked under 640px, use two columns from 640px, and use three-column collections from 900px. Article prose stays
 within 720px while figures and tables can expand to 1120px. Custom research
 components retain their own layouts, with margin notes kept inside the page.
 
