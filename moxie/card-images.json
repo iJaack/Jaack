@@ -1323,5 +1323,368 @@
         "small": "https://cards.scryfall.io/small/front/8/a/8a5b90f3-1a34-4dcb-90ee-e7cc2ceec256.jpg?1783910548"
       }
     ]
+  },
+  "Ancient Stirrings": {
+    "name": "Ancient Stirrings",
+    "url": "https://scryfall.com/card/2xm/151/ancient-stirrings",
+    "faces": [
+      {
+        "name": "Ancient Stirrings",
+        "image": "https://cards.scryfall.io/normal/front/7/2/726039a0-6c0d-48ef-9b42-99de5d4e41d2.jpg?1783930155",
+        "small": "https://cards.scryfall.io/small/front/7/2/726039a0-6c0d-48ef-9b42-99de5d4e41d2.jpg?1783930155"
+      }
+    ]
+  },
+  "Basking Broodscale": {
+    "name": "Basking Broodscale",
+    "url": "https://scryfall.com/card/mh3/145/basking-broodscale",
+    "faces": [
+      {
+        "name": "Basking Broodscale",
+        "image": "https://cards.scryfall.io/normal/front/5/f/5feba5d6-99a6-4e9b-8a7d-90d955868fc3.jpg?1783911263",
+        "small": "https://cards.scryfall.io/small/front/5/f/5feba5d6-99a6-4e9b-8a7d-90d955868fc3.jpg?1783911263"
+      }
+    ]
+  },
+  "Blade of the Bloodchief": {
+    "name": "Blade of the Bloodchief",
+    "url": "https://scryfall.com/card/lcc/300/blade-of-the-bloodchief",
+    "faces": [
+      {
+        "name": "Blade of the Bloodchief",
+        "image": "https://cards.scryfall.io/normal/front/3/4/34e7bebf-1844-476c-a947-978393908fa2.jpg?1783913842",
+        "small": "https://cards.scryfall.io/small/front/3/4/34e7bebf-1844-476c-a947-978393908fa2.jpg?1783913842"
+      }
+    ]
+  },
+  "Boseiju, Who Endures": {
+    "name": "Boseiju, Who Endures",
+    "url": "https://scryfall.com/card/neo/266/boseiju-who-endures",
+    "faces": [
+      {
+        "name": "Boseiju, Who Endures",
+        "image": "https://cards.scryfall.io/normal/front/2/1/2135ac5a-187b-4dc9-8f82-34e8d1603416.jpg?1783923818",
+        "small": "https://cards.scryfall.io/small/front/2/1/2135ac5a-187b-4dc9-8f82-34e8d1603416.jpg?1783923818"
+      }
+    ]
+  },
+  "Cavern of Souls": {
+    "name": "Cavern of Souls",
+    "url": "https://scryfall.com/card/lci/269/cavern-of-souls",
+    "faces": [
+      {
+        "name": "Cavern of Souls",
+        "image": "https://cards.scryfall.io/normal/front/3/a/3aad15a2-8a1b-4460-9b06-e85863081878.jpg?1783913719",
+        "small": "https://cards.scryfall.io/small/front/3/a/3aad15a2-8a1b-4460-9b06-e85863081878.jpg?1783913719"
+      }
+    ]
+  },
+  "Devourer of Destiny": {
+    "name": "Devourer of Destiny",
+    "url": "https://scryfall.com/card/mh3/2/devourer-of-destiny",
+    "faces": [
+      {
+        "name": "Devourer of Destiny",
+        "image": "https://cards.scryfall.io/normal/front/5/6/560debcd-feb4-4534-991e-a7aa1cca2409.jpg?1783911309",
+        "small": "https://cards.scryfall.io/small/front/5/6/560debcd-feb4-4534-991e-a7aa1cca2409.jpg?1783911309"
+      }
+    ]
+  },
+  "Dismember": {
+    "name": "Dismember",
+    "url": "https://scryfall.com/card/mm2/79/dismember",
+    "faces": [
+      {
+        "name": "Dismember",
+        "image": "https://cards.scryfall.io/normal/front/3/d/3d286cf6-3e16-4941-9326-1818b1e06d69.jpg?1783938413",
+        "small": "https://cards.scryfall.io/small/front/3/d/3d286cf6-3e16-4941-9326-1818b1e06d69.jpg?1783938413"
+      }
+    ]
+  },
+  "Disruptor Flute": {
+    "name": "Disruptor Flute",
+    "url": "https://scryfall.com/card/mh3/209/disruptor-flute",
+    "faces": [
+      {
+        "name": "Disruptor Flute",
+        "image": "https://cards.scryfall.io/normal/front/5/c/5cad8671-4761-4014-a8a3-af45627e6e79.jpg?1783911243",
+        "small": "https://cards.scryfall.io/small/front/5/c/5cad8671-4761-4014-a8a3-af45627e6e79.jpg?1783911243"
+      }
+    ]
+  },
+  "Eldrazi Temple": {
+    "name": "Eldrazi Temple",
+    "url": "https://scryfall.com/card/cmm/992/eldrazi-temple",
+    "faces": [
+      {
+        "name": "Eldrazi Temple",
+        "image": "https://cards.scryfall.io/normal/front/c/b/cbab7e1f-305e-4733-aa70-b27285740925.jpg?1783915392",
+        "small": "https://cards.scryfall.io/small/front/c/b/cbab7e1f-305e-4733-aa70-b27285740925.jpg?1783915392"
+      }
+    ]
+  },
+  "Emrakul, the Promised End": {
+    "name": "Emrakul, the Promised End",
+    "url": "https://scryfall.com/card/inr/5/emrakul-the-promised-end",
+    "faces": [
+      {
+        "name": "Emrakul, the Promised End",
+        "image": "https://cards.scryfall.io/normal/front/7/1/71911392-42b0-4b6d-baf7-918a4bd3b924.jpg?1783908188",
+        "small": "https://cards.scryfall.io/small/front/7/1/71911392-42b0-4b6d-baf7-918a4bd3b924.jpg?1783908188"
+      }
+    ]
+  },
+  "Gemstone Caverns": {
+    "name": "Gemstone Caverns",
+    "url": "https://scryfall.com/card/tsr/280/gemstone-caverns",
+    "faces": [
+      {
+        "name": "Gemstone Caverns",
+        "image": "https://cards.scryfall.io/normal/front/7/f/7f273641-c5f3-48bc-b89e-3cff52d26a0b.jpg?1783927750",
+        "small": "https://cards.scryfall.io/small/front/7/f/7f273641-c5f3-48bc-b89e-3cff52d26a0b.jpg?1783927750"
+      }
+    ]
+  },
+  "Glaring Fleshraker": {
+    "name": "Glaring Fleshraker",
+    "url": "https://scryfall.com/card/mh3/7/glaring-fleshraker",
+    "faces": [
+      {
+        "name": "Glaring Fleshraker",
+        "image": "https://cards.scryfall.io/normal/front/8/0/80c2a3c7-1486-4ff9-88ec-79ec67a437f8.jpg?1783911308",
+        "small": "https://cards.scryfall.io/small/front/8/0/80c2a3c7-1486-4ff9-88ec-79ec67a437f8.jpg?1783911308"
+      }
+    ]
+  },
+  "Grafdigger's Cage": {
+    "name": "Grafdigger's Cage",
+    "url": "https://scryfall.com/card/m20/227/grafdiggers-cage",
+    "faces": [
+      {
+        "name": "Grafdigger's Cage",
+        "image": "https://cards.scryfall.io/normal/front/0/a/0a135e09-b534-4836-9a10-3a9a4a9f8c53.jpg?1783932945",
+        "small": "https://cards.scryfall.io/small/front/0/a/0a135e09-b534-4836-9a10-3a9a4a9f8c53.jpg?1783932945"
+      }
+    ]
+  },
+  "Haywire Mite": {
+    "name": "Haywire Mite",
+    "url": "https://scryfall.com/card/soc/349/haywire-mite",
+    "faces": [
+      {
+        "name": "Haywire Mite",
+        "image": "https://cards.scryfall.io/normal/front/6/f/6f813bc3-6d81-4555-8e4b-6ecd9a6757b7.jpg?1783903739",
+        "small": "https://cards.scryfall.io/small/front/6/f/6f813bc3-6d81-4555-8e4b-6ecd9a6757b7.jpg?1783903739"
+      }
+    ]
+  },
+  "Kozilek's Command": {
+    "name": "Kozilek's Command",
+    "url": "https://scryfall.com/card/mh3/11/kozileks-command",
+    "faces": [
+      {
+        "name": "Kozilek's Command",
+        "image": "https://cards.scryfall.io/normal/front/9/2/92585587-cfdc-406a-9114-4f6dd8802c37.jpg?1784634156",
+        "small": "https://cards.scryfall.io/small/front/9/2/92585587-cfdc-406a-9114-4f6dd8802c37.jpg?1784634156"
+      }
+    ]
+  },
+  "Malevolent Rumble": {
+    "name": "Malevolent Rumble",
+    "url": "https://scryfall.com/card/mh3/161/malevolent-rumble",
+    "faces": [
+      {
+        "name": "Malevolent Rumble",
+        "image": "https://cards.scryfall.io/normal/front/a/1/a178cfe8-f9fa-4255-88d0-54a0bed079f5.jpg?1783911259",
+        "small": "https://cards.scryfall.io/small/front/a/1/a178cfe8-f9fa-4255-88d0-54a0bed079f5.jpg?1783911259"
+      }
+    ]
+  },
+  "Mind Stone": {
+    "name": "Mind Stone",
+    "url": "https://scryfall.com/card/mbc/76/mind-stone",
+    "faces": [
+      {
+        "name": "Mind Stone",
+        "image": "https://cards.scryfall.io/normal/front/b/3/b30a8f92-ce42-4b27-a893-bcf97fde228d.jpg?1785759375",
+        "small": "https://cards.scryfall.io/small/front/b/3/b30a8f92-ce42-4b27-a893-bcf97fde228d.jpg?1785759375"
+      }
+    ]
+  },
+  "Nature's Claim": {
+    "name": "Nature's Claim",
+    "url": "https://scryfall.com/card/ima/177/natures-claim",
+    "faces": [
+      {
+        "name": "Nature's Claim",
+        "image": "https://cards.scryfall.io/normal/front/d/2/d24b6640-ef2f-4c92-beb3-afdf78f9c2d5.jpg?1783935517",
+        "small": "https://cards.scryfall.io/small/front/d/2/d24b6640-ef2f-4c92-beb3-afdf78f9c2d5.jpg?1783935517"
+      }
+    ]
+  },
+  "Pithing Needle": {
+    "name": "Pithing Needle",
+    "url": "https://scryfall.com/card/2x2/312/pithing-needle",
+    "faces": [
+      {
+        "name": "Pithing Needle",
+        "image": "https://cards.scryfall.io/normal/front/7/7/776899f8-e977-42b7-8b54-6f726a349e3c.jpg?1783921789",
+        "small": "https://cards.scryfall.io/small/front/7/7/776899f8-e977-42b7-8b54-6f726a349e3c.jpg?1783921789"
+      }
+    ]
+  },
+  "Shifting Woodland": {
+    "name": "Shifting Woodland",
+    "url": "https://scryfall.com/card/mh3/228/shifting-woodland",
+    "faces": [
+      {
+        "name": "Shifting Woodland",
+        "image": "https://cards.scryfall.io/normal/front/0/5/059164e1-894d-4586-9800-e60d6fbd6eb6.jpg?1783911237",
+        "small": "https://cards.scryfall.io/small/front/0/5/059164e1-894d-4586-9800-e60d6fbd6eb6.jpg?1783911237"
+      }
+    ]
+  },
+  "Sire of Seven Deaths": {
+    "name": "Sire of Seven Deaths",
+    "url": "https://scryfall.com/card/fdn/1/sire-of-seven-deaths",
+    "faces": [
+      {
+        "name": "Sire of Seven Deaths",
+        "image": "https://cards.scryfall.io/normal/front/8/d/8d8432a7-1c8a-4cfb-947c-ecf9791063eb.jpg?1783909131",
+        "small": "https://cards.scryfall.io/small/front/8/d/8d8432a7-1c8a-4cfb-947c-ecf9791063eb.jpg?1783909131"
+      }
+    ]
+  },
+  "Sowing Mycospawn": {
+    "name": "Sowing Mycospawn",
+    "url": "https://scryfall.com/card/mh3/170/sowing-mycospawn",
+    "faces": [
+      {
+        "name": "Sowing Mycospawn",
+        "image": "https://cards.scryfall.io/normal/front/c/d/cdfadb17-76ad-4d4d-9fa7-33c4b88b4c0a.jpg?1783911255",
+        "small": "https://cards.scryfall.io/small/front/c/d/cdfadb17-76ad-4d4d-9fa7-33c4b88b4c0a.jpg?1783911255"
+      }
+    ]
+  },
+  "Spine of Ish Sah": {
+    "name": "Spine of Ish Sah",
+    "url": "https://scryfall.com/card/moc/383/spine-of-ish-sah",
+    "faces": [
+      {
+        "name": "Spine of Ish Sah",
+        "image": "https://cards.scryfall.io/normal/front/f/e/fe28640d-a030-4da4-882d-87b6e1678bbd.jpg?1783917105",
+        "small": "https://cards.scryfall.io/small/front/f/e/fe28640d-a030-4da4-882d-87b6e1678bbd.jpg?1783917105"
+      }
+    ]
+  },
+  "Springleaf Drum": {
+    "name": "Springleaf Drum",
+    "url": "https://scryfall.com/card/ecl/260/springleaf-drum",
+    "faces": [
+      {
+        "name": "Springleaf Drum",
+        "image": "https://cards.scryfall.io/normal/front/e/1/e15ab0aa-4059-4923-9816-6f7a9e5b5a18.jpg?1783904399",
+        "small": "https://cards.scryfall.io/small/front/e/1/e15ab0aa-4059-4923-9816-6f7a9e5b5a18.jpg?1783904399"
+      }
+    ]
+  },
+  "Talisman of Resilience": {
+    "name": "Talisman of Resilience",
+    "url": "https://scryfall.com/card/dsc/255/talisman-of-resilience",
+    "faces": [
+      {
+        "name": "Talisman of Resilience",
+        "image": "https://cards.scryfall.io/normal/front/e/f/eff598b0-0b32-41d0-b980-584576e58626.jpg?1783909582",
+        "small": "https://cards.scryfall.io/small/front/e/f/eff598b0-0b32-41d0-b980-584576e58626.jpg?1783909582"
+      }
+    ]
+  },
+  "Thief of Existence": {
+    "name": "Thief of Existence",
+    "url": "https://scryfall.com/card/mh3/174/thief-of-existence",
+    "faces": [
+      {
+        "name": "Thief of Existence",
+        "image": "https://cards.scryfall.io/normal/front/3/2/328b02ca-d8eb-401d-9c41-93f8eb909312.jpg?1783911254",
+        "small": "https://cards.scryfall.io/small/front/3/2/328b02ca-d8eb-401d-9c41-93f8eb909312.jpg?1783911254"
+      }
+    ]
+  },
+  "Thought-Knot Seer": {
+    "name": "Thought-Knot Seer",
+    "url": "https://scryfall.com/card/ogw/9/thought-knot-seer",
+    "faces": [
+      {
+        "name": "Thought-Knot Seer",
+        "image": "https://cards.scryfall.io/normal/front/b/f/bffc360e-db41-48f3-9365-680d55046e04.jpg?1783937929",
+        "small": "https://cards.scryfall.io/small/front/b/f/bffc360e-db41-48f3-9365-680d55046e04.jpg?1783937929"
+      }
+    ]
+  },
+  "Tormod's Crypt": {
+    "name": "Tormod's Crypt",
+    "url": "https://scryfall.com/card/dmr/235/tormods-crypt",
+    "faces": [
+      {
+        "name": "Tormod's Crypt",
+        "image": "https://cards.scryfall.io/normal/front/7/5/752bf493-5839-47e8-95f2-6d8201907428.jpg?1783918410",
+        "small": "https://cards.scryfall.io/small/front/7/5/752bf493-5839-47e8-95f2-6d8201907428.jpg?1783918410"
+      }
+    ]
+  },
+  "Traverse the Ulvenwald": {
+    "name": "Traverse the Ulvenwald",
+    "url": "https://scryfall.com/card/inr/221/traverse-the-ulvenwald",
+    "faces": [
+      {
+        "name": "Traverse the Ulvenwald",
+        "image": "https://cards.scryfall.io/normal/front/7/7/77b459cb-994c-430d-b0a6-59a8dd20adbd.jpg?1783908086",
+        "small": "https://cards.scryfall.io/small/front/7/7/77b459cb-994c-430d-b0a6-59a8dd20adbd.jpg?1783908086"
+      }
+    ]
+  },
+  "Trinisphere": {
+    "name": "Trinisphere",
+    "url": "https://scryfall.com/card/2xm/303/trinisphere",
+    "faces": [
+      {
+        "name": "Trinisphere",
+        "image": "https://cards.scryfall.io/normal/front/3/1/316caa4e-a53a-460b-978c-5f0fba7bc549.jpg?1783930090",
+        "small": "https://cards.scryfall.io/small/front/3/1/316caa4e-a53a-460b-978c-5f0fba7bc549.jpg?1783930090"
+      }
+    ]
+  },
+  "Ugin's Labyrinth": {
+    "name": "Ugin's Labyrinth",
+    "url": "https://scryfall.com/card/mh3/233/ugins-labyrinth",
+    "faces": [
+      {
+        "name": "Ugin's Labyrinth",
+        "image": "https://cards.scryfall.io/normal/front/0/2/020e1348-1a35-4cc8-bad6-9fbddfa79277.jpg?1783911233",
+        "small": "https://cards.scryfall.io/small/front/0/2/020e1348-1a35-4cc8-bad6-9fbddfa79277.jpg?1783911233"
+      }
+    ]
+  },
+  "Urza's Saga": {
+    "name": "Urza's Saga",
+    "url": "https://scryfall.com/card/mh2/259/urzas-saga",
+    "faces": [
+      {
+        "name": "Urza's Saga",
+        "image": "https://cards.scryfall.io/normal/front/c/1/c1e0f201-42cb-46a1-901a-65bb4fc18f6c.jpg?1783926791",
+        "small": "https://cards.scryfall.io/small/front/c/1/c1e0f201-42cb-46a1-901a-65bb4fc18f6c.jpg?1783926791"
+      }
+    ]
+  },
+  "Vexing Bauble": {
+    "name": "Vexing Bauble",
+    "url": "https://scryfall.com/card/mh3/212/vexing-bauble",
+    "faces": [
+      {
+        "name": "Vexing Bauble",
+        "image": "https://cards.scryfall.io/normal/front/2/9/29f11089-658f-42e6-aeb0-09b512ad2479.jpg?1783911242",
+        "small": "https://cards.scryfall.io/small/front/2/9/29f11089-658f-42e6-aeb0-09b512ad2479.jpg?1783911242"
+      }
+    ]
   }
 }

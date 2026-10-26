@@ -16,6 +16,39 @@ Public host: https://moxie.jaack.me. Existing Vercel project: moxie-guide.
 - collection-copy.json: paired IT + EN copy for the collection page (its hash is in translation-state.json).
 - data/collection.json: sanitized public collection snapshot, written by build_collection.py.
 - moxie-collection.js and moxie-collection.css: the interactive collection page.
+- data/broodscale-plan.json: the public 13-month Modern purchase plan, copied
+  verbatim from the supplied plan.json (26 October 2026); no private inventory.
+- data/broodscale-progress.json: explicit actual progress, starting at month 1
+  (November 2026), zero completed months, purchases and actual spend. The build
+  never advances this from the clock or from planned spending.
+- broodscale-copy.json: paired IT + EN narrative for the plan, reviewed via
+  translation-state.json. Italian month notes come from the supplied plan.
+
+## Modern purchase plan
+
+`/it/modern/broodscale/` and `/en/modern/broodscale/` show the monthly budget,
+carryover, planned purchases and all 13 playable 60 + 15 lists. Native details
+keep later months compact; every list is available without JavaScript. The
+shared List / Gallery / Deck controls load Scryfall images only on request.
+The plan uses the supplied Scryfall EUR snapshot of 26 October 2026; later
+months are estimates, excluding shipping, condition and language. Actual
+progress is separate from these estimates. Only the public plan and public
+card references are used; the build needs neither private inventory nor network.
+
+Current play: Standard Mono Green Landfall online on Endstep; Modern on
+Wednesdays at Golden Store Talenti, Rome. Dated journal entries remain historical.
+
+Build, test and preview from the repository root:
+
+    python3 moxie/build_hub.py
+    python3 -m unittest discover -s moxie -p 'test_*.py'
+    node --check moxie/app.js
+    node --check moxie/cards.js
+    node --check moxie/moxie-collection.js
+    node --test tests/moxie-leak.test.cjs
+    python3 -m http.server 8000 --directory moxie/dist
+
+Open http://localhost:8000/it/modern/broodscale/ (or `/en/modern/broodscale/`).
 
 ## Content rules
 Always ship IT | EN together on every page, entry and guide. Card names, counts,
@@ -31,7 +64,9 @@ Use Python for build_hub.py, test_guide.py and test_hub.py; run node --check app
 For PDFs, use the bundled ReportLab Python runtime and
 pdf_renderer.render_pdf(guide['pages'], output_path, language).
 The public output is dist only. It contains HTML/CSS/JS, PDFs and card-list text
-exports. Do not upload source notes, inventories, purchases, .env files or secrets.
+exports. Do not upload private source notes, inventories, purchase histories,
+.env files or secrets. The approved public Modern plan contains estimates for
+future purchases, not a private purchase history.
 
 This folder lives in the iJaack/Jaack repository as moxie/. Jekyll excludes it
 (_config.yml), so GitHub Pages never publishes it under jaack.me. The Vercel
