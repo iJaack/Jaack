@@ -81,3 +81,33 @@ header.jk-top.hub-header .language a[aria-current=page]{color:var(--jk-ink)}
 .collection-totals{margin:16px 0 8px}
 .collection-totals strong{letter-spacing:-.03em}
 @media(prefers-reduced-motion:reduce){.jk-bg i{animation:none}}
+
+/* Modern plan: a catalog timeline, with no additional glass or image requests. */
+.plan-intro{border-top:5px solid var(--deck-stripe,#7fc49a);padding-top:16px}
+.plan-stats,.plan-ledger{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:16px;border-block:1px solid var(--jk-hair);padding:16px 0;margin:16px 0;font-variant-numeric:tabular-nums}
+.plan-stats dt,.plan-ledger dt{font-size:14px;color:var(--jk-ink-2)}
+.plan-stats dd,.plan-ledger dd{margin:4px 0 0;font-weight:650}
+.plan-stats dd{font-size:28px;letter-spacing:-.03em}
+.plan-progress label{display:block;font-size:17px}
+.plan-progress progress{display:block;width:100%;height:12px;margin:12px 0;accent-color:var(--jk-accent)}
+.plan-steps{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(115px,1fr));gap:0;padding:0;margin:20px 0}
+.plan-steps li{margin:0}
+.plan-steps a{display:flex;gap:8px;align-items:center;min-height:56px;padding:8px;border-bottom:1px solid var(--jk-hair);text-decoration:none;font-size:14px;line-height:1.3}
+.plan-steps a span:first-child{font-variant-numeric:tabular-nums;font-weight:700}
+.plan-steps a[aria-current=step]{outline:2px solid var(--jk-accent);outline-offset:-2px;background:var(--jk-accent-wash)}
+.plan-month{border-top:1px solid var(--jk-hair);padding:24px 0;scroll-margin-top:calc(var(--jk-topbar-h) + 24px)}
+.plan-month h3.plan-month-title{font-size:24px;line-height:1.2;font-weight:650;letter-spacing:-.02em;text-transform:none;margin:0 0 12px}
+.plan-details summary,.plan-source summary{display:flex;justify-content:space-between;gap:12px;cursor:pointer;min-height:44px;padding:12px 0;color:var(--jk-accent-text);font-weight:600}
+.plan-details summary::after,.plan-source summary::after{content:'+';flex:none}
+.plan-details[open]>summary::after,.plan-source[open]>summary::after{content:'−'}
+.plan-details>h3{margin-top:24px}
+.plan-role{display:block;font-weight:400;color:var(--jk-ink-2);line-height:1.45;margin-top:4px}
+.plan-table-wrap{overflow-x:auto;max-width:100%;margin:12px 0;overscroll-behavior-x:contain}
+.plan-table{width:100%;border-collapse:collapse;font-size:17px;text-align:left}
+.plan-table td,.plan-table th{padding:12px 8px;border-bottom:1px solid var(--jk-hair);vertical-align:top}
+.plan-table th:first-child,.plan-table td:first-child{padding-left:0}
+.plan-table thead th{font-size:14px;color:var(--jk-ink-2);font-weight:500}
+.plan-table tbody th{min-width:150px;font-weight:500}
+.plan-table .num{white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}
+.plan-table caption{text-align:left;font-size:14px;color:var(--jk-ink-2);padding-bottom:8px}
+.plan-details .deck-list>li>span:last-child{min-width:0;overflow-wrap:anywhere}

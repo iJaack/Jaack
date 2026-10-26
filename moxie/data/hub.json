@@ -16,12 +16,12 @@
         "The Last Stand"
       ],
       "summary": {
-        "it": "La side ora include due Torpor Orb al posto di Warg Tactics. Il piano di terre, segnalini e attacchi esplosivi resta da 60 + 15.",
-        "en": "The sideboard now includes two Torpor Orbs instead of Warg Tactics. The lands, counters and explosive-attacks plan stays at 60 + 15."
+        "it": "Gioco Standard Mono Green Landfall online su Endstep. La side include due Torpor Orb al posto di Warg Tactics; il piano resta da 60 + 15.",
+        "en": "I play Standard Mono Green Landfall online on Endstep. The sideboard includes two Torpor Orbs instead of Warg Tactics; the plan stays at 60 + 15."
       },
       "story": {
-        "it": "L’archivio locale collega Bending Aggro e The Last Stand all’attuale Mono Green. Qui le liste datate restano separate, così una modifica futura non riscrive il passato.",
-        "en": "The local archive connects Bending Aggro and The Last Stand to the current Mono Green deck. Dated lists stay separate here, so later changes do not rewrite the past."
+        "it": "L’archivio locale collega Bending Aggro e The Last Stand all’attuale Mono Green. Qui le liste datate restano separate, così una modifica futura non riscrive il passato. Oggi gioco Standard online su Endstep e Modern il mercoledì al Golden Store Talenti, a Roma, costruendo Broodscale Bloodchief.",
+        "en": "The local archive connects Bending Aggro and The Last Stand to the current Mono Green deck. Dated lists stay separate here, so later changes do not rewrite the past. I now play Standard online on Endstep and Modern on Wednesdays at Golden Store Talenti in Rome, building Broodscale Bloodchief."
       },
       "guide": true,
       "related": [
@@ -359,7 +359,7 @@
       "version_relation": "unknown"
     }
   ],
-  "updated": "2026-10-16",
+  "updated": "2026-10-26",
   "version_ids": [
     "mono-green-2026-10-01-torpor",
     "mono-green-2026-09-10-warg",

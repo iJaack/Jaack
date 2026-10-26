@@ -1,0 +1,2455 @@
+{
+  "title": "Piano d'acquisto Broodscale Bloodchief (Modern) — 50 €/mese",
+  "generatedAt": "2026-10-26T09:45:00+01:00",
+  "sourceList": {
+    "url": "https://www.mtggoldfish.com/deck/8015384",
+    "description": "Tetsubou, 1° posto MTGO Modern Challenge 32, 25/10/2026 (MTGGoldfish: 'Eldrazi Ramp')",
+    "tournamentUrl": "https://www.mtggoldfish.com/tournament/67539"
+  },
+  "modification": {
+    "description": "Modifica approvata da Giacomo il 26/10/2026: 2 Glaring Fleshraker fissi nel main, anche nella lista finale.",
+    "changesVsSource": {
+      "main": [
+        "+2 Glaring Fleshraker",
+        "−1 Sire of Seven Deaths (da 2 a 1)",
+        "−1 Dismember (da 2 a 1, spostato in side)"
+      ],
+      "side": [
+        "+1 Dismember (da 1 a 2)",
+        "−1 Disruptor Flute (da 2 a 1)"
+      ]
+    },
+    "why": "Con Fleshraker la combo Broodscale + Blade uccide subito (ogni Spawn fa 1 danno), quindi serve meno il piano grosso di Sire e meno interazione in main. La lista Broodscale con Fleshraker che ha vinto la RC di Ghent (10/10/2026, https://www.mtggoldfish.com/deck/7997876) gioca 1 solo Sire e nessun Dismember in main (2 in side). Per tenere il side a 15 esce un Disruptor Flute, che in quella lista non c'è."
+  },
+  "budgetResearch": [
+    "https://e4cards.com/blogs/the-e4-blog/modern-on-a-budget-broodscale-combo",
+    "https://mtgdecks.net/guides/modern-broodscale-combo-deck-tech-sideboard-guide-mtg-340",
+    "https://www.mtggoldfish.com/deck/6631779",
+    "https://www.mtggoldfish.com/deck/7997876"
+  ],
+  "priceSource": "Scryfall EUR (derivato da Cardmarket), stampa più economica non foil e non digitale, letto il 26/10/2026. Esclusi spedizione, condizione e lingua; i prezzi cambiano, quindi i mesi successivi sono stime.",
+  "budgetPerMonth": 50,
+  "currency": "EUR",
+  "rules": [
+    "Niente proxy: solo carte vere; i posti mancanti sono coperti da Forest e da sostituti economici.",
+    "Il budget non speso passa al mese successivo (carryover) e serve per le carte singole care (Urza's Saga, Emrakul, Boseiju, Gemstone Caverns, Cavern of Souls).",
+    "Ogni mese il mazzo è legale in Modern: 60 di main e 15 di side.",
+    "Le carte 'già possedute' sono solo quelle usate nel mazzo; non è pubblicata la collezione."
+  ],
+  "totalMonths": 13,
+  "totalSpendEur": 638.0,
+  "temporarySubstitutesCostEur": 8.99,
+  "months": [
+    {
+      "month": 1,
+      "label": "Mese 1 (novembre 2026)",
+      "budgetEur": 50.0,
+      "carryoverInEur": 0.0,
+      "availableEur": 50.0,
+      "purchases": [
+        {
+          "qty": 4,
+          "card": "Basking Broodscale",
+          "unitEur": 0.24,
+          "subtotalEur": 0.96,
+          "cheapestPrinting": "MH3",
+          "role": "lista finale"
+        },
+        {
+          "qty": 3,
+          "card": "Blade of the Bloodchief",
+          "unitEur": 4.81,
+          "subtotalEur": 14.43,
+          "cheapestPrinting": "ZEN",
+          "role": "2 per la lista finale + 1 sostituto temporaneo (terza Blade al posto dei tutor di Urza's Saga)"
+        },
+        {
+          "qty": 4,
+          "card": "Ancient Stirrings",
+          "unitEur": 0.18,
+          "subtotalEur": 0.72,
+          "cheapestPrinting": "A25",
+          "role": "lista finale"
+        },
+        {
+          "qty": 4,
+          "card": "Malevolent Rumble",
+          "unitEur": 0.89,
+          "subtotalEur": 3.56,
+          "cheapestPrinting": "MH3",
+          "role": "lista finale"
+        },
+        {
+          "qty": 4,
+          "card": "Sowing Mycospawn",
+          "unitEur": 1.58,
+          "subtotalEur": 6.32,
+          "cheapestPrinting": "MH3",
+          "role": "lista finale"
+        },
+        {
+          "qty": 4,
+          "card": "Eldrazi Temple",
+          "unitEur": 2.9,
+          "subtotalEur": 11.6,
+          "cheapestPrinting": "MM2",
+          "role": "lista finale"
+        },
+        {
+          "qty": 4,
+          "card": "Glaring Fleshraker",
+          "unitEur": 0.75,
+          "subtotalEur": 3.0,
+          "cheapestPrinting": "MH3",
+          "role": "2 per la lista finale (modifica di Giacomo) + 2 sostituti temporanei di Emrakul fino al mese 9"
+        },
+        {
+          "qty": 1,
+          "card": "Devourer of Destiny",
+          "unitEur": 1.34,
+          "subtotalEur": 1.34,
+          "cheapestPrinting": "MH3",
+          "role": "lista finale"
+        },
+        {
+          "qty": 1,
+          "card": "Haywire Mite",
+          "unitEur": 0.87,
+          "subtotalEur": 0.87,
+          "cheapestPrinting": "SOC",
+          "role": "lista finale"
+        },
+        {
+          "qty": 1,
+          "card": "Springleaf Drum",
+          "unitEur": 0.41,
+          "subtotalEur": 0.41,
+          "cheapestPrinting": "ECL",
+          "role": "lista finale"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble",
+          "unitEur": 1.57,
+          "subtotalEur": 1.57,
+          "cheapestPrinting": "MH3",
+          "role": "lista finale"
+        },
+        {
+          "qty": 1,
+          "card": "Talisman of Resilience",
+          "unitEur": 0.32,
+          "subtotalEur": 0.32,
+          "cheapestPrinting": "M3C",
+          "role": "lista finale"
+        },
+        {
+          "qty": 2,
+          "card": "Traverse the Ulvenwald",
+          "unitEur": 0.48,
+          "subtotalEur": 0.96,
+          "cheapestPrinting": "SOI",
+          "role": "sostituto temporaneo: riempitivo economico per cercare terre/creature"
+        },
+        {
+          "qty": 2,
+          "card": "Nature's Claim",
+          "unitEur": 0.44,
+          "subtotalEur": 0.88,
+          "cheapestPrinting": "EMA",
+          "role": "lista finale"
+        },
+        {
+          "qty": 1,
+          "card": "Pithing Needle",
+          "unitEur": 0.39,
+          "subtotalEur": 0.39,
+          "cheapestPrinting": "MID",
+          "role": "lista finale"
+        },
+        {
+          "qty": 3,
+          "card": "Thief of Existence",
+          "unitEur": 0.3,
+          "subtotalEur": 0.9,
+          "cheapestPrinting": "MH3",
+          "role": "sostituto temporaneo: side economico in attesa di Trinisphere"
+        },
+        {
+          "qty": 2,
+          "card": "Tormod's Crypt",
+          "unitEur": 0.41,
+          "subtotalEur": 0.82,
+          "cheapestPrinting": "M15",
+          "role": "sostituto temporaneo: hate da cimitero economico in attesa del side definitivo"
+        }
+      ],
+      "spendEur": 49.05,
+      "carryoverOutEur": 0.95,
+      "mainboard": [
+        {
+          "qty": 4,
+          "card": "Basking Broodscale"
+        },
+        {
+          "qty": 3,
+          "card": "Blade of the Bloodchief"
+        },
+        {
+          "qty": 4,
+          "card": "Ancient Stirrings"
+        },
+        {
+          "qty": 4,
+          "card": "Malevolent Rumble"
+        },
+        {
+          "qty": 4,
+          "card": "Sowing Mycospawn"
+        },
+        {
+          "qty": 4,
+          "card": "Glaring Fleshraker",
+          "note": "2 fissi (modifica di Giacomo), 2 sostituti temporanei di Emrakul"
+        },
+        {
+          "qty": 1,
+          "card": "Devourer of Destiny"
+        },
+        {
+          "qty": 1,
+          "card": "Haywire Mite"
+        },
+        {
+          "qty": 1,
+          "card": "Soul-Guide Lantern",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 1,
+          "card": "Springleaf Drum"
+        },
+        {
+          "qty": 2,
+          "card": "Talisman of Resilience",
+          "note": "1 già posseduto, 1 acquistato al mese 1"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 4,
+          "card": "Eldrazi Temple"
+        },
+        {
+          "qty": 19,
+          "card": "Forest",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 2,
+          "card": "Traverse the Ulvenwald",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 1,
+          "card": "Spine of Ish Sah",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 1,
+          "card": "Mind Stone",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 3,
+          "card": "Llanowar Elves",
+          "note": "sostituto temporaneo"
+        }
+      ],
+      "sideboard": [
+        {
+          "qty": 2,
+          "card": "Nature's Claim"
+        },
+        {
+          "qty": 1,
+          "card": "Pithing Needle"
+        },
+        {
+          "qty": 2,
+          "card": "Torpor Orb",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 2,
+          "card": "Origin of Metalbending",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 3,
+          "card": "Thief of Existence",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 2,
+          "card": "Tormod's Crypt",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 2,
+          "card": "Warg Tactics",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 1,
+          "card": "Soul-Guide Lantern",
+          "note": "sostituto temporaneo"
+        }
+      ],
+      "mainboardCount": 60,
+      "sideboardCount": 15,
+      "targetMainCardsInPlace": 37,
+      "targetSideCardsInPlace": 3,
+      "targetMainValuePct": 7,
+      "substitutions": [
+        "13 Forest al posto delle terre mancanti (Urza's Saga, Ugin's Labyrinth, Boseiju, Cavern, Gemstone, Shifting Woodland)",
+        "2 Glaring Fleshraker (sostituto)",
+        "1 Blade of the Bloodchief (sostituto)",
+        "2 Traverse the Ulvenwald (sostituto)",
+        "1 Spine of Ish Sah (sostituto)",
+        "1 Mind Stone (sostituto)",
+        "3 Llanowar Elves (sostituto)"
+      ],
+      "strength": "2/5",
+      "notes": "Giocabile: la combo Basking Broodscale + Blade of the Bloodchief è completa e Glaring Fleshraker la fa vincere subito. Mana ancora grezzo (niente Labyrinth/Saga) e senza Kozilek's Command. Livello: lega di negozio budget."
+    },
+    {
+      "month": 2,
+      "label": "Mese 2 (dicembre 2026)",
+      "budgetEur": 50.0,
+      "carryoverInEur": 0.95,
+      "availableEur": 50.95,
+      "purchases": [
+        {
+          "qty": 4,
+          "card": "Kozilek's Command",
+          "unitEur": 6.96,
+          "subtotalEur": 27.84,
+          "cheapestPrinting": "PMH3",
+          "role": "lista finale"
+        },
+        {
+          "qty": 3,
+          "card": "Dismember",
+          "unitEur": 2.59,
+          "subtotalEur": 7.77,
+          "cheapestPrinting": "NPH",
+          "role": "lista finale"
+        },
+        {
+          "qty": 3,
+          "card": "Thought-Knot Seer",
+          "unitEur": 3.48,
+          "subtotalEur": 10.44,
+          "cheapestPrinting": "OGW",
+          "role": "lista finale"
+        },
+        {
+          "qty": 2,
+          "card": "Grafdigger's Cage",
+          "unitEur": 2.04,
+          "subtotalEur": 4.08,
+          "cheapestPrinting": "MM3",
+          "role": "lista finale"
+        }
+      ],
+      "spendEur": 50.13,
+      "carryoverOutEur": 0.82,
+      "mainboard": [
+        {
+          "qty": 4,
+          "card": "Basking Broodscale"
+        },
+        {
+          "qty": 3,
+          "card": "Blade of the Bloodchief"
+        },
+        {
+          "qty": 4,
+          "card": "Ancient Stirrings"
+        },
+        {
+          "qty": 4,
+          "card": "Malevolent Rumble"
+        },
+        {
+          "qty": 4,
+          "card": "Sowing Mycospawn"
+        },
+        {
+          "qty": 4,
+          "card": "Kozilek's Command"
+        },
+        {
+          "qty": 4,
+          "card": "Glaring Fleshraker",
+          "note": "2 fissi (modifica di Giacomo), 2 sostituti temporanei di Emrakul"
+        },
+        {
+          "qty": 1,
+          "card": "Devourer of Destiny"
+        },
+        {
+          "qty": 1,
+          "card": "Haywire Mite"
+        },
+        {
+          "qty": 1,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Soul-Guide Lantern",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 1,
+          "card": "Springleaf Drum"
+        },
+        {
+          "qty": 2,
+          "card": "Talisman of Resilience",
+          "note": "1 già posseduto, 1 acquistato al mese 1"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 4,
+          "card": "Eldrazi Temple"
+        },
+        {
+          "qty": 19,
+          "card": "Forest",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 2,
+          "card": "Thought-Knot Seer",
+          "note": "sostituto temporaneo"
+        }
+      ],
+      "sideboard": [
+        {
+          "qty": 1,
+          "card": "Thought-Knot Seer"
+        },
+        {
+          "qty": 2,
+          "card": "Grafdigger's Cage"
+        },
+        {
+          "qty": 2,
+          "card": "Nature's Claim"
+        },
+        {
+          "qty": 2,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Pithing Needle"
+        },
+        {
+          "qty": 2,
+          "card": "Torpor Orb",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 2,
+          "card": "Origin of Metalbending",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 3,
+          "card": "Thief of Existence",
+          "note": "sostituto temporaneo"
+        }
+      ],
+      "mainboardCount": 60,
+      "sideboardCount": 15,
+      "targetMainCardsInPlace": 42,
+      "targetSideCardsInPlace": 8,
+      "targetMainValuePct": 13,
+      "substitutions": [
+        "13 Forest al posto delle terre mancanti (Urza's Saga, Ugin's Labyrinth, Boseiju, Cavern, Gemstone, Shifting Woodland)",
+        "2 Glaring Fleshraker (sostituto)",
+        "1 Blade of the Bloodchief (sostituto)",
+        "2 Thought-Knot Seer (sostituto)"
+      ],
+      "strength": "2,5/5",
+      "notes": "Arrivano Kozilek's Command, Dismember e Thought-Knot Seer: interazione vera e più costanza. Side già sensato."
+    },
+    {
+      "month": 3,
+      "label": "Mese 3 (gennaio 2027)",
+      "budgetEur": 50.0,
+      "carryoverInEur": 0.82,
+      "availableEur": 50.82,
+      "purchases": [
+        {
+          "qty": 1,
+          "card": "Disruptor Flute",
+          "unitEur": 2.03,
+          "subtotalEur": 2.03,
+          "cheapestPrinting": "MH3",
+          "role": "lista finale"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble",
+          "unitEur": 1.57,
+          "subtotalEur": 1.57,
+          "cheapestPrinting": "MH3",
+          "role": "lista finale"
+        },
+        {
+          "qty": 3,
+          "card": "Ugin's Labyrinth",
+          "unitEur": 12.26,
+          "subtotalEur": 36.78,
+          "cheapestPrinting": "PMH3",
+          "role": "lista finale"
+        }
+      ],
+      "spendEur": 40.38,
+      "carryoverOutEur": 10.44,
+      "mainboard": [
+        {
+          "qty": 4,
+          "card": "Basking Broodscale"
+        },
+        {
+          "qty": 3,
+          "card": "Blade of the Bloodchief"
+        },
+        {
+          "qty": 4,
+          "card": "Ancient Stirrings"
+        },
+        {
+          "qty": 4,
+          "card": "Malevolent Rumble"
+        },
+        {
+          "qty": 4,
+          "card": "Sowing Mycospawn"
+        },
+        {
+          "qty": 4,
+          "card": "Kozilek's Command"
+        },
+        {
+          "qty": 4,
+          "card": "Glaring Fleshraker",
+          "note": "2 fissi (modifica di Giacomo), 2 sostituti temporanei di Emrakul"
+        },
+        {
+          "qty": 1,
+          "card": "Devourer of Destiny"
+        },
+        {
+          "qty": 1,
+          "card": "Haywire Mite"
+        },
+        {
+          "qty": 1,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Soul-Guide Lantern",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 1,
+          "card": "Springleaf Drum"
+        },
+        {
+          "qty": 2,
+          "card": "Talisman of Resilience",
+          "note": "1 già posseduto, 1 acquistato al mese 1"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 4,
+          "card": "Eldrazi Temple"
+        },
+        {
+          "qty": 3,
+          "card": "Ugin's Labyrinth"
+        },
+        {
+          "qty": 16,
+          "card": "Forest",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 2,
+          "card": "Thought-Knot Seer",
+          "note": "sostituto temporaneo"
+        }
+      ],
+      "sideboard": [
+        {
+          "qty": 1,
+          "card": "Thought-Knot Seer"
+        },
+        {
+          "qty": 1,
+          "card": "Disruptor Flute"
+        },
+        {
+          "qty": 2,
+          "card": "Grafdigger's Cage"
+        },
+        {
+          "qty": 2,
+          "card": "Nature's Claim"
+        },
+        {
+          "qty": 2,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Pithing Needle"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 2,
+          "card": "Torpor Orb",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 2,
+          "card": "Origin of Metalbending",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 1,
+          "card": "Thief of Existence",
+          "note": "sostituto temporaneo"
+        }
+      ],
+      "mainboardCount": 60,
+      "sideboardCount": 15,
+      "targetMainCardsInPlace": 45,
+      "targetSideCardsInPlace": 10,
+      "targetMainValuePct": 20,
+      "substitutions": [
+        "10 Forest al posto delle terre mancanti (Urza's Saga, Ugin's Labyrinth, Boseiju, Cavern, Gemstone, Shifting Woodland)",
+        "2 Glaring Fleshraker (sostituto)",
+        "1 Blade of the Bloodchief (sostituto)",
+        "2 Thought-Knot Seer (sostituto)"
+      ],
+      "strength": "3/5",
+      "notes": "Primi 3 Ugin's Labyrinth: il piano ramp Eldrazi comincia a funzionare."
+    },
+    {
+      "month": 4,
+      "label": "Mese 4 (febbraio 2027)",
+      "budgetEur": 50.0,
+      "carryoverInEur": 10.44,
+      "availableEur": 60.44,
+      "purchases": [
+        {
+          "qty": 1,
+          "card": "Ugin's Labyrinth",
+          "unitEur": 12.26,
+          "subtotalEur": 12.26,
+          "cheapestPrinting": "PMH3",
+          "role": "lista finale"
+        },
+        {
+          "qty": 1,
+          "card": "Shifting Woodland",
+          "unitEur": 5.49,
+          "subtotalEur": 5.49,
+          "cheapestPrinting": "MH3",
+          "role": "lista finale"
+        },
+        {
+          "qty": 1,
+          "card": "Urza's Saga",
+          "unitEur": 39.13,
+          "subtotalEur": 39.13,
+          "cheapestPrinting": "MB2",
+          "role": "lista finale"
+        }
+      ],
+      "spendEur": 56.88,
+      "carryoverOutEur": 3.56,
+      "mainboard": [
+        {
+          "qty": 4,
+          "card": "Basking Broodscale"
+        },
+        {
+          "qty": 3,
+          "card": "Blade of the Bloodchief"
+        },
+        {
+          "qty": 4,
+          "card": "Ancient Stirrings"
+        },
+        {
+          "qty": 4,
+          "card": "Malevolent Rumble"
+        },
+        {
+          "qty": 4,
+          "card": "Sowing Mycospawn"
+        },
+        {
+          "qty": 4,
+          "card": "Kozilek's Command"
+        },
+        {
+          "qty": 4,
+          "card": "Glaring Fleshraker",
+          "note": "2 fissi (modifica di Giacomo), 2 sostituti temporanei di Emrakul"
+        },
+        {
+          "qty": 1,
+          "card": "Devourer of Destiny"
+        },
+        {
+          "qty": 1,
+          "card": "Haywire Mite"
+        },
+        {
+          "qty": 1,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Soul-Guide Lantern",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 1,
+          "card": "Springleaf Drum"
+        },
+        {
+          "qty": 2,
+          "card": "Talisman of Resilience",
+          "note": "1 già posseduto, 1 acquistato al mese 1"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 4,
+          "card": "Eldrazi Temple"
+        },
+        {
+          "qty": 4,
+          "card": "Ugin's Labyrinth"
+        },
+        {
+          "qty": 1,
+          "card": "Urza's Saga"
+        },
+        {
+          "qty": 1,
+          "card": "Shifting Woodland"
+        },
+        {
+          "qty": 13,
+          "card": "Forest",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 2,
+          "card": "Thought-Knot Seer",
+          "note": "sostituto temporaneo"
+        }
+      ],
+      "sideboard": [
+        {
+          "qty": 1,
+          "card": "Thought-Knot Seer"
+        },
+        {
+          "qty": 1,
+          "card": "Disruptor Flute"
+        },
+        {
+          "qty": 2,
+          "card": "Grafdigger's Cage"
+        },
+        {
+          "qty": 2,
+          "card": "Nature's Claim"
+        },
+        {
+          "qty": 2,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Pithing Needle"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 2,
+          "card": "Torpor Orb",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 2,
+          "card": "Origin of Metalbending",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 1,
+          "card": "Thief of Existence",
+          "note": "sostituto temporaneo"
+        }
+      ],
+      "mainboardCount": 60,
+      "sideboardCount": 15,
+      "targetMainCardsInPlace": 48,
+      "targetSideCardsInPlace": 10,
+      "targetMainValuePct": 30,
+      "substitutions": [
+        "7 Forest al posto delle terre mancanti (Urza's Saga, Ugin's Labyrinth, Boseiju, Cavern, Gemstone, Shifting Woodland)",
+        "2 Glaring Fleshraker (sostituto)",
+        "1 Blade of the Bloodchief (sostituto)",
+        "2 Thought-Knot Seer (sostituto)"
+      ],
+      "strength": "3/5",
+      "notes": "Labyrinth completi, primo Urza's Saga e Shifting Woodland."
+    },
+    {
+      "month": 5,
+      "label": "Mese 5 (marzo 2027)",
+      "budgetEur": 50.0,
+      "carryoverInEur": 3.56,
+      "availableEur": 53.56,
+      "purchases": [
+        {
+          "qty": 1,
+          "card": "Urza's Saga",
+          "unitEur": 39.13,
+          "subtotalEur": 39.13,
+          "cheapestPrinting": "MB2",
+          "role": "lista finale"
+        }
+      ],
+      "spendEur": 39.13,
+      "carryoverOutEur": 14.43,
+      "mainboard": [
+        {
+          "qty": 4,
+          "card": "Basking Broodscale"
+        },
+        {
+          "qty": 3,
+          "card": "Blade of the Bloodchief"
+        },
+        {
+          "qty": 4,
+          "card": "Ancient Stirrings"
+        },
+        {
+          "qty": 4,
+          "card": "Malevolent Rumble"
+        },
+        {
+          "qty": 4,
+          "card": "Sowing Mycospawn"
+        },
+        {
+          "qty": 4,
+          "card": "Kozilek's Command"
+        },
+        {
+          "qty": 4,
+          "card": "Glaring Fleshraker",
+          "note": "2 fissi (modifica di Giacomo), 2 sostituti temporanei di Emrakul"
+        },
+        {
+          "qty": 1,
+          "card": "Devourer of Destiny"
+        },
+        {
+          "qty": 1,
+          "card": "Haywire Mite"
+        },
+        {
+          "qty": 1,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Soul-Guide Lantern",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 1,
+          "card": "Springleaf Drum"
+        },
+        {
+          "qty": 2,
+          "card": "Talisman of Resilience",
+          "note": "1 già posseduto, 1 acquistato al mese 1"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 4,
+          "card": "Eldrazi Temple"
+        },
+        {
+          "qty": 4,
+          "card": "Ugin's Labyrinth"
+        },
+        {
+          "qty": 2,
+          "card": "Urza's Saga"
+        },
+        {
+          "qty": 1,
+          "card": "Shifting Woodland"
+        },
+        {
+          "qty": 12,
+          "card": "Forest",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 2,
+          "card": "Thought-Knot Seer",
+          "note": "sostituto temporaneo"
+        }
+      ],
+      "sideboard": [
+        {
+          "qty": 1,
+          "card": "Thought-Knot Seer"
+        },
+        {
+          "qty": 1,
+          "card": "Disruptor Flute"
+        },
+        {
+          "qty": 2,
+          "card": "Grafdigger's Cage"
+        },
+        {
+          "qty": 2,
+          "card": "Nature's Claim"
+        },
+        {
+          "qty": 2,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Pithing Needle"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 2,
+          "card": "Torpor Orb",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 2,
+          "card": "Origin of Metalbending",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 1,
+          "card": "Thief of Existence",
+          "note": "sostituto temporaneo"
+        }
+      ],
+      "mainboardCount": 60,
+      "sideboardCount": 15,
+      "targetMainCardsInPlace": 49,
+      "targetSideCardsInPlace": 10,
+      "targetMainValuePct": 37,
+      "substitutions": [
+        "6 Forest al posto delle terre mancanti (Urza's Saga, Ugin's Labyrinth, Boseiju, Cavern, Gemstone, Shifting Woodland)",
+        "2 Glaring Fleshraker (sostituto)",
+        "1 Blade of the Bloodchief (sostituto)",
+        "2 Thought-Knot Seer (sostituto)"
+      ],
+      "strength": "3/5",
+      "notes": "Secondo Urza's Saga."
+    },
+    {
+      "month": 6,
+      "label": "Mese 6 (aprile 2027)",
+      "budgetEur": 50.0,
+      "carryoverInEur": 14.43,
+      "availableEur": 64.43,
+      "purchases": [
+        {
+          "qty": 1,
+          "card": "Urza's Saga",
+          "unitEur": 39.13,
+          "subtotalEur": 39.13,
+          "cheapestPrinting": "MB2",
+          "role": "lista finale"
+        }
+      ],
+      "spendEur": 39.13,
+      "carryoverOutEur": 25.3,
+      "mainboard": [
+        {
+          "qty": 4,
+          "card": "Basking Broodscale"
+        },
+        {
+          "qty": 3,
+          "card": "Blade of the Bloodchief"
+        },
+        {
+          "qty": 4,
+          "card": "Ancient Stirrings"
+        },
+        {
+          "qty": 4,
+          "card": "Malevolent Rumble"
+        },
+        {
+          "qty": 4,
+          "card": "Sowing Mycospawn"
+        },
+        {
+          "qty": 4,
+          "card": "Kozilek's Command"
+        },
+        {
+          "qty": 4,
+          "card": "Glaring Fleshraker",
+          "note": "2 fissi (modifica di Giacomo), 2 sostituti temporanei di Emrakul"
+        },
+        {
+          "qty": 1,
+          "card": "Devourer of Destiny"
+        },
+        {
+          "qty": 1,
+          "card": "Haywire Mite"
+        },
+        {
+          "qty": 1,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Soul-Guide Lantern",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 1,
+          "card": "Springleaf Drum"
+        },
+        {
+          "qty": 2,
+          "card": "Talisman of Resilience",
+          "note": "1 già posseduto, 1 acquistato al mese 1"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 4,
+          "card": "Eldrazi Temple"
+        },
+        {
+          "qty": 4,
+          "card": "Ugin's Labyrinth"
+        },
+        {
+          "qty": 3,
+          "card": "Urza's Saga"
+        },
+        {
+          "qty": 1,
+          "card": "Shifting Woodland"
+        },
+        {
+          "qty": 11,
+          "card": "Forest",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 2,
+          "card": "Thought-Knot Seer",
+          "note": "sostituto temporaneo"
+        }
+      ],
+      "sideboard": [
+        {
+          "qty": 1,
+          "card": "Thought-Knot Seer"
+        },
+        {
+          "qty": 1,
+          "card": "Disruptor Flute"
+        },
+        {
+          "qty": 2,
+          "card": "Grafdigger's Cage"
+        },
+        {
+          "qty": 2,
+          "card": "Nature's Claim"
+        },
+        {
+          "qty": 2,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Pithing Needle"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 2,
+          "card": "Torpor Orb",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 2,
+          "card": "Origin of Metalbending",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 1,
+          "card": "Thief of Existence",
+          "note": "sostituto temporaneo"
+        }
+      ],
+      "mainboardCount": 60,
+      "sideboardCount": 15,
+      "targetMainCardsInPlace": 50,
+      "targetSideCardsInPlace": 10,
+      "targetMainValuePct": 45,
+      "substitutions": [
+        "5 Forest al posto delle terre mancanti (Urza's Saga, Ugin's Labyrinth, Boseiju, Cavern, Gemstone, Shifting Woodland)",
+        "2 Glaring Fleshraker (sostituto)",
+        "1 Blade of the Bloodchief (sostituto)",
+        "2 Thought-Knot Seer (sostituto)"
+      ],
+      "strength": "3,5/5",
+      "notes": "Terzo Urza's Saga: la Saga trova Blade e i pezzi da 1 mana con regolarità."
+    },
+    {
+      "month": 7,
+      "label": "Mese 7 (maggio 2027)",
+      "budgetEur": 50.0,
+      "carryoverInEur": 25.3,
+      "availableEur": 75.3,
+      "purchases": [
+        {
+          "qty": 1,
+          "card": "Urza's Saga",
+          "unitEur": 39.13,
+          "subtotalEur": 39.13,
+          "cheapestPrinting": "MB2",
+          "role": "lista finale"
+        },
+        {
+          "qty": 1,
+          "card": "Emrakul, the Promised End",
+          "unitEur": 22.57,
+          "subtotalEur": 22.57,
+          "cheapestPrinting": "INR",
+          "role": "lista finale"
+        }
+      ],
+      "spendEur": 61.7,
+      "carryoverOutEur": 13.6,
+      "mainboard": [
+        {
+          "qty": 4,
+          "card": "Basking Broodscale"
+        },
+        {
+          "qty": 3,
+          "card": "Blade of the Bloodchief"
+        },
+        {
+          "qty": 4,
+          "card": "Ancient Stirrings"
+        },
+        {
+          "qty": 4,
+          "card": "Malevolent Rumble"
+        },
+        {
+          "qty": 4,
+          "card": "Sowing Mycospawn"
+        },
+        {
+          "qty": 4,
+          "card": "Kozilek's Command"
+        },
+        {
+          "qty": 1,
+          "card": "Emrakul, the Promised End"
+        },
+        {
+          "qty": 4,
+          "card": "Glaring Fleshraker",
+          "note": "2 fissi (modifica di Giacomo), 2 sostituti temporanei di Emrakul"
+        },
+        {
+          "qty": 1,
+          "card": "Devourer of Destiny"
+        },
+        {
+          "qty": 1,
+          "card": "Haywire Mite"
+        },
+        {
+          "qty": 1,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Soul-Guide Lantern",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 1,
+          "card": "Springleaf Drum"
+        },
+        {
+          "qty": 2,
+          "card": "Talisman of Resilience",
+          "note": "1 già posseduto, 1 acquistato al mese 1"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 4,
+          "card": "Eldrazi Temple"
+        },
+        {
+          "qty": 4,
+          "card": "Ugin's Labyrinth"
+        },
+        {
+          "qty": 4,
+          "card": "Urza's Saga"
+        },
+        {
+          "qty": 1,
+          "card": "Shifting Woodland"
+        },
+        {
+          "qty": 10,
+          "card": "Forest",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 1,
+          "card": "Thought-Knot Seer",
+          "note": "sostituto temporaneo"
+        }
+      ],
+      "sideboard": [
+        {
+          "qty": 2,
+          "card": "Thought-Knot Seer"
+        },
+        {
+          "qty": 1,
+          "card": "Disruptor Flute"
+        },
+        {
+          "qty": 2,
+          "card": "Grafdigger's Cage"
+        },
+        {
+          "qty": 2,
+          "card": "Nature's Claim"
+        },
+        {
+          "qty": 2,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Pithing Needle"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 2,
+          "card": "Torpor Orb",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 2,
+          "card": "Origin of Metalbending",
+          "note": "sostituto temporaneo"
+        }
+      ],
+      "mainboardCount": 60,
+      "sideboardCount": 15,
+      "targetMainCardsInPlace": 52,
+      "targetSideCardsInPlace": 11,
+      "targetMainValuePct": 56,
+      "substitutions": [
+        "4 Forest al posto delle terre mancanti (Urza's Saga, Ugin's Labyrinth, Boseiju, Cavern, Gemstone, Shifting Woodland)",
+        "2 Glaring Fleshraker (sostituto)",
+        "1 Blade of the Bloodchief (sostituto)",
+        "1 Thought-Knot Seer (sostituto)"
+      ],
+      "strength": "3,5/5",
+      "notes": "4 Urza's Saga e primo Emrakul."
+    },
+    {
+      "month": 8,
+      "label": "Mese 8 (giugno 2027)",
+      "budgetEur": 50.0,
+      "carryoverInEur": 13.6,
+      "availableEur": 63.6,
+      "purchases": [
+        {
+          "qty": 2,
+          "card": "Emrakul, the Promised End",
+          "unitEur": 22.57,
+          "subtotalEur": 45.14,
+          "cheapestPrinting": "INR",
+          "role": "lista finale"
+        }
+      ],
+      "spendEur": 45.14,
+      "carryoverOutEur": 18.46,
+      "mainboard": [
+        {
+          "qty": 4,
+          "card": "Basking Broodscale"
+        },
+        {
+          "qty": 2,
+          "card": "Blade of the Bloodchief"
+        },
+        {
+          "qty": 4,
+          "card": "Ancient Stirrings"
+        },
+        {
+          "qty": 4,
+          "card": "Malevolent Rumble"
+        },
+        {
+          "qty": 4,
+          "card": "Sowing Mycospawn"
+        },
+        {
+          "qty": 4,
+          "card": "Kozilek's Command"
+        },
+        {
+          "qty": 3,
+          "card": "Emrakul, the Promised End"
+        },
+        {
+          "qty": 4,
+          "card": "Glaring Fleshraker",
+          "note": "2 fissi (modifica di Giacomo), 2 sostituti temporanei di Emrakul"
+        },
+        {
+          "qty": 1,
+          "card": "Devourer of Destiny"
+        },
+        {
+          "qty": 1,
+          "card": "Haywire Mite"
+        },
+        {
+          "qty": 1,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Soul-Guide Lantern",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 1,
+          "card": "Springleaf Drum"
+        },
+        {
+          "qty": 2,
+          "card": "Talisman of Resilience",
+          "note": "1 già posseduto, 1 acquistato al mese 1"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 4,
+          "card": "Eldrazi Temple"
+        },
+        {
+          "qty": 4,
+          "card": "Ugin's Labyrinth"
+        },
+        {
+          "qty": 4,
+          "card": "Urza's Saga"
+        },
+        {
+          "qty": 1,
+          "card": "Shifting Woodland"
+        },
+        {
+          "qty": 10,
+          "card": "Forest",
+          "note": "già posseduto"
+        }
+      ],
+      "sideboard": [
+        {
+          "qty": 3,
+          "card": "Thought-Knot Seer"
+        },
+        {
+          "qty": 1,
+          "card": "Disruptor Flute"
+        },
+        {
+          "qty": 2,
+          "card": "Grafdigger's Cage"
+        },
+        {
+          "qty": 2,
+          "card": "Nature's Claim"
+        },
+        {
+          "qty": 2,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Pithing Needle"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 2,
+          "card": "Torpor Orb",
+          "note": "sostituto temporaneo"
+        },
+        {
+          "qty": 1,
+          "card": "Origin of Metalbending",
+          "note": "sostituto temporaneo"
+        }
+      ],
+      "mainboardCount": 60,
+      "sideboardCount": 15,
+      "targetMainCardsInPlace": 54,
+      "targetSideCardsInPlace": 12,
+      "targetMainValuePct": 64,
+      "substitutions": [
+        "4 Forest al posto delle terre mancanti (Urza's Saga, Ugin's Labyrinth, Boseiju, Cavern, Gemstone, Shifting Woodland)",
+        "2 Glaring Fleshraker (sostituto)"
+      ],
+      "strength": "4/5",
+      "notes": "Due Emrakul in più: il piano B grosso è quasi completo."
+    },
+    {
+      "month": 9,
+      "label": "Mese 9 (luglio 2027)",
+      "budgetEur": 50.0,
+      "carryoverInEur": 18.46,
+      "availableEur": 68.46,
+      "purchases": [
+        {
+          "qty": 1,
+          "card": "Emrakul, the Promised End",
+          "unitEur": 22.57,
+          "subtotalEur": 22.57,
+          "cheapestPrinting": "INR",
+          "role": "lista finale"
+        },
+        {
+          "qty": 1,
+          "card": "Sire of Seven Deaths",
+          "unitEur": 19.89,
+          "subtotalEur": 19.89,
+          "cheapestPrinting": "FDN",
+          "role": "lista finale"
+        },
+        {
+          "qty": 1,
+          "card": "Trinisphere",
+          "unitEur": 21.22,
+          "subtotalEur": 21.22,
+          "cheapestPrinting": "DST",
+          "role": "lista finale"
+        }
+      ],
+      "spendEur": 63.68,
+      "carryoverOutEur": 4.78,
+      "mainboard": [
+        {
+          "qty": 4,
+          "card": "Basking Broodscale"
+        },
+        {
+          "qty": 2,
+          "card": "Blade of the Bloodchief"
+        },
+        {
+          "qty": 4,
+          "card": "Ancient Stirrings"
+        },
+        {
+          "qty": 4,
+          "card": "Malevolent Rumble"
+        },
+        {
+          "qty": 4,
+          "card": "Sowing Mycospawn"
+        },
+        {
+          "qty": 4,
+          "card": "Kozilek's Command"
+        },
+        {
+          "qty": 4,
+          "card": "Emrakul, the Promised End"
+        },
+        {
+          "qty": 1,
+          "card": "Sire of Seven Deaths"
+        },
+        {
+          "qty": 2,
+          "card": "Glaring Fleshraker",
+          "note": "2 fissi (modifica di Giacomo)"
+        },
+        {
+          "qty": 1,
+          "card": "Devourer of Destiny"
+        },
+        {
+          "qty": 1,
+          "card": "Haywire Mite"
+        },
+        {
+          "qty": 1,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Soul-Guide Lantern",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 1,
+          "card": "Springleaf Drum"
+        },
+        {
+          "qty": 2,
+          "card": "Talisman of Resilience",
+          "note": "1 già posseduto, 1 acquistato al mese 1"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 4,
+          "card": "Eldrazi Temple"
+        },
+        {
+          "qty": 4,
+          "card": "Ugin's Labyrinth"
+        },
+        {
+          "qty": 4,
+          "card": "Urza's Saga"
+        },
+        {
+          "qty": 1,
+          "card": "Shifting Woodland"
+        },
+        {
+          "qty": 10,
+          "card": "Forest",
+          "note": "già posseduto"
+        }
+      ],
+      "sideboard": [
+        {
+          "qty": 3,
+          "card": "Thought-Knot Seer"
+        },
+        {
+          "qty": 1,
+          "card": "Trinisphere"
+        },
+        {
+          "qty": 1,
+          "card": "Disruptor Flute"
+        },
+        {
+          "qty": 2,
+          "card": "Grafdigger's Cage"
+        },
+        {
+          "qty": 2,
+          "card": "Nature's Claim"
+        },
+        {
+          "qty": 2,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Pithing Needle"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 2,
+          "card": "Torpor Orb",
+          "note": "sostituto temporaneo"
+        }
+      ],
+      "mainboardCount": 60,
+      "sideboardCount": 15,
+      "targetMainCardsInPlace": 56,
+      "targetSideCardsInPlace": 13,
+      "targetMainValuePct": 72,
+      "substitutions": [
+        "4 Forest al posto delle terre mancanti (Urza's Saga, Ugin's Labyrinth, Boseiju, Cavern, Gemstone, Shifting Woodland)"
+      ],
+      "strength": "4/5",
+      "notes": "Main quasi definitiva: 4 Emrakul, 1 Sire e i 2 Glaring Fleshraker fissi. Prima Trinisphere in side. Mancano solo le terre di lusso."
+    },
+    {
+      "month": 10,
+      "label": "Mese 10 (agosto 2027)",
+      "budgetEur": 50.0,
+      "carryoverInEur": 4.78,
+      "availableEur": 54.78,
+      "purchases": [
+        {
+          "qty": 2,
+          "card": "Trinisphere",
+          "unitEur": 21.22,
+          "subtotalEur": 42.44,
+          "cheapestPrinting": "DST",
+          "role": "lista finale"
+        }
+      ],
+      "spendEur": 42.44,
+      "carryoverOutEur": 12.34,
+      "mainboard": [
+        {
+          "qty": 4,
+          "card": "Basking Broodscale"
+        },
+        {
+          "qty": 2,
+          "card": "Blade of the Bloodchief"
+        },
+        {
+          "qty": 4,
+          "card": "Ancient Stirrings"
+        },
+        {
+          "qty": 4,
+          "card": "Malevolent Rumble"
+        },
+        {
+          "qty": 4,
+          "card": "Sowing Mycospawn"
+        },
+        {
+          "qty": 4,
+          "card": "Kozilek's Command"
+        },
+        {
+          "qty": 4,
+          "card": "Emrakul, the Promised End"
+        },
+        {
+          "qty": 1,
+          "card": "Sire of Seven Deaths"
+        },
+        {
+          "qty": 2,
+          "card": "Glaring Fleshraker",
+          "note": "2 fissi (modifica di Giacomo)"
+        },
+        {
+          "qty": 1,
+          "card": "Devourer of Destiny"
+        },
+        {
+          "qty": 1,
+          "card": "Haywire Mite"
+        },
+        {
+          "qty": 1,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Soul-Guide Lantern",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 1,
+          "card": "Springleaf Drum"
+        },
+        {
+          "qty": 2,
+          "card": "Talisman of Resilience",
+          "note": "1 già posseduto, 1 acquistato al mese 1"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 4,
+          "card": "Eldrazi Temple"
+        },
+        {
+          "qty": 4,
+          "card": "Ugin's Labyrinth"
+        },
+        {
+          "qty": 4,
+          "card": "Urza's Saga"
+        },
+        {
+          "qty": 1,
+          "card": "Shifting Woodland"
+        },
+        {
+          "qty": 10,
+          "card": "Forest",
+          "note": "già posseduto"
+        }
+      ],
+      "sideboard": [
+        {
+          "qty": 3,
+          "card": "Thought-Knot Seer"
+        },
+        {
+          "qty": 3,
+          "card": "Trinisphere"
+        },
+        {
+          "qty": 1,
+          "card": "Disruptor Flute"
+        },
+        {
+          "qty": 2,
+          "card": "Grafdigger's Cage"
+        },
+        {
+          "qty": 2,
+          "card": "Nature's Claim"
+        },
+        {
+          "qty": 2,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Pithing Needle"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        }
+      ],
+      "mainboardCount": 60,
+      "sideboardCount": 15,
+      "targetMainCardsInPlace": 56,
+      "targetSideCardsInPlace": 15,
+      "targetMainValuePct": 72,
+      "substitutions": [
+        "4 Forest al posto delle terre mancanti (Urza's Saga, Ugin's Labyrinth, Boseiju, Cavern, Gemstone, Shifting Woodland)"
+      ],
+      "strength": "4,5/5",
+      "notes": "Side completo con 3 Trinisphere."
+    },
+    {
+      "month": 11,
+      "label": "Mese 11 (settembre 2027)",
+      "budgetEur": 50.0,
+      "carryoverInEur": 12.34,
+      "availableEur": 62.34,
+      "purchases": [
+        {
+          "qty": 1,
+          "card": "Boseiju, Who Endures",
+          "unitEur": 39.05,
+          "subtotalEur": 39.05,
+          "cheapestPrinting": "PNEO",
+          "role": "lista finale"
+        }
+      ],
+      "spendEur": 39.05,
+      "carryoverOutEur": 23.29,
+      "mainboard": [
+        {
+          "qty": 4,
+          "card": "Basking Broodscale"
+        },
+        {
+          "qty": 2,
+          "card": "Blade of the Bloodchief"
+        },
+        {
+          "qty": 4,
+          "card": "Ancient Stirrings"
+        },
+        {
+          "qty": 4,
+          "card": "Malevolent Rumble"
+        },
+        {
+          "qty": 4,
+          "card": "Sowing Mycospawn"
+        },
+        {
+          "qty": 4,
+          "card": "Kozilek's Command"
+        },
+        {
+          "qty": 4,
+          "card": "Emrakul, the Promised End"
+        },
+        {
+          "qty": 1,
+          "card": "Sire of Seven Deaths"
+        },
+        {
+          "qty": 2,
+          "card": "Glaring Fleshraker",
+          "note": "2 fissi (modifica di Giacomo)"
+        },
+        {
+          "qty": 1,
+          "card": "Devourer of Destiny"
+        },
+        {
+          "qty": 1,
+          "card": "Haywire Mite"
+        },
+        {
+          "qty": 1,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Soul-Guide Lantern",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 1,
+          "card": "Springleaf Drum"
+        },
+        {
+          "qty": 2,
+          "card": "Talisman of Resilience",
+          "note": "1 già posseduto, 1 acquistato al mese 1"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 4,
+          "card": "Eldrazi Temple"
+        },
+        {
+          "qty": 4,
+          "card": "Ugin's Labyrinth"
+        },
+        {
+          "qty": 4,
+          "card": "Urza's Saga"
+        },
+        {
+          "qty": 1,
+          "card": "Boseiju, Who Endures"
+        },
+        {
+          "qty": 1,
+          "card": "Shifting Woodland"
+        },
+        {
+          "qty": 9,
+          "card": "Forest",
+          "note": "già posseduto"
+        }
+      ],
+      "sideboard": [
+        {
+          "qty": 3,
+          "card": "Thought-Knot Seer"
+        },
+        {
+          "qty": 3,
+          "card": "Trinisphere"
+        },
+        {
+          "qty": 1,
+          "card": "Disruptor Flute"
+        },
+        {
+          "qty": 2,
+          "card": "Grafdigger's Cage"
+        },
+        {
+          "qty": 2,
+          "card": "Nature's Claim"
+        },
+        {
+          "qty": 2,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Pithing Needle"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        }
+      ],
+      "mainboardCount": 60,
+      "sideboardCount": 15,
+      "targetMainCardsInPlace": 57,
+      "targetSideCardsInPlace": 15,
+      "targetMainValuePct": 79,
+      "substitutions": [
+        "3 Forest al posto delle terre mancanti (Urza's Saga, Ugin's Labyrinth, Boseiju, Cavern, Gemstone, Shifting Woodland)"
+      ],
+      "strength": "4,5/5",
+      "notes": "Primo Boseiju."
+    },
+    {
+      "month": 12,
+      "label": "Mese 12 (ottobre 2027)",
+      "budgetEur": 50.0,
+      "carryoverInEur": 23.29,
+      "availableEur": 73.29,
+      "purchases": [
+        {
+          "qty": 1,
+          "card": "Boseiju, Who Endures",
+          "unitEur": 39.05,
+          "subtotalEur": 39.05,
+          "cheapestPrinting": "PNEO",
+          "role": "lista finale"
+        }
+      ],
+      "spendEur": 39.05,
+      "carryoverOutEur": 34.24,
+      "mainboard": [
+        {
+          "qty": 4,
+          "card": "Basking Broodscale"
+        },
+        {
+          "qty": 2,
+          "card": "Blade of the Bloodchief"
+        },
+        {
+          "qty": 4,
+          "card": "Ancient Stirrings"
+        },
+        {
+          "qty": 4,
+          "card": "Malevolent Rumble"
+        },
+        {
+          "qty": 4,
+          "card": "Sowing Mycospawn"
+        },
+        {
+          "qty": 4,
+          "card": "Kozilek's Command"
+        },
+        {
+          "qty": 4,
+          "card": "Emrakul, the Promised End"
+        },
+        {
+          "qty": 1,
+          "card": "Sire of Seven Deaths"
+        },
+        {
+          "qty": 2,
+          "card": "Glaring Fleshraker",
+          "note": "2 fissi (modifica di Giacomo)"
+        },
+        {
+          "qty": 1,
+          "card": "Devourer of Destiny"
+        },
+        {
+          "qty": 1,
+          "card": "Haywire Mite"
+        },
+        {
+          "qty": 1,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Soul-Guide Lantern",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 1,
+          "card": "Springleaf Drum"
+        },
+        {
+          "qty": 2,
+          "card": "Talisman of Resilience",
+          "note": "1 già posseduto, 1 acquistato al mese 1"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 4,
+          "card": "Eldrazi Temple"
+        },
+        {
+          "qty": 4,
+          "card": "Ugin's Labyrinth"
+        },
+        {
+          "qty": 4,
+          "card": "Urza's Saga"
+        },
+        {
+          "qty": 2,
+          "card": "Boseiju, Who Endures"
+        },
+        {
+          "qty": 1,
+          "card": "Shifting Woodland"
+        },
+        {
+          "qty": 8,
+          "card": "Forest",
+          "note": "già posseduto"
+        }
+      ],
+      "sideboard": [
+        {
+          "qty": 3,
+          "card": "Thought-Knot Seer"
+        },
+        {
+          "qty": 3,
+          "card": "Trinisphere"
+        },
+        {
+          "qty": 1,
+          "card": "Disruptor Flute"
+        },
+        {
+          "qty": 2,
+          "card": "Grafdigger's Cage"
+        },
+        {
+          "qty": 2,
+          "card": "Nature's Claim"
+        },
+        {
+          "qty": 2,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Pithing Needle"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        }
+      ],
+      "mainboardCount": 60,
+      "sideboardCount": 15,
+      "targetMainCardsInPlace": 58,
+      "targetSideCardsInPlace": 15,
+      "targetMainValuePct": 87,
+      "substitutions": [
+        "2 Forest al posto delle terre mancanti (Urza's Saga, Ugin's Labyrinth, Boseiju, Cavern, Gemstone, Shifting Woodland)"
+      ],
+      "strength": "4,5/5",
+      "notes": "Secondo Boseiju."
+    },
+    {
+      "month": 13,
+      "label": "Mese 13 (novembre 2027)",
+      "budgetEur": 50.0,
+      "carryoverInEur": 34.24,
+      "availableEur": 84.24,
+      "purchases": [
+        {
+          "qty": 1,
+          "card": "Gemstone Caverns",
+          "unitEur": 38.29,
+          "subtotalEur": 38.29,
+          "cheapestPrinting": "TSP",
+          "role": "lista finale"
+        },
+        {
+          "qty": 1,
+          "card": "Cavern of Souls",
+          "unitEur": 33.95,
+          "subtotalEur": 33.95,
+          "cheapestPrinting": "AVR",
+          "role": "lista finale"
+        }
+      ],
+      "spendEur": 72.24,
+      "carryoverOutEur": 12.0,
+      "mainboard": [
+        {
+          "qty": 4,
+          "card": "Basking Broodscale"
+        },
+        {
+          "qty": 2,
+          "card": "Blade of the Bloodchief"
+        },
+        {
+          "qty": 4,
+          "card": "Ancient Stirrings"
+        },
+        {
+          "qty": 4,
+          "card": "Malevolent Rumble"
+        },
+        {
+          "qty": 4,
+          "card": "Sowing Mycospawn"
+        },
+        {
+          "qty": 4,
+          "card": "Kozilek's Command"
+        },
+        {
+          "qty": 4,
+          "card": "Emrakul, the Promised End"
+        },
+        {
+          "qty": 1,
+          "card": "Sire of Seven Deaths"
+        },
+        {
+          "qty": 2,
+          "card": "Glaring Fleshraker",
+          "note": "2 fissi (modifica di Giacomo)"
+        },
+        {
+          "qty": 1,
+          "card": "Devourer of Destiny"
+        },
+        {
+          "qty": 1,
+          "card": "Haywire Mite"
+        },
+        {
+          "qty": 1,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Soul-Guide Lantern",
+          "note": "già posseduto"
+        },
+        {
+          "qty": 1,
+          "card": "Springleaf Drum"
+        },
+        {
+          "qty": 2,
+          "card": "Talisman of Resilience",
+          "note": "1 già posseduto, 1 acquistato al mese 1"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        },
+        {
+          "qty": 4,
+          "card": "Eldrazi Temple"
+        },
+        {
+          "qty": 4,
+          "card": "Ugin's Labyrinth"
+        },
+        {
+          "qty": 4,
+          "card": "Urza's Saga"
+        },
+        {
+          "qty": 2,
+          "card": "Boseiju, Who Endures"
+        },
+        {
+          "qty": 1,
+          "card": "Cavern of Souls"
+        },
+        {
+          "qty": 1,
+          "card": "Gemstone Caverns"
+        },
+        {
+          "qty": 1,
+          "card": "Shifting Woodland"
+        },
+        {
+          "qty": 6,
+          "card": "Forest",
+          "note": "già posseduto"
+        }
+      ],
+      "sideboard": [
+        {
+          "qty": 3,
+          "card": "Thought-Knot Seer"
+        },
+        {
+          "qty": 3,
+          "card": "Trinisphere"
+        },
+        {
+          "qty": 1,
+          "card": "Disruptor Flute"
+        },
+        {
+          "qty": 2,
+          "card": "Grafdigger's Cage"
+        },
+        {
+          "qty": 2,
+          "card": "Nature's Claim"
+        },
+        {
+          "qty": 2,
+          "card": "Dismember"
+        },
+        {
+          "qty": 1,
+          "card": "Pithing Needle"
+        },
+        {
+          "qty": 1,
+          "card": "Vexing Bauble"
+        }
+      ],
+      "mainboardCount": 60,
+      "sideboardCount": 15,
+      "targetMainCardsInPlace": 60,
+      "targetSideCardsInPlace": 15,
+      "targetMainValuePct": 100,
+      "substitutions": [],
+      "strength": "5/5",
+      "notes": "Lista completa: i 75 di Tetsubou con la modifica di Giacomo (2 Glaring Fleshraker fissi al posto di 1 Sire of Seven Deaths e 1 Dismember spostato in side; −1 Disruptor Flute in side)."
+    }
+  ],
+  "finalList": {
+    "mainboard": [
+      {
+        "qty": 4,
+        "card": "Basking Broodscale"
+      },
+      {
+        "qty": 2,
+        "card": "Blade of the Bloodchief"
+      },
+      {
+        "qty": 4,
+        "card": "Ancient Stirrings"
+      },
+      {
+        "qty": 4,
+        "card": "Malevolent Rumble"
+      },
+      {
+        "qty": 4,
+        "card": "Sowing Mycospawn"
+      },
+      {
+        "qty": 4,
+        "card": "Kozilek's Command"
+      },
+      {
+        "qty": 4,
+        "card": "Emrakul, the Promised End"
+      },
+      {
+        "qty": 1,
+        "card": "Sire of Seven Deaths"
+      },
+      {
+        "qty": 2,
+        "card": "Glaring Fleshraker",
+        "note": "2 fissi (modifica di Giacomo)"
+      },
+      {
+        "qty": 1,
+        "card": "Devourer of Destiny"
+      },
+      {
+        "qty": 1,
+        "card": "Haywire Mite"
+      },
+      {
+        "qty": 1,
+        "card": "Dismember"
+      },
+      {
+        "qty": 1,
+        "card": "Soul-Guide Lantern",
+        "note": "già posseduto"
+      },
+      {
+        "qty": 1,
+        "card": "Springleaf Drum"
+      },
+      {
+        "qty": 2,
+        "card": "Talisman of Resilience",
+        "note": "1 già posseduto, 1 acquistato al mese 1"
+      },
+      {
+        "qty": 1,
+        "card": "Vexing Bauble"
+      },
+      {
+        "qty": 4,
+        "card": "Eldrazi Temple"
+      },
+      {
+        "qty": 4,
+        "card": "Ugin's Labyrinth"
+      },
+      {
+        "qty": 4,
+        "card": "Urza's Saga"
+      },
+      {
+        "qty": 2,
+        "card": "Boseiju, Who Endures"
+      },
+      {
+        "qty": 1,
+        "card": "Cavern of Souls"
+      },
+      {
+        "qty": 1,
+        "card": "Gemstone Caverns"
+      },
+      {
+        "qty": 1,
+        "card": "Shifting Woodland"
+      },
+      {
+        "qty": 6,
+        "card": "Forest",
+        "note": "già posseduto"
+      }
+    ],
+    "sideboard": [
+      {
+        "qty": 3,
+        "card": "Thought-Knot Seer"
+      },
+      {
+        "qty": 3,
+        "card": "Trinisphere"
+      },
+      {
+        "qty": 1,
+        "card": "Disruptor Flute"
+      },
+      {
+        "qty": 2,
+        "card": "Grafdigger's Cage"
+      },
+      {
+        "qty": 2,
+        "card": "Nature's Claim"
+      },
+      {
+        "qty": 2,
+        "card": "Dismember"
+      },
+      {
+        "qty": 1,
+        "card": "Pithing Needle"
+      },
+      {
+        "qty": 1,
+        "card": "Vexing Bauble"
+      }
+    ]
+  },
+  "disclaimer": "Solo un piano: nessun acquisto, vendita o inserzione è stata fatta."
+}

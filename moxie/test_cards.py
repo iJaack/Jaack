@@ -19,6 +19,8 @@ class CardTests(unittest.TestCase):
   assets=json.loads((D/'card-images.json').read_text());names=set()
   for f in (P/'data/versions').glob('*.json'):
    v=json.loads(f.read_text());names.update(v['mainboard']);names.update(v['sideboard'])
+  plan=json.loads((P/'data/broodscale-plan.json').read_text())
+  names.update(x['card'] for m in plan['months'] for board in ['mainboard','sideboard','purchases'] for x in m[board])
   self.assertEqual(set(assets),names)
   for n,a in assets.items():
    self.assertEqual(set(a),{'name','url','faces'});self.assertEqual(a['name'],n)

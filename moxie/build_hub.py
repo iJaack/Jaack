@@ -9,6 +9,10 @@ H=json.loads((P/'data/hub.json').read_text());VERS={f.stem:json.loads(f.read_tex
 G={l:json.loads((P/('guide.json' if l=='it' else 'guide.en.json')).read_text()) for l in ['it','en']}
 STATE=json.loads((P/'translation-state.json').read_text())
 CC=json.loads((P/'collection-copy.json').read_text());assert hashlib.sha256((P/'collection-copy.json').read_bytes()).hexdigest()==STATE['collection'],'Collection copy changed: review IT + EN and update translation-state.json'
+PLAN=json.loads((P/'data/broodscale-plan.json').read_text())
+PROGRESS=json.loads((P/'data/broodscale-progress.json').read_text())
+PC=json.loads((P/'broodscale-copy.json').read_text());assert hashlib.sha256((P/'broodscale-copy.json').read_bytes()).hexdigest()==STATE['broodscale'],'Plan copy changed: review IT + EN and update translation-state.json'
+ASSETS=json.loads((P/'card-images.json').read_text())
 COLL=json.loads((P/'data/collection.json').read_text());attach_decks(COLL['cards'])
 for l in G:assert hashlib.sha256((P/('guide.json' if l=='it' else 'guide.en.json')).read_bytes()).hexdigest()==STATE[l],'Translation changed: review and update translation-state.json'
 assert G['it']['deck']==G['en']['deck'] and G['it']['plans']==G['en']['plans']
@@ -18,7 +22,7 @@ PDF={'it':'mono-green-landfall-galactus-11-settembre-2026.pdf','en':'mono-green-
 for f in PDF.values():shutil.copy2(P/'pdf'/f,DIST/f)
 esc=html.escape
 WORDS={
- 'decks':('Mazzi','Decks'),'collection':('Collezione','Collection'),'journal':('Diario','Journal'),'guides':('Guide','Guides'),'skip':('Vai al contenuto','Skip to content'),'index':('Indice','Contents'),'top':('Torna all’inizio','Back to top'),
+ 'decks':('Mazzi','Decks'),'modern':('Modern','Modern'),'collection':('Collezione','Collection'),'journal':('Diario','Journal'),'guides':('Guide','Guides'),'skip':('Vai al contenuto','Skip to content'),'index':('Indice','Contents'),'top':('Torna all’inizio','Back to top'),
  'home_title':('I mazzi, e quello<br/><i>che mi insegnano.</i>','Decks, and what<br/><i>they teach me.</i>'),'home_intro':('Liste, cambi di idea e serate al tavolo. La storia dei miei mazzi di Magic, una versione alla volta.','Lists, changes of mind and nights at the table. The story of my Magic decks, one version at a time.'),
  'active':('Attivo','Active'),'archived':('Archiviato','Archived'),'incomplete':('Incompleto','Incomplete'),'proposal':('Proposta','Proposal'),'current':('Preparato','Prepared'),'planned':('In programma','Planned'),'reported':('Resoconto','Reported'),'preparation':('Preparazione','Preparation'),
  'latest_saved':('Ultima lista conservata','Latest saved list'),'latest':('La lista attuale','Current list'),'history':('Storia del mazzo','Deck history'),'read_guide':('Apri la guida','Read the guide'),'upcoming':('La prossima serata','Next session'),'recent':('Ultime dal diario','Latest journal entries'),'all_decks':('Tutti i mazzi','All decks'),'archive_intro':('Mazzi attivi e liste conservate. Ogni snapshot mantiene la propria data, anche quando il mazzo cambia.','Active decks and preserved lists. Each snapshot keeps its own date, even as the deck changes.'),
@@ -30,7 +34,7 @@ WORDS={
  'snapshot_guide':('Guida della versione del 10 settembre 2026','Guide for the September 10, 2026 version'),'related':('Da dove arriva','Where it came from'),'version_date':('Versione del','Version dated'),'footer':('Moxie raccoglie la storia dei miei mazzi. Le liste storiche e i resoconti incompleti mantengono i loro limiti.','Moxie collects the history of my decks. Historical lists and incomplete reports retain their limitations.'),'disclaimer':('Guida indipendente, non affiliata a Wizards of the Coast. Magic: The Gathering è un marchio di Wizards of the Coast.','Independent guide, not affiliated with Wizards of the Coast. Magic: The Gathering is a trademark of Wizards of the Coast.'),'counts_unit':('carte','cards'),'visit_deck':('Vai al mazzo','View deck'),'no_stats':('I resoconti disponibili non bastano per calcolare statistiche complessive attendibili.','The available reports are not enough to calculate reliable overall statistics.'),'language':('Lingua','Language')}
 def t(k,l):return WORDS[k][0 if l=='it' else 1]
 def tx(x,l):return x[l] if isinstance(x,dict) else x
-SLUGS={'collection':{'it':'collezione','en':'collection'}}
+SLUGS={'collection':{'it':'collezione','en':'collection'},'modern':{'it':'modern/broodscale','en':'modern/broodscale'}}
 def lpath(k,l):return SLUGS[k][l] if k in SLUGS else k
 def route(l,path=''):return '/'+l+'/'+path.strip('/')+('/' if path.strip('/') else '')
 def deckpath(d):return 'decks/'+d['id']
@@ -50,7 +54,7 @@ def shell(l,path,title,body,nav=None,section='',deck_id=None,paths=None):
  page_theme=('deck-theme '+theme(DECKS[deck_id])) if deck_id else ''
  other='en' if l=='it' else 'it';canonical='https://moxie.jaack.me'+route(l,paths[l])
  langs=''.join(f'<a data-language href="{route(ll,paths[ll])}" lang="{ll}" hreflang="{ll}"'+(' aria-current="page"' if ll==l else '')+f'>{ll.upper()}</a>' for ll in ['it','en'])
- globalnav=''.join(a(route(l,lpath(k,l)),t(k,l),'jk-sw keep selected' if section==k else 'jk-sw keep') for k in ['decks','journal','guides','collection'])
+ globalnav=''.join(a(route(l,lpath(k,l)),t(k,l),'jk-sw keep selected' if section==k else 'jk-sw keep') for k in ['decks','modern','journal','guides','collection'])
  toc=''
  if nav:
   links='<nav aria-label="'+t('index',l)+'">'+''.join(a('#'+key,esc(label)) for key,label in nav)+'</nav>'
@@ -163,6 +167,42 @@ def render_collection(l):
  body=f'<header class="intro"><h1>{esc(c["title"])}</h1><p>{esc(c["intro"])}</p></header>{totals}{note}<section class="collection" data-collection data-src="/collection.json" id="collection"><script type="application/json" class="collection-copy">{copy}</script><script type="application/json" class="collection-decks">{decks}</script><div class="collection-app" hidden></div><p class="collection-status small" role="status" aria-live="polite"></p><div class="collection-static">{table}</div></section>'
  shell(l,lpath('collection',l),c['nav'],body,section='collection',paths={'it':lpath('collection','it'),'en':lpath('collection','en')})
 
+def plan_month_label(month,l):
+ year,first=map(int,PROGRESS['startMonth'].split('-'))
+ offset=first-1+month-1;year+=offset//12
+ return f'{PC[l]["month"]} {month} · {PC[l]["months_names"][offset%12]} {year}'
+
+def render_modern_plan(l):
+ c=PC[l];total=PLAN['totalMonths'];current=PROGRESS['currentMonth']
+ def card_link(name):return a(ASSETS[name]['url'],esc(name))
+ def stat(value,label):return f'<div><dt>{esc(label)}</dt><dd>{value}</dd></div>'
+ overview=f'<header class="intro plan-intro"><p class="eyebrow">{esc(c["eyebrow"])}</p><h1>{esc(c["title"])}</h1><p>{esc(c["intro"])}</p><p>{esc(c["goal"])}</p></header>'
+ overview+='<dl class="plan-stats">'+stat(money(PLAN['budgetPerMonth'],l),c['per_month'])+stat(total,c['months'])+stat(money(PLAN['totalSpendEur'],l),c['estimated_total'])+'</dl>'
+ overview+=f'<aside class="note"><p>{esc(c["prices"])}</p><p>{esc(c["rules"])}</p></aside><p class="small">{esc(c["temporary_cost"])}: {money(PLAN["temporarySubstitutesCostEur"],l)} · {esc(c["remaining_budget"])}: {money(PLAN["months"][-1]["carryoverOutEur"],l)}</p>'
+ overview+=f'<details class="plan-source"><summary>{esc(c["final"])} · 2 Glaring Fleshraker</summary><p>{esc(c["modification"])}</p><p>{a(PLAN["sourceList"]["url"],esc(c["source"]))} · {a(PLAN["sourceList"]["tournamentUrl"],esc(c["tournament"]))}</p></details>'
+ progress=f'<section class="chapter plan-progress" id="progress"><h2>{esc(c["progress"])}</h2><p><strong>{esc(c["current"])}: {esc(plan_month_label(current,l))}</strong></p><label for="plan-progress">{PROGRESS["completedMonths"]} / {total} {esc(c["completed_months"])}</label><progress id="plan-progress" value="{PROGRESS["completedMonths"]}" max="{total}">{PROGRESS["completedMonths"]} / {total}</progress><p>{PROGRESS["purchasedCards"]} {esc(c["bought"])} · {esc(c["actual_spend"])}: {money(PROGRESS["actualSpendEur"],l)}</p><p class="small">{esc(c["status_note"])}</p></section>'
+ jumps=[];months=[]
+ for m in PLAN['months']:
+  n=m['month'];label=plan_month_label(n,l)
+  state=c['completed'] if n<=PROGRESS['completedMonths'] else c['current'] if n==current else c['planned']
+  jumps.append(f'<li><a href="#month-{n}"'+(' aria-current="step"' if n==current else '')+f'><span>{n:02}</span><span>{esc(label.split(" · ")[1])}</span></a></li>')
+  ledger='<dl class="plan-ledger">'+''.join(stat(money(m[key],l),c[word]) for key,word in [('budgetEur','budget'),('carryoverInEur','carry_in'),('availableEur','available'),('spendEur','spend'),('carryoverOutEur','carry_out')])+'</dl>'
+  head=''.join(f'<th scope="col">{esc(c[k])}</th>' for k in ['qty','card','unit','subtotal'])
+  rows=[]
+  for x in m['purchases']:
+   rows.append(f'<tr><td class="num">{x["qty"]}</td><th scope="row">{card_link(x["card"])}<span class="small plan-role">{esc(c["printing"])}: {esc(x["cheapestPrinting"])} · {esc(c["translations"][x["role"]])}</span></th><td class="num">{money(x["unitEur"],l)}</td><td class="num">{money(x["subtotalEur"],l)}</td></tr>')
+  buys=f'<h3>{esc(c["buys"])}</h3><div class="plan-table-wrap" role="region" aria-label="{esc(c["buys"]+" · "+label,quote=True)}" tabindex="0"><table class="plan-table"><caption class="sr-only">{esc(c["buys"]+" · "+label)}</caption><thead><tr>{head}</tr></thead><tbody>'+''.join(rows)+'</tbody></table></div>'
+  boards=[]
+  for board,key in [('mainboard','main'),('sideboard','side')]:
+   entries=m[board];b={x['card']:x['qty'] for x in entries};board_label=f'{t(key,l)} · {sum(b.values())}'
+   listing='<ul class="deck-list">'+''.join(f'<li><span class="quantity">{x["qty"]}</span><span>{card_link(x["card"])}'+(f'<span class="small plan-role">{esc(c["translations"][x["note"]])}</span>' if x.get('note') else '')+'</span></li>' for x in entries)+'</ul>'
+   boards.append(f'<h3>{board_label}</h3>'+card_browser(b,l,board_label,listing))
+  subs=('<h3>'+esc(c['substitutions'])+'</h3><ul>'+''.join('<li>'+esc(c['translations'][s])+'</li>' for s in m['substitutions'])+'</ul>') if m['substitutions'] else ''
+  strength=m['strength'] if l=='it' else m['strength'].replace(',','.')
+  months.append(f'<article class="plan-month" id="month-{n}"><div class="row-meta"><span>{esc(state)}</span><span>{esc(c["strength"])}: {esc(strength)}</span></div><h3 class="plan-month-title">{esc(label)}</h3><p>{esc(c["notes"][n-1])}</p>{ledger}<p class="small">{esc(c["target_cards"])}: {m["targetMainCardsInPlace"]}/60 · {m["targetSideCardsInPlace"]}/15</p><details class="plan-details"'+(' open' if n==current else '')+f'><summary>{esc(c["details"])} · 60 + 15</summary>{buys}{subs}'+''.join(boards)+'</details></article>')
+ timeline=f'<section class="chapter" id="timeline"><h2>{esc(c["timeline"])}</h2><p class="small">{esc(c["strength_note"])}</p><nav aria-label="{esc(c["timeline"],quote=True)}"><ol class="plan-steps">'+''.join(jumps)+'</ol></nav>'+''.join(months)+'</section>'
+ shell(l,lpath('modern',l),c['title'],overview+progress+timeline,section='modern')
+
 for l in ['it','en']:
  active=DECKS['mono-green-landfall'];cv=VERS[active['latest_version']]
  intro=f'<header class="intro home-intro"><h1>{t("home_title",l)}</h1><p>{t("home_intro",l)}</p></header>'
@@ -170,7 +210,9 @@ for l in ['it','en']:
  upcoming_events=[e for e in H['events'] if e['status']=='planned' and e['date']>=H['updated']]
  upcoming=f'<section class="chapter"><h2>{t("upcoming",l)}</h2>{eventrow(upcoming_events[0],l)}</section>' if upcoming_events else ''
  latest=f'<section class="chapter"><h2>{t("recent",l)}</h2>'+''.join(eventrow(e,l) for e in H['events'][:3] if e['status']!='planned')+a(route(l,'journal'),t('journal',l)+' →')+'</section>'
- home=shell(l,'',t('decks',l),intro+feature+upcoming+latest)
+ c=PC[l]
+ modern=f'<section class="chapter"><div class="row-meta"><span>Modern · 60 + 15</span><span>{money(PLAN["budgetPerMonth"],l)} / {esc(c["month"].lower())} · {PLAN["totalMonths"]} {esc(c["months"])}</span></div><h2>Broodscale Bloodchief</h2><p>{esc(c["home_intro"])}</p>{a(route(l,lpath("modern",l)),esc(c["open_plan"]),"button primary")}</section>'
+ home=shell(l,'',t('decks',l),intro+feature+modern+upcoming+latest)
  if l=='it':(DIST/'index.html').write_text(home)
  body=f'<header class="intro"><h1>{t("decks",l)}.</h1><p>{t("archive_intro",l)}</p></header><label class="filter-label" for="deck-filter">{t("filter_decks",l)}</label><select id="deck-filter" data-filter="decks">'+''.join(f'<option value="{k}">{t(k,l)}</option>' for k in ['all','active','archived','incomplete'])+'</select><div class="deck-archive">'+''.join(deckrow(d,l) for d in H['decks'])+'</div>'
  shell(l,'decks',t('decks',l),body,section='decks')
@@ -208,6 +250,7 @@ for l in ['it','en']:
  render_guide(l)
  if currentguidepath()!=guidepath():render_current_guide(l)
  render_collection(l)
+ render_modern_plan(l)
 
 (DIST/'versions').mkdir(exist_ok=True)
 for v in VERS.values():(DIST/'versions'/(v['id']+'.txt')).write_text('Deck\n'+''.join(f'{q} {n}\n' for n,q in v['mainboard'].items())+'\nSideboard\n'+''.join(f'{q} {n}\n' for n,q in v['sideboard'].items()))

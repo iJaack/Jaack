@@ -19,7 +19,7 @@ class HubTests(unittest.TestCase):
  def setUpClass(cls):
   cls.routes=json.loads((P/'routes.json').read_text());cls.hub=json.loads((P/'data/hub.json').read_text());cls.versions={f.stem:json.loads(f.read_text()) for f in (P/'data/versions').glob('*.json')}
  def test_every_page_has_equivalent_languages(self):
-  self.assertEqual(len(self.routes),48)
+  self.assertEqual(len(self.routes),50)
   # Localized slugs: the collection lives at /it/collezione/ and /en/collection/.
   slug={'it':{'collection/':'collezione/'},'en':{'collezione/':'collection/'}}
   local=lambda l,rest:slug[l].get(rest,rest)
