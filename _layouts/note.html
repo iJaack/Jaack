@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<article class="note">
+  <header class="note-header">
+    <a class="note-back" href="{{ '/notes/' | relative_url }}">← Notes</a>
+    <h1 class="note-title">{{ page.title }}</h1>
+    <div class="note-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%b %-d, %Y' }}</time>
+      {% assign words = content | number_of_words %}{% if site.read-time and words >= 500 %}{% include read-time.html %}{% endif %}
+      <ul class="note-tags" aria-label="Tags">
+        {% for tag in page.tag %}<li><a class="note-tag" href="{{ '/notes/' | relative_url }}#tag-{{ tag | slugify }}">{{ tag }}</a></li>{% endfor %}
+      </ul>
+    </div>
+  </header>
+  <div class="note-body">{{ content }}</div>
+  {% if page.original_url %}{% assign source_host = page.original_url | split: '://' | last | split: '/' | first %}
+  <p class="note-origin">Originally published on <a class="note-source" href="{{ page.original_url | escape }}" rel="nofollow noopener">{{ source_host }}</a>.</p>
+  {% endif %}
+</article>
