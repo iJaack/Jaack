@@ -2,6 +2,8 @@ require 'minitest/autorun'
 require 'nokogiri'
 require 'uri'
 require 'cgi'
+require 'yaml'
+require 'date'
 
 class SiteTest < Minitest::Test
   ROOT = File.expand_path('../_site', __dir__)
@@ -179,10 +181,13 @@ class SiteTest < Minitest::Test
 
   def test_reading_paths_preserve_the_archive_and_real_articles
     page = doc('blog/index.html')
-    assert_equal 3, page.css('.reading-path').length
-    assert_equal 7, page.css('.reading-pick').length
-    assert_equal 3, page.css('.reading-pick .work-meta').length
+    assert_equal 4, page.css('.reading-path').length
+    assert_equal 12, page.css('.reading-pick').length
+    assert_equal 4, page.css('.reading-pick .work-meta').length
     assert page.at_css('#archive')
+    fitness = page.at_css('section[aria-labelledby="fitness"]')
+    refute_nil fitness
+    assert_equal %w[/jun-7-th-2024-start/ /jun-7-th-2024-understanding-tp-numbers/ /jun-22-nd-2024-understanding-form-and-fatigue/ /aug-5-th-2024-in-search-of-the-complete-training-app/ /jan-13-th-2025-wrapping-up-2024/], fitness.css('.reading-pick h3 a').map { |link| link['href'] }
     %w[en it].each do |lang|
       assert page.css("section.list.lang-#{lang} .item").length > 0
     end
@@ -191,6 +196,53 @@ class SiteTest < Minitest::Test
       assert article.at_css('main.post'), link['href']
     end
     assert_equal 6, doc('now/index.html').css('.now-priorities li').length
+  end
+
+  def test_migrated_posts_preserve_titles_and_use_local_links_and_images
+    migrated = Dir.glob(File.expand_path('../_posts/*', __dir__)).select do |path|
+      File.file?(path) && File.read(path).match?(/^original_url:/)
+    end
+    refute_empty migrated
+    migrated.each do |path|
+      front_matter = File.read(path).match(/\A---\s*\n(.*?)\n---\s*\n/m)
+      refute_nil front_matter, path
+      data = YAML.safe_load(front_matter[1], permitted_classes: [Time, Date])
+      slug = File.basename(path, File.extname(path)).sub(/\A\d{4}-\d{2}-\d{2}-/, '')
+      assert_equal "/#{slug}/", data['permalink'], path
+      route = "#{slug}/index.html"
+      assert File.file?(File.join(ROOT, route)), "#{path}: missing #{route}"
+      page = doc(route)
+      assert_equal 1, page.css('h1').length, route
+      assert_equal data['title'], page.at_css('h1').text.strip, route
+      page.css('h1, h2, h3, h4, h5, h6').each do |heading|
+        last = heading.children.reject { |node| node.text? && node.text.strip.empty? }.last
+        refute last&.name == 'a' && last.text.strip == '#', "#{route}: trailing heading permalink"
+      end
+      refute page.at_css('[href^="/tags/"]'), "#{route}: legacy /tags/ link"
+      refute_includes File.read(File.join(ROOT, route)), 'imagedelivery.net', route
+      page.css('a[href]').each do |link|
+        host = URI.parse(link['href']).host.to_s.downcase
+        next if host == 'blog.montaigne.io'
+        refute_match(/(?:\A|\.)(?:montaigne\.io|30s\.fit)\z/, host, "#{route}: legacy link #{link['href']}")
+      end
+      page.css('img[src]').each do |image|
+        value = image['src']
+        next if value.match?(%r{\A(?:[a-z][a-z0-9+.-]*:|//)}i)
+        target = URI::DEFAULT_PARSER.unescape(value.split(/[?#]/, 2).first.to_s)
+        target = target.start_with?('/') ? target.delete_prefix('/') : File.join(File.dirname(route), target)
+        assert File.file?(File.join(ROOT, target)), "#{route}: missing image #{value}"
+      end
+    end
+  end
+
+  def test_2024_review_pages_no_longer_link_to_30s_fit
+    %w[2024-review 2024-review-en 2024-review-it].each do |slug|
+      route = "#{slug}/index.html"
+      assert File.file?(File.join(ROOT, route)), route
+      doc(route).css('a[href]').each do |link|
+        refute_match(/30s\.fit/i, link['href'], route)
+      end
+    end
   end
 
   def test_stealth_project_is_absent_from_published_site
