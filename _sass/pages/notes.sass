@@ -1,0 +1,70 @@
+.note
+  max-width: 66ch
+  margin: 0
+  overflow-wrap: break-word
+
+  .note-title
+    font-size: clamp(24px, 2.2vw, 32px)
+    line-height: 1.2
+    margin: var(--jk-s3) 0
+
+.note-back, .note-origin
+  font-size: var(--jk-fs-sm)
+  color: var(--jk-t2)
+
+.note-meta
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  gap: var(--jk-s2) var(--jk-s3)
+  font-size: var(--jk-fs-sm)
+  color: var(--jk-t2)
+
+.note-tags
+  display: flex
+  flex-wrap: wrap
+  gap: var(--jk-s1)
+  list-style: none
+  padding: 0
+  margin: 0
+
+.note-tag
+  display: inline-flex
+  padding: var(--jk-s1) var(--jk-s2)
+  border: 1px solid var(--jk-hair)
+  border-radius: var(--jk-r-pill)
+  font-size: var(--jk-fs-xs)
+  text-decoration: none
+
+.note-body
+  margin-top: var(--jk-s6)
+  font-size: var(--jk-fs-body)
+
+  img
+    max-width: 100%
+    height: auto
+
+.note-origin
+  border-top: 1px solid var(--jk-hair)
+  margin-top: var(--jk-s7)
+  padding-top: var(--jk-s4)
+
+.note-section
+  margin-top: var(--jk-s10)
+  scroll-margin-top: calc(var(--jk-topbar-h) + var(--jk-s6))
+
+.note-list
+  list-style: none
+  padding: 0
+  margin: 0
+
+.note-entry
+  padding: var(--jk-s3) 0
+  border-top: 1px solid var(--jk-hair)
+
+  h3
+    margin: 0 0 var(--jk-s2)
+    font-weight: 500
+
+    a
+      text-decoration: none

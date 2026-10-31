@@ -1,9 +1,11 @@
 <nav class="site-nav jk-top jk-glass" aria-label="Main">
   <a class="jk-mark site-wordmark" href="{{ '/' | relative_url }}" aria-label="Jaack home">jaack<span class="dot" aria-hidden="true">.</span><span class="dom">me</span></a>
   <div class="nav-row">
+  {% assign page_sections = page.url | split: "/" %}
   <ul class="nav-links jk-links">
     {% for link in site.data.ui_text.nav_links %}
-    <li><a class="jk-sw keep" href="{{ link.url | relative_url }}"{% if page.url contains link.url %} aria-current="page"{% endif %}><span class="lang-en" lang="en">{{ site.data.ui_text.nav[link.key].en }}</span><span class="lang-it" lang="it">{{ site.data.ui_text.nav[link.key].it }}</span></a></li>
+    {% assign link_section = link.url | remove: "/" %}
+    <li><a class="jk-sw keep" href="{{ link.url | relative_url }}"{% if page_sections[1] == link_section or link.key == 'notes' and page.collection == 'notes' %} aria-current="page"{% endif %}><span class="lang-en" lang="en">{{ site.data.ui_text.nav[link.key].en }}</span><span class="lang-it" lang="it">{{ site.data.ui_text.nav[link.key].it }}</span></a></li>
     {% endfor %}
     <li><a class="jk-sw keep" href="{{ '/#contact' | relative_url }}"><span class="lang-en" lang="en">Contact</span><span class="lang-it" lang="it">Contatti</span></a></li>
     <li><a class="jk-sw keep" href="{{ site.booking_url }}"><span class="lang-en" lang="en">Book a call</span><span class="lang-it" lang="it">Prenota una call</span></a></li>

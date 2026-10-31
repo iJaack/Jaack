@@ -1,0 +1,37 @@
+---
+layout: page
+title: Notes
+title_it: Note
+permalink: /notes/
+---
+<p class="page-intro"><span class="lang-en" lang="en">Short observations, working ideas, and a training diary. These notes are in English.</span><span class="lang-it" lang="it">Osservazioni, idee in corso e un diario di allenamento. Queste note sono in inglese.</span></p>
+{% assign notes = site.notes | sort: 'date' | reverse %}
+{% assign tags = site.notes | map: 'tag' | join: ',' | split: ',' | uniq | sort %}
+<nav class="work-jumps" aria-label="Note groups and tags / Gruppi e tag">
+  {% for group in site.data.note_groups %}<a href="#{{ group.id }}"><span class="lang-en" lang="en">{{ group.title_en }}</span><span class="lang-it" lang="it">{{ group.title_it }}</span></a>{% endfor %}
+  {% for tag in tags %}<a href="#tag-{{ tag | slugify }}">{{ tag }}</a>{% endfor %}
+  <a href="#all-notes"><span class="lang-en" lang="en">All notes</span><span class="lang-it" lang="it">Tutte le note</span></a>
+</nav>
+{% for group in site.data.note_groups %}
+<section class="note-section" id="{{ group.id }}" aria-labelledby="{{ group.id }}-title">
+  <h2 id="{{ group.id }}-title"><span class="lang-en" lang="en">{{ group.title_en }}</span><span class="lang-it" lang="it">{{ group.title_it }}</span></h2>
+  <p class="section-intro"><span class="lang-en" lang="en">{{ group.description_en }}</span><span class="lang-it" lang="it">{{ group.description_it }}</span></p>
+  <ol class="note-list">
+    {% for slug in group.slugs %}{% assign note = site.notes | where: 'slug', slug | first %}{% if note %}{% include note-entry.html note=note %}{% endif %}{% endfor %}
+  </ol>
+</section>
+{% endfor %}
+{% for tag in tags %}
+<section class="note-section" id="tag-{{ tag | slugify }}" aria-labelledby="tag-{{ tag | slugify }}-title">
+  <h2 id="tag-{{ tag | slugify }}-title">{{ tag }}</h2>
+  <ul class="note-list">
+    {% for note in notes %}{% if note.tag contains tag %}{% include note-entry.html note=note %}{% endif %}{% endfor %}
+  </ul>
+</section>
+{% endfor %}
+<section class="note-section" id="all-notes" aria-labelledby="all-notes-title">
+  <h2 id="all-notes-title"><span class="lang-en" lang="en">All notes</span><span class="lang-it" lang="it">Tutte le note</span></h2>
+  <ul class="note-list">
+    {% for note in notes %}{% include note-entry.html note=note %}{% endfor %}
+  </ul>
+</section>

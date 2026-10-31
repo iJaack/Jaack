@@ -26,6 +26,11 @@ include:
 
 permalink: /:title/
 
+collections:
+  notes:
+    output: true
+    permalink: /:name/
+
 # if you don't have any of social below, comment the line
 facebook: ijaack94
 twitter: ijaack94
@@ -108,3 +113,10 @@ defaults:
       path: ""
     values:
       image: /assets/images/profilo-2026.jpg
+  - scope:
+      path: ""
+      type: notes
+    values:
+      layout: note
+      author: jaack
+      lang: en

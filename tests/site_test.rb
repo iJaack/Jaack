@@ -2,11 +2,13 @@ require 'minitest/autorun'
 require 'nokogiri'
 require 'uri'
 require 'cgi'
+require 'yaml'
+require 'date'
 
 class SiteTest < Minitest::Test
   ROOT = File.expand_path('../_site', __dir__)
   PROJECT_IDS = %w[portfolio-os ideas lg-tv-use evalanche sea-temperature gm10 eva eva-protocol team1 hundred pommidoro parcelpilot redbridge acps routescan]
-  ROUTES = %w[ideas/support/index.html ideas/privacy/index.html ideas/terms/index.html helicon-and-the-price-of-future-avax/index.html index.html projects/index.html blog/index.html about/index.html now/index.html newsletter/index.html en/about/index.html 404.html] + PROJECT_IDS.map { |id| "projects/#{id}/index.html" }
+  ROUTES = %w[ideas/support/index.html ideas/privacy/index.html ideas/terms/index.html helicon-and-the-price-of-future-avax/index.html index.html projects/index.html blog/index.html notes/index.html speaking/index.html about/index.html now/index.html newsletter/index.html en/about/index.html 404.html] + PROJECT_IDS.map { |id| "projects/#{id}/index.html" }
   def doc(route)
     Nokogiri::HTML(File.read(File.join(ROOT, route)))
   end
@@ -183,6 +185,7 @@ class SiteTest < Minitest::Test
     assert_equal 7, page.css('.reading-pick').length
     assert_equal 3, page.css('.reading-pick .work-meta').length
     assert page.at_css('#archive')
+    refute page.at_css('#fitness')
     %w[en it].each do |lang|
       assert page.css("section.list.lang-#{lang} .item").length > 0
     end
@@ -191,6 +194,148 @@ class SiteTest < Minitest::Test
       assert article.at_css('main.post'), link['href']
     end
     assert_equal 6, doc('now/index.html').css('.now-priorities li').length
+  end
+
+  def migrated_notes
+    @migrated_notes ||= Dir.glob(File.expand_path('../_notes/*.md', __dir__)).to_h do |path|
+      front_matter = File.read(path).match(/\A---\s*\n(.*?)\n---\s*\n/m)
+      refute_nil front_matter, path
+      [path, YAML.safe_load(front_matter[1], permitted_classes: [Time, Date])]
+    end
+  end
+
+  def test_migrated_notes_preserve_titles_and_use_local_links_and_images
+    assert_equal 30, migrated_notes.length
+    assert_empty Dir.glob(File.expand_path('../_posts/*', __dir__)).select { |path| File.read(path).match?(/^original_url:/) }
+    migrated_notes.each do |path, data|
+      slug = File.basename(path, '.md')
+      assert_equal "/#{slug}/", data['permalink'], path
+      assert_equal 'note', data['layout'], path
+      refute_equal 'blog', data['category'], path
+      refute_includes Array(data['categories']), 'blog', path
+      route = "#{slug}/index.html"
+      assert File.file?(File.join(ROOT, route)), "#{path}: missing #{route}"
+      page = doc(route)
+      assert_equal 1, page.css('h1').length, route
+      assert_equal data['title'], page.at_css('h1').text.strip, route
+      assert_equal 1, page.css('article.note').length, route
+      assert_equal DateTime.parse(data['date'].to_s).strftime('%F %T'), DateTime.parse(page.at_css('.note-meta time[datetime]')['datetime']).strftime('%F %T'), route
+      assert_equal data['tag'], page.css('.note-header .note-tag').map { |chip| chip.text.strip }, route
+      data['tag'].each do |tag|
+        assert page.at_css(".note-header .note-tag[href='/notes/#tag-#{tag}']"), route
+      end
+      assert page.at_css('.note-back[href="/notes/"]'), route
+      assert_equal 1, page.css('a.note-source').length, route
+      source = page.at_css('a.note-source')
+      assert_equal data['original_url'], source['href'], route
+      assert_equal URI.parse(data['original_url']).host, source.text, route
+      assert_includes source['rel'].split, 'nofollow', route
+      assert_includes source['rel'].split, 'noopener', route
+      assert_empty page.css('.author, .related, .blog-navigation, beeline-button, script[src*="beeline"], .title-image, .donation, .newsletter'), route
+      page.css('h1, h2, h3, h4, h5, h6').each do |heading|
+        last = heading.children.reject { |node| node.text? && node.text.strip.empty? }.last
+        refute last&.name == 'a' && last.text.strip == '#', "#{route}: trailing heading permalink"
+      end
+      refute page.at_css('[href^="/tags/"]'), "#{route}: legacy /tags/ link"
+      refute_includes File.read(File.join(ROOT, route)), 'imagedelivery.net', route
+      page.css('a[href]').each do |link|
+        host = URI.parse(link['href']).host.to_s.downcase
+        next if link == source || link['href'] == 'https://blog.montaigne.io/proliferation-of-tools'
+        refute_match(/(?:\A|\.)(?:montaigne\.io|30s\.fit)\z/, host, "#{route}: legacy link #{link['href']}")
+      end
+      page.css('img[src]').each do |image|
+        value = image['src']
+        next if value.match?(%r{\A(?:[a-z][a-z0-9+.-]*:|//)}i)
+        target = URI::DEFAULT_PARSER.unescape(value.split(/[?#]/, 2).first.to_s)
+        target = target.start_with?('/') ? target.delete_prefix('/') : File.join(File.dirname(route), target)
+        assert File.file?(File.join(ROOT, target)), "#{route}: missing image #{value}"
+      end
+    end
+  end
+
+  def test_notes_and_speaking_are_excluded_from_blog_surfaces_and_feed
+    excluded = migrated_notes.values.map { |data| data['permalink'] } + ['/speaking/', '/speaking-portfolio/']
+    blog_links = doc('blog/index.html').css('.reading-paths a, section.list a').map { |link| link['href'] }
+    home_links = doc('index.html').css('.selected-writing a').map { |link| link['href'] }
+    assert_empty excluded & blog_links
+    assert_empty excluded & home_links
+    feed = Nokogiri::XML(File.read(File.join(ROOT, 'feed.xml')))
+    feed.remove_namespaces!
+    entry_urls = feed.xpath('//entry/link/@href | //entry/id').map(&:text)
+    excluded.each do |url|
+      refute entry_urls.any? { |entry_url| entry_url == url || entry_url.end_with?(url) }, "Feed includes note URL #{url}"
+    end
+    Dir.glob(File.join(ROOT, '**', 'index.html')).each do |path|
+      links = Nokogiri::HTML(File.read(path)).css('.related a, .blog-navigation a').map { |link| link['href'] }
+      assert_empty excluded & links, path
+    end
+  end
+
+  def test_notes_index_lists_groups_tags_and_all_notes_in_date_order
+    page = doc('notes/index.html')
+    notes_by_url = migrated_notes.values.to_h { |data| [data['permalink'], data] }
+    all_links = page.css('#all-notes .note-entry h3 a').map { |link| link['href'] }
+    assert_equal 30, all_links.length
+    assert_equal notes_by_url.keys.sort, all_links.sort
+    dates = all_links.map { |url| DateTime.parse(notes_by_url.fetch(url)['date'].to_s) }
+    assert_equal dates.sort.reverse, dates
+    assert page.at_css('section#fitness')
+    fitness_links = page.css('#fitness .note-entry h3 a').map { |link| link['href'] }
+    assert_equal %w[/jun-7-th-2024-start/ /jun-7-th-2024-understanding-tp-numbers/ /jun-22-nd-2024-understanding-form-and-fatigue/ /aug-5-th-2024-in-search-of-the-complete-training-app/ /jan-13-th-2025-wrapping-up-2024/], fitness_links
+    dates = fitness_links.map { |url| DateTime.parse(notes_by_url.fetch(url)['date'].to_s) }
+    assert_equal dates.sort, dates
+    tags = notes_by_url.values.flat_map { |data| data['tag'] }.uniq.sort
+    assert_equal tags.map { |tag| "tag-#{tag}" }, page.css('section[id^="tag-"]').map { |section| section['id'] }
+    tags.each do |tag|
+      links = page.css("#tag-#{tag} .note-entry h3 a").map { |link| link['href'] }
+      assert_equal all_links.select { |url| notes_by_url.fetch(url)['tag'].include?(tag) }, links
+      assert page.at_css(".work-jumps a[href='#tag-#{tag}']"), tag
+    end
+    assert page.at_css('.work-jumps a[href="#fitness"]')
+    page.css('.note-entry').each do |entry|
+      data = notes_by_url.fetch(entry.at_css('h3 a')['href'])
+      assert_equal DateTime.parse(data['date'].to_s).strftime('%F %T'), DateTime.parse(entry.at_css('time[datetime]')['datetime']).strftime('%F %T')
+      assert_equal data['tag'], entry.css('.note-tag').map(&:text)
+    end
+  end
+
+  def test_speaking_is_a_standalone_page_and_navigation_targets_are_correct
+    assert File.file?(File.expand_path('../speaking.md', __dir__))
+    refute File.exist?(File.expand_path('../_posts/2023-09-11-speaking-portfolio.md', __dir__))
+    refute File.exist?(File.join(ROOT, 'speaking-portfolio'))
+    page = doc('speaking/index.html')
+    assert_equal 1, page.css('h1').length
+    assert_equal 'Speaking', page.at_css('h1 .lang-en').text
+    assert_equal 'Interventi', page.at_css('h1 .lang-it').text
+    %w[2022 2023 2024].each do |year|
+      assert_includes page.css('h2').map { |heading| heading.text.strip }, year
+    end
+    assert_includes page.text, 'Avalanche Summit'
+    refute page.at_css('article.note, main.post')
+    ROUTES.each do |route|
+      nav = doc(route).at_css('nav.site-nav')
+      assert nav.at_css('a[href="/notes"]'), route
+      assert nav.at_css('a[href="/speaking"]'), route
+      refute nav.at_css('a[href="/notes"][aria-current]'), route unless route == 'notes/index.html'
+    end
+    assert doc('notes/index.html').at_css('nav.site-nav a[href="/notes"][aria-current="page"]')
+    assert page.at_css('nav.site-nav a[href="/speaking"][aria-current="page"]')
+    migrated_notes.values.each do |data|
+      nav = doc(data['permalink'].delete_prefix('/') + 'index.html').at_css('nav.site-nav')
+      assert_equal ['/notes'], nav.css('[aria-current="page"]').map { |link| link['href'] }
+    end
+  end
+
+  def test_2024_review_pages_no_longer_link_to_30s_fit
+    %w[2024-review 2024-review-en 2024-review-it].each do |slug|
+      route = "#{slug}/index.html"
+      assert File.file?(File.join(ROOT, route)), route
+      assert doc(route).at_css('a[href="/notes/#fitness"]'), route
+      assert doc(route).at_css('a[href="/jan-13-th-2025-wrapping-up-2024/"]'), route
+      doc(route).css('a[href]').each do |link|
+        refute_match(/30s\.fit/i, link['href'], route)
+      end
+    end
   end
 
   def test_stealth_project_is_absent_from_published_site

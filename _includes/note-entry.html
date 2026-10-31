@@ -1,0 +1,7 @@
+<li class="note-entry">
+  <h3><a href="{{ include.note.url | relative_url }}">{{ include.note.title }}</a></h3>
+  <div class="note-meta">
+    <time datetime="{{ include.note.date | date_to_xmlschema }}">{{ include.note.date | date: '%b %-d, %Y' }}</time>
+    <ul class="note-tags" aria-label="Tags">{% for tag in include.note.tag %}<li><a class="note-tag" href="{{ '/notes/' | relative_url }}#tag-{{ tag | slugify }}">{{ tag }}</a></li>{% endfor %}</ul>
+  </div>
+</li>

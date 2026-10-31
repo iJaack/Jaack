@@ -8,6 +8,12 @@ nav:
   read:
     en: Writing
     it: Articoli
+  notes:
+    en: Notes
+    it: Note
+  speaking:
+    en: Speaking
+    it: Interventi
   work:
     en: Work
     it: Progetti
@@ -39,8 +45,12 @@ nav_links:
     url: /projects
   - key: read
     url: /blog
+  - key: notes
+    url: /notes
   - key: about
     url: /about
+  - key: speaking
+    url: /speaking
   - key: now
     url: /now
 
