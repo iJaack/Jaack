@@ -225,12 +225,12 @@ class SiteTest < Minitest::Test
         assert page.at_css(".note-header .note-tag[href='/notes/#tag-#{tag}']"), route
       end
       assert page.at_css('.note-back[href="/notes/"]'), route
-      assert_equal 1, page.css('a.note-source').length, route
-      source = page.at_css('a.note-source')
-      assert_equal data['original_url'], source['href'], route
-      assert_equal URI.parse(data['original_url']).host, source.text, route
-      assert_includes source['rel'].split, 'nofollow', route
-      assert_includes source['rel'].split, 'noopener', route
+      assert_equal 1, page.css('.note-source').length, route
+      source = page.at_css('.note-source')
+      refute_equal 'a', source.name, route
+      host = URI.parse(data['original_url']).host
+      assert_equal host, source.text, route
+      assert_includes page.at_css('.note-origin').text, "Originally published on #{host}", route
       assert_empty page.css('.author, .related, .blog-navigation, beeline-button, script[src*="beeline"], .title-image, .donation, .newsletter'), route
       page.css('h1, h2, h3, h4, h5, h6').each do |heading|
         last = heading.children.reject { |node| node.text? && node.text.strip.empty? }.last
@@ -238,17 +238,34 @@ class SiteTest < Minitest::Test
       end
       refute page.at_css('[href^="/tags/"]'), "#{route}: legacy /tags/ link"
       refute_includes File.read(File.join(ROOT, route)), 'imagedelivery.net', route
-      page.css('a[href]').each do |link|
-        host = URI.parse(link['href']).host.to_s.downcase
-        next if link == source || link['href'] == 'https://blog.montaigne.io/proliferation-of-tools'
-        refute_match(/(?:\A|\.)(?:montaigne\.io|30s\.fit)\z/, host, "#{route}: legacy link #{link['href']}")
-      end
       page.css('img[src]').each do |image|
         value = image['src']
         next if value.match?(%r{\A(?:[a-z][a-z0-9+.-]*:|//)}i)
         target = URI::DEFAULT_PARSER.unescape(value.split(/[?#]/, 2).first.to_s)
         target = target.start_with?('/') ? target.delete_prefix('/') : File.join(File.dirname(route), target)
         assert File.file?(File.join(ROOT, target)), "#{route}: missing image #{value}"
+      end
+    end
+  end
+
+  def test_retired_note_hosts_are_not_linked_anywhere_in_the_site
+    allowed_url = 'https://blog.montaigne.io/proliferation-of-tools'
+    allowed_route = 'proliferation-of-tools/index.html'
+    assert doc(allowed_route).at_css("a[href='#{allowed_url}']"), 'Preserve the third-party article link'
+
+    paths = Dir.glob(File.join(ROOT, '**', '*.html'))
+    refute_empty paths
+    paths.each do |path|
+      route = path.delete_prefix(ROOT + '/')
+      doc(route).css('[href]').each do |element|
+        href = element['href']
+        next unless href.match?(%r{\A(?:[a-z][a-z0-9+.-]*:)?//}i)
+
+        host = URI.parse(URI::DEFAULT_PARSER.escape(href)).host.to_s.downcase
+        next unless host.match?(/(?:\A|\.)(?:montaigne\.io|30s\.fit)\z/)
+
+        assert_equal allowed_url, href, "#{route}: retired host in href #{href}"
+        assert_equal allowed_route, route, "#{route}: third-party article link is only allowed on /proliferation-of-tools/"
       end
     end
   end

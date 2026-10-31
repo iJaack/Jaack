@@ -15,6 +15,6 @@ layout: default
   </header>
   <div class="note-body">{{ content }}</div>
   {% if page.original_url %}{% assign source_host = page.original_url | split: '://' | last | split: '/' | first %}
-  <p class="note-origin">Originally published on <a class="note-source" href="{{ page.original_url | escape }}" rel="nofollow noopener">{{ source_host }}</a>.</p>
+  <p class="note-origin">Originally published on <span class="note-source">{{ source_host }}</span>.</p>
   {% endif %}
 </article>
