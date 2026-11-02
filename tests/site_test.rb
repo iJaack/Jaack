@@ -7,7 +7,7 @@ require 'date'
 
 class SiteTest < Minitest::Test
   ROOT = File.expand_path('../_site', __dir__)
-  PROJECT_IDS = %w[portfolio-os ideas lg-tv-use evalanche sea-temperature gm10 eva eva-protocol team1 hundred pommidoro parcelpilot redbridge acps routescan]
+  PROJECT_IDS = %w[portfolio-os ideas lg-tv-use evalanche carta sea-temperature gm10 eva eva-protocol team1 hundred pommidoro parcelpilot redbridge acps routescan]
   ROUTES = %w[ideas/support/index.html ideas/privacy/index.html ideas/terms/index.html helicon-and-the-price-of-future-avax/index.html index.html projects/index.html blog/index.html notes/index.html speaking/index.html about/index.html now/index.html newsletter/index.html en/about/index.html 404.html] + PROJECT_IDS.map { |id| "projects/#{id}/index.html" }
   def doc(route)
     Nokogiri::HTML(File.read(File.join(ROOT, route)))
@@ -57,7 +57,7 @@ class SiteTest < Minitest::Test
 
   def test_work_states_are_present_in_both_languages
     entries = doc('projects/index.html').css('.work-entry')
-    assert_equal 15, entries.length
+    assert_equal 16, entries.length
     entries.each do |entry|
       %w[en it].each do |lang|
         refute_empty entry.at_css(".work-meta .lang-#{lang}").text.strip
@@ -81,7 +81,7 @@ class SiteTest < Minitest::Test
     assert_includes work.at_css('#team1 .work-meta .lang-en').text, 'Italy Coordinator'
     assert_includes work.at_css('#redbridge .work-meta .lang-en').text, 'Active advisory'
     apps = work.css('section[aria-labelledby="group-apps"] .work-entry').map { |entry| entry['id'] }
-    assert_equal %w[hundred parcelpilot pommidoro sea-temperature], apps.sort
+    assert_equal %w[carta hundred parcelpilot pommidoro sea-temperature], apps.sort
 
     %w[about/index.html en/about/index.html].each do |route|
       page = doc(route)
@@ -113,7 +113,7 @@ class SiteTest < Minitest::Test
     assert home.at_css('.feature-eva-protocol .feature-image img[src="/assets/images/work/eva-protocol-preview.png"]')
     assert home.at_css('.feature-evalanche .feature-image img[src="/assets/images/work/evalanche-preview.png"]')
     assert home.at_css('.feature-evalanche h3 .evalanche-logo[src="/assets/images/work/evalanche-logo.svg"]')
-    assert_equal 4, home.css('.app-links a').length
+    assert_equal 5, home.css('.app-links a').length
     home.css('.project-feature img, .app-gallery img, .hero-portrait').each do |img|
       assert img.key?('alt'), 'Image needs an accessible text alternative'
       assert img['width'].to_i > 0
@@ -121,7 +121,7 @@ class SiteTest < Minitest::Test
     end
     work = doc('projects/index.html')
     assert_equal 6, work.css('.work-jumps a').length
-    assert_equal 4, work.css('.app-grid .app-entry').length
+    assert_equal 5, work.css('.app-grid .app-entry').length
     assert_equal %w[eva eva-protocol], work.css('.project-family .work-entry').map { |entry| entry['id'] }
     ids = work.css('[id]').map { |entry| entry['id'] }
     assert_equal ids.uniq, ids, 'Project anchors must remain unique'
@@ -150,6 +150,39 @@ class SiteTest < Minitest::Test
       end
       assert page.at_css("a[href='/projects/##{id}']"), id
     end
+  end
+
+  def test_carta_has_bilingual_video_and_a_standard_project_entry
+    page = doc('projects/carta/index.html')
+    assert page.at_css('.project-page--carta')
+    assert_equal 'Carta', page.at_css('h1').text
+    video = page.at_css('video')
+    %w[muted loop playsinline disablepictureinpicture].each { |attribute| assert video.key?(attribute), attribute }
+    assert_equal 'none', video['preload']
+    refute video.key?('autoplay')
+    refute video.key?('controls')
+    assert_equal %w[wide.webm wide.mp4 compact.webm compact.mp4], video.css('source').map { |s| s['src'].split('carta-site-').last }
+    assert_equal ['(min-width: 776px)', '(min-width: 776px)', nil, nil], video.css('source').map { |s| s['media'] }
+    video.css('source').each { |s| assert File.file?(File.join(ROOT, s['src'].delete_prefix('/'))) }
+    %w[aria-describedby aria-labelledby].each do |attribute|
+      target = page.at_css("##{video[attribute]}")
+      refute_nil target, attribute
+      %w[it en].each { |lang| refute_empty target.at_css(".lang-#{lang}[lang='#{lang}']").text }
+    end
+    poster = page.at_css('.pv-poster img')
+    assert_equal 'high', poster['fetchpriority']
+    assert_equal ['358', '770'], [poster['width'], poster['height']]
+    assert_equal 3, page.css('.pv-poster source').length
+    button = page.at_css('.pv-toggle[hidden]')
+    refute_nil button
+    assert_equal video['id'], button['aria-controls']
+    refute button.key?('aria-pressed')
+    assert page.at_css('script[src="/assets/js/project-video.js"][defer]')
+    assert page.at_css('.project-next a[href="mailto:hey@jaack.me?subject=Carta"]')
+    entry = doc('projects/index.html').at_css('.app-grid #carta')
+    assert entry.at_css('h3 a[href="/projects/carta/"]')
+    refute entry.at_css('.app-icon, .app-monogram, .text-link')
+    refute doc('projects/pommidoro/index.html').at_css('.project-video, script[src="/assets/js/project-video.js"]')
   end
 
   def test_lg_tv_use_links_public_release_and_describes_evidence_limits
