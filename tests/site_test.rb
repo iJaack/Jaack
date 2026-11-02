@@ -4,10 +4,11 @@ require 'uri'
 require 'cgi'
 require 'yaml'
 require 'date'
+require 'jekyll'
 
 class SiteTest < Minitest::Test
   ROOT = File.expand_path('../_site', __dir__)
-  PROJECT_IDS = %w[portfolio-os ideas lg-tv-use evalanche sea-temperature gm10 eva eva-protocol team1 hundred pommidoro parcelpilot redbridge acps routescan]
+  PROJECT_IDS = %w[portfolio-os ideas lg-tv-use evalanche carta sea-temperature gm10 eva eva-protocol team1 hundred pommidoro parcelpilot redbridge acps routescan]
   ROUTES = %w[ideas/support/index.html ideas/privacy/index.html ideas/terms/index.html helicon-and-the-price-of-future-avax/index.html index.html projects/index.html blog/index.html notes/index.html speaking/index.html about/index.html now/index.html newsletter/index.html en/about/index.html 404.html] + PROJECT_IDS.map { |id| "projects/#{id}/index.html" }
   def doc(route)
     Nokogiri::HTML(File.read(File.join(ROOT, route)))
@@ -57,7 +58,7 @@ class SiteTest < Minitest::Test
 
   def test_work_states_are_present_in_both_languages
     entries = doc('projects/index.html').css('.work-entry')
-    assert_equal 15, entries.length
+    assert_equal 16, entries.length
     entries.each do |entry|
       %w[en it].each do |lang|
         refute_empty entry.at_css(".work-meta .lang-#{lang}").text.strip
@@ -81,7 +82,7 @@ class SiteTest < Minitest::Test
     assert_includes work.at_css('#team1 .work-meta .lang-en').text, 'Italy Coordinator'
     assert_includes work.at_css('#redbridge .work-meta .lang-en').text, 'Active advisory'
     apps = work.css('section[aria-labelledby="group-apps"] .work-entry').map { |entry| entry['id'] }
-    assert_equal %w[hundred parcelpilot pommidoro sea-temperature], apps.sort
+    assert_equal %w[carta hundred parcelpilot pommidoro sea-temperature], apps.sort
 
     %w[about/index.html en/about/index.html].each do |route|
       page = doc(route)
@@ -113,7 +114,19 @@ class SiteTest < Minitest::Test
     assert home.at_css('.feature-eva-protocol .feature-image img[src="/assets/images/work/eva-protocol-preview.png"]')
     assert home.at_css('.feature-evalanche .feature-image img[src="/assets/images/work/evalanche-preview.png"]')
     assert home.at_css('.feature-evalanche h3 .evalanche-logo[src="/assets/images/work/evalanche-logo.svg"]')
-    assert_equal 4, home.css('.app-links a').length
+    assert_equal 5, home.css('.app-links a').length
+    carta = home.at_css('.app-links a[href="/projects/carta/"]')
+    refute_nil carta
+    refute_includes carta.text, '100'
+    assert_empty carta.css('img')
+    placeholder = carta.at_css('.app-monogram[aria-hidden="true"]')
+    refute_nil placeholder
+    assert_empty placeholder.inner_html
+    hundred = home.at_css('.app-links a[href="/projects/hundred/"]')
+    assert_equal '100', hundred.at_css('.app-monogram[aria-hidden="true"]').text
+    intro = home.at_css('.app-gallery .section-intro')
+    assert_equal 'The sea, a workout, a focused hour, a delivery, a thread. Five native apps I’m working on.', intro.at_css('.lang-en[lang="en"]').text
+    assert_equal 'Il mare, un allenamento, un’ora di concentrazione, una consegna, un thread. Cinque app native a cui sto lavorando.', intro.at_css('.lang-it[lang="it"]').text
     home.css('.project-feature img, .app-gallery img, .hero-portrait').each do |img|
       assert img.key?('alt'), 'Image needs an accessible text alternative'
       assert img['width'].to_i > 0
@@ -121,7 +134,7 @@ class SiteTest < Minitest::Test
     end
     work = doc('projects/index.html')
     assert_equal 6, work.css('.work-jumps a').length
-    assert_equal 4, work.css('.app-grid .app-entry').length
+    assert_equal 5, work.css('.app-grid .app-entry').length
     assert_equal %w[eva eva-protocol], work.css('.project-family .work-entry').map { |entry| entry['id'] }
     ids = work.css('[id]').map { |entry| entry['id'] }
     assert_equal ids.uniq, ids, 'Project anchors must remain unique'
@@ -150,6 +163,135 @@ class SiteTest < Minitest::Test
       end
       assert page.at_css("a[href='/projects/##{id}']"), id
     end
+  end
+
+  def test_project_video_is_dormant_on_every_built_page_except_carta
+    paths = Dir.glob(File.join(ROOT, '**', '*.html'))
+    refute_empty paths
+    paths.each do |path|
+      next if path == File.join(ROOT, 'projects/carta/index.html')
+
+      page = Nokogiri::HTML(File.read(path))
+      assert_empty page.css('.project-video, script[src="/assets/js/project-video.js"]'), path
+    end
+    assert doc('projects/pommidoro/index.html').at_css('.project-page.project-page--pommidoro')
+  end
+
+  def test_project_video_include_renders_generic_bilingual_v11_markup
+    site = Jekyll::Site.new(Jekyll.configuration(
+      'source' => File.expand_path('..', __dir__), 'destination' => ROOT, 'quiet' => true
+    ))
+    site.data['projects'] = %w[demo another-project].map do |id|
+      { 'id' => id, 'video_caption_en' => "#{id}'s caption <sample>",
+        'video_caption_it' => "#{id}: didascalia & esempio",
+        'video_desc_en' => "#{id}: English description",
+        'video_desc_it' => "#{id}: descrizione italiana" }
+    end
+    site.data['projects'].each do |project|
+      id = project.fetch('id')
+      html = site.liquid_renderer.file('project-video-fixture').parse(
+        '{% include project-video.html id=fixture_id %}'
+      ).render!(site.site_payload.merge('fixture_id' => id), registers: { site: site })
+      page = Nokogiri::HTML5.fragment(html)
+      figure = page.at_css('figure.project-video')
+      refute_nil figure
+      assert_equal id, figure['data-pv']
+      assert_equal %w[div button p figcaption], figure.element_children.map(&:name)
+      assert figure.element_children.first.matches?('.pv-stage')
+      assert figure.element_children[1].matches?('button.pv-toggle')
+      assert figure.element_children[2].matches?('p.visually-hidden')
+      assert_equal 'figcaption', figure.element_children.last.name
+      assert_empty page.css('.pv-bar')
+
+      video = figure.at_css('.pv-stage > video.pv-media')
+      assert_equal "pv-video-#{id}", video['id']
+      assert_equal %w[358 770], [video['width'], video['height']]
+      assert_equal 'none', video['preload']
+      %w[muted loop playsinline disablepictureinpicture].each { |attr| assert video.key?(attr), attr }
+      %w[poster autoplay controls].each { |attr| refute video.key?(attr), attr }
+      path = "/assets/images/work/#{id}/#{id}-site-"
+      assert_equal %w[wide.webm wide.mp4 compact.webm compact.mp4].map { |s| path + s }, video.css('source').map { |s| s['src'] }
+      assert_equal ['(min-width: 776px)', '(min-width: 776px)', nil, nil], video.css('source').map { |s| s['media'] }
+      assert_equal %w[video/webm video/mp4 video/webm video/mp4], video.css('source').map { |s| s['type'] }
+
+      picture = figure.at_css('.pv-stage > picture.pv-poster')
+      assert_equal %w[source source source img], picture.element_children.map(&:name)
+      assert_equal %w[wide-poster.webp wide-poster.png compact-poster.webp].map { |s| path + s }, picture.css('source').map { |s| s['srcset'] }
+      assert_equal ['(min-width: 776px)', '(min-width: 776px)', nil], picture.css('source').map { |s| s['media'] }
+      assert_equal %w[image/webp image/png image/webp], picture.css('source').map { |s| s['type'] }
+      picture.css('source[media]').each { |s| assert_equal %w[720 820], [s['width'], s['height']] }
+      poster = picture.at_css('img')
+      assert_equal path + 'compact-poster.png', poster['src']
+      assert_equal %w[358 770], [poster['width'], poster['height']]
+      assert_equal '', poster['alt']
+      assert_equal 'eager', poster['loading']
+      assert_equal 'async', poster['decoding']
+      assert_equal 'high', poster['fetchpriority']
+
+      button = figure.at_css('button.pv-toggle[hidden]')
+      refute_nil button
+      assert_equal 'button', button['type']
+      assert_equal video['id'], button['aria-controls']
+      refute button.key?('aria-pressed')
+      assert_equal 2, button.css('svg[aria-hidden="true"]').length
+      { 'aria-describedby' => ['p.visually-hidden', 'desc'],
+        'aria-labelledby' => ['figcaption', 'caption'] }.each do |attribute, (selector, field)|
+        target = figure.at_css("##{video[attribute]}")
+        refute_nil target, attribute
+        assert target.matches?(selector), attribute
+        %w[en it].each do |lang|
+          assert_equal project.fetch("video_#{field}_#{lang}"), target.at_css(".lang-#{lang}[lang='#{lang}']").text
+        end
+      end
+      assert_equal 1, page.css('script[src="/assets/js/project-video.js"][defer]').length
+    end
+  end
+
+  def test_carta_has_bilingual_video_and_a_standard_project_entry
+    page = doc('projects/carta/index.html')
+    assert page.at_css('.project-page--carta')
+    assert_equal 'Carta', page.at_css('h1').text
+    figure = page.at_css('figure.project-video[data-pv="carta"]')
+    refute_nil figure
+    caption = figure.element_children.last
+    assert_equal 'figcaption', caption.name
+    assert_equal 'pv-caption-carta', caption['id']
+    assert_equal "Carta's Publish sheet on iPhone. Sample text.", caption.at_css('.lang-en[lang="en"]').text
+    assert_equal 'Il foglio Pubblica di Carta su iPhone. Testi di esempio.', caption.at_css('.lang-it[lang="it"]').text
+    video = figure.at_css('video')
+    refute_nil video
+    refute video.key?('poster')
+    %w[muted loop playsinline disablepictureinpicture].each { |attribute| assert video.key?(attribute), attribute }
+    assert_equal 'none', video['preload']
+    refute video.key?('autoplay')
+    refute video.key?('controls')
+    assert_equal %w[wide.webm wide.mp4 compact.webm compact.mp4], video.css('source').map { |s| s['src'].split('carta-site-').last }
+    assert_equal ['(min-width: 776px)', '(min-width: 776px)', nil, nil], video.css('source').map { |s| s['media'] }
+    video.css('source').each { |s| assert File.file?(File.join(ROOT, s['src'].delete_prefix('/'))) }
+    %w[aria-describedby aria-labelledby].each do |attribute|
+      target = page.at_css("##{video[attribute]}")
+      refute_nil target, attribute
+      %w[it en].each { |lang| refute_empty target.at_css(".lang-#{lang}[lang='#{lang}']").text }
+    end
+    description = page.at_css("##{video['aria-describedby']}")
+    assert description.matches?('p.visually-hidden')
+    assert_equal %q{Carta on iPhone: from a draft, Publish opens; the third post is 29 characters over X's limit and “Dividi qui” (Split here) splits it in two. The thread goes from 4 to 5 posts, all within 280 characters.}, description.at_css('.lang-en').text
+    assert_equal %q{Carta su iPhone: dalla bozza si apre Pubblica; il terzo post supera di 29 caratteri il limite di X e "Dividi qui" lo divide in due. Il thread passa da 4 a 5 post, tutti entro i 280 caratteri.}, description.at_css('.lang-it').text
+    poster = page.at_css('.pv-poster img')
+    assert_equal 'high', poster['fetchpriority']
+    assert_equal ['358', '770'], [poster['width'], poster['height']]
+    assert_equal 3, page.css('.pv-poster source').length
+    button = page.at_css('.pv-toggle[hidden]')
+    refute_nil button
+    assert_equal video['id'], button['aria-controls']
+    refute button.key?('aria-pressed')
+    assert page.at_css('script[src="/assets/js/project-video.js"][defer]')
+    assert page.at_css('.project-next a[href="mailto:hey@jaack.me?subject=Carta"]')
+    assert page.at_css('a[href="/projects/#carta"]')
+    entry = doc('projects/index.html').at_css('.app-grid #carta')
+    assert entry.at_css('h3 a[href="/projects/carta/"]')
+    refute entry.at_css('.app-icon, .app-monogram, .text-link')
+    refute doc('projects/pommidoro/index.html').at_css('.project-video, script[src="/assets/js/project-video.js"]')
   end
 
   def test_lg_tv_use_links_public_release_and_describes_evidence_limits
@@ -392,6 +534,7 @@ class SiteTest < Minitest::Test
     urls = sitemap.xpath('//*[local-name()="loc"]').map(&:text)
     assert_includes urls, 'https://jaack.me/'
     assert_includes urls, 'https://jaack.me/about/'
+    assert_includes urls, 'https://jaack.me/projects/carta/'
     refute_includes urls, 'https://jaack.me/en/about/'
     refute_includes urls, 'https://jaack.me/index'
     assert_equal 'https://jaack.me/about/', doc('en/about/index.html').at_css('link[rel="canonical"]')['href']

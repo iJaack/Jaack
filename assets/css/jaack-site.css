@@ -288,3 +288,140 @@ html[data-theme="dark"] {
   text-transform: uppercase;
 }
 .writing-entry h3 { font-family: var(--jk-serif); font-weight: 560; }
+
+/* Carta wordmark: the supplied OFL subset is used only by this heading. */
+@font-face {
+  font-family: "Newsreader Carta";
+  src: url("../fonts/newsreader/Newsreader-carta.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+.project-page--carta .page-title {
+  font-family: "Newsreader Carta", var(--jk-serif);
+  font-weight: 500;
+  font-variation-settings: 'opsz' 72;
+  letter-spacing: -0.025em;
+  font-size: var(--jk-fs-title);
+  color: var(--jk-ink);
+}
+
+.project-page--carta .project-video {
+  --pv-grain: url("../images/work/carta/grain.png");
+}
+
+/* .project-video: a fixed-ratio paper stage with a separate site control. */
+.project-video {
+  --pv-w: 358px;
+  --pv-h: 770px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 44px;
+  column-gap: var(--jk-s3);
+  width: min(100%, var(--pv-w));
+  margin: 0 auto;
+}
+.pv-stage {
+  grid-column: 1 / -1;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 358 / 770;
+  margin: var(--jk-s6) auto var(--jk-s3);
+  background: #F5F1E8 var(--pv-grain, none) 0 0 / 110px 110px;
+  border-radius: var(--jk-r-panel);
+  overflow: hidden;
+  box-shadow: inset 0 0 0 1px var(--jk-hair);
+}
+.pv-media, .pv-poster, .pv-poster img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.pv-poster img { display: block; border-radius: 0; }
+.pv-media { display: none; }
+[data-pv-ready] .pv-media { display: block; }
+[data-pv-ready] .pv-poster { display: none; }
+.project-video figcaption {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: center;
+  position: static;
+  margin: 0;
+  min-width: 0;
+  text-align: left;
+  font-size: var(--jk-fs-sm);
+  color: var(--jk-t2);
+}
+.project-video ~ .project-details { margin-top: var(--jk-s8); }
+.pv-toggle {
+  grid-column: 2;
+  grid-row: 2;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--jk-r-pill);
+  color: var(--jk-ink);
+  background: rgba(255,253,248,.88);
+  backdrop-filter: blur(12px) saturate(1.4);
+  -webkit-backdrop-filter: blur(12px) saturate(1.4);
+  --pv-shadow: inset 0 0 0 1px rgba(28,22,18,.24), inset 0 1px 0 rgba(255,255,255,.95), 0 4px 14px -4px rgba(48,36,12,.22);
+  box-shadow: var(--pv-shadow);
+  cursor: pointer;
+  transition: transform 120ms var(--jk-ease), background 120ms var(--jk-ease);
+}
+.pv-toggle[hidden] { display: none; }
+.pv-toggle:hover { background: rgba(255,253,248,.98); }
+.pv-toggle:active { transform: scale(.96); }
+.pv-toggle:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: var(--pv-shadow), 0 0 0 2px var(--jk-bg), 0 0 0 4px var(--jk-accent-text);
+}
+.pv-ic { width: 18px; height: 18px; fill: currentColor; }
+.pv-ic--play, [data-pv-paused] .pv-ic--pause { display: none; }
+[data-pv-paused] .pv-ic--play { display: block; }
+.project-video .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+html[data-theme="dark"] .pv-stage {
+  box-shadow: inset 0 0 0 1px rgba(246,240,232,.14), 0 24px 60px -20px rgba(0,0,0,.6);
+}
+html[data-theme="dark"] .pv-toggle {
+  background: rgba(30,25,22,.88);
+  --pv-shadow: inset 0 0 0 1px rgba(246,240,232,.28), inset 0 1px 0 rgba(255,255,255,.06), 0 4px 14px -4px rgba(0,0,0,.55);
+}
+html[data-theme="dark"] .pv-toggle:hover { background: #261F1B; }
+@media (min-width: 776px) {
+  .project-video { --pv-w: 720px; --pv-h: 820px; }
+  .pv-stage { aspect-ratio: 720 / 820; }
+}
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  .pv-stage { background-image: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pv-toggle { transition: none; }
+  .pv-toggle:active { transform: none; }
+}
+@media (forced-colors: active) {
+  .pv-toggle, .pv-toggle:hover,
+  html[data-theme="dark"] .pv-toggle, html[data-theme="dark"] .pv-toggle:hover {
+    background: ButtonFace;
+    color: ButtonText;
+    border: 1px solid ButtonText;
+  }
+  .pv-toggle:focus-visible { outline-color: Highlight; }
+}
