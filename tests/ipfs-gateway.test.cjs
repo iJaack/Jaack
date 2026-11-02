@@ -28,6 +28,8 @@ test('rewrites depths, every srcset candidate, styles, metadata, JSON and direct
   assert.match(fs.readFileSync(path.join(output, 'assets/site.css'), 'utf8'), /url\(a.svg\?#font\)/);
   assert.equal(JSON.parse(fs.readFileSync(path.join(output, 'manifest.webmanifest'))).icons[0].src, 'assets/a.svg');
   assert.ok(!fs.existsSync(path.join(output, 'CNAME')));
+  assert.match(fs.readFileSync(path.join(output, 'en/index.html'), 'utf8'), /href="\.\.\/about\//);
+  assert.match(fs.readFileSync(path.join(output, 'en/index.html'), 'utf8'), /src="\.\.\/assets\/a.svg"/);
   assert.deepEqual(check(output).errors, []);
 });
 test('language switching uses rewritten data URLs from a nested gateway page', async t => {
@@ -64,9 +66,10 @@ test('denies all private data and deployment sources, including empty directorie
 test('detects broken references, traversal, roots, missing directory indexes, and budgets', async t => {
   const { output, check } = await fixture(t);
   fs.mkdirSync(path.join(output, 'empty'));
+  fs.writeFileSync(path.join(output, 'broken.webmanifest'), JSON.stringify({ icons: [{ src: 'missing-icon.png' }] }));
   fs.writeFileSync(path.join(output, 'bad.html'), '<img src="absent.png"><a href="../outside">escape</a><a href="empty/">empty</a><img src="/assets/a.svg"><img srcset="absent2.png 1x, absent3.png 2x">');
   const errors = check(output, { totalLimit: 0.001, fileLimit: 0.00001 }).errors.join('\n');
-  for (const text of ['absent.png', 'escapes publish directory', 'empty/', 'root-relative', 'absent2.png', 'absent3.png', 'exceeds file budget', 'exceeds budget']) assert.ok(errors.includes(text), text);
+  for (const text of ['missing-icon.png', 'absent.png', 'escapes publish directory', 'empty/', 'root-relative', 'absent2.png', 'absent3.png', 'exceeds file budget', 'exceeds budget']) assert.ok(errors.includes(text), text);
 });
 test('preserves suffixes, same-directory links, and rejects dangerous copy destinations', async t => {
   const [{ rewrite }] = await modules;
@@ -75,4 +78,13 @@ test('preserves suffixes, same-directory links, and rejects dangerous copy desti
   const { input, gatewaySafe } = await fixture(t);
   assert.throws(() => gatewaySafe(input, input), /separate/);
   assert.throws(() => gatewaySafe(input, path.join(input, 'output')), /non-nested/);
+});
+
+test('known scheme-less links retain relative attributes and receive local redirect targets', async t => {
+  const { input, output, gatewaySafe, check } = await fixture(t);
+  fs.appendFileSync(path.join(input, 'about/index.html'), '<a href="terminal.co">Terminal</a>');
+  gatewaySafe(input, output);
+  assert.match(fs.readFileSync(path.join(output, 'about/index.html'), 'utf8'), /href="terminal.co"/);
+  assert.match(fs.readFileSync(path.join(output, 'about/terminal.co/index.html'), 'utf8'), /href="https:\/\/terminal.co"/);
+  assert.deepEqual(check(output).errors, []);
 });

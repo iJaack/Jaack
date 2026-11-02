@@ -62,10 +62,10 @@ export function scan(file, text, visit) {
   if (ext === '.css') return css(text, visit);
   if (ext === '.js' || ext === '.mjs') return javascript(text, visit);
   if (ext === '.json' || ext === '.webmanifest') {
-    const walk = value => {
-      if (typeof value === 'string') return rootRelative(value) || /^\.\.?\//.test(value) ? visit(value, { kind: 'json', asset: true }) : value;
-      if (Array.isArray(value)) return value.map(walk);
-      if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, walk(v)]));
+    const walk = (value, key = '') => {
+      if (typeof value === 'string') return rootRelative(value) || /^\.\.?\//.test(value) || /^(src|href|url|start_url|scope)$/.test(key) ? visit(value, { kind: 'json', asset: true }) : value;
+      if (Array.isArray(value)) return value.map(v => walk(v, key));
+      if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, walk(v, k)]));
       return value;
     };
     return JSON.stringify(walk(JSON.parse(text)), null, 2) + '\n';
