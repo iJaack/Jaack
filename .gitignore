@@ -20,3 +20,8 @@ purchases*.json
 purchases*.jsonl
 scryfall_cache*.json
 !.env.example
+
+# IPFS build tools and generated artifacts
+.tools/
+_site_ipfs/
+*.car
