@@ -5,6 +5,25 @@ const path = require('node:path');
 const os = require('node:os');
 const { spawnSync } = require('node:child_process');
 const CID = 'bafybeia2enznhnpq7c7frltoyj6pfekkxv5rw7apzdwjytwivoeovtf2ka';
+test('workflow builds PRs to master and restricts publication to non-PR master runs', () => {
+  // Ruby's bundled YAML parser uses YAML 1.1, where the key `on` becomes true.
+  const result = spawnSync('ruby', ['-ryaml', '-rjson', '-e',
+    'puts JSON.generate(YAML.load_file(ARGV.fetch(0)).transform_keys { |key| key == true ? "on" : key })',
+    path.resolve('.github/workflows/ipfs-publish.yml')], { encoding: 'utf8' });
+  assert.equal(result.status, 0, result.stderr);
+  const workflow = JSON.parse(result.stdout);
+  assert.deepEqual(workflow.on.pull_request.branches, ['master']);
+  assert.deepEqual(workflow.permissions, { contents: 'read' });
+  const steps = workflow.jobs.publish.steps;
+  const publish = steps.find(step => step.name === 'Pin and update DNSLink when configured');
+  assert.ok(publish, 'Publish step must exist');
+  assert.equal(publish.if, "github.event_name != 'pull_request' && github.ref == 'refs/heads/master'");
+  for (const name of ['Build site', 'Test and validate IPFS copy', 'Create CID and CAR']) {
+    const step = steps.find(step => step.name === name);
+    assert.ok(step, `${name} step must exist`);
+    assert.equal(step.if, undefined, `${name} must also run on PRs`);
+  }
+});
 function run(t, options = {}) {
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'jaack-pin-test-'));
   t.after(() => fs.rmSync(tmp, { recursive: true, force: true }));

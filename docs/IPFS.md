@@ -50,7 +50,7 @@ Add repository **variables**:
 
 Use an existing Filebase bucket configured for IPFS. No account or bucket creation is automated. Credentials enter the publish process through Actions secrets only; they are never written into the site or printed. There is no pruning: historical CAR objects are retained for rollback. Review storage usage periodically.
 
-Pushes to `master` and manual workflow dispatches build an archive. Actions are pinned to full commit SHAs. The workflow has read-only repository permissions and serializes publishes without cancelling a running publish. Every run writes the root CID, commit and CAR size to its job summary and retains a CAR artifact for 30 days.
+Pushes to `master`, pull requests targeting `master`, and manual workflow dispatches build an archive. Pull requests and dispatches from branches other than `master` are CAR-only: the pin and DNSLink step runs only for non-PR events on `refs/heads/master`. Actions are pinned to full commit SHAs. The workflow has read-only repository permissions and serializes publishes without cancelling a running publish. Every run writes the root CID, commit and CAR size to its job summary and retains a CAR artifact for 30 days.
 
 Missing Filebase secrets select successful **CAR-only mode**. With all three Filebase secrets present, the preinstalled AWS CLI uploads `jaack-me/<yyyymmdd-hhmmss>-<shortsha>-<cid>.car` with S3 metadata `import=car`. It polls `head-object` for `Metadata.cid` (the `x-amz-meta-cid` header) and fails without touching DNS if it does not match the local root CID. Configured but invalid credentials are a failure, not CAR-only mode.
 
@@ -69,7 +69,7 @@ scripts/ipfs/dry-run.sh
 scripts/ipfs/dry-run.sh --skip-build
 ```
 
-The installer downloads **Kubo v0.40.0** for Darwin/Linux, arm64/amd64 from its GitHub release assets and verifies the tarball against that release's `.sha512` file on every run. `.tools/` is ignored by git and excluded from Jekyll. To upgrade, change the single version pin in `install-kubo.sh`, review the new release's profile semantics, and rerun all tests and the real dry run. Release checksums ensure archive integrity, rather than independently authenticating the release publisher.
+The installer downloads **Kubo v0.43.1** for Darwin/Linux, arm64/amd64 from its GitHub release assets and verifies the tarball against that release's `.sha512` file on every run. `.tools/` is ignored by git and excluded from Jekyll. To upgrade, change the single version pin in `install-kubo.sh`, review the new release's profile semantics, and rerun all tests and the real dry run. Release checksums ensure archive integrity, rather than independently authenticating the release publisher.
 
 Local and CI imports use Kubo's `unixfs-v1-2025` add profile, which fixes CIDv1, SHA-256, raw leaves, balanced layout, 1 MiB chunks and directory sharding parameters. Do not change import options between local and CI builds. The CID identifies the exact transformed bytes; changing the content changes it. Identical inputs and settings produce the same CID; Jekyll-generated feed timestamps can change between builds.
 
@@ -89,7 +89,7 @@ The language switcher reads `data-alt-url`, which the HTML transform rewrites; i
 
 Use a previous CID from an Actions job summary or Filebase object key. Repoint the exact DNSLink TXT record to `dnslink=/ipfs/<previous-cid>` with TTL 300, using your existing DNS administration access. Confirm that the old CID remains pinned before switching. This does not change Pages or delete the newer pin.
 
-Alternatively rerun a previous workflow run for the desired commit (or dispatch on a ref containing that commit and this workflow). A new build may have a new CID because of generated timestamps, but restores that source version. The workflow verifies the new pin before changing DNS. Download CAR artifacts before their 30-day expiry; the Filebase object is retained independently.
+Alternatively rerun a previous `master` workflow run for the desired commit. Dispatching on another branch produces a CAR artifact only. A new build may have a new CID because of generated timestamps, but restores that source version. The workflow verifies the new pin before changing DNS. Download CAR artifacts before their 30-day expiry; the Filebase object is retained independently.
 
 ## Optional Mac mini pin
 

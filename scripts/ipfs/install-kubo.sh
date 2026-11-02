@@ -2,7 +2,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/../.."
 # One pin for local runs and CI. GitHub release assets mirror dist.ipfs.tech.
-version=v0.40.0
+version=v0.43.1
 system=$(uname -s | tr '[:upper:]' '[:lower:]')
 case "$(uname -m)" in arm64|aarch64) arch=arm64 ;; x86_64|amd64) arch=amd64 ;; *) echo 'Unsupported Kubo architecture' >&2; exit 1 ;; esac
 case "$system" in darwin|linux) ;; *) echo 'Unsupported Kubo OS' >&2; exit 1 ;; esac
