@@ -88,3 +88,13 @@ test('known scheme-less links retain relative attributes and receive local redir
   assert.match(fs.readFileSync(path.join(output, 'about/terminal.co/index.html'), 'utf8'), /href="https:\/\/terminal.co"/);
   assert.deepEqual(check(output).errors, []);
 });
+
+test('srcset candidates without separator whitespace and relative data-image links are checked', async t => {
+  const { input, output, gatewaySafe, check } = await fixture(t);
+  fs.appendFileSync(path.join(input, 'index.html'), '<img srcset="/assets/a.svg 1x,/assets/a.svg 2x"><div data-image="assets/a.svg"></div>');
+  gatewaySafe(input, output);
+  assert.match(fs.readFileSync(path.join(output, 'index.html'), 'utf8'), /srcset="assets\/a.svg 1x,assets\/a.svg 2x"/);
+  assert.deepEqual(check(output).errors, []);
+  fs.appendFileSync(path.join(output, 'index.html'), '<div data-image="assets/missing.svg"></div>');
+  assert.ok(check(output).errors.some(e => e.includes('assets/missing.svg')));
+});

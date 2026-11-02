@@ -81,7 +81,7 @@ The archive contains Jekyll's public site, including downloads and hidden `.well
 
 `repairs.mjs` documents a small, explicit repair table applied only to the IPFS copy. The starting site had 23 broken internal references: scheme-less external links, two outdated permalink targets, and missing image paths. Known scheme-less links keep their already-relative URL attributes and receive local HTML redirect targets to the intended HTTPS destination. Two image paths map to identifiable originals already in the repo. Four image paths have no original here (2030 poster and talk photo, AutoScan architecture, and the IPFS install cover); these use an SVG explicitly labelled “Original image unavailable in this archive.” Replace the table entries when the originals become available. The Pages source is untouched.
 
-The source has no `/en/index.html`; the IPFS copy adds the bilingual home there so `/en/` serves the site rather than a gateway directory listing.
+The source has no `/en/index.html`; the IPFS copy adds the bilingual home there so `/en/` serves the site rather than a gateway directory listing. Links in this new page are rebased from the original home; existing files keep their already-relative URL attributes.
 
 The language switcher reads `data-alt-url`, which the HTML transform rewrites; it therefore stays inside the current CID on path gateways. No active root-relative runtime fetch/navigation paths were found in shipped JS. Audited non-URL slash strings in the BeeLine bundle (unused Vue `BASE_URL`, closing-tag construction and source-map comments) are ignored by the JS audit. Future runtime URL construction still needs review: static string scanning cannot prove the behavior of arbitrary computed JavaScript.
 

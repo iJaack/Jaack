@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { repairs, redirects, redirectPage, missingImage } from './repairs.mjs';
-import { files, rootRelative, scan, textFile } from './urls.mjs';
+import { files, rootRelative, internal, scan, textFile } from './urls.mjs';
 export function rewrite(url, file) {
   if (!rootRelative(url)) return url;
   const [, pathname, suffix] = url.match(/^([^?#]*)([\s\S]*)$/);
@@ -23,7 +23,8 @@ export function gatewaySafe(input = '_site', output = '_site_ipfs') {
   fs.rmSync(path.join(output, 'CNAME'), { force: true });
   fs.writeFileSync(path.join(output, 'ipfs-missing-image.svg'), missingImage);
   // Legacy source has /en/about/ but no English home; supply a real index instead of a gateway directory listing.
-  if (!fs.existsSync(path.join(output, 'en/index.html')) && fs.existsSync(path.join(input, 'index.html'))) {
+  const syntheticHome = !fs.existsSync(path.join(output, 'en/index.html')) && fs.existsSync(path.join(input, 'index.html'));
+  if (syntheticHome) {
     fs.mkdirSync(path.join(output, 'en'), { recursive: true });
     fs.copyFileSync(path.join(input, 'index.html'), path.join(output, 'en/index.html'));
     source.push(path.join(input, 'en/index.html'));
@@ -40,7 +41,7 @@ export function gatewaySafe(input = '_site', output = '_site_ipfs') {
       // Preserve existing relative URLs verbatim. For known scheme-less external links,
       // supply a local redirect target instead of changing the original attribute.
       if (redirects.has(url)) {
-        const target = path.resolve(output, path.posix.dirname(file), url.split(/[?#]/)[0], 'index.html');
+        const target = path.resolve(output, path.posix.dirname(syntheticHome && file === 'en/index.html' ? 'index.html' : file), url.split(/[?#]/)[0], 'index.html');
         if (!target.startsWith(output + path.sep)) throw new Error('Redirect escaped output');
         if (!fs.existsSync(target)) {
           fs.mkdirSync(path.dirname(target), { recursive: true });
@@ -49,6 +50,8 @@ export function gatewaySafe(input = '_site', output = '_site_ipfs') {
         repaired++;
       }
       if (repairs.has(url)) { repaired++; url = repairs.get(url); }
+      // Only the synthesized home moves existing relative URLs to a different depth.
+      if (syntheticHome && file === 'en/index.html' && internal(url) && !rootRelative(url)) url = '/' + url;
       return rewrite(url, file);
     });
     if (next !== text) fs.writeFileSync(destination, next);

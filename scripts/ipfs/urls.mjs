@@ -15,8 +15,8 @@ export function css(text, visit) {
 }
 export function srcset(text, visit) {
   // Follow srcset tokenization: commas belong to data URLs until whitespace; other URLs end at a comma.
-  return text.replace(/(^|[\s,]+)(data:[^\s]+|[^\s,]+)([^,]*)(,|$)/gi,
-    (all, space, url, descriptor, comma) => space + visit(url, { asset: true, kind: 'srcset' }) + descriptor + comma);
+  return text.replace(/(^|[\s,]+)(data:[^\s]+|[^\s,]+)([^,]*)(?=,|$)/gi,
+    (all, space, url, descriptor) => space + visit(url, { asset: true, kind: 'srcset' }) + descriptor);
 }
 export function javascript(text, visit) {
   // Audit root-path string literals, including template literal prefixes. Do not rewrite arbitrary JS:
@@ -47,7 +47,7 @@ export function html(text, visit) {
       else if (key === 'srcset' || key === 'imagesrcset') next = srcset(value, use);
       else if (/^(href|src|poster|action|formaction|cite|background|longdesc|xlink:href|manifest)$/.test(key) || key.startsWith('data-')) {
         // data-* may also carry prose, JSON, numbers, language codes, etc.
-        if (!key.startsWith('data-') || /^(?:\/(?!\/)|\.\.?\/)/.test(value) || /(?:url|src|href|poster)$/.test(key)) next = use(value, { asset: !key.startsWith('data-') && key !== 'action' && key !== 'formaction' && (key !== 'href' || !['a', 'area'].includes(tag)) });
+        if (!key.startsWith('data-') || /^(?:\/(?!\/)|\.\.?\/)/.test(value) || /(?:url|src|href|poster|image|background|file)$/.test(key) || /^[^\s<>]+\/[^\s<>]+\.[a-z0-9]+(?:[?#].*)?$/i.test(value)) next = use(value, { asset: key.startsWith('data-') ? /(?:src|poster|image|background|file)$/.test(key) : key !== 'action' && key !== 'formaction' && (key !== 'href' || !['a', 'area'].includes(tag)) });
       } else if (tag === 'meta' && key === 'content' && /^(?:\/(?!\/)|\.\.?\/)/.test(value)) next = use(value, { asset: false });
       return name + equals + (a !== undefined ? `"${next}"` : b !== undefined ? `'${next}'` : next);
     });
