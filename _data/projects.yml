@@ -117,6 +117,7 @@
 
 - id: hundred
   name: Hundred
+  monogram: "100"
   group: apps
   role_en: Product and development
   role_it: Prodotto e sviluppo
@@ -227,3 +228,7 @@
   description_it: "Un'app di scrittura tranquilla per iPhone, iPad e Mac, che trasforma le bozze in thread per X."
   detail_en: "Plain Markdown files in iCloud Drive, a paper-like editor set in Newsreader, and a publish sheet that counts X's weighted characters. When a post runs over 280, “Split here” breaks it at the end of the previous sentence. I work on the editor, the publish flow and the design system."
   detail_it: "File Markdown semplici in iCloud Drive, un editor simile alla carta composto in Newsreader e un foglio di pubblicazione che conta i caratteri pesati di X. Quando un post supera i 280, «Dividi qui» lo spezza alla fine della frase precedente. Lavoro sull'editor, sul flusso di pubblicazione e sul design system."
+  video_caption_en: "Carta's Publish sheet on iPhone. Sample text."
+  video_caption_it: "Il foglio Pubblica di Carta su iPhone. Testi di esempio."
+  video_desc_en: "Carta on iPhone: from a draft, Publish opens; the third post is 29 characters over X's limit and “Dividi qui” (Split here) splits it in two. The thread goes from 4 to 5 posts, all within 280 characters."
+  video_desc_it: "Carta su iPhone: dalla bozza si apre Pubblica; il terzo post supera di 29 caratteri il limite di X e \"Dividi qui\" lo divide in due. Il thread passa da 4 a 5 post, tutti entro i 280 caratteri."

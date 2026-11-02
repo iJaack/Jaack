@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const source = fs.readFileSync('assets/js/project-video.js', 'utf8');
 
-function load({ reduced = false, saveData = false, paused = false, storageFails = false } = {}) {
+function load({ id = 'demo', reduced = false, saveData = false, paused = false, storageFails = false } = {}) {
   const attrs = new Map();
   const button = { hidden: true, setAttribute: (key, value) => attrs.set(key, value) };
   const flags = new Set();
@@ -24,6 +24,7 @@ function load({ reduced = false, saveData = false, paused = false, storageFails 
     }
   };
   const figure = {
+    dataset: { pv: id },
     querySelector: selector => ({ video, button, '.pv-stage': stage })[selector],
     toggleAttribute(key, value) { value ? flags.add(key) : flags.delete(key); },
     setAttribute(key) { flags.add(key); },
@@ -31,7 +32,7 @@ function load({ reduced = false, saveData = false, paused = false, storageFails 
   };
   const html = { lang: 'en' };
   let intersect, language;
-  const storage = { 'jk.pv.carta': paused ? '1' : '0' };
+  const storage = { ['jk.pv.' + id]: paused ? '1' : '0' };
   vm.runInNewContext(source, {
     document: { querySelector: () => figure, documentElement: html },
     navigator: { connection },
@@ -57,6 +58,21 @@ function load({ reduced = false, saveData = false, paused = false, storageFails 
   };
 }
 
+test('the script stays below 2 KB and safely exits without a figure', () => {
+  assert.ok(Buffer.byteLength(source) < 2048);
+  vm.runInNewContext(source, { document: { querySelector: () => null } });
+});
+
+test('pause storage uses the project id from the figure', () => {
+  const p = load({ id: 'another-project', paused: true });
+  p.view(1);
+  assert.equal(p.video.plays, 0);
+  p.button.onclick();
+  assert.deepEqual(p.storage, { 'jk.pv.another-project': '0' });
+  p.button.onclick();
+  assert.deepEqual(p.storage, { 'jk.pv.another-project': '1' });
+});
+
 test('visibility gates playback; system pause preserves the user control state', async () => {
   const p = load();
   assert.equal(p.video.plays, 0);
@@ -73,7 +89,7 @@ test('visibility gates playback; system pause preserves the user control state',
   p.view(0);
   assert.equal(p.video.paused, true);
   assert.equal(p.attrs.get('aria-label'), 'Pause video');
-  assert.equal(p.storage['jk.pv.carta'], '0');
+  assert.equal(p.storage['jk.pv.demo'], '0');
   p.view(.6);
   assert.equal(p.video.plays, 2);
 });
@@ -100,7 +116,7 @@ test('user pause survives visibility changes and labels follow the site language
   await p.resolve();
   p.button.onclick();
   assert.equal(p.video.paused, true);
-  assert.equal(p.storage['jk.pv.carta'], '1');
+  assert.equal(p.storage['jk.pv.demo'], '1');
   assert.equal(p.attrs.get('aria-label'), 'Play video');
   p.language('it');
   assert.equal(p.attrs.get('aria-label'), 'Riproduci il video');
@@ -109,7 +125,7 @@ test('user pause survives visibility changes and labels follow the site language
   p.view(1);
   assert.equal(p.video.plays, 1);
   p.button.onclick();
-  assert.equal(p.storage['jk.pv.carta'], '0');
+  assert.equal(p.storage['jk.pv.demo'], '0');
   assert.equal(p.attrs.get('aria-label'), 'Metti in pausa il video');
   assert.equal(p.attrs.has('aria-pressed'), false);
 });

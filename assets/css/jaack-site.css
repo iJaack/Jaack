@@ -306,14 +306,27 @@ html[data-theme="dark"] {
   color: var(--jk-ink);
 }
 
+.project-page--carta .project-video {
+  --pv-grain: url("../images/work/carta/grain.png");
+}
+
 /* .project-video: a fixed-ratio paper stage with a separate site control. */
-.project-video { --pv-w: 358; --pv-h: 770; margin: 0; }
+.project-video {
+  --pv-w: 358px;
+  --pv-h: 770px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 44px;
+  column-gap: var(--jk-s3);
+  width: min(100%, var(--pv-w));
+  margin: 0 auto;
+}
 .pv-stage {
+  grid-column: 1 / -1;
   position: relative;
-  width: min(100%, calc(var(--pv-w) * 1px));
-  aspect-ratio: var(--pv-w) / var(--pv-h);
+  width: 100%;
+  aspect-ratio: 358 / 770;
   margin: var(--jk-s6) auto var(--jk-s3);
-  background: #F5F1E8 url("../images/work/carta/grain.png") 0 0 / 110px 110px;
+  background: #F5F1E8 var(--pv-grain, none) 0 0 / 110px 110px;
   border-radius: var(--jk-r-panel);
   overflow: hidden;
   box-shadow: inset 0 0 0 1px var(--jk-hair);
@@ -329,15 +342,10 @@ html[data-theme="dark"] {
 .pv-media { display: none; }
 [data-pv-ready] .pv-media { display: block; }
 [data-pv-ready] .pv-poster { display: none; }
-.pv-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--jk-s3);
-  width: min(100%, calc(var(--pv-w) * 1px));
-  margin: 0 auto;
-}
 .project-video figcaption {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: center;
   position: static;
   margin: 0;
   min-width: 0;
@@ -345,8 +353,10 @@ html[data-theme="dark"] {
   font-size: var(--jk-fs-sm);
   color: var(--jk-t2);
 }
-.project-video + .project-details { margin-top: var(--jk-s8); }
+.project-video ~ .project-details { margin-top: var(--jk-s8); }
 .pv-toggle {
+  grid-column: 2;
+  grid-row: 2;
   display: inline-flex;
   flex: none;
   align-items: center;
@@ -396,7 +406,8 @@ html[data-theme="dark"] .pv-toggle {
 }
 html[data-theme="dark"] .pv-toggle:hover { background: #261F1B; }
 @media (min-width: 776px) {
-  .project-video { --pv-w: 720; --pv-h: 820; }
+  .project-video { --pv-w: 720px; --pv-h: 820px; }
+  .pv-stage { aspect-ratio: 720 / 820; }
 }
 @media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
   .pv-stage { background-image: none; }
