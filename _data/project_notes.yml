@@ -46,5 +46,5 @@ ideas:
   it: "Scarica l’anteprima del codice qui sotto e leggi il supporto prima di collegare le fonti Apple. Il plugin locale funziona sul Mac di sviluppo; restano da completare un installer firmato, la verifica su un computer pulito e il percorso per la directory pubblica OpenAI."
 
 carta:
-  it: "Il video mostra il foglio Pubblica: un post troppo lungo si divide in due con un tocco."
-  en: "The clip shows the Publish sheet: an over-long post splits in two with one tap."
+  it: "L'anteprima di sviluppo mostra l'interfaccia Publish in inglese, con due post di esempio e i rispettivi conteggi pesati per X."
+  en: "The development preview shows the English Publish interface, with two sample posts and their weighted X counts."

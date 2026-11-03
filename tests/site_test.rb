@@ -165,12 +165,10 @@ class SiteTest < Minitest::Test
     end
   end
 
-  def test_project_video_is_dormant_on_every_built_page_except_carta
+  def test_project_video_is_dormant_on_every_built_page
     paths = Dir.glob(File.join(ROOT, '**', '*.html'))
     refute_empty paths
     paths.each do |path|
-      next if path == File.join(ROOT, 'projects/carta/index.html')
-
       page = Nokogiri::HTML(File.read(path))
       assert_empty page.css('.project-video, script[src="/assets/js/project-video.js"]'), path
     end
@@ -247,45 +245,28 @@ class SiteTest < Minitest::Test
     end
   end
 
-  def test_carta_has_bilingual_video_and_a_standard_project_entry
+  def test_carta_has_a_native_development_preview_and_a_standard_project_entry
     page = doc('projects/carta/index.html')
     assert page.at_css('.project-page--carta')
     assert_equal 'Carta', page.at_css('h1').text
-    figure = page.at_css('figure.project-video[data-pv="carta"]')
+    figure = page.at_css('figure.project-art')
     refute_nil figure
     caption = figure.element_children.last
     assert_equal 'figcaption', caption.name
-    assert_equal 'pv-caption-carta', caption['id']
-    assert_equal "Carta's Publish sheet on iPhone. Sample text.", caption.at_css('.lang-en[lang="en"]').text
-    assert_equal 'Il foglio Pubblica di Carta su iPhone. Testi di esempio.', caption.at_css('.lang-it[lang="it"]').text
-    video = figure.at_css('video')
-    refute_nil video
-    refute video.key?('poster')
-    %w[muted loop playsinline disablepictureinpicture].each { |attribute| assert video.key?(attribute), attribute }
-    assert_equal 'none', video['preload']
-    refute video.key?('autoplay')
-    refute video.key?('controls')
-    assert_equal %w[wide.webm wide.mp4 compact.webm compact.mp4], video.css('source').map { |s| s['src'].split('carta-site-').last }
-    assert_equal ['(min-width: 776px)', '(min-width: 776px)', nil, nil], video.css('source').map { |s| s['media'] }
-    video.css('source').each { |s| assert File.file?(File.join(ROOT, s['src'].delete_prefix('/'))) }
-    %w[aria-describedby aria-labelledby].each do |attribute|
-      target = page.at_css("##{video[attribute]}")
-      refute_nil target, attribute
-      %w[it en].each { |lang| refute_empty target.at_css(".lang-#{lang}[lang='#{lang}']").text }
-    end
-    description = page.at_css("##{video['aria-describedby']}")
-    assert description.matches?('p.visually-hidden')
-    assert_equal %q{Carta on iPhone: from a draft, Publish opens; the third post is 29 characters over X's limit and “Dividi qui” (Split here) splits it in two. The thread goes from 4 to 5 posts, all within 280 characters.}, description.at_css('.lang-en').text
-    assert_equal %q{Carta su iPhone: dalla bozza si apre Pubblica; il terzo post supera di 29 caratteri il limite di X e "Dividi qui" lo divide in due. Il thread passa da 4 a 5 post, tutti entro i 280 caratteri.}, description.at_css('.lang-it').text
-    poster = page.at_css('.pv-poster img')
-    assert_equal 'high', poster['fetchpriority']
-    assert_equal ['358', '770'], [poster['width'], poster['height']]
-    assert_equal 3, page.css('.pv-poster source').length
-    button = page.at_css('.pv-toggle[hidden]')
-    refute_nil button
-    assert_equal video['id'], button['aria-controls']
-    refute button.key?('aria-pressed')
-    assert page.at_css('script[src="/assets/js/project-video.js"][defer]')
+    assert_includes caption.at_css('.lang-en[lang="en"]').text, 'Development preview'
+    assert_includes caption.at_css('.lang-en').text, 'sample text'
+    assert_includes caption.at_css('.lang-en').text, 'native UI test harness'
+    assert_includes caption.at_css('.lang-it[lang="it"]').text, 'Anteprima di sviluppo'
+    assert_includes caption.at_css('.lang-it').text, 'testi di esempio'
+    image = figure.at_css('img')
+    assert_equal '/assets/images/work/carta/carta-publish-native-preview.png', image['src']
+    assert_equal ['430', '932'], [image['width'], image['height']]
+    assert_includes image['alt'], 'English Publish sheet with two sample posts'
+    raster = File.binread(File.join(ROOT, image['src'].delete_prefix('/')))
+    assert_equal [1290, 2796], raster.unpack('@16N2')
+    assert_empty page.css('video, .project-video, script[src="/assets/js/project-video.js"]')
+    refute_includes page.text, 'Dividi qui'
+    refute_includes page.text, '29 characters over'
     assert page.at_css('.project-next a[href="mailto:hey@jaack.me?subject=Carta"]')
     assert page.at_css('a[href="/projects/#carta"]')
     entry = doc('projects/index.html').at_css('.app-grid #carta')
