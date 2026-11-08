@@ -180,6 +180,37 @@
   ],
   "events": [
     {
+      "id": "star-trek-prerelease-2026-11-07",
+      "date": "2026-11-07",
+      "title": {
+        "it": "Prerelease Star Trek — 7 novembre 2026",
+        "en": "Star Trek prerelease — November 7, 2026"
+      },
+      "venue": "Golden Store Talenti",
+      "deck_id": null,
+      "version_id": null,
+      "status": "reported",
+      "result": {
+        "it": "Pareggio 1-1, due sconfitte 0-2, bye nell’ultimo turno",
+        "en": "1-1 draw, two 0-2 losses, bye in the last round"
+      },
+      "summary": {
+        "it": "Al Golden Store Talenti ho chiuso con un pareggio 1-1, due sconfitte per 0-2 e un bye nell’ultimo turno.",
+        "en": "At Golden Store Talenti I finished with a 1-1 draw, two 0-2 losses, and a bye in the last round."
+      },
+      "notes": [
+        {
+          "it": "Ho costruito un bianco-blu-nero attorno a Borg Queen, puntando su artefatti e astronavi. Ripensandoci, nei tre colori avevo poche carte davvero forti, mentre avevo lasciato fuori 4–5 rare verdi. Avrei potuto esplorare verde-bianco o verde-bianco-blu; quattro colori mi sembravano troppo diluiti.",
+          "en": "I built a white-blue-black deck around Borg Queen, focusing on artifacts and spaceships. Looking back, I had few truly strong cards in the three colors, while I had left out 4–5 green rares. I could have explored green-white or green-white-blue; four colors felt too diluted."
+        },
+        {
+          "it": "Per il prossimo sealed voglio partire dalle rare del pool, senza scegliere subito la carta attorno a cui costruire. Questa volta verde-bianco mi sembrava la scelta più pulita.",
+          "en": "For the next Sealed I want to start from the rares in the pool, without immediately choosing the card to build around. This time green-white seemed the cleanest choice."
+        }
+      ],
+      "version_relation": "unknown"
+    },
+    {
       "id": "league-talenti-2026-10-16",
       "date": "2026-10-16",
       "title": {
@@ -359,7 +390,7 @@
       "version_relation": "unknown"
     }
   ],
-  "updated": "2026-10-26",
+  "updated": "2026-11-07",
   "version_ids": [
     "mono-green-2026-10-01-torpor",
     "mono-green-2026-09-10-warg",
