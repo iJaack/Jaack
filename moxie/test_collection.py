@@ -27,7 +27,7 @@ class CollectionTests(unittest.TestCase):
     self.assertEqual(set(f),{'name','image','small'})
     for k in ['image','small']:self.assertEqual((urlsplit(f[k]).scheme,urlsplit(f[k]).hostname),('https','cards.scryfall.io'))
    self.assertEqual(urlsplit(c['scryfall_uri']).hostname,'scryfall.com');self.assertEqual(urlsplit(c['scryfall_uri']).query,'')
-   self.assertIn(c['finish'],{'nonfoil','foil','etched'});self.assertIn(c['price_source'],{'scryfall','snapshot',None})
+   self.assertIn(c['finish'],{'nonfoil','foil','etched','unknown'});self.assertIn(c['price_source'],{'scryfall','snapshot',None})
   self.assertNotRegex(self.raw,'(?i)'+'|'.join(['purch'+'ase','price_?'+'paid','trade'+'list','golden'+'-store-','cardmarket'+'-import-','Near Mint','last_modified']))
  def test_totals_are_consistent(self):
   t=self.data['totals'];cards=self.data['cards']
@@ -38,7 +38,7 @@ class CollectionTests(unittest.TestCase):
   for c in cards:
    if c['price_eur'] is None:self.assertIsNone(c['value_eur'])
    else:self.assertAlmostEqual(c['value_eur'],round(c['price_eur']*c['count'],2),places=2)
-  self.assertEqual((t['cards'],t['unique']),(1238,789))
+  self.assertEqual((t['cards'],t['unique']),(1261,812))
   self.assertEqual(len({c['key'] for c in cards}),len(cards))
   self.assertRegex(self.data['prices_as_of'] or '',r'^\d{4}-\d{2}-\d{2}$')
  def test_deck_membership_follows_current_versions(self):
@@ -91,10 +91,10 @@ class CollectionTests(unittest.TestCase):
    if (c['collector_number'],c['finish']) in unpriced:self.assertIsNone(c['price_eur']);self.assertIsNone(c['price_source'])
    else:self.assertEqual(c['price_source'],'scryfall');self.assertGreater(c['price_eur'],0)
   self.assertEqual(self.data['sets']['trk'],'Star Trek')
-  kept=[c for c in cards if c['set']!='trk']
+  kept=[c for c in cards if c['set'] not in ('trk','sds')]
   self.assertEqual(sum(c['count'] for c in kept),1182);self.assertEqual(len(kept),909)
   self.assertEqual(hashlib.sha256(json.dumps(kept,ensure_ascii=False,separators=(',',':')).encode()).hexdigest(),'f6333de6b5dc05ff65f31df613a946a81a5ecc2518e6f3587072099a5c35c41d')
-  sets={k:v for k,v in self.data['sets'].items() if k!='trk'}
+  sets={k:v for k,v in self.data['sets'].items() if k not in ('trk','sds')}
   self.assertEqual(hashlib.sha256(json.dumps(sets,ensure_ascii=False,separators=(',',':'),sort_keys=True).encode()).hexdigest(),'f9f324364cc0ce8e3087300f783a2cebc332e5c80e3fe43be8df3798d97281ad')
  def test_trk_batch27_adds_only_the_verified_copies(self):
   batch=[('203','nonfoil',"I'm a Doctor, Not a . . .",'c07979d4-8a58-4cfb-bffa-74e8bd97c7ff'),('207','nonfoil','Moopsy','dfbaf597-6be2-4aa0-88ae-cc4c94878add'),('208','nonfoil','Mugato','f3c68b20-f202-4d55-bef1-398d96e55c57'),('210','nonfoil','Photosynthetic Physician','88b87ddb-fbf8-4e6e-9895-1b30ae5ad63a'),('213','nonfoil','Saurian Explorer','197abe5e-cde2-4b29-a10f-d6b789776bfa'),('214','nonfoil','Species 8472','b3d74723-4c9e-4fe7-8276-05d5f1b7ba0c'),('221','nonfoil','U.S.S. Discovery, at Black Alert','69b1f87f-ff02-4945-9f07-18dab5035e2d'),('222','nonfoil','U.S.S. Voyager, Lone Wanderer','aaf8a0b2-c6cb-41cb-913d-7ae1d75e555d'),('224','foil','Xenobotanist','20a97cda-42b2-44f1-8e77-f64dd1c98f6f'),('225','nonfoil','Xindi Surveyors','803608aa-ae69-45d2-ae48-f1688d2a6a0d'),('226','foil','All Good Things...','fe5dda31-159c-49c7-962e-a04b771256ea'),('239','nonfoil','Hemmer, Fixing What Is Broken','f3e730d7-3fd1-4bd2-a35b-6fb85bfd3c65'),('243','nonfoil','Kirk, Commanding Officer','245d0430-0967-44f1-8c59-985104a8db30'),('249','nonfoil','Nog, Ambitious Cadet','b513dd60-8573-467b-9c6a-855a0ba86fca'),('262','nonfoil','Cybernetic Specialist','b147f16e-a2d6-4d43-9213-9a2723b0d3ef'),('266','nonfoil','Isolinear Processor','8c1a2c13-5e36-4707-9d90-18c2e58a2b26'),('269','nonfoil','Tea, Earl Grey, Hot','289e8ebe-ab0f-466b-a4e6-d5cf8411e724'),('270','nonfoil','Tricorder','3c872f02-80ac-49e3-a777-3526d35ad7cc'),('272','nonfoil','U.S.S. Cerritos, Following Up','76bf7521-5024-4fdc-9ea1-5e10f2647efb'),('294','nonfoil','Romulus','1bce111b-b07c-4589-9b6d-f0b5f320808c'),('300','nonfoil','Subspace Anomaly','ed62600f-84ae-421e-970a-fd0682c8f280'),('306','nonfoil','Watery Grave','5525d6a6-e532-4047-9da4-bfae7927fecc'),('310','nonfoil','Mountain','87908c55-4ac4-4b57-a8ee-a28640a18f0f'),('314','foil','Swamp','e046c0ef-0af3-4f48-8329-7d659e7d1a89'),('320','nonfoil','Island','a44efa5f-8fbb-43e0-adc4-d05f4be6b9a6'),('323','nonfoil','Mountain','2a844b96-6616-4c39-8f4f-5d14a3b2bd55'),('323','foil','Mountain','2a844b96-6616-4c39-8f4f-5d14a3b2bd55')]
@@ -112,13 +112,35 @@ class CollectionTests(unittest.TestCase):
   self.assertEqual(sorted(c['decks'] for c in added if c['name']=='Island'),[['arachnid-blitz']])
   self.assertEqual(sorted(c['decks'] for c in added if c['name']=='Mountain'),[['bending-aggro'],['bending-aggro'],['bending-aggro']])
   self.assertTrue(all(c['decks']==[] for c in added if c['name'] not in {'Island','Mountain'}))
-  kept=[c for c in cards if not (c['set']=='trk' and (c['collector_number'],c['finish']) in wanted)]
+  kept=[c for c in cards if not (c['set']=='trk' and ((c['collector_number'],c['finish']) in wanted or int(c['collector_number'])<100)) and c['set']!='sds']
   self.assertEqual(len(kept),938);self.assertEqual(sum(c['count'] for c in kept),1211)
   self.assertEqual(hashlib.sha256(json.dumps(kept,ensure_ascii=False,separators=(',',':')).encode()).hexdigest(),'da281836dca7d0c63a1cbff79a28996b42c7bc780dfb97fce645a6497e7d6ede')
+ def test_missing23_keeps_unknown_language_and_finish(self):
+  batch=[('2','nonfoil','Andromedan Automatons','fc386662-0fe3-432f-85a8-9a06e1274245'),('3','nonfoil','Antagonist Incorporator','63918e59-0c03-4d98-9216-e58ee157b7ea'),('5','nonfoil','Brad Boimler, Eager Ensign','a6bf1525-2212-46d0-ad4d-1dbaa2e3b3cd'),('8','nonfoil','Command Decision','9f1f789b-5c08-4a4d-b3a3-4d51ad9f1a4d'),('9','nonfoil','Command Subadjunct','853bf74d-0b61-43df-9018-0b40b624a9d1'),('12','nonfoil','DOT-7 Repair Squad','fca1528c-84cc-42d2-99ae-9f10f0e28743'),('15','nonfoil','Emergency Medical Hologram','dda6f965-cbdf-4dbc-b0b1-00c27e32f5f2'),('17','nonfoil','Federation Field Medic','b312dacd-b87f-44c1-a804-bee221e70f52'),('19','foil','Free Borg Revolutionaries','6711e910-e5a8-4602-9559-de5374bffff2'),('26','nonfoil','Oberth-Class Starship','7efe3788-ecf7-4b56-8970-bc324092941c'),('35','nonfoil','Shields Up!','0b60c9af-8ea9-491d-a4a4-226a2143e7f3'),('38','nonfoil','Tactical Officer','317704a8-a3c2-400c-bbe0-2cbc6fe10710'),('46','nonfoil','Anthropological Mission','93b458aa-a928-48ef-b685-1306cc65ad06'),('48','nonfoil','Cetacean Ops','a8dc7ecd-e6f0-4050-9d5b-8436f60a1395'),('54','nonfoil','Dominion Saboteur','207c4369-220a-4eff-81dc-65872d6fc264'),('55','nonfoil','Emergency Holographic Crew','53943948-8f24-495a-b6eb-e788fa169fcd'),('59','nonfoil','Federation Probe','f988ba84-fc78-41a2-b2f2-eebf78cee591'),('65','nonfoil','Humpback Whales','605263f0-08b6-4cc7-aba7-eb49850f8832'),('66','foil','Interstellar Effigy','4b7d505f-2a6b-4525-87c7-19e06d49c9df'),('69','nonfoil','Lieutenant Commander Data','c6d5da51-6c74-4dd5-a532-cf4c2a7b601c'),('73','nonfoil','Melkotian Adjudicator','873c9933-7939-4376-873c-6a5b3bbc98d4'),('81','nonfoil','Starfleet Spanner Jockey','16bc9660-2bef-4926-b0e6-f49b22817bea')]
+  cards=self.data['cards'];wanted={(n,f) for n,f,_name,_sid in batch}
+  added=[c for c in cards if c['set']=='trk' and (c['collector_number'],c['finish']) in wanted]
+  self.assertEqual(len(batch),22);self.assertEqual(len(added),22);self.assertEqual(sum(c['count'] for c in added),22)
+  self.assertEqual(sorted((c['collector_number'],c['finish'],c['name'],c['count'],c['language'],c['key'].split('|')[0]) for c in added),sorted((n,f,name,1,'',sid) for n,f,name,sid in batch))
+  self.assertEqual(sum(c['count'] for c in added if c['finish']=='nonfoil'),20)
+  self.assertEqual(sorted(c['collector_number'] for c in added if c['finish']=='foil'),['19','66'])
+  for c in added:
+   self.assertEqual(c['decks'],[]);self.assertEqual(c['count'],1)
+   if (c['collector_number'],c['finish']) in {('66','foil'),('81','nonfoil')}:self.assertIsNone(c['price_eur']);self.assertIsNone(c['price_source'])
+   else:self.assertEqual(c['price_source'],'scryfall');self.assertGreater(c['price_eur'],0)
+  borg=[c for c in cards if c['finish']=='unknown']
+  self.assertEqual(len(borg),1)
+  b=borg[0]
+  self.assertEqual((b['set'],b['collector_number'],b['name'],b['language'],b['count'],b['price_eur'],b['value_eur'],b['price_source'],b['decks']),( 'sds','16','Sen Triplets','it',1,None,None,None,[]))
+  self.assertEqual(b['key'].split('|')[0],'d25109e0-f9dd-4cc4-b58f-9e05fb979052')
+  self.assertNotIn(b['finish'],{'nonfoil','foil','etched'})
+  self.assertEqual(self.data['sets']['sds'],'Stardates')
+  kept=[c for c in cards if c not in added and c is not b]
+  self.assertEqual(len(kept),965);self.assertEqual(sum(c['count'] for c in kept),1238)
+  self.assertEqual(hashlib.sha256(json.dumps(kept,ensure_ascii=False,separators=(',',':')).encode()).hexdigest(),'5d0a8a7a19c42a89f9661c161b41d88a25215ea2ba9598c7420f21ea2beeec41')
  def test_no_blank_languages_or_duplicate_printings(self):
   cards=self.data['cards']
   blanks=[c for c in cards if not c['language']]
-  self.assertEqual(len(blanks),27);self.assertTrue(all(c['set']=='trk' and int(c['collector_number'])>=203 for c in blanks))
-  self.assertTrue(all(c['language'] for c in cards if c['set']!='trk' or int(c['collector_number'])<203))
+  self.assertEqual(len(blanks),49);self.assertTrue(all(c['set']=='trk' for c in blanks))
+  self.assertTrue(all(c['language'] for c in cards if c['set']!='trk'))
   keys=[(c['set'],c['collector_number'],c['finish'],c['language']) for c in cards];self.assertEqual(len(keys),len(set(keys)))
 if __name__=='__main__':unittest.main()
