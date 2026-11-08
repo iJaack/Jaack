@@ -106,18 +106,22 @@ class HubTests(unittest.TestCase):
   self.assertEqual(self.hub['updated'],'2026-11-07')
   paragraphs=[
    'Al Golden Store Talenti ho chiuso con un pareggio 1-1, due sconfitte per 0-2 e un bye nell’ultimo turno.',
-   'Ho costruito un bianco-blu-nero attorno a Borg Queen, puntando su artefatti e astronavi. Ripensandoci, nei tre colori avevo poche carte davvero forti, mentre avevo lasciato fuori 4–5 rare verdi. Avrei potuto esplorare verde-bianco o verde-bianco-blu; quattro colori mi sembravano troppo diluiti.',
+   'Ho costruito un bianco-blu-nero attorno a Regina Borg, Odio Ereditario (Trio di Sen), puntando su artefatti e astronavi. Ripensandoci, nei tre colori avevo poche carte davvero forti, mentre avevo lasciato fuori 4–5 rare verdi. Avrei potuto esplorare verde-bianco o verde-bianco-blu; quattro colori mi sembravano troppo diluiti.',
    'Per il prossimo sealed voglio partire dalle rare del pool, senza scegliere subito la carta attorno a cui costruire. Questa volta verde-bianco mi sembrava la scelta più pulita.',
   ]
   self.assertEqual(event['title']['it'],'Prerelease Star Trek — 7 novembre 2026')
   self.assertEqual(event['summary']['it'],paragraphs[0])
   self.assertEqual([n['it'] for n in event['notes']],paragraphs[1:])
+  self.assertIn('Regina Borg, Odio Ereditario (Trio di Sen)',event['notes'][0]['it'])
+  self.assertNotIn('Borg Queen',event['notes'][0]['it'])
+  self.assertIn('Borg Queen (Sen Triplets)',event['notes'][0]['en'])
+  self.assertNotIn('Odio Ereditario',event['notes'][0]['en'])
   joined=' '.join([event['title']['it'],event['title']['en'],event['result']['it'],event['result']['en'],event['summary']['it'],event['summary']['en']]+[x['it']+' '+x['en'] for x in event['notes']])
   self.assertNotIn('Commander',joined);self.assertNotIn('notion',joined.lower());self.assertNotRegex(joined,r'https?://')
   path='/journal/star-trek-prerelease-2026-11-07/'
   expected={
    'it':paragraphs+['Prerelease Star Trek — 7 novembre 2026','Pareggio 1-1, due sconfitte 0-2, bye nell’ultimo turno'],
-   'en':['Star Trek prerelease — November 7, 2026','At Golden Store Talenti I finished with a 1-1 draw, two 0-2 losses, and a bye in the last round.','I built a white-blue-black deck around Borg Queen, focusing on artifacts and spaceships.','I had left out 4–5 green rares.','For the next Sealed I want to start from the rares in the pool','This time green-white seemed the cleanest choice.','1-1 draw, two 0-2 losses, bye in the last round'],
+   'en':['Star Trek prerelease — November 7, 2026','At Golden Store Talenti I finished with a 1-1 draw, two 0-2 losses, and a bye in the last round.','I built a white-blue-black deck around Borg Queen (Sen Triplets), focusing on artifacts and spaceships.','I had left out 4–5 green rares.','For the next Sealed I want to start from the rares in the pool','This time green-white seemed the cleanest choice.','1-1 draw, two 0-2 losses, bye in the last round'],
   }
   for lang in ['it','en']:
    page=(D/lang/path.lstrip('/')/'index.html').read_text()
