@@ -38,7 +38,7 @@ class CollectionTests(unittest.TestCase):
   for c in cards:
    if c['price_eur'] is None:self.assertIsNone(c['value_eur'])
    else:self.assertAlmostEqual(c['value_eur'],round(c['price_eur']*c['count'],2),places=2)
-  self.assertEqual((t['cards'],t['unique']),(1182,740))
+  self.assertEqual((t['cards'],t['unique']),(1211,767))
   self.assertEqual(len({c['key'] for c in cards}),len(cards))
   self.assertRegex(self.data['prices_as_of'] or '',r'^\d{4}-\d{2}-\d{2}$')
  def test_deck_membership_follows_current_versions(self):
@@ -78,6 +78,24 @@ class CollectionTests(unittest.TestCase):
    src=Path(tmp)/'collection_hydrated.json';src.write_text(json.dumps({'cards':[dict(row,language='English'),dict(row,language=''),dict(row,language=None,foil=False)]}))
    blank=bc.build(src,refresh=False)['cards']
   self.assertEqual(sorted((c['finish'],c['language'],c['count']) for c in blank),[('foil','en',4),('nonfoil','en',2)])
+ def test_trk_batch_adds_only_the_verified_copies(self):
+  batch=[('104','nonfoil','De-evolve'),('105','nonfoil','Eject the Warp Core'),('107','nonfoil','Fugitive Listener'),('117','nonfoil','In the Pale Moonlight'),('123','nonfoil','Pattern Buffer Preservation'),('129','nonfoil','Storied Veteran'),('130','nonfoil','Stray from History'),('133','nonfoil','Tenacious Drone'),('134','nonfoil','Test of Loyalty'),('139','nonfoil','Boarding Action'),('139','foil','Boarding Action'),('144','nonfoil',"Captain's Tutelage"),('146','nonfoil','Dahar Master'),('151','nonfoil','Genesis Effect'),('154','nonfoil','Khaaaaaaaaaaaannn!'),('155','foil','Khan, Despot by Design'),('159','nonfoil','The Naked Time'),('163','nonfoil','Planetary Patrol'),('171','nonfoil','Savvy Profiteer'),('173','nonfoil','Starfleet Security'),('174','nonfoil','Tal Shiar Analyst'),('181','nonfoil','The Wrath of Khan'),('189','nonfoil','Cold-Blooded Crew'),('190','nonfoil','Common Goal'),('191','foil','Culber and Stamets, Star-Crossed'),('191','nonfoil','Culber and Stamets, Star-Crossed'),('195','nonfoil','Dominion Supervisor'),('198','nonfoil','Final Frontier'),('200','nonfoil','Genesis Device')]
+  cards=self.data['cards'];trk=[c for c in cards if c['set']=='trk']
+  self.assertEqual(len(batch),29);self.assertEqual(len(trk),29);self.assertEqual(sum(c['count'] for c in trk),29)
+  self.assertEqual(sorted((c['collector_number'],c['finish'],c['name'],c['count'],c['language']) for c in trk),sorted((n,f,name,1,'en') for n,f,name in batch))
+  self.assertEqual(sum(c['count'] for c in trk if c['finish']=='nonfoil'),26)
+  self.assertEqual(sorted(c['collector_number'] for c in trk if c['finish']=='foil'),['139','155','191'])
+  unpriced={('130','nonfoil'),('144','nonfoil'),('155','foil'),('163','nonfoil'),('191','foil')}
+  for c in trk:
+   self.assertEqual(c['decks'],[]);self.assertEqual(c['count'],1)
+   if (c['collector_number'],c['finish']) in unpriced:self.assertIsNone(c['price_eur']);self.assertIsNone(c['price_source'])
+   else:self.assertEqual(c['price_source'],'scryfall');self.assertGreater(c['price_eur'],0)
+  self.assertEqual(self.data['sets']['trk'],'Star Trek')
+  kept=[c for c in cards if c['set']!='trk']
+  self.assertEqual(sum(c['count'] for c in kept),1182);self.assertEqual(len(kept),909)
+  self.assertEqual(hashlib.sha256(json.dumps(kept,ensure_ascii=False,separators=(',',':')).encode()).hexdigest(),'f6333de6b5dc05ff65f31df613a946a81a5ecc2518e6f3587072099a5c35c41d')
+  sets={k:v for k,v in self.data['sets'].items() if k!='trk'}
+  self.assertEqual(hashlib.sha256(json.dumps(sets,ensure_ascii=False,separators=(',',':'),sort_keys=True).encode()).hexdigest(),'f9f324364cc0ce8e3087300f783a2cebc332e5c80e3fe43be8df3798d97281ad')
  def test_no_blank_languages_or_duplicate_printings(self):
   cards=self.data['cards'];self.assertTrue(all(c['language'] for c in cards))
   keys=[(c['set'],c['collector_number'],c['finish'],c['language']) for c in cards];self.assertEqual(len(keys),len(set(keys)))
