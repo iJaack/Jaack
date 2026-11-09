@@ -20,7 +20,7 @@
   T.set=function(m){try{if(m==='light'||m==='dark')localStorage.setItem(KEY,m);else localStorage.removeItem(KEY);}catch(e){}T.apply(true);T.sync();};
   var OPTS=[['auto','Auto','◐','Automatico: chiaro dalle '+FROM+' alle '+TO],['light','Chiaro','☀','Tema chiaro'],['dark','Scuro','☾','Tema scuro']];
   T.mount=function(host){if(!host||host.querySelector('.jk-thsw'))return;var g=document.createElement('div');g.className='jk-thsw';g.setAttribute('role','group');g.setAttribute('aria-label','Tema');
-    g.innerHTML=OPTS.map(function(o){return '<button type="button" data-m="'+o[0]+'" title="'+o[3]+'" aria-label="'+o[3]+'"><span class="i" aria-hidden="true">'+o[2]+'</span><span class="l">'+o[1]+'</span></button>'}).join('');
+    g.innerHTML=OPTS.map(function(o){return '<button type="button" data-m="'+o[0]+'" title="'+o[3]+'"><span class="i" aria-hidden="true">'+o[2]+'</span><span class="l">'+o[1]+'</span><span class="visually-hidden"><span class="lang-en" lang="en">, theme</span><span class="lang-it" lang="it">, tema</span></span></button>'}).join('');
     g.addEventListener('click',function(e){var b=e.target.closest('button');if(b)T.set(b.dataset.m);});host.appendChild(g);T.sync();};
   T.sync=function(){var m=T.mode();[].forEach.call(document.querySelectorAll('.jk-thsw button'),function(b){b.setAttribute('aria-pressed',b.dataset.m===m?'true':'false')});};
   T.apply(false);

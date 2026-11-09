@@ -67,3 +67,50 @@ test('translation navigation remains available', () => {
 test('invalid stored language falls back to English', () => {
   assert.equal(load({ preferred: 'xx' }).document.documentElement.lang, 'en');
 });
+
+test('theme controls keep visible labels before bilingual context through every state change', () => {
+  const theme = fs.readFileSync('assets/jaack-design-system/theme.js', 'utf8');
+  const storage = new Map();
+  const buttons = [];
+  let markup;
+  const host = {
+    querySelector: () => null,
+    appendChild(group) {
+      markup = group.innerHTML;
+      for (const [, attributes, content] of markup.matchAll(/<button\b([^>]*)>([\s\S]*?)<\/button>/g)) {
+        buttons.push({
+          attributes, content, dataset: { m: attributes.match(/data-m="([^"]+)"/)[1] },
+          setAttribute(name, value) { this[name] = value; }
+        });
+      }
+    }
+  };
+  const html = { dataset: {}, classList: { add() {}, remove() {} } };
+  const window = {};
+  vm.runInNewContext(theme, {
+    window, document: {
+      documentElement: html, addEventListener() {}, querySelectorAll: () => buttons,
+      createElement: () => ({ setAttribute() {}, addEventListener() {} })
+    },
+    localStorage: {
+      getItem: key => storage.get(key), setItem: (key, value) => storage.set(key, value),
+      removeItem: key => storage.delete(key)
+    },
+    matchMedia: () => ({ matches: false }), setInterval() {}, setTimeout() {}, clearTimeout() {},
+    addEventListener() {}, dispatchEvent() {}, CustomEvent: function() {}
+  });
+  window.JaackTheme.mount(host);
+  assert.equal(buttons.length, 3);
+  for (const mode of ['light', 'dark', 'auto']) {
+    window.JaackTheme.set(mode);
+    for (const [index, button] of buttons.entries()) {
+      assert.doesNotMatch(button.attributes, /aria-label=/);
+      const label = ['Auto', 'Chiaro', 'Scuro'][index];
+      const labelAt = button.content.indexOf(`>${label}</span>`);
+      assert.ok(labelAt >= 0 && labelAt < button.content.indexOf('class="visually-hidden"'));
+      assert.match(button.content, /class="lang-en" lang="en">, theme<\/span>/);
+      assert.match(button.content, /class="lang-it" lang="it">, tema<\/span>/);
+      assert.equal(button['aria-pressed'], String(button.dataset.m === mode));
+    }
+  }
+});

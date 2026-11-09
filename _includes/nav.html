@@ -1,5 +1,5 @@
 <nav class="site-nav jk-top jk-glass" aria-label="Main">
-  <a class="jk-mark site-wordmark" href="{{ '/' | relative_url }}" aria-label="Jaack home">jaack<span class="dot" aria-hidden="true">.</span><span class="dom">me</span></a>
+  <a class="jk-mark site-wordmark" href="{{ '/' | relative_url }}">jaack<span class="dot">.</span><span class="dom">me</span><span class="visually-hidden">, home</span></a>
   <div class="nav-row">
   {% assign page_sections = page.url | split: "/" %}
   <ul class="nav-links jk-links">
@@ -11,8 +11,8 @@
     <li><a class="jk-sw keep" href="{{ site.booking_url }}"><span class="lang-en" lang="en">Book a call</span><span class="lang-it" lang="it">Prenota una call</span></a></li>
   </ul>
   <div class="lang-switch" role="group" aria-label="Language / Lingua">
-    <button type="button" class="lang-toggle" data-lang="en" lang="en" aria-label="English" aria-pressed="true">EN</button>
-    <button type="button" class="lang-toggle" data-lang="it" lang="it" aria-label="Italiano" aria-pressed="false">IT</button>
+    <button type="button" class="lang-toggle" data-lang="en" lang="en" aria-pressed="true">EN<span class="visually-hidden"> English</span></button>
+    <button type="button" class="lang-toggle" data-lang="it" lang="it" aria-pressed="false">IT<span class="visually-hidden"> Italiano</span></button>
   </div>
   </div>
   <span data-jk-theme-switch></span>
