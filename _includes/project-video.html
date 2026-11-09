@@ -1,13 +1,9 @@
 {% assign pv_id = include.id %}
 {% assign pv_project = site.data.projects | where: 'id', include.id | first %}
 {% assign pv_path = '/assets/images/work/' | append: pv_id | append: '/' | append: pv_id | append: '-site-' | relative_url %}
-<figure class="project-video" data-pv="{{ pv_id }}">
+<figure class="project-video" data-pv="{{ pv_id }}" data-pv-src="{{ pv_path }}">
   <div class="pv-stage">
     <video id="pv-video-{{ pv_id }}" class="pv-media" muted loop playsinline disablepictureinpicture preload="none" aria-describedby="pv-desc-{{ pv_id }}" aria-labelledby="pv-caption-{{ pv_id }}" width="358" height="770">
-      <source media="(min-width: 776px)" src="{{ pv_path }}wide.webm" type="video/webm">
-      <source media="(min-width: 776px)" src="{{ pv_path }}wide.mp4" type="video/mp4">
-      <source src="{{ pv_path }}compact.webm" type="video/webm">
-      <source src="{{ pv_path }}compact.mp4" type="video/mp4">
     </video>
     <picture class="pv-poster">
       <source media="(min-width: 776px)" srcset="{{ pv_path }}wide-poster.webp" type="image/webp" width="720" height="820">
@@ -16,7 +12,7 @@
       <img src="{{ pv_path }}compact-poster.png" width="358" height="770" alt="" loading="eager" decoding="async" fetchpriority="high">
     </picture>
   </div>
-  <button class="pv-toggle" type="button" hidden aria-controls="pv-video-{{ pv_id }}" aria-label="Metti in pausa il video">
+  <button class="pv-toggle" type="button" hidden aria-controls="pv-video-{{ pv_id }}" aria-label="Riproduci video" title="Riproduci video">
     <!-- Filled Lucide Play / Pause geometry, MIT license: https://lucide.dev/license -->
     <svg class="pv-ic pv-ic--pause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="14" y="4" width="4" height="16" rx="1"></rect><rect x="6" y="4" width="4" height="16" rx="1"></rect></svg>
     <svg class="pv-ic pv-ic--play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"></path></svg>

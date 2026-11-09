@@ -26,6 +26,23 @@ class SiteTest < Minitest::Test
     end
   end
 
+  def test_chrome_names_start_with_visible_text
+    nav = doc('index.html').at_css('nav.site-nav')
+    mark = nav.at_css('.jk-mark')
+    refute mark.key?('aria-label')
+    assert_empty mark.css('[aria-hidden="true"]')
+    assert_equal 'jaack.me, home', mark.text
+    assert_equal ', home', mark.at_css('.visually-hidden').text
+    { 'en' => ['EN', ' English'], 'it' => ['IT', ' Italiano'] }.each do |lang, (visible, suffix)|
+      button = nav.at_css(".lang-switch button[data-lang='#{lang}']")
+      refute button.key?('aria-label')
+      assert button.key?('aria-pressed')
+      assert_equal lang, button['lang']
+      assert_equal visible + suffix, button.text
+      assert_equal suffix, button.at_css('.visually-hidden').text
+    end
+  end
+
   def test_internal_links_and_assets_on_updated_pages_resolve
     ROUTES.each do |route|
       page = doc(route)
@@ -165,10 +182,11 @@ class SiteTest < Minitest::Test
     end
   end
 
-  def test_project_video_is_dormant_on_every_built_page
+  def test_project_video_is_dormant_everywhere_except_carta
     paths = Dir.glob(File.join(ROOT, '**', '*.html'))
     refute_empty paths
     paths.each do |path|
+      next if path == File.join(ROOT, 'projects/carta/index.html')
       page = Nokogiri::HTML(File.read(path))
       assert_empty page.css('.project-video, script[src="/assets/js/project-video.js"]'), path
     end
@@ -208,9 +226,9 @@ class SiteTest < Minitest::Test
       %w[muted loop playsinline disablepictureinpicture].each { |attr| assert video.key?(attr), attr }
       %w[poster autoplay controls].each { |attr| refute video.key?(attr), attr }
       path = "/assets/images/work/#{id}/#{id}-site-"
-      assert_equal %w[wide.webm wide.mp4 compact.webm compact.mp4].map { |s| path + s }, video.css('source').map { |s| s['src'] }
-      assert_equal ['(min-width: 776px)', '(min-width: 776px)', nil, nil], video.css('source').map { |s| s['media'] }
-      assert_equal %w[video/webm video/mp4 video/webm video/mp4], video.css('source').map { |s| s['type'] }
+      assert_equal path, figure['data-pv-src']
+      assert_empty video.css('source')
+      refute video.key?('src')
 
       picture = figure.at_css('.pv-stage > picture.pv-poster')
       assert_equal %w[source source source img], picture.element_children.map(&:name)
@@ -245,28 +263,40 @@ class SiteTest < Minitest::Test
     end
   end
 
-  def test_carta_has_a_native_development_preview_and_a_standard_project_entry
+  def test_carta_has_a_hero_video_and_a_standard_project_entry
     page = doc('projects/carta/index.html')
     assert page.at_css('.project-page--carta')
     assert_equal 'Carta', page.at_css('h1').text
-    figure = page.at_css('figure.project-art')
+    figure = page.at_css('figure.project-video')
     refute_nil figure
+    assert_empty page.css('figure.project-art')
+    assert_equal 1, page.css('video').length
+    video = figure.at_css('video[muted][loop][playsinline][disablepictureinpicture]')
+    refute_nil video
+    refute video.key?('poster')
+    refute video.key?('src')
+    assert_empty video.css('source')
+    path = '/assets/images/work/carta/carta-site-'
+    assert_equal path, figure['data-pv-src']
+    %w[wide.webm wide.mp4 compact.webm compact.mp4].each do |suffix|
+      assert File.file?(File.join(ROOT, (path + suffix).delete_prefix('/'))), suffix
+    end
+    assert figure.at_css('.pv-poster img[src="' + path + 'compact-poster.png"]')
     caption = figure.element_children.last
     assert_equal 'figcaption', caption.name
-    assert_includes caption.at_css('.lang-en[lang="en"]').text, 'Development preview'
-    assert_includes caption.at_css('.lang-en').text, 'sample text'
-    assert_includes caption.at_css('.lang-en').text, 'native UI test harness'
-    assert_includes caption.at_css('.lang-it[lang="it"]').text, 'Anteprima di sviluppo'
-    assert_includes caption.at_css('.lang-it').text, 'testi di esempio'
-    image = figure.at_css('img')
-    assert_equal '/assets/images/work/carta/carta-publish-native-preview.png', image['src']
-    assert_equal ['430', '932'], [image['width'], image['height']]
-    assert_includes image['alt'], 'English Publish sheet with two sample posts'
-    raster = File.binread(File.join(ROOT, image['src'].delete_prefix('/')))
-    assert_equal [1290, 2796], raster.unpack('@16N2')
-    assert_empty page.css('video, .project-video, script[src="/assets/js/project-video.js"]')
-    refute_includes page.text, 'Dividi qui'
-    refute_includes page.text, '29 characters over'
+    project = YAML.safe_load_file(File.expand_path('../_data/projects.yml', __dir__)).find { |p| p['id'] == 'carta' }
+    %w[en it].each do |lang|
+      assert_equal project.fetch("video_caption_#{lang}"), caption.at_css(".lang-#{lang}[lang='#{lang}']").text
+      assert_equal project.fetch("video_desc_#{lang}"), figure.at_css("p.visually-hidden .lang-#{lang}[lang='#{lang}']").text
+    end
+    assert_includes page.text, 'Dividi qui'
+    assert_includes page.text, '29 characters over'
+    assert_includes page.text, 'The clip shows the Publish sheet'
+    assert_includes page.text, 'Il video mostra il foglio Pubblica'
+    assert_equal 1, page.css('script[src="/assets/js/project-video.js"][defer]').length
+    front_matter = YAML.safe_load_file(File.expand_path('../projects/carta/index.md', __dir__))
+    assert_equal 'carta', front_matter['hero_video']
+    assert_empty front_matter.keys.grep(/\A(?:image|cover)/)
     assert page.at_css('.project-next a[href="mailto:hey@jaack.me?subject=Carta"]')
     assert page.at_css('a[href="/projects/#carta"]')
     entry = doc('projects/index.html').at_css('.app-grid #carta')

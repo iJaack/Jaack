@@ -386,7 +386,7 @@ html[data-theme="dark"] {
 .pv-ic { width: 18px; height: 18px; fill: currentColor; }
 .pv-ic--play, [data-pv-paused] .pv-ic--pause { display: none; }
 [data-pv-paused] .pv-ic--play { display: block; }
-.project-video .visually-hidden {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
