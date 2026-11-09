@@ -136,9 +136,12 @@ class SiteTest < Minitest::Test
     refute_nil carta
     refute_includes carta.text, '100'
     assert_empty carta.css('img')
-    placeholder = carta.at_css('.app-monogram[aria-hidden="true"]')
-    refute_nil placeholder
-    assert_empty placeholder.inner_html
+    monogram = carta.at_css('.app-monogram[aria-hidden="true"]')
+    refute_nil monogram
+    assert_equal 'C', monogram.text
+    accessible_link = carta.dup
+    accessible_link.css('[aria-hidden="true"]').remove
+    assert_equal 'Carta', accessible_link.text
     hundred = home.at_css('.app-links a[href="/projects/hundred/"]')
     assert_equal '100', hundred.at_css('.app-monogram[aria-hidden="true"]').text
     intro = home.at_css('.app-gallery .section-intro')
@@ -150,11 +153,38 @@ class SiteTest < Minitest::Test
       assert img['height'].to_i > 0
     end
     work = doc('projects/index.html')
+    assert_equal 'C', work.at_css('#carta .app-monogram[aria-hidden="true"]').text
+    assert_equal '100', work.at_css('#hundred .app-monogram[aria-hidden="true"]').text
     assert_equal 6, work.css('.work-jumps a').length
     assert_equal 5, work.css('.app-grid .app-entry').length
     assert_equal %w[eva eva-protocol], work.css('.project-family .work-entry').map { |entry| entry['id'] }
     ids = work.css('[id]').map { |entry| entry['id'] }
     assert_equal ids.uniq, ids, 'Project anchors must remain unique'
+  end
+
+  def test_pommidoro_image_dimensions_match_both_previews
+    path = '/assets/images/work/pommidoro-screen.jpg'
+    jpeg = File.binread(File.join(ROOT, path.delete_prefix('/')))
+    assert_equal "\xFF\xD8".b, jpeg.byteslice(0, 2)
+    offset = 2
+    dimensions = nil
+    while offset < jpeg.bytesize
+      assert_equal 0xff, jpeg.getbyte(offset), 'Expected a JPEG segment'
+      marker = jpeg.getbyte(offset + 1)
+      length = jpeg.byteslice(offset + 2, 2).unpack1('n')
+      if [0xc0, 0xc2].include?(marker) # Baseline or progressive JPEG frame.
+        dimensions = jpeg.byteslice(offset + 5, 4).unpack('nn').reverse
+        break
+      end
+      break if marker == 0xda # Image data must follow a frame header.
+      offset += 2 + length
+    end
+    assert_equal [445, 985], dimensions
+    %w[index.html projects/pommidoro/index.html].each do |route|
+      img = doc(route).at_css("img[src='#{path}']")
+      refute_nil img, route
+      assert_equal dimensions, [img['width'].to_i, img['height'].to_i], route
+    end
   end
 
   def test_existing_special_pages_and_article_assets_survive
@@ -301,7 +331,8 @@ class SiteTest < Minitest::Test
     assert page.at_css('a[href="/projects/#carta"]')
     entry = doc('projects/index.html').at_css('.app-grid #carta')
     assert entry.at_css('h3 a[href="/projects/carta/"]')
-    refute entry.at_css('.app-icon, .app-monogram, .text-link')
+    assert_equal 'C', entry.at_css('.app-monogram[aria-hidden="true"]').text
+    refute entry.at_css('.app-icon, .text-link')
     refute doc('projects/pommidoro/index.html').at_css('.project-video, script[src="/assets/js/project-video.js"]')
   end
 

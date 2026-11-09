@@ -219,6 +219,7 @@
 
 - id: carta
   name: Carta
+  monogram: "C"
   group: apps
   role_en: Product and development
   role_it: Prodotto e sviluppo

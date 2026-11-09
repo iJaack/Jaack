@@ -289,7 +289,7 @@ html[data-theme="dark"] {
 }
 .writing-entry h3 { font-family: var(--jk-serif); font-weight: 560; }
 
-/* Carta wordmark: the supplied OFL subset is used only by this heading. */
+/* Carta wordmark and monograms share the supplied OFL subset. */
 @font-face {
   font-family: "Newsreader Carta";
   src: url("../fonts/newsreader/Newsreader-carta.woff2") format("woff2");
@@ -297,11 +297,15 @@ html[data-theme="dark"] {
   font-style: normal;
   font-display: swap;
 }
+.app-links a[href="/projects/carta/"] .app-monogram,
+#carta .app-monogram,
 .project-page--carta .page-title {
   font-family: "Newsreader Carta", var(--jk-serif);
   font-weight: 500;
   font-variation-settings: 'opsz' 72;
   letter-spacing: -0.025em;
+}
+.project-page--carta .page-title {
   font-size: var(--jk-fs-title);
   color: var(--jk-ink);
 }
