@@ -146,7 +146,7 @@ class HubTests(unittest.TestCase):
    self.assertIn('class="deck-theme theme-g"',(D/lang/'guides/mono-green-landfall/index.html').read_text())
    self.assertNotIn('class="deck-theme',(D/lang/'index.html').read_text())
   css=(D/'style.css').read_text()+(D/'jaack.css').read_text()
-  self.assertIn('--jk-bg:#121314',css)
+  self.assertIn('--jk-bg:#14110e',css)
   self.assertIn('--jk-accent:#e8c547',css)
   self.assertIn('.theme-rg{--accent:#ed887c;--deck-stripe:linear-gradient(90deg,#ed887c 0% 50%,#7fc49a 50% 100%)}',css)
   self.assertNotIn('#184936',css)

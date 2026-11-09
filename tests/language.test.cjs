@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const source = fs.readFileSync('assets/js/language.js', 'utf8');
 
-function load({ preferred, browser = 'en-US', fixed = '', storageFails = false } = {}) {
+function load({ preferred, browser = 'en-US', fixed = '', storageFails = false, inHead = false } = {}) {
   const classes = new Set();
   const storage = new Map(preferred ? [['site-lang', preferred]] : []);
   const buttons = ['en', 'it'].map(lang => ({
@@ -14,10 +14,16 @@ function load({ preferred, browser = 'en-US', fixed = '', storageFails = false }
     addEventListener(name, fn) { this[name] = fn; }
   }));
   const document = {
-    documentElement: { getAttribute: () => fixed, lang: 'en' },
+    documentElement: { getAttribute: () => fixed, lang: 'en', dataset: {} },
     body: { classList: { remove: (...names) => names.forEach(n => classes.delete(n)), add: n => classes.add(n) } },
     querySelectorAll: () => buttons
   };
+  const body = document.body;
+  let ready;
+  if (inHead) {
+    document.body = null;
+    document.addEventListener = (event, callback) => { assert.equal(event, 'DOMContentLoaded'); ready = callback; };
+  }
   const window = { location: { href: '' }, dispatchEvent(event) { this.event = event; } };
   vm.runInNewContext(source, {
     document, window, navigator: { language: browser },
@@ -27,7 +33,7 @@ function load({ preferred, browser = 'en-US', fixed = '', storageFails = false }
     },
     CustomEvent: function(name, options) { this.type = name; this.detail = options.detail; }
   });
-  return { document, window, buttons, classes, storage };
+  return { document, window, buttons, classes, storage, mount() { document.body = body; ready(); } };
 }
 
 test('Italian browser receives Italian content and document language', () => {
@@ -113,4 +119,16 @@ test('theme controls keep visible labels before bilingual context through every 
       assert.equal(button['aria-pressed'], String(button.dataset.m === mode));
     }
   }
+});
+
+test('head initialization selects the translation before paint and mounts controls when DOM is ready', () => {
+  const p = load({ browser: 'it-IT', inHead: true });
+  assert.equal(p.document.documentElement.dataset.uiLang, 'it');
+  assert.equal(p.document.documentElement.lang, 'it');
+  assert.equal(p.classes.size, 0);
+  p.mount();
+  assert.ok(p.classes.has('lang-it'));
+  p.buttons[0].click();
+  assert.equal(p.document.documentElement.dataset.uiLang, 'en');
+  assert.equal(p.document.documentElement.lang, 'en');
 });

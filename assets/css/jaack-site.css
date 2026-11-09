@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "Newsreader";
+  src: url("../fonts/newsreader/Newsreader-roman.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Newsreader";
+  src: url("../fonts/newsreader/Newsreader-italic.woff2") format("woff2");
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* jaack.me — editorial Forma.
    Shared with other sites: token names, the type scale, the 4px spacing scale,
    theme.js (light 07:00–18:59, Auto/Chiaro/Scuro) and the layout principles.
@@ -63,6 +78,12 @@ nav.site-nav .jk-mark {
   min-width: 0;
 }
 .jk-thsw button { min-height: 44px; min-width: 44px; }
+/* Reserve the mounted switch footprint before theme.js runs. */
+nav.site-nav [data-jk-theme-switch] { width: 180px; height: 48px; }
+@media (max-width: 760px) {
+  nav.site-nav [data-jk-theme-switch] { width: 140px; }
+  nav.site-nav [data-jk-theme-switch]:empty { min-width: 140px; min-height: 48px; }
+}
 .author > .toright > .bio { color: var(--jk-ink-2); }
 .footer-main .footer-links a {
   display: inline-flex;
@@ -125,10 +146,11 @@ h1,
 .app-gallery h2,
 .wrapper-xwide .post > .title {
   font-family: var(--jk-serif);
-  font-weight: 560;
+  font-weight: 450;
+  font-optical-sizing: auto;
   font-size: var(--jk-fs-title);
-  letter-spacing: -0.02em;
-  line-height: 1.12;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
   font-style: normal;
 }
 .project-feature h3,
@@ -140,14 +162,17 @@ h1,
 }
 h2 { font-size: clamp(22px, 2vw, 28px); font-weight: 650; letter-spacing: -0.02em; }
 h3 { font-size: 18px; font-weight: 650; }
-p, li { line-height: 1.55; }
+p, li { line-height: var(--jk-lh); }
 .page-intro, .section-intro, .hero-sub { color: var(--jk-t2); font-size: var(--jk-fs-lede); }
 .work-meta, .post > .date, figcaption, .jk-note { color: var(--jk-t2); font-size: var(--jk-fs-sm); }
 
 .header-home { padding: 8px 0 20px; }
 .header-home .hero-title { margin: 0 0 12px; }
 .header-home .hero-bottom { gap: 16px; }
-.home-section { margin: 0 0 28px; }
+.home-section { margin: 0 0 var(--jk-chapter-gap-m); }
+@media (min-width: 768px) {
+  .home-section { margin-bottom: var(--jk-chapter-gap); }
+}
 .page, .post, .home, .writing, .projects { margin-top: 8px; }
 .page > .page-title { margin: 0 0 12px; text-align: left; }
 .contact-section { padding-top: 16px; }
@@ -171,8 +196,8 @@ a.text-link, .contact-links a { color: var(--jk-accent-text); }
 .lost-container .page-title,
 .lost-container h1 {
   font-size: var(--jk-fs-big);
-  letter-spacing: var(--jk-track-big);
-  line-height: 0.9;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
   margin: 0;
 }
 .lost-note { color: var(--jk-t2); margin-top: 12px; }
@@ -212,7 +237,7 @@ html[data-theme="dark"] .highlight .cp { color: var(--jk-t2); }
 .instagram-media { max-width: 100% !important; }
 
 /* Editorial skin. Packaged gold stays in the shared files and is not this site's accent. */
-:root { --jk-serif: Iowan Old Style, Palatino, "Palatino Linotype", Georgia, serif; }
+:root { --jk-serif: "Newsreader", "Iowan Old Style", Georgia, serif; }
 html[data-theme="light"] {
   --jk-bg: #f3eee6;
   --jk-surface: #fffdf8;
@@ -226,15 +251,9 @@ html[data-theme="light"] {
   --jk-accent-text: #6e2432;
   --jk-on-accent: #fffdf8;
   --jk-accent-wash: rgba(140, 58, 72, .12);
-  --jk-bg-1: rgba(196, 122, 118, .22);
-  --jk-bg-1b: rgba(196, 122, 118, .08);
-  --jk-bg-2: rgba(214, 176, 130, .20);
-  --jk-bg-2b: rgba(214, 176, 130, .08);
-  --jk-bg-3: rgba(150, 158, 120, .16);
-  --jk-bg-3b: rgba(150, 158, 120, .06);
 }
 html[data-theme="dark"] {
-  --jk-bg: #161311;
+  --jk-bg: #161210;
   --jk-surface: #1e1916;
   --jk-surface-2: #261f1b;
   --jk-ink: #f6f0e8;
@@ -245,13 +264,7 @@ html[data-theme="dark"] {
   --jk-accent: #e7a8b4;
   --jk-accent-text: #f0c0c8;
   --jk-on-accent: #1c1214;
-  --jk-accent-wash: rgba(231, 168, 180, .14);
-  --jk-bg-1: rgba(180, 90, 100, .16);
-  --jk-bg-1b: rgba(180, 90, 100, .06);
-  --jk-bg-2: rgba(196, 150, 110, .12);
-  --jk-bg-2b: rgba(196, 150, 110, .05);
-  --jk-bg-3: rgba(140, 150, 110, .10);
-  --jk-bg-3b: rgba(140, 150, 110, .04);
+  --jk-accent-wash: rgba(231, 168, 180, .12);
 }
 .hero-label {
   font-family: var(--jk-font);
@@ -260,7 +273,10 @@ html[data-theme="dark"] {
   text-transform: uppercase;
 }
 .hero-label span { color: var(--jk-accent-text); }
-.post { max-width: 66ch; }
+.post { max-width: var(--jk-measure); }
+/* Reserve a cover footprint while the native image dimensions load. */
+.post > .title-image { aspect-ratio: auto 16 / 9; }
+.post > beeline-button { min-height: 54px; }
 .post > .title {
   max-width: 22ch;
   padding-bottom: 12px;
@@ -279,7 +295,7 @@ html[data-theme="dark"] {
   color: var(--jk-accent-text);
 }
 .post > .date p { margin: 0; color: var(--jk-t2); letter-spacing: 0; text-transform: none; font-size: 13px; }
-.post-body { font-size: var(--jk-fs-lede); line-height: 1.65; }
+.post-body { font-family: var(--jk-serif); font-size: 19px; line-height: 1.6; font-weight: 400; }
 .writing-entry { padding: 12px 0; gap: 16px; }
 .writing-entry time {
   color: var(--jk-accent-text);
@@ -287,20 +303,13 @@ html[data-theme="dark"] {
   letter-spacing: .04em;
   text-transform: uppercase;
 }
-.writing-entry h3 { font-family: var(--jk-serif); font-weight: 560; }
+.writing-entry h3 { font-family: var(--jk-serif); font-weight: 500; }
 
-/* Carta wordmark and monograms share the supplied OFL subset. */
-@font-face {
-  font-family: "Newsreader Carta";
-  src: url("../fonts/newsreader/Newsreader-carta.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
+/* Carta wordmark and monograms use the shared Newsreader family at optical size 72. */
 .app-links a[href="/projects/carta/"] .app-monogram,
 #carta .app-monogram,
 .project-page--carta .page-title {
-  font-family: "Newsreader Carta", var(--jk-serif);
+  font-family: var(--jk-serif);
   font-weight: 500;
   font-variation-settings: 'opsz' 72;
   letter-spacing: -0.025em;
@@ -402,11 +411,11 @@ html[data-theme="dark"] {
   border: 0;
 }
 html[data-theme="dark"] .pv-stage {
-  box-shadow: inset 0 0 0 1px rgba(246,240,232,.14), 0 24px 60px -20px rgba(0,0,0,.6);
+  box-shadow: inset 0 0 0 1px rgba(246,240,232,.14), 0 24px 60px -20px rgba(8,6,4,.6);
 }
 html[data-theme="dark"] .pv-toggle {
   background: rgba(30,25,22,.88);
-  --pv-shadow: inset 0 0 0 1px rgba(246,240,232,.28), inset 0 1px 0 rgba(255,255,255,.06), 0 4px 14px -4px rgba(0,0,0,.55);
+  --pv-shadow: inset 0 0 0 1px rgba(246,240,232,.28), inset 0 1px 0 rgba(255,255,255,.06), 0 4px 14px -4px rgba(8,6,4,.55);
 }
 html[data-theme="dark"] .pv-toggle:hover { background: #261F1B; }
 @media (min-width: 776px) {

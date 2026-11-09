@@ -1,6 +1,6 @@
 /* editorial chapters — each page section is a chapter that answers one question:
    numeral + eyebrow, the question as title, a one-line lede, then hero → figure → groups.
-   64 px between chapters on desktop (40 on mobile) with one hairline in the middle. */
+   128 px between chapters on desktop (72 on mobile) with one hairline in the middle. */
 .jk-chs{display:grid;grid-template-columns:minmax(0,1fr);row-gap:calc(var(--jk-chapter-gap-m)/2)}
 .jk-ch{position:relative;min-width:0}
 .jk-ch+.jk-ch{border-top:1px solid var(--jk-hair);padding-top:calc(var(--jk-chapter-gap-m)/2)}

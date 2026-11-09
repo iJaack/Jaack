@@ -254,7 +254,7 @@ for l in ['it','en']:
 
 (DIST/'versions').mkdir(exist_ok=True)
 for v in VERS.values():(DIST/'versions'/(v['id']+'.txt')).write_text('Deck\n'+''.join(f'{q} {n}\n' for n,q in v['mainboard'].items())+'\nSideboard\n'+''.join(f'{q} {n}\n' for n,q in v['sideboard'].items()))
-(DIST/'favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#101418"/><text x="10" y="45" font-family="Arial,sans-serif" font-size="44" font-weight="700" fill="#e7edf2">m<tspan fill="#8eb7e0">.</tspan></text></svg>')
+(DIST/'favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="#13120f"/><text x="10" y="45" font-family="Arial,sans-serif" font-size="44" font-weight="700" fill="#efeae2">m<tspan fill="#8eb7e0">.</tspan></text></svg>')
 palette={'W':'#e5d8af','U':'#80b5e8','B':'#b6b2c4','R':'#ed887c','G':'#7fc49a','C':'#bec3c7'}
 themes=[]
 for colors in sorted({tuple(d['colors']) for d in H['decks']}):
