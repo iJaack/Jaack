@@ -255,7 +255,7 @@ html[data-theme="light"] {
 html[data-theme="dark"] {
   --jk-bg: #161210;
   --jk-surface: #1e1916;
-  --jk-surface-2: #261f1b;
+  --jk-surface-2: #231e1a;
   --jk-ink: #f6f0e8;
   --jk-ink-2: #d4c6ba;
   --jk-t2: rgba(246, 240, 232, .72);
