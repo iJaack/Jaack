@@ -13,3 +13,17 @@ h1,h2,h3,h4{font-family:var(--font);font-weight:500;color:var(--text);text-wrap:
 @media(max-width:350px){h1{font-size:36px}.layout{padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}.mobile-menu{margin-left:max(20px,env(safe-area-inset-left));margin-right:max(20px,env(safe-area-inset-right))}summary{gap:8px;grid-template-columns:20px 1fr auto}.hand-title{font-size:15px}.verdict{font-size:9px;padding:4px 5px}.note{font-size:15px}.counter{font-size:11px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button:active{transform:none}}
 @media print{:root{color-scheme:light;--bg:#fff;--surface:#f5f5f5;--text:#111;--muted:#444;--accent:#333;--line:#ccc}.sidebar,.mobile-menu,.backtop,.filter-label,select,#hand-count{display:none}.layout{display:block;padding:0}.chapter{break-inside:avoid}h1{font-size:36px}.hand-body{display:block}}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+html[lang="it"] .jk-thsw .lang-en,
+html[lang="en"] .jk-thsw .lang-it { display: none; }

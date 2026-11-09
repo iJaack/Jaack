@@ -9,24 +9,26 @@
   --jk-fs-xs:12.5px;          /* labels / eyebrows (700, uppercase, +.06em) */
   --jk-fs-sm:13px;            /* captions, figure captions, tooltips */
   --jk-fs-note:14px;          /* notes, secondary row text */
-  --jk-fs-body:16px;          /* body, rows, comparisons */
-  --jk-fs-lede:17px;          /* chapter lede */
+  --jk-fs-body:17px;          /* body, rows, comparisons */
+  --jk-fs-lede:20px;          /* chapter lede */
   --jk-fs-title:clamp(30px,2.6vw,44px);   /* chapter question */
   --jk-fs-mid:clamp(36px,3vw,52px);       /* secondary number */
   --jk-fs-big:clamp(56px,7.5vw,120px);    /* the one hero number per chapter */
   --jk-fs-deco:clamp(96px,8vw,150px);     /* decorative chapter numeral (6 % ink) */
-  --jk-lh-tight:1.02;--jk-lh:1.5;
+  --jk-lh-tight:1.02;--jk-lh:1.6;
   --jk-track-label:.06em;--jk-track-big:-.05em;--jk-track-mid:-.04em;--jk-track-title:-.03em;
 
   /* spacing: 4 px scale */
-  --jk-s1:4px;--jk-s2:8px;--jk-s3:12px;--jk-s4:16px;--jk-s5:20px;--jk-s6:24px;--jk-s7:28px;--jk-s8:32px;--jk-s10:40px;--jk-s12:48px;--jk-s16:64px;--jk-s18:72px;
-  /* compact densities (as on the current dashboard) */
-  --jk-row-pad:7px;           /* hairline row ≈ 36 px with 16 px text */
-  --jk-group-gap:28px;        /* between groups inside a chapter */
-  --jk-hero-gap:24px;         /* chapter header → hero */
-  --jk-chapter-gap:64px;      /* between chapters, desktop (hairline in the middle) */
-  --jk-chapter-gap-m:40px;    /* between chapters, < 768 px */
-  --jk-page-x:clamp(16px,4.4vw,88px);
+  --jk-s1:4px;--jk-s2:8px;--jk-s3:12px;--jk-s4:16px;--jk-s5:20px;--jk-s6:24px;--jk-s7:28px;--jk-s8:32px;--jk-s10:40px;--jk-s12:48px;--jk-s16:64px;--jk-s18:72px;--jk-s20:80px;--jk-s24:96px;--jk-s32:128px;
+  /* airy rhythm; numeric tables may use the data row padding */
+  --jk-row-pad:12px;          /* hairline row ≈ 46 px */
+  --jk-row-pad-data:9px;     /* numeric tables and lists only */
+  --jk-group-gap:48px;        /* between groups inside a chapter */
+  --jk-hero-gap:32px;         /* chapter header → hero */
+  --jk-chapter-gap:128px;      /* between chapters, desktop (hairline in the middle) */
+  --jk-chapter-gap-m:72px;    /* between chapters, < 768 px */
+  --jk-page-x:clamp(20px,6vw,120px);
+  --jk-measure:64ch;
   --jk-topbar-h:72px;         /* space reserved under the floating top bar */
   --jk-max:3440px;
 
@@ -34,13 +36,19 @@
   --jk-r-xs:8px;--jk-r-s:14px;--jk-r-m:20px;--jk-r-panel:24px;--jk-r-l:26px;--jk-r-xl:34px;--jk-r-pill:999px;
 
   /* motion */
-  --jk-ease:cubic-bezier(.2,.8,.2,1);
-  --jk-spring:linear(0,.009,.035 2.1%,.141 4.4%,.281 6.7%,.723 12.9%,.938 16.7%,1.017 19.4%,1.077 22.1%,1.105 24.8%,1.11 27.8%,1.096 31.2%,1.04 37.7%,1.007 44.1%,.993 51.5%,1.001 67.3%,1);
-  --jk-d-fast:.15s;           /* hover, tooltip */
-  --jk-d-fade:.4s;            /* fade-in of groups (opacity only) */
-  --jk-d-theme:.4s;           /* light/dark cross-fade */
-  --jk-d-draw:.6s;            /* first draw of a chart */
-  --jk-d-pill:.35s;           /* nav pill indicator */
+  --jk-ease-out: cubic-bezier(.2,0,0,1);      /* ingresso, hover, cambi di stato */
+  --jk-ease-inout: cubic-bezier(.4,0,.2,1);   /* spostamenti brevi (indicatore pill) */
+  --jk-d-1: 120ms;  /* hover, press, tooltip */
+  --jk-d-2: 200ms;  /* fade di gruppi, pill, tema */
+  --jk-d-3: 280ms;  /* sheet, primo disegno grafico — massimo consentito */
+  /* alias per compatibilità, da rimuovere in v3 */
+  --jk-ease: var(--jk-ease-out);
+  --jk-spring: var(--jk-ease-inout);          /* niente più overshoot */
+  --jk-d-fast: var(--jk-d-1);
+  --jk-d-fade: var(--jk-d-2);
+  --jk-d-theme: var(--jk-d-2);
+  --jk-d-pill: var(--jk-d-2);
+  --jk-d-draw: var(--jk-d-3);
 
   /* chart / data colours (marks, bars, lines — never body text) */
   --jk-c-blue:#0a84ff;--jk-c-orange:#ff9f0a;--jk-c-yellow:#ffd60a;--jk-c-green:#30d158;--jk-c-cyan:#64d2ff;--jk-c-purple:#bf5af2;--jk-c-pink:#ff375f;--jk-c-red:#ff453a;
@@ -54,7 +62,7 @@ html[data-theme="light"]{
   --jk-t2:rgba(18,18,16,.70);             /* secondary text (grey-opacity hierarchy) */
   --jk-t3:rgba(18,18,16,.64);             /* tertiary text — lowest allowed for text (≥ 4.5:1) */
   --jk-hair:rgba(18,18,16,.11);           /* hairlines */
-  --jk-accent:#b8921a;--jk-accent-text:#7a5c00;--jk-on-accent:#fff;--jk-accent-wash:rgba(184,146,26,.12);
+  --jk-accent:#a8850f;--jk-accent-text:#7a5c00;--jk-on-accent:#171710;--jk-accent-wash:rgba(168,133,15,.12);
   --jk-amb:#8a5300;                       /* warning text (low confidence etc.) */
   --jk-ok:#256b2d;--jk-fail:#a33a22;--jk-info:#3f6fa6;
   /* glass */
@@ -69,18 +77,18 @@ html[data-theme="light"]{
 }
 html[data-theme="dark"]{
   color-scheme:dark;
-  --jk-bg:#121314;--jk-surface:#141414;--jk-surface-2:#191a17;
-  --jk-ink:#f6f3ee;--jk-ink-2:#c9c4bb;
-  --jk-t2:rgba(246,243,238,.70);
-  --jk-t3:rgba(246,243,238,.56);
-  --jk-hair:rgba(246,243,238,.12);
+  --jk-bg:#14110e;--jk-surface:#1b1714;--jk-surface-2:#231e1a;
+  --jk-ink:#f4eee5;--jk-ink-2:#cdc3b6;
+  --jk-t2:rgba(244,238,229,.70);
+  --jk-t3:rgba(244,238,229,.58);
+  --jk-hair:rgba(244,238,229,.12);
   --jk-accent:#e8c547;--jk-accent-text:#e8c547;--jk-on-accent:#171710;--jk-accent-wash:rgba(232,197,71,.12);
   --jk-amb:#e9b44c;
   --jk-ok:#8fbf8a;--jk-fail:#e07a5f;--jk-info:#8fb3d9;
-  --jk-tint:rgba(18,18,20,.6);--jk-tint-hi:rgba(26,26,28,.74);--jk-tint-edge:rgba(18,18,20,.3);
+  --jk-tint:rgba(20,17,14,.6);--jk-tint-hi:rgba(30,25,21,.74);--jk-tint-edge:rgba(20,17,14,.3);
   --jk-rim:rgba(255,255,255,.42);--jk-rim-lo:rgba(255,255,255,.06);--jk-glow:rgba(255,255,255,.16);
-  --jk-drop:0 28px 70px -30px rgba(0,0,0,.85),0 2px 8px -2px rgba(0,0,0,.5);
-  --jk-text-shadow:0 1px 2px rgba(0,0,0,.5);
+  --jk-drop:0 28px 70px -30px rgba(8,6,4,.8),0 2px 8px -2px rgba(8,6,4,.45);
+  --jk-text-shadow:0 1px 2px rgba(8,6,4,.5);
   --jk-bg-1:rgba(214,186,100,.10);--jk-bg-1b:rgba(214,186,100,.04);
   --jk-bg-2:rgba(104,132,184,.15);--jk-bg-2b:rgba(104,132,184,.06);
   --jk-bg-3:rgba(168,150,196,.10);--jk-bg-3b:rgba(168,150,196,.04);
@@ -88,10 +96,15 @@ html[data-theme="dark"]{
 /* Breakpoints (media queries cannot read custom properties — use these literal values):
    768 (mobile → desktop spacing), 900 (chapter title inline with lede), 1100, 1920 (2 columns of chapters), 2560 (3 columns).
    Inside components prefer container queries (@container) over viewport queries. */
+
+@media (prefers-reduced-motion: reduce){
+  :root{--jk-d-1:0ms;--jk-d-2:0ms;--jk-d-3:0ms}
+  *,*::before,*::after{animation-duration:0ms!important;animation-iteration-count:1!important;transition-duration:0ms!important;scroll-behavior:auto!important}
+}
 /* base: page, type roles, fade-in, theme cross-fade, reduced motion */
 *,*::before,*::after{box-sizing:border-box}
 html{background:var(--jk-bg);color:var(--jk-ink);-webkit-text-size-adjust:100%}
-body{margin:0;font:var(--jk-fs-body)/1.4 var(--jk-font);color:var(--jk-ink);background:transparent;min-height:100vh;min-height:100dvh;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+body{margin:0;font:var(--jk-fs-body)/var(--jk-lh) var(--jk-font);color:var(--jk-ink);background:transparent;min-height:100vh;min-height:100dvh;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
 .jk-page{padding:calc(var(--jk-topbar-h) + env(safe-area-inset-top)) max(var(--jk-page-x),env(safe-area-inset-right)) env(safe-area-inset-bottom) max(var(--jk-page-x),env(safe-area-inset-left));max-width:var(--jk-max);margin:0 auto;font-variant-numeric:tabular-nums;text-shadow:var(--jk-text-shadow)}
 .jk-page svg text{text-shadow:none}
 /* type roles */
@@ -107,25 +120,21 @@ body{margin:0;font:var(--jk-fs-body)/1.4 var(--jk-font);color:var(--jk-ink);back
 :where(a){color:inherit}
 :where(button,a,[tabindex]):focus-visible{outline:2px solid var(--jk-accent);outline-offset:3px;border-radius:var(--jk-r-xs)}
 /* fade-in: opacity only — data never moves or scales */
-.jk-fx{opacity:0;transition:opacity var(--jk-d-fade) ease-out}.jk-fx.in{opacity:1}
-/* theme cross-fade (theme.js adds .jk-th-fade for 450 ms) */
+.jk-fx{opacity:0;transition:opacity var(--jk-d-2) var(--jk-ease-out)}.jk-fx.in{opacity:1}
+/* theme cross-fade (theme.js adds .jk-th-fade for 220 ms) */
 html.jk-th-fade,html.jk-th-fade *{transition:background-color var(--jk-d-theme) ease,color var(--jk-d-theme) ease,border-color var(--jk-d-theme) ease,fill var(--jk-d-theme) ease!important}
 @media (prefers-reduced-motion:reduce){.jk-fx{opacity:1;transition:none}html.jk-th-fade,html.jk-th-fade *{transition:none!important}}
 html.jk-rm .jk-fx{opacity:1;transition:none}
 .jk-end{text-align:center;padding:40px 16px calc(128px + env(safe-area-inset-bottom));font-size:13px;color:var(--jk-t3)}
-/* animated soft gradient background — three blurred discs drifting slowly (transform only, no filters).
-   Markup: <div class="jk-bg" aria-hidden="true"><i></i><i></i><i></i></div> as the first child of <body>.
-   Layer 0 of the scroll model: background.js may translate it at 0.2× scroll (capped). Off under reduced motion. */
-.jk-bg{position:fixed;inset:0;bottom:-30vh;z-index:-1;overflow:hidden;pointer-events:none;contain:strict}
-.jk-bg i{position:absolute;display:block;width:var(--s);height:var(--s);left:var(--x);top:var(--y);margin:calc(var(--s)/-2) 0 0 calc(var(--s)/-2);border-radius:50%;
-  background:radial-gradient(closest-side,var(--c) 0%,var(--c2) 45%,transparent 100%);will-change:transform;animation:jkdrift var(--d) ease-in-out infinite alternate;animation-delay:var(--dl)}
-.jk-bg i:nth-child(1){--s:max(82vw,82vh);--x:14%;--y:10%;--d:38s;--dl:-6s;--tx:8vw;--ty:6vh;--c:var(--jk-bg-1);--c2:var(--jk-bg-1b)}
-.jk-bg i:nth-child(2){--s:max(74vw,74vh);--x:90%;--y:30%;--d:32s;--dl:-14s;--tx:-7vw;--ty:8vh;--c:var(--jk-bg-2);--c2:var(--jk-bg-2b)}
-.jk-bg i:nth-child(3){--s:max(88vw,88vh);--x:56%;--y:100%;--d:40s;--dl:-3s;--tx:-8vw;--ty:-7vh;--c:var(--jk-bg-3);--c2:var(--jk-bg-3b)}
+/* Static, optional background veil. Opt in with <html data-jk-veil>.
+   Markup: <div class="jk-bg" aria-hidden="true"><i></i><i></i><i></i></div>. */
+.jk-bg{display:none;position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none;contain:strict}
+html[data-jk-veil] .jk-bg{display:block}
+.jk-bg i{position:absolute;display:block;width:var(--s);height:var(--s);left:var(--x);top:var(--y);margin:calc(var(--s)/-2) 0 0 calc(var(--s)/-2);border-radius:50%;background:radial-gradient(closest-side,var(--c) 0%,var(--c2) 45%,transparent 100%)}
+.jk-bg i:nth-child(1){--s:max(82vw,82vh);--x:14%;--y:10%;--c:var(--jk-bg-1);--c2:var(--jk-bg-1b)}
+.jk-bg i:nth-child(2){--s:max(74vw,74vh);--x:90%;--y:30%;--c:var(--jk-bg-2);--c2:var(--jk-bg-2b)}
+.jk-bg i:nth-child(3){--s:max(88vw,88vh);--x:56%;--y:100%;--c:var(--jk-bg-3);--c2:var(--jk-bg-3b)}
 .jk-bg i:nth-child(n+4){display:none}
-@keyframes jkdrift{0%{transform:translate3d(0,0,0) scale(1)}50%{transform:translate3d(calc(var(--tx)*.6),calc(var(--ty)*-.5),0) scale(1.08)}100%{transform:translate3d(var(--tx),var(--ty),0) scale(.95)}}
-@media (prefers-reduced-motion:reduce){.jk-bg i{animation:none}}
-html.jk-rm .jk-bg i{animation:none}
 /* glass material — earned containers only: at most ONE glass block per screen besides the top bar.
    Use it for a single summary/side panel, a sheet, a tooltip. Everything else is open layout with hairlines. */
 .jk-glass{position:relative;isolation:isolate;--r:var(--jk-r-l);border-radius:var(--r);
@@ -134,10 +143,10 @@ html.jk-rm .jk-bg i{animation:none}
 .jk-glass.hi{background:radial-gradient(130% 125% at 50% 45%,var(--jk-tint-hi) 62%,var(--jk-tint) 100%)}
 .jk-glass::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.6px;pointer-events:none;z-index:2;
   background:conic-gradient(from 210deg at 50% 50%,var(--jk-rim),var(--jk-rim-lo) 22%,var(--jk-rim-lo) 45%,var(--jk-rim) 55%,var(--jk-rim-lo) 72%,var(--jk-rim-lo) 92%,var(--jk-rim));
-  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0)}
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#fff 0 0) content-box exclude,linear-gradient(#fff 0 0)}
 .jk-glass::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;z-index:-1;
   background:radial-gradient(420px circle at 25% -10%,var(--jk-glow),transparent 46%),linear-gradient(180deg,rgba(255,255,255,.18),transparent 30%);
-  box-shadow:inset 0 1px 1px var(--jk-rim),inset 0 -10px 24px -18px rgba(0,0,0,.25)}
+  box-shadow:inset 0 1px 1px var(--jk-rim),inset 0 -10px 24px -18px rgba(8,6,4,.25)}
 html[data-theme="dark"] .jk-glass::after{background:radial-gradient(420px circle at 25% -10%,var(--jk-glow),transparent 46%),linear-gradient(180deg,rgba(255,255,255,.07),transparent 30%)}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.jk-glass{background:var(--jk-surface)}}
 /* panel */
@@ -147,10 +156,10 @@ html[data-theme="dark"] .jk-glass::after{background:radial-gradient(420px circle
 @media (max-width:767px){.jk-panel{padding:var(--jk-s4)}.jk-panel .jk-flag{left:var(--jk-s4);right:var(--jk-s4)}}
 /* sheet: a <dialog class="jk-sheet jk-glass"> opened with sheet.js — bottom sheet on mobile, centred card on desktop */
 .jk-sheet{--r:var(--jk-r-xl);border:0;padding:var(--jk-s6);color:var(--jk-ink);width:min(560px,calc(100% - 24px));max-height:min(80vh,720px);overflow:auto}
-.jk-sheet::backdrop{background:rgba(0,0,0,.28);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
-.jk-sheet[open]{animation:jksheet var(--jk-d-fade) var(--jk-ease)}
+.jk-sheet::backdrop{background:rgba(8,6,4,.28);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.jk-sheet[open]{animation:jksheet var(--jk-d-3) var(--jk-ease)}
 .jk-sheet .jk-x{position:absolute;right:var(--jk-s3);top:var(--jk-s3);z-index:4;width:36px;height:36px;border-radius:var(--jk-r-pill);border:0;background:var(--jk-tint-hi);color:var(--jk-ink);font:600 18px/1 var(--jk-font);cursor:pointer}
-@keyframes jksheet{from{opacity:0}to{opacity:1}}
+@keyframes jksheet{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @media (max-width:767px){.jk-sheet{margin:auto auto 8px;width:calc(100% - 16px)}}
 @media (prefers-reduced-motion:reduce){.jk-sheet[open]{animation:none}}
 /* top bar — floating glass pill (the one permanent glass element). Content scrolls under it. */
@@ -166,16 +175,16 @@ html[data-theme="dark"] .jk-glass::after{background:radial-gradient(420px circle
 /* theme switch — Auto / Chiaro / Scuro (mounted by theme.js: JaackTheme.mount(hostElement)) */
 .jk-thsw{display:inline-flex;gap:2px;padding:2px;border-radius:var(--jk-r-pill);background:var(--jk-tint-hi);flex:none;min-width:0;max-width:100%}
 .jk-thsw button{display:inline-flex;align-items:center;justify-content:center;font:600 12px/1 var(--jk-font);color:var(--jk-ink-2);background:none;border:0;border-radius:var(--jk-r-pill);padding:6px 9px;cursor:pointer;min-height:28px;min-width:0;flex:1 1 auto}
-.jk-thsw button[aria-pressed="true"]{background:var(--jk-bg);color:var(--jk-ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.jk-thsw button[aria-pressed="true"]{background:var(--jk-bg);color:var(--jk-ink);box-shadow:0 1px 3px rgba(8,6,4,.12)}
 .jk-thsw button:focus-visible{outline:2px solid var(--jk-accent);outline-offset:1px}
 .jk-thsw .i{display:none}
 [data-jk-theme-switch]{display:inline-flex;flex:none;min-width:0;max-width:100%}
 [data-jk-theme-switch]:empty{min-width:148px;min-height:32px}
-@media (max-width:760px){.jk-thsw{flex-shrink:1}.jk-thsw .i{display:inline}.jk-thsw .l{display:none}.jk-thsw button{padding:0;font-size:13px;min-width:44px;min-height:44px;flex:0 0 44px}[data-jk-theme-switch]{flex-shrink:1}[data-jk-theme-switch]:empty{min-width:140px;min-height:44px}}
+@media (max-width:760px){.jk-thsw{flex-shrink:1}.jk-thsw .i{display:inline}.jk-thsw .l{display:inline;position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}.jk-thsw button{padding:0;font-size:13px;min-width:44px;min-height:44px;flex:0 0 44px}[data-jk-theme-switch]{flex-shrink:1}[data-jk-theme-switch]:empty{min-width:140px;min-height:44px}}
 @media (max-width:420px){.jk-thsw button{min-width:36px;min-height:36px;flex:0 0 36px}[data-jk-theme-switch]:empty{min-width:116px;min-height:36px}}
 /* editorial chapters — each page section is a chapter that answers one question:
    numeral + eyebrow, the question as title, a one-line lede, then hero → figure → groups.
-   64 px between chapters on desktop (40 on mobile) with one hairline in the middle. */
+   128 px between chapters on desktop (72 on mobile) with one hairline in the middle. */
 .jk-chs{display:grid;grid-template-columns:minmax(0,1fr);row-gap:calc(var(--jk-chapter-gap-m)/2)}
 .jk-ch{position:relative;min-width:0}
 .jk-ch+.jk-ch{border-top:1px solid var(--jk-hair);padding-top:calc(var(--jk-chapter-gap-m)/2)}
@@ -221,7 +230,7 @@ html[data-theme="dark"] .jk-glass::after{background:radial-gradient(420px circle
 /* chips for deltas next to a comparison */
 .jk-chip{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:var(--jk-r-pill);font-size:var(--jk-fs-xs);font-weight:600;background:var(--jk-tint-hi);color:var(--jk-ink);white-space:nowrap;text-shadow:none;vertical-align:1px}
 .jk-chip.ok{color:var(--jk-ok)}.jk-chip.fail{color:var(--jk-fail)}
-/* hairline row list — tables without boxes: rows ≈ 36 px, hairline above each row and one below the list.
+/* hairline row list — tables without boxes: rows ≈ 46 px, hairline above each row and one below the list.
    Set the columns per list with --jk-cols. Below 520 px of container width, columns marked .jk-opt are hidden. */
 .jk-rows{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--jk-hair);--jk-cols:56px 112px minmax(0,1fr) auto 96px}
 .jk-rows li{display:grid;grid-template-columns:var(--jk-cols);align-items:baseline;column-gap:var(--jk-s4);padding:var(--jk-row-pad) 0;border-top:1px solid var(--jk-hair);font-size:var(--jk-fs-body);line-height:1.4;min-width:0}
@@ -250,12 +259,12 @@ html[data-theme="dark"] .jk-glass::after{background:radial-gradient(420px circle
 @container (max-width:880px){.jk-stats:not(.two){--n:2;row-gap:var(--jk-s6)}.jk-stats:not(.two)>.jk-cell:nth-child(3){border-left:0;padding-left:0}.jk-stats:not(.two)>.jk-cell:nth-child(n+3){border-top:1px solid var(--jk-hair);padding-top:var(--jk-s6)}}
 @container (max-width:440px){.jk-stats{--n:1!important;row-gap:var(--jk-s6)}.jk-stats>.jk-cell+.jk-cell{border-left:0;padding-left:0;border-top:1px solid var(--jk-hair);padding-top:var(--jk-s6)}.jk-cell{padding-right:0}}
 /* nav pill — segmented control (chapter navigation at the bottom, or a period switch above a chart).
-   A sliding indicator follows the active item; it springs only when motion is allowed. */
+   A sliding indicator follows the active item; it moves only when motion is allowed. */
 .jk-pill{position:relative;display:inline-flex;padding:4px;--r:var(--jk-r-pill)}
 .jk-pill button{position:relative;z-index:3;border:0;background:none;color:var(--jk-ink-2);font:500 14px/1 var(--jk-font);padding:11px 16px;border-radius:var(--jk-r-pill);cursor:pointer;white-space:nowrap;min-height:40px}
 .jk-pill button[aria-pressed="true"],.jk-pill button[aria-current="true"]{color:var(--jk-ink);font-weight:600}
 .jk-pill button:focus-visible{outline:2px solid var(--jk-accent);outline-offset:-2px}
-.jk-pill .jk-ind{position:absolute;z-index:2;top:4px;bottom:4px;left:0;width:0;border-radius:var(--jk-r-pill);background:var(--jk-tint-hi);box-shadow:0 1px 4px rgba(0,0,0,.12);transition:transform var(--jk-d-pill) var(--jk-spring),width var(--jk-d-pill) var(--jk-spring)}
+.jk-pill .jk-ind{position:absolute;z-index:2;top:4px;bottom:4px;left:0;width:0;border-radius:var(--jk-r-pill);background:var(--jk-tint-hi);transition:transform var(--jk-d-pill) var(--jk-ease-inout),width var(--jk-d-pill) var(--jk-ease-inout)}
 html[data-theme="dark"] .jk-pill .jk-ind{background:rgba(255,255,255,.12)}
 .jk-pill.flat{--r:var(--jk-r-pill);background:var(--jk-tint-hi);box-shadow:none}
 .jk-pill.flat::before,.jk-pill.flat::after{display:none}

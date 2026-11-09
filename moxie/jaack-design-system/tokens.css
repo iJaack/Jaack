@@ -8,24 +8,26 @@
   --jk-fs-xs:12.5px;          /* labels / eyebrows (700, uppercase, +.06em) */
   --jk-fs-sm:13px;            /* captions, figure captions, tooltips */
   --jk-fs-note:14px;          /* notes, secondary row text */
-  --jk-fs-body:16px;          /* body, rows, comparisons */
-  --jk-fs-lede:17px;          /* chapter lede */
+  --jk-fs-body:17px;          /* body, rows, comparisons */
+  --jk-fs-lede:20px;          /* chapter lede */
   --jk-fs-title:clamp(30px,2.6vw,44px);   /* chapter question */
   --jk-fs-mid:clamp(36px,3vw,52px);       /* secondary number */
   --jk-fs-big:clamp(56px,7.5vw,120px);    /* the one hero number per chapter */
   --jk-fs-deco:clamp(96px,8vw,150px);     /* decorative chapter numeral (6 % ink) */
-  --jk-lh-tight:1.02;--jk-lh:1.5;
+  --jk-lh-tight:1.02;--jk-lh:1.6;
   --jk-track-label:.06em;--jk-track-big:-.05em;--jk-track-mid:-.04em;--jk-track-title:-.03em;
 
   /* spacing: 4 px scale */
-  --jk-s1:4px;--jk-s2:8px;--jk-s3:12px;--jk-s4:16px;--jk-s5:20px;--jk-s6:24px;--jk-s7:28px;--jk-s8:32px;--jk-s10:40px;--jk-s12:48px;--jk-s16:64px;--jk-s18:72px;
-  /* compact densities (as on the current dashboard) */
-  --jk-row-pad:7px;           /* hairline row ≈ 36 px with 16 px text */
-  --jk-group-gap:28px;        /* between groups inside a chapter */
-  --jk-hero-gap:24px;         /* chapter header → hero */
-  --jk-chapter-gap:64px;      /* between chapters, desktop (hairline in the middle) */
-  --jk-chapter-gap-m:40px;    /* between chapters, < 768 px */
-  --jk-page-x:clamp(16px,4.4vw,88px);
+  --jk-s1:4px;--jk-s2:8px;--jk-s3:12px;--jk-s4:16px;--jk-s5:20px;--jk-s6:24px;--jk-s7:28px;--jk-s8:32px;--jk-s10:40px;--jk-s12:48px;--jk-s16:64px;--jk-s18:72px;--jk-s20:80px;--jk-s24:96px;--jk-s32:128px;
+  /* airy rhythm; numeric tables may use the data row padding */
+  --jk-row-pad:12px;          /* hairline row ≈ 46 px */
+  --jk-row-pad-data:9px;     /* numeric tables and lists only */
+  --jk-group-gap:48px;        /* between groups inside a chapter */
+  --jk-hero-gap:32px;         /* chapter header → hero */
+  --jk-chapter-gap:128px;      /* between chapters, desktop (hairline in the middle) */
+  --jk-chapter-gap-m:72px;    /* between chapters, < 768 px */
+  --jk-page-x:clamp(20px,6vw,120px);
+  --jk-measure:64ch;
   --jk-topbar-h:72px;         /* space reserved under the floating top bar */
   --jk-max:3440px;
 
@@ -33,13 +35,19 @@
   --jk-r-xs:8px;--jk-r-s:14px;--jk-r-m:20px;--jk-r-panel:24px;--jk-r-l:26px;--jk-r-xl:34px;--jk-r-pill:999px;
 
   /* motion */
-  --jk-ease:cubic-bezier(.2,.8,.2,1);
-  --jk-spring:linear(0,.009,.035 2.1%,.141 4.4%,.281 6.7%,.723 12.9%,.938 16.7%,1.017 19.4%,1.077 22.1%,1.105 24.8%,1.11 27.8%,1.096 31.2%,1.04 37.7%,1.007 44.1%,.993 51.5%,1.001 67.3%,1);
-  --jk-d-fast:.15s;           /* hover, tooltip */
-  --jk-d-fade:.4s;            /* fade-in of groups (opacity only) */
-  --jk-d-theme:.4s;           /* light/dark cross-fade */
-  --jk-d-draw:.6s;            /* first draw of a chart */
-  --jk-d-pill:.35s;           /* nav pill indicator */
+  --jk-ease-out: cubic-bezier(.2,0,0,1);      /* ingresso, hover, cambi di stato */
+  --jk-ease-inout: cubic-bezier(.4,0,.2,1);   /* spostamenti brevi (indicatore pill) */
+  --jk-d-1: 120ms;  /* hover, press, tooltip */
+  --jk-d-2: 200ms;  /* fade di gruppi, pill, tema */
+  --jk-d-3: 280ms;  /* sheet, primo disegno grafico — massimo consentito */
+  /* alias per compatibilità, da rimuovere in v3 */
+  --jk-ease: var(--jk-ease-out);
+  --jk-spring: var(--jk-ease-inout);          /* niente più overshoot */
+  --jk-d-fast: var(--jk-d-1);
+  --jk-d-fade: var(--jk-d-2);
+  --jk-d-theme: var(--jk-d-2);
+  --jk-d-pill: var(--jk-d-2);
+  --jk-d-draw: var(--jk-d-3);
 
   /* chart / data colours (marks, bars, lines — never body text) */
   --jk-c-blue:#0a84ff;--jk-c-orange:#ff9f0a;--jk-c-yellow:#ffd60a;--jk-c-green:#30d158;--jk-c-cyan:#64d2ff;--jk-c-purple:#bf5af2;--jk-c-pink:#ff375f;--jk-c-red:#ff453a;
@@ -53,7 +61,7 @@ html[data-theme="light"]{
   --jk-t2:rgba(18,18,16,.70);             /* secondary text (grey-opacity hierarchy) */
   --jk-t3:rgba(18,18,16,.64);             /* tertiary text — lowest allowed for text (≥ 4.5:1) */
   --jk-hair:rgba(18,18,16,.11);           /* hairlines */
-  --jk-accent:#b8921a;--jk-accent-text:#7a5c00;--jk-on-accent:#fff;--jk-accent-wash:rgba(184,146,26,.12);
+  --jk-accent:#a8850f;--jk-accent-text:#7a5c00;--jk-on-accent:#171710;--jk-accent-wash:rgba(168,133,15,.12);
   --jk-amb:#8a5300;                       /* warning text (low confidence etc.) */
   --jk-ok:#256b2d;--jk-fail:#a33a22;--jk-info:#3f6fa6;
   /* glass */
@@ -68,18 +76,18 @@ html[data-theme="light"]{
 }
 html[data-theme="dark"]{
   color-scheme:dark;
-  --jk-bg:#121314;--jk-surface:#141414;--jk-surface-2:#191a17;
-  --jk-ink:#f6f3ee;--jk-ink-2:#c9c4bb;
-  --jk-t2:rgba(246,243,238,.70);
-  --jk-t3:rgba(246,243,238,.56);
-  --jk-hair:rgba(246,243,238,.12);
+  --jk-bg:#14110e;--jk-surface:#1b1714;--jk-surface-2:#231e1a;
+  --jk-ink:#f4eee5;--jk-ink-2:#cdc3b6;
+  --jk-t2:rgba(244,238,229,.70);
+  --jk-t3:rgba(244,238,229,.58);
+  --jk-hair:rgba(244,238,229,.12);
   --jk-accent:#e8c547;--jk-accent-text:#e8c547;--jk-on-accent:#171710;--jk-accent-wash:rgba(232,197,71,.12);
   --jk-amb:#e9b44c;
   --jk-ok:#8fbf8a;--jk-fail:#e07a5f;--jk-info:#8fb3d9;
-  --jk-tint:rgba(18,18,20,.6);--jk-tint-hi:rgba(26,26,28,.74);--jk-tint-edge:rgba(18,18,20,.3);
+  --jk-tint:rgba(20,17,14,.6);--jk-tint-hi:rgba(30,25,21,.74);--jk-tint-edge:rgba(20,17,14,.3);
   --jk-rim:rgba(255,255,255,.42);--jk-rim-lo:rgba(255,255,255,.06);--jk-glow:rgba(255,255,255,.16);
-  --jk-drop:0 28px 70px -30px rgba(0,0,0,.85),0 2px 8px -2px rgba(0,0,0,.5);
-  --jk-text-shadow:0 1px 2px rgba(0,0,0,.5);
+  --jk-drop:0 28px 70px -30px rgba(8,6,4,.8),0 2px 8px -2px rgba(8,6,4,.45);
+  --jk-text-shadow:0 1px 2px rgba(8,6,4,.5);
   --jk-bg-1:rgba(214,186,100,.10);--jk-bg-1b:rgba(214,186,100,.04);
   --jk-bg-2:rgba(104,132,184,.15);--jk-bg-2b:rgba(104,132,184,.06);
   --jk-bg-3:rgba(168,150,196,.10);--jk-bg-3b:rgba(168,150,196,.04);
@@ -87,3 +95,8 @@ html[data-theme="dark"]{
 /* Breakpoints (media queries cannot read custom properties — use these literal values):
    768 (mobile → desktop spacing), 900 (chapter title inline with lede), 1100, 1920 (2 columns of chapters), 2560 (3 columns).
    Inside components prefer container queries (@container) over viewport queries. */
+
+@media (prefers-reduced-motion: reduce){
+  :root{--jk-d-1:0ms;--jk-d-2:0ms;--jk-d-3:0ms}
+  *,*::before,*::after{animation-duration:0ms!important;animation-iteration-count:1!important;transition-duration:0ms!important;scroll-behavior:auto!important}
+}

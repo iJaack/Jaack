@@ -1,0 +1,74 @@
+{
+  "forma-base (jaack-design default, Forma dashboard, FormaSync)": {
+    "light": {
+      "bg": "#f7f5f0",
+      "surface": "#ffffff",
+      "ink": "#121210",
+      "ink2": "#4f4b44",
+      "t2": "rgba(18,18,16,0.70)",
+      "t3": "rgba(18,18,16,0.64)",
+      "accent": "#a8850f",
+      "accentText": "#7a5c00",
+      "onAccent": "#171710"
+    },
+    "dark": {
+      "bg": "#14110e",
+      "surface": "#1b1714",
+      "ink": "#f4eee5",
+      "ink2": "#cdc3b6",
+      "t2": "rgba(244,238,229,0.70)",
+      "t3": "rgba(244,238,229,0.58)",
+      "accent": "#e8c547",
+      "accentText": "#e8c547",
+      "onAccent": "#171710"
+    }
+  },
+  "jaack.me": {
+    "light": {
+      "bg": "#f3eee6",
+      "surface": "#fffdf8",
+      "ink": "#1c1612",
+      "ink2": "#5a4e45",
+      "t2": "rgba(28,22,18,0.72)",
+      "t3": "rgba(28,22,18,0.64)",
+      "accent": "#8c3a48",
+      "accentText": "#6e2432",
+      "onAccent": "#fffdf8"
+    },
+    "dark": {
+      "bg": "#161210",
+      "surface": "#1e1916",
+      "ink": "#f6f0e8",
+      "ink2": "#d4c6ba",
+      "t2": "rgba(246,240,232,0.72)",
+      "t3": "rgba(246,240,232,0.58)",
+      "accent": "#e7a8b4",
+      "accentText": "#f0c0c8",
+      "onAccent": "#1c1214"
+    }
+  },
+  "moxie": {
+    "light": {
+      "bg": "#eef1f4",
+      "surface": "#f7f9fb",
+      "ink": "#14181d",
+      "ink2": "#4c5968",
+      "t2": "rgba(20,24,29,0.72)",
+      "t3": "rgba(20,24,29,0.64)",
+      "accent": "#2a5f8a",
+      "accentText": "#1a4570",
+      "onAccent": "#f7f9fb"
+    },
+    "dark": {
+      "bg": "#13120f",
+      "surface": "#1b1916",
+      "ink": "#efeae2",
+      "ink2": "#cbc4b9",
+      "t2": "rgba(239,234,226,0.72)",
+      "t3": "rgba(239,234,226,0.58)",
+      "accent": "#8eb7e0",
+      "accentText": "#b7d4f5",
+      "onAccent": "#13120f"
+    }
+  }
+}

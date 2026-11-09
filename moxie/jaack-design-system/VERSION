@@ -2,19 +2,31 @@ name: jaack-design-system
 packaged: 2026-10-22
 source: jaack-design-system.zip (no upstream semver in the package)
 zip_sha256: 392f8949b5a5f7c7c5e459fcb431ed536fe6aaa90513e7e179cd49e2c6f5094a
+update: forma-v2 (2026-11-09) — warm palettes, airy rhythm, quiet motion; static veil off by default.
 files:
-  jaack.css: 54a10d5e9d416e48aa1e3e8675a85594792faf055232b366173c93a875d4d645
-  jaack.js: ae7b50a6e19ac602101b0a8cf2094aa5466efabff2a952bf7785832c9062a622
-  theme.js: dac5df08bd80274badb4b58b603b7153d2842387dc134bed060c1ab8a998666a
-  tokens.css: 2dce38b92a02aa90bbf0c8b7c54b81fd80638bee5bc62262363f3811a6aece3f
+  jaack.css: fd35a96d50b6255c6f6772d20e130831de8c704edaf455d6676e3f0ea478be96
+  jaack.js: 0e5b832cc9f88ad4848d2738713d11faecf375f46844238276b7991d3d945c1a
+  theme.js: 095b0b8bd0cb1c7e4f531dc2164745dc30e63f96df4514a1081462718a3f9cf4
+  tokens.css: cdf6bbb650c61688a226a5deb2834d165fe853110becde7484c3e64357dd9d50
+  README.md: 6da6dff0f3d8c9dc4ca5a22aa64628c00ff35b3c08d48559e516aa6c1ed3ec59
+  components/background.css: 79f8139af56b5149b19d3bbece0cc5c893947bce0ff79a19ab3f42ea4d0d628f
+  components/background.js: a4262b09496139a537e4265c2d8a490a347bc0a627cac86bd1f95812fd18065a
+  components/base.css: ae76f776b60de7f2a3f1b8768f7a09fed31022dedfe7c52146a68ea419dd8e9c
+  components/glass.css: 040ebf0b0d50a90f4ebaacec3c56df01f36ae173ce8268153eb0d01bea85a28d
+  components/navpill.css: 7a121bd5271258d8953ddd585fa6f0f14e079f0f1f7542b02b3191d1be5637e0
+  components/chapter.css: 01ede26575a4e8dfee7bccbf18fb029d510ee62868b2b9d8aa4261e0f9b2382d
+  components/rows.css: 278a7b2bb208c88a46d45bc8ed95eb85bbf46c3028981ea908e0bd165fcabe08
+  components/themeswitch.css: cb75a071ff0795ffbac003ee59115157b1a7a53420155165aa96609c07bf53bc
 note: >
-  Copy for the moxie hub. Vercel’s project root is moxie/, so these files
-  live at moxie/jaack-design-system/ (the repo gitignore ignores vendor/).
-  Same zip sha as assets/jaack-design-system on the jaack.me site.
-  screenshots/ are omitted here; they ship with the jaack.me copy.
-  Do not edit jaack.css, jaack.js, theme.js or tokens.css by hand.
-  theme.js loads as a blocking script in <head>. Demo content is placeholder only.
-  The packaged gold accent is Forma's shared default. Moxie overrides accent,
-  paper and gradient in jaack-moxie.css; do not treat the gold as this hub's accent.
+  Vendored so jaack.me and other sites can share these exact files.
+  Do not edit jaack.css or jaack.js by hand; change the sources and run build.sh.
+  theme.js stays separate and must load as a blocking script in <head>.
+  The moxie hub (Vercel root directory moxie/) keeps a copy at
+  moxie/jaack-design-system with the same zip sha. vendor/ is gitignored.
+  Demo content is placeholder only. screenshots/ and demo.html are kept
+  in git and excluded from the Jekyll site output.
+  The packaged gold accent is Forma's shared default, not a site identity.
+  jaack.me overrides accent and paper in assets/css/jaack-site.css.
   Narrow screens: the top bar and theme switch shrink (min-width: 0, flex-shrink)
-  and each switch button is 36px below 760px. Same patch as the jaack.me copy.
+  and switch buttons are 44px below 760px / 36px below 420px.
+  jaack.me keeps its 44px touch targets. Same shared patch in the moxie copy.
