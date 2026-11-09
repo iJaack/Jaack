@@ -132,6 +132,32 @@ test('includes and layouts never request Google Fonts', () => {
   }
 });
 
+test('Carta keeps its paper stage with a dark token border and no dark shadow', () => {
+  const css = read('assets/css/jaack-site.css');
+  const stage = css.match(/^\.pv-stage\s*\{([^}]+)\}/m)?.[1];
+  assert.match(stage, /background:\s*#F5F1E8 var\(--pv-grain, none\)/);
+  const dark = css.match(/html\[data-theme="dark"\] \.pv-stage\s*\{([^}]+)\}/)?.[1];
+  assert.match(dark, /box-sizing:\s*border-box;/);
+  assert.match(dark, /border:\s*1px solid var\(--jk-surface-2\);/);
+  assert.match(dark, /box-shadow:\s*none;/);
+  assert.doesNotMatch(dark, /inset|0 24px 60px/);
+});
+
+test('donation button uses accessible accent tokens and only fades on interaction', () => {
+  const html = read('_includes/donation.html');
+  const button = html.match(/\.bmc-button\{([^}]+)\}/)?.[1];
+  assert.match(button, /background-color:\s*var\(--jk-accent\)/);
+  assert.match(button, /color:\s*var\(--jk-on-accent\)/);
+  assert.match(button, /font-family:\s*var\(--jk-font\)/);
+  assert.match(button, /transition:\s*opacity var\(--jk-d-2\) var\(--jk-ease-out\)/);
+  const interaction = html.match(/\.bmc-button:hover[^}]+\{([^}]+)\}/)?.[1];
+  assert.match(interaction, /opacity:\s*0\.85/);
+  assert.match(interaction, /color:\s*var\(--jk-on-accent\)/);
+  assert.doesNotMatch(interaction, /shadow|background|transform/);
+  assert.doesNotMatch(html, /#FF5F5F|#ffffff|Arial|cursive/i);
+  assert.match(html, /src="https:\/\/cdn\.buymeacoffee\.com\/buttons\/bmc-new-btn-logo\.svg"/);
+});
+
 test('Moxie vendors an exact design-system copy, excluding screenshots', () => {
   const canonical = files(design).filter(file => !file.startsWith(`${design}/screenshots/`))
     .map(file => file.slice(design.length + 1)).sort();

@@ -4,9 +4,9 @@ source: jaack-design-system.zip (no upstream semver in the package)
 zip_sha256: 392f8949b5a5f7c7c5e459fcb431ed536fe6aaa90513e7e179cd49e2c6f5094a
 update: forma-v2 (2026-11-09) — warm palettes, airy rhythm, quiet motion; static veil off by default.
 files:
-  jaack.css: 8adc0e1c97ae2e7d060d8f6edfff6f24fc46ea8a613ea959ff7c35fc360de1c8
+  jaack.css: fd35a96d50b6255c6f6772d20e130831de8c704edaf455d6676e3f0ea478be96
   jaack.js: 0e5b832cc9f88ad4848d2738713d11faecf375f46844238276b7991d3d945c1a
-  theme.js: ed8767fab7bf69cd77d7e62dc0b9c3f4f6550382fdca09827917e4ae5b6a2780
+  theme.js: 095b0b8bd0cb1c7e4f531dc2164745dc30e63f96df4514a1081462718a3f9cf4
   tokens.css: cdf6bbb650c61688a226a5deb2834d165fe853110becde7484c3e64357dd9d50
   README.md: 6da6dff0f3d8c9dc4ca5a22aa64628c00ff35b3c08d48559e516aa6c1ed3ec59
   components/background.css: 79f8139af56b5149b19d3bbece0cc5c893947bce0ff79a19ab3f42ea4d0d628f
@@ -16,7 +16,7 @@ files:
   components/navpill.css: 7a121bd5271258d8953ddd585fa6f0f14e079f0f1f7542b02b3191d1be5637e0
   components/chapter.css: 01ede26575a4e8dfee7bccbf18fb029d510ee62868b2b9d8aa4261e0f9b2382d
   components/rows.css: 278a7b2bb208c88a46d45bc8ed95eb85bbf46c3028981ea908e0bd165fcabe08
-  components/themeswitch.css: 466d4e8b2f8459777b96428154390e778f957914ad846208b929fceb9dac51da
+  components/themeswitch.css: cb75a071ff0795ffbac003ee59115157b1a7a53420155165aa96609c07bf53bc
 note: >
   Vendored so jaack.me and other sites can share these exact files.
   Do not edit jaack.css or jaack.js by hand; change the sources and run build.sh.

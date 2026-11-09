@@ -154,4 +154,14 @@ class HubTests(unittest.TestCase):
   for pdf in ['mono-green-landfall-galactus-11-settembre-2026.pdf','mono-green-landfall-galactus-11-september-2026-en.pdf']:
    self.assertEqual((D/pdf).read_bytes()[:5],b'%PDF-')
   for v in self.versions.values():self.assertTrue((D/'versions'/(v['id']+'.txt')).is_file())
+ def test_theme_switch_hides_only_the_other_language_and_preserves_mobile_labels(self):
+  css=(D/'style.css').read_text()
+  self.assertRegex(css,r'html\[lang="it"\] \.jk-thsw \.lang-en,\s*html\[lang="en"\] \.jk-thsw \.lang-it\s*\{\s*display:\s*none;\s*\}')
+  utility=re.search(r'\.visually-hidden\s*\{([^}]+)\}',css).group(1)
+  self.assertIn('position: absolute;',utility)
+  self.assertIn('clip-path: inset(50%);',utility)
+  self.assertNotRegex(utility,r'display:\s*none|visibility:\s*hidden')
+  shared=(D/'jaack.css').read_text()
+  self.assertRegex(shared,r'@media \(max-width:760px\).*?\.jk-thsw \.l\{display:inline;position:absolute;[^}]*clip-path:inset\(50%\)')
+  self.assertNotRegex(css+shared,r'\.jk-thsw \.l\s*\{[^}]*display:\s*none')
 if __name__=='__main__':unittest.main()
