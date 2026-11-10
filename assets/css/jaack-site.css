@@ -136,6 +136,22 @@ nav.site-nav [data-jk-theme-switch] { width: 180px; height: 48px; }
   nav.site-nav .nav-links a.jk-sw { padding: 6px 8px; }
 }
 
+
+@media (max-width: 480px) {
+  /* Reserve room for the controls and up to three rows of whole labels. */
+  :root { --jk-topbar-h: 200px; }
+  nav.site-nav .nav-row { align-items: flex-start; }
+  nav.site-nav .nav-links {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+  nav.site-nav .nav-links li { flex: none; }
+  nav.site-nav.jk-top .nav-links a.jk-sw {
+    padding: 6px 6px;
+    white-space: nowrap;
+  }
+}
+
 h1,
 .header-home .hero-title,
 .page > .page-title,

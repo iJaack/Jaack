@@ -126,6 +126,24 @@ test('Newsreader uses the supplied 400–700 subsets, fits its budget and preloa
   assert.match(css, /\.post-body\s*\{[^}]*font-family: var\(--jk-serif\); font-size: 19px; line-height: 1.6; font-weight: 400/);
 });
 
+test('phone navigation wraps whole labels without clipping and keeps 44px targets', () => {
+  const css = stripComments(read('assets/css/jaack-site.css'));
+  const phone = css.match(/@media \(max-width: 480px\) \{([\s\S]*?)\n\}/)?.[1];
+  assert.ok(phone, 'missing phone navigation rules');
+  const links = phone.match(/nav\.site-nav \.nav-links\s*\{([^}]+)\}/)?.[1];
+  assert.match(links, /flex-wrap:\s*wrap;/);
+  assert.match(links, /overflow:\s*visible;/);
+  assert.match(phone, /nav\.site-nav \.nav-links li\s*\{[^}]*flex:\s*none;/);
+  const targets = css.match(/nav\.site-nav\.jk-top \.nav-links a\.jk-sw\s*\{([^}]+)\}/)?.[1];
+  assert.match(targets, /min-height:\s*44px;/);
+  const phoneTargets = phone.match(/nav\.site-nav\.jk-top \.nav-links a\.jk-sw\s*\{([^}]+)\}/)?.[1];
+  assert.match(phoneTargets, /white-space:\s*nowrap;/);
+  assert.match(phoneTargets, /padding:\s*6px 6px;/);
+  for (const [, rule] of css.matchAll(/[^{}]*\.nav-links[^{}]*\ba(?:\.jk-sw)?[^{}]*\{([^}]+)\}/g)) {
+    assert.doesNotMatch(rule, /text-overflow:\s*ellipsis|overflow(?:-x)?:\s*(?:hidden|clip)/);
+  }
+});
+
 test('includes and layouts never request Google Fonts', () => {
   for (const file of [...files('_includes'), ...files('_layouts')]) {
     assert.doesNotMatch(read(file), /fonts\.googleapis\.com/i, file);
