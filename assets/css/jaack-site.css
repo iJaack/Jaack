@@ -277,7 +277,16 @@ html[data-theme="dark"] .highlight .cp { color: var(--jk-t2); }
   --jk-fs-h1: 57px; --jk-lh-h1: 70px;
   --jk-fs-body-long: 20px;
   --jk-lh-body-long: 28px;
-  --jk-measure-long: 27.5em; /* ≈55 characters */
+  --jk-measure-long: 23em; /* Full Newsreader 20px line: 55 characters; 23em ≈ 41.8ch. */
+}
+
+@media (max-width: 599px) {
+  :root {
+    --jk-fs-h4: 18px; --jk-lh-h4: 28px;
+    --jk-fs-h3: 24px; --jk-lh-h3: 28px;
+    --jk-fs-h2: 32px; --jk-lh-h2: 42px;
+    --jk-fs-h1: 43px; --jk-lh-h1: 56px;
+  }
 }
 html[data-theme="light"] {
   --jk-bg: #f3eee6;
