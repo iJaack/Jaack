@@ -123,7 +123,58 @@ test('Newsreader uses the supplied 400–700 subsets, fits its budget and preloa
   }
   assert.match(read('_site/index.html'), /Newsreader-roman\.woff2/);
   assert.match(css, /--jk-serif: "Newsreader", "Iowan Old Style", Georgia, serif/);
-  assert.match(css, /\.post-body\s*\{[^}]*font-family: var\(--jk-serif\); font-size: 19px; line-height: 1.6; font-weight: 400/);
+  assert.match(css, /\.post-body\s*\{[^}]*font-family: var\(--jk-serif\); font-size: var\(--jk-fs-body\); line-height: var\(--jk-lh-body\); font-weight: 400/);
+});
+
+test('jaack.me editorial typography uses the approved body measure and heading scale', () => {
+  const css = stripComments(read('assets/css/jaack-site.css'));
+  const root = css.match(/:root\s*\{([^}]*--jk-serif:[^}]+)\}/)?.[1];
+  assert.ok(root, 'missing editorial tokens');
+  for (const [name, value] of Object.entries({
+    'fs-body': '18px', 'lh-body': '28px', baseline: '14px', measure: '33em',
+    'fs-h4': '24px', 'lh-h4': '28px', 'fs-h3': '32px', 'lh-h3': '42px',
+    'fs-h2': '43px', 'lh-h2': '56px', 'fs-h1': '57px', 'lh-h1': '70px',
+    'fs-body-long': '20px', 'lh-body-long': '28px', 'measure-long': '27.5em'
+  })) assert.ok(root.includes(`--jk-${name}: ${value};`), name);
+  assert.match(css, /\.post\s*\{[^}]*font-size: var\(--jk-fs-body\);[^}]*max-width: var\(--jk-measure\);/);
+  assert.match(css, /\.post-body p,\s*\.post-body li\s*\{\s*line-height: inherit;/);
+  for (const [level, selectors] of [
+    [1, ['h1', '.header-home .hero-title', '.page > .page-title', '.post > .title',
+      '.project-page .page-title', '.wrapper-xwide .post > .title']],
+    [2, ['h2', '.contact-section h2', '.section-heading h2', '.app-gallery h2']],
+    [3, ['h3', '.writing-entry h3', '.reading-pick h3']], [4, ['h4']]
+  ]) {
+    for (const selector of selectors) {
+      const rule = [...css.matchAll(/([^{}]+)\{([^{}]+)\}/g)].find(([, selectors, body]) =>
+        selectors.split(',').some(value => value.trim() === selector) &&
+        body.includes(`font-size: var(--jk-fs-h${level});`))?.[2];
+      assert.ok(rule, `${selector}: missing heading size`);
+      assert.ok(rule.includes(`line-height: var(--jk-lh-h${level});`), selector);
+    }
+  }
+  assert.match(css, /\.writing-entry h3\s*\{[^}]*font-weight: 500;[^}]*font-optical-sizing: auto;[^}]*letter-spacing: -0.01em;/);
+  assert.match(css, /\.project-page--carta \.page-title\s*\{[^}]*font-size: var\(--jk-fs-title\);/);
+  assert.match(css, /\.project-page--carta \.page-title\s*\{[^}]*font-variation-settings: 'opsz' 72;/);
+  const phone = css.match(/@media \(max-width: 479px\) \{([\s\S]*?)\n\}/)?.[1];
+  assert.ok(phone, 'missing phone typography spacing');
+  assert.match(phone, /:root\s*\{\s*--jk-page-x: 20px;\s*\}/);
+  assert.match(phone, /padding-left: max\(var\(--jk-page-x\), env\(safe-area-inset-left\)\);/);
+  assert.match(phone, /padding-right: max\(var\(--jk-page-x\), env\(safe-area-inset-right\)\);/);
+});
+
+test('long articles opt into 20/28 at 27.5em only from 600px', () => {
+  const css = stripComments(read('assets/css/jaack-site.css'));
+  const desktop = css.match(/@media \(min-width: 600px\) \{([\s\S]*?)\n\}/)?.[1];
+  assert.ok(desktop, 'missing long article breakpoint');
+  assert.match(desktop, /\.post\[data-measure="long"\],\s*\.post\[data-measure="long"\] \.post-body,\s*\.post-body--long\s*\{\s*font-size: var\(--jk-fs-body-long\);\s*line-height: var\(--jk-lh-body-long\);/);
+  assert.match(desktop, /\.post\[data-measure="long"\],\s*\.post-body--long\s*\{\s*max-width: var\(--jk-measure-long\);/);
+  assert.doesNotMatch(css.replace(desktop, ''), /(?:font-size|line-height|max-width): var\(--jk-(?:fs-body-long|lh-body-long|measure-long)\)/);
+  for (const slug of ['2024-review', '2024-review-en', '2024-review-it']) {
+    assert.match(read(`_posts/2025-01-22-${slug}.md`), /^measure: long$/m, slug);
+    assert.match(read(`_site/${slug}/index.html`), /<main\b[^>]*class="post"[^>]*data-measure="long"/, slug);
+  }
+  assert.doesNotMatch(read('_site/index.html'), /data-measure="long"/);
+  assert.equal(read('_site/assets/css/jaack-site.css'), read('assets/css/jaack-site.css'));
 });
 
 test('phone navigation wraps whole labels without clipping and keeps 44px targets', () => {
