@@ -44,6 +44,12 @@ for name,themes in data.items():
                 if name == 'moxie' and f == 'edge': threshold = 3.03
                 r=ratio(p[f],p[b]); ok=r>=threshold; fail+= (not ok)
                 out.append(f"| {name} | {theme} | {f} {p[f]} su {b} {p[b]} | {kind} | {r:.2f} | {'OK' if ok else 'FAIL'} |")
+        if name == 'jaack.me':
+            # Every Pygments role uses one of these four foregrounds on pre's
+            # surface-2. Test the stricter 4.6:1 floor in BOTH themes.
+            for f in ('ink', 'ink2', 't3', 'accentText'):
+                r=ratio(p[f],p['surface2']); ok=r>=4.6; fail+=(not ok)
+                out.append(f"| {name} | {theme} | syntax {f} {p[f]} su surface2 {p['surface2']} | code >=4.6 | {r:.2f} | {'OK' if ok else 'FAIL'} |")
         if theme == 'light' and 'surface2' in p:
             r=ratio(p['accent'],p['surface2'])
             out.append(f"| {name} | {theme} | accent {p['accent']} su surface2 {p['surface2']} | info / fills not allowed on surface-2 | {r:.2f} | INFO |")

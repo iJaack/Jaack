@@ -14,6 +14,7 @@ layout: compress
   <meta name="google-site-verification" content="x-nbUh-DuOi6rEf6aBXH4CooJnz8OO1CupGC1qS2-Rk">
   {% if page.redirect_to %}<meta http-equiv="refresh" content="0;url={{ page.redirect_to | relative_url }}">{% endif %}
   {% seo %}
+  {% include post-hreflang.html %}
   {% include favicon.html %}
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ '/feed.xml' | relative_url }}">
   <link rel="webmention" href="https://webmention.io/jaack.me/webmention">
@@ -34,7 +35,7 @@ layout: compress
   {% assign width_class = page.width | default: site.width | default: 'normal' %}
   {% unless width_class == 'large' or width_class == 'xwide' %}{% assign width_class = 'normal' %}{% endunless %}
   <div class="wrapper-{{ width_class }} jk-page">
-    <main id="main-content" tabindex="-1" class="{% if page.layout == 'post' or page.category == 'blog' %}post{% else %}page {{ page.title | append: '' | slugify }}{% endif %}"{% if page.measure == 'long' and page.layout == 'post' %} data-measure="long"{% endif %}>
+    <main id="main-content" tabindex="-1" class="{% if page.layout == 'post' or page.category == 'blog' %}post{% else %}page {{ page.title | append: '' | slugify }}{% if page.prose or page.layout == 'note' %} jk-prose{% endif %}{% endif %}"{% if page.layout == 'post' and page.measure == 'normal' %} data-measure="normal"{% endif %}>
       {{ content }}
     </main>
     {% include footer.html %}

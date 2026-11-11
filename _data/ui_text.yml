@@ -81,3 +81,10 @@ work_groups:
   past:
     en: Previously
     it: In precedenza
+
+months:
+  en: [January, February, March, April, May, June, July, August, September, October, November, December]
+  it: [gennaio, febbraio, marzo, aprile, maggio, giugno, luglio, agosto, settembre, ottobre, novembre, dicembre]
+months_short:
+  en: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+  it: [gen, feb, mar, apr, mag, giu, lug, ago, set, ott, nov, dic]

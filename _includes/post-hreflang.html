@@ -1,0 +1,9 @@
+{% if page.layout == 'post' %}
+{% include post-pair.html %}
+{% if alternate_post.url %}
+{% if page.lang == 'en' %}{% assign english_post = page %}{% assign italian_post = alternate_post %}{% else %}{% assign english_post = alternate_post %}{% assign italian_post = page %}{% endif %}
+<link rel="alternate" hreflang="en" href="{{ english_post.url | absolute_url }}">
+<link rel="alternate" hreflang="it" href="{{ italian_post.url | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ english_post.url | absolute_url }}">
+{% endif %}
+{% endif %}

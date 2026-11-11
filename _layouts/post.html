@@ -2,34 +2,19 @@
 layout: page
 ---
 
-{% assign alternate_post = nil %}
-{% if page.lang == 'en' %}
-{% assign search_slug_it = page.slug | remove: "-en" | append: "-it" %}
-{% assign search_slug = page.slug | remove: "-en" %}
-
-{% assign alternate_post = site.posts | where: "slug", search_slug_it | first %}
-{% unless alternate_post %}
-{% assign alternate_post = site.posts | where: "slug", search_slug | first %}
-{% endunless %}
-
-{% elsif page.lang == 'it' %}
-{% assign search_slug_en = page.slug | remove: "-it" | append: "-en" %}
-
-{% assign alternate_post = site.posts | where: "slug", search_slug_en | first %}
-{% endif %}
+{% include post-pair.html %}
 
 {% if alternate_post.url %}<span hidden data-alt-url="{{ alternate_post.url }}" data-alt-lang="{% if page.lang == 'en' %}it{% else %}en{% endif %}"></span>{% endif %}
 
-{% if page.image and page.headerImage %}
-<img class="title-image" src="{{ page.image }}" alt="{{ page.title }}">
-{% endif %}
-
 <h1 class="title">{{ page.title }}</h1>
 
-<span class="date">
-  <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%A. %B %d, %Y" }}</time>
-  <p>{% if site.read-time %} {% include read-time.html %}{% endif %}</p>
-</span>
+{% assign post_lang = page.lang | default: 'en' %}
+<p class="date post-meta">
+  <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% include post-date.html date=page.date lang=post_lang %}</time>{% if site.read-time %} · {% include read-time.html %}{% endif %}
+</p>
+{% if page.image and page.headerImage %}
+<img class="title-image{% if page.image contains '-codex.svg' %} figure--diagram{% endif %}" src="{{ page.image }}" alt="{{ page.title | escape }}">
+{% endif %}
 <beeline-button target=".post" exclude=".exclude, .nav, .date, .blog-navigation, .prev, .next, .reading-time"
   size="regular"></beeline-button>
 <div class="post-body">
@@ -48,11 +33,11 @@ layout: page
 </div>
 {% endif %}
 
-{% include donation.html %}
-
 {% if site.related %}
 {% include related.html %}
 {% endif %}
+
+{% include donation.html %}
 
 {% if site.show-author %}
 {% include author.html %}

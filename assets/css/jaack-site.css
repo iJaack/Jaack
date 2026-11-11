@@ -2,7 +2,7 @@
    Shared with other sites: token names, the type scale, the 4px spacing scale,
    theme.js (light 07:00–18:59, Auto/Chiaro/Scuro) and the layout principles.
    This site's own skin: warm paper, oxblood instead of Forma's gold, serif headlines,
-   a 33em essay measure, and dated writing rows. Work titles stay in the system sans. */
+   a 23em essay measure, and dated writing rows. Work titles stay in the system sans. */
 
 :root { --jk-dock-h: 0px; --jk-dock-gap: 0px; --jk-bar-h: 61px; }
 
@@ -110,7 +110,6 @@ nav.site-nav .jk-thsw { width: 100%; }
   :root { --jk-bar-h: 57px; }
   nav.site-nav.jk-top { padding-top: 4px; padding-bottom: 4px; }
 }
-.author > .toright > .bio { color: var(--jk-ink-2); }
 .footer-main .footer-links a {
   display: inline-flex;
   align-items: center;
@@ -355,20 +354,26 @@ blockquote {
   font-weight: 450;
 }
 
-/* Syntax colours that assume a light page stay readable when the theme is dark. */
-html[data-theme="dark"] .highlight { color: var(--jk-ink); }
-html[data-theme="dark"] .highlight .n,
-html[data-theme="dark"] .highlight .na,
-html[data-theme="dark"] .highlight .nf,
-html[data-theme="dark"] .highlight .nc,
-html[data-theme="dark"] .highlight .nx,
-html[data-theme="dark"] .highlight .s,
-html[data-theme="dark"] .highlight .s1,
-html[data-theme="dark"] .highlight .s2 { color: var(--jk-ink-2); }
-html[data-theme="dark"] .highlight .c,
-html[data-theme="dark"] .highlight .c1,
-html[data-theme="dark"] .highlight .cm,
-html[data-theme="dark"] .highlight .cp { color: var(--jk-t2); }
+/* One Ombra syntax palette in both themes. Reset every legacy Pygments token,
+   including nested diff/error backgrounds, before assigning semantic roles. */
+code, tt { font-size: 0.85em; }
+pre, .highlight {
+  font-size: 14px;
+  line-height: 22px;
+  border-radius: 14px;
+  overflow-x: auto;
+  background: var(--jk-surface-2);
+  color: var(--jk-ink);
+}
+pre, .highlight pre { padding: 14px 18px; }
+.highlight pre { margin: 0; }
+pre code { font-size: inherit; line-height: inherit; padding: 0; background: transparent; }
+html .highlight.highlight { color: var(--jk-ink); background: var(--jk-surface-2); }
+html .highlight.highlight [class] { color: var(--jk-ink); background: transparent; }
+html .highlight.highlight :is(.c, .ch, .cd, .c1, .cm, .cp, .cpf, .cs) { color: var(--jk-t3); }
+html .highlight.highlight :is(.k, .kd, .kn, .kp, .kr, .kt, .nb, .bp, .ow) { color: var(--jk-accent-text); }
+html .highlight.highlight :is(.s, .sa, .sb, .sc, .sd, .s1, .s2, .se, .sh, .si, .sr, .ss, .sx, .dl) { color: var(--jk-ink-2); }
+html .highlight.highlight :is(.m, .mb, .mf, .mh, .mi, .mo, .mx, .il, .no, .kc) { color: var(--jk-ink); font-style: italic; }
 
 .skip-link:focus { z-index: 50; }
 
@@ -381,7 +386,7 @@ html[data-theme="dark"] .highlight .cp { color: var(--jk-t2); }
   --jk-fs-body: 18px;
   --jk-lh-body: 28px;
   --jk-baseline: 14px;
-  --jk-measure: 33em; /* ≈66 characters */
+  --jk-measure: 33em; /* ≈77 characters in Newsreader. */
   --jk-fs-h4: 24px; --jk-lh-h4: 28px;
   --jk-fs-h3: 32px; --jk-lh-h3: 42px;
   --jk-fs-h2: 43px; --jk-lh-h2: 56px;
@@ -437,50 +442,140 @@ html[data-theme="dark"] {
   text-transform: uppercase;
 }
 .hero-label span { color: var(--jk-accent-text); }
-.post { font-size: var(--jk-fs-body); max-width: var(--jk-measure); }
-/* Reserve a cover footprint while the native image dimensions load. */
-.post > .title-image { aspect-ratio: auto 16 / 9; }
+.post { font-size: var(--jk-fs-body); line-height: var(--jk-lh-body); max-width: var(--jk-measure); }
+/* Fixed cover geometry reserves space before load; contain keeps diagrams whole. */
+.post > .title-image {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  max-height: 224px;
+  object-fit: contain;
+  border-radius: 14px;
+  margin: 0 0 14px;
+}
 .post > beeline-button { min-height: 54px; }
 .post > .title {
-  max-width: 22ch;
-  padding-bottom: 12px;
-  box-shadow: inset 0 -2px 0 var(--jk-accent);
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
 }
 .post > .date {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 14px;
-  align-items: baseline;
-  margin-top: 10px;
+  display: block;
+  margin: 7px 0 14px;
   font-family: var(--jk-font);
-  font-size: 12px;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  color: var(--jk-accent-text);
+  font-size: var(--jk-fs-xs);
+  line-height: 28px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--jk-t3);
 }
-.post > .date p { margin: 0; color: var(--jk-t2); letter-spacing: 0; text-transform: none; font-size: 13px; }
 .post-body { font-family: var(--jk-serif); font-size: var(--jk-fs-body); line-height: var(--jk-lh-body); font-weight: 400; }
 /* Paragraph and list rules set their own leading in the legacy stylesheet. */
 .post-body p, .post-body li { line-height: inherit; }
+.post-body > :first-child { margin-top: 14px; }
+.post-body > :last-child { margin-bottom: 0; }
 .post-body h2, .post-body h3, .post-body h4 {
   font-family: var(--jk-serif);
   font-optical-sizing: auto;
   letter-spacing: -0.01em;
 }
 @media (min-width: 600px) {
-  /* Size the container too: its em measure must use the long body size. */
-  .post[data-measure="long"],
-  .post[data-measure="long"] .post-body,
+  /* Long is the post default; the container's em measure uses its 20px body. */
+  .post:not([data-measure="normal"]),
+  .post:not([data-measure="normal"]) .post-body,
   .post-body--long {
     font-size: var(--jk-fs-body-long);
     line-height: var(--jk-lh-body-long);
   }
-  .post[data-measure="long"], .post-body--long {
+  .post:not([data-measure="normal"]), .post-body--long {
     max-width: var(--jk-measure-long);
   }
 }
+/* Only designated text pages and individual notes receive this reading measure. */
+.jk-prose {
+  max-width: 26em;
+  font-family: var(--jk-serif);
+  font-size: var(--jk-fs-body);
+  line-height: var(--jk-lh-body);
+}
+.jk-prose p, .jk-prose li { line-height: inherit; }
+.jk-prose .page-intro, .jk-prose .note-body { font-size: inherit; }
+.post > .related, .post > .donation, .post > .author { margin: 56px 0 0; }
+.post > .related > h2 { margin: 0 0 14px; font-size: 24px; line-height: 28px; }
+.dated-rows { list-style: none; margin: 0; padding: 0; }
+.dated-rows > .dated-row {
+  display: grid;
+  grid-template-columns: 7em minmax(0, 1fr);
+  align-items: baseline;
+  gap: 14px;
+  min-height: 44px;
+  border-top: 1px solid var(--jk-hair);
+  font-family: var(--jk-font);
+  font-size: var(--jk-fs-xs);
+  line-height: 28px;
+}
+.dated-row > time { color: var(--jk-t3); padding: 8px 0; }
+.dated-row > a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 7px 0;
+  box-sizing: border-box;
+  font-family: var(--jk-serif);
+  font-size: 20px;
+  line-height: 28px;
+  color: var(--jk-ink);
+  text-decoration: none;
+}
+.dated-row > a:hover, .dated-row > a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+.donation > .coffee-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  min-height: 44px;
+  font-family: var(--jk-font);
+  font-size: var(--jk-fs-note, 14px);
+  line-height: 22px;
+  color: var(--jk-t2);
+  text-decoration: none;
+}
+.coffee-link:hover, .coffee-link:focus-visible { text-decoration: underline; }
+.post > .author {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 0;
+  border-color: var(--jk-hair);
+}
+.post > .author > .toleft { width: 44px; flex: 0 0 44px; }
+.post > .author > .toleft > .selfie { display: block; width: 44px; height: 44px; object-fit: cover; }
+.post > .author > .toright { width: auto; flex: 1; min-width: 0; }
+.post > .author > .toright > .name,
+.post > .author > .toright > .bio {
+  display: block;
+  width: 100%;
+  margin: 0;
+  font-size: var(--jk-fs-note, 14px);
+  line-height: 22px;
+  color: var(--jk-t2);
+  text-align: left;
+}
+/* The codex SVGs are light diagrams, never alternate dark-theme assets. */
+html[data-theme="dark"] :is(.post-body img[src$="-codex.svg"], .post > .figure--diagram) {
+  box-sizing: border-box;
+  background: var(--jk-surface-2);
+  padding: 14px;
+  border-radius: 14px;
+  filter: brightness(.9);
+}
 @media (max-width: 479px) {
   :root { --jk-page-x: 20px; }
+  .post > .title { font-size: clamp(32px, 9vw, 43px); line-height: 42px; }
+  .post > .title-image { max-height: 140px; }
   .wrapper-normal.jk-page,
   .wrapper-large.jk-page,
   .wrapper-xwide.jk-page {

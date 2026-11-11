@@ -635,4 +635,159 @@ class SiteTest < Minitest::Test
     assert_equal 'https://jaack.me/about/', doc('en/about/index.html').at_css('link[rel="canonical"]')['href']
     assert_includes File.read(File.join(ROOT, 'robots.txt')), 'Sitemap: https://jaack.me/sitemap.xml'
   end
+
+  def render_post_fixture(template, values = {})
+    site = Jekyll::Site.new(Jekyll.configuration(
+      'source' => File.expand_path('..', __dir__), 'destination' => ROOT, 'quiet' => true
+    ))
+    site.data['ui_text'] = YAML.safe_load(File.read(File.expand_path('../_data/ui_text.yml', __dir__)))
+    site.liquid_renderer.file('post-fixture').parse(template).render!(
+      site.site_payload.to_h.merge(values), registers: { site: site }
+    )
+  end
+
+  def test_post_measure_defaults_and_normal_opt_out_are_server_rendered
+    layout = File.read(File.expand_path('../_layouts/default.html', __dir__))
+    main_tag = layout.match(/<main\b.*?>/m)[0]
+    [nil, 'long', 'normal'].each do |measure|
+      node = Nokogiri::HTML.fragment(render_post_fixture(main_tag, 'page' => {
+        'layout' => 'post', 'measure' => measure
+      })).at_css('main.post')
+      refute_nil node
+      measure == 'normal' ? assert_equal('normal', node['data-measure']) : assert_nil(node['data-measure'])
+    end
+    %w[about/index.html en/about/index.html now/index.html cookies/index.html hundred/privacy/index.html harness-companion/index.html harness-companion/privacy/index.html newsletter/index.html proliferation-of-tools/index.html].each do |route|
+      assert doc(route).at_css('main.jk-prose'), route
+    end
+    %w[index.html blog/index.html notes/index.html projects/index.html speaking/index.html projects/team1/index.html].each do |route|
+      refute doc(route).at_css('main.jk-prose'), route
+    end
+  end
+
+  def test_post_meta_is_one_localized_date_and_one_reading_time
+    { 'en' => ['8 August 2022', 'min read'], 'it' => ['8 agosto 2022', 'min di lettura'] }.each do |lang, (date, label)|
+      page = doc("zk-evms-#{lang}/index.html")
+      meta = page.at_css('main > .post-meta')
+      assert_equal date, meta.at_css('time').text.strip
+      assert_equal 1, meta.css('.reading-time').length
+      assert_match(/\A#{Regexp.escape(date)} · [1-9]\d* #{label}\z/, meta.text.gsub(/\s+/, ' ').strip)
+      assert_equal %w[h1 p beeline-button div], page.at_css('main').element_children.reject { |n| n.key?('hidden') }.first(4).map(&:name)
+    end
+    # The same date formatter covers September with a single-digit day.
+    %w[en it].each do |lang|
+      output = render_post_fixture("{% include post-date.html date=fixture_date lang=fixture_lang %}",
+        'fixture_date' => Time.utc(2026, 9, 9), 'fixture_lang' => lang)
+      assert_equal "9 #{lang == 'it' ? 'settembre' : 'September'} 2026", output.strip
+    end
+    # Preformatted text contributes to the count. Boundary cases enforce ceil / 220,
+    # a single value, and the same minimum-one wording in both languages.
+    { 0 => 1, 1 => 1, 220 => 1, 221 => 2, 440 => 2, 441 => 3 }.each do |words, minutes|
+      %w[en it].each do |lang|
+        content = "<p>Intro</p>\n<pre><code>" + ('word ' * [words - 1, 0].max) + '</code></pre>'
+        content = '' if words.zero?
+        html = render_post_fixture('{% include read-time.html %}', 'content' => content, 'page' => { 'lang' => lang })
+        label = lang == 'it' ? 'min di lettura' : 'min read'
+        assert_equal "#{minutes} #{label}", Nokogiri::HTML.fragment(html).text.strip
+      end
+    end
+  end
+
+  def test_cover_and_footer_follow_the_clean_post_order_in_both_languages
+    %w[en it].each do |lang|
+      page = doc("2024-review-#{lang}/index.html")
+      children = page.at_css('main.post').element_children.reject { |n| n.key?('hidden') }
+      assert children[0].matches?('h1.title')
+      assert children[1].matches?('p.post-meta')
+      assert children[2].matches?('img.title-image')
+      assert_equal 'beeline-button', children[3].name
+      assert children[4].matches?('.post-body')
+      assert_equal 1, page.css('beeline-button').length
+      related = page.at_css('main > .related')
+      refute_nil related
+      donation = page.at_css('main > .donation')
+      assert_operator children.index(donation), :>, children.index(related)
+      assert_operator children.index(page.at_css('main > .author')), :>, children.index(donation)
+      coffee = donation.at_css('a.coffee-link')
+      assert_equal 'https://www.buymeacoffee.com/jaack', coffee['href']
+      assert_equal '_blank', coffee['target']
+      assert_equal %w[noopener noreferrer], coffee['rel'].split
+      assert_equal '↗', coffee.at_css('[aria-hidden="true"]').text
+      expected = lang == 'it' ? 'Se ti è stato utile, offrimi un caffè ↗' : 'If this was useful, buy me a coffee ↗'
+      assert_equal expected, coffee.text.strip
+      assert_empty donation.css('button, img, script, style')
+      assert_empty page.css('script[src*="buymeacoffee"], img[src*="buymeacoffee"]')
+    end
+  end
+
+  def test_related_is_dated_rows_of_at_most_three_same_language_posts
+    Dir.glob(File.join(ROOT, '**', 'index.html')).each do |path|
+      page = Nokogiri::HTML(File.read(path))
+      next unless page.at_css('main.post')
+      related = page.at_css('.related')
+      next unless related
+      assert_equal 'More writing', related.at_css('h2 .lang-en[lang="en"]').text
+      assert_equal 'Altri articoli', related.at_css('h2 .lang-it[lang="it"]').text
+      rows = related.css('ul.dated-rows > li.dated-row')
+      assert_operator rows.length, :<=, 3, path
+      assert_operator rows.length, :>, 0, path
+      current_url = '/' + path.delete_prefix(ROOT + '/').delete_suffix('index.html')
+      alternate = page.at_css('[data-alt-url]')&.[]('data-alt-url')
+      urls = rows.map do |row|
+        assert row.at_css('time[datetime]'), path
+        assert_match(/\A\S+ \d{4}\z/, row.at_css('time').text.strip, path)
+        assert_equal 1, row.css('a').length
+        link = row.at_css('a')
+        refute_includes link.text, '↗'
+        refute_equal current_url, link['href'], path
+        refute_equal alternate, link['href'], path
+        target = doc(link['href'].delete_prefix('/') + 'index.html')
+        assert_equal page.at_css('html')['lang'], target.at_css('html')['lang'], path
+        link['href']
+      end
+      assert_equal urls.uniq, urls, path
+    end
+    # A controlled pool verifies filtering before the limit and deduping shared tags.
+    posts = [
+      { 'url' => '/current/', 'lang' => 'en' },
+      { 'url' => '/translation/', 'lang' => 'en' },
+      { 'url' => '/other-language/', 'lang' => 'it' },
+      { 'url' => '/unrelated/', 'lang' => 'en', 'tags' => ['else'] }
+    ] + (1..6).map { |n| { 'url' => "/candidate-#{n}/", 'lang' => 'en' } }
+    posts.each do |post|
+      post['tags'] ||= %w[one two]
+      post['title'] = post['url']
+      post['date'] = Time.utc(2026, 9, 9)
+    end
+    data = YAML.safe_load(File.read(File.expand_path('../_data/ui_text.yml', __dir__)))
+    html = render_post_fixture('{% include related.html %}',
+      'site' => { 'posts' => posts, 'data' => { 'ui_text' => data } },
+      'page' => { 'url' => '/current/', 'lang' => 'en', 'tags' => %w[one two] },
+      'alternate_post' => { 'url' => '/translation/' })
+    assert_equal %w[/candidate-1/ /candidate-2/ /candidate-3/], Nokogiri::HTML.fragment(html).css('.dated-row a').map { |n| n['href'] }
+  end
+
+  def test_paired_posts_have_absolute_self_referencing_hreflang_in_head
+    expected = {
+      'en' => 'https://jaack.me/zk-evms-en/',
+      'it' => 'https://jaack.me/zk-evms-it/',
+      'x-default' => 'https://jaack.me/zk-evms-en/'
+    }
+    %w[en it].each do |lang|
+      page = doc("zk-evms-#{lang}/index.html")
+      links = page.css('head link[rel="alternate"][hreflang]')
+      assert_equal expected, links.to_h { |n| [n['hreflang'], n['href']] }
+      assert_equal 3, links.length
+      assert_empty page.css('body link[hreflang]')
+    end
+    assert_empty doc('the-loops-i-set-up-so-my-agent-system-doesnt-lie-to-me/index.html').css('link[hreflang]')
+  end
+
+  def test_loops_keeps_original_svg_sources_without_dark_variant_swaps
+    page = doc('the-loops-i-set-up-so-my-agent-system-doesnt-lie-to-me/index.html')
+    cover = page.at_css('.title-image.figure--diagram')
+    refute_nil cover
+    assert_equal '/assets/images/2026/loops-cover-codex.svg', cover['src']
+    assert_equal 5, page.css('.post-body img[src$="-codex.svg"]').length
+    assert_empty page.css('main picture')
+  end
 end
