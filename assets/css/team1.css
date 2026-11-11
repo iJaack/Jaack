@@ -74,7 +74,7 @@ html[data-theme="dark"] .team1-page { --team1: #ffb4bc; }
 .filter-button.is-active { border-color: var(--team1); color: var(--team1); }
 .team1-toc {
   position: sticky;
-  top: calc(var(--jk-topbar-h) + 8px);
+  top: var(--jk-top-clearance);
   z-index: 5;
   margin-top: 16px;
   padding: 8px 0;

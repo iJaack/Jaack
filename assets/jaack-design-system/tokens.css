@@ -1,4 +1,5 @@
 /* jaack design system — tokens.
+   Ombra: one warm dark for every site. Never pure zero-RGB (no zero-RGB hex, keyword or rgba; see README, Tanizaki dark). Shadows and scrims: rgba(8,5,4,…).
    Light/dark are chosen by theme.js (local clock 07:00–18:59 light, else dark; user override Auto/Chiaro/Scuro)
    and written to <html data-theme="light|dark"> before first paint. Every value below is data-free. */
 
@@ -17,6 +18,19 @@
   --jk-lh-tight:1.02;--jk-lh:1.6;
   --jk-track-label:.06em;--jk-track-big:-.05em;--jk-track-mid:-.04em;--jk-track-title:-.03em;
 
+  /* reading — editorial pages opt in with .jk-prose (components/reading.css). Scale 4:3, 14px baseline. */
+  --jk-font-read:"Newsreader","Newsreader Fallback Iowan","Newsreader Fallback Georgia","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --jk-serif:var(--jk-font-read);
+  --jk-baseline:14px;
+  --jk-fs-read:18px; --jk-lh-body:28px;
+  --jk-measure-read:33em;          /* ≈ 66 characters */
+  --jk-fs-h4:24px; --jk-lh-h4:28px;
+  --jk-fs-h3:32px; --jk-lh-h3:42px;
+  --jk-fs-h2:43px; --jk-lh-h2:56px;
+  --jk-fs-h1:57px; --jk-lh-h1:70px;
+  --jk-fs-body-long:20px; --jk-lh-body-long:28px;
+  --jk-measure-long:23em;          /* 460px at 20px ≈ 55 measured characters. Never 55ch (= 70–76 characters). */
+
   /* spacing: 4 px scale */
   --jk-s1:4px;--jk-s2:8px;--jk-s3:12px;--jk-s4:16px;--jk-s5:20px;--jk-s6:24px;--jk-s7:28px;--jk-s8:32px;--jk-s10:40px;--jk-s12:48px;--jk-s16:64px;--jk-s18:72px;--jk-s20:80px;--jk-s24:96px;--jk-s32:128px;
   /* airy rhythm; numeric tables may use the data row padding */
@@ -28,7 +42,15 @@
   --jk-chapter-gap-m:72px;    /* between chapters, < 768 px */
   --jk-page-x:clamp(20px,6vw,120px);
   --jk-measure:64ch;
-  --jk-topbar-h:72px;         /* space reserved under the floating top bar */
+  /* bars: content clears bar height + edge offset + safe area + 14px breathing room, top and bottom */
+  --jk-breath:14px;
+  --jk-bar-h:60px;            /* floating top bar (.jk-top) */
+  --jk-bar-gap:10px;          /* top bar distance from the edge */
+  --jk-dock-h:72px;           /* bottom dock (.jk-dock) incl. 44px targets and pill border; a site with a scrolling pill sets 80px */
+  --jk-dock-gap:16px;
+  --jk-top-clearance:calc(var(--jk-bar-h) + var(--jk-bar-gap) + env(safe-area-inset-top,0px) + var(--jk-breath));
+  --jk-dock-clearance:calc(var(--jk-dock-h) + var(--jk-dock-gap) + env(safe-area-inset-bottom,0px) + var(--jk-breath));
+  --jk-topbar-h:72px; /* deprecated: fixed 72px as in 1.x, not an alias; use --jk-top-clearance; removal in 3.0 */
   --jk-max:3440px;
 
   /* radii */
@@ -61,7 +83,13 @@ html[data-theme="light"]{
   --jk-t2:rgba(18,18,16,.70);             /* secondary text (grey-opacity hierarchy) */
   --jk-t3:rgba(18,18,16,.64);             /* tertiary text — lowest allowed for text (≥ 4.5:1) */
   --jk-hair:rgba(18,18,16,.11);           /* hairlines */
-  --jk-accent:#a8850f;--jk-accent-text:#7a5c00;--jk-on-accent:#171710;--jk-accent-wash:rgba(168,133,15,.12);
+  --jk-hair-2:rgba(18,18,16,.20);
+  --jk-edge:rgba(18,18,16,.47);      /* controls: 3.16 / 3.21 / 3.10 on bg / surface / surface-2 (unrounded alpha composite) */
+  --jk-focus:var(--jk-accent-text);
+  --jk-scrim:rgba(8,5,4,.28);
+  --jk-accent:#a8850f; /* fills/large areas only where ≥ 3:1: bg 3.20, surface 3.48; NOT surface-2 (2.95) */
+  --jk-accent-text:#866400; /* L lowered by 0.005 steps, same C/H: 5.02 / 5.47 / 4.64 on bg / surface / surface-2 */
+  --jk-on-accent:#171710;--jk-accent-wash:rgba(168,133,15,.12);
   --jk-amb:#8a5300;                       /* warning text (low confidence etc.) */
   --jk-ok:#256b2d;--jk-fail:#a33a22;--jk-info:#3f6fa6;
   /* glass */
@@ -76,25 +104,39 @@ html[data-theme="light"]{
 }
 html[data-theme="dark"]{
   color-scheme:dark;
-  --jk-bg:#14110e;--jk-surface:#1b1714;--jk-surface-2:#231e1a;
-  --jk-ink:#f4eee5;--jk-ink-2:#cdc3b6;
-  --jk-t2:rgba(244,238,229,.70);
-  --jk-t3:rgba(244,238,229,.58);
-  --jk-hair:rgba(244,238,229,.12);
-  --jk-accent:#e8c547;--jk-accent-text:#e8c547;--jk-on-accent:#171710;--jk-accent-wash:rgba(232,197,71,.12);
-  --jk-amb:#e9b44c;
-  --jk-ok:#8fbf8a;--jk-fail:#e07a5f;--jk-info:#8fb3d9;
-  --jk-tint:rgba(20,17,14,.6);--jk-tint-hi:rgba(30,25,21,.74);--jk-tint-edge:rgba(20,17,14,.3);
-  --jk-rim:rgba(255,255,255,.42);--jk-rim-lo:rgba(255,255,255,.06);--jk-glow:rgba(255,255,255,.16);
-  --jk-drop:0 28px 70px -30px rgba(8,6,4,.8),0 2px 8px -2px rgba(8,6,4,.45);
-  --jk-text-shadow:0 1px 2px rgba(8,6,4,.5);
+  /* Ombra: one warm dark for every site. OKLCH hue 60°, planes lighten toward the viewer. */
+  --jk-bg:#130e0b;          /* oklch(0.17 0.010 60) */
+  --jk-surface:#1c1713;     /* oklch(0.21 0.011 60) */
+  --jk-surface-2:#26201c;   /* oklch(0.25 0.012 60) */
+  --jk-ink:#e9e4da;         /* oklch(0.92 0.014 80) — 15.13:1 on bg */
+  --jk-ink-2:#b6b0a8;       /* oklch(0.76 0.014 75) — 7.48:1 on surface-2 */
+  --jk-t2:rgba(233,228,218,.72);
+  --jk-t3:rgba(233,228,218,.58);   /* 5.19:1 on surface-2 — lowest allowed for text */
+  --jk-hair:rgba(233,228,218,.12);
+  --jk-hair-2:rgba(233,228,218,.20);
+  --jk-edge:rgba(233,228,218,.39); /* control boundaries: 3.15 / 3.17 / 3.12 on bg / surface / surface-2 (unrounded alpha composite) */
+  /* accent: rule of §2 (light #a8850f → L+0.08, C−0.03) */
+  --jk-accent:#ba9f59;      /* oklch(0.712 0.096 89.4) — 6.27:1 on surface-2 */
+  --jk-accent-text:#ba9f59;
+  --jk-on-accent:#130e0b;   /* 7.48:1 on accent */
+  --jk-accent-wash:rgba(186,159,89,.12);
+  --jk-focus:var(--jk-accent-text);
+  --jk-amb:#e9b44c;--jk-ok:#8fbf8a;--jk-fail:#e07a5f;--jk-info:#8fb3d9;
+  --jk-tint:rgba(19,14,11,.6);--jk-tint-hi:rgba(28,23,19,.74);--jk-tint-edge:rgba(19,14,11,.3);
+  --jk-rim:rgba(233,228,218,.42);--jk-rim-lo:rgba(233,228,218,.06);--jk-glow:rgba(233,228,218,.16);
+  --jk-scrim:rgba(8,5,4,.28);
+  --jk-drop:0 28px 70px -30px rgba(8,5,4,.8),0 2px 8px -2px rgba(8,5,4,.45);
+  --jk-text-shadow:0 1px 2px rgba(8,5,4,.5);
   --jk-bg-1:rgba(214,186,100,.10);--jk-bg-1b:rgba(214,186,100,.04);
   --jk-bg-2:rgba(104,132,184,.15);--jk-bg-2b:rgba(104,132,184,.06);
   --jk-bg-3:rgba(168,150,196,.10);--jk-bg-3b:rgba(168,150,196,.04);
 }
 /* Breakpoints (media queries cannot read custom properties — use these literal values):
-   768 (mobile → desktop spacing), 900 (chapter title inline with lede), 1100, 1920 (2 columns of chapters), 2560 (3 columns).
+   760 (44px theme-switch targets), 768 (mobile → desktop spacing), 900 (chapter title inline with lede), 1100, 1920 (2 columns of chapters), 2560 (3 columns).
    Inside components prefer container queries (@container) over viewport queries. */
+
+/* Same breakpoint as themeswitch.css: 44px switch targets make the bar 64px. */
+@media (max-width:760px){:root{--jk-bar-h:64px}}
 
 @media (prefers-reduced-motion: reduce){
   :root{--jk-d-1:0ms;--jk-d-2:0ms;--jk-d-3:0ms}

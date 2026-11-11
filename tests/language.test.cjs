@@ -4,8 +4,12 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const source = fs.readFileSync('assets/js/language.js', 'utf8');
 
-function load({ preferred, browser = 'en-US', fixed = '', storageFails = false, inHead = false } = {}) {
+function load({ preferred, browser = 'en-US', fixed = '', storageFails = false, inHead = false, barBox, theme = 'light' } = {}) {
   const classes = new Set();
+  const properties = new Map();
+  const themeMeta = { setAttribute(name, value) { this[name] = value; } };
+  const bar = barBox && { getBoundingClientRect: () => barBox };
+  let resize;
   const storage = new Map(preferred ? [['site-lang', preferred]] : []);
   const buttons = ['en', 'it'].map(lang => ({
     attrs: { 'data-lang': lang },
@@ -14,8 +18,11 @@ function load({ preferred, browser = 'en-US', fixed = '', storageFails = false, 
     addEventListener(name, fn) { this[name] = fn; }
   }));
   const document = {
-    documentElement: { getAttribute: () => fixed, lang: 'en', dataset: {} },
+    documentElement: { getAttribute: name => name === 'data-theme' ? theme : fixed, lang: 'en', dataset: {},
+      style: { setProperty: (name, value) => properties.set(name, value) } },
     body: { classList: { remove: (...names) => names.forEach(n => classes.delete(n)), add: n => classes.add(n) } },
+    querySelector: selector => selector === 'meta[name="theme-color"]' ? themeMeta :
+      selector === 'nav.site-nav' ? bar : null,
     querySelectorAll: () => buttons
   };
   const body = document.body;
@@ -24,16 +31,20 @@ function load({ preferred, browser = 'en-US', fixed = '', storageFails = false, 
     document.body = null;
     document.addEventListener = (event, callback) => { assert.equal(event, 'DOMContentLoaded'); ready = callback; };
   }
-  const window = { location: { href: '' }, dispatchEvent(event) { this.event = event; } };
+  const window = { location: { href: '' }, addEventListener(name, fn) { this[name] = fn; }, dispatchEvent(event) { this.event = event; } };
   vm.runInNewContext(source, {
     document, window, navigator: { language: browser },
+    ResizeObserver: class {
+      constructor(callback) { resize = callback; }
+      observe(target) { assert.equal(target, bar); }
+    },
     localStorage: {
       getItem(key) { if (storageFails) throw Error('blocked'); return storage.get(key); },
       setItem(key, value) { if (storageFails) throw Error('blocked'); storage.set(key, value); }
     },
     CustomEvent: function(name, options) { this.type = name; this.detail = options.detail; }
   });
-  return { document, window, buttons, classes, storage, mount() { document.body = body; ready(); } };
+  return { document, window, buttons, classes, storage, properties, themeMeta, resize: () => resize(), mount() { document.body = body; ready(); } };
 }
 
 test('Italian browser receives Italian content and document language', () => {
@@ -131,4 +142,23 @@ test('head initialization selects the translation before paint and mounts contro
   p.buttons[0].click();
   assert.equal(p.document.documentElement.dataset.uiLang, 'en');
   assert.equal(p.document.documentElement.lang, 'en');
+});
+
+test('navigation clearance includes one viewport safe-area offset and 14px breath after rounding', () => {
+  const barBox = { top: 47, height: 144.25 };
+  const p = load({ barBox, theme: 'dark' });
+  assert.equal(p.properties.get('--jk-top-clearance'), '206px');
+  assert.equal(p.properties.size, 1);
+  barBox.top = 8;
+  barBox.height = 97.5;
+  p.resize();
+  assert.equal(p.properties.get('--jk-top-clearance'), '120px');
+});
+
+test('browser chrome follows the Ombra dark ground and unchanged light paper on theme changes', () => {
+  const p = load({ theme: 'dark' });
+  assert.equal(p.themeMeta.content, '#130e0b');
+  p.document.documentElement.getAttribute = name => name === 'data-theme' ? 'light' : '';
+  p.window.jaacktheme();
+  assert.equal(p.themeMeta.content, '#f3eee6');
 });

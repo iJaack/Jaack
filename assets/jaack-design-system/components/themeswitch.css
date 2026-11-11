@@ -1,8 +1,9 @@
 /* theme switch — Auto / Chiaro / Scuro (mounted by theme.js: JaackTheme.mount(hostElement)) */
 .jk-thsw{display:inline-flex;gap:2px;padding:2px;border-radius:var(--jk-r-pill);background:var(--jk-tint-hi);flex:none;min-width:0;max-width:100%}
-.jk-thsw button{display:inline-flex;align-items:center;justify-content:center;font:600 12px/1 var(--jk-font);color:var(--jk-ink-2);background:none;border:0;border-radius:var(--jk-r-pill);padding:6px 9px;cursor:pointer;min-height:28px;min-width:0;flex:1 1 auto}
-.jk-thsw button[aria-pressed="true"]{background:var(--jk-bg);color:var(--jk-ink);box-shadow:0 1px 3px rgba(8,6,4,.12)}
-.jk-thsw button:focus-visible{outline:2px solid var(--jk-accent);outline-offset:1px}
+.jk-thsw button{position:relative;display:inline-flex;align-items:center;justify-content:center;font:600 12px/1 var(--jk-font);color:var(--jk-ink-2);background:none;border:0;border-radius:var(--jk-r-pill);padding:6px 9px;cursor:pointer;min-height:28px;min-width:0;flex:1 1 auto}
+.jk-thsw button[aria-pressed="true"]{background:var(--jk-bg);color:var(--jk-ink);box-shadow:0 1px 3px rgba(8,5,4,.12)}
+.jk-thsw button:focus-visible{outline:2px solid var(--jk-focus);outline-offset:1px}
+.jk-thsw .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;margin:-1px;padding:0;border:0}
 .jk-thsw .i{display:none}
 [data-jk-theme-switch]{display:inline-flex;flex:none;min-width:0;max-width:100%}
 [data-jk-theme-switch]:empty{min-width:148px;min-height:32px}

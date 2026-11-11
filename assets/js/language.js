@@ -36,7 +36,7 @@
       var themeMeta = document.querySelector('meta[name="theme-color"]');
       function paintChrome() {
         if (!themeMeta) return;
-        themeMeta.setAttribute('content', document.documentElement.getAttribute('data-theme') === 'dark' ? '#161210' : '#f3eee6');
+        themeMeta.setAttribute('content', document.documentElement.getAttribute('data-theme') === 'dark' ? '#130e0b' : '#f3eee6');
       }
       paintChrome();
       if (typeof window.addEventListener === 'function') window.addEventListener('jaacktheme', paintChrome);
@@ -44,7 +44,7 @@
       if (bar && typeof ResizeObserver === 'function') {
         var fitBar = function () {
           var box = bar.getBoundingClientRect();
-          document.documentElement.style.setProperty('--jk-topbar-h', Math.ceil(box.top + box.height) + 'px');
+          document.documentElement.style.setProperty('--jk-top-clearance', (Math.ceil(box.top + box.height) + 14) + 'px');
         };
         fitBar();
         new ResizeObserver(fitBar).observe(bar);
