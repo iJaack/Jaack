@@ -1,8 +1,14 @@
 # Newsreader (opt-in)
 
-Self-hosted, upright variable Newsreader for reading text. The WOFF2 retains
-`wght` 200–800 and `opsz` 6–72, with only the Latin / Latin Extended Unicode
-ranges listed in `fonts.css`. Italic is not included.
+Self-hosted, roman and italic variable Newsreader for reading text. Both WOFF2 files retain
+`wght` 400–700 and `opsz` 6–72, with Latin-1, Latin Extended-A and selected
+punctuation/symbols in the identical Unicode ranges listed in `fonts.css`.
+`Newsreader-roman.woff2` is 118,716 bytes; the separate
+`Newsreader-italic.woff2` is 135,024 bytes and provides real italic with the same
+coverage, so italic text is never synthesized. Latin Extended-B, Latin Extended Additional and IPA characters use
+the metric-adjusted local/system fallbacks. Weights below 400 and above 700
+are no longer packaged; select a fallback family explicitly for those weights
+because browsers may otherwise match the nearest available Newsreader weight.
 
 Source: [google/fonts, ofl/newsreader](https://github.com/google/fonts/tree/8b0a1d0f5983c89bc2b93f1b5fb55f9e252744b5/ofl/newsreader),
 commit `8b0a1d0f5983c89bc2b93f1b5fb55f9e252744b5` (2026-03-12).
@@ -10,6 +16,9 @@ Upstream: `productiontype/NewsReader`, commit
 `1ece6a8bfe5db1a2b90c76cc1fe5d3b2eed5dcf3`, as recorded in `METADATA.pb`.
 The source `Newsreader[opsz,wght].ttf` SHA-256 is
 `8a08d13f8a6c0d51be379a60af84f945f65369a67e509ee3c3bdcc421254d7c1`.
+The italic source is `ofl/newsreader/Newsreader-Italic[opsz,wght].ttf` at the
+same pinned google/fonts commit. Its SHA-256 is
+`796668611f80b64d5adf182fde3b6f29ed83b4e7cbec7b96937e84ac01364792`.
 
 Licensed under the **SIL Open Font License 1.1**; `OFL.txt` is copied verbatim
 from the source. No Reserved Font Name is declared in that file. Copyright
@@ -31,31 +40,38 @@ the site's existing vendor directory:
 
 `.jk-prose` uses `--jk-font-read`, including the metric-adjusted Iowan and Georgia
 local fallback faces defined here. Fonts use `font-display:swap`.
-Only the Newsreader WOFF2 is distributed; system fallback fonts stay local.
+The italic file is not preloaded; browsers load it on demand when italic text is
+used. Only the Newsreader WOFF2 files are distributed; system fallback fonts stay local.
 
 ## Rebuild
 
-Requires Python with fontTools and brotli, the `pyftsubset` executable, and the
+Requires Python with fontTools 4.68 and brotli, the `pyftsubset` executable, and the
 macOS fallback fonts below. No download runs. From the repository root:
 
 ```sh
-tools/build-fonts.sh '/path/to/Newsreader[opsz,wght].ttf'
+tools/build-fonts.sh '/path/to/Newsreader[opsz,wght].ttf' '/path/to/Newsreader-Italic[opsz,wght].ttf'
 ```
 
 Set `PYTHON` and `PYFTSUBSET` to executables in your environment if needed.
-The exact subset command run by the script (with `$source_font` pointing at the
-provided TTF) is:
+Both source arguments are required. For each file, the script first limits the
+weight axis, keeping optical size, then subsets all layout features with the
+same options. In the command below, `$input` is the roman or italic source TTF,
+`$output` is its corresponding `fonts/newsreader/Newsreader-{roman,italic}.woff2`
+path, and `$instance` is a temporary file. The fixed build timestamp preserves
+the existing roman bytes and makes both font outputs reproducible:
 
 ```sh
-pyftsubset "$source_font" \
-  --output-file=fonts/newsreader/Newsreader-roman.woff2 \
-  --unicodes="U+0000-00FF,U+0100-024F,U+0259,U+1E00-1EFF,U+2000-206F,U+20A0-20CF,U+2100-214F,U+2190-21FF,U+2212,U+2215,U+FEFF,U+FFFD" \
+export SOURCE_DATE_EPOCH=1794431893 # 2026-11-11 21:18:13 UTC
+"${PYTHON:-python3}" -m fontTools.varLib.instancer "$input" wght=400:700 -o "$instance"
+"${PYFTSUBSET:-pyftsubset}" "$instance" \
+  --output-file="$output" \
+  --unicodes="U+0000-00FF,U+0100-017F,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+FEFF,U+FFFD" \
   --layout-features='*' --flavor=woff2 --no-hinting \
   --name-IDs='*' --name-languages='*' --no-recalc-timestamp
 ```
 
 The script also regenerates `fonts.css`. It uses fontTools to instantiate the
-source at `wght=400` and its actual `fvar` default `opsz=18` (the metadata registry
+roman source at `wght=400` and its actual `fvar` default `opsz=18` (the metadata registry
 override of 16 does not change that default). The weighted sample uses standard
 English a–z frequencies, normalized to 81.82% of the sample, plus 18.18% space;
 the full frequency table and raw calculated numbers are in the generated CSS.
@@ -73,4 +89,6 @@ real files; no guessed metrics are used. The formulas are:
 
 CSS percentages round to two decimals. Rebuilding metrics needs these same
 system font versions; it is separate from the ordinary cross-platform bundle
-build. The packaged WOFF2 is 207,040 bytes with the supplied source and toolchain.
+build. With the supplied sources and toolchain, the packaged roman is 118,716
+bytes and the italic is 135,024 bytes. Both the font build and `tools/check.sh`
+enforce separate budgets: 120,000 bytes for roman and 140,000 bytes for italic.

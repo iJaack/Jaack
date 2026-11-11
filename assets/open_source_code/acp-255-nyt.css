@@ -167,9 +167,22 @@
 
 /* --- Fade-in (scroll-triggered) ------------------------------ */
 .acp255-nyt .fade-in {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  opacity: 1;
+  transform: none;
+  transition: opacity var(--jk-d-3, 280ms) var(--jk-ease-out, cubic-bezier(.2,0,0,1)), transform var(--jk-d-3, 280ms) var(--jk-ease-out, cubic-bezier(.2,0,0,1));
+}
+/* Only JavaScript-enhanced content may wait for the scroll observer. */
+@media (prefers-reduced-motion: no-preference) {
+  .acp255-nyt .fade-in.is-pending {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .acp255-nyt .fade-in {
+    transition: none;
+    transition-delay: 0ms !important;
+  }
 }
 .acp255-nyt .fade-in.is-visible {
   opacity: 1;

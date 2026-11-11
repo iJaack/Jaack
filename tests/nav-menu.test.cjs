@@ -4,10 +4,14 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const source = fs.readFileSync('assets/js/nav-menu.js', 'utf8');
 
-function load({ mobile = true, reduced = false } = {}) {
+function load({ width = 700, linksWidth = 400, reduced = false, duration = '200ms' } = {}) {
   const classes = new Set();
   const listeners = {};
   const timers = new Map();
+  const delays = [];
+  const frames = [];
+  const windowListeners = {};
+  let resized, mounted, fontsReady;
   let document;
   function element(attrs = {}) {
     return {
@@ -26,40 +30,83 @@ function load({ mobile = true, reduced = false } = {}) {
   const sheet = element({ id: 'site-menu' });
   sheet.querySelector = () => links[0];
   sheet.querySelectorAll = () => [...links, ...languages];
+  const mark = element(), navLinks = element(), language = element(), theme = element();
+  mark.getBoundingClientRect = () => ({ width: 100 });
+  navLinks.getBoundingClientRect = () => ({ width: linksWidth });
+  language.getBoundingClientRect = () => ({ width: 88 });
+  theme.getBoundingClientRect = () => ({ width: 140 });
   const nav = {
+    get clientWidth() { return width; },
     classList: { add: name => classes.add(name), remove: (...names) => names.forEach(name => classes.delete(name)) },
-    querySelector: selector => selector === '.nav-menu-toggle' ? button : sheet,
+    querySelector: selector => ({ '.nav-menu-toggle': button, '.nav-row': sheet,
+      '.jk-mark': mark, '.nav-links': navLinks, '.lang-switch': language,
+      '[data-jk-theme-switch]': theme })[selector],
     contains: target => [nav, button, sheet, ...links, ...languages].includes(target)
   };
-  const media = { matches: mobile, addEventListener(name, fn) { assert.equal(name, 'change'); this.change = fn; } };
-  document = { activeElement: null, querySelector: () => nav, addEventListener: (name, fn) => { listeners[name] = fn; } };
+  document = { activeElement: null, querySelector: () => nav,
+    fonts: { ready: { then(fn) { fontsReady = fn; } } },
+    addEventListener: (name, fn) => { listeners[name] = fn; } };
   vm.runInNewContext(source, {
-    document, window: { matchMedia(query) {
-      if (query.includes('reduced-motion')) return { matches: reduced };
-      assert.equal(query, '(max-width: 693.98px)');
-      return media;
-    } },
-    setTimeout(fn, delay) { assert.equal(delay, 160); timers.set(fn, fn); return fn; },
+    document, window: {
+      matchMedia(query) { assert.equal(query, '(prefers-reduced-motion: reduce)'); return { matches: reduced }; },
+      requestAnimationFrame(fn) { frames.push(fn); return frames.length; },
+      addEventListener(name, fn) { windowListeners[name] = fn; },
+      getComputedStyle(el) { if (el === sheet) return { getPropertyValue(name) { assert.equal(name, '--jk-d-2'); return duration; } }; return el === nav ? { paddingLeft: '18px', paddingRight: '18px', columnGap: '8px' } :
+        { marginLeft: el === language && !classes.has('is-measuring') ? '100px' : '0px', marginRight: el === mark ? '4px' : '0px' }; },
+      ResizeObserver: class { constructor(fn) { resized = fn; } observe(el) { assert.ok([nav, theme].includes(el)); } },
+      MutationObserver: class { constructor(fn) { mounted = fn; } observe(el) { assert.equal(el, theme); } }
+    },
+    setTimeout(fn, delay) { delays.push(delay); timers.set(fn, fn); return fn; },
     clearTimeout(id) { timers.delete(id); }
   });
+  function flush() { while (frames.length) frames.shift()(); }
+  flush();
   function key(key, shiftKey = false) {
     const event = { key, shiftKey, prevented: false, preventDefault() { this.prevented = true; } };
     listeners.keydown(event);
     return event;
   }
-  return { document, classes, button, sheet, links, languages, media, key, listeners,
+  return { document, classes, button, sheet, links, languages, delays, key, listeners, flush, windowListeners,
+    setWidth: value => { width = value; }, setLinksWidth: value => { linksWidth = value; },
+    resize: () => { windowListeners.resize(); flush(); },
+    observeResize: () => { resized(); flush(); }, mount: () => { mounted(); flush(); },
+    fontsReady: () => { fontsReady(); flush(); },
     toggle: () => button.listeners.click(), finishFade: () => { timers.forEach(fn => fn()); timers.clear(); } };
 }
 
-test('Menu CSS and JavaScript share the bilingual 693.98px breakpoint', () => {
-  const css = fs.readFileSync('assets/css/jaack-site.css', 'utf8');
-  const jsBreakpoint = source.match(/matchMedia\('\(max-width: ([\d.]+)px\)'\)/)?.[1];
-  assert.equal(jsBreakpoint, '693.98');
-  const cssBreakpoints = [...css.matchAll(/@media \(max-width: ([\d.]+)px\)(?: and \(prefers-reduced-motion: reduce\))? \{([\s\S]*?)\n\}/g)]
-    .filter(([, , rules]) => rules.includes('nav.site-nav.has-menu'))
-    .map(([, breakpoint]) => breakpoint);
-  assert.equal(cssBreakpoints.length, 2, 'Menu layout and reduced-motion queries');
-  for (const breakpoint of cssBreakpoints) assert.equal(breakpoint, jsBreakpoint);
+test('Menu uses measured intrinsic item widths, gaps and insets, without a viewport breakpoint', () => {
+  assert.doesNotMatch(source, /matchMedia\('\(max-width:/);
+  assert.ok(load({ width: 791 }).classes.has('is-compact'), '756px of items cannot fit the 755px inner width');
+  const fit = load({ width: 792 });
+  assert.ok(!fit.classes.has('is-compact'), 'exactly 756px fits');
+  assert.ok(!fit.classes.has('is-measuring'), 'measurement class is removed before paint');
+  assert.equal(fit.sheet.inert, false);
+  assert.equal(fit.sheet.attrs['aria-hidden'], undefined);
+  fit.toggle();
+  assert.equal(fit.button.attrs['aria-expanded'], 'false');
+});
+test('languageChanged remeasures wider and narrower labels at the same viewport', () => {
+  const p = load({ width: 800 });
+  assert.ok(!p.classes.has('is-compact'));
+  p.setLinksWidth(420); p.windowListeners.languageChanged(); p.flush();
+  assert.ok(p.classes.has('is-compact'));
+  p.setLinksWidth(400); p.windowListeners.languageChanged(); p.flush();
+  assert.ok(!p.classes.has('is-compact'));
+});
+test('ResizeObserver, window resize, mounted theme and loaded fonts all remeasure', () => {
+  for (const trigger of ['resize', 'observeResize', 'mount', 'fontsReady']) {
+    const p = load({ width: 800 });
+    p.setLinksWidth(450); p[trigger]();
+    assert.ok(p.classes.has('is-compact'), trigger);
+    p.setLinksWidth(350); p[trigger]();
+    assert.ok(!p.classes.has('is-compact'), trigger);
+  }
+});
+test('remeasure preserves an open compact sheet when the inline items still do not fit', () => {
+  const p = load(); p.toggle(); p.resize();
+  assert.equal(p.button.attrs['aria-expanded'], 'true');
+  assert.equal(p.sheet.inert, false);
+  assert.ok(p.classes.has('is-menu-open'));
 });
 
 test('open exposes the sheet, updates expanded state and focuses the first link', () => {
@@ -125,9 +172,9 @@ test('focus trap wraps Tab last to first and Shift+Tab first to last', () => {
   p.button.focus(); p.key('Tab');
   assert.equal(p.document.activeElement, p.links[0]);
 });
-test('crossing to desktop clears hidden/inert state and returning to mobile stays closed', () => {
+test('fitting inline clears hidden/inert state and returning to compact stays closed', () => {
   const p = load(); p.toggle();
-  p.media.matches = false; p.media.change();
+  p.setWidth(900); p.resize();
   assert.equal(p.button.attrs['aria-expanded'], 'false');
   assert.equal(p.sheet.inert, false);
   assert.equal(p.sheet.attrs['aria-hidden'], undefined);
@@ -135,7 +182,7 @@ test('crossing to desktop clears hidden/inert state and returning to mobile stay
   assert.equal(p.key('Tab').prevented, false);
   p.toggle();
   assert.equal(p.button.attrs['aria-expanded'], 'false');
-  p.media.matches = true; p.media.change();
+  p.setWidth(700); p.resize();
   assert.equal(p.sheet.inert, true);
 });
 test('reduced motion closes immediately and reopening cancels a pending fade', () => {
@@ -144,4 +191,21 @@ test('reduced motion closes immediately and reopening cancels a pending fade', (
   const p = load(); p.toggle(); p.toggle(); p.toggle(); p.finishFade();
   assert.ok(p.classes.has('is-menu-open'));
   assert.ok(!p.classes.has('is-menu-closing'));
+});
+
+
+test('closing follows the computed millisecond token with a 200ms fallback', () => {
+  for (const [duration, expected] of [[' 240ms ', 240], ['120ms', 120], ['280ms', 280], ['', 200], ['invalid', 200], ['0.2s', 200]]) {
+    const p = load({ duration }); p.toggle(); p.toggle();
+    assert.deepEqual(p.delays, [expected], duration);
+    p.finishFade();
+    assert.ok(!p.classes.has('is-menu-closing'));
+  }
+});
+test('zero token and reduced motion skip the closing timer altogether', () => {
+  for (const options of [{ duration: '0ms' }, { reduced: true, duration: '280ms' }]) {
+    const p = load(options); p.toggle(); p.toggle();
+    assert.deepEqual(p.delays, []);
+    assert.ok(!p.classes.has('is-menu-closing'));
+  }
 });

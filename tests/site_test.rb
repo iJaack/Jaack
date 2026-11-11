@@ -30,12 +30,26 @@ class SiteTest < Minitest::Test
     end
   end
 
-  def test_theme_labels_script_loads_immediately_after_language_script
+  def test_theme_localization_uses_the_package_without_a_site_relabeler
     page = doc('index.html')
-    assert_equal 1, page.css('script[src="/assets/js/theme-labels.js"]').length
-    language = page.at_css('script[src="/assets/js/language.js"]')
-    refute_nil language
-    assert_equal '/assets/js/theme-labels.js', language.next_element['src']
+    assert_equal 1, page.css('script[src="/assets/jaack-design-system/theme.js"]').length
+    assert_equal 1, page.css('script[src="/assets/js/language.js"]').length
+    assert_empty page.css('script[src="/assets/js/theme-labels.js"]')
+    refute File.exist?(File.join(ROOT, 'assets/js/theme-labels.js'))
+  end
+
+  def test_booking_accessible_name_is_server_rendered_in_each_page_language
+    { 'it' => 'Prenota una call', 'en' => 'Book a call' }.each do |lang, label|
+      page = doc("2024-review-#{lang}/index.html")
+      assert_equal lang, page.at_css('html')['lang']
+      booking = page.at_css('nav.site-nav a[data-booking-link]')
+      refute_nil booking
+      assert_equal label, booking['aria-label']
+      assert_equal 'Book a call', booking.at_css('.lang-en').text
+      assert_equal 'Prenota', booking.at_css('.nav-bar-label').text
+      assert_equal 'Prenota una call', booking.at_css('.nav-menu-label').text
+    end
+    assert_equal 'Book a call', doc('index.html').at_css('[data-booking-link]')['aria-label']
   end
 
   def test_chrome_names_start_with_visible_text
@@ -55,19 +69,21 @@ class SiteTest < Minitest::Test
     end
   end
 
-  def test_built_navigation_preserves_row_padding_at_each_breakpoint
+  def test_built_shell_preserves_single_row_insets_and_compact_sheet
     css = File.read(File.join(ROOT, 'assets/css/jaack-site.css')).gsub(%r{/\*.*?\*/}m, '')
-    assert_match /nav\.site-nav\.jk-top\s*\{[^}]*padding:\s*6px 8px 6px 14px;/, css
-    tablet = css.match(/@media \(max-width: 880px\) \{(.*?)\n\}/m)[1]
-    assert_match /nav\.site-nav\.jk-top\s*\{[^}]*padding:\s*4px 6px 4px 10px;/, tablet
-    assert_match /nav\.site-nav \.jk-mark\s*\{[^}]*margin-left:\s*22px;/, tablet
-    assert_match /nav\.site-nav \[data-jk-theme-switch\]\s*\{[^}]*margin-right:\s*26px;/, tablet
-    mobile = css.match(/@media \(max-width: 693\.98px\) \{(.*?)\n\}/m)[1]
-    assert_match /nav\.site-nav\.jk-top\.has-menu\s*\{[^}]*padding:\s*4px 20px;/, mobile
-    assert_match /nav\.site-nav\.has-menu \.jk-mark\s*\{[^}]*margin-left:\s*0;/, mobile
-    assert_match /nav\.site-nav\.has-menu \[data-jk-theme-switch\]\s*\{[^}]*margin-right:\s*0;/, mobile
-    assert_match /:root \{ --jk-bar-h: 57px; \}/, mobile
-    assert_match /:root:has\(nav\.site-nav:not\(\.has-menu\)\) \{ --jk-bar-h: 104px; \}/, mobile
+    assert_match /nav\.site-nav\.jk-top\s*\{[^}]*padding:\s*6px 18px;/, css
+    assert_match /nav\.site-nav\.jk-top\.has-menu\.is-compact\s*\{[^}]*padding-left:\s*20px;[^}]*padding-right:\s*20px;/, css
+    assert_match /nav\.site-nav\.has-menu\.is-compact \.jk-mark\s*\{[^}]*margin:\s*0;[^}]*margin-right:\s*auto;/, css
+    assert_match /:root \{ --jk-bar-h: 57px; \}/, css
+    assert_match /footer\.footer-main \{ margin-top: auto;/, css
+    assert_match /min-height: 100svh;/, css
+    assert_includes css, '.jk-page > main > :nth-child(1 of :not([hidden]))'
+    # The no-cover regression has a hidden translation marker before its H1.
+    assert doc('zk-evms-en/index.html').at_css('main > [hidden]:first-child + h1.title')
+    ROUTES.each do |route|
+      wrapper = doc(route).at_css('.jk-page')
+      assert_equal %w[main footer], wrapper.element_children.map(&:name), route
+    end
   end
 
   def test_internal_links_and_assets_on_updated_pages_resolve
@@ -606,6 +622,14 @@ class SiteTest < Minitest::Test
     assert_includes urls, 'https://jaack.me/'
     assert_includes urls, 'https://jaack.me/about/'
     assert_includes urls, 'https://jaack.me/projects/carta/'
+    %w[/google780112932c0baf19.html /workflows/ /404.html /en/404.html].each do |path|
+      refute_includes urls, 'https://jaack.me' + path
+    end
+    refute urls.any? { |url| url.match?(%r{/assets/jaack-design-system/components/.*\.html\z}) }
+    pdfs = Dir.glob(File.join(ROOT, 'assets/docs/**/*.pdf'))
+    refute_empty pdfs
+    pdfs.each { |path| assert_includes urls, 'https://jaack.me/' + path.delete_prefix(ROOT + '/') }
+    assert_includes urls, 'https://jaack.me/helicon-and-the-price-of-future-avax/'
     refute_includes urls, 'https://jaack.me/en/about/'
     refute_includes urls, 'https://jaack.me/index'
     assert_equal 'https://jaack.me/about/', doc('en/about/index.html').at_css('link[rel="canonical"]')['href']

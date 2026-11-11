@@ -120,3 +120,11 @@ defaults:
       layout: note
       author: jaack
       lang: en
+  - scope:
+      path: "assets/jaack-design-system/components/*.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "google780112932c0baf19.html"
+    values:
+      sitemap: false

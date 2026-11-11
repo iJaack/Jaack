@@ -12,12 +12,14 @@
 
   function init() {
     var buttons = document.querySelectorAll('[data-lang]');
+    var bookingLink = document.querySelector('[data-booking-link]');
     function setLang(lang) {
       if (lang !== 'it' && lang !== 'en') lang = 'en';
       document.body.classList.remove('lang-en', 'lang-it');
       document.body.classList.add('lang-' + lang);
       html.lang = fixedLanguage || lang;
       html.dataset.uiLang = lang;
+      if (bookingLink) bookingLink.setAttribute('aria-label', lang === 'it' ? 'Prenota una call' : 'Book a call');
       buttons.forEach(function (button) {
         button.setAttribute('aria-pressed', String(button.getAttribute('data-lang') === lang));
       });

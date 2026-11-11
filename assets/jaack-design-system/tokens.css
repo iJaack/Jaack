@@ -1,6 +1,6 @@
 /* jaack design system — tokens.
    Ombra: one warm dark for every site. Never pure zero-RGB (no zero-RGB hex, keyword or rgba; see README, Tanizaki dark). Shadows and scrims: rgba(8,5,4,…).
-   Light/dark are chosen by theme.js (local clock 07:00–18:59 light, else dark; user override Auto/Chiaro/Scuro)
+   Light/dark are chosen by theme.js (local clock 07:00–18:59 light, else dark; user override Auto/Light/Dark, Italian Auto/Chiaro/Scuro)
    and written to <html data-theme="light|dark"> before first paint. Every value below is data-free. */
 
 :root{

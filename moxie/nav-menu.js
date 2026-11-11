@@ -19,9 +19,11 @@
     sheet.inert = mobile.matches;
     if (mobile.matches) sheet.setAttribute('aria-hidden', 'true');
     else sheet.removeAttribute('aria-hidden');
-    if (wasOpen && mobile.matches && !reducedMotion.matches) {
+    var duration = window.getComputedStyle(sheet).getPropertyValue('--jk-d-2').trim();
+    var delay = reducedMotion.matches ? 0 : (/^\d+(?:\.\d+)?ms$/.test(duration) ? parseFloat(duration) : 200);
+    if (wasOpen && mobile.matches && delay > 0) {
       nav.classList.add('is-menu-closing');
-      fade = setTimeout(function () { nav.classList.remove('is-menu-closing'); }, 160);
+      fade = setTimeout(function () { nav.classList.remove('is-menu-closing'); }, delay);
     }
     if (wasOpen && returnFocus) button.focus();
   }
