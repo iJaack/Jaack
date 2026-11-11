@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "build": "bundle exec jekyll build",
-    "test": "node --test tests/forma-v2.test.cjs tests/language.test.cjs tests/nav-menu.test.cjs tests/moxie-nav-menu.test.cjs tests/beeline-skin.test.cjs tests/project-video.test.cjs tests/helicon-chart.test.cjs tests/moxie-leak.test.cjs && bundle exec ruby tests/site_test.rb",
+    "test": "node --test tests/forma-v2.test.cjs tests/language.test.cjs tests/nav-menu.test.cjs tests/moxie-nav-menu.test.cjs tests/moxie-theme-labels.test.cjs tests/beeline-skin.test.cjs tests/project-video.test.cjs tests/helicon-chart.test.cjs tests/moxie-leak.test.cjs && bundle exec ruby tests/site_test.rb",
     "check": "node --check moxie/nav-menu.js && node --check assets/js/language.js && node --check assets/js/nav-menu.js && node --check assets/js/beeline-skin.js && node --check assets/js/project-video.js && node --check assets/research/helicon/chart.js && npm run build && npm test"
   }
 }

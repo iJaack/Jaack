@@ -32,3 +32,40 @@ window.addEventListener('jaacktheme',paintThemeColor);
   fit();
   new ResizeObserver(fit).observe(bar);
 })();
+
+// Keep the vendored switch behavior and bilingual accessible-name suffixes intact.
+(function(){
+  if(document.documentElement.lang!=='en')return;
+  const watched=new WeakSet();
+  function localize(){
+    document.querySelectorAll('[data-jk-theme-switch]').forEach(host=>{
+      if(watched.has(host))return;
+      watched.add(host);
+      let observer;
+      function relabel(){
+        const group=host.querySelector('.jk-thsw');
+        if(!group)return false;
+        const theme=window.JaackTheme;
+        const labels={
+          auto:['Auto',`Automatic: light from ${theme.FROM} to ${theme.TO}`],
+          light:['Light','Light theme'],
+          dark:['Dark','Dark theme']
+        };
+        group.setAttribute('aria-label','Theme');
+        group.querySelectorAll('button[data-m]').forEach(button=>{
+          const [label,title]=labels[button.dataset.m];
+          button.querySelector('.l').textContent=label;
+          button.title=title;
+        });
+        if(observer)observer.disconnect();
+        return true;
+      }
+      if(!relabel()){
+        observer=new MutationObserver(relabel);
+        observer.observe(host,{childList:true,subtree:true});
+      }
+    });
+  }
+  localize();
+  document.addEventListener('DOMContentLoaded',localize,{once:true});
+})();

@@ -8,6 +8,7 @@ html[data-theme="light"]{
   --jk-bg:#eef1f4;--jk-surface:#f7f9fb;--jk-surface-2:#e2e7ee;
   --jk-ink:#14181d;--jk-ink-2:#4c5968;
   --jk-t2:rgba(20,24,29,.72);--jk-t3:rgba(20,24,29,.64);--jk-hair:rgba(20,24,29,.14);
+  /* Moxie needs .48 on its cool #e2e7ee surface-2; the package uses warm #e7dfd2. */
   --jk-hair-2:rgba(20,24,29,.20);--jk-edge:rgba(20,24,29,.48);--jk-focus:var(--jk-accent-text);
   --jk-accent:#2a5f8a;--jk-accent-text:#1a4570;--jk-on-accent:#f7f9fb;--jk-accent-wash:rgba(42,95,138,.12);
 }
@@ -121,6 +122,10 @@ header.jk-top.hub-header .language a[aria-current=page]{color:var(--jk-ink)}
 }
 @media (max-width: 482.98px) and (prefers-reduced-motion: reduce) {
   header.hub-header.has-menu .hub-tools{transition:none}
+}
+@media(max-width:639px){
+  /* Contents carries header clearance; 24px + the intro's 4px = 28px to its stripe. */
+  .mobile-menu + .layout{padding-top:24px}
 }
 .deck-theme .intro::before{height:5px;margin:0 0 14px}
 .archive-row,.journal-row,.version-row{padding:14px 0}

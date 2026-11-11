@@ -184,11 +184,12 @@ test('mobile sheet keeps destinations in one column and languages in one inline 
 
 test('bar measurement reserves its bottom plus 14px and CSS uses clearance directly', () => {
   const app = fs.readFileSync('moxie/app.js', 'utf8');
-  const start = app.lastIndexOf('(function(){');
+  const measurement = app.match(/\(function\(\)\{\n  const bar=document\.querySelector\('header\.hub-header'\);[\s\S]*?\n\}\)\(\);/);
+  assert.ok(measurement, 'header measurement function exists');
   const properties = {};
   let fit;
   const bar = { getBoundingClientRect: () => ({ bottom: 66.2 }) };
-  vm.runInNewContext(app.slice(start), {
+  vm.runInNewContext(measurement[0], {
     document: { querySelector: () => bar, documentElement: { style: { setProperty(k, v) { properties[k] = v; } } } },
     ResizeObserver: class { constructor(fn) { fit = fn; } observe(target) { assert.equal(target, bar); } }
   });
