@@ -33,7 +33,7 @@ layout: compress
   {% assign width_class = page.width | default: site.width | default: 'normal' %}
   {% unless width_class == 'large' or width_class == 'xwide' %}{% assign width_class = 'normal' %}{% endunless %}
   <div class="wrapper-{{ width_class }} jk-page">
-    <main id="main-content" tabindex="-1" class="{% if page.layout == 'post' or page.category == 'blog' %}post{% else %}page {{ page.title | append: '' | slugify }}{% endif %}">
+    <main id="main-content" tabindex="-1" class="{% if page.layout == 'post' or page.category == 'blog' %}post{% else %}page {{ page.title | append: '' | slugify }}{% endif %}"{% if page.measure == 'long' and page.layout == 'post' %} data-measure="long"{% endif %}>
       {{ content }}
     </main>
     {% include footer.html %}

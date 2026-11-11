@@ -17,7 +17,7 @@
    Shared with other sites: token names, the type scale, the 4px spacing scale,
    theme.js (light 07:00–18:59, Auto/Chiaro/Scuro) and the layout principles.
    This site's own skin: warm paper, oxblood instead of Forma's gold, serif headlines,
-   a 66ch essay measure, and dated writing rows. Work titles stay in the system sans. */
+   a 33em essay measure, and dated writing rows. Work titles stay in the system sans. */
 
 nav.site-nav.jk-top {
   width: min(1120px, calc(100% - 2 * max(8px, env(safe-area-inset-left), env(safe-area-inset-right))));
@@ -164,9 +164,7 @@ h1,
   font-family: var(--jk-serif);
   font-weight: 450;
   font-optical-sizing: auto;
-  font-size: var(--jk-fs-title);
   letter-spacing: -0.01em;
-  line-height: 1.1;
   font-style: normal;
 }
 .project-feature h3,
@@ -176,8 +174,22 @@ h1,
   font-family: var(--jk-font);
   font-weight: 650;
 }
-h2 { font-size: clamp(22px, 2vw, 28px); font-weight: 650; letter-spacing: -0.02em; }
-h3 { font-size: 18px; font-weight: 650; }
+h1,
+.header-home .hero-title,
+.page > .page-title,
+.post > .title,
+.project-page .page-title,
+.wrapper-xwide .post > .title {
+  font-size: var(--jk-fs-h1);
+  line-height: var(--jk-lh-h1);
+}
+h2,
+.contact-section h2,
+.section-heading h2,
+.app-gallery h2 { font-size: var(--jk-fs-h2); line-height: var(--jk-lh-h2); }
+h2 { font-weight: 650; letter-spacing: -0.02em; }
+h3 { font-size: var(--jk-fs-h3); line-height: var(--jk-lh-h3); font-weight: 650; }
+h4 { font-size: var(--jk-fs-h4); line-height: var(--jk-lh-h4); }
 p, li { line-height: var(--jk-lh); }
 .page-intro, .section-intro, .hero-sub { color: var(--jk-t2); font-size: var(--jk-fs-lede); }
 .work-meta, .post > .date, figcaption, .jk-note { color: var(--jk-t2); font-size: var(--jk-fs-sm); }
@@ -253,7 +265,29 @@ html[data-theme="dark"] .highlight .cp { color: var(--jk-t2); }
 .instagram-media { max-width: 100% !important; }
 
 /* Editorial skin. Packaged gold stays in the shared files and is not this site's accent. */
-:root { --jk-serif: "Newsreader", "Iowan Old Style", Georgia, serif; }
+:root {
+  --jk-serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --jk-fs-body: 18px;
+  --jk-lh-body: 28px;
+  --jk-baseline: 14px;
+  --jk-measure: 33em; /* ≈66 characters */
+  --jk-fs-h4: 24px; --jk-lh-h4: 28px;
+  --jk-fs-h3: 32px; --jk-lh-h3: 42px;
+  --jk-fs-h2: 43px; --jk-lh-h2: 56px;
+  --jk-fs-h1: 57px; --jk-lh-h1: 70px;
+  --jk-fs-body-long: 20px;
+  --jk-lh-body-long: 28px;
+  --jk-measure-long: 23em; /* Full Newsreader 20px line: 55 characters; 23em ≈ 41.8ch. */
+}
+
+@media (max-width: 599px) {
+  :root {
+    --jk-fs-h4: 18px; --jk-lh-h4: 28px;
+    --jk-fs-h3: 24px; --jk-lh-h3: 28px;
+    --jk-fs-h2: 32px; --jk-lh-h2: 42px;
+    --jk-fs-h1: 43px; --jk-lh-h1: 56px;
+  }
+}
 html[data-theme="light"] {
   --jk-bg: #f3eee6;
   --jk-surface: #fffdf8;
@@ -289,7 +323,7 @@ html[data-theme="dark"] {
   text-transform: uppercase;
 }
 .hero-label span { color: var(--jk-accent-text); }
-.post { max-width: var(--jk-measure); }
+.post { font-size: var(--jk-fs-body); max-width: var(--jk-measure); }
 /* Reserve a cover footprint while the native image dimensions load. */
 .post > .title-image { aspect-ratio: auto 16 / 9; }
 .post > beeline-button { min-height: 54px; }
@@ -311,7 +345,35 @@ html[data-theme="dark"] {
   color: var(--jk-accent-text);
 }
 .post > .date p { margin: 0; color: var(--jk-t2); letter-spacing: 0; text-transform: none; font-size: 13px; }
-.post-body { font-family: var(--jk-serif); font-size: 19px; line-height: 1.6; font-weight: 400; }
+.post-body { font-family: var(--jk-serif); font-size: var(--jk-fs-body); line-height: var(--jk-lh-body); font-weight: 400; }
+/* Paragraph and list rules set their own leading in the legacy stylesheet. */
+.post-body p, .post-body li { line-height: inherit; }
+.post-body h2, .post-body h3, .post-body h4 {
+  font-family: var(--jk-serif);
+  font-optical-sizing: auto;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 600px) {
+  /* Size the container too: its em measure must use the long body size. */
+  .post[data-measure="long"],
+  .post[data-measure="long"] .post-body,
+  .post-body--long {
+    font-size: var(--jk-fs-body-long);
+    line-height: var(--jk-lh-body-long);
+  }
+  .post[data-measure="long"], .post-body--long {
+    max-width: var(--jk-measure-long);
+  }
+}
+@media (max-width: 479px) {
+  :root { --jk-page-x: 20px; }
+  .wrapper-normal.jk-page,
+  .wrapper-large.jk-page,
+  .wrapper-xwide.jk-page {
+    padding-left: max(var(--jk-page-x), env(safe-area-inset-left));
+    padding-right: max(var(--jk-page-x), env(safe-area-inset-right));
+  }
+}
 .writing-entry { padding: 12px 0; gap: 16px; }
 .writing-entry time {
   color: var(--jk-accent-text);
@@ -319,7 +381,8 @@ html[data-theme="dark"] {
   letter-spacing: .04em;
   text-transform: uppercase;
 }
-.writing-entry h3 { font-family: var(--jk-serif); font-weight: 500; }
+.writing-entry h3 { font-family: var(--jk-serif); font-weight: 500; font-optical-sizing: auto; letter-spacing: -0.01em; }
+.writing-entry h3, .reading-pick h3 { font-size: var(--jk-fs-h3); line-height: var(--jk-lh-h3); }
 
 /* Carta wordmark and monograms use the shared Newsreader family at optical size 72. */
 .app-links a[href="/projects/carta/"] .app-monogram,
