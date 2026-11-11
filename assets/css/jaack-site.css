@@ -282,7 +282,7 @@ h1,
 .app-entry h3,
 .app-gallery h3 {
   font-family: var(--jk-font);
-  font-weight: 650;
+  font-weight: 600;
 }
 h1,
 .header-home .hero-title,
@@ -297,24 +297,24 @@ h2,
 .contact-section h2,
 .section-heading h2,
 .app-gallery h2 { font-size: var(--jk-fs-h2); line-height: var(--jk-lh-h2); }
-h2 { font-weight: 650; letter-spacing: -0.02em; }
-h3 { font-size: var(--jk-fs-h3); line-height: var(--jk-lh-h3); font-weight: 650; }
+h2 { font-family: var(--jk-serif); font-weight: 450; font-optical-sizing: auto; letter-spacing: -0.01em; }
+h3 { font-family: var(--jk-font); font-size: var(--jk-fs-h3); line-height: var(--jk-lh-h3); font-weight: 600; }
 h4 { font-size: var(--jk-fs-h4); line-height: var(--jk-lh-h4); }
 p, li { line-height: var(--jk-lh); }
 .page-intro, .section-intro, .hero-sub { color: var(--jk-t2); font-size: var(--jk-fs-lede); }
 .work-meta, .post > .date, figcaption, .jk-note { color: var(--jk-t2); font-size: var(--jk-fs-sm); }
 
 .header-home { padding: 0 0 20px; }
-.header-home .hero-title { margin: 0 0 12px; }
+.header-home .hero-title { margin: 0 0 14px; }
 .header-home .hero-bottom { gap: 16px; }
 .home-section { margin: 0 0 var(--jk-chapter-gap-m); }
 @media (min-width: 768px) {
   .home-section { margin-bottom: var(--jk-chapter-gap); }
 }
 .page, .post, .home, .writing, .projects { margin-top: 0; }
-.page > .page-title { margin: 0 0 12px; text-align: left; }
+.page > .page-title { margin: 0 0 14px; text-align: left; }
 .contact-section { padding-top: 16px; }
-.contact-section h2 { margin: 0 0 8px; }
+.contact-section h2 { margin: 0 0 14px; }
 footer.footer-main { margin-top: auto; padding: 16px 0 calc(28px + env(safe-area-inset-bottom)); }
 
 .home > .list > .item > .url,
@@ -324,7 +324,7 @@ footer.footer-main { margin-top: auto; padding: 16px 0 calc(28px + env(safe-area
 .project-feature .feature-copy { padding: 12px 0 16px; }
 .feature-lead h3, .project-feature h3 { font-size: clamp(22px, 2vw, 28px); }
 .app-gallery { padding: 16px 0; gap: 20px; }
-.app-gallery h2 { margin: 8px 0; }
+.app-gallery h2 { margin: 0 0 14px; }
 
 a, a:link { color: var(--jk-ink); }
 a:hover, a:focus, a:active { color: var(--jk-accent-text); }
@@ -388,7 +388,7 @@ html .highlight.highlight :is(.m, .mb, .mf, .mh, .mi, .mo, .mx, .il, .no, .kc) {
   --jk-baseline: 14px;
   --jk-measure: 33em; /* ≈77 characters in Newsreader. */
   --jk-fs-h4: 24px; --jk-lh-h4: 28px;
-  --jk-fs-h3: 32px; --jk-lh-h3: 42px;
+  --jk-fs-h3: 24px; --jk-lh-h3: 28px;
   --jk-fs-h2: 43px; --jk-lh-h2: 56px;
   --jk-fs-h1: 57px; --jk-lh-h1: 70px;
   --jk-fs-body-long: 20px;
@@ -396,10 +396,10 @@ html .highlight.highlight :is(.m, .mb, .mf, .mh, .mi, .mo, .mx, .il, .no, .kc) {
   --jk-measure-long: 23em; /* Full Newsreader 20px line: 55 characters; 23em ≈ 41.8ch. */
 }
 
-@media (max-width: 599px) {
+@media (max-width: 1099px) {
   :root {
     --jk-fs-h4: 18px; --jk-lh-h4: 28px;
-    --jk-fs-h3: 24px; --jk-lh-h3: 28px;
+    --jk-fs-h3: 20px; --jk-lh-h3: 28px;
     --jk-fs-h2: 32px; --jk-lh-h2: 42px;
     --jk-fs-h1: 43px; --jk-lh-h1: 56px;
   }
@@ -477,7 +477,7 @@ html[data-theme="dark"] {
 .post-body p, .post-body li { line-height: inherit; }
 .post-body > :first-child { margin-top: 14px; }
 .post-body > :last-child { margin-bottom: 0; }
-.post-body h2, .post-body h3, .post-body h4 {
+.post-body h2, .post-body h4 {
   font-family: var(--jk-serif);
   font-optical-sizing: auto;
   letter-spacing: -0.01em;
@@ -777,3 +777,30 @@ html[data-theme="dark"] .pv-toggle:hover { background: var(--jk-surface-2); }
   }
   .pv-toggle:focus-visible { outline-color: Highlight; }
 }
+
+/* Heading levels own their metrics; page-specific sizes must not inherit a px leading. */
+main h1 { margin: 0 0 14px; }
+main h2 { font-family: var(--jk-serif); font-weight: 450; font-optical-sizing: auto; margin: 56px 0 14px; }
+main h3 { font-family: var(--jk-font); font-weight: 600; margin: 28px 0 14px; }
+p { margin: 0 0 14px; }
+.post-body p { margin: 0 0 28px; }
+.hero-label { letter-spacing: var(--jk-track-label); }
+.header-home .hero-title { margin-bottom: 14px; }
+.section-heading { gap: 14px; margin-bottom: 14px; }
+.section-heading h2, .contact-section h2, .app-gallery h2 { margin-top: 0; }
+.about-body h2, .project-page h2 { margin: 56px 0 14px; }
+.work-group > h2 { font-family: var(--jk-serif); font-weight: 450; font-size: var(--jk-fs-h2); line-height: var(--jk-lh-h2); margin: 0 0 14px; color: var(--jk-ink); }
+.work-entry h3, .project-feature h3, .feature-lead h3, .app-entry h3 {
+  font-size: var(--jk-fs-h3); line-height: var(--jk-lh-h3); margin: 28px 0 14px;
+}
+/* PR B's compact related block retains its size pending a design decision. */
+.post > .related > h2 { font-family: var(--jk-serif); font-weight: 450; }
+.note .note-title { font-family: var(--jk-serif); font-weight: 450; font-size: var(--jk-fs-h1); line-height: var(--jk-lh-h1); margin: 14px 0; }
+.note .note-body { font: inherit; margin-top: 28px; }
+.note-back { display: inline-flex; align-items: center; min-height: 44px; padding: 7px 0; box-sizing: border-box; }
+.note-tags .note-tag { border: 0; border-radius: 0; padding: 7px 0; }
+
+.project-page .page-title { margin: 28px 0 14px; }
+.reading-pick h3 { margin: 28px 0 14px; }
+#archive { margin-top: 56px; }
+.note-entry h3 { margin: 0 0 14px; }

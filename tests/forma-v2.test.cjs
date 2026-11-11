@@ -140,7 +140,7 @@ test('jaack.me editorial typography uses the approved body measure and heading s
   assert.ok(root, 'missing editorial tokens');
   for (const [name, value] of Object.entries({
     'fs-body': '18px', 'lh-body': '28px', baseline: '14px', measure: '33em',
-    'fs-h4': '24px', 'lh-h4': '28px', 'fs-h3': '32px', 'lh-h3': '42px',
+    'fs-h4': '24px', 'lh-h4': '28px', 'fs-h3': '24px', 'lh-h3': '28px',
     'fs-h2': '43px', 'lh-h2': '56px', 'fs-h1': '57px', 'lh-h1': '70px',
     'fs-body-long': '20px', 'lh-body-long': '28px', 'measure-long': '23em'
   })) assert.ok(root.includes(`--jk-${name}: ${value};`), name);
@@ -170,16 +170,16 @@ test('jaack.me editorial typography uses the approved body measure and heading s
   assert.match(phone, /padding-right: max\(var\(--jk-page-x\), env\(safe-area-inset-right\)\);/);
 });
 
-test('headings step down one 4:3 increment below 600px on the 14px grid', () => {
+test('headings use the compact scale below 1100px on the 14px grid', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
-  const mobile = css.match(/@media \(max-width: 599px\) \{([\s\S]*?)\n\}/)?.[1];
+  const mobile = css.match(/@media \(max-width: 1099px\) \{([\s\S]*?)\n\}/)?.[1];
   assert.ok(mobile, 'missing mobile heading breakpoint');
   const root = mobile.match(/^\s*:root\s*\{([^}]+)\}\s*$/)?.[1];
   assert.ok(root, 'mobile headings must override root tokens only');
   const tokens = Object.fromEntries([...root.matchAll(/--jk-([\w-]+):\s*([^;]+);/g)]
     .map(([, name, value]) => [name, value.trim()]));
   assert.deepEqual(tokens, {
-    'fs-h4': '18px', 'lh-h4': '28px', 'fs-h3': '24px', 'lh-h3': '28px',
+    'fs-h4': '18px', 'lh-h4': '28px', 'fs-h3': '20px', 'lh-h3': '28px',
     'fs-h2': '32px', 'lh-h2': '42px', 'fs-h1': '43px', 'lh-h1': '56px'
   });
 });

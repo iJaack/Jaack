@@ -156,3 +156,8 @@ html[data-theme="dark"] .team1-page { --team1: #ffb4bc; }
   .slide-summary-icon { display: none; }
   .slide-detail { padding-left: 0; }
 }
+
+/* Personal event deck: change heading metrics only. */
+.team1-title { font-family: var(--jk-serif); font-weight: 450; font-optical-sizing: auto; font-size: var(--jk-fs-h1); line-height: var(--jk-lh-h1); margin: 0 0 14px; }
+.team1-page h2 { font-family: var(--jk-serif); font-weight: 450; font-optical-sizing: auto; line-height: 28px; margin: 28px 0 14px; }
+.team1-page h3 { font-family: var(--jk-font); font-weight: 600; line-height: 28px; margin: 28px 0 14px; }
