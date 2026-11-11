@@ -379,7 +379,7 @@ test('site code uses top clearance everywhere and contains no old dark ramp or p
   assert.match(css, /--jk-bar-h: 57px;/);
   assert.match(css, /--jk-bar-h: 192px;/);
   assert.match(css, /--jk-bar-gap: calc\(max\(8px, env\(safe-area-inset-top, 0px\)\) - env\(safe-area-inset-top, 0px\)\);/);
-  assert.match(read('_sass/pages/notes.sass'), /scroll-margin-top: var\(--jk-top-clearance\)/);
+  assert.match(read('assets/css/site-structure.css'), /scroll-margin-top: var\(--jk-top-clearance\)/);
   assert.match(read('assets/css/team1.css'), /top: var\(--jk-top-clearance\)/);
 });
 

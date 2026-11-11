@@ -24,7 +24,7 @@ layout: compress
   <script src="{{ '/assets/js/language.js' | relative_url }}"></script>
   <link rel="stylesheet" href="{{ '/assets/jaack-design-system/jaack.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/jaack-design-system/fonts/newsreader/fonts.css' | relative_url }}">
-  {% include critical-css.liquid %}
+  <link rel="stylesheet" href="{{ '/assets/css/site-structure.css' | relative_url }}">
   {% include lang-css.html %}
   <link rel="stylesheet" href="{{ '/assets/css/jaack-site.css' | relative_url }}">
   {% for stylesheet in page.custom_stylesheets %}<link rel="stylesheet" href="{{ stylesheet }}">{% endfor %}

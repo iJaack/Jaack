@@ -902,4 +902,16 @@ class SiteTest < Minitest::Test
     end
   end
 
+  def test_default_pages_ship_scoped_structure_css_without_the_legacy_inline_sheet
+    layout = File.read(File.expand_path('../_layouts/default.html', __dir__))
+    refute_includes layout, 'critical-css.liquid'
+    refute_includes layout, 'scssify'
+    Dir.glob(File.join(ROOT, '**', '*.html')).each do |path|
+      page = Nokogiri::HTML(File.read(path))
+      next unless page.at_css('link[href="/assets/css/jaack-site.css"]')
+      assert_equal 1, page.css('link[href="/assets/css/site-structure.css"]').length, path
+      page.css('style').each { |style| refute_match(/normalize\.css v4|\.badge\.research/, style.text, path) }
+    end
+  end
+
 end

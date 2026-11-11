@@ -317,12 +317,8 @@ p, li { line-height: var(--jk-lh); }
 .contact-section h2 { margin: 0 0 14px; }
 footer.footer-main { margin-top: auto; padding: 16px 0 calc(28px + env(safe-area-inset-bottom)); }
 
-.home > .list > .item > .url,
-.writing > .list > .item > .url,
-.projects > .list > .item > .url { padding: 8px 0; }
 .work-entry { padding: 14px 0; }
 .project-feature .feature-copy { padding: 12px 0 16px; }
-.feature-lead h3, .project-feature h3 { font-size: clamp(22px, 2vw, 28px); }
 .app-gallery { padding: 16px 0; gap: 20px; }
 .app-gallery h2 { margin: 0 0 14px; }
 

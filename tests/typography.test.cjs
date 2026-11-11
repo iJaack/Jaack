@@ -122,3 +122,50 @@ for (const width of [390, 669, 1280]) {
     } finally { await page.close(); }
   });
 }
+
+for (const width of [390, 1280]) {
+  test(`migrated media, note measure and chrome at ${width}px`, async () => {
+    const page = await browser.newPage({ viewport: { width, height: 844 } });
+    await page.route('**/*', route => new URL(route.request().url()).origin === base ? route.continue() : route.abort());
+    try {
+      for (const route of ['/podcast/', '/projects/carta/', '/newsletter/', '/404.html', '/installare-nodo-ipfs-en/', '/thoughts-from-token-2049-singapore-24/']) {
+        await page.goto(base + route);
+        await page.evaluate(() => document.fonts.ready);
+        const metrics = await page.evaluate(() => {
+          const css = el => el && getComputedStyle(el);
+          const main = document.querySelector('main');
+          const note = main.querySelector('.note');
+          const stage = main.querySelector('.pv-stage');
+          const side = main.querySelector('.side-by-side');
+          const code = main.querySelector('pre');
+          const title = note?.querySelector('h1');
+          const paragraph = note?.querySelector('.note-body p');
+          return {
+            overflow: document.documentElement.scrollWidth > innerWidth,
+            clip: css(document.body).overflowX,
+            wordmark: parseFloat(css(document.querySelector('.site-wordmark')).fontSize),
+            side: side && { left: side.querySelector('.toleft').getBoundingClientRect().width, right: side.querySelector('.toright').getBoundingClientRect().width },
+            stage: stage && { width: stage.clientWidth, height: stage.clientHeight, ratio: css(stage).aspectRatio },
+            note: note && { title: parseFloat(css(title).fontSize), family: css(paragraph).fontFamily, size: css(paragraph).fontSize, leading: css(paragraph).lineHeight, width: main.getBoundingClientRect().width },
+            code: code && { bg: css(code).backgroundColor, ink: css(code).color },
+            ink: css(document.documentElement).getPropertyValue('--jk-ink').trim()
+          };
+        });
+        assert.equal(metrics.overflow, false, route);
+        assert.equal(metrics.clip, 'clip', route);
+        assert.ok(Math.abs(metrics.wordmark - 22.88) < .1, `${route}: PR A wordmark metrics`);
+        if (metrics.side) { assert.ok(metrics.side.left > 0); assert.ok(metrics.side.right > 0); }
+        if (metrics.stage) {
+          assert.ok(metrics.stage.width > 0 && metrics.stage.height > 0);
+          assert.equal(metrics.stage.ratio, width < 776 ? '358 / 770' : '720 / 820');
+        }
+        if (metrics.note) {
+          assert.ok(metrics.note.title > 18); assert.match(metrics.note.family, /Newsreader/);
+          assert.equal(metrics.note.size, '18px'); assert.equal(metrics.note.leading, '28px');
+          assert.ok(metrics.note.width <= 26 * 18 + .5);
+        }
+        if (metrics.code) assert.notEqual(metrics.code.bg, metrics.code.ink);
+      }
+    } finally { await page.close(); }
+  });
+}

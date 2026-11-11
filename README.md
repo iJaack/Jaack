@@ -6,10 +6,12 @@ Jekyll builds the site; GitHub Pages publishes the root of the master branch.
 ## Local development
 
 Use Ruby 3.3 and Bundler, plus Node.js 18 or later for the JavaScript checks.
-No npm dependencies are required.
+The computed typography and layout checks use Playwright with Chromium.
 
 ```sh
 bundle install
+npm ci
+npx playwright install chromium
 npm run check
 bundle exec jekyll serve --config _config.yml,_config-dev.yml --host 127.0.0.1
 ```
