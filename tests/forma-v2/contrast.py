@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Forma v2 — WCAG 2.x contrast check for every palette in palettes.json.
-Text pairs need >= 4.5 (light accentText >= 4.6), non-text marks >= 3.0.
+Text pairs need >= 4.5 (light accentText >= 4.6), non-text marks >= 3.0 (Moxie edges >= 3.03).
 Light accent on surface2 is informational: fills are not allowed there.
 Alpha colours (rgba) are composited over the pair's background first. Exit 1 on any failure."""
 import argparse, json, re, sys, pathlib
@@ -35,10 +35,13 @@ for name,themes in data.items():
         if theme == 'light':
             text_pairs = [(f,b) for f,b in TEXT if f != 'focus']
             mark_pairs = MARK + [('accent','surface')]
+        if name == 'moxie' and theme == 'dark':
+            text_pairs = TEXT + [('accent','surface2')]
         for kind,pairs,minv in (('testo',text_pairs,4.5),('segno',mark_pairs,3.0)):
             for f,b in pairs:
                 if f not in p or b not in p: continue
                 threshold = 4.6 if theme == 'light' and f == 'accentText' else minv
+                if name == 'moxie' and f == 'edge': threshold = 3.03
                 r=ratio(p[f],p[b]); ok=r>=threshold; fail+= (not ok)
                 out.append(f"| {name} | {theme} | {f} {p[f]} su {b} {p[b]} | {kind} | {r:.2f} | {'OK' if ok else 'FAIL'} |")
         if theme == 'light' and 'surface2' in p:

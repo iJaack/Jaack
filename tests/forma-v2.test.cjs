@@ -51,7 +51,7 @@ test('both themes match the local spec palettes, including the three dark backgr
     }
   }
   for (const [source, bg] of [[`${design}/tokens.css`, '#130e0b'],
-    ['assets/css/jaack-site.css', '#130e0b'], ['moxie/jaack-moxie.css', '#13120f']]) {
+    ['assets/css/jaack-site.css', '#130e0b'], ['moxie/jaack-moxie.css', '#130e0b']]) {
     assert.equal(theme(read(source), 'dark')['--jk-bg'], bg);
   }
 });
@@ -261,25 +261,19 @@ test('donation button uses accessible accent tokens and only fades on interactio
   assert.match(html, /src="https:\/\/cdn\.buymeacoffee\.com\/buttons\/bmc-new-btn-logo\.svg"/);
 });
 
-test('jaack.me vendors the exact v2 release with SOURCE; Moxie stays pinned to its separate legacy copy', () => {
-  const canonical = [...read(`${design}/MANIFEST.txt`).matchAll(/^([a-f0-9]{64})  ([\w./-]+)$/gm)];
-  assert.ok(canonical.length > 0, 'empty vendor manifest');
-  assert.equal(read(`${design}/VERSION`).trim(), '2.0.0');
-  assert.match(read(`${design}/SOURCE`), /^iJaack\/jaack-design v2\.0\.0 [a-f0-9]{40}\n$/);
-  assert.deepEqual(files(design).map(file => file.slice(design.length + 1)).sort(),
-    [...canonical.map(([, , file]) => file), 'MANIFEST.txt', 'SOURCE'].sort());
-  for (const [, hash, file] of canonical) {
-    assert.equal(createHash('sha256').update(fs.readFileSync(path.join(root, design, file))).digest('hex'), hash, file);
-  }
-  const legacy = 'moxie/jaack-design-system';
-  const copy = files(legacy).map(file => file.slice(legacy.length + 1)).sort();
-  const entries = copy.map(file => [file,
-    createHash('sha256').update(fs.readFileSync(path.join(root, legacy, file))).digest('hex')]);
-  // Pin the complete pre-migration tree, including files not listed in its old VERSION.
-  assert.equal(createHash('sha256').update(JSON.stringify(entries)).digest('hex'),
-    '8fa176ad60cabe83aa7bc15a5d95975c58215b4e9f3bc42f17118c2fcc1e8ca6');
-  for (const [, file, hash] of read(`${legacy}/VERSION`).matchAll(/^  ([\w./-]+): ([a-f0-9]{64})$/gm)) {
-    assert.equal(createHash('sha256').update(fs.readFileSync(path.join(root, legacy, file))).digest('hex'), hash, file);
+test('jaack.me and Moxie vendor the exact v2.0.0 release with MANIFEST and SOURCE', () => {
+  for (const vendor of [design, 'moxie/jaack-design-system']) {
+    const canonical = [...read(`${vendor}/MANIFEST.txt`).matchAll(/^([a-f0-9]{64})  ([\w./-]+)$/gm)];
+    assert.ok(canonical.length > 0, `${vendor}: empty manifest`);
+    assert.equal(read(`${vendor}/VERSION`).trim(), '2.0.0');
+    assert.match(read(`${vendor}/SOURCE`), /^iJaack\/jaack-design v2\.0\.0 [a-f0-9]{40}\n$/);
+    assert.deepEqual(files(vendor).map(file => file.slice(vendor.length + 1)).sort(),
+      [...canonical.map(([, , file]) => file), 'MANIFEST.txt', 'SOURCE'].sort());
+    for (const [, hash, file] of canonical) {
+      assert.equal(createHash('sha256').update(fs.readFileSync(path.join(root, vendor, file))).digest('hex'), hash, `${vendor}/${file}`);
+    }
+    assert.equal(read(`${vendor}/MANIFEST.txt`), read(`${design}/MANIFEST.txt`));
+    assert.equal(read(`${vendor}/SOURCE`), read(`${design}/SOURCE`));
   }
 });
 
@@ -342,4 +336,30 @@ test('enhanced mobile sheet uses tokens, 44px links and only a 160ms opacity fad
   assert.match(mobile, /:root \{ --jk-bar-h: 57px; \}/);
   assert.match(mobile, /:root:has\(nav\.site-nav:not\(\.has-menu\)\) \{ --jk-bar-h: 104px; \}/);
   assert.match(read('_layouts/default.html'), /src="\{\{ '\/assets\/js\/nav-menu\.js' \| relative_url \}\}" defer/);
+});
+
+test('Moxie keeps cool light tokens and uses every approved Ombra dark token', () => {
+  const css = read('moxie/jaack-moxie.css');
+  const light = theme(css, 'light');
+  const dark = theme(css, 'dark');
+  for (const [key, value] of Object.entries({
+    bg: '#130e0b', surface: '#1c1713', 'surface-2': '#26201c',
+    ink: '#e9e4da', 'ink-2': '#b6b0a8', t2: 'rgba(233,228,218,.72)', t3: 'rgba(233,228,218,.58)',
+    hair: 'rgba(233,228,218,.12)', 'hair-2': 'rgba(233,228,218,.20)', edge: 'rgba(233,228,218,.39)',
+    accent: '#6d8fad', 'accent-text': '#6d8fad', 'on-accent': '#130e0b',
+    'accent-wash': 'rgba(109,143,173,.12)', focus: 'var(--jk-accent-text)'
+  })) assert.equal(normalize(dark[`--jk-${key}`]), normalize(value), key);
+  for (const [key, value] of Object.entries({
+    hair: 'rgba(20,24,29,.14)', 'hair-2': 'rgba(20,24,29,.20)', edge: 'rgba(20,24,29,.48)',
+    'accent-wash': 'rgba(42,95,138,.12)', focus: 'var(--jk-accent-text)'
+  })) assert.equal(normalize(light[`--jk-${key}`]), normalize(value), key);
+  const oldRamp = /#(?:13120f|1b1916|24211d|efeae2|cbc4b9|8eb7e0|b7d4f5|101418|14110e|1b1714|231e1a|11100e|191714|13120e|1a1915|15110f|1d1815|15100e|1e1814|161210|1e1916|120f0c|1a1612|12100e|1a1714|f4eee5|cdc3b6)\b/i;
+  const pureBlack = /#000\b|#000000|:\s*black\b|rgba\(0,\s*0,\s*0/i;
+  for (const file of [...fs.readdirSync(path.join(root, 'moxie'))
+    .filter(file => /\.(css|js)$/.test(file)).map(file => `moxie/${file}`),
+    'moxie/build_hub.py', 'moxie/dist/style.css']) {
+    assert.doesNotMatch(read(file), oldRamp, file);
+    assert.doesNotMatch(read(file), pureBlack, file);
+    assert.doesNotMatch(read(file), /--jk-topbar-h/, file);
+  }
 });

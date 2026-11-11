@@ -61,18 +61,22 @@
       "t3": "rgba(20,24,29,0.64)",
       "accent": "#2a5f8a",
       "accentText": "#1a4570",
-      "onAccent": "#f7f9fb"
+      "onAccent": "#f7f9fb",
+      "surface2": "#e2e7ee",
+      "edge": "rgba(20,24,29,.48)"
     },
     "dark": {
-      "bg": "#13120f",
-      "surface": "#1b1916",
-      "ink": "#efeae2",
-      "ink2": "#cbc4b9",
-      "t2": "rgba(239,234,226,0.72)",
-      "t3": "rgba(239,234,226,0.58)",
-      "accent": "#8eb7e0",
-      "accentText": "#b7d4f5",
-      "onAccent": "#13120f"
+      "bg": "#130e0b",
+      "surface": "#1c1713",
+      "ink": "#e9e4da",
+      "ink2": "#b6b0a8",
+      "t2": "rgba(233,228,218,.72)",
+      "t3": "rgba(233,228,218,.58)",
+      "accent": "#6d8fad",
+      "accentText": "#6d8fad",
+      "onAccent": "#130e0b",
+      "surface2": "#26201c",
+      "edge": "rgba(233,228,218,.39)"
     }
   }
 }
