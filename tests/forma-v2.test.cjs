@@ -102,10 +102,11 @@ test('Newsreader opts in to the packaged roman and italic, fits its budget and p
   assert.equal(faces.length, 2);
   for (const [index, face] of faces.entries()) {
     assert.match(face, /font-family:\s*"Newsreader"/);
-    assert.match(face, /font-weight:\s*400 700/);
+    assert.match(face, index ? /font-weight:\s*400;/ : /font-weight:\s*400 700;/);
     assert.match(face, /font-display:\s*swap/);
     assert.ok(face.includes(`Newsreader-${index ? 'italic' : 'roman'}.woff2`));
     assert.match(face, index ? /font-style:\s*italic/ : /font-style:\s*normal/);
+    if (index) assert.match(face, /src:\s*url\("Newsreader-italic\.woff2"\) format\("woff2"\);/);
   }
   const fonts = files(`${design}/fonts/newsreader`);
   assert.doesNotMatch(css, /@font-face|Newsreader-(roman|italic)\.woff2/);
@@ -114,8 +115,8 @@ test('Newsreader opts in to the packaged roman and italic, fits its budget and p
   assert.ok(!fonts.some(file => file.endsWith('Newsreader-carta.woff2')));
   const total = fonts.filter(file => file.endsWith('.woff2'))
     .reduce((sum, file) => sum + fs.statSync(path.join(root, file)).size, 0);
-  // The package supplies both 400–700 faces; only roman is preloaded.
-  assert.ok(total <= 320000, `${total} bytes exceeds 320 KB`);
+  // Roman spans 400–700; static italic is 400. Combined: 149,400 bytes; only roman is preloaded.
+  assert.ok(total <= 150000, `${total} bytes exceeds 150 KB`);
   for (const file of files('_site').filter(file => file.endsWith('.html'))) {
     const head = read(file).match(/<head>([\s\S]*?)<\/head>/i)?.[1];
     if (!head || !head.includes('/assets/css/jaack-site.css')) continue;
@@ -183,18 +184,18 @@ test('headings step down one 4:3 increment below 600px on the 14px grid', () => 
   });
 });
 
-test('long articles opt into 20/28 at 23em only from 600px', () => {
+test('posts default to long 20/28 at 23em from 600px, with a normal opt-out', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
   const desktop = css.match(/@media \(min-width: 600px\) \{([\s\S]*?)\n\}/)?.[1];
   assert.ok(desktop, 'missing long article breakpoint');
-  assert.match(desktop, /\.post\[data-measure="long"\],\s*\.post\[data-measure="long"\] \.post-body,\s*\.post-body--long\s*\{\s*font-size: var\(--jk-fs-body-long\);\s*line-height: var\(--jk-lh-body-long\);/);
-  assert.match(desktop, /\.post\[data-measure="long"\],\s*\.post-body--long\s*\{\s*max-width: var\(--jk-measure-long\);/);
+  assert.match(desktop, /\.post:not\(\[data-measure="normal"\]\),\s*\.post:not\(\[data-measure="normal"\]\) \.post-body,\s*\.post-body--long\s*\{\s*font-size: var\(--jk-fs-body-long\);\s*line-height: var\(--jk-lh-body-long\);/);
+  assert.match(desktop, /\.post:not\(\[data-measure="normal"\]\),\s*\.post-body--long\s*\{\s*max-width: var\(--jk-measure-long\);/);
   assert.doesNotMatch(css.replace(desktop, ''), /(?:font-size|line-height|max-width): var\(--jk-(?:fs-body-long|lh-body-long|measure-long)\)/);
-  for (const slug of ['2024-review', '2024-review-en', '2024-review-it']) {
-    assert.match(read(`_posts/2025-01-22-${slug}.md`), /^measure: long$/m, slug);
-    assert.match(read(`_site/${slug}/index.html`), /<main\b[^>]*class="post"[^>]*data-measure="long"/, slug);
+  for (const slug of ['2024-review', '2024-review-en', '2024-review-it', 'zk-evms-en']) {
+    assert.match(read(`_site/${slug}/index.html`), /<main\b[^>]*class="post"/);
+    assert.doesNotMatch(read(`_site/${slug}/index.html`), /data-measure=/);
   }
-  assert.doesNotMatch(read('_site/index.html'), /data-measure="long"/);
+  assert.match(css, /\.jk-prose\s*\{[^}]*max-width: 26em;[^}]*font-size: var\(--jk-fs-body\);[^}]*line-height: var\(--jk-lh-body\);/);
   assert.equal(read('_site/assets/css/jaack-site.css'), read('assets/css/jaack-site.css'));
 });
 
@@ -248,19 +249,80 @@ test('Carta keeps its paper stage with a dark token border and no dark shadow', 
   assert.doesNotMatch(dark, /inset|0 24px 60px/);
 });
 
-test('donation button uses accessible accent tokens and only fades on interaction', () => {
+test('coffee is a quiet 44px t2 text link with no vendor assets or tracking', () => {
   const html = read('_includes/donation.html');
-  const button = html.match(/\.bmc-button\{([^}]+)\}/)?.[1];
-  assert.match(button, /background-color:\s*var\(--jk-accent\)/);
-  assert.match(button, /color:\s*var\(--jk-on-accent\)/);
-  assert.match(button, /font-family:\s*var\(--jk-font\)/);
-  assert.match(button, /transition:\s*opacity var\(--jk-d-2\) var\(--jk-ease-out\)/);
-  const interaction = html.match(/\.bmc-button:hover[^}]+\{([^}]+)\}/)?.[1];
-  assert.match(interaction, /opacity:\s*0\.85/);
-  assert.match(interaction, /color:\s*var\(--jk-on-accent\)/);
-  assert.doesNotMatch(interaction, /shadow|background|transform/);
-  assert.doesNotMatch(html, /#FF5F5F|#ffffff|Arial|cursive/i);
-  assert.match(html, /src="https:\/\/cdn\.buymeacoffee\.com\/buttons\/bmc-new-btn-logo\.svg"/);
+  const css = stripComments(read('assets/css/jaack-site.css'));
+  assert.match(css, /\.donation > \.coffee-link\s*\{[^}]*display: inline-flex;[^}]*align-items: center;[^}]*min-height: 44px;[^}]*color: var\(--jk-t2\);/);
+  assert.match(html, /If this was useful, buy me a coffee/);
+  assert.match(html, /Se ti è stato utile, offrimi un caffè/);
+  assert.match(html, /<span aria-hidden="true">↗<\/span>/);
+  assert.doesNotMatch(html, /!important|<style|<img|<script|button|cdn\.|logo/i);
+  assert.match(html, /target="_blank" rel="noopener noreferrer"/);
+  assert.match(css, /\.post > \.related, \.post > \.donation, \.post > \.author \{ margin: 56px 0 0; \}/);
+  assert.match(css, /\.post > \.author > \.toright > \.bio\s*\{[^}]*color: var\(--jk-t2\);[^}]*text-align: left;/);
+  assert.match(css, /\.post > \.author > \.toleft > \.selfie\s*\{[^}]*width: 44px; height: 44px;/);
+});
+
+// CSS regressions accompany rendered structure and language checks in site_test.rb.
+test('post headers remove the title accent and keep mobile covers within the reading budget', () => {
+  const css = stripComments(read('assets/css/jaack-site.css'));
+  const title = css.match(/\.post > \.title\s*\{[^}]*max-width: 100%;([^}]+)\}/)?.[1];
+  assert.match(title, /border: 0;\s*box-shadow: none;/);
+  assert.doesNotMatch(title, /accent/);
+  assert.match(css, /\.post > \.date\s*\{[^}]*font-size: var\(--jk-fs-xs\);[^}]*text-transform: none;[^}]*color: var\(--jk-t3\);/);
+  assert.match(css, /\.post > \.title \{ font-size: clamp\(32px, 9vw, 43px\); line-height: 42px; \}/);
+  assert.match(css, /\.post > \.title-image\s*\{[^}]*width: 100%;[^}]*aspect-ratio: 16 \/ 9;[^}]*border-radius: 14px;/);
+  assert.match(css.match(/@media \(max-width: 479px\) \{([\s\S]*?)\n\}/)?.[1], /\.post > \.title-image \{ max-height: 140px; \}/);
+  assert.match(css, /\.dated-rows > \.dated-row\s*\{[^}]*min-height: 44px;[^}]*border-top: 1px solid var\(--jk-hair\);/);
+  assert.match(css, /\.dated-row > time \{ color: var\(--jk-t3\);/);
+  assert.match(css, /\.dated-row > a\s*\{[^}]*font-family: var\(--jk-serif\);[^}]*font-size: 20px;[^}]*line-height: 28px;[^}]*color: var\(--jk-ink\);[^}]*text-decoration: none;/);
+  assert.match(css, /\.dated-row > a:hover, \.dated-row > a:focus-visible \{ text-decoration: underline;/);
+});
+
+test('diagrams break out at 760px while text and unmarked photos keep their left-aligned measure', () => {
+  const css = stripComments(read('assets/css/jaack-site.css'));
+  const wide = css.match(/@media \(min-width: 760px\) \{([\s\S]*?)\n\}/)?.[1];
+  assert.ok(wide);
+  assert.match(wide, /\.jk-page > \.post\s*\{[^}]*max-width: min\(100%, 720px\);/);
+  assert.match(wide, /--jk-post-measure: calc\(23 \* var\(--jk-fs-body-long\)\);/);
+  assert.match(wide, /\.post \.post-body \{ max-width: 100%; overflow: visible; \}/);
+  assert.match(wide, /:is\(\.title, \.date, beeline-button, \.related, \.donation, \.author, \.blog-navigation, \.title-image\),\s*\.jk-page > main.post \.post-body > \*\s*\{[^}]*max-width: var\(--jk-post-measure\);[^}]*margin-left: 0;[^}]*margin-right: auto;/);
+  assert.match(wide, /:has\(img\[src\$="\.svg"\], img\.figure--diagram, figure\.figure--diagram\),/);
+  assert.match(wide, /\.jk-page > main.post > \.title-image:is\(\[src\$="\.svg"\], \.figure--diagram\)\s*\{[^}]*width: 100%;[^}]*max-width: 100%;[^}]*margin-left: 0;[^}]*margin-right: auto;/);
+  assert.match(wide, /\.jk-page > main.post > \.title-image:is\(\[src\$="\.svg"\], \.figure--diagram\)\s*\{[^}]*max-height: none;[^}]*aspect-ratio: auto;/);
+  assert.match(css, /\.post :is\(img\[src\$="\.svg"\], img\.figure--diagram, figure\.figure--diagram img\)\s*\{[^}]*width: 100%;[^}]*max-width: 100%;[^}]*margin-left: 0;[^}]*margin-right: auto;/);
+});
+
+test('about overrides legacy layouts with a 160px portrait stacked above the full prose measure', () => {
+  const css = stripComments(read('assets/css/jaack-site.css'));
+  assert.match(css, /\.jk-prose \{[^}]*max-width: 26em;/);
+  assert.match(css, /\.jk-prose \.about-body \{ display: block; \}/);
+  assert.match(css, /\.jk-prose \.about-body > \.about-portrait\s*\{[^}]*display: block;[^}]*float: none;[^}]*width: 160px;[^}]*height: auto;[^}]*border-radius: 14px;[^}]*margin: 0 0 28px;/);
+  assert.match(css, /\.jk-prose \.about-body > :is\(\.lang-en, \.lang-it\) \{ max-width: none; \}/);
+});
+
+test('code overrides every Pygments token with one accessible palette in both themes', () => {
+  const css = stripComments(read('assets/css/jaack-site.css'));
+  assert.match(css, /pre, \.highlight\s*\{[^}]*font-size: 14px;\s*line-height: 22px;[^}]*border-radius: 14px;[^}]*overflow-x: auto;[^}]*background: var\(--jk-surface-2\);/);
+  assert.match(css, /pre, \.highlight pre \{ padding: 14px 18px; \}/);
+  assert.match(css, /code, tt \{ font-size: 0.85em; \}/);
+  assert.match(css, /html \.highlight\.highlight \[class\] \{ color: var\(--jk-ink\); background: transparent; \}/);
+  // The reset has three classes/attributes plus html, beating even .highlight .gd .x.
+  for (const [role, token] of [['.c,', 't3'], ['.k,', 'accent-text'], ['.s,', 'ink-2'], ['.m,', 'ink']]) {
+    const rule = css.split('\n').find(line => line.startsWith('html .highlight.highlight :is(' + role));
+    assert.ok(rule?.includes(`color: var(--jk-${token});`), role);
+    if (role === '.m,') assert.ok(rule.includes('font-style: italic;'));
+  }
+  for (const rule of css.split('\n').filter(line => line.includes('.highlight'))) {
+    assert.doesNotMatch(rule, /#[0-9a-f]{3,8}\b|\b(?:navy|red|blue)\b|data-theme/i);
+  }
+});
+
+test('all detected diagrams get the same dark frame without inversion', () => {
+  const css = stripComments(read('assets/css/jaack-site.css'));
+  assert.match(css, /html\[data-theme="dark"\] \.post :is\(img\[src\$="\.svg"\], img\.figure--diagram, figure\.figure--diagram img\)\s*\{[^}]*background: var\(--jk-surface-2\);[^}]*padding: 14px;[^}]*border-radius: 14px;[^}]*filter: brightness\(\.9\);/);
+  assert.doesNotMatch(css, /filter:\s*invert/);
+  assert.doesNotMatch(read('_layouts/post.html'), /<picture/);
 });
 
 test('jaack.me and Moxie vendor the exact v2.0.1 release with MANIFEST and SOURCE', () => {
@@ -268,7 +330,7 @@ test('jaack.me and Moxie vendor the exact v2.0.1 release with MANIFEST and SOURC
     const canonical = [...read(`${vendor}/MANIFEST.txt`).matchAll(/^([a-f0-9]{64})  ([\w./-]+)$/gm)];
     assert.ok(canonical.length > 0, `${vendor}: empty manifest`);
     assert.equal(read(`${vendor}/VERSION`).trim(), '2.0.1');
-    assert.equal(read(`${vendor}/SOURCE`), 'iJaack/jaack-design v2.0.1 03c4c0e2f594f416c643032af7e2aa5c9d8266fe\n');
+    assert.equal(read(`${vendor}/SOURCE`), 'iJaack/jaack-design v2.0.1 2cd1bdbe3dd38a185d0b00afd880fdec09cd9f95\n');
     assert.deepEqual(files(vendor).map(file => file.slice(vendor.length + 1)).sort(),
       [...canonical.map(([, , file]) => file), 'MANIFEST.txt', 'SOURCE'].sort());
     for (const [, hash, file] of canonical) {

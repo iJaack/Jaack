@@ -2,36 +2,36 @@
 layout: page
 ---
 
-{% assign alternate_post = nil %}
-{% if page.lang == 'en' %}
-{% assign search_slug_it = page.slug | remove: "-en" | append: "-it" %}
-{% assign search_slug = page.slug | remove: "-en" %}
-
-{% assign alternate_post = site.posts | where: "slug", search_slug_it | first %}
-{% unless alternate_post %}
-{% assign alternate_post = site.posts | where: "slug", search_slug | first %}
-{% endunless %}
-
-{% elsif page.lang == 'it' %}
-{% assign search_slug_en = page.slug | remove: "-it" | append: "-en" %}
-
-{% assign alternate_post = site.posts | where: "slug", search_slug_en | first %}
-{% endif %}
+{% include post-pair.html %}
 
 {% if alternate_post.url %}<span hidden data-alt-url="{{ alternate_post.url }}" data-alt-lang="{% if page.lang == 'en' %}it{% else %}en{% endif %}"></span>{% endif %}
 
-{% if page.image and page.headerImage %}
-<img class="title-image" src="{{ page.image }}" alt="{{ page.title }}">
-{% endif %}
-
 <h1 class="title">{{ page.title }}</h1>
 
-<span class="date">
-  <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%A. %B %d, %Y" }}</time>
-  <p>{% if site.read-time %} {% include read-time.html %}{% endif %}</p>
-</span>
-<beeline-button target=".post" exclude=".exclude, .nav, .date, .blog-navigation, .prev, .next, .reading-time"
-  size="regular"></beeline-button>
+{% assign post_lang = page.lang | default: 'en' %}
+<p class="date post-meta">
+  <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% include post-date.html date=page.date lang=post_lang %}</time>{% if site.read-time %} · {% include read-time.html %}{% endif %}
+</p>
+{% assign cover_exists = false %}
+{% if page.image and page.headerImage %}
+  {% assign cover_http = page.image | slice: 0, 7 %}
+  {% assign cover_https = page.image | slice: 0, 8 %}
+  {% if cover_http == 'http://' or cover_https == 'https://' %}
+    {% assign cover_exists = true %}
+  {% else %}
+    {% assign cover_path = page.image %}
+    {% assign cover_start = cover_path | slice: 0, 2 %}
+    {% if cover_start == './' %}{% assign cover_path = cover_path | remove_first: './' %}{% endif %}
+    {% assign cover_start = cover_path | slice: 0, 1 %}
+    {% unless cover_start == '/' %}{% assign cover_path = cover_path | prepend: '/' %}{% endunless %}
+    {% assign cover_file = site.static_files | where: 'path', cover_path | first %}
+    {% if cover_file %}{% assign cover_exists = true %}{% endif %}
+  {% endif %}
+{% endif %}
+{% if cover_exists %}
+{% assign cover_extension = page.image | slice: -4, 4 %}
+<img class="title-image{% if cover_extension == '.svg' %} figure--diagram{% endif %}" src="{{ page.image }}" alt="{{ page.title | escape }}">
+{% endif %}
 <div class="post-body">
   {{content}}
 </div>
@@ -48,11 +48,11 @@ layout: page
 </div>
 {% endif %}
 
-{% include donation.html %}
-
 {% if site.related %}
 {% include related.html %}
 {% endif %}
+
+{% include donation.html %}
 
 {% if site.show-author %}
 {% include author.html %}
