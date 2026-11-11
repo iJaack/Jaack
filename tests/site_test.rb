@@ -30,6 +30,14 @@ class SiteTest < Minitest::Test
     end
   end
 
+  def test_theme_labels_script_loads_immediately_after_language_script
+    page = doc('index.html')
+    assert_equal 1, page.css('script[src="/assets/js/theme-labels.js"]').length
+    language = page.at_css('script[src="/assets/js/language.js"]')
+    refute_nil language
+    assert_equal '/assets/js/theme-labels.js', language.next_element['src']
+  end
+
   def test_chrome_names_start_with_visible_text
     nav = doc('index.html').at_css('nav.site-nav')
     mark = nav.at_css('.jk-mark')
