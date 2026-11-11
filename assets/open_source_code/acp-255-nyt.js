@@ -16,25 +16,50 @@
   }
 
   var fadeEls = document.querySelectorAll('.acp255-nyt .fade-in');
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (fadeEls.length) {
-    var fadeObs = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          if (!(e.target instanceof HTMLElement)) return;
-          var parent = e.target.parentElement;
-          var siblings = parent ? parent.querySelectorAll('.fade-in') : [];
-          var idx = Array.prototype.indexOf.call(siblings, e.target);
-          e.target.style.transitionDelay = (idx * 0.08) + 's';
-          e.target.classList.add('is-visible');
-          fadeObs.unobserve(e.target);
+    function revealAll() {
+      fadeEls.forEach(function (el) {
+        el.style.transitionDelay = '0ms';
+        el.classList.remove('is-pending');
+        el.classList.add('is-visible');
+      });
+    }
+    if (reducedMotion.matches || typeof IntersectionObserver === 'undefined') {
+      revealAll();
+    } else {
+      var fadeObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            if (!(e.target instanceof HTMLElement)) return;
+            var parent = e.target.parentElement;
+            var siblings = parent ? parent.querySelectorAll('.fade-in') : [];
+            var idx = Math.max(0, Array.prototype.indexOf.call(siblings, e.target));
+            var style = window.getComputedStyle(e.target);
+            var step = parseFloat(style.getPropertyValue('--jk-d-1')) || 120;
+            var cap = parseFloat(style.getPropertyValue('--jk-d-3')) || 280;
+            e.target.style.transitionDelay = (reducedMotion.matches ? 0 : Math.min(idx * step, cap, 280)) + 'ms';
+            e.target.classList.remove('is-pending');
+            e.target.classList.add('is-visible');
+            fadeObs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      fadeEls.forEach(function (el) {
+        fadeObs.observe(el);
+        el.classList.add('is-pending');
+      });
+      reducedMotion.addEventListener('change', function () {
+        if (reducedMotion.matches) {
+          revealAll();
+          fadeObs.disconnect();
         }
       });
-    }, { threshold: 0.12 });
-    fadeEls.forEach(function (el) { fadeObs.observe(el); });
+    }
   }
 
   var formulaSections = document.querySelectorAll('.acp255-nyt .section-formula[data-formula]');
-  if (formulaSections.length) {
+  if (formulaSections.length && typeof IntersectionObserver !== 'undefined') {
     var syncObs = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting && window.acp255Explorer) {

@@ -4,10 +4,11 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const source = fs.readFileSync('moxie/nav-menu.js', 'utf8');
 
-function load({ width = 360, reduced = false } = {}) {
+function load({ width = 360, reduced = false, duration = '200ms' } = {}) {
   const classes = new Set();
   const listeners = {};
   const timers = new Map();
+  const delays = [];
   let document;
   function element(attrs = {}) {
     return {
@@ -34,13 +35,15 @@ function load({ width = 360, reduced = false } = {}) {
   const media = { matches: false, addEventListener(name, fn) { assert.equal(name, 'change'); this.change = fn; } };
   document = { activeElement: null, querySelector: selector => selector === 'header.hub-header' ? nav : null, addEventListener: (name, fn) => { listeners[name] = fn; } };
   vm.runInNewContext(source, {
-    document, window: { matchMedia(query) {
+    document, window: {
+      getComputedStyle(el) { assert.equal(el, sheet); return { getPropertyValue(name) { assert.equal(name, '--jk-d-2'); return duration; } }; },
+      matchMedia(query) {
       if (query.includes('reduced-motion')) return { matches: reduced };
       assert.equal(query, '(max-width: 482.98px)');
       media.matches = width <= Number(query.match(/max-width: ([\d.]+)px/)[1]);
       return media;
     } },
-    setTimeout(fn, delay) { assert.equal(delay, 160); timers.set(fn, fn); return fn; },
+    setTimeout(fn, delay) { delays.push(delay); timers.set(fn, fn); return fn; },
     clearTimeout(id) { timers.delete(id); }
   });
   function key(key, shiftKey = false) {
@@ -48,7 +51,7 @@ function load({ width = 360, reduced = false } = {}) {
     listeners.keydown(event);
     return event;
   }
-  return { document, classes, button, sheet, links, languages, media, key, listeners,
+  return { document, classes, button, sheet, links, languages, delays, media, key, listeners,
     toggle: () => button.listeners.click(), finishFade: () => { timers.forEach(fn => fn()); timers.clear(); } };
 }
 
@@ -166,7 +169,7 @@ test('mobile sheet is out of flow, above Contents, with full-height links and a 
   const mobile = css.match(/@media \(max-width: 482\.98px\) \{([\s\S]*?)\n\}/)[1];
   assert.match(mobile, /\.hub-tools\{\s*position:absolute;top:calc\(100% \+ 8px\);left:0;right:0;z-index:3;/);
   assert.match(mobile, /background:var\(--jk-surface-2\);border:1px solid var\(--jk-hair-2\);border-radius:14px/);
-  assert.match(mobile, /opacity:0;visibility:hidden;pointer-events:none;transition:opacity 160ms/);
+  assert.match(mobile, /opacity:0;visibility:hidden;pointer-events:none;transition:opacity var\(--jk-d-2\) var\(--jk-ease-out\)/);
   assert.match(mobile, /a\.jk-sw\{min-height:44px;padding:0 14px/);
   assert.match(mobile, /\.language a\{min-height:44px;min-width:44px;padding:0 14px/);
   assert.match(css, /@media \(max-width: 482\.98px\) and \(prefers-reduced-motion: reduce\) \{\s*header\.hub-header\.has-menu \.hub-tools\{transition:none\}/);
@@ -202,4 +205,21 @@ test('bar measurement reserves its bottom plus 14px and CSS uses clearance direc
   assert.match(css, /\.mobile-menu\{margin-top:var\(--jk-top-clearance\);top:var\(--jk-top-clearance\)/);
   assert.match(css, /\.plan-month\{[^}]*scroll-margin-top:var\(--jk-top-clearance\)/);
   assert.doesNotMatch(css, /--jk-topbar-h/);
+});
+
+
+test('closing follows the computed millisecond token with a 200ms fallback', () => {
+  for (const [duration, expected] of [[' 240ms ', 240], ['120ms', 120], ['280ms', 280], ['', 200], ['invalid', 200], ['0.2s', 200]]) {
+    const p = load({ duration }); p.toggle(); p.toggle();
+    assert.deepEqual(p.delays, [expected], duration);
+    p.finishFade();
+    assert.ok(!p.classes.has('is-menu-closing'));
+  }
+});
+test('zero token and reduced motion skip the closing timer altogether', () => {
+  for (const options of [{ duration: '0ms' }, { reduced: true, duration: '280ms' }]) {
+    const p = load(options); p.toggle(); p.toggle();
+    assert.deepEqual(p.delays, []);
+    assert.ok(!p.classes.has('is-menu-closing'));
+  }
 });

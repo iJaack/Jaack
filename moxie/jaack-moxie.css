@@ -37,7 +37,7 @@ header.hub-header .nav-menu-toggle{display:none}
    19px leaves 14.90px (>=14); right padding 10 + switch margin 9 mirrors it. */
 header.jk-top.hub-header [data-jk-theme-switch]{margin-right:9px}
 header.jk-top.hub-header .global-nav{display:flex;gap:2px;flex-wrap:wrap}
-header.jk-top.hub-header .global-nav a.jk-sw{display:inline-flex;min-height:44px;align-items:center;background:transparent;color:var(--jk-ink-2);font-size:13px;font-weight:600;padding:6px 10px;text-decoration:none}
+header.jk-top.hub-header .global-nav a.jk-sw{display:inline-flex;min-height:44px;align-items:center;background:transparent;color:var(--jk-ink-2);font-size:13px;font-weight:600;padding:6px 10px;text-decoration:none;transition:color var(--jk-d-1) var(--jk-ease-out), background-color var(--jk-d-1) var(--jk-ease-out)}
 header.jk-top.hub-header .global-nav a.selected,header.jk-top.hub-header .global-nav a:hover{color:var(--jk-ink);background:var(--jk-tint-hi)}
 header.jk-top.hub-header .language a{min-height:44px;min-width:44px;color:var(--jk-ink-2);text-decoration:none}
 header.jk-top.hub-header .language a[aria-current=page]{color:var(--jk-ink)}
@@ -110,7 +110,7 @@ header.jk-top.hub-header .language a[aria-current=page]{color:var(--jk-ink)}
     display:flex;flex-direction:column;align-items:stretch;gap:0;padding:6px;
     background:var(--jk-surface-2);border:1px solid var(--jk-hair-2);border-radius:14px;
     max-height:calc(100dvh - var(--jk-top-clearance));overflow-y:auto;
-    opacity:0;visibility:hidden;pointer-events:none;transition:opacity 160ms;
+    opacity:0;visibility:hidden;pointer-events:none;transition:opacity var(--jk-d-2) var(--jk-ease-out);
   }
   header.hub-header.has-menu.is-menu-open .hub-tools,
   header.hub-header.has-menu.is-menu-closing .hub-tools{visibility:visible}
@@ -164,3 +164,7 @@ header.jk-top.hub-header .language a[aria-current=page]{color:var(--jk-ink)}
 .plan-table .num{white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}
 .plan-table caption{text-align:left;font-size:14px;color:var(--jk-ink-2);padding-bottom:8px}
 .plan-details .deck-list>li>span:last-child{min-width:0;overflow-wrap:anywhere}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-delay: 0ms !important; animation-delay: 0ms !important; }
+}

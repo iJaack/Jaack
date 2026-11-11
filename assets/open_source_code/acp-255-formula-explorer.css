@@ -134,7 +134,7 @@
 /* Scroll-sync highlight states */
 .acp255-story[data-active-formula] .acp255-live-card {
   opacity: 0.35;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--jk-d-3, 280ms) var(--jk-ease-out, cubic-bezier(.2,0,0,1));
 }
 .acp255-story[data-active-formula="acp77"]   .live-acp77,
 .acp255-story[data-active-formula="gaussian"] .live-current,
@@ -145,7 +145,7 @@
 }
 .acp255-story[data-active-formula] .acp255-summary-grid article {
   opacity: 0.3;
-  transition: opacity 0.3s ease;
+  transition: opacity var(--jk-d-3, 280ms) var(--jk-ease-out, cubic-bezier(.2,0,0,1));
 }
 .acp255-story[data-active-formula="acp77"]   .acp255-summary-grid article:nth-child(1),
 .acp255-story[data-active-formula="gaussian"] .acp255-summary-grid article:nth-child(2),

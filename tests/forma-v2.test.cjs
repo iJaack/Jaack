@@ -198,17 +198,19 @@ test('long articles opt into 20/28 at 23em only from 600px', () => {
   assert.equal(read('_site/assets/css/jaack-site.css'), read('assets/css/jaack-site.css'));
 });
 
-test('navigation keeps the original row width with insets on the top-row items', () => {
+test('single-row navigation balances desktop insets and pushes the controls right', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
-  const desktop = css.split('@media')[0];
-  assert.match(desktop, /nav\.site-nav\.jk-top\s*\{[^}]*padding:\s*6px 8px 6px 14px;/);
-  assert.match(desktop, /nav\.site-nav \.jk-mark\s*\{[^}]*margin-left:\s*4px;/);
-  assert.match(desktop, /nav\.site-nav \[data-jk-theme-switch\]\s*\{[^}]*margin-right:\s*10px;/);
-  const tablet = css.match(/@media \(max-width: 880px\) \{([\s\S]*?)\n\}/)?.[1];
-  assert.ok(tablet, 'missing two-row navigation rules');
-  assert.match(tablet, /nav\.site-nav\.jk-top\s*\{[^}]*padding:\s*4px 6px 4px 10px;/);
-  assert.match(tablet, /nav\.site-nav \.jk-mark\s*\{[^}]*margin-left:\s*22px;/);
-  assert.match(tablet, /nav\.site-nav \[data-jk-theme-switch\]\s*\{[^}]*margin-right:\s*26px;/);
+  assert.match(css, /nav\.site-nav\.jk-top\s*\{[^}]*flex-wrap:\s*nowrap;[^}]*padding:\s*6px 18px;/);
+  assert.match(css, /nav\.site-nav \.jk-mark\s*\{[^}]*margin:\s*0 4px 0 0;[^}]*flex:\s*none;/);
+  assert.match(css, /nav\.site-nav \.lang-switch\s*\{[^}]*margin-left:\s*auto;/);
+  const icons = css.match(/@media \(max-width: 1179\.98px\) \{([\s\S]*?)\n\}/)?.[1];
+  assert.ok(icons, 'icons throughout 694–1179px');
+  assert.match(read('_includes/nav.html'), /<span class="nav-bar-label">Prenota<\/span><span class="nav-menu-label">Prenota una call<\/span>/);
+  assert.match(css, /nav\.site-nav\.is-compact \.nav-bar-label,[^}]*\{ display: none; \}/);
+  assert.match(css, /nav\.site-nav\.is-compact \.nav-menu-label,[^}]*\{ display: inline; \}/);
+  assert.match(icons, /\.jk-thsw \.i \{ display: inline;/);
+  assert.match(icons, /\.jk-thsw \.l\s*\{[^}]*position: absolute;[^}]*clip-path: inset\(50%\);/);
+  assert.match(icons, /\.jk-thsw button\s*\{[^}]*min-width: 44px; min-height: 44px; flex: 0 0 44px;/);
 });
 
 test('no-JS phone navigation wraps whole labels without clipping and keeps 44px targets', () => {
@@ -309,7 +311,11 @@ test('site code uses top clearance everywhere and contains no old dark ramp or p
   const css = read('assets/css/jaack-site.css');
   assert.match(css, /padding:\s*var\(--jk-top-clearance\)/);
   assert.match(css, /--jk-dock-h: 0px; --jk-dock-gap: 0px;/);
-  assert.match(css, /--jk-bar-h: 104px;/);
+  const taller = [...stripComments(css).matchAll(/([^{}]+)\{[^{}]*--jk-bar-h:\s*(104|192)px;[^{}]*\}/g)];
+  assert.equal(taller.length, 2);
+  for (const [, selector] of taller) assert.ok(selector.includes('nav.site-nav:not(.has-menu)'), selector);
+  assert.match(css, /--jk-bar-h: 61px;/);
+  assert.match(css, /--jk-bar-h: 57px;/);
   assert.match(css, /--jk-bar-h: 192px;/);
   assert.match(css, /--jk-bar-gap: calc\(max\(8px, env\(safe-area-inset-top, 0px\)\) - env\(safe-area-inset-top, 0px\)\);/);
   assert.match(read('_sass/pages/notes.sass'), /scroll-margin-top: var\(--jk-top-clearance\)/);
@@ -317,25 +323,36 @@ test('site code uses top clearance everywhere and contains no old dark ramp or p
 });
 
 
-test('enhanced mobile sheet uses tokens, 44px links and only a 160ms opacity fade', () => {
+test('measured compact sheet uses tokens, 44px links and a Forma opacity fade', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
-  const mobile = css.match(/@media \(max-width: 693\.98px\) \{([\s\S]*?)\n\}/)[1];
-  assert.match(mobile, /nav\.site-nav\.jk-top\.has-menu\s*\{[^}]*padding:\s*4px 20px;/);
-  assert.match(mobile, /nav\.site-nav\.has-menu \.jk-mark\s*\{[^}]*margin-left:\s*0;/);
-  assert.match(mobile, /nav\.site-nav\.has-menu \[data-jk-theme-switch\]\s*\{[^}]*margin-right:\s*0;/);
-  const sheet = mobile.match(/nav\.site-nav\.has-menu \.nav-row\s*\{([^}]+)\}/)[1];
+  const compact = 'nav\\.site-nav\\.has-menu\\.is-compact';
+  const sheet = css.match(new RegExp(compact + ' \\.nav-row\\s*\\{([^}]+)\\}'))[1];
   for (const rule of ['position: absolute;', 'top: calc(100% + 8px);', 'left: 0;', 'right: 0;',
     'background: var(--jk-surface-2);', 'border: 1px solid var(--jk-hair-2);',
-    'border-radius: 14px;', 'padding: 6px;', 'visibility: hidden;', 'transition: opacity 160ms;']) {
+    'border-radius: 14px;', 'padding: 6px;', 'visibility: hidden;', 'transition: opacity var(--jk-d-2) var(--jk-ease-out);']) {
     assert.ok(sheet.includes(rule), rule);
   }
-  const links = mobile.match(/nav\.site-nav\.jk-top\.has-menu \.nav-links a\.jk-sw\s*\{([^}]+)\}/)[1];
+  const links = css.match(/nav\.site-nav\.jk-top\.has-menu\.is-compact \.nav-links a\.jk-sw\s*\{([^}]+)\}/)[1];
   for (const rule of ['width: 100%;', 'min-height: 44px;', 'padding: 0 14px;']) assert.ok(links.includes(rule), rule);
-  assert.match(css, /@media \(max-width: 693\.98px\) and \(prefers-reduced-motion: reduce\) \{\s*nav\.site-nav\.has-menu \.nav-row \{ transition: none; \}/);
-  assert.match(mobile, /outline: 2px solid var\(--jk-focus\)/);
-  assert.match(mobile, /:root \{ --jk-bar-h: 57px; \}/);
-  assert.match(mobile, /:root:has\(nav\.site-nav:not\(\.has-menu\)\) \{ --jk-bar-h: 104px; \}/);
+  assert.match(css, /@media \(prefers-reduced-motion: reduce\) \{[\s\S]*?nav\.site-nav\.has-menu\.is-compact \.nav-row \{ transition: none; \}/);
+  assert.doesNotMatch(css, /@media \(max-width: 693\.98px\)/);
+  assert.match(css, /\.nav-menu-toggle:focus-visible\s*\{[^}]*outline: 2px solid var\(--jk-focus\)/);
   assert.match(read('_layouts/default.html'), /src="\{\{ '\/assets\/js\/nav-menu\.js' \| relative_url \}\}" defer/);
+});
+
+test('global frame starts content at clearance and anchors a plain-link footer to short viewports', () => {
+  const css = stripComments(read('assets/css/jaack-site.css'));
+  assert.match(css, /\.header-home \{ padding: 0 0 20px; \}/);
+  assert.match(css, /\.page, \.post, \.home, \.writing, \.projects \{ margin-top: 0; \}/);
+  assert.match(css, /\.jk-page > main > :nth-child\(1 of :not\(\[hidden\]\)\),[^}]*\{ margin-top: 0; \}/);
+  const wrappers = css.match(/\.wrapper-normal\.jk-page,\s*\.wrapper-large\.jk-page,\s*\.wrapper-xwide\.jk-page\s*\{([^}]+)\}/)[1];
+  for (const rule of ['box-sizing: border-box;', 'min-height: 100svh;', 'display: flex;', 'flex-direction: column;']) assert.ok(wrappers.includes(rule), rule);
+  assert.match(css, /\.jk-page > main, \.jk-page > footer \{ width: 100%; flex: none; \}/);
+  assert.match(css, /footer\.footer-main \{ margin-top: auto;/);
+  const links = css.match(/\.footer-main \.footer-links a\s*\{([^}]+)\}/)[1];
+  for (const rule of ['min-height: 44px;', 'color: var(--jk-t2);', 'border: 0;', 'text-decoration: none;']) assert.ok(links.includes(rule), rule);
+  assert.match(css, /\.footer-main \.footer-links a:hover,\s*\.footer-main \.footer-links a:focus-visible \{ text-decoration: underline;/);
+  assert.match(css, /\.footer-main \.footer-links a:focus-visible \{ outline: 2px solid var\(--jk-focus\);/);
 });
 
 test('Moxie keeps cool light tokens and uses every approved Ombra dark token', () => {
