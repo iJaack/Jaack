@@ -34,7 +34,11 @@ function load({ mobile = true, reduced = false } = {}) {
   const media = { matches: mobile, addEventListener(name, fn) { assert.equal(name, 'change'); this.change = fn; } };
   document = { activeElement: null, querySelector: () => nav, addEventListener: (name, fn) => { listeners[name] = fn; } };
   vm.runInNewContext(source, {
-    document, window: { matchMedia: query => query.includes('reduced-motion') ? { matches: reduced } : media },
+    document, window: { matchMedia(query) {
+      if (query.includes('reduced-motion')) return { matches: reduced };
+      assert.equal(query, '(max-width: 693.98px)');
+      return media;
+    } },
     setTimeout(fn, delay) { assert.equal(delay, 160); timers.set(fn, fn); return fn; },
     clearTimeout(id) { timers.delete(id); }
   });
@@ -46,6 +50,17 @@ function load({ mobile = true, reduced = false } = {}) {
   return { document, classes, button, sheet, links, languages, media, key, listeners,
     toggle: () => button.listeners.click(), finishFade: () => { timers.forEach(fn => fn()); timers.clear(); } };
 }
+
+test('Menu CSS and JavaScript share the bilingual 693.98px breakpoint', () => {
+  const css = fs.readFileSync('assets/css/jaack-site.css', 'utf8');
+  const jsBreakpoint = source.match(/matchMedia\('\(max-width: ([\d.]+)px\)'\)/)?.[1];
+  assert.equal(jsBreakpoint, '693.98');
+  const cssBreakpoints = [...css.matchAll(/@media \(max-width: ([\d.]+)px\)(?: and \(prefers-reduced-motion: reduce\))? \{([\s\S]*?)\n\}/g)]
+    .filter(([, , rules]) => rules.includes('nav.site-nav.has-menu'))
+    .map(([, breakpoint]) => breakpoint);
+  assert.equal(cssBreakpoints.length, 2, 'Menu layout and reduced-motion queries');
+  for (const breakpoint of cssBreakpoints) assert.equal(breakpoint, jsBreakpoint);
+});
 
 test('open exposes the sheet, updates expanded state and focuses the first link', () => {
   const p = load();

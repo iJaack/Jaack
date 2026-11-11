@@ -141,7 +141,7 @@ nav.site-nav [data-jk-theme-switch] { width: 180px; height: 48px; margin-right: 
 }
 
 
-@media (max-width: 599.98px) {
+@media (max-width: 693.98px) {
   :root { --jk-bar-h: 57px; }
   :root:has(nav.site-nav:not(.has-menu)) { --jk-bar-h: 104px; }
   nav.site-nav.jk-top.has-menu {
@@ -204,7 +204,7 @@ nav.site-nav [data-jk-theme-switch] { width: 180px; height: 48px; margin-right: 
   nav.site-nav.has-menu .lang-switch { margin: 0; }
 }
 
-@media (max-width: 599.98px) and (prefers-reduced-motion: reduce) {
+@media (max-width: 693.98px) and (prefers-reduced-motion: reduce) {
   nav.site-nav.has-menu .nav-row { transition: none; }
 }
 

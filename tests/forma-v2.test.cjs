@@ -325,7 +325,7 @@ test('site code uses top clearance everywhere and contains no old dark ramp or p
 
 test('enhanced mobile sheet uses tokens, 44px links and only a 160ms opacity fade', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
-  const mobile = css.match(/@media \(max-width: 599\.98px\) \{([\s\S]*?)\n\}/)[1];
+  const mobile = css.match(/@media \(max-width: 693\.98px\) \{([\s\S]*?)\n\}/)[1];
   assert.match(mobile, /nav\.site-nav\.jk-top\.has-menu\s*\{[^}]*padding:\s*4px 20px;/);
   assert.match(mobile, /nav\.site-nav\.has-menu \.jk-mark\s*\{[^}]*margin-left:\s*0;/);
   assert.match(mobile, /nav\.site-nav\.has-menu \[data-jk-theme-switch\]\s*\{[^}]*margin-right:\s*0;/);
@@ -337,8 +337,9 @@ test('enhanced mobile sheet uses tokens, 44px links and only a 160ms opacity fad
   }
   const links = mobile.match(/nav\.site-nav\.jk-top\.has-menu \.nav-links a\.jk-sw\s*\{([^}]+)\}/)[1];
   for (const rule of ['width: 100%;', 'min-height: 44px;', 'padding: 0 14px;']) assert.ok(links.includes(rule), rule);
-  assert.match(css, /@media \(max-width: 599\.98px\) and \(prefers-reduced-motion: reduce\) \{\s*nav\.site-nav\.has-menu \.nav-row \{ transition: none; \}/);
+  assert.match(css, /@media \(max-width: 693\.98px\) and \(prefers-reduced-motion: reduce\) \{\s*nav\.site-nav\.has-menu \.nav-row \{ transition: none; \}/);
   assert.match(mobile, /outline: 2px solid var\(--jk-focus\)/);
   assert.match(mobile, /:root \{ --jk-bar-h: 57px; \}/);
+  assert.match(mobile, /:root:has\(nav\.site-nav:not\(\.has-menu\)\) \{ --jk-bar-h: 104px; \}/);
   assert.match(read('_layouts/default.html'), /src="\{\{ '\/assets\/js\/nav-menu\.js' \| relative_url \}\}" defer/);
 });

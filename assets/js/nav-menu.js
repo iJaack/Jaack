@@ -5,7 +5,7 @@
   var button = nav.querySelector('.nav-menu-toggle');
   var sheet = nav.querySelector('.nav-row');
   if (!button || !sheet) return;
-  var mobile = window.matchMedia('(max-width: 599.98px)');
+  var mobile = window.matchMedia('(max-width: 693.98px)');
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   var open = false;
   var fade;

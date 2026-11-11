@@ -52,10 +52,14 @@ class SiteTest < Minitest::Test
     assert_match /nav\.site-nav\.jk-top\s*\{[^}]*padding:\s*6px 8px 6px 14px;/, css
     tablet = css.match(/@media \(max-width: 880px\) \{(.*?)\n\}/m)[1]
     assert_match /nav\.site-nav\.jk-top\s*\{[^}]*padding:\s*4px 6px 4px 10px;/, tablet
-    mobile = css.match(/@media \(max-width: 599\.98px\) \{(.*?)\n\}/m)[1]
+    assert_match /nav\.site-nav \.jk-mark\s*\{[^}]*margin-left:\s*22px;/, tablet
+    assert_match /nav\.site-nav \[data-jk-theme-switch\]\s*\{[^}]*margin-right:\s*26px;/, tablet
+    mobile = css.match(/@media \(max-width: 693\.98px\) \{(.*?)\n\}/m)[1]
     assert_match /nav\.site-nav\.jk-top\.has-menu\s*\{[^}]*padding:\s*4px 20px;/, mobile
     assert_match /nav\.site-nav\.has-menu \.jk-mark\s*\{[^}]*margin-left:\s*0;/, mobile
     assert_match /nav\.site-nav\.has-menu \[data-jk-theme-switch\]\s*\{[^}]*margin-right:\s*0;/, mobile
+    assert_match /:root \{ --jk-bar-h: 57px; \}/, mobile
+    assert_match /:root:has\(nav\.site-nav:not\(\.has-menu\)\) \{ --jk-bar-h: 104px; \}/, mobile
   end
 
   def test_internal_links_and_assets_on_updated_pages_resolve
