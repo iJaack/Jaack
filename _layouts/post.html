@@ -32,8 +32,6 @@ layout: page
 {% assign cover_extension = page.image | slice: -4, 4 %}
 <img class="title-image{% if cover_extension == '.svg' %} figure--diagram{% endif %}" src="{{ page.image }}" alt="{{ page.title | escape }}">
 {% endif %}
-<beeline-button target=".post" exclude=".exclude, .nav, .date, .blog-navigation, .prev, .next, .reading-time"
-  size="regular"></beeline-button>
 <div class="post-body">
   {{content}}
 </div>

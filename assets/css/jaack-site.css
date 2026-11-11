@@ -455,7 +455,6 @@ html[data-theme="dark"] {
   border-radius: 14px;
   margin: 0 0 14px;
 }
-.post > beeline-button { min-height: 54px; }
 .post > .title {
   max-width: 100%;
   margin: 0;

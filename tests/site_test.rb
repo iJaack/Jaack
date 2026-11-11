@@ -239,9 +239,8 @@ class SiteTest < Minitest::Test
     assert page.at_css('.wrapper-xwide')
     assert_equal 1, page.css('h1').length
     assert page.at_css('main.post')
-    assert page.at_css('script[src*="beeline-button"]')
-    assert page.at_css('script[src="/assets/beeline/beeline-button.min.js"] + script[src="/assets/js/beeline-skin.js"][defer]')
-    refute doc('index.html').at_css('script[src="/assets/js/beeline-skin.js"]')
+    assert_empty page.css('beeline-button, script[src*="beeline"]')
+    assert_empty doc('index.html').css('beeline-button, script[src*="beeline"]')
     assert_match /\A\d{4}-\d{2}-\d{2}\z/, page.at_css('time')['datetime']
   end
 
@@ -671,7 +670,8 @@ class SiteTest < Minitest::Test
       assert_equal date, meta.at_css('time').text.strip
       assert_equal 1, meta.css('.reading-time').length
       assert_match(/\A#{Regexp.escape(date)} · [1-9]\d* #{label}\z/, meta.text.gsub(/\s+/, ' ').strip)
-      assert_equal %w[h1 p beeline-button div], page.at_css('main').element_children.reject { |n| n.key?('hidden') }.first(4).map(&:name)
+      assert_equal %w[h1 p div], page.at_css('main').element_children.reject { |n| n.key?('hidden') }.first(3).map(&:name)
+      assert_empty page.css('beeline-button, script[src*="beeline"]')
     end
     # The same date formatter covers September with a single-digit day.
     %w[en it].each do |lang|
@@ -698,8 +698,8 @@ class SiteTest < Minitest::Test
       children = page.at_css('main.post').element_children.reject { |n| n.key?('hidden') }
       assert children[0].matches?('h1.title')
       assert children[1].matches?('p.post-meta')
-      assert page.at_css('main.post > .post-meta + img.title-image + beeline-button + .post-body')
-      assert_equal 1, page.css('beeline-button').length
+      assert page.at_css('main.post > .post-meta + img.title-image + .post-body')
+      assert_empty page.css('beeline-button, script[src*="beeline"]')
       related = page.at_css('main > .related')
       refute_nil related
       donation = page.at_css('main > .donation')
@@ -720,7 +720,7 @@ class SiteTest < Minitest::Test
   def test_missing_local_cover_is_omitted_and_present_cover_is_rendered
     missing = doc('installare-nodo-ipfs-en/index.html')
     assert_empty missing.css('main.post > .title-image')
-    assert missing.at_css('main.post > .post-meta + beeline-button + .post-body')
+    assert missing.at_css('main.post > .post-meta + .post-body')
     %w[en it].each do |lang|
       cover = doc("2024-review-#{lang}/index.html").at_css('main.post > img.title-image')
       refute_nil cover
