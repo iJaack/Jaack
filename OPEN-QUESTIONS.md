@@ -2,14 +2,14 @@
 
 Baseline: `d8bfb55` (PR A + B). The worktree has no `AUDIT.md`; the supplied PR C brief is the audit source.
 
-- **H2 scale and weight:** production uses sans 650 on many pages and serif 650 in posts. Apply the explicit audit: Newsreader 450, standard 32/42 below 1100px and 43/56 above, including About. Team1 keeps its existing smaller sizes with explicit 28px leading; only heading metrics change.
-- **Related heading size:** PR B shipped 24/28. Keep that compact size, changing to serif 450 as instructed. Should it later join the full H2 scale?
+- **H2 scale and weight:** production uses sans 650 on many pages and serif 650 in posts. Apply the explicit audit: Newsreader 450, standard 32/42 below 1100px and 43/56 above, including About. Designer r2 supersedes the smaller-size exception: Team1 H2/H3 are 24/28 (Newsreader 450 / sans 600), running text is 18/28, and the page H1 keeps the global scale.
+- **Related heading size:** PR B shipped 24/28. Designer r2 confirms keeping 24/28, Newsreader 450.
 - **Single note:** replace production's small title and sans body with the requested H1 scale and Newsreader 18/28, 26em text-page measure.
 - **Speaking content:** keep only the existing 2022–2024 talks. The audit's proposed “go to Team1 / book a call” line requires a content decision and is not added. 2025–2026 entries remain PR D.
-- **IPFS production URL choice:** preserve `/installare-nodo-ipfs-en/` for the VPS guide already live and tested by PR B. Assign `/installare-nodo-ipfs-desktop-en/` to the distinct Desktop EN article and pair it with `/installare-nodo-ipfs/`. This removes a build collision; confirm the new Desktop slug before any publication. No redirect can distinguish two articles formerly sharing one URL.
+- **IPFS production URL choice:** preserve `/installare-nodo-ipfs-en/` for the VPS guide already live and tested by PR B. Assign `/installare-nodo-ipfs-desktop-en/` to the distinct Desktop EN article and pair it with `/installare-nodo-ipfs/`. This removes a build collision; Designer r2 confirms keeping the Desktop slug. No redirect can distinguish two articles formerly sharing one URL.
 
 
-Legacy migration: the 48,255-byte inline sheet is removed from the default layout. A 15KB external `site-structure.css` retains measured layouts and media rules, using existing typography/color/radius tokens and 14px main-content margins. The 65% root reference remains for archived inline/rem content; removing that reference needs a separate content-level migration. No active `_sass` dependency remains. Dormant Sass source files are retained for history. Carta currently uses the existing video/paper-stage component, not a Sass carousel. Its styles and controls remain in `jaack-site.css` and the existing project-video script.
+Legacy migration: the 48,255-byte inline sheet is removed from the default layout. A 15KB external `site-structure.css` retains measured layouts and media rules, using existing typography/color/radius tokens and 14px main-content margins. Designer r2 confirms keeping `html { font-size: 65% }` for archived inline/rem content. No active `_sass` dependency remains. Dormant Sass source files are retained for history. Carta currently uses the existing video/paper-stage component, not a Sass carousel. Its styles and controls remain in `jaack-site.css` and the existing project-video script.
 
 Migration evidence (measurement code and raw reports are in the sibling `Jaack-builder-audit-c-inputs/pr-c-evidence/`, outside the repository):
 
@@ -31,4 +31,4 @@ The archived `.side-by-side` wrapper used 120% width and depended on hidden over
 
 IPFS pairing evidence: there is no Italian VPS counterpart in this repository. The old slug heuristic incorrectly paired it with the Desktop article. Only these three IPFS posts now use an explicit translation key; the existing PR B pairing behavior for other posts is unchanged. The VPS guide therefore has no hreflang alternate, while the Desktop EN/IT pair is reciprocal.
 
-Final source review found active ACP-255 custom CSS overriding the common H2/H3 rules. Those research headings now use the audit level tokens and Newsreader 450 for H2. The custom ACP post H1 remains its shipped sans/overlapping-title treatment because the brief forbids reopening PR B post-template decisions; bringing that H1 onto the standard scale remains an explicit open question. The representative standard-post H1 checks still pass.
+Final source review found active ACP-255 custom CSS overriding the common H2/H3 rules. Those research headings now use the audit level tokens and Newsreader 450 for H2. Designer r2 confirms keeping the custom ACP-255 decorative H1 with its shipped sans/overlapping-title treatment. The representative standard-post H1 checks still pass.

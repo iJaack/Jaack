@@ -62,6 +62,56 @@ for (const width of [390, 1280]) {
   });
 }
 
+for (const width of [390, 1280]) {
+  test(`Team1 headings are 24/28 and running text is 18/28 at ${width}px`, async () => {
+    const page = await browser.newPage({ viewport: { width, height: 844 } });
+    try {
+      for (const lang of ['en', 'it']) {
+        await page.goto(base);
+        await page.evaluate(lang => localStorage.setItem('site-lang', lang), lang);
+        await page.goto(base + '/team1/');
+        await page.evaluate(() => document.fonts.ready);
+        // Include copy hidden in collapsed slides as well as the initial page.
+        await page.locator('.slide-card').evaluateAll(nodes => nodes.forEach(node => node.open = true));
+        const metrics = await page.evaluate(() => {
+          const measure = selector => [...document.querySelectorAll(selector)]
+            .filter(el => el.getClientRects().length)
+            .map(el => {
+              const css = getComputedStyle(el);
+              return { tag: el.tagName, text: el.textContent.trim().slice(0, 60),
+                size: css.fontSize, leading: css.lineHeight, family: css.fontFamily,
+                weight: css.fontWeight, top: css.marginTop, bottom: css.marginBottom };
+            });
+          return {
+            title: measure('.team1-title')[0],
+            headings: measure('.team1-page h2, .team1-page h3'),
+            copy: measure('.team1-page p, .slide-copy, .slide-points li, .slide-cards li')
+          };
+        });
+        assert.equal(metrics.title.size, width < 1100 ? '43px' : '57px');
+        assert.equal(metrics.title.leading, width < 1100 ? '56px' : '70px');
+        assert.match(metrics.title.family, /Newsreader/);
+        assert.equal(metrics.title.weight, '450');
+        assert.ok(metrics.headings.some(h => h.tag === 'H2'));
+        assert.ok(metrics.headings.some(h => h.tag === 'H3'));
+        for (const h of metrics.headings) {
+          const label = `${lang} ${h.tag} ${h.text}`;
+          assert.equal(h.size, '24px', label);
+          assert.equal(h.leading, '28px', label);
+          assert.match(h.family, h.tag === 'H2' ? /Newsreader/ : /sans-serif/, label);
+          assert.equal(h.weight, h.tag === 'H2' ? '450' : '600', label);
+          for (const margin of [h.top, h.bottom]) assert.equal(parseFloat(margin) % 14, 0, label);
+        }
+        assert.ok(metrics.copy.length);
+        for (const copy of metrics.copy) {
+          assert.equal(copy.size, '18px', `${lang} ${copy.text}`);
+          assert.equal(copy.leading, '28px', `${lang} ${copy.text}`);
+        }
+      }
+    } finally { await page.close(); }
+  });
+}
+
 for (const width of [390, 669, 1280]) {
   test(`shared rows, action targets and jump links at ${width}px`, async () => {
     const page = await browser.newPage({ viewport: { width, height: 844 } });
@@ -89,6 +139,17 @@ for (const width of [390, 669, 1280]) {
                 column: getComputedStyle(row).gridTemplateColumns.split(' ')[0], font: parseFloat(getComputedStyle(row).fontSize) })),
               jumpRows: new Set(jumps.map(el => Math.round(el.getBoundingClientRect().top))).size,
               jumpWidths: jumps.map(el => [el.scrollWidth, el.clientWidth]),
+              jumpColumns: new Set(jumps.map(el => Math.round(el.getBoundingClientRect().left))).size,
+              jumpLeft: jumps[0]?.getBoundingClientRect().left,
+              workLeft: document.querySelector('.work')?.getBoundingClientRect().left,
+              jumpLabels: jumps.map(el => {
+                const label = [...el.querySelectorAll('span')].find(visible);
+                const range = document.createRange();
+                range.selectNodeContents(label);
+                return { text: label.textContent.trim(), height: el.getBoundingClientRect().height,
+                  lines: new Set([...range.getClientRects()].map(r => Math.round(r.top))).size,
+                  inset: label.getBoundingClientRect().left - el.getBoundingClientRect().left };
+              }),
               archiveLefts: archive.map(el => el.getBoundingClientRect().left),
               overflow: document.documentElement.scrollWidth > innerWidth,
               gap: document.querySelector('main').getBoundingClientRect().top - document.querySelector('nav.site-nav').getBoundingClientRect().bottom
@@ -106,8 +167,26 @@ for (const width of [390, 669, 1280]) {
               assert.ok(Math.abs(parseFloat(c.column) - 7 * c.font) < .5, `${route}: date column must be 7em`);
             } else assert.ok(c.titleTop >= c.dateTop + 27, `${route}: date must sit above title`);
           }
-          if (route === '/projects/') assert.equal(result.jumpWidths.length, 6, 'all six project jumps must be measured');
-          assert.ok(result.jumpRows <= 2, `${route} ${lang}: ${result.jumpRows} jump rows`);
+          if (route === '/projects/') {
+            assert.equal(result.jumpWidths.length, 6, 'all six project jumps must be measured');
+            if (width === 390) {
+              assert.equal(result.jumpRows, 3, `${lang}: three project jump rows`);
+              assert.equal(result.jumpColumns, 2, `${lang}: two project jump columns`);
+              assert.ok(Math.abs(result.jumpLeft - result.workLeft) <= .5, `${lang}: jump grid must start at the page left edge`);
+              const longLabels = lang === 'en'
+                ? ['Ecosystem and advisory', 'The system behind the work']
+                : ['Ecosistema e advisory', 'Il sistema dietro al lavoro'];
+              for (const text of longLabels) assert.ok(result.jumpLabels.some(label => label.text === text), text);
+              for (const label of result.jumpLabels) {
+                assert.equal(label.lines, 1, `${lang}: wrapped jump label ${label.text}`);
+                assert.ok(Math.abs(label.height - 44) <= .5, `${lang}: ${label.text} must be a single 44px row`);
+                assert.ok(Math.abs(label.inset) <= .5, `${lang}: ${label.text} must be left-aligned`);
+              }
+            } else {
+              assert.equal(result.jumpColumns, 3, `${lang}: preserve three project jump columns`);
+              assert.ok(result.jumpRows <= 2, `${lang}: ${result.jumpRows} project jump rows`);
+            }
+          }
           for (const [scroll, client] of result.jumpWidths) assert.ok(scroll <= client + 1, `${route}: clipped jump label`);
           if (result.archiveLefts.length) assert.ok(Math.max(...result.archiveLefts) - Math.min(...result.archiveLefts) <= .5, `${route}: archive indent`);
           assert.equal(result.overflow, false, `${route} ${lang}: horizontal overflow`);

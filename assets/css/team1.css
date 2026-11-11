@@ -16,12 +16,13 @@ html[data-theme="dark"] .team1-page { --team1: #ffb4bc; }
   font-weight: 700;
 }
 .team1-title {
-  margin: 8px 0 0;
-  font-family: var(--jk-font);
-  font-size: var(--jk-fs-title);
-  font-weight: 750;
+  margin: 0 0 14px;
+  font-family: var(--jk-serif);
+  font-size: var(--jk-fs-h1);
+  font-weight: 450;
+  font-optical-sizing: auto;
   letter-spacing: var(--jk-track-title);
-  line-height: 1.05;
+  line-height: var(--jk-lh-h1);
 }
 .team1-subtitle,
 .team1-section-copy,
@@ -30,9 +31,11 @@ html[data-theme="dark"] .team1-page { --team1: #ffb4bc; }
 .infographic-copy,
 .slide-copy,
 .slide-points li,
+.slide-cards li,
 .team1-bottom p {
   color: var(--jk-t2);
-  line-height: 1.55;
+  font-size: 18px;
+  line-height: 28px;
   max-width: 68ch;
 }
 .team1-meta {
@@ -47,7 +50,6 @@ html[data-theme="dark"] .team1-page { --team1: #ffb4bc; }
 .team1-stat strong, .day-rail .mini strong { display: block; font-size: 28px; letter-spacing: -0.03em; line-height: 1; }
 .team1-stat span, .day-rail .mini span { color: var(--jk-t2); font-size: var(--jk-fs-sm); }
 .team1-overview, .team1-day, .team1-bottom { margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--jk-hair); }
-.team1-section-title { margin: 0 0 8px; font-size: clamp(22px, 2vw, 28px); }
 .team1-journey, .builder-grid, .infra-grid { margin-top: 12px; display: grid; gap: 0 20px; }
 .team1-journey, .builder-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .infra-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -56,7 +58,6 @@ html[data-theme="dark"] .team1-page { --team1: #ffb4bc; }
   border-top: 1px solid var(--jk-hair);
   background: transparent;
 }
-.journey-card h3, .day-head h2 { margin: 6px 0; font-size: 18px; }
 .tag-row, .chip-row, .slide-jump { display: flex; flex-wrap: wrap; gap: 8px; }
 .tag, .filter-button, .slide-jump a, .expand-button {
   display: inline-flex;
@@ -124,7 +125,6 @@ html[data-theme="dark"] .team1-page { --team1: #ffb4bc; }
 }
 .slide-card summary::-webkit-details-marker { display: none; }
 .slide-number { color: var(--team1); font-weight: 700; font-variant-numeric: tabular-nums; }
-.slide-summary-title { margin: 0; font-size: 16px; }
 .slide-summary-icon { color: var(--jk-t3); }
 .slide-detail { padding: 0 0 12px 28px; }
 .slide-points, .slide-cards { margin: 8px 0 0; padding-left: 18px; }
@@ -157,7 +157,12 @@ html[data-theme="dark"] .team1-page { --team1: #ffb4bc; }
   .slide-detail { padding-left: 0; }
 }
 
-/* Personal event deck: change heading metrics only. */
-.team1-title { font-family: var(--jk-serif); font-weight: 450; font-optical-sizing: auto; font-size: var(--jk-fs-h1); line-height: var(--jk-lh-h1); margin: 0 0 14px; }
-.team1-page h2 { font-family: var(--jk-serif); font-weight: 450; font-optical-sizing: auto; line-height: 28px; margin: 28px 0 14px; }
-.team1-page h3 { font-family: var(--jk-font); font-weight: 600; line-height: 28px; margin: 28px 0 14px; }
+/* Personal event deck: section headings 24/28, running text 18/28. */
+.team1-page h2,
+.team1-page h3 {
+  font-size: 24px;
+  line-height: 28px;
+  margin: 28px 0 14px;
+}
+.team1-page h2 { font-family: var(--jk-serif); font-weight: 450; font-optical-sizing: auto; }
+.team1-page h3 { font-family: var(--jk-font); font-weight: 600; }
