@@ -146,10 +146,21 @@ class HubTests(unittest.TestCase):
    self.assertIn('class="deck-theme theme-g"',(D/lang/'guides/mono-green-landfall/index.html').read_text())
    self.assertNotIn('class="deck-theme',(D/lang/'index.html').read_text())
   css=(D/'style.css').read_text()+(D/'jaack.css').read_text()
-  self.assertIn('--jk-bg:#14110e',css)
-  self.assertIn('--jk-accent:#e8c547',css)
+  self.assertIn('--jk-bg:#130e0b',css)
+  self.assertIn('--jk-accent:#6d8fad',css)
   self.assertIn('.theme-rg{--accent:#ed887c;--deck-stripe:linear-gradient(90deg,#ed887c 0% 50%,#7fc49a 50% 100%)}',css)
   self.assertNotIn('#184936',css)
+ def test_header_menu_on_every_localized_page(self):
+  for route in self.routes:
+   page=(D/route.lstrip('/')/'index.html').read_text()
+   self.assertEqual(page.count('id="hub-menu"'),1,route)
+   self.assertIn('<div class="hub-tools" id="hub-menu">',page)
+   self.assertIn('<button class="nav-menu-toggle" type="button" aria-expanded="false" aria-controls="hub-menu">Menu</button>',page)
+   self.assertIn('<script src="/nav-menu.js" defer></script>',page)
+  self.assertEqual((D/'nav-menu.js').read_bytes(),(P/'nav-menu.js').read_bytes())
+  self.assertIn('fill="#130e0b"',(D/'favicon.svg').read_text())
+  self.assertIn('fill="#e9e4da"',(D/'favicon.svg').read_text())
+  self.assertIn('fill="#6d8fad"',(D/'favicon.svg').read_text())
  def test_legacy_pdf_and_downloads(self):
   for pdf in ['mono-green-landfall-galactus-11-settembre-2026.pdf','mono-green-landfall-galactus-11-september-2026-en.pdf']:
    self.assertEqual((D/pdf).read_bytes()[:5],b'%PDF-')

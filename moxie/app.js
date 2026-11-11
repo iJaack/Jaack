@@ -20,7 +20,7 @@ openHash();
 function paintThemeColor(){
   const meta=document.querySelector('meta[name="theme-color"]');
   if(!meta)return;
-  meta.content=document.documentElement.dataset.theme==='dark'?'#101418':'#eef1f4';
+  meta.content=document.documentElement.dataset.theme==='dark'?'#130e0b':'#eef1f4';
 }
 paintThemeColor();
 window.addEventListener('jaacktheme',paintThemeColor);
@@ -28,7 +28,44 @@ window.addEventListener('jaacktheme',paintThemeColor);
   const bar=document.querySelector('header.hub-header');
   if(!bar||typeof ResizeObserver!=='function')return;
   const root=document.documentElement;
-  const fit=()=>{const box=bar.getBoundingClientRect();const h=Math.ceil(box.top+box.height);root.style.setProperty('--jk-topbar-h',h+'px');root.style.setProperty('--header-height',h+'px');};
+  const fit=()=>{const box=bar.getBoundingClientRect();const h=Math.ceil(box.bottom);root.style.setProperty('--jk-top-clearance',(h+14)+'px');root.style.setProperty('--header-height',h+'px');};
   fit();
   new ResizeObserver(fit).observe(bar);
+})();
+
+// Keep the vendored switch behavior and bilingual accessible-name suffixes intact.
+(function(){
+  if(document.documentElement.lang!=='en')return;
+  const watched=new WeakSet();
+  function localize(){
+    document.querySelectorAll('[data-jk-theme-switch]').forEach(host=>{
+      if(watched.has(host))return;
+      watched.add(host);
+      let observer;
+      function relabel(){
+        const group=host.querySelector('.jk-thsw');
+        if(!group)return false;
+        const theme=window.JaackTheme;
+        const labels={
+          auto:['Auto',`Automatic: light from ${theme.FROM} to ${theme.TO}`],
+          light:['Light','Light theme'],
+          dark:['Dark','Dark theme']
+        };
+        group.setAttribute('aria-label','Theme');
+        group.querySelectorAll('button[data-m]').forEach(button=>{
+          const [label,title]=labels[button.dataset.m];
+          button.querySelector('.l').textContent=label;
+          button.title=title;
+        });
+        if(observer)observer.disconnect();
+        return true;
+      }
+      if(!relabel()){
+        observer=new MutationObserver(relabel);
+        observer.observe(host,{childList:true,subtree:true});
+      }
+    });
+  }
+  localize();
+  document.addEventListener('DOMContentLoaded',localize,{once:true});
 })();

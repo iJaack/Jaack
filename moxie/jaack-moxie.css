@@ -3,39 +3,49 @@
    This hub's skin: cool catalog paper, indigo instead of Forma's gold, sans headlines
    with tabular figures, a thicker deck stripe, and a denser card gallery.
    Deck colours stay on the stripe, not on text. */
+:root{--jk-bar-h:64px}
 html[data-theme="light"]{
   --jk-bg:#eef1f4;--jk-surface:#f7f9fb;--jk-surface-2:#e2e7ee;
   --jk-ink:#14181d;--jk-ink-2:#4c5968;
   --jk-t2:rgba(20,24,29,.72);--jk-t3:rgba(20,24,29,.64);--jk-hair:rgba(20,24,29,.14);
+  /* Moxie needs .48 on its cool #e2e7ee surface-2; the package uses warm #e7dfd2. */
+  --jk-hair-2:rgba(20,24,29,.20);--jk-edge:rgba(20,24,29,.48);--jk-focus:var(--jk-accent-text);
   --jk-accent:#2a5f8a;--jk-accent-text:#1a4570;--jk-on-accent:#f7f9fb;--jk-accent-wash:rgba(42,95,138,.12);
 }
 html[data-theme="dark"]{
-  --jk-bg:#13120f;--jk-surface:#1b1916;--jk-surface-2:#24211d;
-  --jk-ink:#efeae2;--jk-ink-2:#cbc4b9;
-  --jk-t2:rgba(239,234,226,.72);--jk-t3:rgba(239,234,226,.58);--jk-hair:rgba(239,234,226,.14);
-  --jk-accent:#8eb7e0;--jk-accent-text:#b7d4f5;--jk-on-accent:#13120f;--jk-accent-wash:rgba(142,183,224,.12);
+  --jk-bg:#130e0b;--jk-surface:#1c1713;--jk-surface-2:#26201c;
+  --jk-ink:#e9e4da;--jk-ink-2:#b6b0a8;
+  --jk-t2:rgba(233,228,218,.72);--jk-t3:rgba(233,228,218,.58);--jk-hair:rgba(233,228,218,.12);
+  --jk-hair-2:rgba(233,228,218,.20);--jk-edge:rgba(233,228,218,.39);--jk-focus:var(--jk-accent-text);
+  --jk-accent:#6d8fad;--jk-accent-text:#6d8fad;--jk-on-accent:#130e0b;--jk-accent-wash:rgba(109,143,173,.12);
 }
 body{background:transparent;color:var(--jk-ink);font-family:var(--jk-font)}
 h1,.version-title{font-family:var(--jk-font);font-size:var(--jk-fs-title);font-weight:720;letter-spacing:-.04em;line-height:1.05;max-width:22ch;font-variant-numeric:tabular-nums}
 h2{font-size:clamp(22px,2vw,28px);font-weight:650;letter-spacing:-.02em;margin:0 0 12px}
 .home-intro h1{max-width:16ch}
-.layout{gap:40px;padding-top:calc(var(--jk-topbar-h) + 12px);padding-bottom:40px}
+.layout{gap:40px;padding-top:var(--jk-top-clearance);padding-bottom:40px}
 @media(min-width:640px) and (max-width:849px){.layout.with-toc{grid-template-columns:minmax(148px,176px) minmax(0,1fr);gap:24px}}
 .chapter{padding:20px 0}
 .intro{padding:4px 0 20px}
-header.jk-top.hub-header{position:fixed;top:calc(10px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);z-index:40;width:min(1120px,calc(100% - 2 * max(8px,env(safe-area-inset-left),env(safe-area-inset-right))));--r:var(--jk-r-pill);border-radius:var(--jk-r-pill);background:var(--jk-tint);border:0;min-height:0;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 10px 8px 18px}
+header.jk-top.hub-header{position:fixed;top:calc(10px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);z-index:40;width:min(1120px,calc(100% - 2 * max(8px,env(safe-area-inset-left),env(safe-area-inset-right))));--r:var(--jk-r-pill);border-radius:var(--jk-r-pill);background:var(--jk-tint);border:0;min-height:0;display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:8px 10px 8px 19px}
 header.jk-top.hub-header .jk-mark{min-height:40px;display:inline-flex;align-items:center}
 .hub-tools{display:contents}
+header.hub-header .nav-menu-toggle{display:none}
+/* Curve inset = R-sqrt(R^2-(R-y)^2), R=bar height/2. Use the entire
+   19px * 1.65 = 31.35px logo line box as a conservative glyph bound.
+   Desktop H>=64: worst case R=32, y=(64-31.35)/2=16.325: inset=4.10px.
+   19px leaves 14.90px (>=14); right padding 10 + switch margin 9 mirrors it. */
+header.jk-top.hub-header [data-jk-theme-switch]{margin-right:9px}
 header.jk-top.hub-header .global-nav{display:flex;gap:2px;flex-wrap:wrap}
 header.jk-top.hub-header .global-nav a.jk-sw{display:inline-flex;min-height:44px;align-items:center;background:transparent;color:var(--jk-ink-2);font-size:13px;font-weight:600;padding:6px 10px;text-decoration:none}
 header.jk-top.hub-header .global-nav a.selected,header.jk-top.hub-header .global-nav a:hover{color:var(--jk-ink);background:var(--jk-tint-hi)}
 header.jk-top.hub-header .language a{min-height:44px;min-width:44px;color:var(--jk-ink-2);text-decoration:none}
 header.jk-top.hub-header .language a[aria-current=page]{color:var(--jk-ink)}
-@media(min-width:641px){.jk-thsw button{min-height:44px;min-width:44px}}
+.jk-thsw button{min-height:44px;min-width:44px}
 .status{font-size:12px;line-height:1.35}
 .card-toolbar[hidden]{display:flex!important;visibility:hidden}
 .collection-app[hidden]{display:block!important;visibility:hidden;min-height:232px;pointer-events:none}
-.mobile-menu{margin-top:calc(var(--jk-topbar-h) + 20px);top:calc(var(--jk-topbar-h) + 10px)}
+.mobile-menu{margin-top:var(--jk-top-clearance);top:var(--jk-top-clearance)}
 .note,.quantity,.verdict,select,.collection-filters input[type=search]{background:transparent;border-color:var(--jk-hair);border-radius:0}
 .note{border:0;border-left:2px solid var(--jk-accent);padding:4px 0 4px 12px;margin:12px 0}
 .backtop{background:var(--jk-bg);border-color:var(--jk-hair);color:var(--jk-ink)}
@@ -46,26 +56,76 @@ header.jk-top.hub-header .language a[aria-current=page]{color:var(--jk-ink)}
 .collection-table thead th{background:var(--jk-bg)}
 .card-dialog.jk-glass{color:var(--jk-ink)}
 .mobile-menu{background:var(--jk-bg)}
+/* Keep desktop controls on one flex line; the link group may wrap internally.
+   That keeps the logo centered if the desktop bar needs extra height. */
+@media(min-width:721px){
+  header.jk-top.hub-header.has-menu{flex-wrap:nowrap}
+}
+@media(min-width:721px) and (max-width:850px){
+  :root:has(header.hub-header:not(.has-menu)){--jk-bar-h:116px}
+}
 @media(max-width:720px){
-  :root{--jk-topbar-h:108px;--header-height:108px}
+  :root{--jk-bar-h:102px}
   header.jk-top.hub-header{gap:2px 6px;padding:4px 8px 4px 12px}
-  header.jk-top.hub-header .jk-mark{order:1;flex:1 1 auto;min-width:0;min-height:40px;display:inline-flex;align-items:center}
-  header.jk-top.hub-header [data-jk-theme-switch]{order:2;margin-left:auto;flex:0 1 auto}
+  /* Two rows: H=102, R=51; y=4+(48-31.35)/2=12.325 gives inset 17.75px.
+     32px leaves 14.25px; top row only: 12+20 left, 8+24 right.
+     The hub-tools second row retains its full width and original padding. */
+  header.jk-top.hub-header .jk-mark{margin-left:20px;order:1;flex:1 1 auto;min-width:0;min-height:40px;display:inline-flex;align-items:center}
+  header.jk-top.hub-header [data-jk-theme-switch]{order:2;margin-left:auto;margin-right:24px;flex:0 1 auto}
   header.jk-top.hub-header .hub-tools{display:flex;order:3;flex:1 0 100%;align-items:center;min-width:0;gap:6px}
   header.jk-top.hub-header .hub-tools .global-nav{order:0;flex:1 1 auto;min-width:0;width:auto;flex-wrap:nowrap;overflow-x:auto}
   header.jk-top.hub-header .hub-tools .language{order:1;flex:0 0 auto}
   header.jk-top.hub-header .language a{min-width:44px;min-height:44px}
-  .layout{padding-top:calc(var(--jk-topbar-h) + 12px)}
+  .layout{padding-top:var(--jk-top-clearance)}
 }
 @media(max-width:760px){
   .collection-totals .stat:nth-child(2n+1){border-left:0}
   .collection-totals .stat:nth-child(n+3){border-top:1px solid var(--jk-hair)}
 }
 @media(max-width:420px){
-  header.jk-top.hub-header{width:min(1120px,calc(100% - 2 * max(4px,env(safe-area-inset-left),env(safe-area-inset-right))));padding:4px 6px}
-  header.jk-top.hub-header .global-nav{gap:0}
-  header.jk-top.hub-header .global-nav a.jk-sw{padding:6px 5px}
-  header.jk-top.hub-header .language a{min-width:36px;padding:6px 4px}
+  header.jk-top.hub-header:not(.has-menu){width:min(1120px,calc(100% - 2 * max(4px,env(safe-area-inset-left),env(safe-area-inset-right))));padding:4px 6px}
+  header.jk-top.hub-header:not(.has-menu) .global-nav{gap:0}
+  header.jk-top.hub-header:not(.has-menu) .global-nav a.jk-sw{padding:6px 5px}
+  header.jk-top.hub-header:not(.has-menu) .language a{min-width:36px;padding:6px 4px}
+}
+/* EN two-row navigation fits from 483px (IT from 466px).
+   Keep the two Menu queries below and nav-menu.js in sync. */
+@media (max-width: 482.98px) {
+  :root:has(header.hub-header.has-menu){--jk-bar-h:56px}
+  header.jk-top.hub-header.has-menu{
+    /* H=56, R=28; y=4+(48-31.35)/2=12.325 -> inset 4.80px.
+       20px leaves 15.20px from the curve; mirrored on Menu's right. */
+    flex-wrap:nowrap;padding:4px 20px;
+  }
+  header.hub-header.has-menu .jk-mark{margin-left:0}
+  header.hub-header.has-menu [data-jk-theme-switch]{margin-right:0;flex:none}
+  header.hub-header.has-menu .nav-menu-toggle{
+    display:inline-flex;align-items:center;justify-content:center;order:3;flex:none;
+    min-width:44px;min-height:44px;padding:6px 10px;border:0;border-radius:var(--jk-r-pill);
+    background:transparent;color:var(--jk-ink-2);font:600 13px/1 var(--jk-font);cursor:pointer;
+  }
+  header.hub-header.has-menu .nav-menu-toggle:focus-visible{outline:2px solid var(--jk-focus);outline-offset:2px}
+  header.jk-top.hub-header.has-menu .hub-tools{
+    position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:3;
+    display:flex;flex-direction:column;align-items:stretch;gap:0;padding:6px;
+    background:var(--jk-surface-2);border:1px solid var(--jk-hair-2);border-radius:14px;
+    max-height:calc(100dvh - var(--jk-top-clearance));overflow-y:auto;
+    opacity:0;visibility:hidden;pointer-events:none;transition:opacity 160ms;
+  }
+  header.hub-header.has-menu.is-menu-open .hub-tools,
+  header.hub-header.has-menu.is-menu-closing .hub-tools{visibility:visible}
+  header.hub-header.has-menu.is-menu-open .hub-tools{opacity:1;pointer-events:auto}
+  header.jk-top.hub-header.has-menu .hub-tools .global-nav{flex:none;flex-direction:column;align-items:stretch;gap:0;overflow:visible}
+  header.jk-top.hub-header.has-menu .global-nav a.jk-sw{min-height:44px;padding:0 14px;justify-content:flex-start}
+  header.jk-top.hub-header.has-menu .hub-tools .language{flex-direction:row;flex-wrap:nowrap;align-items:center;gap:0}
+  header.jk-top.hub-header.has-menu .language a{min-height:44px;min-width:44px;padding:0 14px;justify-content:flex-start}
+}
+@media (max-width: 482.98px) and (prefers-reduced-motion: reduce) {
+  header.hub-header.has-menu .hub-tools{transition:none}
+}
+@media(max-width:639px){
+  /* Contents carries header clearance; 24px + the intro's 4px = 28px to its stripe. */
+  .mobile-menu + .layout{padding-top:24px}
 }
 .deck-theme .intro::before{height:5px;margin:0 0 14px}
 .archive-row,.journal-row,.version-row{padding:14px 0}
@@ -88,7 +148,7 @@ header.jk-top.hub-header .language a[aria-current=page]{color:var(--jk-ink)}
 .plan-steps a{display:flex;gap:8px;align-items:center;min-height:56px;padding:8px;border-bottom:1px solid var(--jk-hair);text-decoration:none;font-size:14px;line-height:1.3}
 .plan-steps a span:first-child{font-variant-numeric:tabular-nums;font-weight:700}
 .plan-steps a[aria-current=step]{outline:2px solid var(--jk-accent);outline-offset:-2px;background:var(--jk-accent-wash)}
-.plan-month{border-top:1px solid var(--jk-hair);padding:24px 0;scroll-margin-top:calc(var(--jk-topbar-h) + 24px)}
+.plan-month{border-top:1px solid var(--jk-hair);padding:24px 0;scroll-margin-top:var(--jk-top-clearance)}
 .plan-month h3.plan-month-title{font-size:24px;line-height:1.2;font-weight:650;letter-spacing:-.02em;text-transform:none;margin:0 0 12px}
 .plan-details summary,.plan-source summary{display:flex;justify-content:space-between;gap:12px;cursor:pointer;min-height:44px;padding:12px 0;color:var(--jk-accent-text);font-weight:600}
 .plan-details summary::after,.plan-source summary::after{content:'+';flex:none}
