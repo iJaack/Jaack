@@ -1,6 +1,8 @@
 ---
 title: "How to install an IPFS node on a VPS server"
 layout: post
+permalink: /installare-nodo-ipfs-en/
+translation_key: ipfs-vps
 date: 2020-01-31 12:00
 image: /assets/images/ipfs-node-install.jpg
 headerImage: true

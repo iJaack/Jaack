@@ -914,4 +914,39 @@ class SiteTest < Minitest::Test
     end
   end
 
+  def test_every_post_has_a_unique_permalink_and_both_ipfs_guides_are_built
+    site = Jekyll::Site.new(Jekyll.configuration('source' => File.expand_path('..', __dir__),
+      'destination' => ROOT, 'quiet' => true))
+    site.read
+    duplicates = site.posts.docs.group_by(&:url).select { |_url, posts| posts.length > 1 }
+      .transform_values { |posts| posts.map(&:relative_path) }
+    assert_empty duplicates
+    desktop = doc('installare-nodo-ipfs-desktop-en/index.html')
+    vps = doc('installare-nodo-ipfs-en/index.html')
+    assert_equal 'How to install an IPFS node', desktop.at_css('h1').text.strip
+    assert_equal 'How to install an IPFS node on a VPS server', vps.at_css('h1').text.strip
+    assert_includes desktop.at_css('.post-body').text, 'IPFS Desktop'
+    assert_includes vps.at_css('.post-body').text, 'Ubuntu 18.04'
+    assert_empty vps.css('main.post > .title-image')
+    sitemap = Nokogiri::XML(File.read(File.join(ROOT, 'sitemap.xml'))).remove_namespaces!
+    locations = sitemap.xpath('//url/loc').map { |loc| URI(loc.text).path }
+    assert_equal locations.uniq, locations
+    %w[/installare-nodo-ipfs-desktop-en/ /installare-nodo-ipfs-en/ /installare-nodo-ipfs/].each do |url|
+      assert_equal 1, locations.count(url), url
+    end
+  end
+
+  def test_ipfs_desktop_hreflang_is_reciprocal_and_does_not_pair_with_vps
+    expected = { 'en' => 'https://jaack.me/installare-nodo-ipfs-desktop-en/',
+      'it' => 'https://jaack.me/installare-nodo-ipfs/',
+      'x-default' => 'https://jaack.me/installare-nodo-ipfs-desktop-en/' }
+    %w[installare-nodo-ipfs-desktop-en/index.html installare-nodo-ipfs/index.html].each do |route|
+      page = doc(route)
+      assert_equal expected, page.css('head link[hreflang]').to_h { |link| [link['hreflang'], link['href']] }, route
+      alternate = page.at_css('[data-alt-url]')['data-alt-url']
+      assert_equal route.start_with?('installare-nodo-ipfs-desktop-en') ? '/installare-nodo-ipfs/' : '/installare-nodo-ipfs-desktop-en/', alternate
+    end
+    assert_empty doc('installare-nodo-ipfs-en/index.html').css('link[hreflang], [data-alt-url]')
+  end
+
 end
