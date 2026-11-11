@@ -25,11 +25,12 @@
   margin-bottom: 2.2rem;
 }
 .acp255-story h2 {
-  margin: 0 0 0.8rem;
-  font-family: var(--jk-font);
-  font-size: clamp(3rem, 5vw, 5.4rem);
-  font-weight: 400;
-  line-height: 0.95;
+  margin: 0 0 14px;
+  font-family: var(--jk-serif);
+  font-optical-sizing: auto;
+  font-size: var(--jk-fs-h2);
+  font-weight: 450;
+  line-height: var(--jk-lh-h2);
 }
 .acp255-story-intro p, .acp255-chart-copy p {
   max-width: 880px;
@@ -101,9 +102,11 @@
   gap: 1rem;
 }
 .acp255-story h3 {
-  margin: 0.2rem 0 0.7rem;
-  font-size: clamp(2rem, 2.2vw, 2.7rem);
-  line-height: 1.08;
+  margin: 28px 0 14px;
+  font-family: var(--jk-font);
+  font-weight: 600;
+  font-size: var(--jk-fs-h3);
+  line-height: var(--jk-lh-h3);
 }
 .chart2d {
   display: block;

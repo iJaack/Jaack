@@ -48,13 +48,13 @@
   letter-spacing: 0.2px;
 }
 .acp255-nyt h2 {
-  font-family: var(--jk-font);
-  font-size: clamp(2.2rem, 3vw, 2.8rem);
-  font-weight: 700;
-  line-height: 1.15;
+  font-family: var(--jk-serif);
+  font-optical-sizing: auto;
+  font-size: var(--jk-fs-h2);
+  font-weight: 450;
+  line-height: var(--jk-lh-h2);
   color: var(--jk-ink);
-  margin-top: 0.5rem;
-  margin-bottom: 1.2rem;
+  margin: 56px 0 14px;
 }
 .acp255-nyt strong { color: var(--jk-ink); }
 .acp255-nyt em { color: var(--jk-ink-2); }
@@ -407,11 +407,12 @@
 /* --- Explorer intro (v2) ------------------------------------- */
 .acp255-nyt .explorer-intro {
   max-width: 100%;
-  margin: 3rem 0 0.5rem;
-  font-family: var(--jk-font);
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 700;
-  line-height: 1.25;
+  margin: 56px 0 14px;
+  font-family: var(--jk-serif);
+  font-optical-sizing: auto;
+  font-size: var(--jk-fs-h2);
+  font-weight: 450;
+  line-height: var(--jk-lh-h2);
   color: var(--jk-ink);
 }
 .acp255-nyt .explorer-howto {

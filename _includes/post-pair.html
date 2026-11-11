@@ -1,4 +1,7 @@
 {% assign alternate_post = nil %}
+{% if page.translation_key %}
+{% assign alternate_post = site.posts | where: 'translation_key', page.translation_key | where_exp: 'candidate', 'candidate.lang != page.lang' | first %}
+{% else %}
 {% if page.lang == 'en' %}
 {% assign search_slug_it = page.slug | remove: "-en" | append: "-it" %}
 {% assign search_slug = page.slug | remove: "-en" %}
@@ -12,6 +15,8 @@
 {% assign search_slug_en = page.slug | remove: "-it" | append: "-en" %}
 
 {% assign alternate_post = site.posts | where: "slug", search_slug_en | first %}
+{% endif %}
+
 {% endif %}
 
 {% if alternate_post.lang == page.lang or alternate_post.lang == nil %}{% assign alternate_post = nil %}{% endif %}

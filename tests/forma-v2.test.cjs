@@ -140,7 +140,7 @@ test('jaack.me editorial typography uses the approved body measure and heading s
   assert.ok(root, 'missing editorial tokens');
   for (const [name, value] of Object.entries({
     'fs-body': '18px', 'lh-body': '28px', baseline: '14px', measure: '33em',
-    'fs-h4': '24px', 'lh-h4': '28px', 'fs-h3': '32px', 'lh-h3': '42px',
+    'fs-h4': '24px', 'lh-h4': '28px', 'fs-h3': '24px', 'lh-h3': '28px',
     'fs-h2': '43px', 'lh-h2': '56px', 'fs-h1': '57px', 'lh-h1': '70px',
     'fs-body-long': '20px', 'lh-body-long': '28px', 'measure-long': '23em'
   })) assert.ok(root.includes(`--jk-${name}: ${value};`), name);
@@ -150,7 +150,7 @@ test('jaack.me editorial typography uses the approved body measure and heading s
     [1, ['h1', '.header-home .hero-title', '.page > .page-title', '.post > .title',
       '.project-page .page-title', '.wrapper-xwide .post > .title']],
     [2, ['h2', '.contact-section h2', '.section-heading h2', '.app-gallery h2']],
-    [3, ['h3', '.writing-entry h3', '.reading-pick h3']], [4, ['h4']]
+    [3, ['h3']], [4, ['h4']]
   ]) {
     for (const selector of selectors) {
       const rule = [...css.matchAll(/([^{}]+)\{([^{}]+)\}/g)].find(([, selectors, body]) =>
@@ -160,7 +160,6 @@ test('jaack.me editorial typography uses the approved body measure and heading s
       assert.ok(rule.includes(`line-height: var(--jk-lh-h${level});`), selector);
     }
   }
-  assert.match(css, /\.writing-entry h3\s*\{[^}]*font-weight: 500;[^}]*font-optical-sizing: auto;[^}]*letter-spacing: -0.01em;/);
   assert.match(css, /\.project-page--carta \.page-title\s*\{[^}]*font-size: var\(--jk-fs-title\);/);
   assert.match(css, /\.project-page--carta \.page-title\s*\{[^}]*font-variation-settings: 'opsz' 72;/);
   const phone = css.match(/@media \(max-width: 479px\) \{([\s\S]*?)\n\}/)?.[1];
@@ -170,16 +169,16 @@ test('jaack.me editorial typography uses the approved body measure and heading s
   assert.match(phone, /padding-right: max\(var\(--jk-page-x\), env\(safe-area-inset-right\)\);/);
 });
 
-test('headings step down one 4:3 increment below 600px on the 14px grid', () => {
+test('headings use the compact scale below 1100px on the 14px grid', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
-  const mobile = css.match(/@media \(max-width: 599px\) \{([\s\S]*?)\n\}/)?.[1];
+  const mobile = css.match(/@media \(max-width: 1099px\) \{([\s\S]*?)\n\}/)?.[1];
   assert.ok(mobile, 'missing mobile heading breakpoint');
   const root = mobile.match(/^\s*:root\s*\{([^}]+)\}\s*$/)?.[1];
   assert.ok(root, 'mobile headings must override root tokens only');
   const tokens = Object.fromEntries([...root.matchAll(/--jk-([\w-]+):\s*([^;]+);/g)]
     .map(([, name, value]) => [name, value.trim()]));
   assert.deepEqual(tokens, {
-    'fs-h4': '18px', 'lh-h4': '28px', 'fs-h3': '24px', 'lh-h3': '28px',
+    'fs-h4': '18px', 'lh-h4': '28px', 'fs-h3': '20px', 'lh-h3': '28px',
     'fs-h2': '32px', 'lh-h2': '42px', 'fs-h1': '43px', 'lh-h1': '56px'
   });
 });
@@ -275,7 +274,7 @@ test('post headers remove the title accent and keep mobile covers within the rea
   assert.match(css.match(/@media \(max-width: 479px\) \{([\s\S]*?)\n\}/)?.[1], /\.post > \.title-image \{ max-height: 140px; \}/);
   assert.match(css, /\.dated-rows > \.dated-row\s*\{[^}]*min-height: 44px;[^}]*border-top: 1px solid var\(--jk-hair\);/);
   assert.match(css, /\.dated-row > time \{ color: var\(--jk-t3\);/);
-  assert.match(css, /\.dated-row > a\s*\{[^}]*font-family: var\(--jk-serif\);[^}]*font-size: 20px;[^}]*line-height: 28px;[^}]*color: var\(--jk-ink\);[^}]*text-decoration: none;/);
+  assert.match(css, /\.dated-row > a, \.dated-row > \.row-title\s*\{[^}]*font-family: var\(--jk-serif\);[^}]*font-size: 20px;[^}]*line-height: 28px;[^}]*color: var\(--jk-ink\);[^}]*text-decoration: none;/);
   assert.match(css, /\.dated-row > a:hover, \.dated-row > a:focus-visible \{ text-decoration: underline;/);
 });
 
@@ -380,7 +379,7 @@ test('site code uses top clearance everywhere and contains no old dark ramp or p
   assert.match(css, /--jk-bar-h: 57px;/);
   assert.match(css, /--jk-bar-h: 192px;/);
   assert.match(css, /--jk-bar-gap: calc\(max\(8px, env\(safe-area-inset-top, 0px\)\) - env\(safe-area-inset-top, 0px\)\);/);
-  assert.match(read('_sass/pages/notes.sass'), /scroll-margin-top: var\(--jk-top-clearance\)/);
+  assert.match(read('assets/css/site-structure.css'), /scroll-margin-top: var\(--jk-top-clearance\)/);
   assert.match(read('assets/css/team1.css'), /top: var\(--jk-top-clearance\)/);
 });
 

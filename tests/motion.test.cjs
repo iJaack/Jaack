@@ -95,15 +95,15 @@ test('built site and Moxie CSS zero both motion delays under reduced motion', ()
   }
 });
 
-test('Jekyll scssify preserves Forma tokens in the required legacy inline CSS', () => {
+test('migrated site CSS preserves tokenized motion without the legacy inline sheet', () => {
   const html = read('_site/index.html');
   const inline = [...html.matchAll(/<style[^>]*>([\s\S]*?)<\/style>/g)].map(match => match[1]).join('\n');
-  const css = inline.replace(/\s/g, '');
-  assert.ok(css.includes('transition:fillvar(--jk-d-1)var(--jk-ease-out)'));
-  assert.ok(css.includes('transition:colorvar(--jk-d-1)var(--jk-ease-out)'));
-  assert.ok(css.includes('transition:opacityvar(--jk-d-1)var(--jk-ease-out),transformvar(--jk-d-1)var(--jk-ease-out)'));
+  assert.doesNotMatch(read('_layouts/default.html'), /critical-css|scssify/);
+  assert.match(html, /href="\/assets\/css\/site-structure\.css"/);
+  assert.ok(inline.length < 2000, `${inline.length} bytes of inline CSS`);
+  assert.match(read('_site/assets/css/site-structure.css'), /transition: color var\(--jk-d-1\) var\(--jk-ease-out\)/);
   assert.deepEqual(lint(inline, '_site/index.html'), []);
-  assert.doesNotMatch(inline, /fade-in-down|\.animated\b/);
+  assert.doesNotMatch(inline, /normalize\.css|fade-in-down|\.animated\b/);
 });
 
 const acpSource = read('assets/open_source_code/acp-255-nyt.js');

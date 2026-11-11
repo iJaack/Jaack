@@ -1,6 +1,8 @@
 ---
 title: "How to install an IPFS node"
 layout: post
+permalink: /installare-nodo-ipfs-desktop-en/
+translation_key: ipfs-desktop
 date: 2020-01-20 12:00
 image: /assets/images/projects/IPFS/ipfs-desktop.png
 headerImage: true
