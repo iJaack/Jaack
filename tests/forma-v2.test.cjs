@@ -150,7 +150,7 @@ test('jaack.me editorial typography uses the approved body measure and heading s
     [1, ['h1', '.header-home .hero-title', '.page > .page-title', '.post > .title',
       '.project-page .page-title', '.wrapper-xwide .post > .title']],
     [2, ['h2', '.contact-section h2', '.section-heading h2', '.app-gallery h2']],
-    [3, ['h3', '.writing-entry h3', '.reading-pick h3']], [4, ['h4']]
+    [3, ['h3']], [4, ['h4']]
   ]) {
     for (const selector of selectors) {
       const rule = [...css.matchAll(/([^{}]+)\{([^{}]+)\}/g)].find(([, selectors, body]) =>
@@ -160,7 +160,6 @@ test('jaack.me editorial typography uses the approved body measure and heading s
       assert.ok(rule.includes(`line-height: var(--jk-lh-h${level});`), selector);
     }
   }
-  assert.match(css, /\.writing-entry h3\s*\{[^}]*font-weight: 500;[^}]*font-optical-sizing: auto;[^}]*letter-spacing: -0.01em;/);
   assert.match(css, /\.project-page--carta \.page-title\s*\{[^}]*font-size: var\(--jk-fs-title\);/);
   assert.match(css, /\.project-page--carta \.page-title\s*\{[^}]*font-variation-settings: 'opsz' 72;/);
   const phone = css.match(/@media \(max-width: 479px\) \{([\s\S]*?)\n\}/)?.[1];
@@ -275,7 +274,7 @@ test('post headers remove the title accent and keep mobile covers within the rea
   assert.match(css.match(/@media \(max-width: 479px\) \{([\s\S]*?)\n\}/)?.[1], /\.post > \.title-image \{ max-height: 140px; \}/);
   assert.match(css, /\.dated-rows > \.dated-row\s*\{[^}]*min-height: 44px;[^}]*border-top: 1px solid var\(--jk-hair\);/);
   assert.match(css, /\.dated-row > time \{ color: var\(--jk-t3\);/);
-  assert.match(css, /\.dated-row > a\s*\{[^}]*font-family: var\(--jk-serif\);[^}]*font-size: 20px;[^}]*line-height: 28px;[^}]*color: var\(--jk-ink\);[^}]*text-decoration: none;/);
+  assert.match(css, /\.dated-row > a, \.dated-row > \.row-title\s*\{[^}]*font-family: var\(--jk-serif\);[^}]*font-size: 20px;[^}]*line-height: 28px;[^}]*color: var\(--jk-ink\);[^}]*text-decoration: none;/);
   assert.match(css, /\.dated-row > a:hover, \.dated-row > a:focus-visible \{ text-decoration: underline;/);
 });
 

@@ -320,7 +320,7 @@ footer.footer-main { margin-top: auto; padding: 16px 0 calc(28px + env(safe-area
 .home > .list > .item > .url,
 .writing > .list > .item > .url,
 .projects > .list > .item > .url { padding: 8px 0; }
-.writing-entry, .reading-pick, .work-entry { padding: 10px 0; }
+.work-entry { padding: 14px 0; }
 .project-feature .feature-copy { padding: 12px 0 16px; }
 .feature-lead h3, .project-feature h3 { font-size: clamp(22px, 2vw, 28px); }
 .app-gallery { padding: 16px 0; gap: 20px; }
@@ -555,32 +555,41 @@ html[data-theme="dark"] {
 .jk-prose .about-body > :is(.lang-en, .lang-it) { max-width: none; }
 .post > .related, .post > .donation, .post > .author { margin: 56px 0 0; }
 .post > .related > h2 { margin: 0 0 14px; font-size: 24px; line-height: 28px; }
-.dated-rows { list-style: none; margin: 0; padding: 0; }
+.dated-rows { list-style: none; margin: 0; padding: 0; max-width: none; }
 .dated-rows > .dated-row {
   display: grid;
   grid-template-columns: 7em minmax(0, 1fr);
   align-items: baseline;
-  gap: 14px;
+  gap: 0 14px;
   min-height: 44px;
+  padding: 0;
   border-top: 1px solid var(--jk-hair);
   font-family: var(--jk-font);
   font-size: var(--jk-fs-xs);
   line-height: 28px;
 }
-.dated-row > time { color: var(--jk-t3); padding: 8px 0; }
-.dated-row > a {
+.dated-row > time { color: var(--jk-t3); padding: 7px 0; }
+.dated-row > a, .dated-row > .row-title {
   display: flex;
   align-items: center;
+  gap: .3em;
   min-height: 44px;
   padding: 7px 0;
   box-sizing: border-box;
   font-family: var(--jk-serif);
   font-size: 20px;
+  font-weight: 400;
   line-height: 28px;
   color: var(--jk-ink);
   text-decoration: none;
 }
 .dated-row > a:hover, .dated-row > a:focus-visible { text-decoration: underline; text-underline-offset: 4px; }
+.dated-row > .row-meta { grid-column: 2; color: var(--jk-t3); font-size: var(--jk-fs-xs); padding-bottom: 7px; }
+@media (max-width: 668px) {
+  .dated-rows > .dated-row { grid-template-columns: minmax(0, 1fr); }
+  .dated-row > time { padding: 7px 0 0; }
+  .dated-row > .row-meta { grid-column: 1; }
+}
 .donation > .coffee-link {
   display: inline-flex;
   align-items: center;
@@ -632,16 +641,6 @@ html[data-theme="dark"] .post :is(img[src$=".svg"], img.figure--diagram, figure.
     padding-right: max(var(--jk-page-x), env(safe-area-inset-right));
   }
 }
-.writing-entry { padding: 12px 0; gap: 16px; }
-.writing-entry time {
-  color: var(--jk-accent-text);
-  font-size: 12px;
-  letter-spacing: .04em;
-  text-transform: uppercase;
-}
-.writing-entry h3 { font-family: var(--jk-serif); font-weight: 500; font-optical-sizing: auto; letter-spacing: -0.01em; }
-.writing-entry h3, .reading-pick h3 { font-size: var(--jk-fs-h3); line-height: var(--jk-lh-h3); }
-
 /* Carta wordmark and monograms use the shared Newsreader family at optical size 72. */
 .app-links a[href="/projects/carta/"] .app-monogram,
 #carta .app-monogram,
@@ -801,6 +800,14 @@ p { margin: 0 0 14px; }
 .note-tags .note-tag { border: 0; border-radius: 0; padding: 7px 0; }
 
 .project-page .page-title { margin: 28px 0 14px; }
-.reading-pick h3 { margin: 28px 0 14px; }
 #archive { margin-top: 56px; }
-.note-entry h3 { margin: 0 0 14px; }
+
+/* The same quiet links and touch targets serve every index and row action. */
+a.text-link, a.note-back { display: inline-flex; align-items: center; min-height: 44px; padding: 7px 0; box-sizing: border-box; }
+.work-jumps { gap: 0 14px; margin-top: 28px; }
+.work-jumps a { min-width: 44px; min-height: 44px; padding: 0 7px; box-sizing: border-box; justify-content: center; }
+.projects > .work-jumps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 14px; }
+.projects > .work-jumps a { font-size: var(--jk-fs-xs); padding: 0; }
+.reading-path { margin: 28px 0; }
+.reading-path h2 { font-family: var(--jk-serif); font-weight: 450; font-size: 32px; line-height: 42px; margin: 28px 0 14px; }
+.reading-pick .work-meta { margin: 0; color: var(--jk-t3); }

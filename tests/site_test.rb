@@ -111,7 +111,7 @@ class SiteTest < Minitest::Test
   def test_homepage_features_real_project_and_writing_destinations
     page = doc('index.html')
     assert_equal 4, page.css('#selected-work article').length
-    assert_equal 3, page.css('.selected-writing article').length
+    assert_equal 3, page.css('.selected-writing .dated-row').length
     assert page.at_css('#contact a[href^="mailto:"]')
     refute_includes page.text, 'Builder on the side'
   end
@@ -415,9 +415,9 @@ class SiteTest < Minitest::Test
     assert page.at_css('#archive')
     refute page.at_css('#fitness')
     %w[en it].each do |lang|
-      assert page.css("section.list.lang-#{lang} .item").length > 0
+      assert page.css("section.list.lang-#{lang} .dated-row").length > 0
     end
-    page.css('.reading-pick h3 a').each do |link|
+    page.css('.reading-pick > a').each do |link|
       article = doc(link['href'].delete_prefix('/') + 'index.html')
       assert article.at_css('main.post'), link['href']
     end
@@ -519,28 +519,28 @@ class SiteTest < Minitest::Test
   def test_notes_index_lists_groups_tags_and_all_notes_in_date_order
     page = doc('notes/index.html')
     notes_by_url = migrated_notes.values.to_h { |data| [data['permalink'], data] }
-    all_links = page.css('#all-notes .note-entry h3 a').map { |link| link['href'] }
+    all_links = page.css('#all-notes .dated-row > a').map { |link| link['href'] }
     assert_equal 30, all_links.length
     assert_equal notes_by_url.keys.sort, all_links.sort
     dates = all_links.map { |url| DateTime.parse(notes_by_url.fetch(url)['date'].to_s) }
     assert_equal dates.sort.reverse, dates
     assert page.at_css('section#fitness')
-    fitness_links = page.css('#fitness .note-entry h3 a').map { |link| link['href'] }
+    fitness_links = page.css('#fitness .dated-row > a').map { |link| link['href'] }
     assert_equal %w[/jun-7-th-2024-start/ /jun-7-th-2024-understanding-tp-numbers/ /jun-22-nd-2024-understanding-form-and-fatigue/ /aug-5-th-2024-in-search-of-the-complete-training-app/ /jan-13-th-2025-wrapping-up-2024/], fitness_links
     dates = fitness_links.map { |url| DateTime.parse(notes_by_url.fetch(url)['date'].to_s) }
     assert_equal dates.sort, dates
     tags = notes_by_url.values.flat_map { |data| data['tag'] }.uniq.sort
     assert_equal tags.map { |tag| "tag-#{tag}" }, page.css('section[id^="tag-"]').map { |section| section['id'] }
     tags.each do |tag|
-      links = page.css("#tag-#{tag} .note-entry h3 a").map { |link| link['href'] }
+      links = page.css("#tag-#{tag} .dated-row > a").map { |link| link['href'] }
       assert_equal all_links.select { |url| notes_by_url.fetch(url)['tag'].include?(tag) }, links
       assert page.at_css(".work-jumps a[href='#tag-#{tag}']"), tag
     end
     assert page.at_css('.work-jumps a[href="#fitness"]')
-    page.css('.note-entry').each do |entry|
-      data = notes_by_url.fetch(entry.at_css('h3 a')['href'])
+    page.css('.dated-row').each do |entry|
+      data = notes_by_url.fetch(entry.at_css('a')['href'])
       assert_equal DateTime.parse(data['date'].to_s).strftime('%F %T'), DateTime.parse(entry.at_css('time[datetime]')['datetime']).strftime('%F %T')
-      assert_equal data['tag'], entry.css('.note-tag').map(&:text)
+      assert_empty entry.css('.note-tag, .badge')
     end
   end
 
@@ -844,4 +844,62 @@ class SiteTest < Minitest::Test
     assert_equal 5, page.css('.post-body img[src$="-codex.svg"]').length
     assert_empty page.css('main picture')
   end
+  def test_dated_rows_are_shared_across_indexes_home_and_related
+    %w[index.html blog/index.html notes/index.html speaking/index.html 2024-review-en/index.html].each do |route|
+      page = doc(route)
+      rows = page.css('ul.dated-rows > li.dated-row')
+      assert_operator rows.length, :>, 0, route
+      assert_empty page.css('.writing-entry, .note-entry, .badge.research'), route
+      rows.each do |row|
+        assert row.at_css('time[datetime]'), route
+        assert row.at_css('a, .row-title'), route
+        refute row.at_css('h3, .note-tag, .badge'), route
+      end
+    end
+    refute_includes doc('blog/index.html').text, 'These selected essays are in English.'
+    refute_includes doc('blog/index.html').text, 'Questi saggi selezionati sono in inglese.'
+  end
+
+  def test_speaking_keeps_existing_talks_and_date_precision
+    data = YAML.safe_load(File.read(File.expand_path('../_data/speaking.yml', __dir__)))
+    page = doc('speaking/index.html')
+    assert_equal %w[2024 2023 2022], page.css('main h2').map { |h| h.text.strip }
+    assert_equal 17, data.length
+    assert_equal 17, page.css('.dated-row').length
+    assert_equal 16, page.css('.dated-row > a').length
+    assert_equal data.map { |talk| talk['url'] }.compact.sort, page.css('.dated-row > a').map { |a| a['href'] }.sort
+    assert_equal '2022-05', data.find { |talk| talk['url'].nil? }['date']
+    assert_equal 1, page.css('.dated-row > .row-title').length
+    assert_equal 2024, data.map { |talk| talk['year'] }.max
+    data.each do |talk|
+      %w[en it].each { |lang| refute_empty talk.fetch("title_#{lang}") }
+      refute_match(/@|\||March:|September 4th/, talk['title_en'])
+    end
+  end
+
+  def test_internal_links_never_use_external_arrows_including_hidden_spans
+    site_host = URI(YAML.safe_load(File.read(File.expand_path('../_config.yml', __dir__)))['url']).host
+    Dir.glob(File.join(ROOT, '**', '*.html')).each do |path|
+      Nokogiri::HTML(File.read(path)).css('a[href]').each do |link|
+        next unless link.text.include?('↗')
+        href = link['href']
+        uri = URI.parse(href)
+        external = uri.scheme == 'mailto' || (%w[http https].include?(uri.scheme) || uri.host) && uri.host != site_host
+        assert external, "#{path}: internal link #{href} uses ↗"
+      end
+    end
+    %w[mailto:hey@jaack.me https://book.jaack.me/ https://www.linkedin.com/in/giacomobarbieri94/].each do |href|
+      assert_includes doc('index.html').at_css("#contact a[href='#{href}']").text, '↗'
+    end
+  end
+
+  def test_link_arrows_classify_hosts_rather_than_any_http_url
+    { '/projects/carta/' => '→', 'https://jaack.me/about/' => '→', '//jaack.me/blog/' => '→',
+      'https://other.example/path' => '↗', '//other.example/path' => '↗', 'mailto:hey@jaack.me' => '↗' }.each do |href, expected|
+      html = render_post_fixture('{% include link-arrow.html href=page.href %}',
+        'site' => { 'url' => 'https://jaack.me' }, 'page' => { 'href' => href })
+      assert_equal expected, html.strip, href
+    end
+  end
+
 end

@@ -5,7 +5,7 @@
   {% if project.id == 'evalanche' %}<a class="feature-image" href="{{ '/projects/evalanche/' | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ '/assets/images/work/evalanche-preview.png' | relative_url }}" width="1247" height="663" alt="" loading="lazy"></a>{% endif %}
   <div class="feature-copy">
     <p class="work-meta"><span class="lang-en" lang="en">{{ project.stage_en }}</span><span class="lang-it" lang="it">{{ project.stage_it }}</span></p>
-    <h3><a href="{{ '/projects/' | relative_url }}{{ project.id }}/">{% if project.id == 'team1' %}<img class="team1-wordmark" src="{{ '/assets/images/work/team1-wordmark.svg' | relative_url }}" width="1027" height="289" alt="team1">{% else %}{% if project.id == 'evalanche' %}<img class="evalanche-logo" src="{{ '/assets/images/work/evalanche-logo.svg' | relative_url }}" width="64" height="64" alt="">{% endif %}{{ project.name }}{% endif %} <span aria-hidden="true">↗</span></a></h3>
+    <h3><a href="{{ '/projects/' | relative_url }}{{ project.id }}/">{% if project.id == 'team1' %}<img class="team1-wordmark" src="{{ '/assets/images/work/team1-wordmark.svg' | relative_url }}" width="1027" height="289" alt="team1">{% else %}{% if project.id == 'evalanche' %}<img class="evalanche-logo" src="{{ '/assets/images/work/evalanche-logo.svg' | relative_url }}" width="64" height="64" alt="">{% endif %}{{ project.name }}{% endif %}</a></h3>
     <p><span class="lang-en" lang="en">{{ project.description_en }}</span><span class="lang-it" lang="it">{{ project.description_it }}</span></p>
   </div>
 </article>

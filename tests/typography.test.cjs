@@ -61,3 +61,64 @@ for (const width of [390, 1280]) {
     } finally { await page.close(); }
   });
 }
+
+for (const width of [390, 669, 1280]) {
+  test(`shared rows, action targets and jump links at ${width}px`, async () => {
+    const page = await browser.newPage({ viewport: { width, height: 844 } });
+    try {
+      for (const lang of ['en', 'it']) {
+        await page.goto(base);
+        await page.evaluate(lang => localStorage.setItem('site-lang', lang), lang);
+        for (const route of ['/', '/blog/', '/notes/', '/speaking/', '/2024-review-en/', '/projects/', '/projects/pommidoro/', '/thoughts-from-token-2049-singapore-24/']) {
+          await page.goto(base + route);
+          await page.evaluate(() => document.fonts.ready);
+          await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+          await page.mouse.move(0, 0);
+          const result = await page.evaluate(() => {
+            const visible = el => el.getClientRects().length && getComputedStyle(el).display !== 'none';
+            const rows = [...document.querySelectorAll('.dated-row')].filter(visible);
+            const links = rows.flatMap(row => [...row.querySelectorAll(':scope > a')]);
+            const targets = [...links, ...document.querySelectorAll('.text-link, .note-back, .work-jumps a')].filter(visible);
+            const jumps = [...document.querySelectorAll('.projects > .work-jumps a')].filter(visible);
+            const archive = [...document.querySelectorAll('.list .dated-row > a')].filter(visible);
+            return {
+              targets: targets.map(el => [el.textContent.trim(), el.getBoundingClientRect().height]),
+              titles: links.map(el => [getComputedStyle(el).textDecorationLine, getComputedStyle(el).fontFamily, getComputedStyle(el).fontSize, getComputedStyle(el).lineHeight]),
+              columns: rows.map(row => ({ date: row.querySelector('time').getBoundingClientRect().left, title: row.querySelector('a, .row-title').getBoundingClientRect().left,
+                dateTop: row.querySelector('time').getBoundingClientRect().top, titleTop: row.querySelector('a, .row-title').getBoundingClientRect().top,
+                column: getComputedStyle(row).gridTemplateColumns.split(' ')[0], font: parseFloat(getComputedStyle(row).fontSize) })),
+              jumpRows: new Set(jumps.map(el => Math.round(el.getBoundingClientRect().top))).size,
+              jumpWidths: jumps.map(el => [el.scrollWidth, el.clientWidth]),
+              archiveLefts: archive.map(el => el.getBoundingClientRect().left),
+              overflow: document.documentElement.scrollWidth > innerWidth,
+              gap: document.querySelector('main').getBoundingClientRect().top - document.querySelector('nav.site-nav').getBoundingClientRect().bottom
+            };
+          });
+          for (const [name, height] of result.targets) assert.ok(height >= 44, `${route} ${lang} ${name}: ${height}px`);
+          for (const [decoration, family, size, leading] of result.titles) {
+            assert.equal(decoration, 'none', `${route}: title underlined at rest`);
+            assert.match(family, /Newsreader/, route);
+            assert.equal(size, '20px', route); assert.equal(leading, '28px', route);
+          }
+          for (const c of result.columns) {
+            if (width >= 669) {
+              assert.ok(c.title > c.date, `${route}: date must be left of title`);
+              assert.ok(Math.abs(parseFloat(c.column) - 7 * c.font) < .5, `${route}: date column must be 7em`);
+            } else assert.ok(c.titleTop >= c.dateTop + 27, `${route}: date must sit above title`);
+          }
+          assert.ok(result.jumpRows <= 2, `${route} ${lang}: ${result.jumpRows} jump rows`);
+          for (const [scroll, client] of result.jumpWidths) assert.ok(scroll <= client + 1, `${route}: clipped jump label`);
+          if (result.archiveLefts.length) assert.ok(Math.max(...result.archiveLefts) - Math.min(...result.archiveLefts) <= .5, `${route}: archive indent`);
+          assert.equal(result.overflow, false, `${route} ${lang}: horizontal overflow`);
+          assert.ok(Math.abs(result.gap - 14) <= .5, `${route}: nav gap ${result.gap}px`);
+        }
+      }
+      await page.goto(base + '/notes/');
+      const title = page.locator('.dated-row > a').first();
+      await title.hover();
+      assert.equal(await title.evaluate(el => getComputedStyle(el).textDecorationLine), 'underline');
+      await page.mouse.move(0, 0); await title.focus();
+      assert.equal(await title.evaluate(el => getComputedStyle(el).textDecorationLine), 'underline');
+    } finally { await page.close(); }
+  });
+}
