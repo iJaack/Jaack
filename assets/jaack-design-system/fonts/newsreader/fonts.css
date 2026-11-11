@@ -6,7 +6,7 @@
    letters normalized to 81.82%, space=18.18%. No kerning in advance averages.
 */
 @font-face{font-family:"Newsreader";src:url("Newsreader-roman.woff2") format("woff2-variations"),url("Newsreader-roman.woff2") format("woff2");font-weight:400 700;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0100-017F,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+FEFF,U+FFFD;}
-@font-face{font-family:"Newsreader";src:url("Newsreader-italic.woff2") format("woff2-variations"),url("Newsreader-italic.woff2") format("woff2");font-weight:400 700;font-style:italic;font-display:swap;unicode-range:U+0000-00FF,U+0100-017F,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:"Newsreader";src:url("Newsreader-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap;unicode-range:U+0000-00FF,U+0100-017F,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+FEFF,U+FFFD;}
 /* /System/Library/Fonts/Supplemental/Iowan Old Style.ttc (IowanOldStyle-Roman): unitsPerEm=2048;
    weighted advance=913.538276996770; normalized=0.446063611815;
    raw size-adjust=0.900209260274; ascent=0.816476826484;

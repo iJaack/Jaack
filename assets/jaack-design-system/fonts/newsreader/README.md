@@ -1,12 +1,13 @@
 # Newsreader (opt-in)
 
-Self-hosted, roman and italic variable Newsreader for reading text. Both WOFF2 files retain
-`wght` 400–700 and `opsz` 6–72, with Latin-1, Latin Extended-A and selected
-punctuation/symbols in the identical Unicode ranges listed in `fonts.css`.
-`Newsreader-roman.woff2` is 118,716 bytes; the separate
-`Newsreader-italic.woff2` is 135,024 bytes and provides real italic with the same
-coverage, so italic text is never synthesized. Latin Extended-B, Latin Extended Additional and IPA characters use
-the metric-adjusted local/system fallbacks. Weights below 400 and above 700
+Self-hosted Newsreader for reading text: variable roman and static italic.
+`Newsreader-roman.woff2` is 118,716 bytes and retains `wght` 400–700 and
+`opsz` 6–72. The separate `Newsreader-italic.woff2` is 30,684 bytes, a fully
+static instance at weight 400 only with `opsz` pinned at 18 (the axis default).
+Bold-italic is synthesized. Both WOFF2 files cover Latin-1, Latin Extended-A and
+selected punctuation/symbols in the identical Unicode ranges listed in `fonts.css`.
+Latin Extended-B, Latin Extended Additional and IPA characters use the
+metric-adjusted local/system fallbacks. Roman weights below 400 and above 700
 are no longer packaged; select a fallback family explicitly for those weights
 because browsers may otherwise match the nearest available Newsreader weight.
 
@@ -53,16 +54,22 @@ tools/build-fonts.sh '/path/to/Newsreader[opsz,wght].ttf' '/path/to/Newsreader-I
 ```
 
 Set `PYTHON` and `PYFTSUBSET` to executables in your environment if needed.
-Both source arguments are required. For each file, the script first limits the
-weight axis, keeping optical size, then subsets all layout features with the
-same options. In the command below, `$input` is the roman or italic source TTF,
+Both source arguments are required. The script limits roman to `wght=400:700`,
+keeping optical size variable. It instantiates italic at `wght=400 opsz=18`,
+removing both variable axes, then subsets all layout features with the same
+options for both files. In the command below, `$style` is `roman` or `italic`,
+`$input` is its source TTF,
 `$output` is its corresponding `fonts/newsreader/Newsreader-{roman,italic}.woff2`
 path, and `$instance` is a temporary file. The fixed build timestamp preserves
 the existing roman bytes and makes both font outputs reproducible:
 
 ```sh
 export SOURCE_DATE_EPOCH=1794431893 # 2026-11-11 21:18:13 UTC
-"${PYTHON:-python3}" -m fontTools.varLib.instancer "$input" wght=400:700 -o "$instance"
+case "$style" in
+  roman) set -- wght=400:700 ;;
+  italic) set -- wght=400 opsz=18 ;;
+esac
+"${PYTHON:-python3}" -m fontTools.varLib.instancer "$input" "$@" -o "$instance"
 "${PYFTSUBSET:-pyftsubset}" "$instance" \
   --output-file="$output" \
   --unicodes="U+0000-00FF,U+0100-017F,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2190-2193,U+2212,U+2215,U+FEFF,U+FFFD" \
@@ -90,5 +97,5 @@ real files; no guessed metrics are used. The formulas are:
 CSS percentages round to two decimals. Rebuilding metrics needs these same
 system font versions; it is separate from the ordinary cross-platform bundle
 build. With the supplied sources and toolchain, the packaged roman is 118,716
-bytes and the italic is 135,024 bytes. Both the font build and `tools/check.sh`
-enforce separate budgets: 120,000 bytes for roman and 140,000 bytes for italic.
+bytes and the static italic is 30,684 bytes. Both the font build and `tools/check.sh`
+enforce separate budgets: 120,000 bytes for roman and 70,000 bytes for italic.

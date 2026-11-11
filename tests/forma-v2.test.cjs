@@ -102,10 +102,11 @@ test('Newsreader opts in to the packaged roman and italic, fits its budget and p
   assert.equal(faces.length, 2);
   for (const [index, face] of faces.entries()) {
     assert.match(face, /font-family:\s*"Newsreader"/);
-    assert.match(face, /font-weight:\s*400 700/);
+    assert.match(face, index ? /font-weight:\s*400;/ : /font-weight:\s*400 700;/);
     assert.match(face, /font-display:\s*swap/);
     assert.ok(face.includes(`Newsreader-${index ? 'italic' : 'roman'}.woff2`));
     assert.match(face, index ? /font-style:\s*italic/ : /font-style:\s*normal/);
+    if (index) assert.match(face, /src:\s*url\("Newsreader-italic\.woff2"\) format\("woff2"\);/);
   }
   const fonts = files(`${design}/fonts/newsreader`);
   assert.doesNotMatch(css, /@font-face|Newsreader-(roman|italic)\.woff2/);
@@ -114,8 +115,8 @@ test('Newsreader opts in to the packaged roman and italic, fits its budget and p
   assert.ok(!fonts.some(file => file.endsWith('Newsreader-carta.woff2')));
   const total = fonts.filter(file => file.endsWith('.woff2'))
     .reduce((sum, file) => sum + fs.statSync(path.join(root, file)).size, 0);
-  // The package supplies both 400–700 faces; only roman is preloaded.
-  assert.ok(total <= 320000, `${total} bytes exceeds 320 KB`);
+  // Roman spans 400–700; static italic is 400. Combined: 149,400 bytes; only roman is preloaded.
+  assert.ok(total <= 150000, `${total} bytes exceeds 150 KB`);
   for (const file of files('_site').filter(file => file.endsWith('.html'))) {
     const head = read(file).match(/<head>([\s\S]*?)<\/head>/i)?.[1];
     if (!head || !head.includes('/assets/css/jaack-site.css')) continue;
@@ -268,7 +269,7 @@ test('jaack.me and Moxie vendor the exact v2.0.1 release with MANIFEST and SOURC
     const canonical = [...read(`${vendor}/MANIFEST.txt`).matchAll(/^([a-f0-9]{64})  ([\w./-]+)$/gm)];
     assert.ok(canonical.length > 0, `${vendor}: empty manifest`);
     assert.equal(read(`${vendor}/VERSION`).trim(), '2.0.1');
-    assert.equal(read(`${vendor}/SOURCE`), 'iJaack/jaack-design v2.0.1 03c4c0e2f594f416c643032af7e2aa5c9d8266fe\n');
+    assert.equal(read(`${vendor}/SOURCE`), 'iJaack/jaack-design v2.0.1 2cd1bdbe3dd38a185d0b00afd880fdec09cd9f95\n');
     assert.deepEqual(files(vendor).map(file => file.slice(vendor.length + 1)).sort(),
       [...canonical.map(([, , file]) => file), 'MANIFEST.txt', 'SOURCE'].sort());
     for (const [, hash, file] of canonical) {
