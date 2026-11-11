@@ -169,3 +169,27 @@ for (const width of [390, 1280]) {
     } finally { await page.close(); }
   });
 }
+
+for (const width of [390, 1280]) {
+  test(`embedded research H2/H3 use level metrics at ${width}px`, async () => {
+    const page = await browser.newPage({ viewport: { width, height: 844 } });
+    await page.route('**/*', route => new URL(route.request().url()).origin === base ? route.continue() : route.abort());
+    try {
+      await page.goto(base + '/acp-255-four-fee-curves-en/');
+      await page.evaluate(() => document.fonts.ready);
+      const headings = await page.locator('main .post-body h2, main .post-body h3').evaluateAll(nodes => nodes.map(node => {
+        const css = getComputedStyle(node);
+        return { level: node.tagName, family: css.fontFamily, weight: css.fontWeight,
+          size: css.fontSize, leading: css.lineHeight, top: css.marginTop, bottom: css.marginBottom };
+      }));
+      assert.ok(headings.length);
+      for (const h of headings) {
+        if (h.level === 'H2') { assert.match(h.family, /Newsreader/); assert.equal(h.weight, '450'); }
+        assert.equal(h.size, h.level === 'H2' ? (width < 1100 ? '32px' : '43px') : (width < 1100 ? '20px' : '24px'));
+        for (const key of ['leading', 'top', 'bottom']) {
+          const px = parseFloat(h[key]); assert.ok(Math.abs(px - Math.round(px / 14) * 14) <= .5, `${h.level}: ${key}=${h[key]}`);
+        }
+      }
+    } finally { await page.close(); }
+  });
+}
