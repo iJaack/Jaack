@@ -22,7 +22,9 @@ nav.site-nav.jk-top {
   z-index: 40;
 }
 nav.site-nav .nav-row { display: contents; }
-nav.site-nav .jk-mark { margin-right: 4px; }
+nav.site-nav .nav-menu-toggle { display: none; }
+/* Keep 18px outer insets on desktop: 14 + 4 on the left, 8 + 10 on the right. */
+nav.site-nav .jk-mark { margin-left: 4px; margin-right: 4px; }
 nav.site-nav .nav-links {
   display: flex;
   flex-wrap: wrap;
@@ -74,7 +76,7 @@ nav.site-nav .jk-mark {
 }
 .jk-thsw button { min-height: 44px; min-width: 44px; }
 /* Reserve the mounted switch footprint before theme.js runs. */
-nav.site-nav [data-jk-theme-switch] { width: 180px; height: 48px; }
+nav.site-nav [data-jk-theme-switch] { width: 180px; height: 48px; margin-right: 10px; }
 @media (max-width: 760px) {
   nav.site-nav [data-jk-theme-switch] { width: 140px; }
   nav.site-nav [data-jk-theme-switch]:empty { min-width: 140px; min-height: 48px; }
@@ -113,8 +115,11 @@ nav.site-nav [data-jk-theme-switch] { width: 180px; height: 48px; }
     gap: 2px 6px;
     padding: 4px 6px 4px 10px;
   }
-  nav.site-nav .jk-mark { order: 1; margin-right: 0; flex: 1 1 auto; }
-  nav.site-nav [data-jk-theme-switch] { order: 2; margin-left: auto; flex: 0 0 auto; }
+  /* R = 51.5px; at glyph top y = 13.7px the curve intrudes 16.52px.
+     ceil(16.52 + 14) = 31px; 32px allows for font rasterization.
+     Top row only: 10 + 22 = 32px left, 6 + 26 = 32px right; row two keeps its padding. */
+  nav.site-nav .jk-mark { order: 1; margin-left: 22px; margin-right: 0; flex: 1 1 auto; }
+  nav.site-nav [data-jk-theme-switch] { order: 2; margin-left: auto; margin-right: 26px; flex: 0 0 auto; }
   nav.site-nav .nav-row {
     display: flex;
     order: 3;
@@ -136,16 +141,83 @@ nav.site-nav [data-jk-theme-switch] { width: 180px; height: 48px; }
 }
 
 
+@media (max-width: 599.98px) {
+  :root { --jk-bar-h: 57px; }
+  :root:has(nav.site-nav:not(.has-menu)) { --jk-bar-h: 104px; }
+  nav.site-nav.jk-top.has-menu {
+    /* R = 28.5px; the glyph top at 13.7px needs 4.14 + 14px. */
+    flex-wrap: nowrap;
+    padding: 4px 20px;
+  }
+  nav.site-nav.has-menu .jk-mark { margin-left: 0; }
+  nav.site-nav.has-menu [data-jk-theme-switch] { margin-right: 0; }
+  nav.site-nav.has-menu .nav-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    order: 3;
+    flex: none;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 6px 10px;
+    border: 0;
+    border-radius: var(--jk-r-pill);
+    background: transparent;
+    color: var(--jk-ink-2);
+    font: 600 13px/1 var(--jk-font);
+    cursor: pointer;
+  }
+  nav.site-nav.has-menu .nav-menu-toggle:focus-visible {
+    outline: 2px solid var(--jk-focus);
+    outline-offset: 2px;
+  }
+  nav.site-nav.has-menu .nav-row {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 6px;
+    background: var(--jk-surface-2);
+    border: 1px solid var(--jk-hair-2);
+    border-radius: 14px;
+    max-height: calc(100dvh - 90px);
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 160ms;
+  }
+  nav.site-nav.has-menu.is-menu-open .nav-row,
+  nav.site-nav.has-menu.is-menu-closing .nav-row { visibility: visible; }
+  nav.site-nav.has-menu.is-menu-open .nav-row { opacity: 1; pointer-events: auto; }
+  nav.site-nav.has-menu .nav-links { flex: none; flex-direction: column; overflow: visible; }
+  nav.site-nav.has-menu .nav-links li { width: 100%; }
+  nav.site-nav.jk-top.has-menu .nav-links a.jk-sw {
+    width: 100%;
+    min-height: 44px;
+    padding: 0 14px;
+  }
+  nav.site-nav.has-menu .lang-switch { margin: 0; }
+}
+
+@media (max-width: 599.98px) and (prefers-reduced-motion: reduce) {
+  nav.site-nav.has-menu .nav-row { transition: none; }
+}
+
 @media (max-width: 480px) {
   /* Reserve room for the controls and up to three rows of whole labels. */
-  :root { --jk-bar-h: 192px; }
-  nav.site-nav .nav-row { align-items: flex-start; }
-  nav.site-nav .nav-links {
+  :root:has(nav.site-nav:not(.has-menu)) { --jk-bar-h: 192px; }
+  nav.site-nav:not(.has-menu) .nav-row { align-items: flex-start; }
+  nav.site-nav:not(.has-menu) .nav-links {
     flex-wrap: wrap;
     overflow: visible;
   }
-  nav.site-nav .nav-links li { flex: none; }
-  nav.site-nav.jk-top .nav-links a.jk-sw {
+  nav.site-nav:not(.has-menu) .nav-links li { flex: none; }
+  nav.site-nav.jk-top:not(.has-menu) .nav-links a.jk-sw {
     padding: 6px 6px;
     white-space: nowrap;
   }

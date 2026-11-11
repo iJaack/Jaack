@@ -198,17 +198,30 @@ test('long articles opt into 20/28 at 23em only from 600px', () => {
   assert.equal(read('_site/assets/css/jaack-site.css'), read('assets/css/jaack-site.css'));
 });
 
-test('phone navigation wraps whole labels without clipping and keeps 44px targets', () => {
+test('navigation keeps the original row width with insets on the top-row items', () => {
+  const css = stripComments(read('assets/css/jaack-site.css'));
+  const desktop = css.split('@media')[0];
+  assert.match(desktop, /nav\.site-nav\.jk-top\s*\{[^}]*padding:\s*6px 8px 6px 14px;/);
+  assert.match(desktop, /nav\.site-nav \.jk-mark\s*\{[^}]*margin-left:\s*4px;/);
+  assert.match(desktop, /nav\.site-nav \[data-jk-theme-switch\]\s*\{[^}]*margin-right:\s*10px;/);
+  const tablet = css.match(/@media \(max-width: 880px\) \{([\s\S]*?)\n\}/)?.[1];
+  assert.ok(tablet, 'missing two-row navigation rules');
+  assert.match(tablet, /nav\.site-nav\.jk-top\s*\{[^}]*padding:\s*4px 6px 4px 10px;/);
+  assert.match(tablet, /nav\.site-nav \.jk-mark\s*\{[^}]*margin-left:\s*22px;/);
+  assert.match(tablet, /nav\.site-nav \[data-jk-theme-switch\]\s*\{[^}]*margin-right:\s*26px;/);
+});
+
+test('no-JS phone navigation wraps whole labels without clipping and keeps 44px targets', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
   const phone = css.match(/@media \(max-width: 480px\) \{([\s\S]*?)\n\}/)?.[1];
   assert.ok(phone, 'missing phone navigation rules');
-  const links = phone.match(/nav\.site-nav \.nav-links\s*\{([^}]+)\}/)?.[1];
+  const links = phone.match(/nav\.site-nav:not\(\.has-menu\) \.nav-links\s*\{([^}]+)\}/)?.[1];
   assert.match(links, /flex-wrap:\s*wrap;/);
   assert.match(links, /overflow:\s*visible;/);
-  assert.match(phone, /nav\.site-nav \.nav-links li\s*\{[^}]*flex:\s*none;/);
+  assert.match(phone, /nav\.site-nav:not\(\.has-menu\) \.nav-links li\s*\{[^}]*flex:\s*none;/);
   const targets = css.match(/nav\.site-nav\.jk-top \.nav-links a\.jk-sw\s*\{([^}]+)\}/)?.[1];
   assert.match(targets, /min-height:\s*44px;/);
-  const phoneTargets = phone.match(/nav\.site-nav\.jk-top \.nav-links a\.jk-sw\s*\{([^}]+)\}/)?.[1];
+  const phoneTargets = phone.match(/nav\.site-nav\.jk-top:not\(\.has-menu\) \.nav-links a\.jk-sw\s*\{([^}]+)\}/)?.[1];
   assert.match(phoneTargets, /white-space:\s*nowrap;/);
   assert.match(phoneTargets, /padding:\s*6px 6px;/);
   for (const [, rule] of css.matchAll(/[^{}]*\.nav-links[^{}]*\ba(?:\.jk-sw)?[^{}]*\{([^}]+)\}/g)) {
@@ -307,4 +320,25 @@ test('site code uses top clearance everywhere and contains no old dark ramp or p
   assert.match(css, /--jk-bar-gap: calc\(max\(8px, env\(safe-area-inset-top, 0px\)\) - env\(safe-area-inset-top, 0px\)\);/);
   assert.match(read('_sass/pages/notes.sass'), /scroll-margin-top: var\(--jk-top-clearance\)/);
   assert.match(read('assets/css/team1.css'), /top: var\(--jk-top-clearance\)/);
+});
+
+
+test('enhanced mobile sheet uses tokens, 44px links and only a 160ms opacity fade', () => {
+  const css = stripComments(read('assets/css/jaack-site.css'));
+  const mobile = css.match(/@media \(max-width: 599\.98px\) \{([\s\S]*?)\n\}/)[1];
+  assert.match(mobile, /nav\.site-nav\.jk-top\.has-menu\s*\{[^}]*padding:\s*4px 20px;/);
+  assert.match(mobile, /nav\.site-nav\.has-menu \.jk-mark\s*\{[^}]*margin-left:\s*0;/);
+  assert.match(mobile, /nav\.site-nav\.has-menu \[data-jk-theme-switch\]\s*\{[^}]*margin-right:\s*0;/);
+  const sheet = mobile.match(/nav\.site-nav\.has-menu \.nav-row\s*\{([^}]+)\}/)[1];
+  for (const rule of ['position: absolute;', 'top: calc(100% + 8px);', 'left: 0;', 'right: 0;',
+    'background: var(--jk-surface-2);', 'border: 1px solid var(--jk-hair-2);',
+    'border-radius: 14px;', 'padding: 6px;', 'visibility: hidden;', 'transition: opacity 160ms;']) {
+    assert.ok(sheet.includes(rule), rule);
+  }
+  const links = mobile.match(/nav\.site-nav\.jk-top\.has-menu \.nav-links a\.jk-sw\s*\{([^}]+)\}/)[1];
+  for (const rule of ['width: 100%;', 'min-height: 44px;', 'padding: 0 14px;']) assert.ok(links.includes(rule), rule);
+  assert.match(css, /@media \(max-width: 599\.98px\) and \(prefers-reduced-motion: reduce\) \{\s*nav\.site-nav\.has-menu \.nav-row \{ transition: none; \}/);
+  assert.match(mobile, /outline: 2px solid var\(--jk-focus\)/);
+  assert.match(mobile, /:root \{ --jk-bar-h: 57px; \}/);
+  assert.match(read('_layouts/default.html'), /src="\{\{ '\/assets\/js\/nav-menu\.js' \| relative_url \}\}" defer/);
 });
