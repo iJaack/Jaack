@@ -802,8 +802,8 @@ p { margin: 0 0 14px; }
 a.text-link, a.note-back { display: inline-flex; align-items: center; min-height: 44px; padding: 7px 0; box-sizing: border-box; }
 .work-jumps { gap: 0 14px; margin-top: 28px; }
 .work-jumps a { min-width: 44px; min-height: 44px; padding: 0 7px; box-sizing: border-box; justify-content: center; }
-.projects > .work-jumps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 14px; }
-.projects > .work-jumps a { font-size: var(--jk-fs-xs); padding: 0; }
+.work > .work-jumps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 14px; }
+.work > .work-jumps a { font-size: var(--jk-fs-xs); padding: 0; }
 .reading-path { margin: 28px 0; }
 .reading-path h2 { font-family: var(--jk-serif); font-weight: 450; font-size: 32px; line-height: 42px; margin: 28px 0 14px; }
 .reading-pick .work-meta { margin: 0; color: var(--jk-t3); }

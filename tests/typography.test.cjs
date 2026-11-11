@@ -79,7 +79,7 @@ for (const width of [390, 669, 1280]) {
             const rows = [...document.querySelectorAll('.dated-row')].filter(visible);
             const links = rows.flatMap(row => [...row.querySelectorAll(':scope > a')]);
             const targets = [...links, ...document.querySelectorAll('.text-link, .note-back, .work-jumps a')].filter(visible);
-            const jumps = [...document.querySelectorAll('.projects > .work-jumps a')].filter(visible);
+            const jumps = [...document.querySelectorAll('.work > .work-jumps a')].filter(visible);
             const archive = [...document.querySelectorAll('.list .dated-row > a')].filter(visible);
             return {
               targets: targets.map(el => [el.textContent.trim(), el.getBoundingClientRect().height]),
@@ -106,6 +106,7 @@ for (const width of [390, 669, 1280]) {
               assert.ok(Math.abs(parseFloat(c.column) - 7 * c.font) < .5, `${route}: date column must be 7em`);
             } else assert.ok(c.titleTop >= c.dateTop + 27, `${route}: date must sit above title`);
           }
+          if (route === '/projects/') assert.equal(result.jumpWidths.length, 6, 'all six project jumps must be measured');
           assert.ok(result.jumpRows <= 2, `${route} ${lang}: ${result.jumpRows} jump rows`);
           for (const [scroll, client] of result.jumpWidths) assert.ok(scroll <= client + 1, `${route}: clipped jump label`);
           if (result.archiveLefts.length) assert.ok(Math.max(...result.archiveLefts) - Math.min(...result.archiveLefts) <= .5, `${route}: archive indent`);
