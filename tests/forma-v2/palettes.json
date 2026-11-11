@@ -5,22 +5,24 @@
       "surface": "#ffffff",
       "ink": "#121210",
       "ink2": "#4f4b44",
-      "t2": "rgba(18,18,16,0.70)",
-      "t3": "rgba(18,18,16,0.64)",
+      "t2": "rgba(18,18,16,.70)",
+      "t3": "rgba(18,18,16,.64)",
       "accent": "#a8850f",
-      "accentText": "#7a5c00",
-      "onAccent": "#171710"
+      "accentText": "#866400",
+      "onAccent": "#171710",
+      "surface2": "#efece5"
     },
     "dark": {
-      "bg": "#14110e",
-      "surface": "#1b1714",
-      "ink": "#f4eee5",
-      "ink2": "#cdc3b6",
-      "t2": "rgba(244,238,229,0.70)",
-      "t3": "rgba(244,238,229,0.58)",
-      "accent": "#e8c547",
-      "accentText": "#e8c547",
-      "onAccent": "#171710"
+      "bg": "#130e0b",
+      "surface": "#1c1713",
+      "ink": "#e9e4da",
+      "ink2": "#b6b0a8",
+      "t2": "rgba(233,228,218,.72)",
+      "t3": "rgba(233,228,218,.58)",
+      "accent": "#ba9f59",
+      "accentText": "#ba9f59",
+      "onAccent": "#130e0b",
+      "surface2": "#26201c"
     }
   },
   "jaack.me": {
@@ -29,22 +31,24 @@
       "surface": "#fffdf8",
       "ink": "#1c1612",
       "ink2": "#5a4e45",
-      "t2": "rgba(28,22,18,0.72)",
-      "t3": "rgba(28,22,18,0.64)",
+      "t2": "rgba(28, 22, 18, .72)",
+      "t3": "rgba(28, 22, 18, .64)",
       "accent": "#8c3a48",
       "accentText": "#6e2432",
-      "onAccent": "#fffdf8"
+      "onAccent": "#fffdf8",
+      "surface2": "#e7dfd2"
     },
     "dark": {
-      "bg": "#161210",
-      "surface": "#1e1916",
-      "ink": "#f6f0e8",
-      "ink2": "#d4c6ba",
-      "t2": "rgba(246,240,232,0.72)",
-      "t3": "rgba(246,240,232,0.58)",
-      "accent": "#e7a8b4",
-      "accentText": "#f0c0c8",
-      "onAccent": "#1c1214"
+      "bg": "#130e0b",
+      "surface": "#1c1713",
+      "ink": "#e9e4da",
+      "ink2": "#b6b0a8",
+      "t2": "rgba(233, 228, 218, .72)",
+      "t3": "rgba(233, 228, 218, .58)",
+      "accent": "#ba7980",
+      "accentText": "#ba7980",
+      "onAccent": "#130e0b",
+      "surface2": "#26201c"
     }
   },
   "moxie": {

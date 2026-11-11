@@ -1,12 +1,5 @@
 @font-face {
   font-family: "Newsreader";
-  src: url("../fonts/newsreader/Newsreader-roman.woff2") format("woff2");
-  font-weight: 400 700;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Newsreader";
   src: url("../fonts/newsreader/Newsreader-italic.woff2") format("woff2");
   font-weight: 400 700;
   font-style: italic;
@@ -19,6 +12,8 @@
    This site's own skin: warm paper, oxblood instead of Forma's gold, serif headlines,
    a 33em essay measure, and dated writing rows. Work titles stay in the system sans. */
 
+:root { --jk-dock-h: 0px; --jk-dock-gap: 0px; }
+
 nav.site-nav.jk-top {
   width: min(1120px, calc(100% - 2 * max(8px, env(safe-area-inset-left), env(safe-area-inset-right))));
   flex-wrap: wrap;
@@ -27,7 +22,9 @@ nav.site-nav.jk-top {
   z-index: 40;
 }
 nav.site-nav .nav-row { display: contents; }
-nav.site-nav .jk-mark { margin-right: 4px; }
+nav.site-nav .nav-menu-toggle { display: none; }
+/* Keep 18px outer insets on desktop: 14 + 4 on the left, 8 + 10 on the right. */
+nav.site-nav .jk-mark { margin-left: 4px; margin-right: 4px; }
 nav.site-nav .nav-links {
   display: flex;
   flex-wrap: wrap;
@@ -79,7 +76,7 @@ nav.site-nav .jk-mark {
 }
 .jk-thsw button { min-height: 44px; min-width: 44px; }
 /* Reserve the mounted switch footprint before theme.js runs. */
-nav.site-nav [data-jk-theme-switch] { width: 180px; height: 48px; }
+nav.site-nav [data-jk-theme-switch] { width: 180px; height: 48px; margin-right: 10px; }
 @media (max-width: 760px) {
   nav.site-nav [data-jk-theme-switch] { width: 140px; }
   nav.site-nav [data-jk-theme-switch]:empty { min-width: 140px; min-height: 48px; }
@@ -99,7 +96,7 @@ nav.site-nav [data-jk-theme-switch] { width: 180px; height: 48px; }
   height: auto;
   margin: 0 auto;
   padding:
-    calc(var(--jk-topbar-h) + 12px)
+    var(--jk-top-clearance)
     max(clamp(16px, 3vw, 28px), env(safe-area-inset-right))
     env(safe-area-inset-bottom)
     max(clamp(16px, 3vw, 28px), env(safe-area-inset-left));
@@ -107,15 +104,22 @@ nav.site-nav [data-jk-theme-switch] { width: 180px; height: 48px; }
 .wrapper-xwide.jk-page { max-width: 1240px; }
 
 @media (max-width: 880px) {
-  :root { --jk-topbar-h: 112px; }
+  :root {
+    --jk-bar-h: 104px;
+    /* The vendor adds safe area separately; the bar sits at max(8px, safe area). */
+    --jk-bar-gap: calc(max(8px, env(safe-area-inset-top, 0px)) - env(safe-area-inset-top, 0px));
+  }
   nav.site-nav.jk-top {
     width: min(1120px, calc(100% - 2 * max(4px, env(safe-area-inset-left), env(safe-area-inset-right))));
     top: max(8px, env(safe-area-inset-top));
     gap: 2px 6px;
     padding: 4px 6px 4px 10px;
   }
-  nav.site-nav .jk-mark { order: 1; margin-right: 0; flex: 1 1 auto; }
-  nav.site-nav [data-jk-theme-switch] { order: 2; margin-left: auto; flex: 0 0 auto; }
+  /* R = 51.5px; at glyph top y = 13.7px the curve intrudes 16.52px.
+     ceil(16.52 + 14) = 31px; 32px allows for font rasterization.
+     Top row only: 10 + 22 = 32px left, 6 + 26 = 32px right; row two keeps its padding. */
+  nav.site-nav .jk-mark { order: 1; margin-left: 22px; margin-right: 0; flex: 1 1 auto; }
+  nav.site-nav [data-jk-theme-switch] { order: 2; margin-left: auto; margin-right: 26px; flex: 0 0 auto; }
   nav.site-nav .nav-row {
     display: flex;
     order: 3;
@@ -137,16 +141,83 @@ nav.site-nav [data-jk-theme-switch] { width: 180px; height: 48px; }
 }
 
 
+@media (max-width: 693.98px) {
+  :root { --jk-bar-h: 57px; }
+  :root:has(nav.site-nav:not(.has-menu)) { --jk-bar-h: 104px; }
+  nav.site-nav.jk-top.has-menu {
+    /* R = 28.5px; the glyph top at 13.7px needs 4.14 + 14px. */
+    flex-wrap: nowrap;
+    padding: 4px 20px;
+  }
+  nav.site-nav.has-menu .jk-mark { margin-left: 0; }
+  nav.site-nav.has-menu [data-jk-theme-switch] { margin-right: 0; }
+  nav.site-nav.has-menu .nav-menu-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    order: 3;
+    flex: none;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 6px 10px;
+    border: 0;
+    border-radius: var(--jk-r-pill);
+    background: transparent;
+    color: var(--jk-ink-2);
+    font: 600 13px/1 var(--jk-font);
+    cursor: pointer;
+  }
+  nav.site-nav.has-menu .nav-menu-toggle:focus-visible {
+    outline: 2px solid var(--jk-focus);
+    outline-offset: 2px;
+  }
+  nav.site-nav.has-menu .nav-row {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 6px;
+    background: var(--jk-surface-2);
+    border: 1px solid var(--jk-hair-2);
+    border-radius: 14px;
+    max-height: calc(100dvh - 90px);
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 160ms;
+  }
+  nav.site-nav.has-menu.is-menu-open .nav-row,
+  nav.site-nav.has-menu.is-menu-closing .nav-row { visibility: visible; }
+  nav.site-nav.has-menu.is-menu-open .nav-row { opacity: 1; pointer-events: auto; }
+  nav.site-nav.has-menu .nav-links { flex: none; flex-direction: column; overflow: visible; }
+  nav.site-nav.has-menu .nav-links li { width: 100%; }
+  nav.site-nav.jk-top.has-menu .nav-links a.jk-sw {
+    width: 100%;
+    min-height: 44px;
+    padding: 0 14px;
+  }
+  nav.site-nav.has-menu .lang-switch { margin: 0; }
+}
+
+@media (max-width: 693.98px) and (prefers-reduced-motion: reduce) {
+  nav.site-nav.has-menu .nav-row { transition: none; }
+}
+
 @media (max-width: 480px) {
   /* Reserve room for the controls and up to three rows of whole labels. */
-  :root { --jk-topbar-h: 200px; }
-  nav.site-nav .nav-row { align-items: flex-start; }
-  nav.site-nav .nav-links {
+  :root:has(nav.site-nav:not(.has-menu)) { --jk-bar-h: 192px; }
+  nav.site-nav:not(.has-menu) .nav-row { align-items: flex-start; }
+  nav.site-nav:not(.has-menu) .nav-links {
     flex-wrap: wrap;
     overflow: visible;
   }
-  nav.site-nav .nav-links li { flex: none; }
-  nav.site-nav.jk-top .nav-links a.jk-sw {
+  nav.site-nav:not(.has-menu) .nav-links li { flex: none; }
+  nav.site-nav.jk-top:not(.has-menu) .nav-links a.jk-sw {
     padding: 6px 6px;
     white-space: nowrap;
   }
@@ -266,7 +337,7 @@ html[data-theme="dark"] .highlight .cp { color: var(--jk-t2); }
 
 /* Editorial skin. Packaged gold stays in the shared files and is not this site's accent. */
 :root {
-  --jk-serif: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --jk-serif: var(--jk-font-read);
   --jk-fs-body: 18px;
   --jk-lh-body: 28px;
   --jk-baseline: 14px;
@@ -303,18 +374,21 @@ html[data-theme="light"] {
   --jk-accent-wash: rgba(140, 58, 72, .12);
 }
 html[data-theme="dark"] {
-  --jk-bg: #161210;
-  --jk-surface: #1e1916;
-  --jk-surface-2: #231e1a;
-  --jk-ink: #f6f0e8;
-  --jk-ink-2: #d4c6ba;
-  --jk-t2: rgba(246, 240, 232, .72);
-  --jk-t3: rgba(246, 240, 232, .58);
-  --jk-hair: rgba(246, 240, 232, .14);
-  --jk-accent: #e7a8b4;
-  --jk-accent-text: #f0c0c8;
-  --jk-on-accent: #1c1214;
-  --jk-accent-wash: rgba(231, 168, 180, .12);
+  --jk-bg: #130e0b;
+  --jk-surface: #1c1713;
+  --jk-surface-2: #26201c;
+  --jk-ink: #e9e4da;
+  --jk-ink-2: #b6b0a8;
+  --jk-t2: rgba(233, 228, 218, .72);
+  --jk-t3: rgba(233, 228, 218, .58);
+  --jk-hair: rgba(233, 228, 218, .12);
+  --jk-hair-2: rgba(233, 228, 218, .20);
+  --jk-edge: rgba(233, 228, 218, .39);
+  --jk-accent: #ba7980;
+  --jk-accent-text: #ba7980;
+  --jk-on-accent: #130e0b;
+  --jk-accent-wash: rgba(186, 121, 128, .12);
+  --jk-focus: var(--jk-accent-text);
 }
 .hero-label {
   font-family: var(--jk-font);
@@ -495,10 +569,10 @@ html[data-theme="dark"] .pv-stage {
   box-shadow: none;
 }
 html[data-theme="dark"] .pv-toggle {
-  background: rgba(30,25,22,.88);
-  --pv-shadow: inset 0 0 0 1px rgba(246,240,232,.28), inset 0 1px 0 rgba(255,255,255,.06), 0 4px 14px -4px rgba(8,6,4,.55);
+  background: rgba(28,23,19,.88);
+  --pv-shadow: inset 0 0 0 1px rgba(233,228,218,.28), inset 0 1px 0 rgba(233,228,218,.06), 0 4px 14px -4px rgba(8,5,4,.55);
 }
-html[data-theme="dark"] .pv-toggle:hover { background: #261F1B; }
+html[data-theme="dark"] .pv-toggle:hover { background: var(--jk-surface-2); }
 @media (min-width: 776px) {
   .project-video { --pv-w: 720px; --pv-h: 820px; }
   .pv-stage { aspect-ratio: 720 / 820; }

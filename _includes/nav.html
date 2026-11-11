@@ -1,6 +1,6 @@
 <nav class="site-nav jk-top jk-glass" aria-label="Main">
   <a class="jk-mark site-wordmark" href="{{ '/' | relative_url }}">jaack<span class="dot">.</span><span class="dom">me</span><span class="visually-hidden">, home</span></a>
-  <div class="nav-row">
+  <div class="nav-row" id="site-menu">
   {% assign page_sections = page.url | split: "/" %}
   <ul class="nav-links jk-links">
     {% for link in site.data.ui_text.nav_links %}
@@ -16,4 +16,5 @@
   </div>
   </div>
   <span data-jk-theme-switch></span>
+  <button type="button" class="nav-menu-toggle" aria-expanded="false" aria-controls="site-menu"><span class="lang-en" lang="en">Menu</span><span class="lang-it" lang="it">Menu</span></button>
 </nav>

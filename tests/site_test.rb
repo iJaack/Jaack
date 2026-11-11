@@ -20,6 +20,10 @@ class SiteTest < Minitest::Test
       assert_equal 1, page.css('main').length, route
       assert_equal 1, page.css('h1').length, route
       assert_equal 1, page.css('nav.site-nav').length, route
+      menu = page.at_css('nav.site-nav .nav-menu-toggle[aria-expanded="false"]')
+      refute_nil menu, route
+      assert page.at_css("nav.site-nav .nav-row##{menu['aria-controls']}"), route
+      assert_equal 1, page.css('script[src="/assets/js/nav-menu.js"][defer]').length, route
       assert_equal 1, page.css('link[rel="canonical"]').length, route
       assert_match %r{\Ahttps://jaack.me/}, page.at_css('link[rel="canonical"]')['href'], route
       assert page.at_css('a[href="#main-content"]'), route
@@ -41,6 +45,21 @@ class SiteTest < Minitest::Test
       assert_equal visible + suffix, button.text
       assert_equal suffix, button.at_css('.visually-hidden').text
     end
+  end
+
+  def test_built_navigation_preserves_row_padding_at_each_breakpoint
+    css = File.read(File.join(ROOT, 'assets/css/jaack-site.css')).gsub(%r{/\*.*?\*/}m, '')
+    assert_match /nav\.site-nav\.jk-top\s*\{[^}]*padding:\s*6px 8px 6px 14px;/, css
+    tablet = css.match(/@media \(max-width: 880px\) \{(.*?)\n\}/m)[1]
+    assert_match /nav\.site-nav\.jk-top\s*\{[^}]*padding:\s*4px 6px 4px 10px;/, tablet
+    assert_match /nav\.site-nav \.jk-mark\s*\{[^}]*margin-left:\s*22px;/, tablet
+    assert_match /nav\.site-nav \[data-jk-theme-switch\]\s*\{[^}]*margin-right:\s*26px;/, tablet
+    mobile = css.match(/@media \(max-width: 693\.98px\) \{(.*?)\n\}/m)[1]
+    assert_match /nav\.site-nav\.jk-top\.has-menu\s*\{[^}]*padding:\s*4px 20px;/, mobile
+    assert_match /nav\.site-nav\.has-menu \.jk-mark\s*\{[^}]*margin-left:\s*0;/, mobile
+    assert_match /nav\.site-nav\.has-menu \[data-jk-theme-switch\]\s*\{[^}]*margin-right:\s*0;/, mobile
+    assert_match /:root \{ --jk-bar-h: 57px; \}/, mobile
+    assert_match /:root:has\(nav\.site-nav:not\(\.has-menu\)\) \{ --jk-bar-h: 104px; \}/, mobile
   end
 
   def test_internal_links_and_assets_on_updated_pages_resolve
@@ -197,6 +216,8 @@ class SiteTest < Minitest::Test
     assert_equal 1, page.css('h1').length
     assert page.at_css('main.post')
     assert page.at_css('script[src*="beeline-button"]')
+    assert page.at_css('script[src="/assets/beeline/beeline-button.min.js"] + script[src="/assets/js/beeline-skin.js"][defer]')
+    refute doc('index.html').at_css('script[src="/assets/js/beeline-skin.js"]')
     assert_match /\A\d{4}-\d{2}-\d{2}\z/, page.at_css('time')['datetime']
   end
 

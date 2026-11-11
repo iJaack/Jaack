@@ -41,7 +41,7 @@ test('both themes match the local spec palettes, including the three dark backgr
   const palettes = JSON.parse(read('tests/forma-v2/palettes.json'));
   const sources = { [Object.keys(palettes)[0]]: `${design}/tokens.css`,
     'jaack.me': 'assets/css/jaack-site.css', moxie: 'moxie/jaack-moxie.css' };
-  const names = { ink2: 'ink-2', accentText: 'accent-text', onAccent: 'on-accent' };
+  const names = { ink2: 'ink-2', accentText: 'accent-text', onAccent: 'on-accent', surface2: 'surface-2' };
   for (const [name, source] of Object.entries(sources)) {
     for (const [mode, palette] of Object.entries(palettes[name])) {
       const actual = theme(read(source), mode);
@@ -50,8 +50,8 @@ test('both themes match the local spec palettes, including the three dark backgr
       }
     }
   }
-  for (const [source, bg] of [[`${design}/tokens.css`, '#14110e'],
-    ['assets/css/jaack-site.css', '#161210'], ['moxie/jaack-moxie.css', '#13120f']]) {
+  for (const [source, bg] of [[`${design}/tokens.css`, '#130e0b'],
+    ['assets/css/jaack-site.css', '#130e0b'], ['moxie/jaack-moxie.css', '#13120f']]) {
     assert.equal(theme(read(source), 'dark')['--jk-bg'], bg);
   }
 });
@@ -94,35 +94,42 @@ test('shared rhythm and motion follow Forma v2 with reduced motion and a static 
   }
 });
 
-test('Newsreader uses the supplied 400–700 subsets, fits its budget and preloads only roman in built heads', () => {
+test('Newsreader opts in to the packaged roman and local italic, fits its budget and preloads only roman', () => {
   const css = read('assets/css/jaack-site.css');
-  const faces = [...css.matchAll(/@font-face\s*\{([^}]+)\}/g)].map(match => match[1]);
+  const packageCSS = read(`${design}/fonts/newsreader/fonts.css`);
+  const faces = [...(packageCSS + css).matchAll(/@font-face\s*\{([^}]+)\}/g)]
+    .map(match => match[1]).filter(face => /font-family:\s*"Newsreader"[;]/.test(face));
   assert.equal(faces.length, 2);
   for (const [index, face] of faces.entries()) {
     assert.match(face, /font-family:\s*"Newsreader"/);
-    assert.match(face, /font-weight:\s*400 700/);
+    assert.match(face, index ? /font-weight:\s*400 700/ : /font-weight:\s*200 800/);
     assert.match(face, /font-display:\s*swap/);
     assert.ok(face.includes(`Newsreader-${index ? 'italic' : 'roman'}.woff2`));
-    assert.ok(face.includes(`font-style: ${index ? 'italic' : 'normal'}`));
+    assert.match(face, index ? /font-style:\s*italic/ : /font-style:\s*normal/);
   }
-  const fonts = files('assets/fonts/newsreader');
+  const fonts = [...files('assets/fonts/newsreader'), ...files(`${design}/fonts/newsreader`)];
+  assert.doesNotMatch(css, /Newsreader-roman\.woff2/);
+  assert.ok(!fs.existsSync(path.join(root, 'assets/fonts/newsreader/Newsreader-roman.woff2')));
   assert.ok(fonts.includes('assets/fonts/newsreader/OFL.txt'));
   assert.ok(!fonts.some(file => file.endsWith('Newsreader-carta.woff2')));
   const total = fonts.filter(file => file.endsWith('.woff2'))
     .reduce((sum, file) => sum + fs.statSync(path.join(root, file)).size, 0);
-  assert.ok(total <= 240000, `${total} bytes exceeds 240 KB`);
+  // The v2 package supplies the wider 200–800 roman; retain the local 400–700 italic.
+  assert.ok(total <= 320000, `${total} bytes exceeds 320 KB`);
   for (const file of files('_site').filter(file => file.endsWith('.html'))) {
     const head = read(file).match(/<head>([\s\S]*?)<\/head>/i)?.[1];
     if (!head || !head.includes('/assets/css/jaack-site.css')) continue;
     const preloads = [...head.matchAll(/<link\b[^>]*rel="preload"[^>]*>/g)]
       .map(match => match[0]).filter(link => /as="font"/.test(link));
     assert.equal(preloads.length, 1, file);
-    assert.match(preloads[0], /href="\/assets\/fonts\/newsreader\/Newsreader-roman\.woff2"/);
+    assert.match(preloads[0], /href="\/assets\/jaack-design-system\/fonts\/newsreader\/Newsreader-roman\.woff2"/);
     assert.match(preloads[0], /type="font\/woff2"/);
     assert.match(preloads[0], /\bcrossorigin\b/);
+    assert.match(head, /href="\/assets\/jaack-design-system\/jaack\.css"[^>]*>\s*<link[^>]*href="\/assets\/jaack-design-system\/fonts\/newsreader\/fonts\.css"/);
   }
   assert.match(read('_site/index.html'), /Newsreader-roman\.woff2/);
-  assert.match(css, /--jk-serif: "Newsreader", "Iowan Old Style", Georgia, serif/);
+  assert.match(css, /--jk-serif: var\(--jk-font-read\)/);
+  assert.match(read(`${design}/tokens.css`), /--jk-font-read:"Newsreader","Newsreader Fallback Iowan","Newsreader Fallback Georgia"/);
   assert.match(css, /\.post-body\s*\{[^}]*font-family: var\(--jk-serif\); font-size: var\(--jk-fs-body\); line-height: var\(--jk-lh-body\); font-weight: 400/);
 });
 
@@ -191,17 +198,30 @@ test('long articles opt into 20/28 at 23em only from 600px', () => {
   assert.equal(read('_site/assets/css/jaack-site.css'), read('assets/css/jaack-site.css'));
 });
 
-test('phone navigation wraps whole labels without clipping and keeps 44px targets', () => {
+test('navigation keeps the original row width with insets on the top-row items', () => {
+  const css = stripComments(read('assets/css/jaack-site.css'));
+  const desktop = css.split('@media')[0];
+  assert.match(desktop, /nav\.site-nav\.jk-top\s*\{[^}]*padding:\s*6px 8px 6px 14px;/);
+  assert.match(desktop, /nav\.site-nav \.jk-mark\s*\{[^}]*margin-left:\s*4px;/);
+  assert.match(desktop, /nav\.site-nav \[data-jk-theme-switch\]\s*\{[^}]*margin-right:\s*10px;/);
+  const tablet = css.match(/@media \(max-width: 880px\) \{([\s\S]*?)\n\}/)?.[1];
+  assert.ok(tablet, 'missing two-row navigation rules');
+  assert.match(tablet, /nav\.site-nav\.jk-top\s*\{[^}]*padding:\s*4px 6px 4px 10px;/);
+  assert.match(tablet, /nav\.site-nav \.jk-mark\s*\{[^}]*margin-left:\s*22px;/);
+  assert.match(tablet, /nav\.site-nav \[data-jk-theme-switch\]\s*\{[^}]*margin-right:\s*26px;/);
+});
+
+test('no-JS phone navigation wraps whole labels without clipping and keeps 44px targets', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
   const phone = css.match(/@media \(max-width: 480px\) \{([\s\S]*?)\n\}/)?.[1];
   assert.ok(phone, 'missing phone navigation rules');
-  const links = phone.match(/nav\.site-nav \.nav-links\s*\{([^}]+)\}/)?.[1];
+  const links = phone.match(/nav\.site-nav:not\(\.has-menu\) \.nav-links\s*\{([^}]+)\}/)?.[1];
   assert.match(links, /flex-wrap:\s*wrap;/);
   assert.match(links, /overflow:\s*visible;/);
-  assert.match(phone, /nav\.site-nav \.nav-links li\s*\{[^}]*flex:\s*none;/);
+  assert.match(phone, /nav\.site-nav:not\(\.has-menu\) \.nav-links li\s*\{[^}]*flex:\s*none;/);
   const targets = css.match(/nav\.site-nav\.jk-top \.nav-links a\.jk-sw\s*\{([^}]+)\}/)?.[1];
   assert.match(targets, /min-height:\s*44px;/);
-  const phoneTargets = phone.match(/nav\.site-nav\.jk-top \.nav-links a\.jk-sw\s*\{([^}]+)\}/)?.[1];
+  const phoneTargets = phone.match(/nav\.site-nav\.jk-top:not\(\.has-menu\) \.nav-links a\.jk-sw\s*\{([^}]+)\}/)?.[1];
   assert.match(phoneTargets, /white-space:\s*nowrap;/);
   assert.match(phoneTargets, /padding:\s*6px 6px;/);
   for (const [, rule] of css.matchAll(/[^{}]*\.nav-links[^{}]*\ba(?:\.jk-sw)?[^{}]*\{([^}]+)\}/g)) {
@@ -241,17 +261,26 @@ test('donation button uses accessible accent tokens and only fades on interactio
   assert.match(html, /src="https:\/\/cdn\.buymeacoffee\.com\/buttons\/bmc-new-btn-logo\.svg"/);
 });
 
-test('Moxie vendors an exact design-system copy, excluding screenshots', () => {
-  const canonical = files(design).filter(file => !file.startsWith(`${design}/screenshots/`))
-    .map(file => file.slice(design.length + 1)).sort();
-  const copy = files('moxie/jaack-design-system')
-    .map(file => file.slice('moxie/jaack-design-system/'.length)).sort();
-  assert.deepEqual(copy, canonical);
-  for (const [, file, hash] of read(`${design}/VERSION`).matchAll(/^  ([\w./-]+): ([a-f0-9]{64})$/gm)) {
+test('jaack.me vendors the exact v2 release with SOURCE; Moxie stays pinned to its separate legacy copy', () => {
+  const canonical = [...read(`${design}/MANIFEST.txt`).matchAll(/^([a-f0-9]{64})  ([\w./-]+)$/gm)];
+  assert.ok(canonical.length > 0, 'empty vendor manifest');
+  assert.equal(read(`${design}/VERSION`).trim(), '2.0.0');
+  assert.match(read(`${design}/SOURCE`), /^iJaack\/jaack-design v2\.0\.0 [a-f0-9]{40}\n$/);
+  assert.deepEqual(files(design).map(file => file.slice(design.length + 1)).sort(),
+    [...canonical.map(([, , file]) => file), 'MANIFEST.txt', 'SOURCE'].sort());
+  for (const [, hash, file] of canonical) {
     assert.equal(createHash('sha256').update(fs.readFileSync(path.join(root, design, file))).digest('hex'), hash, file);
   }
-  for (const file of canonical) assert.deepEqual(fs.readFileSync(path.join(root, design, file)),
-    fs.readFileSync(path.join(root, 'moxie/jaack-design-system', file)), file);
+  const legacy = 'moxie/jaack-design-system';
+  const copy = files(legacy).map(file => file.slice(legacy.length + 1)).sort();
+  const entries = copy.map(file => [file,
+    createHash('sha256').update(fs.readFileSync(path.join(root, legacy, file))).digest('hex')]);
+  // Pin the complete pre-migration tree, including files not listed in its old VERSION.
+  assert.equal(createHash('sha256').update(JSON.stringify(entries)).digest('hex'),
+    '8fa176ad60cabe83aa7bc15a5d95975c58215b4e9f3bc42f17118c2fcc1e8ca6');
+  for (const [, file, hash] of read(`${legacy}/VERSION`).matchAll(/^  ([\w./-]+): ([a-f0-9]{64})$/gm)) {
+    assert.equal(createHash('sha256').update(fs.readFileSync(path.join(root, legacy, file))).digest('hex'), hash, file);
+  }
 });
 
 test('repo-local WCAG contrast check passes for Forma, jaack.me and Moxie', () => {
@@ -259,4 +288,58 @@ test('repo-local WCAG contrast check passes for Forma, jaack.me and Moxie', () =
   assert.equal(result.status, 0, result.error?.message || result.stdout + result.stderr);
   assert.match(result.stderr, /FAIL: 0/);
   assert.equal(Object.keys(JSON.parse(read('tests/forma-v2/palettes.json'))).length, 3);
+});
+
+test('jaack.me dark tokens use the approved Ombra grounds, ink, lines and accent', () => {
+  const actual = theme(read('assets/css/jaack-site.css'), 'dark');
+  for (const [key, value] of Object.entries({
+    bg: '#130e0b', surface: '#1c1713', 'surface-2': '#26201c',
+    ink: '#e9e4da', 'ink-2': '#b6b0a8', t2: 'rgba(233,228,218,.72)', t3: 'rgba(233,228,218,.58)',
+    hair: 'rgba(233,228,218,.12)', 'hair-2': 'rgba(233,228,218,.20)', edge: 'rgba(233,228,218,.39)',
+    accent: '#ba7980', 'accent-text': '#ba7980', 'on-accent': '#130e0b',
+    'accent-wash': 'rgba(186,121,128,.12)', focus: 'var(--jk-accent-text)'
+  })) assert.equal(normalize(actual[`--jk-${key}`]), normalize(value), key);
+  assert.match(read('assets/css/jaack-site.css'), /html\[data-theme="dark"\] \.pv-toggle:hover\s*\{\s*background: var\(--jk-surface-2\);/);
+});
+
+test('site code uses top clearance everywhere and contains no old dark ramp or pure black', () => {
+  const oldRamp = /#(?:14110e|1b1714|231e1a|11100e|191714|13120e|1a1915|15110f|1d1815|15100e|1e1814|161210|1a1612|12100e|1a1714|f4eee5|cdc3b6|1e1916|120f0c)\b/i;
+  const pureBlack = /#000\b|#000000|:\s*black\b|rgba\(0,\s*0,\s*0/i;
+  for (const dir of ['assets/css', '_sass', 'assets/js', '_includes', '_layouts']) {
+    for (const file of files(dir)) {
+      assert.doesNotMatch(read(file), /--jk-topbar-h/, file);
+      assert.doesNotMatch(read(file), oldRamp, file);
+      assert.doesNotMatch(read(file), pureBlack, file);
+    }
+  }
+  const css = read('assets/css/jaack-site.css');
+  assert.match(css, /padding:\s*var\(--jk-top-clearance\)/);
+  assert.match(css, /--jk-dock-h: 0px; --jk-dock-gap: 0px;/);
+  assert.match(css, /--jk-bar-h: 104px;/);
+  assert.match(css, /--jk-bar-h: 192px;/);
+  assert.match(css, /--jk-bar-gap: calc\(max\(8px, env\(safe-area-inset-top, 0px\)\) - env\(safe-area-inset-top, 0px\)\);/);
+  assert.match(read('_sass/pages/notes.sass'), /scroll-margin-top: var\(--jk-top-clearance\)/);
+  assert.match(read('assets/css/team1.css'), /top: var\(--jk-top-clearance\)/);
+});
+
+
+test('enhanced mobile sheet uses tokens, 44px links and only a 160ms opacity fade', () => {
+  const css = stripComments(read('assets/css/jaack-site.css'));
+  const mobile = css.match(/@media \(max-width: 693\.98px\) \{([\s\S]*?)\n\}/)[1];
+  assert.match(mobile, /nav\.site-nav\.jk-top\.has-menu\s*\{[^}]*padding:\s*4px 20px;/);
+  assert.match(mobile, /nav\.site-nav\.has-menu \.jk-mark\s*\{[^}]*margin-left:\s*0;/);
+  assert.match(mobile, /nav\.site-nav\.has-menu \[data-jk-theme-switch\]\s*\{[^}]*margin-right:\s*0;/);
+  const sheet = mobile.match(/nav\.site-nav\.has-menu \.nav-row\s*\{([^}]+)\}/)[1];
+  for (const rule of ['position: absolute;', 'top: calc(100% + 8px);', 'left: 0;', 'right: 0;',
+    'background: var(--jk-surface-2);', 'border: 1px solid var(--jk-hair-2);',
+    'border-radius: 14px;', 'padding: 6px;', 'visibility: hidden;', 'transition: opacity 160ms;']) {
+    assert.ok(sheet.includes(rule), rule);
+  }
+  const links = mobile.match(/nav\.site-nav\.jk-top\.has-menu \.nav-links a\.jk-sw\s*\{([^}]+)\}/)[1];
+  for (const rule of ['width: 100%;', 'min-height: 44px;', 'padding: 0 14px;']) assert.ok(links.includes(rule), rule);
+  assert.match(css, /@media \(max-width: 693\.98px\) and \(prefers-reduced-motion: reduce\) \{\s*nav\.site-nav\.has-menu \.nav-row \{ transition: none; \}/);
+  assert.match(mobile, /outline: 2px solid var\(--jk-focus\)/);
+  assert.match(mobile, /:root \{ --jk-bar-h: 57px; \}/);
+  assert.match(mobile, /:root:has\(nav\.site-nav:not\(\.has-menu\)\) \{ --jk-bar-h: 104px; \}/);
+  assert.match(read('_layouts/default.html'), /src="\{\{ '\/assets\/js\/nav-menu\.js' \| relative_url \}\}" defer/);
 });
