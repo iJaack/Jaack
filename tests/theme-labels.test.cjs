@@ -2,27 +2,17 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
-const source = fs.readFileSync('assets/js/theme-labels.js', 'utf8');
+const source = fs.readFileSync('assets/jaack-design-system/theme.js', 'utf8');
 
-function load({ lang = 'en', uiLang, mounted = true, present = true, readyState = 'complete', theme = { FROM: 7, TO: 19 } } = {}) {
+function load({ lang = 'en', uiLang, from = 7, to = 19, present = true } = {}) {
   const listeners = new Map();
-  const observers = [];
-  const buttons = ['auto', 'light', 'dark'].map((mode, index) => ({
-    label: { textContent: ['Auto', 'Chiaro', 'Scuro'][index] },
-    title: ['Automatico: chiaro dalle 7 alle 19', 'Tema chiaro', 'Tema scuro'][index],
-    attrs: { 'data-m': mode, 'aria-pressed': index === 0 ? 'true' : 'false' },
-    icon: { textContent: ['◐', '☀', '☾'][index] },
-    suffix: { en: ', theme', it: ', tema' },
-    getAttribute(name) { return this.attrs[name]; },
-    querySelector(selector) { assert.equal(selector, '.l'); return this.label; }
-  }));
-  const group = {
-    attrs: { role: 'group', 'aria-label': 'Tema' }, buttons,
-    setAttribute(name, value) { this.attrs[name] = value; },
-    querySelectorAll(selector) { assert.equal(selector, 'button[data-m]'); return buttons; }
-  };
+  const storage = new Map();
+  let observer;
+  let group;
+  const html = { lang, dataset: { uiLang }, classList: { add() {}, remove() {} } };
   const host = {
-    querySelector(selector) { assert.equal(selector, '.jk-thsw'); return mounted ? group : null; }
+    querySelector: () => group || null,
+    appendChild(node) { group = node; }
   };
   function addEventListener(name, callback) {
     if (!listeners.has(name)) listeners.set(name, []);
@@ -31,126 +21,130 @@ function load({ lang = 'en', uiLang, mounted = true, present = true, readyState 
   function dispatch(name, event) {
     for (const callback of listeners.get(name) || []) callback(event);
   }
+  function createElement(tag) {
+    assert.equal(tag, 'div');
+    return {
+      attrs: {}, buttons: [],
+      setAttribute(name, value) { this.attrs[name] = value; },
+      addEventListener,
+      set innerHTML(markup) {
+        this.buttons = [...markup.matchAll(/<button\b([^>]*)>([\s\S]*?)<\/button>/g)].map(([, attrs, content]) => ({
+          attrs: {}, markup: attrs, content,
+          dataset: { m: attrs.match(/data-m="([^"]+)"/)[1] },
+          label: { textContent: '' }, suffix: { textContent: '' },
+          setAttribute(name, value) { this.attrs[name] = value; },
+          querySelector(selector) {
+            assert.ok(['.l', '.visually-hidden'].includes(selector));
+            return selector === '.l' ? this.label : this.suffix;
+          }
+        }));
+      },
+      querySelectorAll(selector) { assert.equal(selector, 'button[data-m]'); return this.buttons; }
+    };
+  }
   const document = {
-    documentElement: { lang, dataset: { uiLang } }, readyState,
+    documentElement: html,
+    currentScript: { dataset: { lightFrom: String(from), lightTo: String(to) } },
+    addEventListener, createElement,
     querySelectorAll(selector) {
-      assert.equal(selector, '[data-jk-theme-switch]');
-      return present ? [host] : [];
-    },
-    addEventListener
+      if (selector === '[data-jk-theme-switch]') return present ? [host] : [];
+      if (selector === '.jk-thsw') return group ? [group] : [];
+      assert.equal(selector, '.jk-thsw button');
+      return group ? group.buttons : [];
+    }
+  };
+  const window = {
+    MutationObserver: class {
+      constructor(callback) { observer = callback; }
+      observe(target, options) {
+        assert.equal(target, html);
+        assert.equal(options.attributes, true);
+        assert.deepEqual(Array.from(options.attributeFilter), ['lang', 'data-ui-lang']);
+      }
+    }
   };
   vm.runInNewContext(source, {
-    document, window: { JaackTheme: theme, addEventListener },
-    MutationObserver: class {
-      constructor(callback) { this.callback = callback; observers.push(this); }
-      observe(target, options) {
-        assert.equal(target, host);
-        assert.deepEqual({ ...options }, { childList: true, subtree: true });
-        this.active = true;
-      }
-      disconnect() { this.active = false; }
-    }
+    document, window, addEventListener, dispatchEvent() {},
+    localStorage: {
+      getItem: key => storage.get(key), setItem: (key, value) => storage.set(key, value),
+      removeItem: key => storage.delete(key)
+    },
+    matchMedia: () => ({ matches: false }),
+    setInterval() {}, setTimeout() {}, clearTimeout() {}, CustomEvent: function() {}
   });
   return {
-    group, observers,
+    get group() { return group; }, html, theme: window.JaackTheme,
     domReady() { dispatch('DOMContentLoaded'); },
-    mount() { mounted = true; },
-    flush() { observers.filter(observer => observer.active).forEach(observer => observer.callback()); },
-    changeLanguage(next) {
-      document.documentElement.dataset.uiLang = next;
-      dispatch('languageChanged', { detail: { lang: next } });
+    changeLanguage(next, viaAttribute = false) {
+      html.dataset.uiLang = next;
+      if (viaAttribute) observer();
+      else dispatch('languageChanged', { detail: { lang: next } });
     }
   };
 }
 
 function assertLabels(group, lang, from = 7, to = 19) {
   const italian = lang === 'it';
+  assert.equal(group.attrs.role, 'group');
   assert.equal(group.attrs['aria-label'], italian ? 'Tema' : 'Theme');
   assert.deepEqual(group.buttons.map(button => button.label.textContent),
     italian ? ['Auto', 'Chiaro', 'Scuro'] : ['Auto', 'Light', 'Dark']);
   assert.deepEqual(group.buttons.map(button => button.title), italian ?
     [`Automatico: chiaro dalle ${from} alle ${to}`, 'Tema chiaro', 'Tema scuro'] :
     [`Automatic: light from ${from} to ${to}`, 'Light theme', 'Dark theme']);
+  for (const button of group.buttons) {
+    assert.equal(button.suffix.textContent, italian ? ', tema' : ', theme');
+    assert.doesNotMatch(button.markup, /aria-label=/);
+    assert.match(button.content, /class="i" aria-hidden="true"/);
+    assert.ok(button.content.indexOf('class="l"') < button.content.indexOf('class="visually-hidden"'));
+  }
 }
 
-test('English labels, titles and group use the theme API hours', () => {
-  const page = load({ uiLang: 'en', theme: { FROM: 6, TO: 22 } });
-  assertLabels(page.group, 'en', 6, 22);
-  assert.equal(page.observers.length, 0);
-});
-
-test('Italian labels, titles and group match the vendor', () => {
-  assertLabels(load({ uiLang: 'it' }).group, 'it');
-});
-
-for (const vendorFirst of [true, false]) {
-  test(`switch mounted at DOMContentLoaded is relabelled (${vendorFirst ? 'vendor' : 'localizer'} first)`, () => {
-    const page = load({ mounted: false, readyState: 'loading', uiLang: 'en' });
-    if (vendorFirst) page.mount();
+for (const lang of ['en', 'it']) {
+  test(`package mounts identical ${lang} labels, titles and group using configured hours`, () => {
+    const page = load({ lang, from: 6, to: 22 });
     page.domReady();
-    if (!vendorFirst) {
-      assert.equal(page.observers.length, 1);
-      assert.equal(page.observers[0].active, true);
-      page.mount();
-      page.flush();
-      assert.equal(page.observers[0].active, false);
-    }
-    assertLabels(page.group, 'en');
+    assertLabels(page.group, lang, 6, 22);
   });
 }
 
-test('a switch mounted after the script uses the latest UI language and disconnects its observer', () => {
-  const page = load({ mounted: false, uiLang: 'en' });
-  assert.equal(page.observers.length, 1);
-  page.changeLanguage('it');
-  page.mount(); page.flush();
-  assertLabels(page.group, 'it');
-  assert.equal(page.observers[0].active, false);
+test('mount uses the UI language selected after the head script, ahead of the content language', () => {
+  const page = load({ lang: 'it' });
+  page.changeLanguage('en');
+  page.domReady();
+  assertLabels(page.group, 'en');
 });
 
-test('languageChanged updates English to Italian and back without changing controls or suffixes', () => {
-  const page = load({ uiLang: 'en' });
-  const originals = page.group.buttons.map(button => ({
-    button, icon: button.icon, suffix: button.suffix, attrs: { ...button.attrs }
-  }));
-  page.changeLanguage('it');
-  assertLabels(page.group, 'it');
-  page.changeLanguage('en');
-  assertLabels(page.group, 'en');
-  assert.equal(page.group.attrs.role, 'group');
-  page.group.buttons.forEach((button, index) => {
-    assert.equal(button, originals[index].button);
-    assert.equal(button.icon, originals[index].icon);
-    assert.equal(button.icon.textContent, ['◐', '☀', '☾'][index]);
-    assert.equal(button.suffix, originals[index].suffix);
-    assert.deepEqual(button.suffix, { en: ', theme', it: ', tema' });
-    assert.deepEqual(button.attrs, originals[index].attrs);
+for (const viaAttribute of [false, true]) {
+  test(`package follows EN/IT changes via ${viaAttribute ? 'HTML attributes' : 'languageChanged'} and preserves controls and mode`, () => {
+    const page = load({ lang: 'it', uiLang: 'en' });
+    page.domReady();
+    const buttons = [...page.group.buttons];
+    for (const mode of ['light', 'dark', 'auto']) {
+      page.theme.set(mode);
+      for (const lang of ['it', 'en']) {
+        page.changeLanguage(lang, viaAttribute);
+        assertLabels(page.group, lang);
+        page.group.buttons.forEach((button, index) => {
+          assert.equal(button, buttons[index]);
+          assert.equal(button.attrs['aria-pressed'], String(button.dataset.m === mode));
+        });
+      }
+    }
   });
-});
+}
 
-test('an Italian post with an English UI shows English theme labels', () => {
-  const page = load({ lang: 'it', uiLang: 'en' });
-  assertLabels(page.group, 'en');
-  page.changeLanguage('it');
+test('package follows html.lang changes when no UI language is set', () => {
+  const page = load();
+  page.domReady();
+  page.html.lang = 'it';
+  page.changeLanguage(undefined, true);
   assertLabels(page.group, 'it');
-  page.changeLanguage('en');
-  assertLabels(page.group, 'en');
 });
 
-test('html.lang is the fallback when uiLang is absent', () => {
-  assertLabels(load({ lang: 'it' }).group, 'it');
-  assertLabels(load({ lang: 'en' }).group, 'en');
-});
-
-test('missing JaackTheme uses default hours without throwing', () => {
-  assertLabels(load({ theme: null }).group, 'en');
-  assertLabels(load({ theme: null, uiLang: 'it' }).group, 'it');
-});
-
-test('missing switch does not throw on initialization or language change', () => {
-  const page = load({ present: false, readyState: 'loading' });
+test('missing switch does not throw at mount or on language change', () => {
+  const page = load({ present: false });
   page.domReady();
   page.changeLanguage('it');
-  page.changeLanguage('en');
-  assert.equal(page.observers.length, 0);
+  assert.equal(page.group, undefined);
 });

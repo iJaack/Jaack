@@ -94,7 +94,7 @@ test('shared rhythm and motion follow Forma v2 with reduced motion and a static 
   }
 });
 
-test('Newsreader opts in to the packaged roman and local italic, fits its budget and preloads only roman', () => {
+test('Newsreader opts in to the packaged roman and italic, fits its budget and preloads only roman', () => {
   const css = read('assets/css/jaack-site.css');
   const packageCSS = read(`${design}/fonts/newsreader/fonts.css`);
   const faces = [...(packageCSS + css).matchAll(/@font-face\s*\{([^}]+)\}/g)]
@@ -102,19 +102,19 @@ test('Newsreader opts in to the packaged roman and local italic, fits its budget
   assert.equal(faces.length, 2);
   for (const [index, face] of faces.entries()) {
     assert.match(face, /font-family:\s*"Newsreader"/);
-    assert.match(face, index ? /font-weight:\s*400 700/ : /font-weight:\s*200 800/);
+    assert.match(face, /font-weight:\s*400 700/);
     assert.match(face, /font-display:\s*swap/);
     assert.ok(face.includes(`Newsreader-${index ? 'italic' : 'roman'}.woff2`));
     assert.match(face, index ? /font-style:\s*italic/ : /font-style:\s*normal/);
   }
-  const fonts = [...files('assets/fonts/newsreader'), ...files(`${design}/fonts/newsreader`)];
-  assert.doesNotMatch(css, /Newsreader-roman\.woff2/);
-  assert.ok(!fs.existsSync(path.join(root, 'assets/fonts/newsreader/Newsreader-roman.woff2')));
-  assert.ok(fonts.includes('assets/fonts/newsreader/OFL.txt'));
+  const fonts = files(`${design}/fonts/newsreader`);
+  assert.doesNotMatch(css, /@font-face|Newsreader-(roman|italic)\.woff2/);
+  assert.ok(!fs.existsSync(path.join(root, 'assets/fonts/newsreader')));
+  assert.ok(fonts.includes(`${design}/fonts/newsreader/OFL.txt`));
   assert.ok(!fonts.some(file => file.endsWith('Newsreader-carta.woff2')));
   const total = fonts.filter(file => file.endsWith('.woff2'))
     .reduce((sum, file) => sum + fs.statSync(path.join(root, file)).size, 0);
-  // The v2 package supplies the wider 200–800 roman; retain the local 400–700 italic.
+  // The package supplies both 400–700 faces; only roman is preloaded.
   assert.ok(total <= 320000, `${total} bytes exceeds 320 KB`);
   for (const file of files('_site').filter(file => file.endsWith('.html'))) {
     const head = read(file).match(/<head>([\s\S]*?)<\/head>/i)?.[1];
@@ -263,12 +263,12 @@ test('donation button uses accessible accent tokens and only fades on interactio
   assert.match(html, /src="https:\/\/cdn\.buymeacoffee\.com\/buttons\/bmc-new-btn-logo\.svg"/);
 });
 
-test('jaack.me and Moxie vendor the exact v2.0.0 release with MANIFEST and SOURCE', () => {
+test('jaack.me and Moxie vendor the exact v2.0.1 release with MANIFEST and SOURCE', () => {
   for (const vendor of [design, 'moxie/jaack-design-system']) {
     const canonical = [...read(`${vendor}/MANIFEST.txt`).matchAll(/^([a-f0-9]{64})  ([\w./-]+)$/gm)];
     assert.ok(canonical.length > 0, `${vendor}: empty manifest`);
-    assert.equal(read(`${vendor}/VERSION`).trim(), '2.0.0');
-    assert.match(read(`${vendor}/SOURCE`), /^iJaack\/jaack-design v2\.0\.0 [a-f0-9]{40}\n$/);
+    assert.equal(read(`${vendor}/VERSION`).trim(), '2.0.1');
+    assert.equal(read(`${vendor}/SOURCE`), 'iJaack/jaack-design v2.0.1 03c4c0e2f594f416c643032af7e2aa5c9d8266fe\n');
     assert.deepEqual(files(vendor).map(file => file.slice(vendor.length + 1)).sort(),
       [...canonical.map(([, , file]) => file), 'MANIFEST.txt', 'SOURCE'].sort());
     for (const [, hash, file] of canonical) {

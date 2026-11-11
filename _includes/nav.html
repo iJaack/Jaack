@@ -8,7 +8,7 @@
     <li><a class="jk-sw keep" href="{{ link.url | relative_url }}"{% if page_sections[1] == link_section or link.key == 'notes' and page.collection == 'notes' %} aria-current="page"{% endif %}><span class="lang-en" lang="en">{{ site.data.ui_text.nav[link.key].en }}</span><span class="lang-it" lang="it">{{ site.data.ui_text.nav[link.key].it }}</span></a></li>
     {% endfor %}
     <li><a class="jk-sw keep" href="{{ '/#contact' | relative_url }}"><span class="lang-en" lang="en">Contact</span><span class="lang-it" lang="it">Contatti</span></a></li>
-    <li><a class="jk-sw keep" href="{{ site.booking_url }}"><span class="lang-en" lang="en">Book a call</span><span class="lang-it" lang="it"><span class="nav-bar-label">Prenota</span><span class="nav-menu-label">Prenota una call</span></span></a></li>
+    <li><a class="jk-sw keep" href="{{ site.booking_url }}" data-booking-link aria-label="{% if page.lang == 'it' %}Prenota una call{% else %}Book a call{% endif %}"><span class="lang-en" lang="en">Book a call</span><span class="lang-it" lang="it"><span class="nav-bar-label">Prenota</span><span class="nav-menu-label">Prenota una call</span></span></a></li>
   </ul>
   <div class="lang-switch" role="group" aria-label="Language / Lingua">
     <button type="button" class="lang-toggle" data-lang="en" lang="en" aria-pressed="true">EN<span class="visually-hidden"> English</span></button>

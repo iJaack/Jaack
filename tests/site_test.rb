@@ -30,12 +30,26 @@ class SiteTest < Minitest::Test
     end
   end
 
-  def test_theme_labels_script_loads_immediately_after_language_script
+  def test_theme_localization_uses_the_package_without_a_site_relabeler
     page = doc('index.html')
-    assert_equal 1, page.css('script[src="/assets/js/theme-labels.js"]').length
-    language = page.at_css('script[src="/assets/js/language.js"]')
-    refute_nil language
-    assert_equal '/assets/js/theme-labels.js', language.next_element['src']
+    assert_equal 1, page.css('script[src="/assets/jaack-design-system/theme.js"]').length
+    assert_equal 1, page.css('script[src="/assets/js/language.js"]').length
+    assert_empty page.css('script[src="/assets/js/theme-labels.js"]')
+    refute File.exist?(File.join(ROOT, 'assets/js/theme-labels.js'))
+  end
+
+  def test_booking_accessible_name_is_server_rendered_in_each_page_language
+    { 'it' => 'Prenota una call', 'en' => 'Book a call' }.each do |lang, label|
+      page = doc("2024-review-#{lang}/index.html")
+      assert_equal lang, page.at_css('html')['lang']
+      booking = page.at_css('nav.site-nav a[data-booking-link]')
+      refute_nil booking
+      assert_equal label, booking['aria-label']
+      assert_equal 'Book a call', booking.at_css('.lang-en').text
+      assert_equal 'Prenota', booking.at_css('.nav-bar-label').text
+      assert_equal 'Prenota una call', booking.at_css('.nav-menu-label').text
+    end
+    assert_equal 'Book a call', doc('index.html').at_css('[data-booking-link]')['aria-label']
   end
 
   def test_chrome_names_start_with_visible_text

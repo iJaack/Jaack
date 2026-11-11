@@ -4,9 +4,10 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const source = fs.readFileSync('assets/js/language.js', 'utf8');
 
-function load({ preferred, browser = 'en-US', fixed = '', storageFails = false, inHead = false, barBox, theme = 'light' } = {}) {
+function load({ preferred, browser = 'en-US', fixed = '', storageFails = false, inHead = false, barBox, theme = 'light', bookingPresent = true } = {}) {
   const classes = new Set();
   const properties = new Map();
+  const bookingLink = { setAttribute(name, value) { this[name] = value; } };
   const themeMeta = { setAttribute(name, value) { this[name] = value; } };
   const bar = barBox && { getBoundingClientRect: () => barBox };
   let resize;
@@ -21,7 +22,8 @@ function load({ preferred, browser = 'en-US', fixed = '', storageFails = false, 
     documentElement: { getAttribute: name => name === 'data-theme' ? theme : fixed, lang: 'en', dataset: {},
       style: { setProperty: (name, value) => properties.set(name, value) } },
     body: { classList: { remove: (...names) => names.forEach(n => classes.delete(n)), add: n => classes.add(n) } },
-    querySelector: selector => selector === 'meta[name="theme-color"]' ? themeMeta :
+    querySelector: selector => selector === '[data-booking-link]' ? (bookingPresent ? bookingLink : null) :
+      selector === 'meta[name="theme-color"]' ? themeMeta :
       selector === 'nav.site-nav' ? bar : null,
     querySelectorAll: () => buttons
   };
@@ -44,7 +46,7 @@ function load({ preferred, browser = 'en-US', fixed = '', storageFails = false, 
     },
     CustomEvent: function(name, options) { this.type = name; this.detail = options.detail; }
   });
-  return { document, window, buttons, classes, storage, properties, themeMeta, resize: () => resize(), mount() { document.body = body; ready(); } };
+  return { document, window, buttons, classes, storage, properties, themeMeta, bookingLink, resize: () => resize(), mount() { document.body = body; ready(); } };
 }
 
 test('Italian browser receives Italian content and document language', () => {
@@ -85,53 +87,6 @@ test('invalid stored language falls back to English', () => {
   assert.equal(load({ preferred: 'xx' }).document.documentElement.lang, 'en');
 });
 
-test('theme controls keep visible labels before bilingual context through every state change', () => {
-  const theme = fs.readFileSync('assets/jaack-design-system/theme.js', 'utf8');
-  const storage = new Map();
-  const buttons = [];
-  let markup;
-  const host = {
-    querySelector: () => null,
-    appendChild(group) {
-      markup = group.innerHTML;
-      for (const [, attributes, content] of markup.matchAll(/<button\b([^>]*)>([\s\S]*?)<\/button>/g)) {
-        buttons.push({
-          attributes, content, dataset: { m: attributes.match(/data-m="([^"]+)"/)[1] },
-          setAttribute(name, value) { this[name] = value; }
-        });
-      }
-    }
-  };
-  const html = { dataset: {}, classList: { add() {}, remove() {} } };
-  const window = {};
-  vm.runInNewContext(theme, {
-    window, document: {
-      documentElement: html, addEventListener() {}, querySelectorAll: () => buttons,
-      createElement: () => ({ setAttribute() {}, addEventListener() {} })
-    },
-    localStorage: {
-      getItem: key => storage.get(key), setItem: (key, value) => storage.set(key, value),
-      removeItem: key => storage.delete(key)
-    },
-    matchMedia: () => ({ matches: false }), setInterval() {}, setTimeout() {}, clearTimeout() {},
-    addEventListener() {}, dispatchEvent() {}, CustomEvent: function() {}
-  });
-  window.JaackTheme.mount(host);
-  assert.equal(buttons.length, 3);
-  for (const mode of ['light', 'dark', 'auto']) {
-    window.JaackTheme.set(mode);
-    for (const [index, button] of buttons.entries()) {
-      assert.doesNotMatch(button.attributes, /aria-label=/);
-      const label = ['Auto', 'Chiaro', 'Scuro'][index];
-      const labelAt = button.content.indexOf(`>${label}</span>`);
-      assert.ok(labelAt >= 0 && labelAt < button.content.indexOf('class="visually-hidden"'));
-      assert.match(button.content, /class="lang-en" lang="en">, theme<\/span>/);
-      assert.match(button.content, /class="lang-it" lang="it">, tema<\/span>/);
-      assert.equal(button['aria-pressed'], String(button.dataset.m === mode));
-    }
-  }
-});
-
 test('head initialization selects the translation before paint and mounts controls when DOM is ready', () => {
   const p = load({ browser: 'it-IT', inHead: true });
   assert.equal(p.document.documentElement.dataset.uiLang, 'it');
@@ -161,4 +116,24 @@ test('browser chrome follows the Ombra dark ground and unchanged light paper on 
   p.document.documentElement.getAttribute = name => name === 'data-theme' ? 'light' : '';
   p.window.jaacktheme();
   assert.equal(p.themeMeta.content, '#f3eee6');
+});
+
+for (const initial of ['en', 'it']) {
+  test(`booking accessible name follows ${initial} UI at load and both language switches`, () => {
+    const p = load({ preferred: initial, fixed: initial === 'it' ? 'en' : 'it', inHead: true });
+    p.mount();
+    assert.equal(p.bookingLink['aria-label'], initial === 'it' ? 'Prenota una call' : 'Book a call');
+    p.buttons[1].click();
+    assert.equal(p.bookingLink['aria-label'], 'Prenota una call');
+    assert.equal(p.document.documentElement.dataset.uiLang, 'it');
+    p.buttons[0].click();
+    assert.equal(p.bookingLink['aria-label'], 'Book a call');
+    assert.equal(p.document.documentElement.dataset.uiLang, 'en');
+  });
+}
+
+test('language switching works without a booking link', () => {
+  const p = load({ bookingPresent: false });
+  p.buttons[1].click();
+  assert.equal(p.document.documentElement.dataset.uiLang, 'it');
 });
