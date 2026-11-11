@@ -495,6 +495,44 @@ html[data-theme="dark"] {
     max-width: var(--jk-measure-long);
   }
 }
+/* Diagram detection: SVG source, image class, or an author-marked figure.
+   Raster images without either class retain the ordinary reading measure. */
+.post :is(img[src$=".svg"], img.figure--diagram, figure.figure--diagram img) {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-left: 0;
+  margin-right: auto;
+}
+@media (min-width: 760px) {
+  .jk-page > .post {
+    max-width: min(100%, 720px);
+    /* Resolve the 23em body measure in pixels for differently sized headings/meta. */
+    --jk-post-measure: calc(23 * var(--jk-fs-body-long));
+  }
+  .post .post-body { max-width: 100%; overflow: visible; }
+  .jk-page > main.post > :is(.title, .date, beeline-button, .related, .donation, .author, .blog-navigation, .title-image),
+  .jk-page > main.post .post-body > * {
+    max-width: var(--jk-post-measure);
+    margin-left: 0;
+    margin-right: auto;
+  }
+  /* Markdown's paragraph (including linked images) must also get the full width. */
+  .jk-page > main.post .post-body > :is(img[src$=".svg"], img.figure--diagram, figure.figure--diagram),
+  .jk-page > main.post .post-body > :has(img[src$=".svg"], img.figure--diagram, figure.figure--diagram),
+  .jk-page > main.post > .title-image:is([src$=".svg"], .figure--diagram) {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: auto;
+  }
+  .jk-page > main.post > .title-image:is([src$=".svg"], .figure--diagram) {
+    max-height: none;
+    aspect-ratio: auto;
+  }
+}
 /* Only designated text pages and individual notes receive this reading measure. */
 .jk-prose {
   max-width: 26em;
@@ -504,6 +542,18 @@ html[data-theme="dark"] {
 }
 .jk-prose p, .jk-prose li { line-height: inherit; }
 .jk-prose .page-intro, .jk-prose .note-body { font-size: inherit; }
+/* Override the legacy float and responsive two-column about layout at every width. */
+.jk-prose .about-body { display: block; }
+.jk-prose .about-body > .about-portrait {
+  display: block;
+  float: none;
+  width: 160px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  margin: 0 0 28px;
+}
+.jk-prose .about-body > :is(.lang-en, .lang-it) { max-width: none; }
 .post > .related, .post > .donation, .post > .author { margin: 56px 0 0; }
 .post > .related > h2 { margin: 0 0 14px; font-size: 24px; line-height: 28px; }
 .dated-rows { list-style: none; margin: 0; padding: 0; }
@@ -564,8 +614,8 @@ html[data-theme="dark"] {
   color: var(--jk-t2);
   text-align: left;
 }
-/* The codex SVGs are light diagrams, never alternate dark-theme assets. */
-html[data-theme="dark"] :is(.post-body img[src$="-codex.svg"], .post > .figure--diagram) {
+/* Frame every detected diagram without inverting or swapping its source. */
+html[data-theme="dark"] .post :is(img[src$=".svg"], img.figure--diagram, figure.figure--diagram img) {
   box-sizing: border-box;
   background: var(--jk-surface-2);
   padding: 14px;

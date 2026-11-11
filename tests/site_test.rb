@@ -698,9 +698,7 @@ class SiteTest < Minitest::Test
       children = page.at_css('main.post').element_children.reject { |n| n.key?('hidden') }
       assert children[0].matches?('h1.title')
       assert children[1].matches?('p.post-meta')
-      assert children[2].matches?('img.title-image')
-      assert_equal 'beeline-button', children[3].name
-      assert children[4].matches?('.post-body')
+      assert page.at_css('main.post > .post-meta + img.title-image + beeline-button + .post-body')
       assert_equal 1, page.css('beeline-button').length
       related = page.at_css('main > .related')
       refute_nil related
@@ -716,6 +714,62 @@ class SiteTest < Minitest::Test
       assert_equal expected, coffee.text.strip
       assert_empty donation.css('button, img, script, style')
       assert_empty page.css('script[src*="buymeacoffee"], img[src*="buymeacoffee"]')
+    end
+  end
+
+  def test_missing_local_cover_is_omitted_and_present_cover_is_rendered
+    missing = doc('installare-nodo-ipfs-en/index.html')
+    assert_empty missing.css('main.post > .title-image')
+    assert missing.at_css('main.post > .post-meta + beeline-button + .post-body')
+    %w[en it].each do |lang|
+      cover = doc("2024-review-#{lang}/index.html").at_css('main.post > img.title-image')
+      refute_nil cover
+      assert_equal '/assets/images/2025.png', cover['src']
+    end
+  end
+
+  def test_cover_lookup_normalizes_local_paths_and_preserves_remote_covers
+    layout = File.read(File.expand_path('../_layouts/post.html', __dir__))
+    cases = {
+      '/assets/present.jpg' => true, 'assets/present.jpg' => true, './assets/present.jpg' => true,
+      '/assets/missing.jpg' => false, 'assets/missing.jpg' => false,
+      'https://example.com/cover.jpg' => true, 'http://example.com/cover.svg' => true,
+      '/assets/diagram.svg' => true
+    }
+    cases.each do |image, expected|
+      html = render_post_fixture(layout,
+        'site' => { 'static_files' => [{ 'path' => '/assets/present.jpg' }, { 'path' => '/assets/diagram.svg' }] },
+        'page' => { 'image' => image, 'headerImage' => true, 'title' => 'Cover fixture' })
+      cover = Nokogiri::HTML.fragment(html).at_css('img.title-image')
+      assert_equal expected, !cover.nil?, image
+      next unless cover
+      assert_equal image, cover['src']
+      assert_equal image.end_with?('.svg'), cover.classes.include?('figure--diagram'), image
+    end
+  end
+
+  def test_diagram_selector_matches_svgs_and_author_markings_but_not_plain_rasters
+    css = File.read(File.expand_path('../assets/css/jaack-site.css', __dir__))
+    selector = css.match(/^\.post :is\((img\[src\$="\.svg"\].*)\) \{/)[1]
+    # Nokogiri does not parse complex :is() lists; expand the equivalent union.
+    selector = selector.split(', ').map { |part| ".post #{part}" }.join(', ')
+    html = Nokogiri::HTML.fragment('<div class="post">
+      <img id="svg" src="diagram.svg"><p><a><img id="codex" src="loops-codex.svg"></a></p>
+      <img id="marked-image" class="figure--diagram" src="screenshot.png">
+      <figure class="figure--diagram"><img id="marked-figure" src="photo.jpg"></figure>
+      <img src="plain.jpg"><img src="plain.jpeg"><img src="plain.png">
+      <img src="plain.webp"><img src="plain.gif"><img class="selfie" src="author.jpg">
+      </div>')
+    assert_equal %w[svg codex marked-image marked-figure], html.css(selector).map { |img| img['id'] }
+  end
+
+  def test_about_portrait_precedes_both_language_intros_in_the_prose_container
+    %w[about/index.html en/about/index.html].each do |route|
+      main = doc(route).at_css('main.jk-prose')
+      refute_nil main
+      children = main.at_css('.about-body').element_children
+      assert children.first.matches?('img.about-portrait[width="160"]')
+      assert_equal %w[lang-en lang-it], children.drop(1).map { |node| node['class'] }
     end
   end
 

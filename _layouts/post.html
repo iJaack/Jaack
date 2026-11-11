@@ -12,8 +12,25 @@ layout: page
 <p class="date post-meta">
   <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% include post-date.html date=page.date lang=post_lang %}</time>{% if site.read-time %} · {% include read-time.html %}{% endif %}
 </p>
+{% assign cover_exists = false %}
 {% if page.image and page.headerImage %}
-<img class="title-image{% if page.image contains '-codex.svg' %} figure--diagram{% endif %}" src="{{ page.image }}" alt="{{ page.title | escape }}">
+  {% assign cover_http = page.image | slice: 0, 7 %}
+  {% assign cover_https = page.image | slice: 0, 8 %}
+  {% if cover_http == 'http://' or cover_https == 'https://' %}
+    {% assign cover_exists = true %}
+  {% else %}
+    {% assign cover_path = page.image %}
+    {% assign cover_start = cover_path | slice: 0, 2 %}
+    {% if cover_start == './' %}{% assign cover_path = cover_path | remove_first: './' %}{% endif %}
+    {% assign cover_start = cover_path | slice: 0, 1 %}
+    {% unless cover_start == '/' %}{% assign cover_path = cover_path | prepend: '/' %}{% endunless %}
+    {% assign cover_file = site.static_files | where: 'path', cover_path | first %}
+    {% if cover_file %}{% assign cover_exists = true %}{% endif %}
+  {% endif %}
+{% endif %}
+{% if cover_exists %}
+{% assign cover_extension = page.image | slice: -4, 4 %}
+<img class="title-image{% if cover_extension == '.svg' %} figure--diagram{% endif %}" src="{{ page.image }}" alt="{{ page.title | escape }}">
 {% endif %}
 <beeline-button target=".post" exclude=".exclude, .nav, .date, .blog-navigation, .prev, .next, .reading-time"
   size="regular"></beeline-button>

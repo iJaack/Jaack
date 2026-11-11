@@ -279,6 +279,28 @@ test('post headers remove the title accent and keep mobile covers within the rea
   assert.match(css, /\.dated-row > a:hover, \.dated-row > a:focus-visible \{ text-decoration: underline;/);
 });
 
+test('diagrams break out at 760px while text and unmarked photos keep their left-aligned measure', () => {
+  const css = stripComments(read('assets/css/jaack-site.css'));
+  const wide = css.match(/@media \(min-width: 760px\) \{([\s\S]*?)\n\}/)?.[1];
+  assert.ok(wide);
+  assert.match(wide, /\.jk-page > \.post\s*\{[^}]*max-width: min\(100%, 720px\);/);
+  assert.match(wide, /--jk-post-measure: calc\(23 \* var\(--jk-fs-body-long\)\);/);
+  assert.match(wide, /\.post \.post-body \{ max-width: 100%; overflow: visible; \}/);
+  assert.match(wide, /:is\(\.title, \.date, beeline-button, \.related, \.donation, \.author, \.blog-navigation, \.title-image\),\s*\.jk-page > main.post \.post-body > \*\s*\{[^}]*max-width: var\(--jk-post-measure\);[^}]*margin-left: 0;[^}]*margin-right: auto;/);
+  assert.match(wide, /:has\(img\[src\$="\.svg"\], img\.figure--diagram, figure\.figure--diagram\),/);
+  assert.match(wide, /\.jk-page > main.post > \.title-image:is\(\[src\$="\.svg"\], \.figure--diagram\)\s*\{[^}]*width: 100%;[^}]*max-width: 100%;[^}]*margin-left: 0;[^}]*margin-right: auto;/);
+  assert.match(wide, /\.jk-page > main.post > \.title-image:is\(\[src\$="\.svg"\], \.figure--diagram\)\s*\{[^}]*max-height: none;[^}]*aspect-ratio: auto;/);
+  assert.match(css, /\.post :is\(img\[src\$="\.svg"\], img\.figure--diagram, figure\.figure--diagram img\)\s*\{[^}]*width: 100%;[^}]*max-width: 100%;[^}]*margin-left: 0;[^}]*margin-right: auto;/);
+});
+
+test('about overrides legacy layouts with a 160px portrait stacked above the full prose measure', () => {
+  const css = stripComments(read('assets/css/jaack-site.css'));
+  assert.match(css, /\.jk-prose \{[^}]*max-width: 26em;/);
+  assert.match(css, /\.jk-prose \.about-body \{ display: block; \}/);
+  assert.match(css, /\.jk-prose \.about-body > \.about-portrait\s*\{[^}]*display: block;[^}]*float: none;[^}]*width: 160px;[^}]*height: auto;[^}]*border-radius: 14px;[^}]*margin: 0 0 28px;/);
+  assert.match(css, /\.jk-prose \.about-body > :is\(\.lang-en, \.lang-it\) \{ max-width: none; \}/);
+});
+
 test('code overrides every Pygments token with one accessible palette in both themes', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
   assert.match(css, /pre, \.highlight\s*\{[^}]*font-size: 14px;\s*line-height: 22px;[^}]*border-radius: 14px;[^}]*overflow-x: auto;[^}]*background: var\(--jk-surface-2\);/);
@@ -296,9 +318,9 @@ test('code overrides every Pygments token with one accessible palette in both th
   }
 });
 
-test('only light diagram SVG hooks get a dark frame and brightness reduction', () => {
+test('all detected diagrams get the same dark frame without inversion', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
-  assert.match(css, /html\[data-theme="dark"\] :is\(\.post-body img\[src\$="-codex\.svg"\], \.post > \.figure--diagram\)\s*\{[^}]*background: var\(--jk-surface-2\);[^}]*padding: 14px;[^}]*border-radius: 14px;[^}]*filter: brightness\(\.9\);/);
+  assert.match(css, /html\[data-theme="dark"\] \.post :is\(img\[src\$="\.svg"\], img\.figure--diagram, figure\.figure--diagram img\)\s*\{[^}]*background: var\(--jk-surface-2\);[^}]*padding: 14px;[^}]*border-radius: 14px;[^}]*filter: brightness\(\.9\);/);
   assert.doesNotMatch(css, /filter:\s*invert/);
   assert.doesNotMatch(read('_layouts/post.html'), /<picture/);
 });
