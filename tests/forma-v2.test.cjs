@@ -164,9 +164,9 @@ test('jaack.me editorial typography uses the approved body measure and heading s
   assert.match(css, /\.project-page--carta \.page-title\s*\{[^}]*font-variation-settings: 'opsz' 72;/);
   const phone = css.match(/@media \(max-width: 479px\) \{([\s\S]*?)\n\}/)?.[1];
   assert.ok(phone, 'missing phone typography spacing');
-  assert.match(phone, /:root\s*\{\s*--jk-page-x: 20px;\s*\}/);
-  assert.match(phone, /padding-left: max\(var\(--jk-page-x\), env\(safe-area-inset-left\)\);/);
-  assert.match(phone, /padding-right: max\(var\(--jk-page-x\), env\(safe-area-inset-right\)\);/);
+  assert.match(css, /:root\s*\{[^}]*--jk-page-x: 16px;/);
+  assert.match(css, /@media \(min-width: 480px\)\s*\{\s*:root \{ --jk-page-x: 20px; \}/);
+  assert.match(css, /\.wrapper-xwide\.jk-page\s*\{[^}]*padding:\s*var\(--jk-top-clearance\)\s*max\(var\(--jk-page-x\), env\(safe-area-inset-right\)\)\s*env\(safe-area-inset-bottom\)\s*max\(var\(--jk-page-x\), env\(safe-area-inset-left\)\);/);
 });
 
 test('headings use the compact scale below 1100px on the 14px grid', () => {
@@ -263,15 +263,17 @@ test('coffee is a quiet 44px t2 text link with no vendor assets or tracking', ()
 });
 
 // CSS regressions accompany rendered structure and language checks in site_test.rb.
-test('post headers remove the title accent and keep mobile covers within the reading budget', () => {
+test('post headers remove the title accent and keep covers at natural height', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
   const title = css.match(/\.post > \.title\s*\{[^}]*max-width: 100%;([^}]+)\}/)?.[1];
   assert.match(title, /border: 0;\s*box-shadow: none;/);
   assert.doesNotMatch(title, /accent/);
   assert.match(css, /\.post > \.date\s*\{[^}]*font-size: var\(--jk-fs-xs\);[^}]*text-transform: none;[^}]*color: var\(--jk-t3\);/);
   assert.match(css, /\.post > \.title \{ font-size: clamp\(32px, 9vw, 43px\); line-height: 42px; \}/);
-  assert.match(css, /\.post > \.title-image\s*\{[^}]*width: 100%;[^}]*aspect-ratio: 16 \/ 9;[^}]*border-radius: 14px;/);
-  assert.match(css.match(/@media \(max-width: 479px\) \{([\s\S]*?)\n\}/)?.[1], /\.post > \.title-image \{ max-height: 140px; \}/);
+  const cover = css.match(/\.post > \.title-image\s*\{([^}]+)\}/)?.[1];
+  assert.match(cover, /width: 100%;\s*height: auto;\s*border-radius: 14px;\s*margin: 0 0 14px;/);
+  assert.doesNotMatch(cover, /max-height:|aspect-ratio:|object-fit:/);
+  assert.doesNotMatch(css, /\.title-image\s*\{[^}]*max-height: (?:140|224)px;/);
   assert.match(css, /\.dated-rows > \.dated-row\s*\{[^}]*min-height: 44px;[^}]*border-top: 1px solid var\(--jk-hair\);/);
   assert.match(css, /\.dated-row > time \{ color: var\(--jk-t3\);/);
   assert.match(css, /\.dated-row > a, \.dated-row > \.row-title\s*\{[^}]*font-family: var\(--jk-serif\);[^}]*font-size: 20px;[^}]*line-height: 28px;[^}]*color: var\(--jk-ink\);[^}]*text-decoration: none;/);
@@ -280,7 +282,8 @@ test('post headers remove the title accent and keep mobile covers within the rea
 
 test('diagrams break out at 760px while text and unmarked photos keep their left-aligned measure', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
-  const wide = css.match(/@media \(min-width: 760px\) \{([\s\S]*?)\n\}/)?.[1];
+  const wide = [...css.matchAll(/@media \(min-width: 760px\) \{([\s\S]*?)\n\}/g)]
+    .find(([, body]) => body.includes('.jk-page > .post'))?.[1];
   assert.ok(wide);
   assert.match(wide, /\.jk-page > \.post\s*\{[^}]*max-width: min\(100%, 720px\);/);
   assert.match(wide, /--jk-post-measure: calc\(23 \* var\(--jk-fs-body-long\)\);/);
@@ -288,7 +291,6 @@ test('diagrams break out at 760px while text and unmarked photos keep their left
   assert.match(wide, /:is\(\.title, \.date, beeline-button, \.related, \.donation, \.author, \.blog-navigation, \.title-image\),\s*\.jk-page > main.post \.post-body > \*\s*\{[^}]*max-width: var\(--jk-post-measure\);[^}]*margin-left: 0;[^}]*margin-right: auto;/);
   assert.match(wide, /:has\(img\[src\$="\.svg"\], img\.figure--diagram, figure\.figure--diagram\),/);
   assert.match(wide, /\.jk-page > main.post > \.title-image:is\(\[src\$="\.svg"\], \.figure--diagram\)\s*\{[^}]*width: 100%;[^}]*max-width: 100%;[^}]*margin-left: 0;[^}]*margin-right: auto;/);
-  assert.match(wide, /\.jk-page > main.post > \.title-image:is\(\[src\$="\.svg"\], \.figure--diagram\)\s*\{[^}]*max-height: none;[^}]*aspect-ratio: auto;/);
   assert.match(css, /\.post :is\(img\[src\$="\.svg"\], img\.figure--diagram, figure\.figure--diagram img\)\s*\{[^}]*width: 100%;[^}]*max-width: 100%;[^}]*margin-left: 0;[^}]*margin-right: auto;/);
 });
 

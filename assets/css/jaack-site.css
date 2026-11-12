@@ -4,10 +4,31 @@
    This site's own skin: warm paper, oxblood instead of Forma's gold, serif headlines,
    a 23em essay measure, and dated writing rows. Work titles stay in the system sans. */
 
-:root { --jk-dock-h: 0px; --jk-dock-gap: 0px; --jk-bar-h: 61px; }
+:root {
+  --jk-dock-h: 0px; --jk-dock-gap: 0px; --jk-bar-h: 61px;
+  --jk-page-x: 16px;
+  --jk-chapter-gap: 48px;
+  --jk-chapter-gap-m: 48px;
+}
+@media (min-width: 480px) {
+  :root { --jk-page-x: 20px; }
+}
+@media (min-width: 760px) {
+  :root {
+    --jk-page-x: clamp(24px, 3.5vw, 80px);
+    --jk-chapter-gap: 64px;
+    --jk-chapter-gap-m: 64px;
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --jk-chapter-gap: 72px;
+    --jk-chapter-gap-m: 72px;
+  }
+}
 
 nav.site-nav.jk-top {
-  width: min(1120px, calc(100% - 2 * max(8px, env(safe-area-inset-left), env(safe-area-inset-right))));
+  width: min(var(--jk-max), calc(100% - 2 * var(--jk-page-x)));
   flex-wrap: nowrap;
   gap: 8px;
   padding: 6px 18px;
@@ -102,7 +123,7 @@ nav.site-nav .jk-thsw { width: 100%; }
     --jk-bar-gap: calc(max(8px, env(safe-area-inset-top, 0px)) - env(safe-area-inset-top, 0px));
   }
   nav.site-nav.jk-top {
-    width: min(1120px, calc(100% - 2 * max(4px, env(safe-area-inset-left), env(safe-area-inset-right))));
+    width: min(var(--jk-max), calc(100% - 2 * var(--jk-page-x)));
     top: max(8px, env(safe-area-inset-top));
   }
 }
@@ -129,22 +150,21 @@ nav.site-nav .jk-thsw { width: 100%; }
   min-height: 100svh;
   display: flex;
   flex-direction: column;
-  width: min(1120px, 100%);
-  max-width: 1120px;
+  width: min(100%, var(--jk-max));
+  max-width: var(--jk-max);
   height: auto;
   margin: 0 auto;
   padding:
     var(--jk-top-clearance)
-    max(clamp(16px, 3vw, 28px), env(safe-area-inset-right))
+    max(var(--jk-page-x), env(safe-area-inset-right))
     env(safe-area-inset-bottom)
-    max(clamp(16px, 3vw, 28px), env(safe-area-inset-left));
+    max(var(--jk-page-x), env(safe-area-inset-left));
 }
 .jk-page > main, .jk-page > footer { width: 100%; flex: none; }
 .jk-page > main { margin-bottom: 28px; }
 /* A hidden translation marker may precede a post's first visible content. */
 .jk-page > main > :nth-child(1 of :not([hidden])),
 .jk-page > main > .page > :nth-child(1 of :not([hidden])) { margin-top: 0; }
-.wrapper-xwide.jk-page { max-width: 1240px; }
 
 @media (max-width: 880px) {
   :root:has(nav.site-nav:not(.has-menu)) {
@@ -152,7 +172,7 @@ nav.site-nav .jk-thsw { width: 100%; }
   }
   nav.site-nav:not(.has-menu).jk-top {
     flex-wrap: wrap;
-    width: min(1120px, calc(100% - 2 * max(4px, env(safe-area-inset-left), env(safe-area-inset-right))));
+    width: min(var(--jk-max), calc(100% - 2 * var(--jk-page-x)));
     top: max(8px, env(safe-area-inset-top));
     gap: 2px 6px;
     padding: 4px 6px 4px 10px;
@@ -444,10 +464,7 @@ html[data-theme="dark"] {
   box-sizing: border-box;
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
   height: auto;
-  max-height: 224px;
-  object-fit: contain;
   border-radius: 14px;
   margin: 0 0 14px;
 }
@@ -522,10 +539,6 @@ html[data-theme="dark"] {
     max-width: 100%;
     margin-left: 0;
     margin-right: auto;
-  }
-  .jk-page > main.post > .title-image:is([src$=".svg"], .figure--diagram) {
-    max-height: none;
-    aspect-ratio: auto;
   }
 }
 /* Only designated text pages and individual notes receive this reading measure. */
@@ -627,15 +640,7 @@ html[data-theme="dark"] .post :is(img[src$=".svg"], img.figure--diagram, figure.
   filter: brightness(.9);
 }
 @media (max-width: 479px) {
-  :root { --jk-page-x: 20px; }
   .post > .title { font-size: clamp(32px, 9vw, 43px); line-height: 42px; }
-  .post > .title-image { max-height: 140px; }
-  .wrapper-normal.jk-page,
-  .wrapper-large.jk-page,
-  .wrapper-xwide.jk-page {
-    padding-left: max(var(--jk-page-x), env(safe-area-inset-left));
-    padding-right: max(var(--jk-page-x), env(safe-area-inset-right));
-  }
 }
 /* Carta wordmark and monograms use the shared Newsreader family at optical size 72. */
 .app-links a[href="/projects/carta/"] .app-monogram,

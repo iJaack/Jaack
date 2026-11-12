@@ -273,3 +273,107 @@ for (const width of [390, 1280]) {
     } finally { await page.close(); }
   });
 }
+
+// E1 keeps the existing page compositions inside a shared, fluid frame.
+const frameCases = [
+  { width: 390, inset: 16, gap: 48 },
+  { width: 480, inset: 20, gap: 48 },
+  { width: 759, inset: 20, gap: 48 },
+  { width: 760, inset: 26.6, gap: 64 },
+  { width: 1280, inset: 44.8, gap: 72 },
+  { width: 1440, inset: 50.4, gap: 72 },
+  { width: 1920, inset: 67.2, gap: 72 },
+  { width: 2560, inset: 80, gap: 72 },
+  { width: 3440, inset: 80, gap: 72 }
+];
+
+for (const { width, inset, gap } of frameCases) {
+  test(`E1 page and nav share the fluid frame at ${width}px`, async () => {
+    const page = await browser.newPage({ viewport: { width, height: 844 } });
+    const near = (actual, expected, label) => assert.ok(Math.abs(actual - expected) <= .5,
+      `${label}: expected ${expected}px, got ${actual}px`);
+    try {
+      for (const route of ['/', '/blog/', '/2024-review-en/']) {
+        await page.goto(base + route);
+        await page.evaluate(() => document.fonts.ready);
+        await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+        const metrics = await page.evaluate(() => {
+          const root = getComputedStyle(document.documentElement);
+          const wrapper = document.querySelector('.jk-page');
+          const css = getComputedStyle(wrapper);
+          const frame = wrapper.getBoundingClientRect();
+          const nav = document.querySelector('nav.site-nav.jk-top').getBoundingClientRect();
+          const insetLeft = parseFloat(css.paddingLeft), insetRight = parseFloat(css.paddingRight);
+          return {
+            max: root.getPropertyValue('--jk-max').trim(),
+            pageX: root.getPropertyValue('--jk-page-x').trim(),
+            gap: root.getPropertyValue('--jk-chapter-gap').trim(),
+            mobileGap: root.getPropertyValue('--jk-chapter-gap-m').trim(),
+            maxWidth: css.maxWidth, shellWidth: frame.width,
+            insetLeft, insetRight, content: frame.width - insetLeft - insetRight,
+            navWidth: nav.width, navLeft: nav.left, contentLeft: frame.left + insetLeft,
+            navGap: document.querySelector('main').getBoundingClientRect().top - nav.bottom,
+            sectionGaps: [...document.querySelectorAll('.home-section')].map(el => parseFloat(getComputedStyle(el).marginBottom)),
+            overflow: document.documentElement.scrollWidth > innerWidth
+          };
+        });
+        assert.equal(metrics.max, '3440px', route);
+        assert.equal(metrics.maxWidth, '3440px', route);
+        assert.equal(metrics.pageX, width < 760 ? `${inset}px` : 'clamp(24px, 3.5vw, 80px)', route);
+        assert.equal(metrics.gap, `${gap}px`, route);
+        assert.equal(metrics.mobileGap, `${gap}px`, route);
+        near(metrics.shellWidth, width, `${route} shell`);
+        near(metrics.insetLeft, inset, `${route} left inset`);
+        near(metrics.insetRight, inset, `${route} right inset`);
+        near(metrics.content, width - 2 * inset, `${route} content width`);
+        near(metrics.navWidth, metrics.content, `${route} nav width`);
+        near(metrics.navLeft, metrics.contentLeft, `${route} nav alignment`);
+        near(metrics.navGap, 14, `${route} nav gap`);
+        assert.equal(metrics.overflow, false, `${route}: horizontal overflow`);
+        if (route === '/') assert.ok(metrics.sectionGaps.length, 'home sections must be measured');
+        for (const margin of metrics.sectionGaps) near(margin, gap, 'chapter margin');
+      }
+    } finally { await page.close(); }
+  });
+}
+
+for (const width of [390, 1280, 3440]) {
+  test(`E1 photo covers retain natural proportions at ${width}px`, async () => {
+    const page = await browser.newPage({ viewport: { width, height: 844 } });
+    try {
+      await page.goto(base + '/2024-review-en/');
+      const cover = page.locator('.post > .title-image');
+      await cover.evaluate(img => img.decode());
+      const metrics = await cover.evaluate(img => {
+        const css = getComputedStyle(img), rect = img.getBoundingClientRect();
+        return { maxHeight: css.maxHeight, fit: css.objectFit, ratio: css.aspectRatio,
+          width: rect.width, height: rect.height, naturalWidth: img.naturalWidth, naturalHeight: img.naturalHeight,
+          radius: css.borderRadius, bottom: css.marginBottom };
+      });
+      assert.equal(metrics.maxHeight, 'none');
+      assert.notEqual(metrics.fit, 'contain');
+      assert.equal(metrics.ratio, 'auto');
+      assert.equal(metrics.radius, '14px');
+      assert.equal(metrics.bottom, '14px');
+      assert.ok(metrics.naturalWidth > 0 && metrics.naturalHeight > 0);
+      const naturalHeight = metrics.width * metrics.naturalHeight / metrics.naturalWidth;
+      assert.ok(Math.abs(metrics.height - naturalHeight) <= .5, 'cover must preserve its intrinsic ratio');
+      assert.ok(metrics.height > (width < 480 ? 140 : 224), `cover height: ${metrics.height}px`);
+      if (width >= 760) assert.ok(metrics.width <= 460.5, 'photo cover stays within the existing 23em column');
+    } finally { await page.close(); }
+  });
+}
+
+test('E1 site CSS has no legacy page caps or cover height caps', async () => {
+  const css = (await fs.readFile(path.resolve(__dirname, '../assets/css/jaack-site.css'), 'utf8'))
+    .replace(/\/\*[\s\S]*?\*\//g, '');
+  const rules = [...css.matchAll(/([^{}]+)\{([^{}]*)\}/g)];
+  for (const [, selector, declarations] of rules) {
+    if (selector.includes('.jk-page') || selector.includes('nav.site-nav')) {
+      assert.doesNotMatch(declarations, /(?:max-)?width\s*:[^;]*(?:1120|1240)px/, selector.trim());
+    }
+    if (selector.includes('.title-image')) {
+      assert.doesNotMatch(declarations, /max-height\s*:\s*(?:224|140)px/, selector.trim());
+    }
+  }
+});
