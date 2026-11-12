@@ -139,12 +139,12 @@ test('jaack.me editorial typography uses the approved body measure and heading s
   const root = css.match(/:root\s*\{([^}]*--jk-serif:[^}]+)\}/)?.[1];
   assert.ok(root, 'missing editorial tokens');
   for (const [name, value] of Object.entries({
-    'fs-body': '18px', 'lh-body': '28px', baseline: '14px', measure: '33em',
+    'fs-body': '18px', 'lh-body': '28px', baseline: '14px',
     'fs-h4': '24px', 'lh-h4': '28px', 'fs-h3': '24px', 'lh-h3': '28px',
     'fs-h2': '43px', 'lh-h2': '56px', 'fs-h1': '57px', 'lh-h1': '70px',
-    'fs-body-long': '20px', 'lh-body-long': '28px', 'measure-long': '23em'
+    'fs-body-long': '20px', 'lh-body-long': '28px'
   })) assert.ok(root.includes(`--jk-${name}: ${value};`), name);
-  assert.match(css, /\.post\s*\{[^}]*font-size: var\(--jk-fs-body\);[^}]*max-width: var\(--jk-measure\);/);
+  assert.match(css, /\.post\s*\{[^}]*font-size: var\(--jk-fs-body\);[^}]*max-width: 100%;/);
   assert.match(css, /\.post-body p,\s*\.post-body li\s*\{\s*line-height: inherit;/);
   for (const [level, selectors] of [
     [1, ['h1', '.header-home .hero-title', '.page > .page-title', '.post > .title',
@@ -164,9 +164,9 @@ test('jaack.me editorial typography uses the approved body measure and heading s
   assert.match(css, /\.project-page--carta \.page-title\s*\{[^}]*font-variation-settings: 'opsz' 72;/);
   const phone = css.match(/@media \(max-width: 479px\) \{([\s\S]*?)\n\}/)?.[1];
   assert.ok(phone, 'missing phone typography spacing');
-  assert.match(phone, /:root\s*\{\s*--jk-page-x: 20px;\s*\}/);
-  assert.match(phone, /padding-left: max\(var\(--jk-page-x\), env\(safe-area-inset-left\)\);/);
-  assert.match(phone, /padding-right: max\(var\(--jk-page-x\), env\(safe-area-inset-right\)\);/);
+  assert.match(css, /:root\s*\{[^}]*--jk-page-x: 16px;/);
+  assert.match(css, /@media \(min-width: 480px\)\s*\{\s*:root \{ --jk-page-x: 20px; \}/);
+  assert.match(css, /\.wrapper-xwide\.jk-page\s*\{[^}]*padding:\s*var\(--jk-top-clearance\)\s*max\(var\(--jk-page-x\), env\(safe-area-inset-right\)\)\s*env\(safe-area-inset-bottom\)\s*max\(var\(--jk-page-x\), env\(safe-area-inset-left\)\);/);
 });
 
 test('headings use the compact scale below 1100px on the 14px grid', () => {
@@ -183,17 +183,10 @@ test('headings use the compact scale below 1100px on the 14px grid', () => {
   });
 });
 
-test('posts default to long 20/28 at 23em from 600px, with a normal opt-out', () => {
+test('posts use the 20/28 story measure while normal pages retain their prose scale', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
-  const desktop = css.match(/@media \(min-width: 600px\) \{([\s\S]*?)\n\}/)?.[1];
-  assert.ok(desktop, 'missing long article breakpoint');
-  assert.match(desktop, /\.post:not\(\[data-measure="normal"\]\),\s*\.post:not\(\[data-measure="normal"\]\) \.post-body,\s*\.post-body--long\s*\{\s*font-size: var\(--jk-fs-body-long\);\s*line-height: var\(--jk-lh-body-long\);/);
-  assert.match(desktop, /\.post:not\(\[data-measure="normal"\]\),\s*\.post-body--long\s*\{\s*max-width: var\(--jk-measure-long\);/);
-  assert.doesNotMatch(css.replace(desktop, ''), /(?:font-size|line-height|max-width): var\(--jk-(?:fs-body-long|lh-body-long|measure-long)\)/);
-  for (const slug of ['2024-review', '2024-review-en', '2024-review-it', 'zk-evms-en']) {
-    assert.match(read(`_site/${slug}/index.html`), /<main\b[^>]*class="post"/);
-    assert.doesNotMatch(read(`_site/${slug}/index.html`), /data-measure=/);
-  }
+  assert.match(css, /--jk-measure: 28em;/);
+  assert.match(css, /\.story \.prose\s*\{[^}]*max-width: var\(--jk-measure\);[^}]*font-size: 20px;[^}]*line-height: 28px;/);
   assert.match(css, /\.jk-prose\s*\{[^}]*max-width: 26em;[^}]*font-size: var\(--jk-fs-body\);[^}]*line-height: var\(--jk-lh-body\);/);
   assert.equal(read('_site/assets/css/jaack-site.css'), read('assets/css/jaack-site.css'));
 });
@@ -263,41 +256,38 @@ test('coffee is a quiet 44px t2 text link with no vendor assets or tracking', ()
 });
 
 // CSS regressions accompany rendered structure and language checks in site_test.rb.
-test('post headers remove the title accent and keep mobile covers within the reading budget', () => {
+test('post headers remove the title accent and keep covers at natural height', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
   const title = css.match(/\.post > \.title\s*\{[^}]*max-width: 100%;([^}]+)\}/)?.[1];
   assert.match(title, /border: 0;\s*box-shadow: none;/);
   assert.doesNotMatch(title, /accent/);
   assert.match(css, /\.post > \.date\s*\{[^}]*font-size: var\(--jk-fs-xs\);[^}]*text-transform: none;[^}]*color: var\(--jk-t3\);/);
   assert.match(css, /\.post > \.title \{ font-size: clamp\(32px, 9vw, 43px\); line-height: 42px; \}/);
-  assert.match(css, /\.post > \.title-image\s*\{[^}]*width: 100%;[^}]*aspect-ratio: 16 \/ 9;[^}]*border-radius: 14px;/);
-  assert.match(css.match(/@media \(max-width: 479px\) \{([\s\S]*?)\n\}/)?.[1], /\.post > \.title-image \{ max-height: 140px; \}/);
+  const cover = css.match(/\.post > \.title-image\s*\{([^}]+)\}/)?.[1];
+  assert.match(cover, /width: 100%;\s*height: auto;\s*border-radius: 14px;\s*margin: 0 0 14px;/);
+  assert.doesNotMatch(cover, /max-height:|aspect-ratio:|object-fit:/);
+  assert.doesNotMatch(css, /\.title-image\s*\{[^}]*max-height: (?:140|224)px;/);
   assert.match(css, /\.dated-rows > \.dated-row\s*\{[^}]*min-height: 44px;[^}]*border-top: 1px solid var\(--jk-hair\);/);
   assert.match(css, /\.dated-row > time \{ color: var\(--jk-t3\);/);
   assert.match(css, /\.dated-row > a, \.dated-row > \.row-title\s*\{[^}]*font-family: var\(--jk-serif\);[^}]*font-size: 20px;[^}]*line-height: 28px;[^}]*color: var\(--jk-ink\);[^}]*text-decoration: none;/);
   assert.match(css, /\.dated-row > a:hover, \.dated-row > a:focus-visible \{ text-decoration: underline;/);
 });
 
-test('diagrams break out at 760px while text and unmarked photos keep their left-aligned measure', () => {
+test('story figures span the prose and right rail without a legacy page cap', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
-  const wide = css.match(/@media \(min-width: 760px\) \{([\s\S]*?)\n\}/)?.[1];
-  assert.ok(wide);
-  assert.match(wide, /\.jk-page > \.post\s*\{[^}]*max-width: min\(100%, 720px\);/);
-  assert.match(wide, /--jk-post-measure: calc\(23 \* var\(--jk-fs-body-long\)\);/);
-  assert.match(wide, /\.post \.post-body \{ max-width: 100%; overflow: visible; \}/);
-  assert.match(wide, /:is\(\.title, \.date, beeline-button, \.related, \.donation, \.author, \.blog-navigation, \.title-image\),\s*\.jk-page > main.post \.post-body > \*\s*\{[^}]*max-width: var\(--jk-post-measure\);[^}]*margin-left: 0;[^}]*margin-right: auto;/);
-  assert.match(wide, /:has\(img\[src\$="\.svg"\], img\.figure--diagram, figure\.figure--diagram\),/);
-  assert.match(wide, /\.jk-page > main.post > \.title-image:is\(\[src\$="\.svg"\], \.figure--diagram\)\s*\{[^}]*width: 100%;[^}]*max-width: 100%;[^}]*margin-left: 0;[^}]*margin-right: auto;/);
-  assert.match(wide, /\.jk-page > main.post > \.title-image:is\(\[src\$="\.svg"\], \.figure--diagram\)\s*\{[^}]*max-height: none;[^}]*aspect-ratio: auto;/);
-  assert.match(css, /\.post :is\(img\[src\$="\.svg"\], img\.figure--diagram, figure\.figure--diagram img\)\s*\{[^}]*width: 100%;[^}]*max-width: 100%;[^}]*margin-left: 0;[^}]*margin-right: auto;/);
+  assert.match(css, /grid-template-columns: minmax\(160px, 200px\) 560px minmax\(200px, 280px\);/);
+  assert.match(css, /grid-template-columns: minmax\(200px, 240px\) 640px minmax\(280px, 320px\);/);
+  assert.match(css, /\.story \.prose\s*\{[^}]*grid-template-columns: subgrid;[^}]*grid-column: 2 \/ -1;/);
+  assert.match(css, /\.story \.prose > :is\(img, figure, table, p:has\(img, video, iframe\), \.side-by-side\)\s*\{[^}]*grid-column: 1 \/ -1;[^}]*max-width: 2200px;/);
+  assert.doesNotMatch(stripComments(read('assets/css/site-structure.css')), /max-width: (?:720|1120)px/);
 });
 
-test('about overrides legacy layouts with a 160px portrait stacked above the full prose measure', () => {
+test('About uses a full frame, 28em text and a large portrait beside it', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
-  assert.match(css, /\.jk-prose \{[^}]*max-width: 26em;/);
-  assert.match(css, /\.jk-prose \.about-body \{ display: block; \}/);
-  assert.match(css, /\.jk-prose \.about-body > \.about-portrait\s*\{[^}]*display: block;[^}]*float: none;[^}]*width: 160px;[^}]*height: auto;[^}]*border-radius: 14px;[^}]*margin: 0 0 28px;/);
-  assert.match(css, /\.jk-prose \.about-body > :is\(\.lang-en, \.lang-it\) \{ max-width: none; \}/);
+  assert.match(css, /\.jk-prose:has\(> \.about-body\) \{ max-width: none; \}/);
+  assert.match(css, /\.jk-prose \.about-body \{ font-size: 20px; line-height: 28px; \}/);
+  assert.match(css, /\.about-body > \.about-portrait \{[^}]*grid-column: 2;[^}]*width: clamp\(420px, 22vw, 560px\);/);
+  assert.match(css, /\.about-body > :is\(\.lang-en, \.lang-it\) \{[^}]*grid-column: 1;[^}]*width: 28em;/);
 });
 
 test('code overrides every Pygments token with one accessible palette in both themes', () => {

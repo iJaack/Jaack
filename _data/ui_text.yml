@@ -88,3 +88,7 @@ months:
 months_short:
   en: [Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
   it: [gen, feb, mar, apr, mag, giu, lug, ago, set, ott, nov, dic]
+
+story_toc:
+  en: In this piece
+  it: In questo articolo
