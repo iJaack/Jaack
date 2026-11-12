@@ -9,6 +9,6 @@
       {% endfor %}
     </div>
   </div>
-  {% assign carta = site.data.projects | where: 'id', 'carta' | first %}
-  <figure class="app-preview"><img src="{{ '/assets/images/work/carta/carta-publish-native-preview.png' | relative_url }}" width="1290" height="2796" alt="{{ carta.video_caption_en | escape }}" loading="lazy"><figcaption><span class="lang-en" lang="en">{{ carta.video_caption_en }}</span><span class="lang-it" lang="it">{{ carta.video_caption_it }}</span></figcaption></figure>
+  {% assign sea = site.data.projects | where: 'id', 'sea-temperature' | first %}
+  <figure class="app-preview"><img src="{{ sea.icon | relative_url }}" width="160" height="160" alt="{{ sea.name | escape }}" loading="lazy"><figcaption><span class="lang-en" lang="en">{{ sea.name }} · {{ sea.description_en }}</span><span class="lang-it" lang="it">{{ sea.name }} · {{ sea.description_it }}</span></figcaption></figure>
 </section>

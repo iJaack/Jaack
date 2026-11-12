@@ -198,7 +198,8 @@ class SiteTest < Minitest::Test
     assert_equal '100', work.at_css('#hundred .app-monogram[aria-hidden="true"]').text
     assert_equal 6, work.css('.work-jumps a').length
     assert_equal 5, work.css('.app-grid .app-entry').length
-    assert_equal %w[eva eva-protocol], work.css('.project-family .work-entry').map { |entry| entry['id'] }
+    assert_equal %w[gm10 eva eva-protocol], work.css('[aria-labelledby="group-ventures"] > .cards > .work-entry').map { |entry| entry['id'] }
+    assert_equal 'A product within Eva', work.at_css('#eva-protocol .family-label .lang-en').text
     ids = work.css('[id]').map { |entry| entry['id'] }
     assert_equal ids.uniq, ids, 'Project anchors must remain unique'
   end

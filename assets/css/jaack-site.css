@@ -939,10 +939,6 @@ a.text-link, a.note-back { display: inline-flex; align-items: center; min-height
 .cards :is(h3, .feature-copy h3) { margin: 14px 0; }
 .card-media { display: flex; align-items: center; justify-content: center; aspect-ratio: 3 / 2; background: var(--jk-surface-2); text-decoration: none; overflow: hidden; }
 .cards .card-media img { display: block; width: 100%; height: 100%; object-fit: contain; aspect-ratio: auto; clip-path: none; }
-.cards .card-media--icon { padding: 28px; box-sizing: border-box; }
-.cards .card-media--icon img { width: 160px; max-width: 100%; height: auto; }
-.card-media--icon .app-monogram { width: 160px; height: 160px; font-size: 64px; }
-.cards .card-media--icon > span:not(.app-monogram) { font: 450 clamp(28px, 3vw, 56px)/1.2 var(--jk-serif); text-align: center; }
 .writing-card time { display: block; margin-top: 14px; }
 .writing-card h3 a { font: 450 24px/28px var(--jk-serif); text-decoration: none; }
 .writing-card h3 a:hover, .writing-card h3 a:focus-visible { text-decoration: underline; }
@@ -953,8 +949,7 @@ a.text-link, a.note-back { display: inline-flex; align-items: center; min-height
 .work-featured .card-media img { display: block; width: 100%; height: 100%; max-height: min(70vh, 820px); object-fit: contain; }
 .work-featured .work-copy { align-self: center; }
 .work-featured .work-heading > .app-icon { display: none; }
-.cards .project-family { margin: 0; padding: 0; border: 0; }
-.cards .project-family .family-label { border-top: 1px solid var(--jk-accent-text); margin: 28px 0 14px; padding-top: 14px; }
+.work-group .family-label { color: var(--jk-accent-text); font-size: var(--jk-fs-xs); margin: 0 0 14px; }
 .app-gallery .app-links :is(img, .app-monogram) { width: 64px; height: 64px; flex: 0 0 64px; }
 .app-gallery .app-preview img { max-height: min(60vh, 640px); object-fit: contain; }
 .app-gallery .app-links a { padding: 14px; background: var(--jk-surface-2); }
@@ -998,6 +993,28 @@ a.text-link, a.note-back { display: inline-flex; align-items: center; min-height
   .cards:has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 .cards:has(> :only-child:last-child) { grid-template-columns: minmax(0, 1fr); }
+
+/* Work counts are visual cards; five use three equal cards, then two equal cards. */
+.work-group > .cards .work-entry:not(:has(.card-media)) .work-heading:has(> :is(.app-icon, .app-monogram)) {
+  display: grid; grid-template-columns: 64px minmax(0, 1fr); column-gap: 14px; align-items: center;
+}
+.work-group > .cards .work-entry:not(:has(.card-media)) .work-heading > :is(.app-icon, .app-monogram) {
+  display: inline-flex; grid-column: 1; grid-row: 2; width: 64px; height: 64px; margin: 0; object-fit: contain;
+}
+.work-group > .cards .work-entry:not(:has(.card-media)) .work-heading:has(> :is(.app-icon, .app-monogram)) > .work-meta { grid-column: 1 / -1; }
+.work-group > .cards .work-entry:not(:has(.card-media)) .work-heading:has(> :is(.app-icon, .app-monogram)) > h3 { grid-column: 2; grid-row: 2; }
+.app-gallery .app-preview img { width: 160px; height: 160px; max-width: 100%; }
+@media (min-width: 760px) {
+  .work-group > .cards, .work-group > .cards:has(> :only-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .work-group > .cards:has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .work-group > .cards:has(> :nth-child(5):last-child) { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .work-group > .cards:has(> :nth-child(5):last-child) > * { grid-column: span 2; }
+  .work-group > .cards:has(> :nth-child(5):last-child) > :nth-child(n+4) { grid-column: span 3; }
+}
+@media (min-width: 1440px) {
+  .work-group > .cards:has(> :nth-child(4):last-child),
+  .work-group > .cards:has(> :only-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
 
 /* The three photographic formats. Cover stages and UI icons size independently. */
 .jk-photo-3x2 { aspect-ratio: 3 / 2; object-fit: cover; }
