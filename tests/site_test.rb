@@ -698,7 +698,7 @@ class SiteTest < Minitest::Test
       children = page.at_css('main.post').element_children.reject { |n| n.key?('hidden') }
       assert children[0].matches?('h1.title')
       assert children[1].matches?('p.post-meta')
-      assert page.at_css('main.post > .post-meta + img.title-image + .post-body')
+      assert page.at_css('main.post > .post-meta + img.title-image + .story > .post-body')
       assert_empty page.css('beeline-button, script[src*="beeline"]')
       related = page.at_css('main > .related')
       refute_nil related
@@ -720,7 +720,7 @@ class SiteTest < Minitest::Test
   def test_missing_local_cover_is_omitted_and_present_cover_is_rendered
     missing = doc('installare-nodo-ipfs-en/index.html')
     assert_empty missing.css('main.post > .title-image')
-    assert missing.at_css('main.post > .post-meta + .post-body')
+    assert missing.at_css('main.post > .post-meta + .story > .post-body')
     %w[en it].each do |lang|
       cover = doc("2024-review-#{lang}/index.html").at_css('main.post > img.title-image')
       refute_nil cover

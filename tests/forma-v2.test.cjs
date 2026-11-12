@@ -139,12 +139,12 @@ test('jaack.me editorial typography uses the approved body measure and heading s
   const root = css.match(/:root\s*\{([^}]*--jk-serif:[^}]+)\}/)?.[1];
   assert.ok(root, 'missing editorial tokens');
   for (const [name, value] of Object.entries({
-    'fs-body': '18px', 'lh-body': '28px', baseline: '14px', measure: '33em',
+    'fs-body': '18px', 'lh-body': '28px', baseline: '14px',
     'fs-h4': '24px', 'lh-h4': '28px', 'fs-h3': '24px', 'lh-h3': '28px',
     'fs-h2': '43px', 'lh-h2': '56px', 'fs-h1': '57px', 'lh-h1': '70px',
-    'fs-body-long': '20px', 'lh-body-long': '28px', 'measure-long': '23em'
+    'fs-body-long': '20px', 'lh-body-long': '28px'
   })) assert.ok(root.includes(`--jk-${name}: ${value};`), name);
-  assert.match(css, /\.post\s*\{[^}]*font-size: var\(--jk-fs-body\);[^}]*max-width: var\(--jk-measure\);/);
+  assert.match(css, /\.post\s*\{[^}]*font-size: var\(--jk-fs-body\);[^}]*max-width: 100%;/);
   assert.match(css, /\.post-body p,\s*\.post-body li\s*\{\s*line-height: inherit;/);
   for (const [level, selectors] of [
     [1, ['h1', '.header-home .hero-title', '.page > .page-title', '.post > .title',
@@ -183,17 +183,10 @@ test('headings use the compact scale below 1100px on the 14px grid', () => {
   });
 });
 
-test('posts default to long 20/28 at 23em from 600px, with a normal opt-out', () => {
+test('posts use the 20/28 story measure while normal pages retain their prose scale', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
-  const desktop = css.match(/@media \(min-width: 600px\) \{([\s\S]*?)\n\}/)?.[1];
-  assert.ok(desktop, 'missing long article breakpoint');
-  assert.match(desktop, /\.post:not\(\[data-measure="normal"\]\),\s*\.post:not\(\[data-measure="normal"\]\) \.post-body,\s*\.post-body--long\s*\{\s*font-size: var\(--jk-fs-body-long\);\s*line-height: var\(--jk-lh-body-long\);/);
-  assert.match(desktop, /\.post:not\(\[data-measure="normal"\]\),\s*\.post-body--long\s*\{\s*max-width: var\(--jk-measure-long\);/);
-  assert.doesNotMatch(css.replace(desktop, ''), /(?:font-size|line-height|max-width): var\(--jk-(?:fs-body-long|lh-body-long|measure-long)\)/);
-  for (const slug of ['2024-review', '2024-review-en', '2024-review-it', 'zk-evms-en']) {
-    assert.match(read(`_site/${slug}/index.html`), /<main\b[^>]*class="post"/);
-    assert.doesNotMatch(read(`_site/${slug}/index.html`), /data-measure=/);
-  }
+  assert.match(css, /--jk-measure: 28em;/);
+  assert.match(css, /\.story \.prose\s*\{[^}]*max-width: var\(--jk-measure\);[^}]*font-size: 20px;[^}]*line-height: 28px;/);
   assert.match(css, /\.jk-prose\s*\{[^}]*max-width: 26em;[^}]*font-size: var\(--jk-fs-body\);[^}]*line-height: var\(--jk-lh-body\);/);
   assert.equal(read('_site/assets/css/jaack-site.css'), read('assets/css/jaack-site.css'));
 });
@@ -280,18 +273,13 @@ test('post headers remove the title accent and keep covers at natural height', (
   assert.match(css, /\.dated-row > a:hover, \.dated-row > a:focus-visible \{ text-decoration: underline;/);
 });
 
-test('diagrams break out at 760px while text and unmarked photos keep their left-aligned measure', () => {
+test('story figures span the prose and right rail without a legacy page cap', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
-  const wide = [...css.matchAll(/@media \(min-width: 760px\) \{([\s\S]*?)\n\}/g)]
-    .find(([, body]) => body.includes('.jk-page > .post'))?.[1];
-  assert.ok(wide);
-  assert.match(wide, /\.jk-page > \.post\s*\{[^}]*max-width: min\(100%, 720px\);/);
-  assert.match(wide, /--jk-post-measure: calc\(23 \* var\(--jk-fs-body-long\)\);/);
-  assert.match(wide, /\.post \.post-body \{ max-width: 100%; overflow: visible; \}/);
-  assert.match(wide, /:is\(\.title, \.date, beeline-button, \.related, \.donation, \.author, \.blog-navigation, \.title-image\),\s*\.jk-page > main.post \.post-body > \*\s*\{[^}]*max-width: var\(--jk-post-measure\);[^}]*margin-left: 0;[^}]*margin-right: auto;/);
-  assert.match(wide, /:has\(img\[src\$="\.svg"\], img\.figure--diagram, figure\.figure--diagram\),/);
-  assert.match(wide, /\.jk-page > main.post > \.title-image:is\(\[src\$="\.svg"\], \.figure--diagram\)\s*\{[^}]*width: 100%;[^}]*max-width: 100%;[^}]*margin-left: 0;[^}]*margin-right: auto;/);
-  assert.match(css, /\.post :is\(img\[src\$="\.svg"\], img\.figure--diagram, figure\.figure--diagram img\)\s*\{[^}]*width: 100%;[^}]*max-width: 100%;[^}]*margin-left: 0;[^}]*margin-right: auto;/);
+  assert.match(css, /grid-template-columns: minmax\(160px, 1.1fr\) minmax\(460px, 560px\) minmax\(200px, 1.6fr\);/);
+  assert.match(css, /grid-template-columns: minmax\(200px, 1fr\) minmax\(560px, 640px\) minmax\(280px, 2fr\);/);
+  assert.match(css, /\.story \.prose\s*\{[^}]*grid-template-columns: subgrid;[^}]*grid-column: 2 \/ -1;/);
+  assert.match(css, /\.story \.prose > :is\(img, figure, table, p:has\(img, video, iframe\), \.side-by-side\)\s*\{[^}]*grid-column: 1 \/ -1;[^}]*max-width: 2200px;/);
+  assert.doesNotMatch(stripComments(read('assets/css/site-structure.css')), /max-width: (?:720|1120)px/);
 });
 
 test('about overrides legacy layouts with a 160px portrait stacked above the full prose measure', () => {

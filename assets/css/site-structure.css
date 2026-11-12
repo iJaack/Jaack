@@ -112,12 +112,6 @@ hr { border: 0; height: 1px; margin: 42px auto; background: var(--jk-hair); }
 
 /* Posts: preserve PR B's figure breakout and Ombra syntax in jaack-site.css. */
 .post > .title { text-align: left; }
-.post > .title, .post > .date, .post > .blog-navigation, .post > .author, .post > .related { max-width: 720px; }
-.post > .title-image { max-width: 100%; }
-.post .post-body > :is(p, ul, ol, blockquote, pre, h2, h3, h4, hr, .footnotes) { box-sizing: border-box; max-width: 720px; margin-left: auto; margin-right: auto; }
-.post .post-body > :is(figure, table, img, p:has(img, iframe, video)) { max-width: 1120px; margin-left: auto; margin-right: auto; }
-.post .post-body > img { display: block; }
-.wrapper-xwide .post > .post-body > :is(.acp255-story, img, div, figure) { max-width: 100%; }
 .post > .blog-navigation { font-size: var(--jk-fs-sm); overflow: hidden; }
 .post > .blog-navigation a { display: block; width: 50%; float: left; margin: 14px 0; color: var(--jk-t2); text-decoration: none; }
 .post > .blog-navigation a:hover, .post > .blog-navigation a:focus-visible { color: var(--jk-accent-text); text-decoration: underline; }
