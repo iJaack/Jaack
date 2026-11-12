@@ -275,8 +275,8 @@ test('post headers remove the title accent and keep covers at natural height', (
 
 test('story figures span the prose and right rail without a legacy page cap', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
-  assert.match(css, /grid-template-columns: minmax\(160px, 1.1fr\) minmax\(460px, 560px\) minmax\(200px, 1.6fr\);/);
-  assert.match(css, /grid-template-columns: minmax\(200px, 1fr\) minmax\(560px, 640px\) minmax\(280px, 2fr\);/);
+  assert.match(css, /grid-template-columns: minmax\(160px, 200px\) 560px minmax\(200px, 280px\);/);
+  assert.match(css, /grid-template-columns: minmax\(200px, 240px\) 640px minmax\(280px, 320px\);/);
   assert.match(css, /\.story \.prose\s*\{[^}]*grid-template-columns: subgrid;[^}]*grid-column: 2 \/ -1;/);
   assert.match(css, /\.story \.prose > :is\(img, figure, table, p:has\(img, video, iframe\), \.side-by-side\)\s*\{[^}]*grid-column: 1 \/ -1;[^}]*max-width: 2200px;/);
   assert.doesNotMatch(stripComments(read('assets/css/site-structure.css')), /max-width: (?:720|1120)px/);
@@ -286,8 +286,8 @@ test('About uses a full frame, 28em text and a large portrait beside it', () => 
   const css = stripComments(read('assets/css/jaack-site.css'));
   assert.match(css, /\.jk-prose:has\(> \.about-body\) \{ max-width: none; \}/);
   assert.match(css, /\.jk-prose \.about-body \{ font-size: 20px; line-height: 28px; \}/);
-  assert.match(css, /\.about-body > \.about-portrait \{[^}]*grid-column: 8 \/ -1;[^}]*width: clamp\(420px, 100%, 560px\);/);
-  assert.match(css, /\.about-body > :is\(\.lang-en, \.lang-it\) \{[^}]*grid-column: 1 \/ 8;[^}]*width: 28em;/);
+  assert.match(css, /\.about-body > \.about-portrait \{[^}]*grid-column: 2;[^}]*width: clamp\(420px, 22vw, 560px\);/);
+  assert.match(css, /\.about-body > :is\(\.lang-en, \.lang-it\) \{[^}]*grid-column: 1;[^}]*width: 28em;/);
 });
 
 test('code overrides every Pygments token with one accessible palette in both themes', () => {

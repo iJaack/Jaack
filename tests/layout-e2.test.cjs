@@ -53,12 +53,26 @@ for (const [width, measure, wide] of [[390,358,390], [1440,560,1100], [1920,640,
             toc: toc.map(a => [a.hash.slice(1),a.textContent.trim()]),
             overflow: document.documentElement.scrollWidth > innerWidth };
         });
-        near(m.measure, measure); near(m.wide, wide, 80);
+        near(m.measure, measure);
+        if (route === loops) near(m.wide, wide, 80);
+        else {
+          const phone = await page.locator('.prose img').first().evaluate(img => {
+            const r = img.getBoundingClientRect(), stage = img.closest('.story-portrait').getBoundingClientRect();
+            const prose = img.closest('.prose').getBoundingClientRect(), css = getComputedStyle(img);
+            return { width:r.width, height:r.height, left:stage.left, right:stage.right, proseLeft:prose.left, proseRight:prose.right, fit:css.objectFit, max:css.maxHeight, photo:[...img.classList].some(c => c.startsWith('jk-photo-')) };
+          });
+          assert.equal(phone.fit,'contain'); assert.equal(phone.max,'800px'); assert.equal(phone.photo,false);
+          assert.ok(phone.height <= 800);
+          assert.ok(phone.left >= phone.proseLeft - 1 && phone.right <= phone.proseRight + 1);
+          if (width >= 1100) assert.ok(phone.width < wide - 80);
+          assert.equal(await page.locator('.prose > .story-portrait').count(),4,'prose-separated phones stay individual');
+          assert.equal(await page.locator('.prose > .story-portrait-row').count(),0);
+        }
         assert.equal(m.size, '20px'); assert.equal(m.leading, '28px'); assert.match(m.family, /Newsreader/);
         assert.deepEqual(m.toc, m.headings); assert.ok(m.headings.length);
         assert.equal(m.overflow, false);
         if (width >= 1100) { assert.equal(m.rail, 'block'); assert.equal(m.sticky,'sticky'); assert.ok(m.left > m.frameLeft + 160); }
-        else { assert.equal(m.rail, 'none'); near(m.figureLeft, 0); }
+        else { assert.equal(m.rail, 'none'); if (route === loops) near(m.figureLeft, 0); }
       }
     } finally { await page.close(); }
   });
@@ -102,9 +116,21 @@ for (const width of [390, 760, 1100, 1440, 1919, 1920, 2559, 2560, 3440]) {
         copyWidths:[...document.querySelectorAll('.work-entry .work-description p')].map(p => ({width:p.getBoundingClientRect().width,size:parseFloat(getComputedStyle(p).fontSize)})),
         feature:document.querySelector('.work-featured .card-media').getBoundingClientRect().width,
         featureRatio:getComputedStyle(document.querySelector('.work-featured .card-media')).aspectRatio,
+        featureStart:getComputedStyle(document.querySelector('.work-featured > .card-media')).gridColumn,
+        copyStart:getComputedStyle(document.querySelector('.work-featured > .work-copy')).gridColumn,
+        featureHeight:document.querySelector('.work-featured img').getBoundingClientRect().height,
+        featureMax:getComputedStyle(document.querySelector('.work-featured img')).maxHeight,
+        copyWidth:document.querySelector('.work-featured > .work-copy').getBoundingClientRect().width,
+        gridWidth:document.querySelector('.work-featured').getBoundingClientRect().width,
+        gutter:parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--jk-gutter')),
         overflow:document.documentElement.scrollWidth > innerWidth
       }));
       assert.equal(work.overflow,false); assert.equal(work.featureRatio,'16 / 9');
+      assert.equal(work.featureMax,'700px'); assert.ok(work.featureHeight <= 700);
+      if (width >= 900) {
+        assert.equal(work.featureStart,'1 / 8'); assert.equal(work.copyStart,'8 / -1');
+        near(work.copyWidth,(work.gridWidth - 11*work.gutter)/12*5 + 4*work.gutter);
+      }
       for (const p of work.copyWidths) assert.ok(p.width <= p.size * 32 + 1,'Card running text stays within 32em');
       for (const g of work.grids) {
         const columns = g.count === 1 ? 1 : width < 760 ? 1 : width < 1920 ? 2 : width < 2560 ? 3 : Math.min(4,g.count);
@@ -114,7 +140,7 @@ for (const width of [390, 760, 1100, 1440, 1919, 1920, 2559, 2560, 3440]) {
     } finally { await page.close(); }
   });
 }
-for (const width of [1280,2560]) {
+for (const width of [390,1100,1440,2560,3440]) {
   test(`E2 About portrait sits beside the 28em text at ${width}px`,async () => {
     const page = await browser.newPage({viewport:{width,height:1000}});
     try {
@@ -125,17 +151,22 @@ for (const width of [1280,2560]) {
           const portrait=document.querySelector('.about-portrait').getBoundingClientRect();
           const body=[...document.querySelectorAll('.about-body > [lang]')].find(el => el.getClientRects().length);
           const r=body.getBoundingClientRect(),css=getComputedStyle(body);
+          const title=document.querySelector('.page-title').getBoundingClientRect();
+          const frame=document.querySelector('main').getBoundingClientRect();
           return {width:portrait.width,left:portrait.left,top:portrait.top,textWidth:r.width,textRight:r.right,textTop:r.top,
+            titleTop:title.top,center:(r.left+portrait.right)/2,frameCenter:(frame.left+frame.right)/2,
             size:css.fontSize,leading:css.lineHeight,overflow:document.documentElement.scrollWidth > innerWidth};
         });
-        assert.ok(m.width>=420 && m.width<=560); near(m.textWidth,560);
-        assert.ok(m.left>m.textRight); near(m.top,m.textTop);
+        if (width >= 1100) {
+          assert.ok(m.width>=420 && m.width<=560); near(m.textWidth,560);
+          near(m.left-m.textRight,12,2); near(m.top,m.titleTop,4); near(m.center,m.frameCenter,16);
+        } else { near(m.width,160); assert.ok(m.textTop > m.top + 160); }
         assert.equal(m.size,'20px'); assert.equal(m.leading,'28px'); assert.equal(m.overflow,false);
       }
     } finally { await page.close(); }
   });
 }
-for (const width of [760,1920,2560,3440]) {
+for (const width of [760,1440,1920,2560,3440]) {
   test(`E2 reading paths use card tracks and keep the dated archive at ${width}px`,async () => {
     const page=await browser.newPage({viewport:{width,height:1000}});
     try {
@@ -143,6 +174,23 @@ for (const width of [760,1920,2560,3440]) {
       const columns=await page.locator('.reading-paths').evaluate(el => getComputedStyle(el).gridTemplateColumns.split(' ').length);
       assert.equal(columns,width<1920 ? 2 : 3);
       assert.ok(await page.locator('.list .dated-row').count());
+      for (const lang of ['en','it']) {
+        await page.evaluate(lang => window.toggleGlobalLang(lang),lang);
+        const archive=await page.locator(`.list.lang-${lang} .archive-years`).evaluate(el => ({
+          columns:getComputedStyle(el).gridTemplateColumns.split(' ').length,
+          years:[...el.querySelectorAll('.archive-year')].map(section => ({
+            label:section.querySelector('h3').textContent.trim(),sticky:getComputedStyle(section.querySelector('h3')).position,
+            dates:[...section.querySelectorAll('time')].map(time => time.dateTime.slice(0,4))
+          }))
+        }));
+        assert.equal(archive.columns,width < 1440 ? 1 : width < 1920 ? 2 : width < 2560 ? 3 : 4);
+        assert.ok(archive.years.length > 1);
+        assert.equal(new Set(archive.years.map(y=>y.label)).size,archive.years.length);
+        for (const year of archive.years) {
+          assert.match(year.label,/^\d{4}$/); assert.equal(year.sticky,'sticky'); assert.ok(year.dates.length);
+          assert.ok(year.dates.every(date => date === year.label),JSON.stringify(year));
+        }
+      }
     } finally { await page.close(); }
   });
 }
@@ -186,10 +234,15 @@ test('E2 defines exactly the three photographic formats and applies them without
   const page=await browser.newPage({viewport:{width:1440,height:1000}});
   try {
     await page.goto(base+'/recensione-caricatore-wireless-spigen-en/');
-    const photo=page.locator('.post-body img[src$="Spigen-Steadiboost-Flex-2.jpg"]');
-    const m=await photo.evaluate(img=>({classes:[...img.classList],ratio:getComputedStyle(img).aspectRatio,fit:getComputedStyle(img).objectFit}));
-    assert.ok(m.classes.includes('image'),'preserve the source image class');
-    assert.ok(m.classes.includes('jk-photo-3x2')); assert.equal(m.ratio,'3 / 2'); assert.equal(m.fit,'cover');
+    for (const route of ['/recensione-caricatore-wireless-spigen-en/','/recensione-caricatore-wireless-spigen/']) {
+      await page.goto(base+route);
+      for (const suffix of ['-2','-3','-4','']) {
+        const photo=page.locator(`.post-body img[src$="Spigen-Steadiboost-Flex${suffix}.jpg"]`);
+        const m=await photo.evaluate(img=>({classes:[...img.classList],ratio:getComputedStyle(img).aspectRatio,fit:getComputedStyle(img).objectFit}));
+        assert.ok(m.classes.includes('image'),'preserve the source image class');
+        assert.ok(m.classes.includes('jk-photo-3x2')); assert.equal(m.ratio,'3 / 2'); assert.equal(m.fit,suffix ? 'contain' : 'cover');
+      }
+    }
     await page.goto(base+'/about/');
     assert.ok(await page.locator('.about-portrait').evaluate(img=>img.classList.contains('jk-photo-1x1')));
     await page.goto(base);
@@ -201,5 +254,92 @@ test('E2 defines exactly the three photographic formats and applies them without
     await page.goto(base+'/projects/');
     const featured=page.locator('.work-featured img'); await featured.evaluate(img=>img.decode());
     assert.equal(await featured.evaluate(img=>img.naturalWidth),1672);
+  } finally { await page.close(); }
+});
+
+for (const width of [1440,1920,2560,3440]) {
+  test(`E2 centers bounded story rails and reserves absent notes at ${width}px`,async () => {
+    const page=await browser.newPage({viewport:{width,height:1000}});
+    try {
+      await page.goto(base+loops);
+      await page.evaluate(()=>document.fonts.ready);
+      const measure=()=>page.evaluate(()=>{
+        const frame=document.querySelector('main').getBoundingClientRect();
+        const group=document.querySelector('.story').getBoundingClientRect();
+        const rail=document.querySelector('.story-rail').getBoundingClientRect();
+        const p=document.querySelector('.prose > p:not(:has(img))').getBoundingClientRect();
+        return {frameCenter:(frame.left+frame.right)/2,groupCenter:(group.left+group.right)/2,
+          frameLeft:frame.left,railLeft:rail.left,textLeft:p.left,width:p.width,groupWidth:group.width};
+      });
+      const initial=await measure();
+      near(initial.groupCenter,initial.frameCenter,16);
+      assert.ok(initial.railLeft > initial.frameLeft + 80);
+      near(initial.width,width >= 1920 ? 640 : 560);
+      await page.evaluate(()=>{
+        let notes=document.querySelector('.story-notes');
+        if (!notes) { notes=document.createElement('aside'); notes.className='story-notes'; document.querySelector('.story').append(notes); }
+        notes.replaceChildren();
+      });
+      const empty=await measure(); near(empty.textLeft,initial.textLeft); near(empty.groupWidth,initial.groupWidth);
+      await page.locator('.story-notes').evaluate(el=>el.remove());
+      const absent=await measure(); near(absent.textLeft,initial.textLeft); near(absent.groupCenter,initial.frameCenter,16);
+    } finally { await page.close(); }
+  });
+}
+
+for (const width of [390,1440,2560,3440]) {
+  test(`E2 shows Carta in Small apps and Pommidoro once in Selected work at ${width}px`,async () => {
+    const page=await browser.newPage({viewport:{width,height:1000}});
+    try {
+      await page.goto(base);
+      const preview=page.locator('.app-preview img');
+      await preview.scrollIntoViewIfNeeded(); await preview.evaluate(img=>img.decode());
+      const m=await preview.evaluate(img=>({src:img.getAttribute('src'),alt:img.alt,fit:getComputedStyle(img).objectFit,
+        max:getComputedStyle(img).maxHeight,height:img.getBoundingClientRect().height}));
+      assert.equal(m.src,'/assets/images/work/carta/carta-publish-native-preview.png');
+      assert.equal(m.alt,"Carta's Publish sheet on iPhone. Sample text.");
+      assert.equal(m.fit,'contain'); assert.equal(m.max,'600px'); assert.ok(m.height<=600);
+      assert.equal(await page.locator('.app-gallery img[src*="pommidoro-screen"]').count(),0);
+      assert.equal(await page.locator('#selected-work .cards > .project-feature').count(),4);
+      assert.equal(await page.locator('#selected-work .card-media img[src*="pommidoro-screen"]').count(),1);
+      assert.equal(await page.locator('.app-preview .lang-en').textContent(),"Carta's Publish sheet on iPhone. Sample text.");
+      assert.equal(await page.locator('.app-preview .lang-it').textContent(),'Il foglio Pubblica di Carta su iPhone. Testi di esempio.');
+    } finally { await page.close(); }
+  });
+}
+
+test('E2 groups only consecutive natural portrait media and caps rows at 900px',async () => {
+  const page=await browser.newPage({viewport:{width:2560,height:1400}});
+  try {
+    await page.goto(base+loops);
+    await page.evaluate(()=>{
+      const screen='/assets/images/work/carta/carta-publish-native-preview.png';
+      const prose=document.querySelector('.prose');
+      prose.innerHTML=`<p id="before">Before.</p><img src="${screen}" alt="One"><p><a href="${screen}"><img src="${screen}" alt="Two"></a></p><figure><img src="${screen}" alt="Three"><figcaption>Caption.</figcaption></figure><p id="between">Between.</p><p><img src="${screen}" alt="Four"></p><img src="${screen}" alt="Five"><h2 id="heading">Heading.</h2><img src="${screen}" alt="Six"><p>After.</p><p>Inline prose <img src="${screen}" alt="Inline"> stays inline.</p>`;
+    });
+    await page.addScriptTag({url:base+'/assets/js/story-media.js'});
+    await page.locator('.prose img').evaluateAll(imgs=>Promise.all(imgs.map(img=>img.decode())));
+    await page.waitForFunction(()=>document.querySelectorAll('.story-portrait-row').length===2);
+    const m=await page.evaluate(()=>({
+      rows:[...document.querySelectorAll('.story-portrait-row')].map(row=>({
+        count:row.children.length,display:getComputedStyle(row).display,
+        heights:[...row.querySelectorAll('img')].map(img=>img.getBoundingClientRect().height),
+        fits:[...row.querySelectorAll('img')].map(img=>getComputedStyle(img).objectFit)
+      })),
+      individuals:document.querySelectorAll('.prose > .story-portrait').length,
+      before:document.querySelector('#before').textContent,between:document.querySelector('#between').textContent,
+      caption:document.querySelector('.story-portrait-row figcaption').textContent,
+      inline:document.querySelector('img[alt="Inline"]').closest('p').className,
+      inlineWidth:document.querySelector('img[alt="Inline"]').closest('p').getBoundingClientRect().width,
+      inlineFit:getComputedStyle(document.querySelector('img[alt="Inline"]')).objectFit,
+      overflow:document.documentElement.scrollWidth>innerWidth
+    }));
+    assert.deepEqual(m.rows.map(row=>row.count),[3,2]);
+    for(const row of m.rows) {
+      assert.equal(row.display,'flex'); row.heights.forEach(h=>near(h,900));
+      assert.ok(row.fits.every(fit=>fit==='contain'));
+    }
+    assert.equal(m.individuals,1); assert.equal(m.before,'Before.'); assert.equal(m.between,'Between.');
+    assert.equal(m.caption,'Caption.'); assert.equal(m.inline,''); near(m.inlineWidth,640); assert.equal(m.inlineFit,'contain'); assert.equal(m.overflow,false);
   } finally { await page.close(); }
 });
