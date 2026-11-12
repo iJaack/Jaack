@@ -64,16 +64,13 @@ hr { border: 0; height: 1px; margin: 42px auto; background: var(--jk-hair); }
 .project-feature .feature-image img { width: 100%; height: auto; aspect-ratio: 40 / 21; object-fit: cover; }
 .feature-evalanche h3 a { display: inline-flex; align-items: center; gap: 14px; }
 .feature-evalanche .evalanche-logo { width: 36px; height: 36px; border-radius: var(--jk-r-xs); }
-.app-gallery { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); align-items: center; border-top: 1px solid var(--jk-hair); border-bottom: 1px solid var(--jk-hair); }
+.app-gallery { display: grid; grid-template-columns: minmax(0, 1fr); border-top: 1px solid var(--jk-hair); border-bottom: 1px solid var(--jk-hair); }
 .app-gallery .section-intro { max-width: 40ch; }
-.app-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 28px; margin-top: 28px; }
+.app-links { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px 28px; margin-top: 28px; }
 .app-links a { display: flex; align-items: center; gap: 14px; min-height: 48px; font-size: var(--jk-fs-sm); text-decoration: none; }
 .app-links a:hover, .app-links a:focus-visible { text-decoration: underline; }
 .app-links img, .app-monogram { width: 36px; height: 36px; border-radius: var(--jk-r-xs); }
 .app-monogram { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; background: var(--jk-accent-wash); color: var(--jk-accent-text); font-family: var(--jk-font); font-weight: 700; font-size: var(--jk-fs-body); }
-.app-preview { margin: 0; text-align: center; }
-.app-preview img { display: block; width: 210px; height: auto; margin: 0 auto; }
-.app-preview figcaption { position: static; margin-top: 14px; font-size: var(--jk-fs-xs); }
 .work-jumps { display: flex; flex-wrap: wrap; padding: 14px 0; border-top: 1px solid var(--jk-hair); border-bottom: 1px solid var(--jk-hair); }
 .work-jumps a { display: inline-flex; align-items: center; color: var(--jk-t2); font-size: var(--jk-fs-sm); text-decoration: none; }
 .work-jumps a:hover, .work-jumps a:focus-visible { color: var(--jk-accent-text); text-decoration: underline; }
@@ -149,7 +146,6 @@ hr { border: 0; height: 1px; margin: 42px auto; background: var(--jk-hair); }
 }
 @media (max-width: 520px) {
   .app-gallery, .app-links { grid-template-columns: 1fr; }
-  .app-preview img { width: 180px; }
   .project-family { padding-left: 14px; }
 }
 @media (min-width: 640px) {
@@ -172,9 +168,6 @@ hr { border: 0; height: 1px; margin: 42px auto; background: var(--jk-hair); }
   .project-details { grid-template-columns: minmax(200px, .6fr) minmax(0, 1.8fr); gap: 56px; margin-top: 42px; }
   .project-screen img { width: 300px; }
   .footer-main { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; }
-}
-@media (min-width: 1280px) {
-  .app-preview img { width: 260px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }

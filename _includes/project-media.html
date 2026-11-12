@@ -5,7 +5,7 @@
 {% when 'gm10' %}{% assign media = 'gms.jpg' %}{% assign media_width = 1200 %}{% assign media_height = 630 %}
 {% when 'eva-protocol' %}{% assign media = 'eva-protocol-preview.png' %}{% assign media_width = 1425 %}{% assign media_height = 748 %}
 {% when 'evalanche' %}{% assign media = 'evalanche-preview.png' %}{% assign media_width = 1247 %}{% assign media_height = 663 %}
-{% when 'pommidoro' %}{% assign media = 'pommidoro-screen.jpg' %}{% assign media_width = 445 %}{% assign media_height = 985 %}
+{% when 'pommidoro' %}{% if include.feature %}{% assign media = 'pommidoro-screen.jpg' %}{% assign media_width = 445 %}{% assign media_height = 985 %}{% endif %}
 {% when 'lg-tv-use' %}{% assign media = 'lg-tv-use-cover.png' %}{% assign media_width = 1734 %}{% assign media_height = 907 %}
 {% endcase %}
 {% if media != '' %}

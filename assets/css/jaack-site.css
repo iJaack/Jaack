@@ -364,7 +364,7 @@ a.text-link, .contact-links a { color: var(--jk-accent-text); }
 .lost-note { color: var(--jk-t2); margin-top: 12px; }
 
 img, pre { border-radius: 0; }
-.app-preview img, .project-screen img { border-radius: 24px; }
+.project-screen img { border-radius: 24px; }
 pre, code, tt {
   background: var(--jk-surface-2);
   color: var(--jk-ink);
@@ -951,7 +951,6 @@ a.text-link, a.note-back { display: inline-flex; align-items: center; min-height
 .work-featured .work-heading > .app-icon { display: none; }
 .work-group .family-label { color: var(--jk-accent-text); font-size: var(--jk-fs-xs); margin: 0 0 14px; }
 .app-gallery .app-links :is(img, .app-monogram) { width: 64px; height: 64px; flex: 0 0 64px; }
-.app-gallery .app-preview img { max-height: min(60vh, 640px); object-fit: contain; }
 .app-gallery .app-links a { padding: 14px; background: var(--jk-surface-2); }
 .reading-paths.cards .reading-path { min-width: 0; }
 .jk-prose:has(> .about-body) { max-width: none; }
@@ -960,7 +959,6 @@ a.text-link, a.note-back { display: inline-flex; align-items: center; min-height
 .jk-prose .about-body .page-intro { font-size: inherit; }
 @media (max-width: 759.98px) {
   .header-home .hero-visual, .cards .card-media, .work-featured > .card-media { width: 100vw; max-width: none; margin-inline: calc(-1 * var(--jk-page-x)); }
-  .app-gallery { grid-template-columns: minmax(0, 1fr); }
 }
 @media (min-width: 760px) {
   .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -984,8 +982,6 @@ a.text-link, a.note-back { display: inline-flex; align-items: center; min-height
 }
 @media (min-width: 1920px) {
   .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .app-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .app-gallery .app-preview img { width: min(100%, 480px); }
 }
 @media (min-width: 2560px) {
   .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 48px 32px; }
@@ -994,7 +990,7 @@ a.text-link, a.note-back { display: inline-flex; align-items: center; min-height
 }
 .cards:has(> :only-child:last-child) { grid-template-columns: minmax(0, 1fr); }
 
-/* Work counts are visual cards; five use three equal cards, then two equal cards. */
+/* Balance five-card rows; compact-only app groups can fill five tracks on wide screens. */
 .work-group > .cards .work-entry:not(:has(.card-media)) .work-heading:has(> :is(.app-icon, .app-monogram)) {
   display: grid; grid-template-columns: 64px minmax(0, 1fr); column-gap: 14px; align-items: center;
 }
@@ -1003,17 +999,26 @@ a.text-link, a.note-back { display: inline-flex; align-items: center; min-height
 }
 .work-group > .cards .work-entry:not(:has(.card-media)) .work-heading:has(> :is(.app-icon, .app-monogram)) > .work-meta { grid-column: 1 / -1; }
 .work-group > .cards .work-entry:not(:has(.card-media)) .work-heading:has(> :is(.app-icon, .app-monogram)) > h3 { grid-column: 2; grid-row: 2; }
-.app-gallery .app-preview img { width: 160px; height: 160px; max-width: 100%; }
 @media (min-width: 760px) {
   .work-group > .cards, .work-group > .cards:has(> :only-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .work-group > .cards:has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .app-links:has(> :nth-child(5):last-child),
   .work-group > .cards:has(> :nth-child(5):last-child) { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .app-links:has(> :nth-child(5):last-child) > *,
   .work-group > .cards:has(> :nth-child(5):last-child) > * { grid-column: span 2; }
+  .app-links:has(> :nth-child(5):last-child) > :nth-child(n+4),
   .work-group > .cards:has(> :nth-child(5):last-child) > :nth-child(n+4) { grid-column: span 3; }
 }
 @media (min-width: 1440px) {
   .work-group > .cards:has(> :nth-child(4):last-child),
   .work-group > .cards:has(> :only-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1920px) {
+  .app-links:has(> :nth-child(5):last-child),
+  .work-group > .cards.app-grid:has(> :nth-child(5):last-child):not(:has(.card-media)) { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .app-links:has(> :nth-child(5):last-child) > :nth-child(n),
+  .work-group > .cards.app-grid:has(> :nth-child(5):last-child):not(:has(.card-media)) > :nth-child(n) { grid-column: auto; }
 }
 
 /* The three photographic formats. Cover stages and UI icons size independently. */

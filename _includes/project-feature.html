@@ -1,5 +1,5 @@
 <article class="project-feature feature-{{ project.id }}">
-  {% include project-media.html project=project %}
+  {% include project-media.html project=project feature=true %}
   <div class="feature-copy">
     <p class="work-meta"><span class="lang-en" lang="en">{{ project.stage_en }}</span><span class="lang-it" lang="it">{{ project.stage_it }}</span></p>
     <h3><a href="{{ '/projects/' | relative_url }}{{ project.id }}/">{% if project.id == 'evalanche' %}<img class="evalanche-logo" src="{{ '/assets/images/work/evalanche-logo.svg' | relative_url }}" width="64" height="64" alt="">{% endif %}{{ project.name }}</a></h3>

@@ -110,6 +110,7 @@ for (const width of [390, 760, 1100, 1440, 1919, 1920, 2559, 2560, 3440]) {
       await page.evaluate(() => document.fonts.ready);
       const work = await page.evaluate(() => ({
         grids:[...document.querySelectorAll('.work-group > .cards')].map(grid => ({
+          compact:grid.matches('.app-grid') && !grid.querySelector('.card-media'),
           count:grid.children.length, cols:getComputedStyle(grid).gridTemplateColumns.split(' ').length,
           width:grid.getBoundingClientRect().width, gap:parseFloat(getComputedStyle(grid).columnGap),
           cards:[...grid.children].map(c => { const r=c.getBoundingClientRect(); return {width:r.width,top:r.top,left:r.left,right:r.right}; }) })),
@@ -134,9 +135,9 @@ for (const width of [390, 760, 1100, 1440, 1919, 1920, 2559, 2560, 3440]) {
       for (const p of work.copyWidths) assert.ok(p.width <= p.size * 32 + 1,'Card running text stays within 32em');
       for (const g of work.grids) {
         const rows = [...new Set(g.cards.map(c=>Math.round(c.top)))].map(top=>g.cards.filter(c=>Math.round(c.top)===top));
-        const occupancy = width < 760 ? Array(g.count).fill(1) : g.count === 5 ? [3,2] : g.count === 4 && width < 1440 ? [2,2] : [g.count];
+        const occupancy = width < 760 ? Array(g.count).fill(1) : g.count === 5 ? (g.compact && width >= 1920 ? [5] : [3,2]) : g.count === 4 && width < 1440 ? [2,2] : [g.count];
         assert.deepEqual(rows.map(row=>row.length),occupancy,JSON.stringify(g));
-        assert.ok(rows.every(row=>row.length<=4),'Work never has five visual columns');
+        assert.ok(rows.every(row=>row.length <= (g.compact && width >= 1920 ? 5 : 4)),'Only compact app groups may have five visual columns');
         if (g.count === 1) near(g.cards[0].width,(g.width-g.gap*((width<760 ? 1 : width<1440 ? 2 : 4)-1))/(width<760 ? 1 : width<1440 ? 2 : 4));
         else for (const row of rows) {
           for (const card of row) near(card.width,(g.width-g.gap*(row.length-1))/row.length);
@@ -293,30 +294,54 @@ for (const width of [1440,1920,2560,3440]) {
   });
 }
 
-for (const width of [390,1440,2560,3440]) {
-  test(`E2 shows Sea Temperature in Small apps and Pommidoro once in Selected work at ${width}px`,async t => {
+for (const width of [390,760,1440,1919,1920,2560,3440]) {
+  test(`E2 Small apps fills compact rows without a preview at ${width}px`,async t => {
     const page=await browser.newPage({viewport:{width,height:1000}});
     try {
       await page.goto(base);
-      const preview=page.locator('.app-preview img');
-      await preview.scrollIntoViewIfNeeded(); await preview.evaluate(img=>img.decode());
-      const m=await preview.evaluate(img=>({src:img.getAttribute('src'),alt:img.alt,width:img.getBoundingClientRect().width,fit:getComputedStyle(img).objectFit,
-        max:getComputedStyle(img).maxHeight,height:img.getBoundingClientRect().height}));
-      assert.equal(m.src,'/assets/images/work/sea-temperature.png');
-      assert.equal(m.alt,'Sea Temperature'); near(m.width,160); near(m.height,160);
-      assert.equal(m.fit,'contain'); assert.equal(m.max,'600px'); assert.ok(m.height<=600);
+      await page.evaluate(()=>document.fonts.ready);
+      assert.equal(await page.locator('.app-preview').count(),0);
+      assert.equal(await page.locator('.app-gallery > figure, .app-gallery .card-media').count(),0);
+      for (const [lang,eyebrow,title,intro] of [
+        ['en','Made for the everyday','Small apps.Useful details.','The sea, a workout, a focused hour, a delivery, a thread. Five native apps I’m working on.'],
+        ['it','Per le cose di ogni giorno','Piccole app.Dettagli utili.','Il mare, un allenamento, un’ora di concentrazione, una consegna, un thread. Cinque app native a cui sto lavorando.']
+      ]) {
+        await page.evaluate(lang=>window.toggleGlobalLang(lang),lang);
+        assert.equal(await page.locator(`.app-gallery .work-meta .lang-${lang}`).textContent(),eyebrow);
+        assert.equal(await page.locator(`#apps-title .lang-${lang}`).textContent(),title);
+        assert.equal(await page.locator(`.app-gallery .section-intro .lang-${lang}`).textContent(),intro);
+        const m=await page.locator('.app-gallery').evaluate(gallery=>{
+          const rect=el=>{const r=el.getBoundingClientRect();return {left:r.left,right:r.right,width:r.width,top:r.top,bottom:r.bottom};};
+          const grid=gallery.querySelector('.app-links');
+          return {gallery:rect(gallery),intro:rect(gallery.querySelector('.app-gallery-copy')),grid:rect(grid),
+            gap:parseFloat(getComputedStyle(grid).columnGap),
+            cards:[...grid.children].map(card=>({...rect(card),href:card.getAttribute('href')})),
+            icons:[...grid.querySelectorAll('img, .app-monogram')].map(rect)};
+        });
+        near(m.grid.width,m.gallery.width); near(m.grid.left,m.gallery.left);
+        assert.ok(m.intro.bottom < m.grid.top,'Intro stays above the full-width grid');
+        assert.deepEqual(m.cards.map(c=>c.href),['/projects/sea-temperature/','/projects/hundred/','/projects/pommidoro/','/projects/parcelpilot/','/projects/carta/']);
+        assert.equal(m.icons.length,5); m.icons.forEach(icon=>near(icon.width,64));
+        const rows=[...new Set(m.cards.map(c=>Math.round(c.top)))].map(top=>m.cards.filter(c=>Math.round(c.top)===top));
+        assert.deepEqual(rows.map(row=>row.length),width<760 ? [1,1,1,1,1] : width<1920 ? [3,2] : [5]);
+        for (const row of rows) {
+          row.forEach(card=>near(card.width,(m.grid.width-m.gap*(row.length-1))/row.length));
+          near(row[0].left,m.grid.left); near(row.at(-1).right,m.grid.right);
+        }
+        t.diagnostic(JSON.stringify({viewport:width,lang,smallApps:{preview:false,intro:true,rows:rows.map(row=>row.length),widths:rows.map(row=>row.map(c=>c.width))}}));
+      }
       assert.equal(await page.locator('.app-gallery img[src*="pommidoro-screen"]').count(),0);
       assert.equal(await page.locator('#selected-work .cards > .project-feature').count(),4);
       assert.equal(await page.locator('#selected-work .card-media img[src*="pommidoro-screen"]').count(),1);
-      assert.equal(await page.locator('.app-preview .lang-en').textContent(),'Sea Temperature · An iPhone app for exploring sea-surface temperature on a map.');
-      assert.equal(await page.locator('.app-preview .lang-it').textContent(),"Sea Temperature · Un'app per iPhone per esplorare la temperatura superficiale del mare su una mappa.");
+      assert.equal(await page.locator('img[src*="pommidoro-screen"]').count(),1);
       assert.equal(await page.locator('.app-gallery img[src*="carta"]').count(),0);
-      t.diagnostic(JSON.stringify({viewport:width,smallApps:m}));
+      assert.equal(await page.locator('.app-links a[href="/projects/carta/"] .app-monogram').textContent(),'C');
+      assert.equal(await page.locator('.app-links a[href="/projects/pommidoro/"] img').getAttribute('src'),'/assets/images/work/pommidoro.png');
     } finally { await page.close(); }
   });
 }
 
-for (const width of [390,760,1440,2560,3440]) {
+for (const width of [390,760,1440,1919,1920,2560,3440]) {
   test(`E2 Work uses text and compact icon cards at ${width}px`,async t => {
     const page=await browser.newPage({viewport:{width,height:1000}});
     try {
@@ -329,21 +354,23 @@ for (const width of [390,760,1440,2560,3440]) {
         assert.equal(await page.locator(`#${id} h3 a`).count(),1);
         assert.ok(await page.locator(`#${id} .work-description p`).count());
       }
-      const icons=await page.locator('#eva, #hundred, #carta, #sea-temperature, #parcelpilot').evaluateAll(cards=>cards.map(card=>{
+      const icons=await page.locator('#eva, #hundred, #carta, #sea-temperature, #parcelpilot, #pommidoro').evaluateAll(cards=>cards.map(card=>{
         const icon=card.querySelector('.work-heading > .app-icon, .work-heading > .app-monogram');
         const r=icon.getBoundingClientRect(),title=card.querySelector('h3').getBoundingClientRect();
         return {id:card.id,media:card.querySelectorAll('.card-media').length,width:r.width,height:r.height,
           titleGap:title.left-r.right,centerDelta:(title.top+title.bottom-r.top-r.bottom)/2};
       }));
-      assert.equal(icons.length,5);
+      assert.equal(icons.length,6);
       for (const icon of icons) {
         assert.equal(icon.media,0,icon.id); assert.ok(icon.width>=56 && icon.width<=64,JSON.stringify(icon));
         near(icon.height,icon.width); near(icon.titleGap,14); near(icon.centerDelta,0);
       }
-      for (const id of ['gm10','eva-protocol','evalanche','pommidoro','lg-tv-use']) {
+      for (const id of ['gm10','eva-protocol','evalanche','lg-tv-use']) {
         assert.equal(await page.locator(`#${id} .card-media`).count(),1,`${id} keeps its artwork`);
         assert.equal(await page.locator(`#${id} .card-media`).evaluate(el=>getComputedStyle(el).aspectRatio),'3 / 2');
       }
+      assert.equal(await page.locator('img[src*="pommidoro-screen"]').count(),0);
+      assert.equal(await page.locator('#pommidoro .app-icon').getAttribute('src'),'/assets/images/work/pommidoro.png');
       const work=await page.evaluate(()=>{
         const rect=el=>{const r=el.getBoundingClientRect();return {id:el.id,width:r.width,top:r.top};};
         return {redbridge:rect(document.querySelector('#redbridge')),
@@ -354,8 +381,11 @@ for (const width of [390,760,1440,2560,3440]) {
       assert.deepEqual(work.native.map(c=>c.id),['sea-temperature','hundred','pommidoro','parcelpilot','carta']);
       if (width>=760) {
         assert.ok(work.ventures.every(c=>Math.abs(c.top-work.ventures[0].top)<1));
-        assert.ok(work.native.slice(0,3).every(c=>Math.abs(c.top-work.native[0].top)<1));
-        near(work.native[3].top,work.native[4].top); assert.ok(work.native[3].top>work.native[0].top);
+        if (width>=1920) assert.ok(work.native.every(c=>Math.abs(c.top-work.native[0].top)<1));
+        else {
+          assert.ok(work.native.slice(0,3).every(c=>Math.abs(c.top-work.native[0].top)<1));
+          near(work.native[3].top,work.native[4].top); assert.ok(work.native[3].top>work.native[0].top);
+        }
       }
       if (width>=2560) assert.ok(work.redbridge.width>=500 && work.redbridge.width<=850);
       t.diagnostic(JSON.stringify({viewport:width,...work,icons}));
