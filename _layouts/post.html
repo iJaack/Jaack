@@ -45,7 +45,7 @@ layout: page
     {% assign toc_links = toc_links | strip %}
     {% if toc_links != '' %}<nav class="story-toc" aria-label="{{ site.data.ui_text.story_toc[post_lang] }}"><p>{{ site.data.ui_text.story_toc[post_lang] }}</p><ol>{{ toc_links }}</ol></nav>{% endif %}
   </aside>
-  <div class="post-body prose">{{ content }}</div>
+  <div class="post-body prose">{{ content | replace_first: '<figcaption', '<figcaption data-story-caption="opening"' }}</div>
   {% assign captions = content | split: '<figcaption' %}
   {% if captions.size > 1 %}{% assign opening_caption = captions[1] | split: '</figcaption>' | first %}{% assign caption_attributes = opening_caption | split: '>' | first | append: '>' %}<aside class="story-notes">{{ opening_caption | remove_first: caption_attributes }}</aside>{% endif %}
 </div>

@@ -530,7 +530,8 @@ html[data-theme="dark"] {
 .story .prose img { display: block; width: 100%; height: auto; }
 .story .prose :is(h2, h3, h4) { scroll-margin-top: var(--jk-top-clearance); }
 .story-rail, .story-notes { display: none; }
-.post > .title-image {
+.post > .title-image,
+.post > .title-image:is([src$=".svg"], .figure--diagram) {
   width: 100vw;
   max-width: none;
   height: auto;
@@ -605,7 +606,7 @@ html[data-theme="dark"] {
     color: var(--jk-t2);
   }
   .post > .post-meta { visibility: hidden; }
-  .story .prose > figcaption:first-of-type { display: none; }
+  .story .prose [data-story-caption="opening"] { display: none; }
 }
 @media (min-width: 1920px) {
   .story { grid-template-columns: minmax(200px, 1fr) minmax(560px, 640px) minmax(280px, 2fr); }
@@ -893,3 +894,79 @@ a.text-link, a.note-back { display: inline-flex; align-items: center; min-height
 .reading-path { margin: 28px 0; }
 .reading-path h2 { font-family: var(--jk-serif); font-weight: 450; font-size: 32px; line-height: 42px; margin: 28px 0 14px; }
 .reading-pick .work-meta { margin: 0; color: var(--jk-t3); }
+
+/* E2: one fluid composition and shared 2/3/4 card tracks. */
+.jk-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--jk-gutter); }
+.header-home { display: block; padding: 0; margin-bottom: var(--jk-chapter-gap); }
+.header-home .hero-portrait { width: 56px; height: 56px; }
+.header-home .hero-title { font-size: clamp(36px, 8.4vw, 52px); }
+.header-home .hero-bottom { display: block; }
+.header-home .hero-sub { max-width: 32em; }
+.header-home .hero-visual { margin-top: 28px; }
+.hero-visual img { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; }
+.cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 48px var(--jk-gutter); margin: 28px 0 0; padding: 0; list-style: none; }
+.cards > * { min-width: 0; }
+.cards .project-feature, .cards .work-entry { display: block; grid-column: auto; padding: 0; }
+.cards .work-entry { border-top: 0; border-bottom: 1px solid var(--jk-hair); }
+.cards .work-copy { padding: 14px 0; }
+.cards .work-heading > :is(.app-icon, .app-monogram) { display: none; }
+.cards .work-description { margin-top: 14px; }
+.cards :is(h3, .feature-copy h3) { margin: 14px 0; }
+.card-media { display: flex; align-items: center; justify-content: center; aspect-ratio: 3 / 2; background: var(--jk-surface-2); text-decoration: none; overflow: hidden; }
+.cards .card-media img { display: block; width: 100%; height: 100%; object-fit: contain; aspect-ratio: auto; clip-path: none; }
+.cards .card-media--icon { padding: 28px; box-sizing: border-box; }
+.cards .card-media--icon img { width: 160px; max-width: 100%; height: auto; }
+.card-media--icon .app-monogram { width: 160px; height: 160px; font-size: 64px; }
+.cards .card-media--icon > span:not(.app-monogram) { font: 450 clamp(28px, 3vw, 56px)/1.2 var(--jk-serif); text-align: center; }
+.writing-card time { display: block; margin-top: 14px; }
+.writing-card h3 a { font: 450 24px/28px var(--jk-serif); text-decoration: none; }
+.writing-card h3 a:hover, .writing-card h3 a:focus-visible { text-decoration: underline; }
+.work .page-intro { max-width: 40em; }
+.work .work-group { display: block; }
+.work-featured { display: block; margin: 48px 0; border-top: 0; }
+.work-featured .card-media { aspect-ratio: 16 / 9; }
+.work-featured .card-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.work-featured .work-copy { align-self: center; }
+.work-featured .work-heading > .app-icon { display: none; }
+.cards .project-family { margin: 0; padding: 0; border: 0; }
+.cards .project-family .family-label { border-top: 1px solid var(--jk-accent-text); margin: 28px 0 14px; padding-top: 14px; }
+.app-gallery .app-links :is(img, .app-monogram) { width: 64px; height: 64px; flex: 0 0 64px; }
+.app-gallery .app-links a { padding: 14px; background: var(--jk-surface-2); }
+.reading-paths.cards .reading-path { min-width: 0; }
+.jk-prose:has(> .about-body) { max-width: none; }
+.jk-prose .about-body { font-size: 20px; line-height: 28px; }
+.jk-prose .about-body > :is(.lang-en, .lang-it) { max-width: 28em; }
+.jk-prose .about-body .page-intro { font-size: inherit; }
+@media (max-width: 759.98px) {
+  .header-home .hero-visual, .cards .card-media, .work-featured > .card-media { width: 100vw; max-width: none; margin-inline: calc(-1 * var(--jk-page-x)); }
+  .app-gallery { grid-template-columns: minmax(0, 1fr); }
+}
+@media (min-width: 760px) {
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .work .work-jumps { display: flex; justify-content: space-between; gap: 0 14px; }
+}
+@media (min-width: 900px) {
+  .header-home.jk-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--jk-gutter); align-items: center; }
+  .header-home .hero-copy { grid-column: 1 / 6; }
+  .header-home .hero-visual { grid-column: 6 / -1; margin: 0 calc(-1 * var(--jk-page-x)) 0 0; }
+  .header-home .hero-title { font-size: clamp(44px, 4.1vw, 84px); }
+  .work-featured.jk-grid { display: grid; }
+  .work-featured > .card-media { grid-column: 1 / 9; }
+  .work-featured > .work-copy { grid-column: 9 / -1; }
+}
+@media (min-width: 1100px) {
+  .jk-prose .about-body { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--jk-gutter); align-items: start; }
+  .jk-prose .about-body > .about-portrait { grid-column: 8 / -1; grid-row: 1; width: clamp(420px, 100%, 560px); max-width: none; margin: 0; }
+  .jk-prose .about-body > :is(.lang-en, .lang-it) { grid-column: 1 / 8; grid-row: 1; width: 28em; max-width: 100%; }
+}
+@media (min-width: 1920px) {
+  .cards { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .app-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .app-gallery .app-preview img { width: min(100%, 480px); }
+}
+@media (min-width: 2560px) {
+  .cards { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 48px 32px; }
+  .cards:has(> :nth-child(-n+2):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .cards:has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.cards:has(> :only-child:last-child) { grid-template-columns: minmax(0, 1fr); }

@@ -8,7 +8,7 @@ description: Reading paths through crypto research, building products, and AI sy
 
 <p class="page-intro"><span class="lang-en" lang="en">Start with a question, or browse the archive.</span><span class="lang-it" lang="it">Parti da una domanda, oppure esplora l’archivio.</span></p>
 <nav class="work-jumps" aria-label="Reading paths / Percorsi di lettura">{% for topic in site.data.reading_paths %}<a href="#{{ topic.id }}"><span class="lang-en" lang="en">{{ topic.title_en }}</span><span class="lang-it" lang="it">{{ topic.title_it }}</span></a>{% endfor %}<a href="#archive"><span class="lang-en" lang="en">Full archive</span><span class="lang-it" lang="it">Archivio completo</span></a></nav>
-<div class="reading-paths">
+<div class="reading-paths cards">
 {% for topic in site.data.reading_paths %}<section class="reading-path" aria-labelledby="{{ topic.id }}"><h2 id="{{ topic.id }}"><span class="lang-en" lang="en">{{ topic.title_en }}</span><span class="lang-it" lang="it">{{ topic.title_it }}</span></h2><p class="section-intro"><span class="lang-en" lang="en">{{ topic.description_en }}</span><span class="lang-it" lang="it">{{ topic.description_it }}</span></p>
 <ul class="dated-rows">
 {% for slug in topic.slugs %}{% assign post = site.posts | where: 'slug', slug | first %}{% if post %}

@@ -1,5 +1,7 @@
 {% assign entry = include.project | default: project %}
-<article class="work-entry{% if entry.group == 'apps' %} app-entry{% endif %}" id="{{ entry.id }}">
+<article class="work-entry{% if entry.group == 'apps' %} app-entry{% endif %}{% if include.featured %} work-featured jk-grid{% endif %}" id="{{ entry.id }}">
+  {% include project-media.html project=entry eager=include.featured %}
+  <div class="work-copy">
   <div class="work-heading">
     {% if entry.icon %}<img class="app-icon" src="{{ entry.icon | relative_url }}" width="52" height="52" alt="" loading="lazy">{% elsif entry.monogram %}<span class="app-monogram" aria-hidden="true">{{ entry.monogram }}</span>{% endif %}
     <p class="work-meta"><span class="lang-en" lang="en">{{ entry.role_en }} · {{ entry.stage_en }}</span><span class="lang-it" lang="it">{{ entry.role_it }} · {{ entry.stage_it }}</span></p>
@@ -9,5 +11,6 @@
     <p><span class="lang-en" lang="en">{{ entry.description_en }}</span><span class="lang-it" lang="it">{{ entry.description_it }}</span></p>
     <p class="work-detail"><span class="lang-en" lang="en">{{ entry.detail_en }}</span><span class="lang-it" lang="it">{{ entry.detail_it }}</span></p>
     {% if entry.url %}<a class="text-link" href="{% if entry.url contains '://' %}{{ entry.url }}{% else %}{{ entry.url | relative_url }}{% endif %}"><span class="lang-en" lang="en">{{ entry.link_en }}</span><span class="lang-it" lang="it">{{ entry.link_it }}</span> <span aria-hidden="true">{% include link-arrow.html href=entry.url %}</span></a>{% endif %}
+  </div>
   </div>
 </article>

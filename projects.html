@@ -9,12 +9,14 @@ description: DevRel at Team1, independent products, AI systems, Avalanche resear
 <p class="page-intro"><span class="lang-en" lang="en">DevRel at Team1, alongside my own ventures, native apps, AI systems, advisory, and research.</span><span class="lang-it" lang="it">DevRel in Team1, insieme ai miei progetti, alle app native, ai sistemi AI, all’advisory e alla ricerca.</span></p>
 {% assign groups = 'ecosystem|ventures|apps|systems|research|past' | split: '|' %}
 <nav class="work-jumps" aria-label="Project categories / Categorie dei progetti">{% for group in groups %}<a href="#group-{{ group }}"><span class="lang-en" lang="en">{{ site.data.ui_text.work_groups[group].en }}</span><span class="lang-it" lang="it">{{ site.data.ui_text.work_groups[group].it }}</span></a>{% endfor %}</nav>
+{% assign featured_project = site.data.projects | where: 'id', 'team1' | first %}
+{% include project-entry.html project=featured_project featured=true %}
 {% for group in groups %}
 <section class="work-group" aria-labelledby="group-{{ group }}">
   <h2 id="group-{{ group }}"><span class="lang-en" lang="en">{{ site.data.ui_text.work_groups[group].en }}</span><span class="lang-it" lang="it">{{ site.data.ui_text.work_groups[group].it }}</span></h2>
-  <div{% if group == 'apps' %} class="app-grid"{% endif %}>
+  <div class="cards{% if group == 'apps' %} app-grid{% endif %}">
   {% assign projects = site.data.projects | where: 'group', group %}
-  {% for project in projects %}{% unless project.parent %}
+  {% for project in projects %}{% unless project.parent or project.id == 'team1' %}
     {% if project.id == 'eva' %}<div class="project-family">{% endif %}
     {% include project-entry.html %}
     {% if project.id == 'eva' %}

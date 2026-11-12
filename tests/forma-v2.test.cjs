@@ -282,12 +282,12 @@ test('story figures span the prose and right rail without a legacy page cap', ()
   assert.doesNotMatch(stripComments(read('assets/css/site-structure.css')), /max-width: (?:720|1120)px/);
 });
 
-test('about overrides legacy layouts with a 160px portrait stacked above the full prose measure', () => {
+test('About uses a full frame, 28em text and a large portrait beside it', () => {
   const css = stripComments(read('assets/css/jaack-site.css'));
-  assert.match(css, /\.jk-prose \{[^}]*max-width: 26em;/);
-  assert.match(css, /\.jk-prose \.about-body \{ display: block; \}/);
-  assert.match(css, /\.jk-prose \.about-body > \.about-portrait\s*\{[^}]*display: block;[^}]*float: none;[^}]*width: 160px;[^}]*height: auto;[^}]*border-radius: 14px;[^}]*margin: 0 0 28px;/);
-  assert.match(css, /\.jk-prose \.about-body > :is\(\.lang-en, \.lang-it\) \{ max-width: none; \}/);
+  assert.match(css, /\.jk-prose:has\(> \.about-body\) \{ max-width: none; \}/);
+  assert.match(css, /\.jk-prose \.about-body \{ font-size: 20px; line-height: 28px; \}/);
+  assert.match(css, /\.about-body > \.about-portrait \{[^}]*grid-column: 8 \/ -1;[^}]*width: clamp\(420px, 100%, 560px\);/);
+  assert.match(css, /\.about-body > :is\(\.lang-en, \.lang-it\) \{[^}]*grid-column: 1 \/ 8;[^}]*width: 28em;/);
 });
 
 test('code overrides every Pygments token with one accessible palette in both themes', () => {

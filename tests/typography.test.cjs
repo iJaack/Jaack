@@ -183,7 +183,7 @@ for (const width of [390, 669, 1280]) {
                 assert.ok(Math.abs(label.inset) <= .5, `${lang}: ${label.text} must be left-aligned`);
               }
             } else {
-              assert.equal(result.jumpColumns, 3, `${lang}: preserve three project jump columns`);
+              assert.equal(result.jumpColumns, width >= 760 ? 6 : 3, `${lang}: project jump columns`);
               assert.ok(result.jumpRows <= 2, `${lang}: ${result.jumpRows} project jump rows`);
             }
           }
