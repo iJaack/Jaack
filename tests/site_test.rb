@@ -111,7 +111,7 @@ class SiteTest < Minitest::Test
   def test_homepage_features_real_project_and_writing_destinations
     page = doc('index.html')
     assert_equal 4, page.css('#selected-work article').length
-    assert_equal 3, page.css('.selected-writing .dated-row').length
+    assert_equal 4, page.css('.selected-writing .writing-card').length
     assert page.at_css('#contact a[href^="mailto:"]')
     refute_includes page.text, 'Builder on the side'
   end
@@ -137,7 +137,7 @@ class SiteTest < Minitest::Test
     featured = doc('index.html').css('#selected-work h3 a').map { |link| link['href'] }
     refute_includes featured, '/projects/routescan/'
     assert_includes featured, '/projects/eva-protocol/'
-    assert_includes featured, '/projects/team1/'
+    refute_includes featured, '/projects/team1/'
     assert_includes work.at_css('#team1 .work-meta .lang-en').text, 'DevRel'
     assert_includes work.at_css('#team1 .work-meta .lang-en').text, 'Italy Coordinator'
     assert_includes work.at_css('#redbridge .work-meta .lang-en').text, 'Active advisory'
@@ -165,12 +165,10 @@ class SiteTest < Minitest::Test
 
   def test_visual_portfolio_preserves_navigation_and_project_relationships
     home = doc('index.html')
-    assert_equal 1, home.css('.feature-lead').length
-    assert home.at_css('.feature-lead h3 a[href="/projects/team1/"]')
-    assert_equal 'team1', home.at_css('.feature-lead h3 img')['alt']
-    assert home.at_css('.feature-lead .team1-feature-visual img[src="/assets/images/work/team1-announcement.jpg"]')
-    assert_equal %w[/projects/team1/ /projects/gm10/ /projects/eva-protocol/ /projects/evalanche/], home.css('#selected-work h3 a').map { |link| link['href'] }
-    assert_equal 3, home.css('.featured-secondary .project-feature').length
+    assert_empty home.css('#selected-work .feature-team1')
+    assert home.at_css('.hero-visual img[src="/assets/images/work/team1-announcement.jpg"]')
+    assert_equal %w[/projects/gm10/ /projects/eva-protocol/ /projects/evalanche/ /projects/pommidoro/], home.css('#selected-work h3 a').map { |link| link['href'] }
+    assert_equal 4, home.css('.featured-grid > .project-feature').length
     assert home.at_css('.feature-eva-protocol .feature-image img[src="/assets/images/work/eva-protocol-preview.png"]')
     assert home.at_css('.feature-evalanche .feature-image img[src="/assets/images/work/evalanche-preview.png"]')
     assert home.at_css('.feature-evalanche h3 .evalanche-logo[src="/assets/images/work/evalanche-logo.svg"]')
@@ -200,7 +198,8 @@ class SiteTest < Minitest::Test
     assert_equal '100', work.at_css('#hundred .app-monogram[aria-hidden="true"]').text
     assert_equal 6, work.css('.work-jumps a').length
     assert_equal 5, work.css('.app-grid .app-entry').length
-    assert_equal %w[eva eva-protocol], work.css('.project-family .work-entry').map { |entry| entry['id'] }
+    assert_equal %w[gm10 eva eva-protocol], work.css('[aria-labelledby="group-ventures"] > .cards > .work-entry').map { |entry| entry['id'] }
+    assert_equal 'A product within Eva', work.at_css('#eva-protocol .family-label .lang-en').text
     ids = work.css('[id]').map { |entry| entry['id'] }
     assert_equal ids.uniq, ids, 'Project anchors must remain unique'
   end
@@ -698,7 +697,7 @@ class SiteTest < Minitest::Test
       children = page.at_css('main.post').element_children.reject { |n| n.key?('hidden') }
       assert children[0].matches?('h1.title')
       assert children[1].matches?('p.post-meta')
-      assert page.at_css('main.post > .post-meta + img.title-image + .post-body')
+      assert page.at_css('main.post > .post-meta + img.title-image + .story > .post-body')
       assert_empty page.css('beeline-button, script[src*="beeline"]')
       related = page.at_css('main > .related')
       refute_nil related
@@ -720,7 +719,7 @@ class SiteTest < Minitest::Test
   def test_missing_local_cover_is_omitted_and_present_cover_is_rendered
     missing = doc('installare-nodo-ipfs-en/index.html')
     assert_empty missing.css('main.post > .title-image')
-    assert missing.at_css('main.post > .post-meta + .post-body')
+    assert missing.at_css('main.post > .post-meta + .story > .post-body')
     %w[en it].each do |lang|
       cover = doc("2024-review-#{lang}/index.html").at_css('main.post > img.title-image')
       refute_nil cover
@@ -763,12 +762,31 @@ class SiteTest < Minitest::Test
     assert_equal %w[svg codex marked-image marked-figure], html.css(selector).map { |img| img['id'] }
   end
 
+  def test_photo_formats_preserve_existing_classes_attributes_and_natural_media
+    template = Liquid::Template.parse(File.read(File.expand_path('../_includes/photo-formats.html', __dir__)))
+    source = '<p>Existing prose.</p><img class="image" src="/assets/images/deep-work.jpg" alt="Desk">' \
+      '<img src="/assets/images/profilo-2026.jpg" width="400">' \
+      '<img class="image" src="/assets/images/work/pommidoro-screen.jpg" alt="Timer">' \
+      '<img src="https://images.unsplash.com/photo-1524678714210-9917a6c619c2?w=2549&amp;q=80" alt="Clock">'
+    page = Nokogiri::HTML.fragment(template.render!('include' => { 'html' => source }))
+    assert_equal 'Existing prose.', page.at_css('p').text
+    photo, portrait, screen, clock = page.css('img')
+    assert_equal %w[jk-photo-3x2 image], photo.classes
+    assert_equal 'Desk', photo['alt']
+    assert_equal %w[jk-photo-1x1], portrait.classes
+    assert_equal '400', portrait['width']
+    assert_equal %w[image], screen.classes
+    assert_equal 'Timer', screen['alt']
+    assert_equal %w[jk-photo-3x2], clock.classes
+    assert_equal 'https://images.unsplash.com/photo-1524678714210-9917a6c619c2?w=2549&q=80', clock['src']
+  end
+
   def test_about_portrait_precedes_both_language_intros_in_the_prose_container
     %w[about/index.html en/about/index.html].each do |route|
       main = doc(route).at_css('main.jk-prose')
       refute_nil main
       children = main.at_css('.about-body').element_children
-      assert children.first.matches?('img.about-portrait[width="160"]')
+      assert children.first.matches?('img.about-portrait[width="400"]')
       assert_equal %w[lang-en lang-it], children.drop(1).map { |node| node['class'] }
     end
   end
@@ -845,7 +863,7 @@ class SiteTest < Minitest::Test
     assert_empty page.css('main picture')
   end
   def test_dated_rows_are_shared_across_indexes_home_and_related
-    %w[index.html blog/index.html notes/index.html speaking/index.html 2024-review-en/index.html].each do |route|
+    %w[blog/index.html notes/index.html speaking/index.html 2024-review-en/index.html].each do |route|
       page = doc(route)
       rows = page.css('ul.dated-rows > li.dated-row')
       assert_operator rows.length, :>, 0, route

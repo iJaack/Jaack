@@ -8,7 +8,7 @@ description: Reading paths through crypto research, building products, and AI sy
 
 <p class="page-intro"><span class="lang-en" lang="en">Start with a question, or browse the archive.</span><span class="lang-it" lang="it">Parti da una domanda, oppure esplora l’archivio.</span></p>
 <nav class="work-jumps" aria-label="Reading paths / Percorsi di lettura">{% for topic in site.data.reading_paths %}<a href="#{{ topic.id }}"><span class="lang-en" lang="en">{{ topic.title_en }}</span><span class="lang-it" lang="it">{{ topic.title_it }}</span></a>{% endfor %}<a href="#archive"><span class="lang-en" lang="en">Full archive</span><span class="lang-it" lang="it">Archivio completo</span></a></nav>
-<div class="reading-paths">
+<div class="reading-paths cards">
 {% for topic in site.data.reading_paths %}<section class="reading-path" aria-labelledby="{{ topic.id }}"><h2 id="{{ topic.id }}"><span class="lang-en" lang="en">{{ topic.title_en }}</span><span class="lang-it" lang="it">{{ topic.title_it }}</span></h2><p class="section-intro"><span class="lang-en" lang="en">{{ topic.description_en }}</span><span class="lang-it" lang="it">{{ topic.description_it }}</span></p>
 <ul class="dated-rows">
 {% for slug in topic.slugs %}{% assign post = site.posts | where: 'slug', slug | first %}{% if post %}
@@ -31,13 +31,18 @@ description: Reading paths through crypto research, building products, and AI sy
 	{% if posts.size == 0 %}
 	<p class="text-center">{{ lang.posts_empty }}</p>
 	{% else %}
-	<ul class="dated-rows">
-	{% for post in posts %}
-	{% if post.category == 'blog' and post.hidden != true %}
-	{% include blog-post.html %}
-	{% endif %}
-	{% endfor %}
-</ul>
+  {% assign archive_posts = posts | where: 'category', 'blog' | where_exp: 'post', 'post.hidden != true' %}
+  {% assign years = archive_posts | group_by_exp: 'post', "post.date | date: '%Y'" %}
+  <div class="archive-years">
+  {% for year in years %}
+  <section class="archive-year" aria-labelledby="archive-{{ lang.code }}-{{ year.name }}">
+    <h3 id="archive-{{ lang.code }}-{{ year.name }}">{{ year.name }}</h3>
+    <ul class="dated-rows">
+      {% for post in year.items %}{% include blog-post.html %}{% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+  </div>
 	{% endif %}
 </section>
 {% endfor %}

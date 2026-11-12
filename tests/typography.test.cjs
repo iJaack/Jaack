@@ -183,7 +183,7 @@ for (const width of [390, 669, 1280]) {
                 assert.ok(Math.abs(label.inset) <= .5, `${lang}: ${label.text} must be left-aligned`);
               }
             } else {
-              assert.equal(result.jumpColumns, 3, `${lang}: preserve three project jump columns`);
+              assert.equal(result.jumpColumns, width >= 760 ? 6 : 3, `${lang}: project jump columns`);
               assert.ok(result.jumpRows <= 2, `${lang}: ${result.jumpRows} project jump rows`);
             }
           }
@@ -338,7 +338,7 @@ for (const { width, inset, gap } of frameCases) {
 }
 
 for (const width of [390, 1280, 3440]) {
-  test(`E1 photo covers retain natural proportions at ${width}px`, async () => {
+  test(`E2 covers use a full-bleed contain stage at ${width}px`, async () => {
     const page = await browser.newPage({ viewport: { width, height: 844 } });
     try {
       await page.goto(base + '/2024-review-en/');
@@ -350,16 +350,15 @@ for (const width of [390, 1280, 3440]) {
           width: rect.width, height: rect.height, naturalWidth: img.naturalWidth, naturalHeight: img.naturalHeight,
           radius: css.borderRadius, bottom: css.marginBottom };
       });
-      assert.equal(metrics.maxHeight, 'none');
-      assert.notEqual(metrics.fit, 'contain');
+      assert.equal(metrics.maxHeight, '590.8px');
+      assert.equal(metrics.fit, 'contain');
       assert.equal(metrics.ratio, 'auto');
       assert.equal(metrics.radius, '14px');
       assert.equal(metrics.bottom, '14px');
       assert.ok(metrics.naturalWidth > 0 && metrics.naturalHeight > 0);
-      const naturalHeight = metrics.width * metrics.naturalHeight / metrics.naturalWidth;
-      assert.ok(Math.abs(metrics.height - naturalHeight) <= .5, 'cover must preserve its intrinsic ratio');
-      assert.ok(metrics.height > (width < 480 ? 140 : 224), `cover height: ${metrics.height}px`);
-      if (width >= 760) assert.ok(metrics.width <= 460.5, 'photo cover stays within the existing 23em column');
+      assert.ok(Math.abs(metrics.width - width) <= .5);
+      assert.ok(metrics.height <= 590.8 + .5);
+
     } finally { await page.close(); }
   });
 }
