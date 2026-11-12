@@ -970,3 +970,8 @@ a.text-link, a.note-back { display: inline-flex; align-items: center; min-height
   .cards:has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 .cards:has(> :only-child:last-child) { grid-template-columns: minmax(0, 1fr); }
+
+/* The three photographic formats. Cover stages and UI icons size independently. */
+.jk-photo-3x2 { aspect-ratio: 3 / 2; object-fit: cover; }
+.jk-photo-4x5 { aspect-ratio: 4 / 5; object-fit: cover; }
+.jk-photo-1x1 { aspect-ratio: 1 / 1; object-fit: cover; }

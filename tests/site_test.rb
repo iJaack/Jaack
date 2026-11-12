@@ -761,6 +761,25 @@ class SiteTest < Minitest::Test
     assert_equal %w[svg codex marked-image marked-figure], html.css(selector).map { |img| img['id'] }
   end
 
+  def test_photo_formats_preserve_existing_classes_attributes_and_natural_media
+    template = Liquid::Template.parse(File.read(File.expand_path('../_includes/photo-formats.html', __dir__)))
+    source = '<p>Existing prose.</p><img class="image" src="/assets/images/deep-work.jpg" alt="Desk">' \
+      '<img src="/assets/images/profilo-2026.jpg" width="400">' \
+      '<img class="image" src="/assets/images/work/pommidoro-screen.jpg" alt="Timer">' \
+      '<img src="https://images.unsplash.com/photo-1524678714210-9917a6c619c2?w=2549&amp;q=80" alt="Clock">'
+    page = Nokogiri::HTML.fragment(template.render!('include' => { 'html' => source }))
+    assert_equal 'Existing prose.', page.at_css('p').text
+    photo, portrait, screen, clock = page.css('img')
+    assert_equal %w[jk-photo-3x2 image], photo.classes
+    assert_equal 'Desk', photo['alt']
+    assert_equal %w[jk-photo-1x1], portrait.classes
+    assert_equal '400', portrait['width']
+    assert_equal %w[image], screen.classes
+    assert_equal 'Timer', screen['alt']
+    assert_equal %w[jk-photo-3x2], clock.classes
+    assert_equal 'https://images.unsplash.com/photo-1524678714210-9917a6c619c2?w=2549&q=80', clock['src']
+  end
+
   def test_about_portrait_precedes_both_language_intros_in_the_prose_container
     %w[about/index.html en/about/index.html].each do |route|
       main = doc(route).at_css('main.jk-prose')

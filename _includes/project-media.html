@@ -3,11 +3,11 @@
 {% case item.id %}
 {% when 'team1' %}{% assign media = 'team1-announcement.jpg' %}{% assign media_width = 1672 %}{% assign media_height = 941 %}
 {% when 'gm10' %}{% assign media = 'gms.jpg' %}{% assign media_width = 1200 %}{% assign media_height = 630 %}
-{% when 'eva' %}{% assign media = 'eva.png' %}{% assign media_width = 160 %}{% assign media_height = 160 %}
+{% when 'eva' %}{% assign media = 'eva.png' %}{% assign media_width = 256 %}{% assign media_height = 256 %}
 {% when 'eva-protocol' %}{% assign media = 'eva-protocol-preview.png' %}{% assign media_width = 1425 %}{% assign media_height = 748 %}
 {% when 'evalanche' %}{% assign media = 'evalanche-preview.png' %}{% assign media_width = 1247 %}{% assign media_height = 663 %}
 {% when 'pommidoro' %}{% assign media = 'pommidoro-screen.jpg' %}{% assign media_width = 445 %}{% assign media_height = 985 %}
-{% when 'lg-tv-use' %}{% assign media = 'lg-tv-use-cover.png' %}{% assign media_width = 1536 %}{% assign media_height = 1024 %}
+{% when 'lg-tv-use' %}{% assign media = 'lg-tv-use-cover.png' %}{% assign media_width = 1734 %}{% assign media_height = 907 %}
 {% endcase %}
 <a class="card-media feature-image{% if media == '' or item.id == 'eva' %} card-media--icon{% endif %}" href="{{ '/projects/' | relative_url }}{{ item.id }}/" tabindex="-1" aria-hidden="true">
 {% if media != '' %}<img src="{{ '/assets/images/work/' | append: media | relative_url }}" width="{{ media_width }}" height="{{ media_height }}" alt="" loading="{% if include.eager %}eager{% else %}lazy{% endif %}">

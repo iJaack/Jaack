@@ -36,7 +36,7 @@ layout: compress
   {% unless width_class == 'large' or width_class == 'xwide' %}{% assign width_class = 'normal' %}{% endunless %}
   <div class="wrapper-{{ width_class }} jk-page">
     <main id="main-content" tabindex="-1" class="{% if page.layout == 'post' or page.category == 'blog' %}post{% else %}page {{ page.title | append: '' | slugify }}{% if page.prose or page.layout == 'note' %} jk-prose{% endif %}{% endif %}"{% if page.layout == 'post' and page.measure == 'normal' %} data-measure="normal"{% endif %}>
-      {{ content }}
+      {% include photo-formats.html html=content %}
     </main>
     {% include footer.html %}
   </div>

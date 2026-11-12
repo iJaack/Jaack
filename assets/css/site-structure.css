@@ -46,7 +46,7 @@ hr { border: 0; height: 1px; margin: 42px auto; background: var(--jk-hair); }
 .work-entry h3 a, .project-feature h3 a { text-decoration: none; }
 .work-entry h3 a:hover, .work-entry h3 a:focus-visible,
 .project-feature h3 a:hover, .project-feature h3 a:focus-visible { text-decoration: underline; }
-.work-entry p, .project-feature p { margin: 0; font-size: var(--jk-fs-body); }
+.work-entry p, .project-feature p { margin: 0; font-size: var(--jk-fs-body); max-width: 32em; }
 .work-entry .work-meta, .project-feature .work-meta { font-size: var(--jk-fs-xs); }
 .work-entry .work-detail { color: var(--jk-t2); margin: 14px 0 28px; }
 .work-group { margin: 56px 0; }

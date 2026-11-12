@@ -99,11 +99,13 @@ for (const width of [390, 760, 1100, 1440, 1919, 1920, 2559, 2560, 3440]) {
           count:grid.children.length, cols:getComputedStyle(grid).gridTemplateColumns.split(' ').length,
           width:grid.getBoundingClientRect().width,
           cards:[...grid.children].map(c => c.getBoundingClientRect().width) })),
+        copyWidths:[...document.querySelectorAll('.work-entry .work-description p')].map(p => ({width:p.getBoundingClientRect().width,size:parseFloat(getComputedStyle(p).fontSize)})),
         feature:document.querySelector('.work-featured .card-media').getBoundingClientRect().width,
         featureRatio:getComputedStyle(document.querySelector('.work-featured .card-media')).aspectRatio,
         overflow:document.documentElement.scrollWidth > innerWidth
       }));
       assert.equal(work.overflow,false); assert.equal(work.featureRatio,'16 / 9');
+      for (const p of work.copyWidths) assert.ok(p.width <= p.size * 32 + 1,'Card running text stays within 32em');
       for (const g of work.grids) {
         const columns = g.count === 1 ? 1 : width < 760 ? 1 : width < 1920 ? 2 : width < 2560 ? 3 : Math.min(4,g.count);
         assert.equal(g.cols,columns,JSON.stringify(g));
@@ -174,5 +176,30 @@ test('E2 iPhone cover promotes the three existing screens in both languages',asy
       assert.equal(m.display,'flex'); near(m.left,0); near(m.width,1440); assert.equal(m.screens.length,3);
       m.screens.forEach((s,i)=>{assert.ok(s.src.endsWith(`iphone-page${i+1}.png`));near(s.height,640);assert.equal(s.fit,'contain');});
     }
+  } finally { await page.close(); }
+});
+test('E2 defines exactly the three photographic formats and applies them without cropping screenshots',async () => {
+  const css=await fs.readFile(path.resolve(__dirname,'../assets/css/jaack-site.css'),'utf8');
+  for (const [format,ratio] of [['3x2','3 / 2'],['4x5','4 / 5'],['1x1','1 / 1']]) {
+    assert.ok(css.includes(`.jk-photo-${format} { aspect-ratio: ${ratio}; object-fit: cover; }`));
+  }
+  const page=await browser.newPage({viewport:{width:1440,height:1000}});
+  try {
+    await page.goto(base+'/recensione-caricatore-wireless-spigen-en/');
+    const photo=page.locator('.post-body img[src$="Spigen-Steadiboost-Flex-2.jpg"]');
+    const m=await photo.evaluate(img=>({classes:[...img.classList],ratio:getComputedStyle(img).aspectRatio,fit:getComputedStyle(img).objectFit}));
+    assert.ok(m.classes.includes('image'),'preserve the source image class');
+    assert.ok(m.classes.includes('jk-photo-3x2')); assert.equal(m.ratio,'3 / 2'); assert.equal(m.fit,'cover');
+    await page.goto(base+'/about/');
+    assert.ok(await page.locator('.about-portrait').evaluate(img=>img.classList.contains('jk-photo-1x1')));
+    await page.goto(base);
+    const screenshots=await page.locator('.card-media img').evaluateAll(imgs=>imgs.map(img=>({classes:[...img.classList],fit:getComputedStyle(img).objectFit})));
+    assert.ok(screenshots.length>=8);
+    for (const img of screenshots) { assert.ok(img.classes.every(c=>!c.startsWith('jk-photo-'))); assert.equal(img.fit,'contain'); }
+    const hero=page.locator('.hero-visual img'); await hero.evaluate(img=>img.decode());
+    assert.ok(await hero.evaluate(img=>img.naturalWidth>0));
+    await page.goto(base+'/projects/');
+    const featured=page.locator('.work-featured img'); await featured.evaluate(img=>img.decode());
+    assert.equal(await featured.evaluate(img=>img.naturalWidth),1672);
   } finally { await page.close(); }
 });
