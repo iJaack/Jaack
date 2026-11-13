@@ -249,6 +249,58 @@ test('navigation guard rejects view transitions and page fades while allowing ph
 });
 
 const photoSelector = 'img:is(.jk-photo-3x2, .jk-photo-4x5, .jk-photo-1x1)';
+
+function photoVisibilityErrors(source) {
+  const errors = [];
+  const ancestors = [];
+  const text = source.replace(/\/\*[\s\S]*?\*\//g, '');
+  // Track enclosing blocks: a gate elsewhere in the sheet cannot protect a rule.
+  for (const [, content, brace] of text.matchAll(/([^{}]*)([{}])/g)) {
+    if (brace === '{') { ancestors.push(content.trim()); continue; }
+    const rule = ancestors.pop() || '';
+    const opacity = [...content.matchAll(/(?:^|;)\s*opacity\s*:\s*([^;]+)/gi)];
+    // Values such as calc(0) or var(--hidden) may also resolve to zero.
+    const hides = opacity.some(([, value]) =>
+      !(Number(value.replace(/\s*!important\s*$/i, '').trim().replace(/%$/, '')) > 0));
+    if (!hides || ancestors.some(parent => /^@media\s*\(\s*scripting\s*:\s*enabled\s*\)$/i.test(parent))) continue;
+    for (const selector of splitTransitions(rule)) {
+      if (/\.jk-photo-(?:3x2|4x5|1x1)\b/.test(selector) &&
+          !/^\s*(?:html)?\.js(?:\s+|\s*>\s*)/.test(selector)) errors.push(selector.trim());
+    }
+  }
+  return errors;
+}
+
+test('photo visibility guard rejects every ungated hiding rule, including the original regression', () => {
+  const oldRule = `${photoSelector} { opacity: 0; }`;
+  for (const bad of [oldRule,
+    'img.jk-photo-4x5 { opacity: 0.0 !important; }',
+    '.jk-photo-1x1 { opacity: 0%; }',
+    '.jk-photo-3x2 { opacity: calc(0); }',
+    '.jk-photo-3x2 { opacity: var(--hidden); }',
+    `/* @media (scripting: enabled) */ ${oldRule}`,
+    `@media (scripting: enabled) { .logo { opacity: 0; } } ${oldRule}`,
+    `@media not (scripting: enabled) { ${oldRule} }`,
+    `@media (scripting: enabled), print { ${oldRule} }`,
+    `html.js img.jk-photo-3x2, img.jk-photo-4x5 { opacity: 0; }`,
+    `@media (scripting: enabled) { ${oldRule} } .jk-photo-1x1 { opacity: 0; }`]) {
+    assert.ok(photoVisibilityErrors(bad).length > 0, bad);
+  }
+  for (const good of [
+    `@media (scripting: enabled) { ${oldRule} }`,
+    `@supports (aspect-ratio: 1) { @media (scripting: enabled) { ${oldRule} } }`,
+    `html.js ${oldRule}`, `.js ${oldRule}`,
+    `${photoSelector} { opacity: 1; }`]) {
+    assert.deepEqual(photoVisibilityErrors(good), [], good);
+  }
+});
+
+test('shipped photo hiding rules require scripting; unmatched gates leave photos visible', () => {
+  for (const file of ['assets/css/jaack-site.css', '_site/assets/css/jaack-site.css']) {
+    assert.deepEqual(photoVisibilityErrors(read(file)), [], file);
+  }
+});
+
 function loadPhotos({ reduced = false } = {}) {
   function image(className, complete = false, naturalWidth = 0) {
     const classes = new Set([className]);
@@ -293,9 +345,7 @@ test('reduced motion reveals all photos immediately, including pending lazy imag
 
 test('photo CSS fades opacity for 200ms, preserves aspect ratios and overrides reduced motion explicitly', () => {
   const css = read('assets/css/jaack-site.css');
-  const rule = css.split(`${photoSelector} {`)[1].split('}')[0];
-  assert.equal(rule.trim(), 'opacity: 0;\n  transition: opacity var(--jk-dur-2) var(--jk-ease-out);');
-  assert.ok(css.includes(`${photoSelector}.is-loaded { opacity: 1; }`));
+  assert.ok(css.includes(`@media (scripting: enabled) {\n  ${photoSelector} {\n    opacity: 0;\n    transition: opacity var(--jk-dur-2) var(--jk-ease-out);\n  }\n  ${photoSelector}.is-loaded { opacity: 1; }\n}`));
   assert.ok(css.includes(`@media (prefers-reduced-motion: reduce) {\n  ${photoSelector} { opacity: 1; transition: none; }\n}`));
   for (const [format, ratio] of [['3x2', '3 / 2'], ['4x5', '4 / 5'], ['1x1', '1 / 1']]) {
     assert.ok(css.includes(`.jk-photo-${format} { aspect-ratio: ${ratio}; object-fit: cover; }`));

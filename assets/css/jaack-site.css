@@ -1029,11 +1029,14 @@ a.text-link, a.note-back { display: inline-flex; align-items: center; min-height
 .jk-photo-4x5 { aspect-ratio: 4 / 5; object-fit: cover; }
 .jk-photo-1x1 { aspect-ratio: 1 / 1; object-fit: cover; }
 
-img:is(.jk-photo-3x2, .jk-photo-4x5, .jk-photo-1x1) {
-  opacity: 0;
-  transition: opacity var(--jk-dur-2) var(--jk-ease-out);
+/* Photos stay visible when scripting is disabled or this query is unsupported. */
+@media (scripting: enabled) {
+  img:is(.jk-photo-3x2, .jk-photo-4x5, .jk-photo-1x1) {
+    opacity: 0;
+    transition: opacity var(--jk-dur-2) var(--jk-ease-out);
+  }
+  img:is(.jk-photo-3x2, .jk-photo-4x5, .jk-photo-1x1).is-loaded { opacity: 1; }
 }
-img:is(.jk-photo-3x2, .jk-photo-4x5, .jk-photo-1x1).is-loaded { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
   img:is(.jk-photo-3x2, .jk-photo-4x5, .jk-photo-1x1) { opacity: 1; transition: none; }
 }
