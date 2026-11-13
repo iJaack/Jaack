@@ -43,6 +43,7 @@ layout: compress
   {% include icons.html %}
   <script src="{{ '/assets/jaack-design-system/jaack.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/nav-menu.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/photo-fade.js' | relative_url }}" defer></script>
   {% for script in page.custom_scripts %}<script src="{{ script.path | default: script }}"{% if script.type %} type="{{ script.type }}"{% endif %}{% if script.defer %} defer{% endif %}></script>{% endfor %}
 </body>
 </html>

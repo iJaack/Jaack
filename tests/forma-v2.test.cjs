@@ -75,11 +75,14 @@ test('shared rhythm and motion follow Forma v2 with reduced motion and a static 
     }
   }
   for (const [index, duration] of [[1, 120], [2, 200], [3, 280]]) {
-    assert.match(tokens, new RegExp(`--jk-d-${index}:\\s*${duration}ms;`));
+    assert.match(tokens, new RegExp(`--jk-dur-${index}:\\s*${duration}ms;`));
+    assert.match(tokens, new RegExp(`--jk-d-${index}:\\s*var\\(--jk-dur-${index}\\);`));
   }
   assert.match(tokens, /@media \(prefers-reduced-motion: reduce\)/);
-  assert.match(tokens, /:root\{--jk-d-1:0ms;--jk-d-2:0ms;--jk-d-3:0ms\}/);
-  assert.match(tokens, /animation-duration:0ms!important;animation-iteration-count:1!important;transition-duration:0ms!important;scroll-behavior:auto!important/);
+  assert.match(tokens, /:root\{--jk-dur-0:0ms;--jk-dur-1:120ms;--jk-dur-2:120ms;--jk-dur-3:120ms\}/);
+  assert.match(tokens, /scroll-behavior:auto!important/);
+  assert.match(tokens, /--jk-dur-0:\s*0ms;/);
+  assert.match(tokens, /--jk-d-theme:\s*var\(--jk-dur-0\);/);
   assert.match(read(`${design}/theme.js`), /\},220\)/);
   const background = read(`${design}/components/background.css`);
   assert.match(background, /\.jk-bg\{display:none;/);
@@ -314,12 +317,12 @@ test('all detected diagrams get the same dark frame without inversion', () => {
   assert.doesNotMatch(read('_layouts/post.html'), /<picture/);
 });
 
-test('jaack.me and Moxie vendor the exact v2.0.1 release with MANIFEST and SOURCE', () => {
+test('jaack.me and Moxie vendor the exact v2.1.0 release with MANIFEST and SOURCE', () => {
   for (const vendor of [design, 'moxie/jaack-design-system']) {
     const canonical = [...read(`${vendor}/MANIFEST.txt`).matchAll(/^([a-f0-9]{64})  ([\w./-]+)$/gm)];
     assert.ok(canonical.length > 0, `${vendor}: empty manifest`);
-    assert.equal(read(`${vendor}/VERSION`).trim(), '2.0.1');
-    assert.equal(read(`${vendor}/SOURCE`), 'iJaack/jaack-design v2.0.1 2cd1bdbe3dd38a185d0b00afd880fdec09cd9f95\n');
+    assert.equal(read(`${vendor}/VERSION`).trim(), '2.1.0');
+    assert.equal(read(`${vendor}/SOURCE`), 'iJaack/jaack-design v2.1.0 1df06388224c77dcef92145252f0f3c27d8e4fd7\n');
     assert.deepEqual(files(vendor).map(file => file.slice(vendor.length + 1)).sort(),
       [...canonical.map(([, , file]) => file), 'MANIFEST.txt', 'SOURCE'].sort());
     for (const [, hash, file] of canonical) {
