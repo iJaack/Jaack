@@ -56,18 +56,28 @@
   /* radii */
   --jk-r-xs:8px;--jk-r-s:14px;--jk-r-m:20px;--jk-r-panel:24px;--jk-r-l:26px;--jk-r-xl:34px;--jk-r-pill:999px;
 
-  /* motion */
-  --jk-ease-out: cubic-bezier(.2,0,0,1);      /* ingresso, hover, cambi di stato */
-  --jk-ease-inout: cubic-bezier(.4,0,.2,1);   /* spostamenti brevi (indicatore pill) */
-  --jk-d-1: 120ms;  /* hover, press, tooltip */
-  --jk-d-2: 200ms;  /* fade di gruppi, pill, tema */
-  --jk-d-3: 280ms;  /* sheet, primo disegno grafico — massimo consentito */
-  /* alias per compatibilità, da rimuovere in v3 */
+  /* motion — 280ms is the hard cap */
+  --jk-dur-0: 0ms;    /* instant: keyboard, frequent menus, theme toggle, repeat tooltips, page changes */
+  --jk-dur-1: 120ms;  /* hover, press, focus */
+  --jk-dur-2: 200ms;  /* dropdowns, panels, sidenotes below 1280px */
+  --jk-dur-3: 280ms;  /* fullscreen photo, pommidoro ring close; ceiling */
+  --jk-ease-out: cubic-bezier(0.2, 0, 0, 1); /* everything entering or responding to a gesture */
+  --jk-ease-in: cubic-bezier(0.3, 0, 1, 1);  /* exits only, at 70% of the entrance duration */
+  --jk-motion-instant: var(--jk-dur-0);
+  --jk-motion-quick: var(--jk-dur-1);
+  --jk-motion-base: var(--jk-dur-2);
+  --jk-motion-slow: var(--jk-dur-3);
+  /* compatibility aliases */
+  --jk-d-0: var(--jk-dur-0);
+  --jk-d-1: var(--jk-dur-1);
+  --jk-d-2: var(--jk-dur-2);
+  --jk-d-3: var(--jk-dur-3);
   --jk-ease: var(--jk-ease-out);
-  --jk-spring: var(--jk-ease-inout);          /* niente più overshoot */
+  --jk-ease-inout: cubic-bezier(.4,0,.2,1); /* deprecated, unused in this package, removal in 3.0; sites that already reference it may keep doing so */
+  --jk-spring: var(--jk-ease-inout); /* deprecated, unused in this package, removal in 3.0; sites that already reference it may keep doing so */
   --jk-d-fast: var(--jk-d-1);
   --jk-d-fade: var(--jk-d-2);
-  --jk-d-theme: var(--jk-d-2);
+  --jk-d-theme: var(--jk-dur-0);
   --jk-d-pill: var(--jk-d-2);
   --jk-d-draw: var(--jk-d-3);
 
@@ -139,6 +149,6 @@ html[data-theme="dark"]{
 @media (max-width:760px){:root{--jk-bar-h:64px}}
 
 @media (prefers-reduced-motion: reduce){
-  :root{--jk-d-1:0ms;--jk-d-2:0ms;--jk-d-3:0ms}
-  *,*::before,*::after{animation-duration:0ms!important;animation-iteration-count:1!important;transition-duration:0ms!important;scroll-behavior:auto!important}
+  :root{--jk-dur-0:0ms;--jk-dur-1:120ms;--jk-dur-2:120ms;--jk-dur-3:120ms}
+  *,*::before,*::after{scroll-behavior:auto!important}
 }

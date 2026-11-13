@@ -4,7 +4,7 @@
 .jk-pill button{position:relative;z-index:3;border:0;background:none;color:var(--jk-ink-2);font:500 14px/1 var(--jk-font);padding:11px 16px;border-radius:var(--jk-r-pill);cursor:pointer;white-space:nowrap;min-height:40px}
 .jk-pill button[aria-pressed="true"],.jk-pill button[aria-current="true"]{color:var(--jk-ink);font-weight:600}
 .jk-pill button:focus-visible{outline:2px solid var(--jk-focus);outline-offset:-2px}
-.jk-pill .jk-ind{position:absolute;z-index:2;top:4px;bottom:4px;left:0;width:0;border-radius:var(--jk-r-pill);background:var(--jk-tint-hi);transition:transform var(--jk-d-pill) var(--jk-ease-inout),width var(--jk-d-pill) var(--jk-ease-inout)}
+.jk-pill .jk-ind{position:absolute;z-index:2;top:4px;bottom:4px;left:0;width:0;border-radius:var(--jk-r-pill);background:var(--jk-tint-hi);transition:transform var(--jk-dur-2) var(--jk-ease-out),width var(--jk-dur-2) var(--jk-ease-out)}
 html[data-theme="dark"] .jk-pill .jk-ind{background:rgba(233,228,218,.12)}
 .jk-pill.flat{--r:var(--jk-r-pill);background:var(--jk-tint-hi);box-shadow:none}
 .jk-pill.flat::before,.jk-pill.flat::after{display:none}

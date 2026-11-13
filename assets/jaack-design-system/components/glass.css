@@ -20,9 +20,9 @@ html[data-theme="dark"] .jk-glass::after{background:radial-gradient(420px circle
 /* sheet: a <dialog class="jk-sheet jk-glass"> opened with sheet.js — bottom sheet on mobile, centred card on desktop */
 .jk-sheet{--r:var(--jk-r-xl);border:0;padding:var(--jk-s6);color:var(--jk-ink);width:min(560px,calc(100% - 24px));max-height:min(80vh,720px);overflow:auto}
 .jk-sheet::backdrop{background:var(--jk-scrim);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
-.jk-sheet[open]{animation:jksheet var(--jk-d-3) var(--jk-ease-out)}
-.jk-sheet[open].jk-leaving{animation:jksheetout var(--jk-d-3) var(--jk-ease-out) forwards}
-.jk-sheet[open].jk-leaving::backdrop{animation:jksheetbackdropout var(--jk-d-3) var(--jk-ease-out) forwards}
+.jk-sheet[open]{animation:jksheet var(--jk-dur-3) var(--jk-ease-out)}
+.jk-sheet[open].jk-leaving{animation:jksheetout calc(var(--jk-dur-3) * 0.7) var(--jk-ease-in) forwards}
+.jk-sheet[open].jk-leaving::backdrop{animation:jksheetbackdropout calc(var(--jk-dur-3) * 0.7) var(--jk-ease-in) forwards}
 .jk-sheet .jk-x{position:absolute;right:var(--jk-s3);top:var(--jk-s3);z-index:4;width:36px;height:36px;border-radius:var(--jk-r-pill);border:0;background:var(--jk-tint-hi);color:var(--jk-ink);font:600 18px/1 var(--jk-font);cursor:pointer}
 @keyframes jksheet{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @keyframes jksheetout{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(8px)}}

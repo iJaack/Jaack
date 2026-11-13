@@ -25,6 +25,9 @@ function splitTransitions(value) {
   }).join('').split('\n');
 }
 
+const durationToken = /^--jk-(?:dur-[0-3]|d-(?:[0-3]|fast|fade|theme|pill|draw)|motion-(?:instant|quick|base|slow))$/;
+const curveToken = /^--jk-(?:ease-out|ease-in|ease)$/;
+
 function lint(source, file) {
   const errors = [];
   const text = source.replace(/\/\*[\s\S]*?\*\//g, '');
@@ -44,7 +47,7 @@ function lint(source, file) {
       if (Number(number) * (unit === 's' ? 1000 : 1) > 280) errors.push('duration above 280ms');
     }
     for (const [, token] of value.matchAll(/var\((--[\w-]+)/g)) {
-      if (!/^--jk-(?:d-[123]|ease-out)$/.test(token)) errors.push(`non-Forma token ${token}`);
+      if (!durationToken.test(token) && !curveToken.test(token)) errors.push(`non-Forma token ${token}`);
     }
     if (/^(?:transition|animation)(?:-duration|Duration)?$/.test(property) && !/^(?:none|initial|inherit|unset|revert)(?:\s|$)/.test(value)) {
       for (const part of splitTransitions(value)) {
@@ -54,7 +57,7 @@ function lint(source, file) {
           ? part.replace(/var\(--jk-d-3,\s*280ms\)/g, 'var(--jk-d-3)') : part;
         const times = [...withoutFallback.matchAll(/(?<![\w-])(\d*\.?\d+)(?:ms|s)\b/g)];
         if (times.some(([, n]) => Number(n) !== 0) ||
-            (!/var\(--jk-d-[123]\b/.test(part) && !times.some(([, n]) => Number(n) === 0))) errors.push('missing duration token');
+            (![...part.matchAll(/var\((--[\w-]+)/g)].some(([, token]) => durationToken.test(token)) && !times.some(([, n]) => Number(n) === 0))) errors.push('missing duration token');
       }
     }
   }
@@ -78,11 +81,14 @@ test('motion lint rejects unsafe CSS, Sass and JavaScript declarations', () => {
     'transition:\n color var(--jk-d-1),\n transform 500ms;', 'transition-property: all;',
     "node.style.transition = 'opacity .7s';", "node.style.animationDuration = '300ms';",
     'transition: color var(--duration-fast);', 'transition: color var(--jk-d-1) var(--ease-smooth-out);',
+    'transition: opacity var(--jk-dur-2) var(--jk-ease-inout);',
+    'transition: opacity var(--jk-dur-2) var(--jk-spring);',
+    'transition: opacity var(--jk-ease-out);',
     'easing: cubic-bezier(.2,-.1,0,1)', 'easing: cubic-bezier(.2,0,0,1.1)',
     'element.animate([], { duration: 500 })']) {
     assert.ok(lint(bad, 'fixture.css').length > 0, bad);
   }
-  for (const good of ['transition: none;', 'transition-duration: 0ms !important;',
+  for (const good of ['transition: opacity var(--jk-dur-2) var(--jk-ease-out);', 'transition: none;', 'transition-duration: 0ms !important;',
     'transition: color var(--jk-d-1) var(--jk-ease-out), transform var(--jk-d-2) var(--jk-ease-out);']) {
     assert.deepEqual(lint(good, 'fixture.css'), [], good);
   }
@@ -178,4 +184,125 @@ test('ACP content is visible by default, with hidden states only for JS and allo
 test('video checks reduced motion; Helicon chart renders without timed animation', () => {
   assert.match(read('assets/js/project-video.js'), /matchMedia\('\(prefers-reduced-motion: reduce\)'\)/);
   assert.doesNotMatch(read('assets/research/helicon/chart.js'), /requestAnimationFrame|setInterval|setTimeout|\.animate\s*\(|\btransition\b|\banimation\b/);
+});
+
+test('motion lint accepts every v2.1 duration and curve alias, retaining the ACP-only fallback', () => {
+  const durations = ['dur-0', 'dur-1', 'dur-2', 'dur-3', 'd-0', 'd-1', 'd-2', 'd-3',
+    'd-fast', 'd-fade', 'd-theme', 'd-pill', 'd-draw',
+    'motion-instant', 'motion-quick', 'motion-base', 'motion-slow'];
+  for (const duration of durations) {
+    for (const curve of ['ease-out', 'ease-in', 'ease']) {
+      assert.deepEqual(lint(`transition: opacity var(--jk-${duration}) var(--jk-${curve});`, 'fixture.css'), []);
+    }
+    assert.deepEqual(lint(`animation-duration: var(--jk-${duration});`, 'fixture.css'), []);
+  }
+  const fallback = 'transition: opacity var(--jk-d-3, 280ms) var(--jk-ease-out);';
+  assert.deepEqual(lint(fallback, 'assets/open_source_code/acp-255-nyt.css'), []);
+  assert.ok(lint(fallback, 'fixture.css').includes('missing duration token'));
+});
+
+function navigationErrors(source) {
+  const text = source.replace(/\/\*[\s\S]*?\*\//g, '');
+  const errors = [];
+  if (/\bstartViewTransition\b/.test(text)) errors.push('scripted view transition');
+  if (/\bfade-in-down\b/.test(text)) errors.push('legacy page fade');
+  for (const [, declaration] of text.matchAll(/@view-transition\s*\{([^}]*)\}/g)) {
+    if (!/^\s*navigation\s*:\s*none\s*;?\s*$/.test(declaration)) errors.push('navigation view transition');
+  }
+  for (const block of text.split('}')) {
+    const opening = block.lastIndexOf('{');
+    if (opening < 0) continue;
+    const selectors = block.slice(0, opening).split('{').at(-1);
+    const declarations = block.slice(opening + 1);
+    const page = selectors.split(',').some(selector => {
+      const target = selector.trim().split(/\s+|[>+~]/).filter(Boolean).at(-1) || '';
+      return /^(?:html|body|main|#main-content|\.(?:jk-page|page|post|home|writing|projects|wrapper-(?:normal|large|xwide)))(?=$|[.#:[\]])/.test(target);
+    });
+    if (page && /(?:transition(?:-property)?\s*:\s*[^;]*(?:opacity|\ball\b)|animation(?:-name)?\s*:\s*(?!none\b)[^;]*|opacity\s*:\s*(?:0(?:\.\d+)?|\.\d+)\s*[;}])/i.test(declarations + '}')) {
+      errors.push('page-level fade or animation');
+    }
+  }
+  if (/document\.(?:body|documentElement)\.style\.(?:opacity|transition|animation)\s*=/.test(text)) errors.push('scripted page motion');
+  return errors;
+}
+
+test('shipped source keeps page changes instant and explicitly opts out of view transitions', () => {
+  const pages = ['_posts', '_notes', 'projects', 'en', 'team1'].flatMap(walk)
+    .filter(file => /\.(?:md|html|css|js|liquid)$/.test(file) && !excluded.test(file));
+  const topLevel = fs.readdirSync(root).filter(file => /\.(?:html|md)$/.test(file));
+  for (const file of new Set([...sources, ...pages, ...topLevel])) {
+    assert.deepEqual(navigationErrors(read(file)), [], file);
+  }
+  assert.match(read('assets/css/jaack-site.css'), /@view-transition\s*\{\s*navigation:\s*none;\s*\}/);
+  assert.match(read('_site/assets/css/jaack-site.css'), /@view-transition\s*\{\s*navigation:\s*none;\s*\}/);
+});
+
+test('navigation guard rejects view transitions and page fades while allowing photo fades', () => {
+  for (const bad of ['document.startViewTransition(update)', '@view-transition { navigation: auto; }',
+    '.fade-in-down { opacity: 0; }', 'body { transition: opacity var(--jk-dur-2); }',
+    'html.is-leaving { opacity: 0; }', '.jk-page { animation: fade var(--jk-dur-2); }',
+    '.wrapper-large { transition: opacity var(--jk-dur-2); }', 'main { transition-property: opacity; }',
+    'document.body.style.opacity = 0;']) assert.ok(navigationErrors(bad).length, bad);
+  assert.deepEqual(navigationErrors('@view-transition { navigation: none; }'), []);
+  assert.deepEqual(navigationErrors('img.jk-photo-3x2 { transition: opacity var(--jk-dur-2); }'), []);
+  assert.deepEqual(navigationErrors('.jk-page > .card { transition: opacity var(--jk-dur-2); }'), []);
+});
+
+const photoSelector = 'img:is(.jk-photo-3x2, .jk-photo-4x5, .jk-photo-1x1)';
+function loadPhotos({ reduced = false } = {}) {
+  function image(className, complete = false, naturalWidth = 0) {
+    const classes = new Set([className]);
+    return { complete, naturalWidth, loading: 'lazy', classes, listeners: {},
+      classList: { add: name => classes.add(name) },
+      addEventListener(event, callback, options) { this.listeners[event] = callback; assert.equal(options.once, true); }
+    };
+  }
+  const photos = [image('jk-photo-3x2'), image('jk-photo-4x5'), image('jk-photo-1x1'),
+    image('jk-photo-3x2', true, 800), image('jk-photo-3x2', true, 0)];
+  const excludedImages = ['app-icon', 'app-monogram', 'logo', 'figure--diagram'].map(name => image(name));
+  vm.runInNewContext(read('assets/js/photo-fade.js'), {
+    window: { matchMedia(query) { assert.equal(query, '(prefers-reduced-motion: reduce)'); return { matches: reduced }; } },
+    document: { querySelectorAll(selector) { assert.equal(selector, photoSelector); return photos; } }
+  });
+  return { photos, excludedImages };
+}
+
+test('only photographs fade after load, preserving lazy loading without timers or network', () => {
+  const { photos, excludedImages } = loadPhotos();
+  for (const photo of photos.slice(0, 3)) {
+    assert.ok(!photo.classes.has('is-loaded'));
+    assert.equal(photo.loading, 'lazy');
+    photo.listeners.load();
+    assert.ok(photo.classes.has('is-loaded'));
+  }
+  assert.ok(excludedImages.every(image => !image.classes.has('is-loaded')));
+  assert.doesNotMatch(read('assets/js/photo-fade.js'), /setTimeout|setInterval|requestAnimationFrame|\.style\b|\.loading\s*=|\.src\s*=/);
+});
+
+test('cached photos and cached failures reveal immediately; later errors reveal pending photos', () => {
+  const { photos } = loadPhotos();
+  assert.ok(photos[3].classes.has('is-loaded'), 'cached successful photo');
+  assert.ok(photos[4].classes.has('is-loaded'), 'cached failed photo');
+  photos[0].listeners.error();
+  assert.ok(photos[0].classes.has('is-loaded'));
+});
+
+test('reduced motion reveals all photos immediately, including pending lazy images', () => {
+  assert.ok(loadPhotos({ reduced: true }).photos.every(photo => photo.classes.has('is-loaded')));
+});
+
+test('photo CSS fades opacity for 200ms, preserves aspect ratios and overrides reduced motion explicitly', () => {
+  const css = read('assets/css/jaack-site.css');
+  const rule = css.split(`${photoSelector} {`)[1].split('}')[0];
+  assert.equal(rule.trim(), 'opacity: 0;\n  transition: opacity var(--jk-dur-2) var(--jk-ease-out);');
+  assert.ok(css.includes(`${photoSelector}.is-loaded { opacity: 1; }`));
+  assert.ok(css.includes(`@media (prefers-reduced-motion: reduce) {\n  ${photoSelector} { opacity: 1; transition: none; }\n}`));
+  for (const [format, ratio] of [['3x2', '3 / 2'], ['4x5', '4 / 5'], ['1x1', '1 / 1']]) {
+    assert.ok(css.includes(`.jk-photo-${format} { aspect-ratio: ${ratio}; object-fit: cover; }`));
+  }
+  assert.match(css, /\.jk-photo-3x2\.jk-photo-contain \{ object-fit: contain;/);
+  assert.match(read('assets/jaack-design-system/tokens.css'), /--jk-dur-2:\s*200ms;/);
+  assert.match(read('_layouts/default.html'), /src="\{\{ '\/assets\/js\/photo-fade\.js' \| relative_url \}\}" defer/);
+  assert.match(read('_site/index.html'), /<script src="\/assets\/js\/photo-fade\.js" defer><\/script>/);
+  assert.equal(read('_site/assets/js/photo-fade.js'), read('assets/js/photo-fade.js'));
 });

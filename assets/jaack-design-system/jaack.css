@@ -57,18 +57,28 @@
   /* radii */
   --jk-r-xs:8px;--jk-r-s:14px;--jk-r-m:20px;--jk-r-panel:24px;--jk-r-l:26px;--jk-r-xl:34px;--jk-r-pill:999px;
 
-  /* motion */
-  --jk-ease-out: cubic-bezier(.2,0,0,1);      /* ingresso, hover, cambi di stato */
-  --jk-ease-inout: cubic-bezier(.4,0,.2,1);   /* spostamenti brevi (indicatore pill) */
-  --jk-d-1: 120ms;  /* hover, press, tooltip */
-  --jk-d-2: 200ms;  /* fade di gruppi, pill, tema */
-  --jk-d-3: 280ms;  /* sheet, primo disegno grafico — massimo consentito */
-  /* alias per compatibilità, da rimuovere in v3 */
+  /* motion — 280ms is the hard cap */
+  --jk-dur-0: 0ms;    /* instant: keyboard, frequent menus, theme toggle, repeat tooltips, page changes */
+  --jk-dur-1: 120ms;  /* hover, press, focus */
+  --jk-dur-2: 200ms;  /* dropdowns, panels, sidenotes below 1280px */
+  --jk-dur-3: 280ms;  /* fullscreen photo, pommidoro ring close; ceiling */
+  --jk-ease-out: cubic-bezier(0.2, 0, 0, 1); /* everything entering or responding to a gesture */
+  --jk-ease-in: cubic-bezier(0.3, 0, 1, 1);  /* exits only, at 70% of the entrance duration */
+  --jk-motion-instant: var(--jk-dur-0);
+  --jk-motion-quick: var(--jk-dur-1);
+  --jk-motion-base: var(--jk-dur-2);
+  --jk-motion-slow: var(--jk-dur-3);
+  /* compatibility aliases */
+  --jk-d-0: var(--jk-dur-0);
+  --jk-d-1: var(--jk-dur-1);
+  --jk-d-2: var(--jk-dur-2);
+  --jk-d-3: var(--jk-dur-3);
   --jk-ease: var(--jk-ease-out);
-  --jk-spring: var(--jk-ease-inout);          /* niente più overshoot */
+  --jk-ease-inout: cubic-bezier(.4,0,.2,1); /* deprecated, unused in this package, removal in 3.0; sites that already reference it may keep doing so */
+  --jk-spring: var(--jk-ease-inout); /* deprecated, unused in this package, removal in 3.0; sites that already reference it may keep doing so */
   --jk-d-fast: var(--jk-d-1);
   --jk-d-fade: var(--jk-d-2);
-  --jk-d-theme: var(--jk-d-2);
+  --jk-d-theme: var(--jk-dur-0);
   --jk-d-pill: var(--jk-d-2);
   --jk-d-draw: var(--jk-d-3);
 
@@ -140,8 +150,8 @@ html[data-theme="dark"]{
 @media (max-width:760px){:root{--jk-bar-h:64px}}
 
 @media (prefers-reduced-motion: reduce){
-  :root{--jk-d-1:0ms;--jk-d-2:0ms;--jk-d-3:0ms}
-  *,*::before,*::after{animation-duration:0ms!important;animation-iteration-count:1!important;transition-duration:0ms!important;scroll-behavior:auto!important}
+  :root{--jk-dur-0:0ms;--jk-dur-1:120ms;--jk-dur-2:120ms;--jk-dur-3:120ms}
+  *,*::before,*::after{scroll-behavior:auto!important}
 }
 /* base: page, type roles, fade-in, theme cross-fade, reduced motion */
 *,*::before,*::after{box-sizing:border-box}
@@ -163,10 +173,9 @@ body{margin:0;font:var(--jk-fs-body)/var(--jk-lh) var(--jk-font);color:var(--jk-
 :where(button,a,[tabindex]):focus-visible{outline:2px solid var(--jk-focus);outline-offset:3px;border-radius:var(--jk-r-xs)}
 /* fade-in: opacity only — data never moves or scales */
 .jk-fx{opacity:0;transition:opacity var(--jk-d-2) var(--jk-ease-out)}.jk-fx.in{opacity:1}
-/* theme cross-fade (theme.js adds .jk-th-fade for 220 ms) */
+/* theme change: instant; theme.js briefly adds .jk-th-fade */
 html.jk-th-fade,html.jk-th-fade *{transition:background-color var(--jk-d-theme) ease,color var(--jk-d-theme) ease,border-color var(--jk-d-theme) ease,fill var(--jk-d-theme) ease!important}
-@media (prefers-reduced-motion:reduce){.jk-fx{opacity:1;transition:none}html.jk-th-fade,html.jk-th-fade *{transition:none!important}}
-html.jk-rm .jk-fx{opacity:1;transition:none}
+@media (prefers-reduced-motion:reduce){html.jk-th-fade,html.jk-th-fade *{transition:none!important}}
 .jk-end{text-align:center;padding:40px 16px var(--jk-dock-clearance);font-size:13px;color:var(--jk-t3)}
 /* Static, optional background veil. Opt in with <html data-jk-veil>.
    Markup: <div class="jk-bg" aria-hidden="true"><i></i><i></i><i></i></div>. */
@@ -199,9 +208,9 @@ html[data-theme="dark"] .jk-glass::after{background:radial-gradient(420px circle
 /* sheet: a <dialog class="jk-sheet jk-glass"> opened with sheet.js — bottom sheet on mobile, centred card on desktop */
 .jk-sheet{--r:var(--jk-r-xl);border:0;padding:var(--jk-s6);color:var(--jk-ink);width:min(560px,calc(100% - 24px));max-height:min(80vh,720px);overflow:auto}
 .jk-sheet::backdrop{background:var(--jk-scrim);-webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
-.jk-sheet[open]{animation:jksheet var(--jk-d-3) var(--jk-ease-out)}
-.jk-sheet[open].jk-leaving{animation:jksheetout var(--jk-d-3) var(--jk-ease-out) forwards}
-.jk-sheet[open].jk-leaving::backdrop{animation:jksheetbackdropout var(--jk-d-3) var(--jk-ease-out) forwards}
+.jk-sheet[open]{animation:jksheet var(--jk-dur-3) var(--jk-ease-out)}
+.jk-sheet[open].jk-leaving{animation:jksheetout calc(var(--jk-dur-3) * 0.7) var(--jk-ease-in) forwards}
+.jk-sheet[open].jk-leaving::backdrop{animation:jksheetbackdropout calc(var(--jk-dur-3) * 0.7) var(--jk-ease-in) forwards}
 .jk-sheet .jk-x{position:absolute;right:var(--jk-s3);top:var(--jk-s3);z-index:4;width:36px;height:36px;border-radius:var(--jk-r-pill);border:0;background:var(--jk-tint-hi);color:var(--jk-ink);font:600 18px/1 var(--jk-font);cursor:pointer}
 @keyframes jksheet{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 @keyframes jksheetout{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(8px)}}
@@ -326,7 +335,7 @@ html[data-theme="dark"] .jk-glass::after{background:radial-gradient(420px circle
 .jk-pill button{position:relative;z-index:3;border:0;background:none;color:var(--jk-ink-2);font:500 14px/1 var(--jk-font);padding:11px 16px;border-radius:var(--jk-r-pill);cursor:pointer;white-space:nowrap;min-height:40px}
 .jk-pill button[aria-pressed="true"],.jk-pill button[aria-current="true"]{color:var(--jk-ink);font-weight:600}
 .jk-pill button:focus-visible{outline:2px solid var(--jk-focus);outline-offset:-2px}
-.jk-pill .jk-ind{position:absolute;z-index:2;top:4px;bottom:4px;left:0;width:0;border-radius:var(--jk-r-pill);background:var(--jk-tint-hi);transition:transform var(--jk-d-pill) var(--jk-ease-inout),width var(--jk-d-pill) var(--jk-ease-inout)}
+.jk-pill .jk-ind{position:absolute;z-index:2;top:4px;bottom:4px;left:0;width:0;border-radius:var(--jk-r-pill);background:var(--jk-tint-hi);transition:transform var(--jk-dur-2) var(--jk-ease-out),width var(--jk-dur-2) var(--jk-ease-out)}
 html[data-theme="dark"] .jk-pill .jk-ind{background:rgba(233,228,218,.12)}
 .jk-pill.flat{--r:var(--jk-r-pill);background:var(--jk-tint-hi);box-shadow:none}
 .jk-pill.flat::before,.jk-pill.flat::after{display:none}
@@ -338,9 +347,8 @@ html[data-theme="dark"] .jk-pill .jk-ind{background:rgba(233,228,218,.12)}
 html.jk-rm .jk-pill .jk-ind{transition:none}
 /* tooltip — small glass label that follows the pointer over a chart (scrubber) or explains an element on hover/focus. */
 .jk-tipwrap{position:relative}
-.jk-tip{position:absolute;left:0;top:0;--r:var(--jk-r-s);padding:8px 12px;font-size:var(--jk-fs-sm);line-height:1.35;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity var(--jk-d-fast);z-index:30;color:var(--jk-ink);text-shadow:none;max-width:min(320px,90vw)}
+.jk-tip{position:absolute;left:0;top:0;--r:var(--jk-r-s);padding:8px 12px;font-size:var(--jk-fs-sm);line-height:1.35;white-space:nowrap;pointer-events:none;opacity:0;transition:opacity var(--jk-d-fast) var(--jk-ease-out);z-index:30;color:var(--jk-ink);text-shadow:none;max-width:min(320px,90vw)}
 .jk-tip.on{opacity:1}.jk-tip b{font-weight:700}.jk-tip .d{color:var(--jk-ink-2);font-size:12px}
 .jk-tip.wrap{white-space:normal}
-.jk-hair{position:absolute;top:8px;bottom:26px;left:0;width:1px;background:var(--jk-ink);opacity:0;pointer-events:none;transition:opacity var(--jk-d-fast)}
+.jk-hair{position:absolute;top:8px;bottom:26px;left:0;width:1px;background:var(--jk-ink);opacity:0;pointer-events:none;transition:opacity var(--jk-d-fast) var(--jk-ease-out)}
 .jk-hair.on{opacity:.35}
-@media (prefers-reduced-motion:reduce){.jk-tip,.jk-hair{transition:none}}

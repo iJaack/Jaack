@@ -18,8 +18,7 @@ body{margin:0;font:var(--jk-fs-body)/var(--jk-lh) var(--jk-font);color:var(--jk-
 :where(button,a,[tabindex]):focus-visible{outline:2px solid var(--jk-focus);outline-offset:3px;border-radius:var(--jk-r-xs)}
 /* fade-in: opacity only — data never moves or scales */
 .jk-fx{opacity:0;transition:opacity var(--jk-d-2) var(--jk-ease-out)}.jk-fx.in{opacity:1}
-/* theme cross-fade (theme.js adds .jk-th-fade for 220 ms) */
+/* theme change: instant; theme.js briefly adds .jk-th-fade */
 html.jk-th-fade,html.jk-th-fade *{transition:background-color var(--jk-d-theme) ease,color var(--jk-d-theme) ease,border-color var(--jk-d-theme) ease,fill var(--jk-d-theme) ease!important}
-@media (prefers-reduced-motion:reduce){.jk-fx{opacity:1;transition:none}html.jk-th-fade,html.jk-th-fade *{transition:none!important}}
-html.jk-rm .jk-fx{opacity:1;transition:none}
+@media (prefers-reduced-motion:reduce){html.jk-th-fade,html.jk-th-fade *{transition:none!important}}
 .jk-end{text-align:center;padding:40px 16px var(--jk-dock-clearance);font-size:13px;color:var(--jk-t3)}

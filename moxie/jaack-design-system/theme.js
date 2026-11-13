@@ -1,7 +1,7 @@
 // jaack theme — load as a BLOCKING external script in <head> (CSP friendly, no inline code) so the theme is set before first paint:
 //   <script src="/theme.js"></script>            optional: data-light-from="7" data-light-to="19" data-key="jaack.theme"
 // Order: saved choice (Light/Dark, localStorage) → ?theme=light|dark → Auto by the visitor's local clock (light 07:00–18:59).
-// Re-checked every 60 s, on focus, on visibility change and across tabs; theme changes cross-fade for 0.2 s unless reduced motion.
+// Re-checked every 60 s, on focus, on visibility change and across tabs; theme changes are instant (--jk-d-theme is --jk-dur-0).
 // JaackTheme.mount(el) adds Auto / Light / Dark (Italian: Auto / Chiaro / Scuro); styles: components/themeswitch.css.
 // Language: html data-ui-lang || lang (it prefix → Italian; otherwise English). relabel() also runs on attribute changes and languageChanged.
 // Override JaackTheme.labels.en / .it before mount: auto, light, dark, group, autoTitle, lightTitle, darkTitle, suffix.
