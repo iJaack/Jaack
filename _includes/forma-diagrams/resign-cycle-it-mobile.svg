@@ -17,7 +17,7 @@
   </defs>
   <text x="64" y="108" fill="var(--jk-ink)" font-size="32" font-weight="600">Apple ID gratuito, ogni 7 giorni</text>
   <rect x="64" y="152" width="672" height="120" rx="12" ry="12" fill="none" stroke="var(--jk-hair)" stroke-width="2"/>
-  <text x="400.0" y="223.20000000000002" fill="var(--jk-ink)" font-size="28" font-weight="600" text-anchor="middle"><tspan x="400.0" dy="0">Compili e installi</tspan></text>
+  <text x="400.0" y="205.70000000000002" fill="var(--jk-ink)" font-size="28" font-weight="600" text-anchor="middle"><tspan x="400.0" dy="0">Compili e</tspan><tspan x="400.0" dy="35">installi</tspan></text>
   <line x1="200" y1="272" x2="200" y2="720" stroke="var(--jk-hair)" stroke-width="2"/>
   <line x1="176" y1="336.0" x2="224" y2="336.0" stroke="var(--jk-ink)" stroke-width="2"/>
   <text x="248" y="346.0" fill="var(--jk-ink-2)" font-size="28" font-weight="400" text-anchor="start">Giorno 1</text>

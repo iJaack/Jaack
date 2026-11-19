@@ -17,7 +17,7 @@
   </defs>
   <text x="64" y="80" fill="var(--jk-ink)" font-size="32" font-weight="600">Apple ID gratuito, ogni 7 giorni</text>
   <rect x="64" y="200" width="280" height="160" rx="12" ry="12" fill="none" stroke="var(--jk-hair)" stroke-width="2"/>
-  <text x="204.0" y="289.59999999999997" fill="var(--jk-ink)" font-size="24" font-weight="600" text-anchor="middle"><tspan x="204.0" dy="0">Compili e installi</tspan></text>
+  <text x="204.0" y="274.6" fill="var(--jk-ink)" font-size="24" font-weight="600" text-anchor="middle"><tspan x="204.0" dy="0">Compili e</tspan><tspan x="204.0" dy="30">installi</tspan></text>
   <rect x="1256" y="200" width="280" height="160" rx="12" ry="12" fill="none" stroke="var(--jk-hair)" stroke-width="2"/>
   <text x="1396.0" y="274.6" fill="var(--jk-ink)" font-size="24" font-weight="600" text-anchor="middle"><tspan x="1396.0" dy="0">Ricolleghi l'iPhone</tspan><tspan x="1396.0" dy="30">e premi ▶</tspan></text>
   <line x1="376" y1="280" x2="1224" y2="280" stroke="var(--jk-hair)" stroke-width="2"/>
