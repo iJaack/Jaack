@@ -48,13 +48,13 @@
   letter-spacing: 0.2px;
 }
 .acp255-nyt h2 {
-  font-family: var(--jk-font);
-  font-size: clamp(2.2rem, 3vw, 2.8rem);
-  font-weight: 700;
-  line-height: 1.15;
+  font-family: var(--jk-serif);
+  font-optical-sizing: auto;
+  font-size: var(--jk-fs-h2);
+  font-weight: 450;
+  line-height: var(--jk-lh-h2);
   color: var(--jk-ink);
-  margin-top: 0.5rem;
-  margin-bottom: 1.2rem;
+  margin: 56px 0 14px;
 }
 .acp255-nyt strong { color: var(--jk-ink); }
 .acp255-nyt em { color: var(--jk-ink-2); }
@@ -167,9 +167,22 @@
 
 /* --- Fade-in (scroll-triggered) ------------------------------ */
 .acp255-nyt .fade-in {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  opacity: 1;
+  transform: none;
+  transition: opacity var(--jk-d-3, 280ms) var(--jk-ease-out, cubic-bezier(.2,0,0,1)), transform var(--jk-d-3, 280ms) var(--jk-ease-out, cubic-bezier(.2,0,0,1));
+}
+/* Only JavaScript-enhanced content may wait for the scroll observer. */
+@media (prefers-reduced-motion: no-preference) {
+  .acp255-nyt .fade-in.is-pending {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .acp255-nyt .fade-in {
+    transition: none;
+    transition-delay: 0ms !important;
+  }
 }
 .acp255-nyt .fade-in.is-visible {
   opacity: 1;
@@ -394,11 +407,12 @@
 /* --- Explorer intro (v2) ------------------------------------- */
 .acp255-nyt .explorer-intro {
   max-width: 100%;
-  margin: 3rem 0 0.5rem;
-  font-family: var(--jk-font);
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 700;
-  line-height: 1.25;
+  margin: 56px 0 14px;
+  font-family: var(--jk-serif);
+  font-optical-sizing: auto;
+  font-size: var(--jk-fs-h2);
+  font-weight: 450;
+  line-height: var(--jk-lh-h2);
   color: var(--jk-ink);
 }
 .acp255-nyt .explorer-howto {

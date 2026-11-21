@@ -19,7 +19,7 @@ class HubTests(unittest.TestCase):
  def setUpClass(cls):
   cls.routes=json.loads((P/'routes.json').read_text());cls.hub=json.loads((P/'data/hub.json').read_text());cls.versions={f.stem:json.loads(f.read_text()) for f in (P/'data/versions').glob('*.json')}
  def test_every_page_has_equivalent_languages(self):
-  self.assertEqual(len(self.routes),50)
+  self.assertEqual(len(self.routes),52)
   # Localized slugs: the collection lives at /it/collezione/ and /en/collection/.
   slug={'it':{'collection/':'collezione/'},'en':{'collezione/':'collection/'}}
   local=lambda l,rest:slug[l].get(rest,rest)
@@ -71,7 +71,6 @@ class HubTests(unittest.TestCase):
    self.assertIn('Ghalta the Unstoppable',page)
    self.assertNotIn('/decks/mono-green-landfall',page)
    self.assertIn(path,(D/lang/'journal/index.html').read_text())
-   self.assertIn(path,(D/lang/'index.html').read_text())
  def test_public_boundary_and_language_copy(self):
   for f in D.rglob('*'):
    if not f.is_file() or '.vercel' in f.parts:continue
@@ -98,8 +97,42 @@ class HubTests(unittest.TestCase):
    self.assertIn('/versions/'+new['id']+'.txt',guide)
    for page in ['index.html','decks/mono-green-landfall/index.html','guides/index.html','guides/mono-green-landfall/index.html']:
     self.assertIn(url,(D/lang/page).read_text())
+ def test_star_trek_prerelease_2026_11_07(self):
+  ids=[e['id'] for e in self.hub['events']]
+  self.assertEqual(ids.count('star-trek-prerelease-2026-11-07'),1)
+  event=self.hub['events'][0]
+  self.assertEqual((event['id'],event['date'],event['status'],event['venue']),('star-trek-prerelease-2026-11-07','2026-11-07','reported','Golden Store Talenti'))
+  self.assertIsNone(event['deck_id']);self.assertIsNone(event['version_id']);self.assertEqual(event['version_relation'],'unknown')
+  self.assertEqual(self.hub['updated'],'2026-11-07')
+  paragraphs=[
+   'Al Golden Store Talenti ho chiuso con un pareggio 1-1, due sconfitte per 0-2 e un bye nell’ultimo turno.',
+   'Ho costruito un bianco-blu-nero attorno a Regina Borg, Odio Ereditario (Trio di Sen), puntando su artefatti e astronavi. Ripensandoci, nei tre colori avevo poche carte davvero forti, mentre avevo lasciato fuori 4–5 rare verdi. Avrei potuto esplorare verde-bianco o verde-bianco-blu; quattro colori mi sembravano troppo diluiti.',
+   'Per il prossimo sealed voglio partire dalle rare del pool, senza scegliere subito la carta attorno a cui costruire. Questa volta verde-bianco mi sembrava la scelta più pulita.',
+  ]
+  self.assertEqual(event['title']['it'],'Prerelease Star Trek — 7 novembre 2026')
+  self.assertEqual(event['summary']['it'],paragraphs[0])
+  self.assertEqual([n['it'] for n in event['notes']],paragraphs[1:])
+  self.assertIn('Regina Borg, Odio Ereditario (Trio di Sen)',event['notes'][0]['it'])
+  self.assertNotIn('Borg Queen',event['notes'][0]['it'])
+  self.assertIn('Borg Queen (Sen Triplets)',event['notes'][0]['en'])
+  self.assertNotIn('Odio Ereditario',event['notes'][0]['en'])
+  joined=' '.join([event['title']['it'],event['title']['en'],event['result']['it'],event['result']['en'],event['summary']['it'],event['summary']['en']]+[x['it']+' '+x['en'] for x in event['notes']])
+  self.assertNotIn('Commander',joined);self.assertNotIn('notion',joined.lower());self.assertNotRegex(joined,r'https?://')
+  path='/journal/star-trek-prerelease-2026-11-07/'
+  expected={
+   'it':paragraphs+['Prerelease Star Trek — 7 novembre 2026','Pareggio 1-1, due sconfitte 0-2, bye nell’ultimo turno'],
+   'en':['Star Trek prerelease — November 7, 2026','At Golden Store Talenti I finished with a 1-1 draw, two 0-2 losses, and a bye in the last round.','I built a white-blue-black deck around Borg Queen (Sen Triplets), focusing on artifacts and spaceships.','I had left out 4–5 green rares.','For the next Sealed I want to start from the rares in the pool','This time green-white seemed the cleanest choice.','1-1 draw, two 0-2 losses, bye in the last round'],
+  }
+  for lang in ['it','en']:
+   page=(D/lang/path.lstrip('/')/'index.html').read_text()
+   for text in expected[lang]:self.assertIn(text,page)
+   self.assertEqual(page.count(paragraphs[0] if lang=='it' else 'At Golden Store Talenti I finished'),1)
+   self.assertNotIn('Commander',page);self.assertNotIn('/versions/',page);self.assertNotIn('deck-theme',page);self.assertNotIn('notion',page.lower())
+   self.assertNotIn('Vai al mazzo' if lang=='it' else 'View deck',page)
+   self.assertEqual((D/lang/'journal/index.html').read_text().count(path),1)
+   self.assertIn(path,(D/lang/'index.html').read_text())
  def test_league_report_2026_10_16(self):
-  event=self.hub['events'][0];self.assertEqual((event['id'],event['date'],event['status']),('league-talenti-2026-10-16','2026-10-16','reported'))
+  event=next(e for e in self.hub['events'] if e['id']=='league-talenti-2026-10-16');self.assertEqual((event['id'],event['date'],event['status']),('league-talenti-2026-10-16','2026-10-16','reported'))
   self.assertEqual((event['version_id'],event['version_relation']),('mono-green-2026-10-01-torpor','played'))
   self.assertEqual(len(event['notes']),4)
   for lang in ['it','en']:
@@ -113,12 +146,33 @@ class HubTests(unittest.TestCase):
    self.assertIn('class="deck-theme theme-g"',(D/lang/'guides/mono-green-landfall/index.html').read_text())
    self.assertNotIn('class="deck-theme',(D/lang/'index.html').read_text())
   css=(D/'style.css').read_text()+(D/'jaack.css').read_text()
-  self.assertIn('--jk-bg:#121314',css)
-  self.assertIn('--jk-accent:#e8c547',css)
+  self.assertIn('--jk-bg:#130e0b',css)
+  self.assertIn('--jk-accent:#6d8fad',css)
   self.assertIn('.theme-rg{--accent:#ed887c;--deck-stripe:linear-gradient(90deg,#ed887c 0% 50%,#7fc49a 50% 100%)}',css)
   self.assertNotIn('#184936',css)
+ def test_header_menu_on_every_localized_page(self):
+  for route in self.routes:
+   page=(D/route.lstrip('/')/'index.html').read_text()
+   self.assertEqual(page.count('id="hub-menu"'),1,route)
+   self.assertIn('<div class="hub-tools" id="hub-menu">',page)
+   self.assertIn('<button class="nav-menu-toggle" type="button" aria-expanded="false" aria-controls="hub-menu">Menu</button>',page)
+   self.assertIn('<script src="/nav-menu.js" defer></script>',page)
+  self.assertEqual((D/'nav-menu.js').read_bytes(),(P/'nav-menu.js').read_bytes())
+  self.assertIn('fill="#130e0b"',(D/'favicon.svg').read_text())
+  self.assertIn('fill="#e9e4da"',(D/'favicon.svg').read_text())
+  self.assertIn('fill="#6d8fad"',(D/'favicon.svg').read_text())
  def test_legacy_pdf_and_downloads(self):
   for pdf in ['mono-green-landfall-galactus-11-settembre-2026.pdf','mono-green-landfall-galactus-11-september-2026-en.pdf']:
    self.assertEqual((D/pdf).read_bytes()[:5],b'%PDF-')
   for v in self.versions.values():self.assertTrue((D/'versions'/(v['id']+'.txt')).is_file())
+ def test_theme_switch_hides_only_the_other_language_and_preserves_mobile_labels(self):
+  css=(D/'style.css').read_text()
+  self.assertRegex(css,r'html\[lang="it"\] \.jk-thsw \.lang-en,\s*html\[lang="en"\] \.jk-thsw \.lang-it\s*\{\s*display:\s*none;\s*\}')
+  utility=re.search(r'\.visually-hidden\s*\{([^}]+)\}',css).group(1)
+  self.assertIn('position: absolute;',utility)
+  self.assertIn('clip-path: inset(50%);',utility)
+  self.assertNotRegex(utility,r'display:\s*none|visibility:\s*hidden')
+  shared=(D/'jaack.css').read_text()
+  self.assertRegex(shared,r'@media \(max-width:760px\).*?\.jk-thsw \.l\{display:inline;position:absolute;[^}]*clip-path:inset\(50%\)')
+  self.assertNotRegex(css+shared,r'\.jk-thsw \.l\s*\{[^}]*display:\s*none')
 if __name__=='__main__':unittest.main()

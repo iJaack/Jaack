@@ -105,7 +105,7 @@ compress_html:
         - development
         - stage
 
-exclude: ["moxie", "tests", "scripts", "package.json", "team1/.claude", "Rakefile", "README.md", "Gemfile", "Gemfile.lock", "vendor", "node_modules", "assets/jaack-design-system/screenshots", "assets/jaack-design-system/demo.html", "assets/jaack-design-system/demo.js"]
+exclude: ["moxie", "tests", "scripts", "package.json", "team1/.claude", "Rakefile", "README.md", "Gemfile", "Gemfile.lock", "vendor", "node_modules"]
 
 title: Giacomo Barbieri / Jaack
 defaults:
@@ -120,3 +120,11 @@ defaults:
       layout: note
       author: jaack
       lang: en
+  - scope:
+      path: "assets/jaack-design-system/components/*.html"
+    values:
+      sitemap: false
+  - scope:
+      path: "google780112932c0baf19.html"
+    values:
+      sitemap: false

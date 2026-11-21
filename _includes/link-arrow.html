@@ -1,0 +1,11 @@
+{%- assign arrow_href = include.href | downcase -%}
+{%- assign arrow_site_host = site.url | split: '://' | last | split: '/' | first | downcase -%}
+{%- assign arrow_prefix = arrow_href | slice: 0, 2 -%}
+{%- assign arrow_scheme = arrow_href | split: ':' | first -%}
+{%- assign arrow_external = false -%}
+{%- if arrow_scheme == 'http' or arrow_scheme == 'https' or arrow_prefix == '//' -%}
+  {%- assign arrow_host = arrow_href | remove_first: 'https://' | remove_first: 'http://' | remove_first: '//' | split: '/' | first | split: '?' | first | split: '#' | first -%}
+  {%- if arrow_host != arrow_site_host -%}{%- assign arrow_external = true -%}{%- endif -%}
+{%- elsif arrow_scheme == 'mailto' -%}{%- assign arrow_external = true -%}
+{%- endif -%}
+{%- if arrow_external -%}↗{%- else -%}→{%- endif -%}

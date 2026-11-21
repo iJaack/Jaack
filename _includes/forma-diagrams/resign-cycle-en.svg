@@ -1,0 +1,42 @@
+<svg class="forma-diagram__desktop" viewBox="0 0 1600 600" width="1600" height="600" role="img" aria-labelledby="res-en-d-title res-en-d-desc" xmlns="http://www.w3.org/2000/svg" font-family="var(--jk-font, -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', system-ui, sans-serif)" font-variant-numeric="tabular-nums">
+  <title id="res-en-d-title">Free Apple ID, every 7 days</title>
+  <desc id="res-en-d-desc">With a free Apple ID the development profile expires after 7 days. The app stops opening and no longer syncs, until you reconnect the iPhone and press Run in Xcode again, with the same team and the same bundle ID.</desc>
+  <defs>
+    <marker id="res-en-d-arrow" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M0,1 L14,7 L0,13 Z" fill="var(--jk-ink)"/>
+    </marker>
+    <marker id="res-en-d-arrow-acc" markerWidth="14" markerHeight="14" refX="12" refY="7" orient="auto">
+      <path d="M0,1 L14,7 L0,13 Z" fill="var(--jk-accent)"/>
+    </marker>
+    <pattern id="res-en-d-hatch" patternUnits="userSpaceOnUse" width="8" height="8">
+      <path d="M0,8 L8,0" stroke="var(--jk-ink)" stroke-width="1.5" stroke-opacity=".28"/>
+    </pattern>
+    <pattern id="res-en-d-hatch-acc" patternUnits="userSpaceOnUse" width="8" height="8">
+      <path d="M-1,1 L1,-1 M0,8 L8,0 M7,9 L9,7" stroke="var(--jk-accent)" stroke-width="1.75"/>
+    </pattern>
+  </defs>
+  <text x="64" y="80" fill="var(--jk-ink)" font-size="32" font-weight="600">Free Apple ID, every 7 days</text>
+  <rect x="64" y="200" width="280" height="160" rx="12" ry="12" fill="none" stroke="var(--jk-hair)" stroke-width="2"/>
+  <text x="204.0" y="274.6" fill="var(--jk-ink)" font-size="24" font-weight="600" text-anchor="middle"><tspan x="204.0" dy="0">You build</tspan><tspan x="204.0" dy="30">and install</tspan></text>
+  <rect x="1256" y="200" width="280" height="160" rx="12" ry="12" fill="none" stroke="var(--jk-hair)" stroke-width="2"/>
+  <text x="1396.0" y="274.6" fill="var(--jk-ink)" font-size="24" font-weight="600" text-anchor="middle"><tspan x="1396.0" dy="0">Reconnect the iPhone</tspan><tspan x="1396.0" dy="30">and press ▶</tspan></text>
+  <line x1="376" y1="280" x2="1224" y2="280" stroke="var(--jk-hair)" stroke-width="2"/>
+  <line x1="456.0" y1="256" x2="456.0" y2="304" stroke="var(--jk-ink)" stroke-width="2"/>
+  <text x="456.0" y="344" fill="var(--jk-ink-2)" font-size="24" font-weight="400" text-anchor="middle">Day 1</text>
+  <line x1="570.6666666666666" y1="256" x2="570.6666666666666" y2="304" stroke="var(--jk-ink)" stroke-width="2"/>
+  <text x="570.6666666666666" y="344" fill="var(--jk-ink-2)" font-size="24" font-weight="400" text-anchor="middle">Day 2</text>
+  <line x1="685.3333333333334" y1="256" x2="685.3333333333334" y2="304" stroke="var(--jk-ink)" stroke-width="2"/>
+  <text x="685.3333333333334" y="344" fill="var(--jk-ink-2)" font-size="24" font-weight="400" text-anchor="middle">Day 3</text>
+  <line x1="800.0" y1="256" x2="800.0" y2="304" stroke="var(--jk-ink)" stroke-width="2"/>
+  <text x="800.0" y="344" fill="var(--jk-ink-2)" font-size="24" font-weight="400" text-anchor="middle">Day 4</text>
+  <line x1="914.6666666666667" y1="256" x2="914.6666666666667" y2="304" stroke="var(--jk-ink)" stroke-width="2"/>
+  <text x="914.6666666666667" y="344" fill="var(--jk-ink-2)" font-size="24" font-weight="400" text-anchor="middle">Day 5</text>
+  <line x1="1029.3333333333335" y1="256" x2="1029.3333333333335" y2="304" stroke="var(--jk-ink)" stroke-width="2"/>
+  <text x="1029.3333333333335" y="344" fill="var(--jk-ink-2)" font-size="24" font-weight="400" text-anchor="middle">Day 6</text>
+  <line x1="1144.0" y1="256" x2="1144.0" y2="304" stroke="var(--jk-accent)" stroke-width="3"/>
+  <text x="1144.0" y="344" fill="var(--jk-accent)" font-size="24" font-weight="600" text-anchor="middle">Day 7</text>
+  <text x="1144.0" y="380" fill="var(--jk-accent)" font-size="24" font-weight="600" text-anchor="middle">expires</text>
+  <line x1="344" y1="280" x2="376" y2="280" stroke="var(--jk-ink)" stroke-width="2"/>
+  <line x1="1224" y1="280" x2="1252" y2="280" stroke="var(--jk-ink)" stroke-width="2" marker-end="url(#res-en-d-arrow)"/>
+  <text x="800" y="548" fill="var(--jk-ink-2)" font-size="24" font-weight="400" text-anchor="middle"><tspan x="800" dy="0">Same team and same bundle ID</tspan></text>
+</svg>

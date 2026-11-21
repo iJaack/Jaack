@@ -34,7 +34,7 @@
             height: 22px
             line-height: 22px
             opacity: 0
-            transition: opacity 150ms linear, transform 150ms linear, -webkit-transform 150ms linear
+            transition: opacity var(--jk-d-1) var(--jk-ease-out), transform var(--jk-d-1) var(--jk-ease-out), -webkit-transform var(--jk-d-1) var(--jk-ease-out)
             transform: translate3d(0,-8px,0)
             z-index: 99
 
@@ -49,7 +49,7 @@
             border-right: 5px solid transparent
             border-bottom: 6px solid $beta
             opacity: 0
-            transition: opacity 150ms linear, transform 150ms linear, -webkit-transform 150ms linear
+            transition: opacity var(--jk-d-1) var(--jk-ease-out), transform var(--jk-d-1) var(--jk-ease-out), -webkit-transform var(--jk-d-1) var(--jk-ease-out)
             transform: translate3d(0,-8px,0)
             z-index: 100
 
@@ -58,4 +58,4 @@
             transform: translate3d(0,0,0)
 
     > .icon
-        transition: all ease-in-out .1s
+        transition: fill var(--jk-d-1) var(--jk-ease-out)

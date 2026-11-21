@@ -20,3 +20,5 @@ purchases*.json
 purchases*.jsonl
 scryfall_cache*.json
 !.env.example
+
+node_modules/

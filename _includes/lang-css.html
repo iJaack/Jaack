@@ -1,3 +1,4 @@
 <style>
-body.lang-en .lang-it, body.lang-it .lang-en { display: none !important; }
+html[data-ui-lang="en"] body .lang-it, html[data-ui-lang="it"] body .lang-en,
+html:not([data-ui-lang]) body.lang-en .lang-it, html:not([data-ui-lang]) body.lang-it .lang-en { display: none !important; }
 </style>

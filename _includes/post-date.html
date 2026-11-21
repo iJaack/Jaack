@@ -1,0 +1,7 @@
+{%- assign date_lang = include.lang | default: 'en' -%}
+{%- assign month_index = include.date | date: '%m' | plus: 0 | minus: 1 -%}
+{%- if include.short -%}
+{{- site.data.ui_text.months_short[date_lang][month_index] }} {{ include.date | date: '%Y' -}}
+{%- else -%}
+{{- include.date | date: '%-d' }} {{ site.data.ui_text.months[date_lang][month_index] }} {{ include.date | date: '%Y' -}}
+{%- endif -%}

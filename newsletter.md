@@ -2,6 +2,7 @@
 title: Newsletter archive
 title_it: Archivio newsletter
 layout: page
+prose: true
 description: In Three Words was Giacomo Barbieri's newsletter. This publication is discontinued.
 ---
 <div class="lang-en" lang="en">

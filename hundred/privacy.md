@@ -1,6 +1,7 @@
 ---
 title: Hundred Privacy Policy
 layout: page
+prose: true
 description: Privacy policy for the Hundred iPhone and Apple Watch app
 permalink: /hundred/privacy/
 ---

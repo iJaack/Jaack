@@ -1,5 +1,6 @@
 ---
 layout: page
+prose: true
 title: Cookie Policy
 description: By continuing browsing, the user accepts the collection of aggregated data.
 ---

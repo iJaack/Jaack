@@ -1,4 +1,4 @@
-/* hairline row list — tables without boxes: rows ≈ 36 px, hairline above each row and one below the list.
+/* hairline row list — tables without boxes: rows ≈ 46 px, hairline above each row and one below the list.
    Set the columns per list with --jk-cols. Below 520 px of container width, columns marked .jk-opt are hidden. */
 .jk-rows{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--jk-hair);--jk-cols:56px 112px minmax(0,1fr) auto 96px}
 .jk-rows li{display:grid;grid-template-columns:var(--jk-cols);align-items:baseline;column-gap:var(--jk-s4);padding:var(--jk-row-pad) 0;border-top:1px solid var(--jk-hair);font-size:var(--jk-fs-body);line-height:1.4;min-width:0}

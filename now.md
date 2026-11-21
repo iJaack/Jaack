@@ -1,5 +1,6 @@
 ---
 layout: page
+prose: true
 title: Now
 title_it: Ora
 permalink: /now/

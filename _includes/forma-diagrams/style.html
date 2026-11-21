@@ -1,0 +1,120 @@
+<style>
+/* Forma diagrams and screenshot pairs.
+   Copy to iJaack/Jaack as _includes/forma-diagrams/style.html
+   (or fold the rules into the site stylesheet). */
+
+.forma-diagram {
+  font-family: var(--jk-font, -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif);
+  font-variant-numeric: tabular-nums;
+}
+html[data-theme="dark"] .forma-diagram {
+  --jk-accent: #BA9F59;
+  --jk-on-accent: #130E0B;
+}
+html[data-theme="light"] .forma-diagram {
+  --jk-accent: #A8850F;
+}
+.forma-diagram svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: transparent;
+}
+/* More specific than `.forma-diagram svg { display: block }`, otherwise both SVGs stay visible. */
+.forma-diagram svg.forma-diagram__mobile { display: none; }
+@media (max-width: 759.98px) {
+  .forma-diagram svg.forma-diagram__desktop { display: none; }
+  .forma-diagram svg.forma-diagram__mobile { display: block; }
+}
+
+/* This post: no captions in the notes rail. The rail stays date/ToC only. */
+@media (min-width: 1100px) {
+  .story .prose [data-story-caption="opening"] { display: block; }
+  .story-notes { display: none; }
+}
+
+/* Vertical rhythm: 56px on every figure (multiple of 14). */
+.story .prose > figure.forma-figure {
+  box-sizing: border-box;
+  margin-block: 56px;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* Point 2 + 8: figcaption below the figure, measure-aligned, 14/20, --jk-t2. */
+.story .prose > figure.forma-figure > figcaption {
+  display: block;
+  position: static;
+  top: auto;
+  left: auto;
+  right: auto;
+  box-sizing: border-box;
+  width: auto;
+  max-width: 28em;
+  margin: 14px 0 0;
+  padding: 0;
+  font-family: var(--jk-font, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: left;
+  color: var(--jk-t2);
+}
+
+/* Diagram panel sits on the surface, around the SVG only — not the caption. */
+.story .prose > figure.forma-figure:not(.forma-screens) > .forma-diagram {
+  box-sizing: border-box;
+  background: var(--jk-surface-2);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* Point 6: diagrams cap at 1200px, left edge on the measure (story col 2).
+   On the prose subgrid that is column 1 / -1, justify-self start, no centering
+   margin (the site rule would pull the panel into the left rail). */
+@media (min-width: 1100px) {
+  .story .prose > figure.forma-figure:not(.forma-screens) {
+    grid-column: 1 / -1;
+    justify-self: start;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: 0;
+  }
+}
+
+/* Point 4: iPhone pairs have no surface panel. Phones sit on the page
+   background, centred on the measure + right-rail column. Do not enlarge. */
+.story .prose > figure.forma-screens {
+  background: transparent;
+  padding: 0;
+}
+.story .prose figure.forma-screens img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: min(64vh, 720px);
+  object-fit: contain;
+  margin-inline: auto;
+}
+@media (min-width: 1100px) {
+  .story .prose > figure.forma-screens {
+    grid-column: 1 / -1;
+    justify-self: stretch;
+    width: 100%;
+    max-width: 100%;
+    margin-inline: 0;
+  }
+}
+
+@media (max-width: 759.98px) {
+  .story .prose > figure.forma-figure:not(.forma-screens) > .forma-diagram {
+    border-radius: 0;
+  }
+  /* Caption lines up with the text column once the figure bleeds 100vw. */
+  .story .prose > figure.forma-figure > figcaption {
+    margin-inline: var(--jk-page-x);
+  }
+}
+</style>

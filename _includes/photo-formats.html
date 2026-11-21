@@ -1,0 +1,27 @@
+{%- comment -%}Photographs only. Screenshots, diagrams, artwork and icons retain their own formats.{%- endcomment -%}
+{%- assign photos_3_2 = '/assets/images/Foto-profilo-2020.jpg|/assets/images/Spigen-Steadiboost-Flex-2.jpg|/assets/images/Spigen-Steadiboost-Flex-3.jpg|/assets/images/Spigen-Steadiboost-Flex-4.jpg|/assets/images/Spigen-Steadiboost-Flex.jpg|/assets/images/attesa-wait.jpg|/assets/images/civetta-sars.jpg|/assets/images/connects.png|/assets/images/coronavirus-edicola.jpg|/assets/images/costruzione-ospedale-wuhan.jpg|/assets/images/crypto.jpg|/assets/images/deep-work.jpg|/assets/images/fear.jpg|/assets/images/friendship.jpg|/assets/images/laurea.jpg|/assets/images/lost.jpg|/assets/images/macbook-pro-2015.jpg|/assets/images/mistake.jpg|/assets/images/pokemon-go-cultura.jpg|/assets/images/projects/2030/5g_live_barcellona_mwc_2019.jpg|/assets/images/reward.jpg|/assets/images/silenzio-notte-iphone12-pro.JPG|/assets/images/study.jpg|/assets/images/the-knack.jpg|/assets/images/work/team1-event.jpg|/assets/images/writing.jpg|https://images.unsplash.com/photo-1524678714210-9917a6c619c2' | split: '|' -%}
+{%- assign photos_contain = '/assets/images/Spigen-Steadiboost-Flex-2.jpg|/assets/images/Spigen-Steadiboost-Flex-3.jpg|/assets/images/Spigen-Steadiboost-Flex-4.jpg' | split: '|' -%}
+{%- assign photos_4_5 = '' | split: '|' -%}
+{%- assign photos_1_1 = '/assets/images/libri-2020.jpg|/assets/images/profilo-2026.jpg' | split: '|' -%}
+{%- assign image_parts = include.html | split: '<img ' -%}
+{{- image_parts[0] -}}
+{%- for image in image_parts offset:1 -%}
+  {%- assign image_tag = image | split: '>' | first -%}
+  {%- assign image_src = image_tag | split: 'src="' | last | split: '"' | first | split: '?' | first -%}
+  {%- assign formatted_image = image -%}
+  {%- assign photo_class = '' -%}
+  {%- if photos_3_2 contains image_src -%}{%- assign photo_class = 'jk-photo-3x2' -%}
+  {%- elsif photos_4_5 contains image_src -%}{%- assign photo_class = 'jk-photo-4x5' -%}
+  {%- elsif photos_1_1 contains image_src -%}{%- assign photo_class = 'jk-photo-1x1' -%}{%- endif -%}
+  {%- if photos_contain contains image_src -%}{%- assign photo_class = photo_class | append: ' jk-photo-contain' -%}{%- endif -%}
+  {%- if photo_class != '' -%}
+    {%- if image_tag contains 'class="' -%}
+      {%- assign photo_attribute = 'class="' | append: photo_class | append: ' ' -%}
+      {%- assign formatted_image = image | replace_first: 'class="', photo_attribute -%}
+    {%- else -%}
+      {%- assign photo_attribute = 'class="' | append: photo_class | append: '" ' -%}
+      {%- assign formatted_image = image | prepend: photo_attribute -%}
+    {%- endif -%}
+  {%- endif -%}
+  {{- '<img ' -}}{{- formatted_image -}}
+{%- endfor -%}

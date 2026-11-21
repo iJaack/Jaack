@@ -1,9 +1,5 @@
-<div class="item {% if post.star %}star{% endif %}">
-    <a class="url" href="{{base}}{{ post.url }}">
-        <aside class="date"><time datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%b %Y" }}</time></aside>
-        <h3 class="title">{{ post.title }}</h3>
-        {% if post.tags contains 'research' %}
-        <span class="badge research">Research</span>
-        {% endif %}
-    </a>
-</div>
+<li class="dated-row{% if post.star %} star{% endif %}">
+  <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%b %Y' }} · {{ post.lang | upcase }}</time>
+  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  {% if post.tags contains 'research' %}<span class="row-meta">Research</span>{% endif %}
+</li>

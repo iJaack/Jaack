@@ -35,7 +35,7 @@ function build(){
   select('color',C.color,Object.entries(C.colors).filter(([k])=>has(colorOf)(k))),
   select('type',C.type,Object.entries(C.types).filter(([k])=>k==='other'?cards.some(c=>!typeOf(c.type_line).length):has(c=>typeOf(c.type_line))(k))),
   select('rarity',C.rarity,Object.entries(C.rarities).filter(([k])=>cards.some(c=>c.rarity===k))),
-  select('finish',C.finish,['nonfoil','foil','etched'].filter(f=>cards.some(c=>c.finish===f)).map(f=>[f,C[f]])),
+  select('finish',C.finish,['nonfoil','foil','etched','unknown'].filter(f=>cards.some(c=>c.finish===f)).map(f=>[f,C[f]])),
   select('language',C.language,[...new Set(cards.map(c=>c.language))].map(k=>[k||'none',C.languages[k]||k])),
   select('deck',C.deck,Object.entries(DECKS).filter(([k])=>cards.some(c=>c.decks.includes(k)))),
   (()=>{const w=el('label');w.append(el('span',null,C.sort));const s=el('select');s.dataset.key='sort';
